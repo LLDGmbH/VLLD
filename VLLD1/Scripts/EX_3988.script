@@ -1,0 +1,92 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xfil, xobnr, xtitel, xg1, xg2, xg3, xfolge, xdwaq, xdwaqcl, xdwaqrg, xdwaqgs, xdwavmax, xdwavmin, xdwnv, xdwnvcl, xdwnvrg,  xdwnvgs, xdwnvmax, xdwnvmin, errmsg, datei, pfad_datei as string 
+dim source as string
+i = 0
+j=7
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+HostFieldGetData("fil", xfil)
+HostFieldGetData("objnr",xobnr)
+HostFieldGetData("atname",xtitel)
+HostFieldGetData("dwagcl",xg1)
+HostFieldGetData("dwagrg",xg2)
+
+datei = "DWH_Objekt_" + xobnr + "_AV_NV.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z6S1", "Folge")
+
+ddepoke( ddehandle, "Z5S3", "AV-Quoten")
+ddepoke( ddehandle, "Z6S2", "Grosso")
+ddepoke( ddehandle, "Z6S3", "LMC")
+ddepoke( ddehandle, "Z6S4", "Rang")
+ddepoke( ddehandle, "Z6S5", "Grosso melden")
+ddepoke( ddehandle, "Z6S6", "AV% max.")
+ddepoke( ddehandle, "Z6S7", "AV% min.")
+
+ddepoke( ddehandle, "Z5S6", "NV-Quoten")
+ddepoke( ddehandle, "Z6S8", "Grosso")
+ddepoke( ddehandle, "Z6S9", "LMC")
+ddepoke( ddehandle, "Z6S10", "Rang")
+ddepoke( ddehandle, "Z6S11", "Grosso melden")
+ddepoke( ddehandle, "Z6S12", "NV% max.")
+ddepoke( ddehandle, "Z6S13", "NV% min.")
+ddepoke( ddehandle, "Z6S15", "Anzahl Grosso")
+
+
+
+nochmal:
+
+HostFieldGetLineData("dwfolg", i, xfolge)
+HostFieldGetLineData("dwaq", i, xdwaq)
+HostFieldGetLineData("dwaqcl", i, xdwaqcl)
+HostFieldGetLineData("dwaqrg", i, xdwaqrg)
+HostFieldGetLineData("dwaqgs", i, xdwaqgs)
+HostFieldGetLineData("dwavmax", i, xdwavmax)
+HostFieldGetLineData("dwavmin", i, xdwavmin)
+
+HostFieldGetLineData("dwnv", i, xdwnv)
+HostFieldGetLineData("dwnvcl", i, xdwnvcl)
+HostFieldGetLineData("dwnvrg", i, xdwnvrg)
+HostFieldGetLineData("dwnvgs", i, xdwnvgs)
+HostFieldGetLineData("dwnvmax", i, xdwnvmax)
+HostFieldGetLineData("dwnvmin", i, xdwnvmin)
+HostFieldGetLineData("dwaggs", i, xg3)
+
+
+if (xfolge <> "") then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xfolge)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xdwaq)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xdwaqcl)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xdwaqrg)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xdwaqgs)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xdwavmax)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xdwavmin)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xdwnv)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xdwnvcl)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xdwnvrg)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xdwnvgs)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xdwnvmax)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xdwnvmin)
+ddepoke( ddehandle, "Z" + str(j) +"S15", xg3)
+
+j=j+1
+endif
+
+if i < 19 then
+i=i+1
+goto nochmal
+endif
+ 
+if xfolge <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

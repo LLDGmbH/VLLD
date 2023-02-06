@@ -1,0 +1,77 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim errmsg, datei, pfad_datei, source as string 
+dim x1obj1, x1obj2, x1obj3, x1obj4, x1obj5, x1obj6 as string
+dim x1kdnr, x1knam, x1str, x1plz, x1ort, x1bez1, x1bez2, x1bez3, x1bez4, x1bez5, x1bez6 as string
+
+i = 0
+j = 2
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+HostFieldGetData("hs1bez1",x1obj1)
+HostFieldGetData("hs1bez2",x1obj2)
+HostFieldGetData("hs1bez3",x1obj3)
+HostFieldGetData("hs1bez4",x1obj4)
+HostFieldGetData("hs1bez5",x1obj5)
+HostFieldGetData("hs1bez6",x1obj6)
+
+datei = "Auflistung 6 Objekte.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "KdNr")
+ddepoke( ddehandle, "Z1S2", "Name")
+ddepoke( ddehandle, "Z1S3", "Strasse")
+ddepoke( ddehandle, "Z1S4", "PLZ")
+ddepoke( ddehandle, "Z1S5", "Ort")
+ddepoke( ddehandle, "Z1S6", x1obj1)
+ddepoke( ddehandle, "Z1S7", x1obj2)
+ddepoke( ddehandle, "Z1S8", x1obj3)
+ddepoke( ddehandle, "Z1S9", x1obj4)
+ddepoke( ddehandle, "Z1S10", x1obj5)
+ddepoke( ddehandle, "Z1S11", x1obj6)
+
+nochmal:
+
+HostFieldGetLineData("s1kdnr", i, x1kdnr)
+HostFieldGetLineData("s1knam", i, x1knam)
+HostFieldGetLineData("s1str", i, x1str)
+HostFieldGetLineData("s1plz", i, x1plz)
+HostFieldGetLineData("s1ort", i, x1ort)
+HostFieldGetLineData("s1bez1", i, x1bez1)
+HostFieldGetLineData("s1bez2", i, x1bez2)
+HostFieldGetLineData("s1bez3", i, x1bez3)
+HostFieldGetLineData("s1bez4", i, x1bez4)
+HostFieldGetLineData("s1bez5", i, x1bez5)
+HostFieldGetLineData("s1bez6", i, x1bez6)
+
+if (x1kdnr <> "") then
+ddepoke( ddehandle, "Z" + str(j) +"S1", x1kdnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", x1knam)
+ddepoke( ddehandle, "Z" + str(j) +"S3", x1str)
+ddepoke( ddehandle, "Z" + str(j) +"S4", x1plz)
+ddepoke( ddehandle, "Z" + str(j) +"S5", x1ort)
+ddepoke( ddehandle, "Z" + str(j) +"S6", x1bez1)
+ddepoke( ddehandle, "Z" + str(j) +"S7", x1bez2)
+ddepoke( ddehandle, "Z" + str(j) +"S8", x1bez3)
+ddepoke( ddehandle, "Z" + str(j) +"S9", x1bez4)
+ddepoke( ddehandle, "Z" + str(j) +"S10", x1bez5)
+ddepoke( ddehandle, "Z" + str(j) +"S11", x1bez6)
+j=j+1
+endif
+
+if i < 16 then
+i=i+1
+goto nochmal
+endif
+ 
+if x1kdnr <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="SEATRUNK/ATUMS3DS(FMT01C+FMTFU1)" library="SEATRUNK" member_name="ATUMS3DS">
+    <size cx="80" cy="24"/>
+    <action key="f1" caption="F1" attention_key="false" conditional="true"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false" conditional="true"/>
+    <action key="f10" caption="F10" attention_key="false" conditional="true"/>
+    <action key="f11" caption="F11" attention_key="false" conditional="true"/>
+    <action key="f12" caption="F12" attention_key="false"/>
+    <action key="f17" caption="F17" attention_key="false" conditional="true"/>
+    <action key="f18" caption="F18" attention_key="false" conditional="true"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <field field_type="screen_part" name="FMT01C" overlay="true">
+      <area>
+        <position y="2"/>
+        <size cx="80" cy="20"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="FMTFU1">
+      <area>
+        <position y="22"/>
+        <size cx="80" cy="2"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18" high_intensity="true">
+          <area>
+            <position x="1" y="2"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="Kundenumsätze best. Art.-Gruppe" display_length="31" data_length="31" underline="true" high_intensity="true">
+          <area>
+            <position x="24" y="2"/>
+            <size cx="31" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6" high_intensity="true">
+          <area>
+            <position x="59" y="2"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6" high_intensity="true">
+          <area>
+            <position x="70" y="2"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="JOB" short_name="JOB" data_type="alphanumeric" display_length="10" data_length="10" high_intensity="true">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="*USER" short_name="*USER" data_type="alphanumeric" display_length="10" data_length="10" high_intensity="true">
+          <area>
+            <position x="12" y="3"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="MSGFLD1" short_name="MSGFLD1" data_type="alphanumeric" display_length="30" data_length="30" reverse_image="true" conditional="true">
+          <area>
+            <position x="27" y="3"/>
+            <size cx="30" cy="1"/>
+          </area>
+          <indicator id="50"/>
+        </field>
+        <field field_type="fixed_text" value="Programm" display_length="8" data_length="8" high_intensity="true">
+          <area>
+            <position x="59" y="3"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PGM" short_name="PGM" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="69" y="3"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="fixed_text" value="Verk.1    Umsatz 1  Verk.2    Umsatz 2  Verk.3    Umsatz 3  Verk.4    Umsatz 4" display_length="78" data_length="78">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="78" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value=" KdNr   Name                  PLZ  Ort                Verk.    Umsatz   Remi %" display_length="78" data_length="78" underline="true" high_intensity="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="78" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="WS1KDNR" short_name="WS1KDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1NAME" short_name="WS1NAME" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="9" y="6"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1PLZ" short_name="WS1PLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="30" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1ORT" short_name="WS1ORT" data_type="alphanumeric" display_length="16" data_length="16" conditional="true">
+          <area>
+            <position x="36" y="6"/>
+            <size cx="16" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1GVERK" short_name="WS1GVERK" data_type="zoned_decimal" display_length="7" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="53" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1GUMS" short_name="WS1GUMS" data_type="zoned_decimal" display_length="11" data_length="9" high_intensity="true" conditional="true" decimal_positions="2">
+          <area>
+            <position x="61" y="6"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1GREM" short_name="WS1GREM" data_type="zoned_decimal" display_length="6" data_length="5" high_intensity="true" conditional="true" decimal_positions="2">
+          <area>
+            <position x="73" y="6"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1VERK1" short_name="WS1VERK1" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1UMS1" short_name="WS1UMS1" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="9" y="7"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1VERK2" short_name="WS1VERK2" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="21" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1UMS2" short_name="WS1UMS2" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="29" y="7"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1VERK3" short_name="WS1VERK3" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="41" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1UMS3" short_name="WS1UMS3" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="49" y="7"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1VERK4" short_name="WS1VERK4" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="61" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1UMS4" short_name="WS1UMS4" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="69" y="7"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="Remi-%:" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1REM1" short_name="WS1REM1" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="13" y="8"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1REM2" short_name="WS1REM2" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="33" y="8"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1REM3" short_name="WS1REM3" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="53" y="8"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1REM4" short_name="WS1REM4" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="73" y="8"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1KDNR" short_name="WS1KDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1NAME" short_name="WS1NAME" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="9" y="9"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1PLZ" short_name="WS1PLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="30" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1ORT" short_name="WS1ORT" data_type="alphanumeric" display_length="16" data_length="16" conditional="true">
+          <area>
+            <position x="36" y="9"/>
+            <size cx="16" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1GVERK" short_name="WS1GVERK" data_type="zoned_decimal" display_length="7" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="53" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1GUMS" short_name="WS1GUMS" data_type="zoned_decimal" display_length="11" data_length="9" high_intensity="true" conditional="true" decimal_positions="2">
+          <area>
+            <position x="61" y="9"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1GREM" short_name="WS1GREM" data_type="zoned_decimal" display_length="6" data_length="5" high_intensity="true" conditional="true" decimal_positions="2">
+          <area>
+            <position x="73" y="9"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="WS1VERK1" short_name="WS1VERK1" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1UMS1" short_name="WS1UMS1" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="9" y="10"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1VERK2" short_name="WS1VERK2" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="21" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1UMS2" short_name="WS1UMS2" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="29" y="10"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1VERK3" short_name="WS1VERK3" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="41" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1UMS3" short_name="WS1UMS3" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="49" y="10"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1VERK4" short_name="WS1VERK4" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="61" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1UMS4" short_name="WS1UMS4" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="69" y="10"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="Remi-%:" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1REM1" short_name="WS1REM1" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="13" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1REM2" short_name="WS1REM2" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="33" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1REM3" short_name="WS1REM3" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="53" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1REM4" short_name="WS1REM4" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="73" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1KDNR" short_name="WS1KDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1NAME" short_name="WS1NAME" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="9" y="12"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1PLZ" short_name="WS1PLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="30" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1ORT" short_name="WS1ORT" data_type="alphanumeric" display_length="16" data_length="16" conditional="true">
+          <area>
+            <position x="36" y="12"/>
+            <size cx="16" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1GVERK" short_name="WS1GVERK" data_type="zoned_decimal" display_length="7" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="53" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1GUMS" short_name="WS1GUMS" data_type="zoned_decimal" display_length="11" data_length="9" high_intensity="true" conditional="true" decimal_positions="2">
+          <area>
+            <position x="61" y="12"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1GREM" short_name="WS1GREM" data_type="zoned_decimal" display_length="6" data_length="5" high_intensity="true" conditional="true" decimal_positions="2">
+          <area>
+            <position x="73" y="12"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1VERK1" short_name="WS1VERK1" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1UMS1" short_name="WS1UMS1" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="9" y="13"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1VERK2" short_name="WS1VERK2" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="21" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1UMS2" short_name="WS1UMS2" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="29" y="13"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1VERK3" short_name="WS1VERK3" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="41" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1UMS3" short_name="WS1UMS3" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="49" y="13"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1VERK4" short_name="WS1VERK4" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="61" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1UMS4" short_name="WS1UMS4" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="69" y="13"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="fixed_text" value="Remi-%:" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1REM1" short_name="WS1REM1" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="13" y="14"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1REM2" short_name="WS1REM2" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="33" y="14"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1REM3" short_name="WS1REM3" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="53" y="14"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1REM4" short_name="WS1REM4" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="73" y="14"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1KDNR" short_name="WS1KDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1NAME" short_name="WS1NAME" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="9" y="15"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1PLZ" short_name="WS1PLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="30" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1ORT" short_name="WS1ORT" data_type="alphanumeric" display_length="16" data_length="16" conditional="true">
+          <area>
+            <position x="36" y="15"/>
+            <size cx="16" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1GVERK" short_name="WS1GVERK" data_type="zoned_decimal" display_length="7" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="53" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1GUMS" short_name="WS1GUMS" data_type="zoned_decimal" display_length="11" data_length="9" high_intensity="true" conditional="true" decimal_positions="2">
+          <area>
+            <position x="61" y="15"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1GREM" short_name="WS1GREM" data_type="zoned_decimal" display_length="6" data_length="5" high_intensity="true" conditional="true" decimal_positions="2">
+          <area>
+            <position x="73" y="15"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1VERK1" short_name="WS1VERK1" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1UMS1" short_name="WS1UMS1" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="9" y="16"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1VERK2" short_name="WS1VERK2" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="21" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1UMS2" short_name="WS1UMS2" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="29" y="16"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1VERK3" short_name="WS1VERK3" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="41" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1UMS3" short_name="WS1UMS3" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="49" y="16"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1VERK4" short_name="WS1VERK4" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="61" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1UMS4" short_name="WS1UMS4" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="69" y="16"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="Remi-%:" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1REM1" short_name="WS1REM1" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="13" y="17"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1REM2" short_name="WS1REM2" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="33" y="17"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1REM3" short_name="WS1REM3" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="53" y="17"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1REM4" short_name="WS1REM4" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="73" y="17"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="WS1KDNR" short_name="WS1KDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1NAME" short_name="WS1NAME" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="9" y="18"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1PLZ" short_name="WS1PLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="30" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1ORT" short_name="WS1ORT" data_type="alphanumeric" display_length="16" data_length="16" conditional="true">
+          <area>
+            <position x="36" y="18"/>
+            <size cx="16" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1GVERK" short_name="WS1GVERK" data_type="zoned_decimal" display_length="7" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="53" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1GUMS" short_name="WS1GUMS" data_type="zoned_decimal" display_length="11" data_length="9" high_intensity="true" conditional="true" decimal_positions="2">
+          <area>
+            <position x="61" y="18"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1GREM" short_name="WS1GREM" data_type="zoned_decimal" display_length="6" data_length="5" high_intensity="true" conditional="true" decimal_positions="2">
+          <area>
+            <position x="73" y="18"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1VERK1" short_name="WS1VERK1" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1UMS1" short_name="WS1UMS1" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="9" y="19"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1VERK2" short_name="WS1VERK2" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="21" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1UMS2" short_name="WS1UMS2" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="29" y="19"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1VERK3" short_name="WS1VERK3" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="41" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1UMS3" short_name="WS1UMS3" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="49" y="19"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1VERK4" short_name="WS1VERK4" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="61" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1UMS4" short_name="WS1UMS4" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="69" y="19"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="Remi-%:" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1REM1" short_name="WS1REM1" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="13" y="20"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1REM2" short_name="WS1REM2" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="33" y="20"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1REM3" short_name="WS1REM3" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="53" y="20"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS1REM4" short_name="WS1REM4" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="73" y="20"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_end_more" value="Weitere ... " display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="67" y="21"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+      <field field_type="subfile_end_bottom" value="Ende        " display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="67" y="21"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="                                                                              " display_length="78" data_length="78" underline="true">
+      <area>
+        <position x="1" y="22"/>
+        <size cx="78" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="F3 = Ende" display_length="9" data_length="9">
+      <area>
+        <position x="1" y="23"/>
+        <size cx="9" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="F9 = Drucken" display_length="12" data_length="12" conditional="true">
+      <area>
+        <position x="14" y="23"/>
+        <size cx="12" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+      <indicator negative="true" id="45"/>
+    </field>
+    <field field_type="fixed_text" value="F12 = Zurück" display_length="12" data_length="12">
+      <area>
+        <position x="30" y="23"/>
+        <size cx="12" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

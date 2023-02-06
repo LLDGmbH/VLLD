@@ -1,0 +1,11 @@
+﻿
+dim text, ErrorMsg as String
+dim rc as Integer
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+
+rc = EzSQLQuery("SELECT digits(objnr) concat ' ' concat digits(folge)  FROM xx140v", text, ErrorMsg)
+PanelFieldPutData("yyerfasst", 0, text)
+PanelUpdateEnable(5)
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)

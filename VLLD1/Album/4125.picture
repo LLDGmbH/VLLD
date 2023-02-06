@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="OSNA_SRC/PT70REDS(HEADER+SFH001+SFE001+*022/024)" library="OSNA_SRC" member_name="PT70REDS">
+    <size cx="80" cy="24"/>
+    <action key="f1" caption="F1" attention_key="false"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="f12" caption="F12" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <action key="help" caption="HELP" attention_key="false"/>
+    <field field_type="screen_part" name="HEADER" overlay="true">
+      <area>
+        <position/>
+        <size cx="80" cy="2"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="SFH001" overlay="true">
+      <area>
+        <position y="4"/>
+        <size cx="80" cy="1"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="SFE001" overlay="true">
+      <area>
+        <position y="5"/>
+        <size cx="80" cy="1"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="*022/024" overlay="true">
+      <area>
+        <position y="22"/>
+        <size cx="80" cy="2"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="HEAD01" short_name="HEAD01" data_type="alphanumeric" display_length="76" data_length="76" reverse_image="true">
+      <area>
+        <position x="2"/>
+        <size cx="76" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="HEAD02" short_name="HEAD02" data_type="alphanumeric" display_length="76" data_length="76" reverse_image="true">
+      <area>
+        <position x="2" y="1"/>
+        <size cx="76" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="To" display_length="2" data_length="2" underline="true">
+      <area>
+        <position x="2" y="4"/>
+        <size cx="2" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="Tagesdatum" display_length="10" data_length="10" underline="true">
+      <area>
+        <position x="5" y="4"/>
+        <size cx="10" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="Uhrzeit letzte Übertragung" display_length="26" data_length="26" underline="true">
+      <area>
+        <position x="16" y="4"/>
+        <size cx="26" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="Remi bei Kunde" display_length="14" data_length="14" underline="true">
+      <area>
+        <position x="44" y="4"/>
+        <size cx="14" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="Entladen" display_length="8" data_length="8" underline="true">
+      <area>
+        <position x="61" y="4"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value=" " display_length="1" data_length="1">
+      <area>
+        <position x="2" y="5"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BOTT23" short_name="BOTT23" data_type="alphanumeric" display_length="76" data_length="76" conditional="true">
+      <area>
+        <position x="2" y="22"/>
+        <size cx="76" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name=".SFLMSGREC" short_name=".SFLMSGREC" data_type="alphanumeric" display_length="76" data_length="76" high_intensity="true" conditional="true">
+          <area>
+            <position x="1" y="23"/>
+            <size cx="76" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_end_plus" value="+" display_length="1" data_length="1" conditional="true">
+        <area>
+          <position x="78" y="23"/>
+          <size cx="1" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+    </field>
+  </screen>
+</header>

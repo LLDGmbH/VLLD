@@ -1,0 +1,17 @@
+﻿dim text, ErrorMsg as String
+dim rc as Integer
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rc = EzSQLQuery("SELECT DISNR, DISNAME FROM GRDSNP where disname <> ' ' order by disname", text, ErrorMsg)
+PanelFieldSetProp ("sfcdisp", 5, text) 
+
+rc = EzSQLQuery("SELECT digits(vavnr), digits(vavnr) concat ' ' concat vaname from gradrp  where vaname not like '*%' order by vaname", text, ErrorMsg)
+PanelFieldSetProp ("sfcvnr", 5, text)
+
+PanelUpdateEnable(2)
+
+ScriptCall("c_fil")

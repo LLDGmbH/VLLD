@@ -1,0 +1,28 @@
+﻿
+dim text, ErrorMsg as String
+dim rc as Integer
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rc = EzSQLQuery("SELECT digits(mvlnr), digits(mvlnr) concat ' ' concat mvlnam1 from grmvlp  order by mvlnam1", text, ErrorMsg)
+
+PanelFieldSetProp ("##vlgmv, 5, text)
+
+
+rc = EzSQLQuery("SELECT jahr from grjjzp order by jahr", text, ErrorMsg)
+
+if ( rc < 0 ) then
+
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+
+else
+
+PanelFieldSetProp ("sfajav", 5, text) 
+
+
+PanelUpdateEnable(2)
+
+endif

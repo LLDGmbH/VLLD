@@ -1,0 +1,71 @@
+﻿Dim objExcel,objBook,objSheet as Variant
+Dim datei,pfad_datei, source as String
+Dim xkdnr,xname,xplz,xort as String
+Dim xstr,xgart,xums,xende as String
+Dim i,j,k as Integer
+
+i = 0
+k = 1
+j = 2
+
+datei = "Adressen_Verteilerpflege" + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+  
+ReleaseObject(objExcel)
+objExcel = CreateObject("Excel.Application")
+objExcel.Visible = 1
+objBook = objExcel.Workbooks.Open(pfad_datei)
+objSheet = objBook.Worksheets.Item("Tabelle1")
+
+rem '## Put value in cell (Value for Integers, Value2 for Strings and Variants)
+
+objBook.Activesheet.Cells(1, 1).Value2 = "Kdnr"
+objBook.Activesheet.Cells(1, 2).Value2 = "Name"
+objBook.Activesheet.Cells(1, 3).Value2 = "Plz"
+objBook.Activesheet.Cells(1, 4).Value2 = "Ort"
+objBook.Activesheet.Cells(1, 5).Value2 = "Strasse"
+objBook.Activesheet.Cells(1, 6).Value2 = "Geschäftsart"
+objBook.Activesheet.Cells(1, 7).Value2 = "Wochenumsatz"
+
+nochmal:
+HostFieldGetLineData("rxkdnr", i, xkdnr)
+HostFieldGetLineData("name25", i, xname)
+HostFieldGetLineData("kdplz", i, xplz)
+HostFieldGetLineData("ort20", i, xort)
+HostFieldGetLineData("str18", i, xstr)
+HostFieldGetLineData("name25", k, xgart)
+HostFieldGetLineData("kdplz", k, xums)
+
+If (xort <> "") Then
+	objBook.Activesheet.Cells(j, 1).Value2 = xkdnr
+	objBook.Activesheet.Cells(j, 2).Value2 = xname
+	objBook.Activesheet.Cells(j, 3).Value2 = xplz
+	objBook.Activesheet.Cells(j, 4).Value2 = xort
+	objBook.Activesheet.Cells(j, 5).Value2 = xstr
+	objBook.Activesheet.Cells(j, 6).Value2 = xgart
+	objBook.Activesheet.Cells(j, 7).Value2 = xums
+	j = j + 1
+EndIf
+
+If i < 17 Then
+	i = i + 3
+	k = k + 3
+	goto nochmal
+EndIf
+
+HostFieldGetData("ende", xende)
+
+If xende <> "Ende" Then
+	i = 0
+	k = 1
+	HostScreenSendKey("Page Down")
+	goto nochmal
+EndIf
+
+objBook.Saved = 1
+objexcel.Application.Quit  
+ReleaseObject(objExcel)
+
+End

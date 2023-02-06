@@ -1,0 +1,28 @@
+﻿dim text, ErrorMsg as String
+dim rc as Integer
+
+
+rem **Vertriebslinien
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+
+rc = EzSQLQuery("SELECT vlvlkz, vlvbez concat ' ' concat digits(vlvlkz) FROM grvtlp order by vlvbez concat ' ' concat digits(vlvlkz)", text, ErrorMsg)
+
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelFieldSetProp ("vlkz", 5, text) 
+PanelUpdateEnable(2)
+endif
+
+rc = EzSQLQuery("SELECT vavnr, vaname concat ' ' concat digits(vavnr) FROM gradrp order by vaname concat ' ' concat digits(vavnr)", text, ErrorMsg)
+
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelFieldSetProp ("yyvlg", 5, text) 
+PanelUpdateEnable(2)
+endif

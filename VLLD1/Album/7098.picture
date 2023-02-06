@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="OSNA_COL/LC55DS(SFC1)" library="OSNA_COL" member_name="LC55DS">
+    <size cx="132" cy="27"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <field field_type="screen_part" name="SFC1">
+      <area>
+        <position/>
+        <size cx="132" cy="26"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Lieferscheine stornieren" display_length="24" data_length="24">
+          <area>
+            <position x="41"/>
+            <size cx="24" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="10" data_length="6">
+          <area>
+            <position x="112"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="123"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SDS_JOB" short_name="SDS_JOB" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="1" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="Kunde:" display_length="6" data_length="6">
+          <area>
+            <position x="19" y="1"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="C1KDNR" short_name="C1KDNR" data_type="zoned_decimal" display_length="7" data_length="7" underline="true" high_intensity="true" exit_record="true">
+          <area>
+            <position x="26" y="1"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="C1KNAM" short_name="C1KNAM" data_type="alphanumeric" display_length="33" data_length="33">
+          <area>
+            <position x="34" y="1"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="C1STR" short_name="C1STR" data_type="alphanumeric" display_length="25" data_length="25">
+          <area>
+            <position x="69" y="1"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SDS_USR" short_name="SDS_USR" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="112" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="LC55S1" display_length="6" data_length="6">
+          <area>
+            <position x="123" y="1"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="field" usage="output" name="C1PLZ" short_name="C1PLZ" data_type="alphanumeric" display_length="5" data_length="5">
+          <area>
+            <position x="34" y="2"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="C1ORT" short_name="C1ORT" data_type="alphanumeric" display_length="25" data_length="25">
+          <area>
+            <position x="40" y="2"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="C1MSG" short_name="C1MSG" data_type="alphanumeric" display_length="60" data_length="60">
+          <area>
+            <position x="19" y="3"/>
+            <size cx="60" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="fixed_text" value="A    Datum    LFS-Nr Typ Lfd-Nr                                                                                                   " display_length="130" data_length="130" underline="true">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="130" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DATUM" short_name="S1DATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="5"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFNR" short_name="S1LFNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="15" y="5"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LTYP" short_name="S1LTYP" data_type="alphanumeric" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="23" y="5"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFDNR" short_name="S1LFDNR" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DATUM" short_name="S1DATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="6"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFNR" short_name="S1LFNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="15" y="6"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LTYP" short_name="S1LTYP" data_type="alphanumeric" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="23" y="6"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFDNR" short_name="S1LFDNR" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DATUM" short_name="S1DATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFNR" short_name="S1LFNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="15" y="7"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LTYP" short_name="S1LTYP" data_type="alphanumeric" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="23" y="7"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFDNR" short_name="S1LFDNR" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DATUM" short_name="S1DATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFNR" short_name="S1LFNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="15" y="8"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LTYP" short_name="S1LTYP" data_type="alphanumeric" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="23" y="8"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFDNR" short_name="S1LFDNR" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DATUM" short_name="S1DATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFNR" short_name="S1LFNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="15" y="9"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LTYP" short_name="S1LTYP" data_type="alphanumeric" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="23" y="9"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFDNR" short_name="S1LFDNR" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DATUM" short_name="S1DATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFNR" short_name="S1LFNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="15" y="10"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LTYP" short_name="S1LTYP" data_type="alphanumeric" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="23" y="10"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFDNR" short_name="S1LFDNR" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DATUM" short_name="S1DATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFNR" short_name="S1LFNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="15" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LTYP" short_name="S1LTYP" data_type="alphanumeric" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="23" y="11"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFDNR" short_name="S1LFDNR" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DATUM" short_name="S1DATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFNR" short_name="S1LFNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="15" y="12"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LTYP" short_name="S1LTYP" data_type="alphanumeric" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="23" y="12"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFDNR" short_name="S1LFDNR" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DATUM" short_name="S1DATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFNR" short_name="S1LFNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="15" y="13"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LTYP" short_name="S1LTYP" data_type="alphanumeric" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="23" y="13"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFDNR" short_name="S1LFDNR" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DATUM" short_name="S1DATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFNR" short_name="S1LFNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="15" y="14"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LTYP" short_name="S1LTYP" data_type="alphanumeric" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="23" y="14"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFDNR" short_name="S1LFDNR" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DATUM" short_name="S1DATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFNR" short_name="S1LFNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="15" y="15"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LTYP" short_name="S1LTYP" data_type="alphanumeric" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="23" y="15"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFDNR" short_name="S1LFDNR" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DATUM" short_name="S1DATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFNR" short_name="S1LFNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="15" y="16"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LTYP" short_name="S1LTYP" data_type="alphanumeric" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="23" y="16"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFDNR" short_name="S1LFDNR" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DATUM" short_name="S1DATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFNR" short_name="S1LFNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="15" y="17"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LTYP" short_name="S1LTYP" data_type="alphanumeric" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="23" y="17"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFDNR" short_name="S1LFDNR" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DATUM" short_name="S1DATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFNR" short_name="S1LFNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="15" y="18"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LTYP" short_name="S1LTYP" data_type="alphanumeric" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="23" y="18"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFDNR" short_name="S1LFDNR" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DATUM" short_name="S1DATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFNR" short_name="S1LFNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="15" y="19"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LTYP" short_name="S1LTYP" data_type="alphanumeric" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="23" y="19"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFDNR" short_name="S1LFDNR" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DATUM" short_name="S1DATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFNR" short_name="S1LFNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="15" y="20"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LTYP" short_name="S1LTYP" data_type="alphanumeric" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="23" y="20"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFDNR" short_name="S1LFDNR" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DATUM" short_name="S1DATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="21"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFNR" short_name="S1LFNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="15" y="21"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LTYP" short_name="S1LTYP" data_type="alphanumeric" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="23" y="21"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFDNR" short_name="S1LFDNR" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DATUM" short_name="S1DATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="22"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFNR" short_name="S1LFNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="15" y="22"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LTYP" short_name="S1LTYP" data_type="alphanumeric" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="23" y="22"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFDNR" short_name="S1LFDNR" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DATUM" short_name="S1DATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="23"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFNR" short_name="S1LFNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="15" y="23"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LTYP" short_name="S1LTYP" data_type="alphanumeric" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="23" y="23"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFDNR" short_name="S1LFDNR" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DATUM" short_name="S1DATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="24"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFNR" short_name="S1LFNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="15" y="24"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LTYP" short_name="S1LTYP" data_type="alphanumeric" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="23" y="24"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFDNR" short_name="S1LFDNR" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="25"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DATUM" short_name="S1DATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="25"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFNR" short_name="S1LFNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="15" y="25"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LTYP" short_name="S1LTYP" data_type="alphanumeric" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="23" y="25"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1LFDNR" short_name="S1LFDNR" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="25"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_end_plus" value="+" display_length="1" data_length="1" conditional="true">
+        <area>
+          <position x="130" y="25"/>
+          <size cx="1" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+    </field>
+  </screen>
+</header>

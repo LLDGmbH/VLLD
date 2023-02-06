@@ -1,0 +1,61 @@
+﻿dim text, ErrorMsg, xxfil as String
+dim rc as Integer
+global filiale as string
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+
+
+rem ** EHASTRGRUPPEN bereitstellen **
+rc = EzSQLQuery("SELECT digits(EHNR) concat digits(ehunr), DIGITS(EHNR) concat digits(ehunr) concat ' - 'concat EHTEXT FROM GRETXP order by  EHNR", text, ErrorMsg)
+
+if ( rc < 0 ) then
+
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+
+else
+
+PanelFieldSetProp ("EHCD", 5, text) 
+PanelUpdateEnable(2)
+
+endif
+
+
+
+rem ** VERLAGE bereitstellen **
+rc = EzSQLQuery("SELECT VAVNR, digits(vavnr) concat ' - ' concat VANAME FROM GRADRP order by VANAME", text, ErrorMsg)
+
+if ( rc < 0 ) then
+
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+
+else
+
+PanelFieldSetProp ("C1VNR", 5, text)
+PanelUpdateEnable(2)
+
+endif
+
+
+
+rem ** LIEFERSCHEINTYPEN bereitstellen **
+rc = EzSQLQuery("SELECT LYTYP, lytyp concat ' - ' concat LYTEXT FROM GRLTYP", text, ErrorMsg)
+
+if ( rc < 0 ) then
+
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+
+else
+
+PanelFieldSetProp ("LFTYP", 5, text) 
+PanelUpdateEnable(2)
+
+endif
+
+
+
+rem ** FILIALEN bereitstellen **
+ScriptCall("c_fil")

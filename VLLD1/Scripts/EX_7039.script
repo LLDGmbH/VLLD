@@ -1,0 +1,74 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xkdnr, xname, xProzU, xProzE, xUmsVKP, xUmsAGP, xLiefEx, xRemEx, xFruehAGP, xFruehEx, xSpaetAGP, xSpaetEx, errmsg, datei, pfad_datei as string 
+dim source as string
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Umsatz_Absatz_fuer_eine_Woche_nach_Kunden.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "Kunden-Nr")
+ddepoke( ddehandle, "Z1S2", "Name")
+ddepoke( ddehandle, "Z1S3", "Um-%")
+ddepoke( ddehandle, "Z1S4", "Ex-%")
+ddepoke( ddehandle, "Z1S5", "LiefAGP")
+ddepoke( ddehandle, "Z1S6", "UmsAGP")
+ddepoke( ddehandle, "Z1S7", "LiefEx")
+ddepoke( ddehandle, "Z1S8", "RemEx")
+ddepoke( ddehandle, "Z1S9", "FrühAGP")
+ddepoke( ddehandle, "Z1S10", "FrühEx")
+ddepoke( ddehandle, "Z1S11", "SpätAGP")
+ddepoke( ddehandle, "Z1S12", "SpätEx")
+
+nochmal:
+
+HostFieldGetLineData("sfkdnr",  i, xkdnr)
+HostFieldGetLineData("sfknam",  i, xname)
+HostFieldGetLineData("prozu",   i, xProzU)
+HostFieldGetLineData("proze",   i, xProzE)
+HostFieldGetLineData("sfumsv",  i, xUmsVKP)
+HostFieldGetLineData("sfumsa",  i, xUmsAGP)
+HostFieldGetLineData("sfexpl",  i, xLiefEx)
+HostFieldGetLineData("sfexpr",  i, xRemEx)
+HostFieldGetLineData("sffrema", i, xFruehAGP)
+HostFieldGetLineData("sffreme", i, xFruehEx)
+HostFieldGetLineData("sfsrema", i, xSpaetAGP)
+HostFieldGetLineData("sfsreme", i, xSpaetEx)
+
+
+
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", xkdnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xname)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xProzU)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xProzE)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xUmsVKP)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xUmsAGP)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xLiefEx)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xRemEx)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xFruehAGP)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xFruehEx)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xSpaetAGP)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xSpaetEx)
+
+j=j+1
+
+
+if i < 22 then
+i=i+1
+goto nochmal
+endif
+ 
+if xkdnr <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

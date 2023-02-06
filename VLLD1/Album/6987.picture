@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="OSNA_COL/SI25DS(SAC+KEY01)" library="OSNA_COL" member_name="SI25DS">
+    <size cx="80" cy="24"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <field field_type="screen_part" name="SAC">
+      <area>
+        <position/>
+        <size cx="80" cy="19"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="KEY01" overlay="true">
+      <area>
+        <position y="20"/>
+        <size cx="80" cy="4"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Mengen für Aldiwerbung" display_length="22" data_length="22">
+          <area>
+            <position x="30"/>
+            <size cx="22" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="63"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="72"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SDS_JOB" short_name="SDS_JOB" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="1" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SDS_USER" short_name="SDS_USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="63" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="SI25" display_length="4" data_length="4">
+          <area>
+            <position x="74" y="1"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="5" data_length="5">
+          <area>
+            <position x="1" y="2"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFONAM" short_name="SFONAM" data_type="alphanumeric" display_length="21" data_length="21">
+          <area>
+            <position x="7" y="2"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFFOLG" short_name="SFFOLG" data_type="zoned_decimal" display_length="9" data_length="8">
+          <area>
+            <position x="29" y="2"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Gesamtmenge" display_length="11" data_length="11">
+          <area>
+            <position x="41" y="2"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFDBEZ" short_name="SFDBEZ" data_type="zoned_decimal" display_length="6" data_length="6">
+          <area>
+            <position x="53" y="2"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="davon Spitze" display_length="12" data_length="12">
+          <area>
+            <position x="60" y="2"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSPIT" short_name="SFSPIT" data_type="zoned_decimal" display_length="4" data_length="4">
+          <area>
+            <position x="73" y="2"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="Tour                                 AnzKd     Menge                          " display_length="78" data_length="78" underline="true">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="78" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFTOUR" short_name="SFTOUR" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="2" y="4"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFANZKD" short_name="SFANZKD" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="38" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFMENG" short_name="SFMENG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="46" y="4"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTOUR" short_name="SFTOUR" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="2" y="5"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFANZKD" short_name="SFANZKD" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="38" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFMENG" short_name="SFMENG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="46" y="5"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTOUR" short_name="SFTOUR" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="2" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFANZKD" short_name="SFANZKD" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="38" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFMENG" short_name="SFMENG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="46" y="6"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTOUR" short_name="SFTOUR" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="2" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFANZKD" short_name="SFANZKD" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="38" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFMENG" short_name="SFMENG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="46" y="7"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFTOUR" short_name="SFTOUR" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="2" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFANZKD" short_name="SFANZKD" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="38" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFMENG" short_name="SFMENG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="46" y="8"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTOUR" short_name="SFTOUR" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="2" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFANZKD" short_name="SFANZKD" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="38" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFMENG" short_name="SFMENG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="46" y="9"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTOUR" short_name="SFTOUR" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="2" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFANZKD" short_name="SFANZKD" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="38" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFMENG" short_name="SFMENG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="46" y="10"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTOUR" short_name="SFTOUR" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="2" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFANZKD" short_name="SFANZKD" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="38" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFMENG" short_name="SFMENG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="46" y="11"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFTOUR" short_name="SFTOUR" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="2" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFANZKD" short_name="SFANZKD" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="38" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFMENG" short_name="SFMENG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="46" y="12"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTOUR" short_name="SFTOUR" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="2" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFANZKD" short_name="SFANZKD" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="38" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFMENG" short_name="SFMENG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="46" y="13"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTOUR" short_name="SFTOUR" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="2" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFANZKD" short_name="SFANZKD" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="38" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFMENG" short_name="SFMENG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="46" y="14"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTOUR" short_name="SFTOUR" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="2" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFANZKD" short_name="SFANZKD" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="38" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFMENG" short_name="SFMENG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="46" y="15"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFTOUR" short_name="SFTOUR" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="2" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFANZKD" short_name="SFANZKD" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="38" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFMENG" short_name="SFMENG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="46" y="16"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTOUR" short_name="SFTOUR" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="2" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFANZKD" short_name="SFANZKD" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="38" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFMENG" short_name="SFMENG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="46" y="17"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTOUR" short_name="SFTOUR" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="2" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFANZKD" short_name="SFANZKD" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="38" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFMENG" short_name="SFMENG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="46" y="18"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="Touren mit Werbung" display_length="18" data_length="18">
+      <area>
+        <position x="1" y="20"/>
+        <size cx="18" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="SFSUKM" short_name="SFSUKM" data_type="zoned_decimal" display_length="5" data_length="5">
+      <area>
+        <position x="38" y="20"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="SFMGMW" short_name="SFMGMW" data_type="zoned_decimal" display_length="9" data_length="8">
+      <area>
+        <position x="46" y="20"/>
+        <size cx="9" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Touren ohne Werbung" display_length="19" data_length="19">
+      <area>
+        <position x="1" y="21"/>
+        <size cx="19" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="SFSUOW" short_name="SFSUOW" data_type="zoned_decimal" display_length="5" data_length="5">
+      <area>
+        <position x="38" y="21"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="SFMGOW" short_name="SFMGOW" data_type="zoned_decimal" display_length="9" data_length="8">
+      <area>
+        <position x="46" y="21"/>
+        <size cx="9" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="SFSUKO" short_name="SFSUKO" data_type="zoned_decimal" display_length="5" data_length="5" underline="true">
+      <area>
+        <position x="38" y="22"/>
+        <size cx="5" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="SFMGKO" short_name="SFMGKO" data_type="zoned_decimal" display_length="9" data_length="8" underline="true">
+      <area>
+        <position x="46" y="22"/>
+        <size cx="9" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="F3=Ende" display_length="7" data_length="7">
+      <area>
+        <position x="1" y="23"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

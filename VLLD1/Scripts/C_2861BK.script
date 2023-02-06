@@ -1,0 +1,20 @@
+﻿dim text, ErrorMsg,sqlstmd as String
+dim rc as Integer
+dim xxbnk as string
+
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+
+sqlstmd = "SELECT digits(bssch), bsname concat ' ' concat bsort concat ' - BLZ ' concat digits(bsblz) concat ' - '  FROM grbnkp order by bsname concat ' ' concat bsort concat ' - BLZ ' concat digits(bsblz) concat ' - ' "
+rc = EzSQLQuery(sqlstmd, text, ErrorMsg)
+PanelFieldputData ("kdbank", 5, text) 
+
+sqlstmd = "SELECT bssch, digits(bsblz) concat ' - ' concat bsname concat ' ' concat bsort FROM grbnkp order by bsblz"
+rc = EzSQLQuery(sqlstmd, text, ErrorMsg)
+PanelFieldputData ("kdbank2", 5, text) 
+
+PanelUpdateEnable(2)

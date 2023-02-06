@@ -1,0 +1,1365 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="UPDSRC/PBS01DS(FC0001+KEY01)" library="UPDSRC" member_name="PBS01DS">
+    <size cx="132" cy="27"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <field field_type="screen_part" name="FC0001" overlay="true">
+      <area>
+        <position/>
+        <size cx="132" cy="25"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="KEY01" overlay="true">
+      <area>
+        <position y="26"/>
+        <size cx="132" cy="1"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="4"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Verwalten Bestellungen für Paketbegleitscheine" display_length="46" data_length="46" underline="true" high_intensity="true">
+          <area>
+            <position x="41"/>
+            <size cx="46" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="109"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="121"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="USER" short_name="USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="4" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="PBS01" display_length="5" data_length="5" high_intensity="true">
+          <area>
+            <position x="109" y="1"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="JOB" short_name="JOB" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="119" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="  Kunde  Datum       Mng.      Name                               Strasse                    Plz    Ort                       A" display_length="127" data_length="127" underline="true" high_intensity="true">
+          <area>
+            <position x="3" y="4"/>
+            <size cx="127" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="PBS_KDNR" short_name="PBS_KDNR" data_type="zoned_decimal" display_length="7" data_length="7" high_intensity="true" conditional="true">
+          <area>
+            <position x="3" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_DATTMJ" short_name="PBS_DATTMJ" data_type="zoned_decimal" display_length="10" data_length="8" high_intensity="true" conditional="true">
+          <area>
+            <position x="12" y="5"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_MNG" short_name="PBS_MNG" data_type="zoned_decimal" display_length="4" data_length="4" high_intensity="true" conditional="true">
+          <area>
+            <position x="24" y="5"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_TYP" short_name="PBS_TYP" data_type="alphanumeric" display_length="2" data_length="2" high_intensity="true" conditional="true">
+          <area>
+            <position x="30" y="5"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33" high_intensity="true" conditional="true">
+          <area>
+            <position x="34" y="5"/>
+            <size cx="33" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="69" y="5"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true" conditional="true">
+          <area>
+            <position x="96" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="103" y="5"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="129" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_KDNR" short_name="PBS_KDNR" data_type="zoned_decimal" display_length="7" data_length="7" high_intensity="true" conditional="true">
+          <area>
+            <position x="3" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_DATTMJ" short_name="PBS_DATTMJ" data_type="zoned_decimal" display_length="10" data_length="8" high_intensity="true" conditional="true">
+          <area>
+            <position x="12" y="6"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_MNG" short_name="PBS_MNG" data_type="zoned_decimal" display_length="4" data_length="4" high_intensity="true" conditional="true">
+          <area>
+            <position x="24" y="6"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_TYP" short_name="PBS_TYP" data_type="alphanumeric" display_length="2" data_length="2" high_intensity="true" conditional="true">
+          <area>
+            <position x="30" y="6"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33" high_intensity="true" conditional="true">
+          <area>
+            <position x="34" y="6"/>
+            <size cx="33" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="69" y="6"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true" conditional="true">
+          <area>
+            <position x="96" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="103" y="6"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="129" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_KDNR" short_name="PBS_KDNR" data_type="zoned_decimal" display_length="7" data_length="7" high_intensity="true" conditional="true">
+          <area>
+            <position x="3" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_DATTMJ" short_name="PBS_DATTMJ" data_type="zoned_decimal" display_length="10" data_length="8" high_intensity="true" conditional="true">
+          <area>
+            <position x="12" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_MNG" short_name="PBS_MNG" data_type="zoned_decimal" display_length="4" data_length="4" high_intensity="true" conditional="true">
+          <area>
+            <position x="24" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_TYP" short_name="PBS_TYP" data_type="alphanumeric" display_length="2" data_length="2" high_intensity="true" conditional="true">
+          <area>
+            <position x="30" y="7"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33" high_intensity="true" conditional="true">
+          <area>
+            <position x="34" y="7"/>
+            <size cx="33" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="69" y="7"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true" conditional="true">
+          <area>
+            <position x="96" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="103" y="7"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="129" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_KDNR" short_name="PBS_KDNR" data_type="zoned_decimal" display_length="7" data_length="7" high_intensity="true" conditional="true">
+          <area>
+            <position x="3" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_DATTMJ" short_name="PBS_DATTMJ" data_type="zoned_decimal" display_length="10" data_length="8" high_intensity="true" conditional="true">
+          <area>
+            <position x="12" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_MNG" short_name="PBS_MNG" data_type="zoned_decimal" display_length="4" data_length="4" high_intensity="true" conditional="true">
+          <area>
+            <position x="24" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_TYP" short_name="PBS_TYP" data_type="alphanumeric" display_length="2" data_length="2" high_intensity="true" conditional="true">
+          <area>
+            <position x="30" y="8"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33" high_intensity="true" conditional="true">
+          <area>
+            <position x="34" y="8"/>
+            <size cx="33" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="69" y="8"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true" conditional="true">
+          <area>
+            <position x="96" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="103" y="8"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="129" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_KDNR" short_name="PBS_KDNR" data_type="zoned_decimal" display_length="7" data_length="7" high_intensity="true" conditional="true">
+          <area>
+            <position x="3" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_DATTMJ" short_name="PBS_DATTMJ" data_type="zoned_decimal" display_length="10" data_length="8" high_intensity="true" conditional="true">
+          <area>
+            <position x="12" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_MNG" short_name="PBS_MNG" data_type="zoned_decimal" display_length="4" data_length="4" high_intensity="true" conditional="true">
+          <area>
+            <position x="24" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_TYP" short_name="PBS_TYP" data_type="alphanumeric" display_length="2" data_length="2" high_intensity="true" conditional="true">
+          <area>
+            <position x="30" y="9"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33" high_intensity="true" conditional="true">
+          <area>
+            <position x="34" y="9"/>
+            <size cx="33" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="69" y="9"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true" conditional="true">
+          <area>
+            <position x="96" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="103" y="9"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="129" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="PBS_KDNR" short_name="PBS_KDNR" data_type="zoned_decimal" display_length="7" data_length="7" high_intensity="true" conditional="true">
+          <area>
+            <position x="3" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_DATTMJ" short_name="PBS_DATTMJ" data_type="zoned_decimal" display_length="10" data_length="8" high_intensity="true" conditional="true">
+          <area>
+            <position x="12" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_MNG" short_name="PBS_MNG" data_type="zoned_decimal" display_length="4" data_length="4" high_intensity="true" conditional="true">
+          <area>
+            <position x="24" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_TYP" short_name="PBS_TYP" data_type="alphanumeric" display_length="2" data_length="2" high_intensity="true" conditional="true">
+          <area>
+            <position x="30" y="10"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33" high_intensity="true" conditional="true">
+          <area>
+            <position x="34" y="10"/>
+            <size cx="33" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="69" y="10"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true" conditional="true">
+          <area>
+            <position x="96" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="103" y="10"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="129" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_KDNR" short_name="PBS_KDNR" data_type="zoned_decimal" display_length="7" data_length="7" high_intensity="true" conditional="true">
+          <area>
+            <position x="3" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_DATTMJ" short_name="PBS_DATTMJ" data_type="zoned_decimal" display_length="10" data_length="8" high_intensity="true" conditional="true">
+          <area>
+            <position x="12" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_MNG" short_name="PBS_MNG" data_type="zoned_decimal" display_length="4" data_length="4" high_intensity="true" conditional="true">
+          <area>
+            <position x="24" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_TYP" short_name="PBS_TYP" data_type="alphanumeric" display_length="2" data_length="2" high_intensity="true" conditional="true">
+          <area>
+            <position x="30" y="11"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33" high_intensity="true" conditional="true">
+          <area>
+            <position x="34" y="11"/>
+            <size cx="33" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="69" y="11"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true" conditional="true">
+          <area>
+            <position x="96" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="103" y="11"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="129" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_KDNR" short_name="PBS_KDNR" data_type="zoned_decimal" display_length="7" data_length="7" high_intensity="true" conditional="true">
+          <area>
+            <position x="3" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_DATTMJ" short_name="PBS_DATTMJ" data_type="zoned_decimal" display_length="10" data_length="8" high_intensity="true" conditional="true">
+          <area>
+            <position x="12" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_MNG" short_name="PBS_MNG" data_type="zoned_decimal" display_length="4" data_length="4" high_intensity="true" conditional="true">
+          <area>
+            <position x="24" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_TYP" short_name="PBS_TYP" data_type="alphanumeric" display_length="2" data_length="2" high_intensity="true" conditional="true">
+          <area>
+            <position x="30" y="12"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33" high_intensity="true" conditional="true">
+          <area>
+            <position x="34" y="12"/>
+            <size cx="33" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="69" y="12"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true" conditional="true">
+          <area>
+            <position x="96" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="103" y="12"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="129" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_KDNR" short_name="PBS_KDNR" data_type="zoned_decimal" display_length="7" data_length="7" high_intensity="true" conditional="true">
+          <area>
+            <position x="3" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_DATTMJ" short_name="PBS_DATTMJ" data_type="zoned_decimal" display_length="10" data_length="8" high_intensity="true" conditional="true">
+          <area>
+            <position x="12" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_MNG" short_name="PBS_MNG" data_type="zoned_decimal" display_length="4" data_length="4" high_intensity="true" conditional="true">
+          <area>
+            <position x="24" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_TYP" short_name="PBS_TYP" data_type="alphanumeric" display_length="2" data_length="2" high_intensity="true" conditional="true">
+          <area>
+            <position x="30" y="13"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33" high_intensity="true" conditional="true">
+          <area>
+            <position x="34" y="13"/>
+            <size cx="33" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="69" y="13"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true" conditional="true">
+          <area>
+            <position x="96" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="103" y="13"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="129" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_KDNR" short_name="PBS_KDNR" data_type="zoned_decimal" display_length="7" data_length="7" high_intensity="true" conditional="true">
+          <area>
+            <position x="3" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_DATTMJ" short_name="PBS_DATTMJ" data_type="zoned_decimal" display_length="10" data_length="8" high_intensity="true" conditional="true">
+          <area>
+            <position x="12" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_MNG" short_name="PBS_MNG" data_type="zoned_decimal" display_length="4" data_length="4" high_intensity="true" conditional="true">
+          <area>
+            <position x="24" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_TYP" short_name="PBS_TYP" data_type="alphanumeric" display_length="2" data_length="2" high_intensity="true" conditional="true">
+          <area>
+            <position x="30" y="14"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33" high_intensity="true" conditional="true">
+          <area>
+            <position x="34" y="14"/>
+            <size cx="33" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="69" y="14"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true" conditional="true">
+          <area>
+            <position x="96" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="103" y="14"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="129" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="PBS_KDNR" short_name="PBS_KDNR" data_type="zoned_decimal" display_length="7" data_length="7" high_intensity="true" conditional="true">
+          <area>
+            <position x="3" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_DATTMJ" short_name="PBS_DATTMJ" data_type="zoned_decimal" display_length="10" data_length="8" high_intensity="true" conditional="true">
+          <area>
+            <position x="12" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_MNG" short_name="PBS_MNG" data_type="zoned_decimal" display_length="4" data_length="4" high_intensity="true" conditional="true">
+          <area>
+            <position x="24" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_TYP" short_name="PBS_TYP" data_type="alphanumeric" display_length="2" data_length="2" high_intensity="true" conditional="true">
+          <area>
+            <position x="30" y="15"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33" high_intensity="true" conditional="true">
+          <area>
+            <position x="34" y="15"/>
+            <size cx="33" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="69" y="15"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true" conditional="true">
+          <area>
+            <position x="96" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="103" y="15"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="129" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_KDNR" short_name="PBS_KDNR" data_type="zoned_decimal" display_length="7" data_length="7" high_intensity="true" conditional="true">
+          <area>
+            <position x="3" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_DATTMJ" short_name="PBS_DATTMJ" data_type="zoned_decimal" display_length="10" data_length="8" high_intensity="true" conditional="true">
+          <area>
+            <position x="12" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_MNG" short_name="PBS_MNG" data_type="zoned_decimal" display_length="4" data_length="4" high_intensity="true" conditional="true">
+          <area>
+            <position x="24" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_TYP" short_name="PBS_TYP" data_type="alphanumeric" display_length="2" data_length="2" high_intensity="true" conditional="true">
+          <area>
+            <position x="30" y="16"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33" high_intensity="true" conditional="true">
+          <area>
+            <position x="34" y="16"/>
+            <size cx="33" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="69" y="16"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true" conditional="true">
+          <area>
+            <position x="96" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="103" y="16"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="129" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_KDNR" short_name="PBS_KDNR" data_type="zoned_decimal" display_length="7" data_length="7" high_intensity="true" conditional="true">
+          <area>
+            <position x="3" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_DATTMJ" short_name="PBS_DATTMJ" data_type="zoned_decimal" display_length="10" data_length="8" high_intensity="true" conditional="true">
+          <area>
+            <position x="12" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_MNG" short_name="PBS_MNG" data_type="zoned_decimal" display_length="4" data_length="4" high_intensity="true" conditional="true">
+          <area>
+            <position x="24" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_TYP" short_name="PBS_TYP" data_type="alphanumeric" display_length="2" data_length="2" high_intensity="true" conditional="true">
+          <area>
+            <position x="30" y="17"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33" high_intensity="true" conditional="true">
+          <area>
+            <position x="34" y="17"/>
+            <size cx="33" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="69" y="17"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true" conditional="true">
+          <area>
+            <position x="96" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="103" y="17"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="129" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_KDNR" short_name="PBS_KDNR" data_type="zoned_decimal" display_length="7" data_length="7" high_intensity="true" conditional="true">
+          <area>
+            <position x="3" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_DATTMJ" short_name="PBS_DATTMJ" data_type="zoned_decimal" display_length="10" data_length="8" high_intensity="true" conditional="true">
+          <area>
+            <position x="12" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_MNG" short_name="PBS_MNG" data_type="zoned_decimal" display_length="4" data_length="4" high_intensity="true" conditional="true">
+          <area>
+            <position x="24" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_TYP" short_name="PBS_TYP" data_type="alphanumeric" display_length="2" data_length="2" high_intensity="true" conditional="true">
+          <area>
+            <position x="30" y="18"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33" high_intensity="true" conditional="true">
+          <area>
+            <position x="34" y="18"/>
+            <size cx="33" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="69" y="18"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true" conditional="true">
+          <area>
+            <position x="96" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="103" y="18"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="129" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_KDNR" short_name="PBS_KDNR" data_type="zoned_decimal" display_length="7" data_length="7" high_intensity="true" conditional="true">
+          <area>
+            <position x="3" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_DATTMJ" short_name="PBS_DATTMJ" data_type="zoned_decimal" display_length="10" data_length="8" high_intensity="true" conditional="true">
+          <area>
+            <position x="12" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_MNG" short_name="PBS_MNG" data_type="zoned_decimal" display_length="4" data_length="4" high_intensity="true" conditional="true">
+          <area>
+            <position x="24" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_TYP" short_name="PBS_TYP" data_type="alphanumeric" display_length="2" data_length="2" high_intensity="true" conditional="true">
+          <area>
+            <position x="30" y="19"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33" high_intensity="true" conditional="true">
+          <area>
+            <position x="34" y="19"/>
+            <size cx="33" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="69" y="19"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true" conditional="true">
+          <area>
+            <position x="96" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="103" y="19"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="129" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="PBS_KDNR" short_name="PBS_KDNR" data_type="zoned_decimal" display_length="7" data_length="7" high_intensity="true" conditional="true">
+          <area>
+            <position x="3" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_DATTMJ" short_name="PBS_DATTMJ" data_type="zoned_decimal" display_length="10" data_length="8" high_intensity="true" conditional="true">
+          <area>
+            <position x="12" y="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_MNG" short_name="PBS_MNG" data_type="zoned_decimal" display_length="4" data_length="4" high_intensity="true" conditional="true">
+          <area>
+            <position x="24" y="20"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_TYP" short_name="PBS_TYP" data_type="alphanumeric" display_length="2" data_length="2" high_intensity="true" conditional="true">
+          <area>
+            <position x="30" y="20"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33" high_intensity="true" conditional="true">
+          <area>
+            <position x="34" y="20"/>
+            <size cx="33" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="69" y="20"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true" conditional="true">
+          <area>
+            <position x="96" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="103" y="20"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="129" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_KDNR" short_name="PBS_KDNR" data_type="zoned_decimal" display_length="7" data_length="7" high_intensity="true" conditional="true">
+          <area>
+            <position x="3" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_DATTMJ" short_name="PBS_DATTMJ" data_type="zoned_decimal" display_length="10" data_length="8" high_intensity="true" conditional="true">
+          <area>
+            <position x="12" y="21"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_MNG" short_name="PBS_MNG" data_type="zoned_decimal" display_length="4" data_length="4" high_intensity="true" conditional="true">
+          <area>
+            <position x="24" y="21"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_TYP" short_name="PBS_TYP" data_type="alphanumeric" display_length="2" data_length="2" high_intensity="true" conditional="true">
+          <area>
+            <position x="30" y="21"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33" high_intensity="true" conditional="true">
+          <area>
+            <position x="34" y="21"/>
+            <size cx="33" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="69" y="21"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true" conditional="true">
+          <area>
+            <position x="96" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="103" y="21"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="129" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_KDNR" short_name="PBS_KDNR" data_type="zoned_decimal" display_length="7" data_length="7" high_intensity="true" conditional="true">
+          <area>
+            <position x="3" y="22"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_DATTMJ" short_name="PBS_DATTMJ" data_type="zoned_decimal" display_length="10" data_length="8" high_intensity="true" conditional="true">
+          <area>
+            <position x="12" y="22"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_MNG" short_name="PBS_MNG" data_type="zoned_decimal" display_length="4" data_length="4" high_intensity="true" conditional="true">
+          <area>
+            <position x="24" y="22"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_TYP" short_name="PBS_TYP" data_type="alphanumeric" display_length="2" data_length="2" high_intensity="true" conditional="true">
+          <area>
+            <position x="30" y="22"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33" high_intensity="true" conditional="true">
+          <area>
+            <position x="34" y="22"/>
+            <size cx="33" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="69" y="22"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true" conditional="true">
+          <area>
+            <position x="96" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="103" y="22"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="129" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_KDNR" short_name="PBS_KDNR" data_type="zoned_decimal" display_length="7" data_length="7" high_intensity="true" conditional="true">
+          <area>
+            <position x="3" y="23"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_DATTMJ" short_name="PBS_DATTMJ" data_type="zoned_decimal" display_length="10" data_length="8" high_intensity="true" conditional="true">
+          <area>
+            <position x="12" y="23"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_MNG" short_name="PBS_MNG" data_type="zoned_decimal" display_length="4" data_length="4" high_intensity="true" conditional="true">
+          <area>
+            <position x="24" y="23"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_TYP" short_name="PBS_TYP" data_type="alphanumeric" display_length="2" data_length="2" high_intensity="true" conditional="true">
+          <area>
+            <position x="30" y="23"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33" high_intensity="true" conditional="true">
+          <area>
+            <position x="34" y="23"/>
+            <size cx="33" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="69" y="23"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true" conditional="true">
+          <area>
+            <position x="96" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="103" y="23"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="129" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_KDNR" short_name="PBS_KDNR" data_type="zoned_decimal" display_length="7" data_length="7" high_intensity="true" conditional="true">
+          <area>
+            <position x="3" y="24"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_DATTMJ" short_name="PBS_DATTMJ" data_type="zoned_decimal" display_length="10" data_length="8" high_intensity="true" conditional="true">
+          <area>
+            <position x="12" y="24"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_MNG" short_name="PBS_MNG" data_type="zoned_decimal" display_length="4" data_length="4" high_intensity="true" conditional="true">
+          <area>
+            <position x="24" y="24"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PBS_TYP" short_name="PBS_TYP" data_type="alphanumeric" display_length="2" data_length="2" high_intensity="true" conditional="true">
+          <area>
+            <position x="30" y="24"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33" high_intensity="true" conditional="true">
+          <area>
+            <position x="34" y="24"/>
+            <size cx="33" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="69" y="24"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true" conditional="true">
+          <area>
+            <position x="96" y="24"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true" conditional="true">
+          <area>
+            <position x="103" y="24"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="129" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+      </field>
+      <field field_type="subfile_end_plus" value="+" display_length="1" data_length="1" conditional="true">
+        <area>
+          <position x="130" y="24"/>
+          <size cx="1" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="Cmd3 = Verlassen; X = Löschen" display_length="29" data_length="29">
+      <area>
+        <position x="3" y="26"/>
+        <size cx="29" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

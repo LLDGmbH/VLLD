@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="OSNA_SRC/AWKDUMS2DS(BAR0+FMT01)" library="OSNA_SRC" member_name="AWKDUMS2DS">
+    <size cx="80" cy="24"/>
+    <action key="f1" caption="F1" attention_key="false" conditional="true"/>
+    <action key="f3" caption="F3" attention_key="false" conditional="true"/>
+    <action key="f6" caption="F6" attention_key="false" conditional="true"/>
+    <action key="f9" caption="F9" attention_key="false" conditional="true"/>
+    <action key="f10" caption="F10" attention_key="false" conditional="true"/>
+    <action key="f11" caption="F11" attention_key="false" conditional="true"/>
+    <action key="f12" caption="F12" attention_key="false"/>
+    <action key="f21" caption="F21" attention_key="false" conditional="true"/>
+    <action key="f22" caption="F22" attention_key="false" conditional="true"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <field field_type="screen_part" name="BAR0" overlay="true">
+      <area>
+        <position/>
+        <size cx="80" cy="2"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="FMT01">
+      <area>
+        <position y="2"/>
+        <size cx="80" cy="21"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="1. Datei" display_length="8" data_length="8" special_field_type="menu_bar_text">
+      <area>
+        <position x="2"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name=".MNUBAR" short_name=".MNUBAR" data_type="alphanumeric" display_length="64" data_length="64" conditional="true" special_field_type="menu_bar_text">
+      <area>
+        <position x="13"/>
+        <size cx="64" cy="1"/>
+      </area>
+      <color foreground="white" conditional="true"/>
+    </field>
+    <field field_type="fixed_text" value="------------------------------------------------------------------------------" display_length="78" data_length="78" special_field_type="menu_bar_text">
+      <area>
+        <position x="1" y="1"/>
+        <size cx="78" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="USER" short_name="USER" data_type="alphanumeric" display_length="10" data_length="10" high_intensity="true">
+      <area>
+        <position x="1" y="2"/>
+        <size cx="10" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Kundenumsätze nach PLZ/GART" display_length="27" data_length="27" underline="true" high_intensity="true">
+      <area>
+        <position x="26" y="2"/>
+        <size cx="27" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="JOB" short_name="JOB" data_type="alphanumeric" display_length="10" data_length="10" high_intensity="true">
+      <area>
+        <position x="58" y="2"/>
+        <size cx="10" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6" high_intensity="true">
+      <area>
+        <position x="70" y="2"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18" high_intensity="true">
+      <area>
+        <position x="1" y="3"/>
+        <size cx="18" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="AWKDUMS2" display_length="8" data_length="8">
+      <area>
+        <position x="58" y="3"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="yellow"/>
+    </field>
+    <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6" high_intensity="true">
+      <area>
+        <position x="70" y="3"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="MSGFLD" short_name="MSGFLD" data_type="alphanumeric" display_length="40" data_length="40" reverse_image="true" conditional="true">
+      <area>
+        <position x="38" y="5"/>
+        <size cx="40" cy="1"/>
+      </area>
+      <indicator id="50"/>
+    </field>
+    <field field_type="fixed_text" value="PLZ . . . . . .:" display_length="16" data_length="16">
+      <area>
+        <position x="1" y="6"/>
+        <size cx="16" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="WSPLZ" short_name="WSPLZ" data_type="zoned_decimal" display_length="5" data_length="5" underline="true" high_intensity="true" conditional="true" position_cursor="conditional">
+      <area>
+        <position x="18" y="6"/>
+        <size cx="5" cy="1"/>
+      </area>
+      <indicator id="41"/>
+    </field>
+    <field field_type="fixed_text" value="0 = ALLE" display_length="8" data_length="8" conditional="true">
+      <area>
+        <position x="26" y="6"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="magenta"/>
+      <indicator id="41"/>
+    </field>
+    <field field_type="fixed_text" value="Umsatz-Zeitraum:" display_length="16" data_length="16">
+      <area>
+        <position x="1" y="8"/>
+        <size cx="16" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="WSVDAT" short_name="WSVDAT" data_type="zoned_decimal" display_length="10" data_length="8" reverse_image="conditional" underline="true" high_intensity="conditional" conditional="true" position_cursor="conditional">
+      <area>
+        <position x="18" y="8"/>
+        <size cx="10" cy="1"/>
+      </area>
+      <indicator id="41"/>
+    </field>
+    <field field_type="fixed_text" value="bis" display_length="3" data_length="3">
+      <area>
+        <position x="29" y="8"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="WSBDAT" short_name="WSBDAT" data_type="zoned_decimal" display_length="10" data_length="8" reverse_image="conditional" underline="true" high_intensity="conditional" conditional="true" position_cursor="conditional">
+      <area>
+        <position x="33" y="8"/>
+        <size cx="10" cy="1"/>
+      </area>
+      <indicator id="41"/>
+    </field>
+    <field field_type="fixed_text" value="Vgl.-Zeitraum .:" display_length="16" data_length="16">
+      <area>
+        <position x="1" y="10"/>
+        <size cx="16" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="WSVDAT2" short_name="WSVDAT2" data_type="zoned_decimal" display_length="10" data_length="8" reverse_image="conditional" underline="true" high_intensity="conditional" conditional="true" position_cursor="conditional">
+      <area>
+        <position x="18" y="10"/>
+        <size cx="10" cy="1"/>
+      </area>
+      <indicator id="41"/>
+    </field>
+    <field field_type="fixed_text" value="bis" display_length="3" data_length="3">
+      <area>
+        <position x="29" y="10"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="WSBDAT2" short_name="WSBDAT2" data_type="zoned_decimal" display_length="10" data_length="8" reverse_image="conditional" underline="true" high_intensity="conditional" conditional="true" position_cursor="conditional">
+      <area>
+        <position x="33" y="10"/>
+        <size cx="10" cy="1"/>
+      </area>
+      <indicator id="41"/>
+    </field>
+    <field field_type="fixed_text" value="Ausgabe . . . .:" display_length="16" data_length="16">
+      <area>
+        <position x="1" y="12"/>
+        <size cx="16" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="WSOPT" short_name="WSOPT" data_type="zoned_decimal" display_length="1" data_length="1" underline="true" conditional="true" position_cursor="conditional" special_field_type="menu_bar_text">
+      <area>
+        <position x="19" y="12"/>
+        <size cx="1" cy="1"/>
+      </area>
+      <indicator id="41"/>
+    </field>
+    <field field_type="fixed_text" value="1. Bildschirm" display_length="13" data_length="13" conditional="true" special_field_type="menu_bar_text">
+      <area>
+        <position x="21" y="12"/>
+        <size cx="13" cy="1"/>
+      </area>
+      <color foreground="green" conditional="true"/>
+      <color foreground="blue" conditional="true"/>
+      <indicator id="41"/>
+    </field>
+    <field field_type="fixed_text" value="2. Drucker   " display_length="13" data_length="13" conditional="true" special_field_type="menu_bar_text">
+      <area>
+        <position x="21" y="14"/>
+        <size cx="13" cy="1"/>
+      </area>
+      <color foreground="green" conditional="true"/>
+      <color foreground="blue" conditional="true"/>
+      <indicator id="41"/>
+    </field>
+    <field field_type="fixed_text" value="3. Datei     " display_length="13" data_length="13" conditional="true" special_field_type="menu_bar_text">
+      <area>
+        <position x="21" y="16"/>
+        <size cx="13" cy="1"/>
+      </area>
+      <color foreground="green" conditional="true"/>
+      <color foreground="blue" conditional="true"/>
+      <indicator id="41"/>
+    </field>
+    <field field_type="fixed_text" value="                                                                              " display_length="78" data_length="78" underline="true" high_intensity="true">
+      <area>
+        <position x="1" y="21"/>
+        <size cx="78" cy="1"/>
+      </area>
+    </field>
+    <field field_type="msgid_text" value="F3=Ende     " display_length="12" data_length="12" special_field_type="menu_bar_text">
+      <area>
+        <position x="1" y="22"/>
+        <size cx="12" cy="1"/>
+      </area>
+      <color foreground="green" conditional="true"/>
+      <color foreground="blue" conditional="true"/>
+    </field>
+    <field field_type="msgid_text" value="F9=Ausgabe  " display_length="12" data_length="12" conditional="true" special_field_type="menu_bar_text">
+      <area>
+        <position x="18" y="22"/>
+        <size cx="12" cy="1"/>
+      </area>
+      <color foreground="green" conditional="true"/>
+      <color foreground="blue" conditional="true"/>
+    </field>
+  </screen>
+</header>

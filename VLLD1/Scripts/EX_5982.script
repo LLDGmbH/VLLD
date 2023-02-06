@@ -1,0 +1,67 @@
+﻿DIM ddehandle, i, j, j2, msg, rc as integer
+dim x1ja2, x1wo2, x1bs2, x1txt2, x1meng2, x1rd2, x1ja, x1wo, x1bs, x1txt, x1meng, x1rd, errmsg, datei, pfad_datei, source as string 
+i = 0
+j=3
+j2=21
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Warenflussbuchungen kumukiert.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "Jahr")
+ddepoke( ddehandle, "Z1S2", "Woche")
+ddepoke( ddehandle, "Z1S3", "BS")
+ddepoke( ddehandle, "Z1S4", "Text")
+ddepoke( ddehandle, "Z1S5", "Menge")
+ddepoke( ddehandle, "Z1S6", "RD")
+
+nochmal:
+
+HostFieldGetLineData("xxja2", i, x1ja2)
+HostFieldGetLineData("xxwo2", i, x1wo2)
+HostFieldGetLineData("xxbs2", i, x1bs2)
+HostFieldGetLineData("bstxt2", i, x1txt2)
+HostFieldGetLineData("xxmeng2", i, x1meng2)
+HostFieldGetLineData("xxrd2", i, x1rd2)
+HostFieldGetLineData("xxja", i, x1ja)
+HostFieldGetLineData("xxwo", i, x1wo)
+HostFieldGetLineData("xxbs", i, x1bs)
+HostFieldGetLineData("bstxt", i, x1txt)
+HostFieldGetLineData("xxmeng", i, x1meng)
+HostFieldGetLineData("xxrd", i, x1rd)
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", x1ja2)
+ddepoke( ddehandle, "Z" + str(j) +"S2", x1wo2)
+ddepoke( ddehandle, "Z" + str(j) +"S3", x1bs2)
+ddepoke( ddehandle, "Z" + str(j) +"S4", x1txt2)
+ddepoke( ddehandle, "Z" + str(j) +"S5", x1meng2)
+ddepoke( ddehandle, "Z" + str(j) +"S6", x1rd2)
+ddepoke( ddehandle, "Z" + str(j2) +"S1", x1ja)
+ddepoke( ddehandle, "Z" + str(j2) +"S2", x1wo)
+ddepoke( ddehandle, "Z" + str(j2) +"S3", x1bs)
+ddepoke( ddehandle, "Z" + str(j2) +"S4", x1txt)
+ddepoke( ddehandle, "Z" + str(j2) +"S5", x1meng)
+ddepoke( ddehandle, "Z" + str(j2) +"S6", x1rd)
+
+j=j+1
+j2=j2+1
+
+if i < 17 then
+i=i+1
+goto nochmal
+endif
+
+j=j+18
+j2=j2+18
+ 
+if x1ja <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

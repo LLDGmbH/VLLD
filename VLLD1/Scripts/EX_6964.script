@@ -1,0 +1,98 @@
+﻿
+DIM ddehandle, i, j, msg, rc as integer
+
+dim xarg, xxx, sql1, errmsg, datei, pfad_datei as string 
+dim source as string
+
+dim xObj, xONam, xFolg as string 
+dim xV1F, xV2F as string 
+dim xKdNr, xKNam, xBez, xRemS, xRemF, xRemG, xVk, xRemDat, xV1Bez, xV1Rem, xV1Vk, xV2Bez, xV2Rem, xV2Vk as string 
+
+i = 0
+j=4
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+HostFieldGetData("sc_ObjNr",xObj)
+HostFieldGetData("sc_ANam",xONam)
+HostFieldGetData("sc_Folg8",xFolg)
+HostFieldGetData("sf2_V1Folg",xV1F)
+HostFieldGetData("sf2_V2Folg",xV2F)
+HostFieldGetData("arg",xarg)
+
+datei = "Sofort_Fruehremi_Kunden_" + xObj + ".xls"
+pfad_datei = @"@&LWV@"  + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", xObj)
+ddepoke( ddehandle, "Z1S2", xONam)
+ddepoke( ddehandle, "Z1S4", xFolg)
+
+ddepoke( ddehandle, "Z2S10", xV1F)
+ddepoke( ddehandle, "Z2S13", xV2F)
+
+ddepoke( ddehandle, "Z3S1" , "KdNr")
+ddepoke( ddehandle, "Z3S2" , "Kunde")
+ddepoke( ddehandle, "Z3S3" , "Bezug")
+ddepoke( ddehandle, "Z3S4" , "Sof.Remi")
+ddepoke( ddehandle, "Z3S5" , "Fr.Remi")
+ddepoke( ddehandle, "Z3S6" , "Ges.Remi")
+ddepoke( ddehandle, "Z3S7" , "Verk.")
+ddepoke( ddehandle, "Z3S8" , "Rem-Datum")
+ddepoke( ddehandle, "Z3S9" , "Bezug")
+ddepoke( ddehandle, "Z3S10", "Remi")
+ddepoke( ddehandle, "Z3S11", "Vk")
+ddepoke( ddehandle, "Z3S12", "Bezug")
+ddepoke( ddehandle, "Z3S13", "Remi")
+ddepoke( ddehandle, "Z3S14", "Vk")
+
+
+nochmal:
+
+
+HostFieldGetLineData("SF2_KDNR"  , i, xKdNr)
+HostFieldGetLineData("SF2_KNAM"  , i, xKNam)
+HostFieldGetLineData("SF2_BEZ"   , i, xBez)
+HostFieldGetLineData("SF2_REMS"  , i, xRemS)
+HostFieldGetLineData("SF2_REMF"  , i, xRemF)
+HostFieldGetLineData("SF2_GREM"  , i, xRemG)
+HostFieldGetLineData("SF2_VERK"  , i, xVk)
+HostFieldGetLineData("SF2_REMDAT", i, xRemDat)
+HostFieldGetLineData("SF2_V1BEZ" , i, xV1Bez)
+HostFieldGetLineData("SF2_V1REM" , i, xV1Rem)
+HostFieldGetLineData("SF2_V1VERK", i, xV1Vk)
+HostFieldGetLineData("SF2_V2BEZ" , i, xV2Bez)
+HostFieldGetLineData("SF2_V2REM" , i, xV2Rem)
+HostFieldGetLineData("SF2_V2VERK", i, xV2Vk)
+
+
+ddepoke( ddehandle, "Z" + str(j) +"S1",  xKdNR)
+ddepoke( ddehandle, "Z" + str(j) +"S2",  xKNam)
+ddepoke( ddehandle, "Z" + str(j) +"S3",  xBez)
+ddepoke( ddehandle, "Z" + str(j) +"S4",  xRemS)
+ddepoke( ddehandle, "Z" + str(j) +"S5",  xRemF)
+ddepoke( ddehandle, "Z" + str(j) +"S6",  xRemG)
+ddepoke( ddehandle, "Z" + str(j) +"S7",  xVk)
+ddepoke( ddehandle, "Z" + str(j) +"S8",  xRemDat)
+ddepoke( ddehandle, "Z" + str(j) +"S9",  xV1Bez)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xV1Rem)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xV1Vk)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xV2Bez)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xV2Rem)
+ddepoke( ddehandle, "Z" + str(j) +"S14", xV2Vk)
+
+j=j+1 
+
+if (i < 20) then
+   i=i+1
+   goto nochmal
+endif
+ 
+if (xKNam <> "") then
+   i=0
+   HostScreenSendKey("Page Down")
+   goto nochmal
+endif

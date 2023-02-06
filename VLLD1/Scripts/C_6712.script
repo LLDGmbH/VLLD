@@ -1,0 +1,30 @@
+﻿dim text, ErrorMsg,sqlstmd as String
+dim rc as Integer
+dim con_table as integer
+
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rem *** Zugangsgrund
+sqlstmd = "SELECT zunr, zunr concat ' ' concat zutext FROM grzugp order by zunr"
+rc = EzSQLQuery(sqlstmd, text, ErrorMsg)
+
+PanelFieldSetProp ("zugg1", 5, text) 
+
+rem *** Abgangsgrund
+sqlstmd = "SELECT abnr, abnr concat ' ' concat abtext FROM grabgp order by abnr"
+rc = EzSQLQuery(sqlstmd, text, ErrorMsg)
+
+PanelFieldSetProp ("abgg1", 5, text) 
+
+rem * Werbekostenzuschuss
+sqlstmd = "SELECT wknr, wknr concat ' ' concat wktxt FROM grwkzp order by wknr"
+rc = EzSQLQuery(sqlstmd, text, ErrorMsg)
+
+PanelFieldSetProp ("wkz", 5, text) 
+
+
+PanelUpdateEnable(2)

@@ -1,0 +1,50 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim x1, x2, x3, x4, x5, x6, xarg, errmsg, datei, pfad_datei, source as string 
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+
+datei = "VMP-Scanquote.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+nochmal:
+
+
+HostFieldGetLineData("col1", i, x1)
+HostFieldGetLineData("col2", i, x2)
+HostFieldGetLineData("col3", i, x3)
+HostFieldGetLineData("col4", i, x4)
+HostFieldGetLineData("col5", i, x5)
+HostFieldGetLineData("col6", i, x6)
+
+
+if (x1 <> "")  then
+
+ddepoke( ddehandle, "Z" + str(j) +"S2", x1)
+ddepoke( ddehandle, "Z" + str(j) +"S3", x2)
+ddepoke( ddehandle, "Z" + str(j) +"S4", x3)
+ddepoke( ddehandle, "Z" + str(j) +"S5", x4)
+ddepoke( ddehandle, "Z" + str(j) +"S6", x5)
+ddepoke( ddehandle, "Z" + str(j) +"S7", x6)
+
+j=j+1
+endif
+
+if i < 14 then
+i=i+1
+goto nochmal
+endif
+ 
+if x2 <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

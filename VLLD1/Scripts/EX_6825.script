@@ -1,0 +1,65 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xxjahr, xxwoch, xxumsv, xxumsa, xxexpl, xxexpr, xxfrema, xxfreme, xxsrema, xxsreme, errmsg, datei, pfad_datei, source as string 
+i = 1
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Umsatz_Absatz ein EH.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "Jahr")
+ddepoke( ddehandle, "Z1S2", "Woche")
+ddepoke( ddehandle, "Z1S3", "Umsatz VKP")
+ddepoke( ddehandle, "Z1S4", "Umsatz AGP")
+ddepoke( ddehandle, "Z1S5", "Lieferung Expl")
+ddepoke( ddehandle, "Z1S6", "Remi Expl")
+ddepoke( ddehandle, "Z1S7", "Früh AGP")
+ddepoke( ddehandle, "Z1S8", "Früh Expl")
+ddepoke( ddehandle, "Z1S9", "Spät AGP")
+ddepoke( ddehandle, "Z1S10", "Spät Expl")
+
+
+nochmal:
+
+HostFieldGetLineData("sfjahr", i, xxjahr)
+HostFieldGetLineData("sfwoch", i, xxwoch)
+HostFieldGetLineData("sfumsv", i, xxumsv)
+HostFieldGetLineData("sfumsa", i, xxumsa)
+HostFieldGetLineData("sfexpl", i, xxexpl)
+HostFieldGetLineData("sfexpr", i, xxexpr)
+HostFieldGetLineData("sffrema", i, xxfrema)
+HostFieldGetLineData("sffreme", i, xxfreme)
+HostFieldGetLineData("sfsrema", i, xxsrema)
+HostFieldGetLineData("sfsreme", i, xxsreme)
+
+
+if (xxjahr <> "") then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xxjahr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xxwoch)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xxumsv)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xxumsa)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xxexpl)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xxexpr)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xxfrema)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xxfreme)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xxsrema)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xxsreme)
+j=j+1
+endif
+
+if (i < 22) and (xxjahr <> " ") then
+i=i+1
+goto nochmal
+endif
+ 
+if xxjahr <> "" then
+i=1
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

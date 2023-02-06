@@ -1,0 +1,2618 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="OSNA_COL/PVLANZWODS(CTLSF2+FUSS)" library="OSNA_COL" member_name="PVLANZWODS">
+    <size cx="132" cy="27"/>
+    <action key="f2" caption="F2" attention_key="false"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="f12" caption="F12" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <field field_type="screen_part" name="CTLSF2" overlay="true">
+      <area>
+        <position/>
+        <size cx="132" cy="26"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="FUSS">
+      <area>
+        <position y="26"/>
+        <size cx="132" cy="1"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="1"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="    Anzeige Wochen für den gewünschten Zeitraum    " display_length="51" data_length="51" underline="true">
+          <area>
+            <position x="36"/>
+            <size cx="51" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="PVLANZWO" display_length="8" data_length="8">
+          <area>
+            <position x="124"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="fixed_text" value=" in Netto Werten " display_length="17" data_length="17" underline="true">
+          <area>
+            <position x="53" y="1"/>
+            <size cx="17" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="WERT" display_length="4" data_length="4">
+          <area>
+            <position x="124" y="1"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="fixed_text" value="Anzeige vom:" display_length="12" data_length="12">
+          <area>
+            <position x="2" y="2"/>
+            <size cx="12" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="DATVON" short_name="DATVON" data_type="zoned_decimal" display_length="10" data_length="8" underline="true">
+          <area>
+            <position x="15" y="2"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="bis" display_length="3" data_length="3">
+          <area>
+            <position x="26" y="2"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="DATBIS" short_name="DATBIS" data_type="zoned_decimal" display_length="10" data_length="8" underline="true">
+          <area>
+            <position x="30" y="2"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="oder" display_length="4" data_length="4">
+          <area>
+            <position x="2" y="3"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="Jahr" display_length="4" data_length="4">
+          <area>
+            <position x="7" y="3"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value=":" display_length="1" data_length="1">
+          <area>
+            <position x="13" y="3"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="JAHR" short_name="JAHR" data_type="zoned_decimal" display_length="4" data_length="4" underline="true">
+          <area>
+            <position x="15" y="3"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="                   Remi beinhaltet                          " display_length="60" data_length="60" underline="true">
+          <area>
+            <position x="58" y="3"/>
+            <size cx="60" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="Woche       Bezug       NL        Lieferung         Remi |    Sofort-Remi           Früh-Remi         Normal-Remi     |       Umsatz" display_length="132" data_length="132" underline="true">
+          <area>
+            <position y="4"/>
+            <size cx="132" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="WOCHE" short_name="WOCHE" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WBEZUG" short_name="WBEZUG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="5" y="5"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNL" short_name="WNL" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="18" y="5"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WLIEFERUNG" short_name="WLIEFERUNG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="31" y="5"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WREMI" short_name="WREMI" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="44" y="5"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WSR" short_name="WSR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="59" y="5"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SRP" short_name="SRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="72" y="5"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="76" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WFR" short_name="WFR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="79" y="5"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="FRP" short_name="FRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="92" y="5"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="96" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNR" short_name="WNR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="99" y="5"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="NRP" short_name="NRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="112" y="5"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="118" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WVERKAUF" short_name="WVERKAUF" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="120" y="5"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WOCHE" short_name="WOCHE" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WBEZUG" short_name="WBEZUG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="5" y="6"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNL" short_name="WNL" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="18" y="6"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WLIEFERUNG" short_name="WLIEFERUNG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="31" y="6"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WREMI" short_name="WREMI" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="44" y="6"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WSR" short_name="WSR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="59" y="6"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SRP" short_name="SRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="72" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="76" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WFR" short_name="WFR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="79" y="6"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="FRP" short_name="FRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="92" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="96" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNR" short_name="WNR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="99" y="6"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="NRP" short_name="NRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="112" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="118" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WVERKAUF" short_name="WVERKAUF" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="120" y="6"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WOCHE" short_name="WOCHE" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WBEZUG" short_name="WBEZUG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="5" y="7"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNL" short_name="WNL" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="18" y="7"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WLIEFERUNG" short_name="WLIEFERUNG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="31" y="7"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WREMI" short_name="WREMI" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="44" y="7"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WSR" short_name="WSR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="59" y="7"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SRP" short_name="SRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="72" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="76" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WFR" short_name="WFR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="79" y="7"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="FRP" short_name="FRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="92" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="96" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNR" short_name="WNR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="99" y="7"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="NRP" short_name="NRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="112" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="118" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WVERKAUF" short_name="WVERKAUF" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="120" y="7"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WOCHE" short_name="WOCHE" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WBEZUG" short_name="WBEZUG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="5" y="8"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNL" short_name="WNL" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="18" y="8"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WLIEFERUNG" short_name="WLIEFERUNG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="31" y="8"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WREMI" short_name="WREMI" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="44" y="8"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WSR" short_name="WSR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="59" y="8"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SRP" short_name="SRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="72" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="76" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WFR" short_name="WFR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="79" y="8"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="FRP" short_name="FRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="92" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="96" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNR" short_name="WNR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="99" y="8"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="NRP" short_name="NRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="112" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="118" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WVERKAUF" short_name="WVERKAUF" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="120" y="8"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WOCHE" short_name="WOCHE" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WBEZUG" short_name="WBEZUG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="5" y="9"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNL" short_name="WNL" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="18" y="9"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WLIEFERUNG" short_name="WLIEFERUNG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="31" y="9"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WREMI" short_name="WREMI" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="44" y="9"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WSR" short_name="WSR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="59" y="9"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SRP" short_name="SRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="72" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="76" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WFR" short_name="WFR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="79" y="9"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="FRP" short_name="FRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="92" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="96" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNR" short_name="WNR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="99" y="9"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="NRP" short_name="NRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="112" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="118" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WVERKAUF" short_name="WVERKAUF" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="120" y="9"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="WOCHE" short_name="WOCHE" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WBEZUG" short_name="WBEZUG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="5" y="10"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNL" short_name="WNL" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="18" y="10"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WLIEFERUNG" short_name="WLIEFERUNG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="31" y="10"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WREMI" short_name="WREMI" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="44" y="10"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WSR" short_name="WSR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="59" y="10"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SRP" short_name="SRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="72" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="76" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WFR" short_name="WFR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="79" y="10"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="FRP" short_name="FRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="92" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="96" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNR" short_name="WNR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="99" y="10"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="NRP" short_name="NRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="112" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="118" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WVERKAUF" short_name="WVERKAUF" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="120" y="10"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WOCHE" short_name="WOCHE" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WBEZUG" short_name="WBEZUG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="5" y="11"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNL" short_name="WNL" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="18" y="11"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WLIEFERUNG" short_name="WLIEFERUNG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="31" y="11"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WREMI" short_name="WREMI" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="44" y="11"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WSR" short_name="WSR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="59" y="11"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SRP" short_name="SRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="72" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="76" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WFR" short_name="WFR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="79" y="11"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="FRP" short_name="FRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="92" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="96" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNR" short_name="WNR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="99" y="11"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="NRP" short_name="NRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="112" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="118" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WVERKAUF" short_name="WVERKAUF" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="120" y="11"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WOCHE" short_name="WOCHE" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WBEZUG" short_name="WBEZUG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="5" y="12"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNL" short_name="WNL" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="18" y="12"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WLIEFERUNG" short_name="WLIEFERUNG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="31" y="12"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WREMI" short_name="WREMI" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="44" y="12"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WSR" short_name="WSR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="59" y="12"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SRP" short_name="SRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="72" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="76" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WFR" short_name="WFR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="79" y="12"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="FRP" short_name="FRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="92" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="96" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNR" short_name="WNR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="99" y="12"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="NRP" short_name="NRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="112" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="118" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WVERKAUF" short_name="WVERKAUF" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="120" y="12"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WOCHE" short_name="WOCHE" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WBEZUG" short_name="WBEZUG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="5" y="13"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNL" short_name="WNL" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="18" y="13"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WLIEFERUNG" short_name="WLIEFERUNG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="31" y="13"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WREMI" short_name="WREMI" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="44" y="13"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WSR" short_name="WSR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="59" y="13"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SRP" short_name="SRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="72" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="76" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WFR" short_name="WFR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="79" y="13"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="FRP" short_name="FRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="92" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="96" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNR" short_name="WNR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="99" y="13"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="NRP" short_name="NRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="112" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="118" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WVERKAUF" short_name="WVERKAUF" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="120" y="13"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WOCHE" short_name="WOCHE" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WBEZUG" short_name="WBEZUG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="5" y="14"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNL" short_name="WNL" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="18" y="14"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WLIEFERUNG" short_name="WLIEFERUNG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="31" y="14"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WREMI" short_name="WREMI" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="44" y="14"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WSR" short_name="WSR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="59" y="14"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SRP" short_name="SRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="72" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="76" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WFR" short_name="WFR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="79" y="14"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="FRP" short_name="FRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="92" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="96" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNR" short_name="WNR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="99" y="14"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="NRP" short_name="NRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="112" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="118" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WVERKAUF" short_name="WVERKAUF" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="120" y="14"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="WOCHE" short_name="WOCHE" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WBEZUG" short_name="WBEZUG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="5" y="15"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNL" short_name="WNL" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="18" y="15"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WLIEFERUNG" short_name="WLIEFERUNG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="31" y="15"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WREMI" short_name="WREMI" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="44" y="15"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WSR" short_name="WSR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="59" y="15"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SRP" short_name="SRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="72" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="76" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WFR" short_name="WFR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="79" y="15"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="FRP" short_name="FRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="92" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="96" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNR" short_name="WNR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="99" y="15"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="NRP" short_name="NRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="112" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="118" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WVERKAUF" short_name="WVERKAUF" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="120" y="15"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WOCHE" short_name="WOCHE" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WBEZUG" short_name="WBEZUG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="5" y="16"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNL" short_name="WNL" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="18" y="16"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WLIEFERUNG" short_name="WLIEFERUNG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="31" y="16"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WREMI" short_name="WREMI" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="44" y="16"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WSR" short_name="WSR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="59" y="16"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SRP" short_name="SRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="72" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="76" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WFR" short_name="WFR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="79" y="16"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="FRP" short_name="FRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="92" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="96" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNR" short_name="WNR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="99" y="16"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="NRP" short_name="NRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="112" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="118" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WVERKAUF" short_name="WVERKAUF" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="120" y="16"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WOCHE" short_name="WOCHE" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WBEZUG" short_name="WBEZUG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="5" y="17"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNL" short_name="WNL" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="18" y="17"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WLIEFERUNG" short_name="WLIEFERUNG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="31" y="17"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WREMI" short_name="WREMI" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="44" y="17"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WSR" short_name="WSR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="59" y="17"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SRP" short_name="SRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="72" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="76" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WFR" short_name="WFR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="79" y="17"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="FRP" short_name="FRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="92" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="96" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNR" short_name="WNR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="99" y="17"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="NRP" short_name="NRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="112" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="118" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WVERKAUF" short_name="WVERKAUF" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="120" y="17"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WOCHE" short_name="WOCHE" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WBEZUG" short_name="WBEZUG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="5" y="18"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNL" short_name="WNL" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="18" y="18"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WLIEFERUNG" short_name="WLIEFERUNG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="31" y="18"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WREMI" short_name="WREMI" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="44" y="18"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WSR" short_name="WSR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="59" y="18"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SRP" short_name="SRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="72" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="76" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WFR" short_name="WFR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="79" y="18"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="FRP" short_name="FRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="92" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="96" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNR" short_name="WNR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="99" y="18"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="NRP" short_name="NRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="112" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="118" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WVERKAUF" short_name="WVERKAUF" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="120" y="18"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WOCHE" short_name="WOCHE" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WBEZUG" short_name="WBEZUG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="5" y="19"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNL" short_name="WNL" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="18" y="19"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WLIEFERUNG" short_name="WLIEFERUNG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="31" y="19"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WREMI" short_name="WREMI" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="44" y="19"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WSR" short_name="WSR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="59" y="19"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SRP" short_name="SRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="72" y="19"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="76" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WFR" short_name="WFR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="79" y="19"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="FRP" short_name="FRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="92" y="19"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="96" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNR" short_name="WNR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="99" y="19"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="NRP" short_name="NRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="112" y="19"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="118" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WVERKAUF" short_name="WVERKAUF" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="120" y="19"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="WOCHE" short_name="WOCHE" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WBEZUG" short_name="WBEZUG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="5" y="20"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNL" short_name="WNL" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="18" y="20"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WLIEFERUNG" short_name="WLIEFERUNG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="31" y="20"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WREMI" short_name="WREMI" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="44" y="20"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WSR" short_name="WSR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="59" y="20"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SRP" short_name="SRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="72" y="20"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="76" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WFR" short_name="WFR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="79" y="20"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="FRP" short_name="FRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="92" y="20"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="96" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNR" short_name="WNR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="99" y="20"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="NRP" short_name="NRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="112" y="20"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="118" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WVERKAUF" short_name="WVERKAUF" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="120" y="20"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WOCHE" short_name="WOCHE" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="21"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WBEZUG" short_name="WBEZUG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="5" y="21"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNL" short_name="WNL" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="18" y="21"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WLIEFERUNG" short_name="WLIEFERUNG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="31" y="21"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WREMI" short_name="WREMI" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="44" y="21"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WSR" short_name="WSR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="59" y="21"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SRP" short_name="SRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="72" y="21"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="76" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WFR" short_name="WFR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="79" y="21"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="FRP" short_name="FRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="92" y="21"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="96" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNR" short_name="WNR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="99" y="21"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="NRP" short_name="NRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="112" y="21"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="118" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WVERKAUF" short_name="WVERKAUF" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="120" y="21"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WOCHE" short_name="WOCHE" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="22"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WBEZUG" short_name="WBEZUG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="5" y="22"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNL" short_name="WNL" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="18" y="22"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WLIEFERUNG" short_name="WLIEFERUNG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="31" y="22"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WREMI" short_name="WREMI" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="44" y="22"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WSR" short_name="WSR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="59" y="22"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SRP" short_name="SRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="72" y="22"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="76" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WFR" short_name="WFR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="79" y="22"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="FRP" short_name="FRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="92" y="22"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="96" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNR" short_name="WNR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="99" y="22"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="NRP" short_name="NRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="112" y="22"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="118" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WVERKAUF" short_name="WVERKAUF" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="120" y="22"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WOCHE" short_name="WOCHE" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="23"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WBEZUG" short_name="WBEZUG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="5" y="23"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNL" short_name="WNL" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="18" y="23"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WLIEFERUNG" short_name="WLIEFERUNG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="31" y="23"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WREMI" short_name="WREMI" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="44" y="23"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WSR" short_name="WSR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="59" y="23"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SRP" short_name="SRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="72" y="23"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="76" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WFR" short_name="WFR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="79" y="23"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="FRP" short_name="FRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="92" y="23"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="96" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNR" short_name="WNR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="99" y="23"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="NRP" short_name="NRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="112" y="23"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="118" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WVERKAUF" short_name="WVERKAUF" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="120" y="23"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WOCHE" short_name="WOCHE" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="24"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WBEZUG" short_name="WBEZUG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="5" y="24"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNL" short_name="WNL" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="18" y="24"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WLIEFERUNG" short_name="WLIEFERUNG" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="31" y="24"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WREMI" short_name="WREMI" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="44" y="24"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WSR" short_name="WSR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="59" y="24"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SRP" short_name="SRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="72" y="24"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="76" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WFR" short_name="WFR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="79" y="24"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="FRP" short_name="FRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="92" y="24"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="96" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WNR" short_name="WNR" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="99" y="24"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="NRP" short_name="NRP" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="112" y="24"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="118" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WVERKAUF" short_name="WVERKAUF" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="120" y="24"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+      </field>
+      <field field_type="subfile_end_more" value="Weitere ... " display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="119" y="25"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+      <field field_type="subfile_end_bottom" value="Ende        " display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="119" y="25"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="F3 = Beenden des Programmes" display_length="27" data_length="27">
+      <area>
+        <position x="1" y="26"/>
+        <size cx="27" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="F2 = Expl&lt;-&gt;Wert;" display_length="17" data_length="17">
+      <area>
+        <position x="29" y="26"/>
+        <size cx="17" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="F9 = aktualisieren" display_length="18" data_length="18">
+      <area>
+        <position x="47" y="26"/>
+        <size cx="18" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="© Gerd Gerstmann" display_length="16" data_length="16">
+      <area>
+        <position x="115" y="26"/>
+        <size cx="16" cy="1"/>
+      </area>
+      <color foreground="red"/>
+    </field>
+  </screen>
+</header>

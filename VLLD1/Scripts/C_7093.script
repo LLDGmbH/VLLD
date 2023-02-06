@@ -1,0 +1,14 @@
+﻿dim text, sql, ErrorMsg as String
+dim rc as Integer
+global filiale as string 
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rc = EzSQLQuery("SELECT KSNR, digits(KSNR) concat '-' concat KSTEXT FROM grwkstp order by KSNR", text, ErrorMsg)
+
+PanelFieldSetProp ("C1_KON", 5, text)
+
+PanelUpdateEnable(2)

@@ -1,0 +1,71 @@
+﻿global filiale as string
+DIM ddehandle, i, j, msg, rc as integer
+dim xTitel, xWoch, xBuDat, xPNr, xAnzP, xAnzE, xSumEKP, xKdNr, xFF, xName, xPLZ, xOrt as string 
+dim source, ErrMsg, Datei, pfad_datei as string
+
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+HostFieldGetData("s2Woch", xWoch)
+xTitel = "Woche " + xWoch
+
+datei = "Pakete_unbekannte_Remi.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", xtitel)
+
+ddepoke( ddehandle, "Z2S1",  "BuDat")
+ddepoke( ddehandle, "Z2S2",  "PakNr")
+ddepoke( ddehandle, "Z2S3",  "AnzPos")
+ddepoke( ddehandle, "Z2S4",  "AnzExp")
+ddepoke( ddehandle, "Z2S5",  "SumEKP")
+ddepoke( ddehandle, "Z2S6",  "KdNr")
+ddepoke( ddehandle, "Z2S7",  "Fahrf.")
+ddepoke( ddehandle, "Z2S8",  "Name")
+ddepoke( ddehandle, "Z2S9",  "PLZ")
+ddepoke( ddehandle, "Z2S10", "Ort")
+
+nochmal:
+
+HostFieldGetLineData("s2BuDat",  i, xBuDat)
+HostFieldGetLineData("s2PNr",    i, xPNr)
+HostFieldGetLineData("s2AnzP",   i, xAnzP)
+HostFieldGetLineData("s2AnzE",   i, xAnzE)
+HostFieldGetLineData("s2SumAGP", i, xSumEKP)
+HostFieldGetLineData("s2KdNR",   i, xKdNr)
+HostFieldGetLineData("s2FF",     i, xFF)
+HostFieldGetLineData("s2Name",   i, xName)
+HostFieldGetLineData("s2PLZ",    i, xPLZ)
+HostFieldGetLineData("s2Ort",    i, xOrt)
+
+if (xBuDat <> "") then
+   ddepoke( ddehandle, "Z" + str(j) +"S1",  xBuDat)
+   ddepoke( ddehandle, "Z" + str(j) +"S2",  xPNr)
+   ddepoke( ddehandle, "Z" + str(j) +"S3",  xAnzP)
+   ddepoke( ddehandle, "Z" + str(j) +"S4",  xAnzE)
+   ddepoke( ddehandle, "Z" + str(j) +"S5",  xSumEKP)
+   ddepoke( ddehandle, "Z" + str(j) +"S6",  xKdNr)
+   ddepoke( ddehandle, "Z" + str(j) +"S7",  xFF)
+   ddepoke( ddehandle, "Z" + str(j) +"S8",  xName)
+   ddepoke( ddehandle, "Z" + str(j) +"S9",  xPLZ)
+   ddepoke( ddehandle, "Z" + str(j) +"S10", xOrt)
+   j=j+1 
+endif
+
+if (i < 19) then
+   i=i+1
+   goto nochmal
+endif
+
+if (xBuDat <> "") then
+   i=0
+   HostScreenSendKey("Page Down")
+   goto nochmal
+endif

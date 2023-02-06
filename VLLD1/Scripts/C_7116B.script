@@ -1,0 +1,16 @@
+﻿dim text, ErrorMsg as String
+dim rc as Integer
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+
+rem ** Mandantenverlage
+rc = EzSQLQuery("SELECT digits(MVLNR), DIGITS(MVLNR) concat ' - 'concat MVLNAM1 FROM GRMVLP order by MVLNAM1", text, ErrorMsg)
+
+
+PanelFieldSetProp ("S1OBJ5", 5, text) 
+
+PanelUpdateEnable(2)

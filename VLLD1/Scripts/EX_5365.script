@@ -1,0 +1,103 @@
+﻿DIM ddehandle, i, j, msg as integer
+dim xvdat, xbdat, xpos, xxxobj, xxxname, xxehcd, xxxverk, xums, xroerl,xxxkdnr, xxkdname, xxkdstr, xxkdplz, xxkdort, xxvdznr, xxsf_ehcd, xxehtext, xxerrtxt, xxpreis, xxgbz1, xxanzfol, xxsc_anzo, xxsc_anza, xxsc_anzw, xxsc_ehpa, xxgverk, xxgums, xxgroerl, datei, y0, y1, y2, pfad_datei as string 
+dim source as string
+i = 0  
+j=7
+y1 = " "
+y2 = "_"
+
+HostFieldGetData("vdat",   xvdat)
+HostFieldGetData("bdat",   xbdat)
+HostFieldGetData("xxkdnr", xxxkdnr)
+HostFieldGetData("kdname", xxkdname)
+HostFieldGetData("kdstr",  xxkdstr)
+HostFieldGetData("kdplz",  xxkdplz)
+HostFieldGetData("kdort",  xxkdort)
+HostFieldGetData("sc_anzo",xxsc_anzo)
+HostFieldGetData("sc_anza",xxsc_anza)
+HostFieldGetData("sc_anzw",xxsc_anzw)
+HostFieldGetData("sc_ehpa",xxsc_ehpa)
+HostFieldGetData("gverk" , xxgverk)
+HostFieldGetData("gums"   ,xxgums)
+HostFieldGetData("groerl" ,xxgroerl)
+
+datei = "Titelliste_" + xxxkdnr + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "EHPA")
+ddepoke( ddehandle, "Z1S2", xxsc_ehpa)
+ddepoke( ddehandle, "Z1S5", "Ges.Titel")
+ddepoke( ddehandle, "Z1S6", xxsc_anzo)
+ddepoke( ddehandle, "Z1S8", "Ges.Verkauf")
+ddepoke( ddehandle, "Z1S9", xxgverk)
+ddepoke( ddehandle, "Z1S11", "Zeitraum von")
+ddepoke( ddehandle, "Z1S12", xvdat)
+ddepoke( ddehandle, "Z2S1", "Name")
+ddepoke( ddehandle, "Z2S2", xxkdname)
+ddepoke( ddehandle, "Z2S5", "Akt.Titel")
+ddepoke( ddehandle, "Z2S6", xxsc_anza)
+ddepoke( ddehandle, "Z2S8", "Ges.Umsatz")
+ddepoke( ddehandle, "Z2S9", xxgums)
+ddepoke( ddehandle, "Z2S11", "Zeitraum bis")
+ddepoke( ddehandle, "Z2S12", xbdat)
+ddepoke( ddehandle, "Z3S1", "Str")
+ddepoke( ddehandle, "Z3S2", xxkdstr)
+ddepoke( ddehandle, "Z3S8", "Ges.Roherlös")
+ddepoke( ddehandle, "Z3S9", xxgroerl)
+ddepoke( ddehandle, "Z3S11", "Anz.Wochen")
+ddepoke( ddehandle, "Z3S12", xxsc_anzw)
+ddepoke( ddehandle, "Z4S1", "PLZ/Ort")
+ddepoke( ddehandle, "Z4S2", xxkdplz)
+ddepoke( ddehandle, "Z4S3", xxkdort)
+
+ddepoke( ddehandle, "Z6S1", "VDZ Nr")
+ddepoke( ddehandle, "Z6S2", "Titel")
+ddepoke( ddehandle, "Z6S3", "EH CD")
+ddepoke( ddehandle, "Z6S4", "Bezeichnung")
+ddepoke( ddehandle, "Z6S5", "Err.")
+ddepoke( ddehandle, "Z6S6", "Akt.Bezug")
+ddepoke( ddehandle, "Z6S7", "Preis")
+ddepoke( ddehandle, "Z6S8", "Umsatz")
+ddepoke( ddehandle, "Z6S9", "Roherlös")
+
+nochmal:
+
+HostFieldGetLineData("vdznr",   i, xxvdznr)
+HostFieldGetLineData("xxname",  i, xxxname)
+HostFieldGetLineData("sf_ehcd", i, xxsf_ehcd)
+HostFieldGetLineData("ehtext",  i, xxehtext)
+HostFieldGetLineData("errtxt",  i, xxerrtxt)
+HostFieldGetLineData("gbz1",    i, xxgbz1)
+HostFieldGetLineData("preis",   i, xxpreis)
+HostFieldGetLineData("ums",     i, xums)
+HostFieldGetLineData("roerl",   i, xroerl)
+
+if (xxxname <> "Ende")  then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xxvdznr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xxxname)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xxsf_ehcd)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xxehtext)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xxerrtxt)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xxgbz1)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xxpreis)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xums)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xroerl)
+j=j+1
+endif
+
+if i < 15 then
+i=i+1
+goto nochmal
+endif
+
+ 
+if xxerrtxt <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

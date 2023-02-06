@@ -1,0 +1,57 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim x1obj, x1onam, x1aus, x1nul, x1geri, x1hoch, x1anzk, x1proz, errmsg, datei, pfad_datei, source as string 
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Auffälligkeiten.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "Objekt-Nr")
+ddepoke( ddehandle, "Z1S2", "Name")
+ddepoke( ddehandle, "Z1S3", "Aus VK")
+ddepoke( ddehandle, "Z1S4", "Null VK")
+ddepoke( ddehandle, "Z1S5", "geringe Remi")
+ddepoke( ddehandle, "Z1S6", "hohe Remi")
+ddepoke( ddehandle, "Z1S7", "Anz EH")
+ddepoke( ddehandle, "Z1S8", "Prozent")
+
+nochmal:
+
+HostFieldGetLineData("s1obj",  i, x1obj)
+HostFieldGetLineData("s1onam", i, x1onam)
+HostFieldGetLineData("s1aus",  i, x1aus)
+HostFieldGetLineData("s1nul",  i, x1nul)
+HostFieldGetLineData("s1geri", i, x1geri)
+HostFieldGetLineData("s1hoch", i, x1hoch)
+HostFieldGetLineData("s1anzk", i, x1anzk)
+HostFieldGetLineData("s1proz", i, x1proz)
+
+if (x1obj <> "") then
+ddepoke( ddehandle, "Z" + str(j) +"S1", x1obj)
+ddepoke( ddehandle, "Z" + str(j) +"S2", x1onam)
+ddepoke( ddehandle, "Z" + str(j) +"S3", x1aus)
+ddepoke( ddehandle, "Z" + str(j) +"S4", x1nul)
+ddepoke( ddehandle, "Z" + str(j) +"S5", x1geri)
+ddepoke( ddehandle, "Z" + str(j) +"S6", x1hoch)
+ddepoke( ddehandle, "Z" + str(j) +"S7", x1anzk)
+ddepoke( ddehandle, "Z" + str(j) +"S8", x1proz)
+j=j+1
+endif
+
+if i < 16 then
+i=i+1
+goto nochmal
+endif
+
+if x1obj <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

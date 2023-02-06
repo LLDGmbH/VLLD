@@ -1,0 +1,1636 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="OSNA_COL/RN61DS(SFC)" library="OSNA_COL" member_name="RN61DS">
+    <size cx="132" cy="27"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f24" caption="F24" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <field field_type="screen_part" name="SFC" overlay="true">
+      <area>
+        <position/>
+        <size cx="132" cy="26"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SDS_USER" short_name="SDS_USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="Umsatz/Absatz für eine Woche nach Kunden" display_length="40" data_length="40">
+          <area>
+            <position x="42"/>
+            <size cx="40" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SDS_JOB" short_name="SDS_JOB" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="98"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="RN61S" display_length="5" data_length="5">
+          <area>
+            <position x="109"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="115"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="124"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Jahr/Woche:" display_length="11" data_length="11">
+          <area>
+            <position x="1" y="1"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="both" name="SFWOVO" short_name="SFWOVO" data_type="zoned_decimal" display_length="7" data_length="6" underline="true" high_intensity="true">
+          <area>
+            <position x="13" y="1"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="Msg:" display_length="4" data_length="4">
+          <area>
+            <position x="25" y="1"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFMSG" short_name="SFMSG" data_type="alphanumeric" display_length="60" data_length="60">
+          <area>
+            <position x="30" y="1"/>
+            <size cx="60" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="fixed_text" value="Kunde                                      UmsVKP     UmsAGP    LiefEx   RemEx   FrühAGP   FrühEx   SpätAGP   SpätEx              " display_length="130" data_length="130" underline="true">
+          <area>
+            <position x="1" y="2"/>
+            <size cx="130" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAM" short_name="SFKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="3"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="3"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="54" y="3"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="65" y="3"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="73" y="3"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="81" y="3"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="92" y="3"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="100" y="3"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="111" y="3"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAM" short_name="SFKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="4"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="4"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="54" y="4"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="65" y="4"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="73" y="4"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="81" y="4"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="92" y="4"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="100" y="4"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="111" y="4"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAM" short_name="SFKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="5"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="5"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="54" y="5"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="65" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="73" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="81" y="5"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="92" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="100" y="5"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="111" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAM" short_name="SFKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="6"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="6"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="54" y="6"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="65" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="73" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="81" y="6"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="92" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="100" y="6"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="111" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAM" short_name="SFKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="7"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="54" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="65" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="73" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="81" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="92" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="100" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="111" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAM" short_name="SFKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="8"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="54" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="65" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="73" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="81" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="92" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="100" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="111" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAM" short_name="SFKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="9"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="54" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="65" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="73" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="81" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="92" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="100" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="111" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAM" short_name="SFKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="10"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="54" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="65" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="73" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="81" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="92" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="100" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="111" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAM" short_name="SFKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="11"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="54" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="65" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="73" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="81" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="92" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="100" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="111" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAM" short_name="SFKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="12"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="54" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="65" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="73" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="81" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="92" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="100" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="111" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAM" short_name="SFKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="13"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="54" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="65" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="73" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="81" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="92" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="100" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="111" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAM" short_name="SFKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="14"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="54" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="65" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="73" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="81" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="92" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="100" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="111" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAM" short_name="SFKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="15"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="54" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="65" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="73" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="81" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="92" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="100" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="111" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAM" short_name="SFKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="16"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="54" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="65" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="73" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="81" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="92" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="100" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="111" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAM" short_name="SFKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="17"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="54" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="65" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="73" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="81" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="92" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="100" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="111" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAM" short_name="SFKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="18"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="54" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="65" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="73" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="81" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="92" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="100" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="111" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAM" short_name="SFKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="19"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="54" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="65" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="73" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="81" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="92" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="100" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="111" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAM" short_name="SFKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="20"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="54" y="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="65" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="73" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="81" y="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="92" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="100" y="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="111" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAM" short_name="SFKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="21"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="21"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="54" y="21"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="65" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="73" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="81" y="21"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="92" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="100" y="21"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="111" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="22"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAM" short_name="SFKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="22"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="22"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="54" y="22"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="65" y="22"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="73" y="22"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="81" y="22"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="92" y="22"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="100" y="22"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="111" y="22"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="23"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAM" short_name="SFKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="23"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="23"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="54" y="23"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="65" y="23"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="73" y="23"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="81" y="23"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="92" y="23"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="100" y="23"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="111" y="23"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="24"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAM" short_name="SFKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="24"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="24"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="54" y="24"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="65" y="24"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="73" y="24"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="81" y="24"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="92" y="24"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="100" y="24"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="111" y="24"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="25"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAM" short_name="SFKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="25"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="25"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="54" y="25"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="65" y="25"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="73" y="25"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="81" y="25"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="92" y="25"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="100" y="25"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="111" y="25"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+      </field>
+    </field>
+  </screen>
+</header>

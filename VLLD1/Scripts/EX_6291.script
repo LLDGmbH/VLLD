@@ -1,0 +1,59 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xobnr, xtitel, xfolg, xjahr, xbs, xende, xbez, xmeng, xspit, xbest, xvmp, xdate, xtime, xjob, xuser, errmsg, datei, pfad_datei, source as string 
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Lagereingang " + @"@&&XXDAT@" + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z2S1", "Obnr")
+ddepoke( ddehandle, "Z2S2", "Bezeichnung")
+ddepoke( ddehandle, "Z2S3", "Folge")
+ddepoke( ddehandle, "Z2S4", "Spitze aktuell")
+ddepoke( ddehandle, "Z2S5", "Expl. erfasst")
+ddepoke( ddehandle, "Z2S6", "Bestand aktuell")
+ddepoke( ddehandle, "Z2S7", "VMP soll")
+ddepoke( ddehandle, "Z2S8", "Zeit")
+
+nochmal:
+HostFieldGetLineData("lbobj", i, xobnr)
+HostFieldGetLineData("atname", i, xbez)
+HostFieldGetLineData("lbfolg8", i, xfolg)
+HostFieldGetLineData("atspit", i, xspit)
+HostFieldGetLineData("lbnlneu", i, xmeng)
+HostFieldGetLineData("lbbest", i, xbest)
+HostFieldGetLineData("lbvmalt", i, xvmp)
+HostFieldGetLineData("lbzeit", i, xtime)
+
+
+if (xobnr <> "") then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xobnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xbez)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xfolg)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xspit)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xmeng)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xbest)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xvmp)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xtime)
+
+j=j+1
+endif
+
+if i < 17 then
+i=i+1
+goto nochmal
+endif
+ 
+if xobnr <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

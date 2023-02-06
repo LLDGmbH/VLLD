@@ -1,0 +1,1571 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="SRC5_LZ/PVLRZNDS(SFEANCTL+FUSS)" library="SRC5_LZ" member_name="PVLRZNDS">
+    <size cx="132" cy="27"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="f10" caption="F10" attention_key="false" conditional="true"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <field field_type="screen_part" name="SFEANCTL" overlay="true">
+      <area>
+        <position/>
+        <size cx="132" cy="25"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="FUSS">
+      <area>
+        <position y="26"/>
+        <size cx="132" cy="1"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="*USER" short_name="*USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="   erfasste Gadgeds bei Auslieferung   " display_length="39" data_length="39" underline="true">
+          <area>
+            <position x="40"/>
+            <size cx="39" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="123"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value=" für Rechnung zum Verlag " display_length="25" data_length="25" underline="true">
+          <area>
+            <position x="49" y="1"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="Alle anzeigen J/N  oder nur offene " display_length="35" data_length="35">
+          <area>
+            <position x="1" y="2"/>
+            <size cx="35" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="both" name="ALLEJN" short_name="ALLEJN" data_type="alphanumeric" display_length="1" data_length="1" underline="true">
+          <area>
+            <position x="37" y="2"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="? Datum      Vlg   VDZ    Verlag Name                Expl.  Folge      Titel                  Inhalt           Wert     Rech.Datum " display_length="131" data_length="131" underline="true">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="131" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SODATUM" short_name="SODATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="5"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANVLG" short_name="EANVLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="14" y="5"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SOVDZ" short_name="SOVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="20" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VANAME" short_name="VANAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="27" y="5"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANMENG" short_name="EANMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="54" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANFOLGE" short_name="EANFOLGE" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="5"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="72" y="5"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SONTXTK" short_name="SONTXTK" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="95" y="5"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANWERT" short_name="EANWERT" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="112" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="DATUMR" short_name="DATUMR" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="121" y="5"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SODATUM" short_name="SODATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="6"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANVLG" short_name="EANVLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="14" y="6"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SOVDZ" short_name="SOVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="20" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VANAME" short_name="VANAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="27" y="6"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANMENG" short_name="EANMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="54" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANFOLGE" short_name="EANFOLGE" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="6"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="72" y="6"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SONTXTK" short_name="SONTXTK" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="95" y="6"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANWERT" short_name="EANWERT" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="112" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="DATUMR" short_name="DATUMR" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="121" y="6"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SODATUM" short_name="SODATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANVLG" short_name="EANVLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="14" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SOVDZ" short_name="SOVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="20" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VANAME" short_name="VANAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="27" y="7"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANMENG" short_name="EANMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="54" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANFOLGE" short_name="EANFOLGE" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="7"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="72" y="7"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SONTXTK" short_name="SONTXTK" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="95" y="7"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANWERT" short_name="EANWERT" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="112" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="DATUMR" short_name="DATUMR" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="121" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SODATUM" short_name="SODATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANVLG" short_name="EANVLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="14" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SOVDZ" short_name="SOVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="20" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VANAME" short_name="VANAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="27" y="8"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANMENG" short_name="EANMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="54" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANFOLGE" short_name="EANFOLGE" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="8"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="72" y="8"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SONTXTK" short_name="SONTXTK" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="95" y="8"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANWERT" short_name="EANWERT" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="112" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="DATUMR" short_name="DATUMR" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="121" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SODATUM" short_name="SODATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANVLG" short_name="EANVLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="14" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SOVDZ" short_name="SOVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="20" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VANAME" short_name="VANAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="27" y="9"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANMENG" short_name="EANMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="54" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANFOLGE" short_name="EANFOLGE" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="9"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="72" y="9"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SONTXTK" short_name="SONTXTK" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="95" y="9"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANWERT" short_name="EANWERT" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="112" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="DATUMR" short_name="DATUMR" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="121" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SODATUM" short_name="SODATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANVLG" short_name="EANVLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="14" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SOVDZ" short_name="SOVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="20" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VANAME" short_name="VANAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="27" y="10"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANMENG" short_name="EANMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="54" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANFOLGE" short_name="EANFOLGE" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="10"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="72" y="10"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SONTXTK" short_name="SONTXTK" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="95" y="10"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANWERT" short_name="EANWERT" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="112" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="DATUMR" short_name="DATUMR" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="121" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SODATUM" short_name="SODATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANVLG" short_name="EANVLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="14" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SOVDZ" short_name="SOVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="20" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VANAME" short_name="VANAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="27" y="11"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANMENG" short_name="EANMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="54" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANFOLGE" short_name="EANFOLGE" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="11"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="72" y="11"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SONTXTK" short_name="SONTXTK" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="95" y="11"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANWERT" short_name="EANWERT" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="112" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="DATUMR" short_name="DATUMR" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="121" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SODATUM" short_name="SODATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANVLG" short_name="EANVLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="14" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SOVDZ" short_name="SOVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="20" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VANAME" short_name="VANAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="27" y="12"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANMENG" short_name="EANMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="54" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANFOLGE" short_name="EANFOLGE" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="12"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="72" y="12"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SONTXTK" short_name="SONTXTK" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="95" y="12"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANWERT" short_name="EANWERT" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="112" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="DATUMR" short_name="DATUMR" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="121" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SODATUM" short_name="SODATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANVLG" short_name="EANVLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="14" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SOVDZ" short_name="SOVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="20" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VANAME" short_name="VANAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="27" y="13"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANMENG" short_name="EANMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="54" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANFOLGE" short_name="EANFOLGE" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="13"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="72" y="13"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SONTXTK" short_name="SONTXTK" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="95" y="13"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANWERT" short_name="EANWERT" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="112" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="DATUMR" short_name="DATUMR" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="121" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SODATUM" short_name="SODATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANVLG" short_name="EANVLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="14" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SOVDZ" short_name="SOVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="20" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VANAME" short_name="VANAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="27" y="14"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANMENG" short_name="EANMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="54" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANFOLGE" short_name="EANFOLGE" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="14"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="72" y="14"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SONTXTK" short_name="SONTXTK" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="95" y="14"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANWERT" short_name="EANWERT" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="112" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="DATUMR" short_name="DATUMR" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="121" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SODATUM" short_name="SODATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANVLG" short_name="EANVLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="14" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SOVDZ" short_name="SOVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="20" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VANAME" short_name="VANAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="27" y="15"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANMENG" short_name="EANMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="54" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANFOLGE" short_name="EANFOLGE" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="15"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="72" y="15"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SONTXTK" short_name="SONTXTK" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="95" y="15"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANWERT" short_name="EANWERT" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="112" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="DATUMR" short_name="DATUMR" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="121" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SODATUM" short_name="SODATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANVLG" short_name="EANVLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="14" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SOVDZ" short_name="SOVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="20" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VANAME" short_name="VANAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="27" y="16"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANMENG" short_name="EANMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="54" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANFOLGE" short_name="EANFOLGE" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="16"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="72" y="16"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SONTXTK" short_name="SONTXTK" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="95" y="16"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANWERT" short_name="EANWERT" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="112" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="DATUMR" short_name="DATUMR" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="121" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SODATUM" short_name="SODATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANVLG" short_name="EANVLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="14" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SOVDZ" short_name="SOVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="20" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VANAME" short_name="VANAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="27" y="17"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANMENG" short_name="EANMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="54" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANFOLGE" short_name="EANFOLGE" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="17"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="72" y="17"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SONTXTK" short_name="SONTXTK" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="95" y="17"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANWERT" short_name="EANWERT" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="112" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="DATUMR" short_name="DATUMR" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="121" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SODATUM" short_name="SODATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANVLG" short_name="EANVLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="14" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SOVDZ" short_name="SOVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="20" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VANAME" short_name="VANAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="27" y="18"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANMENG" short_name="EANMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="54" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANFOLGE" short_name="EANFOLGE" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="18"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="72" y="18"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SONTXTK" short_name="SONTXTK" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="95" y="18"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANWERT" short_name="EANWERT" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="112" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="DATUMR" short_name="DATUMR" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="121" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SODATUM" short_name="SODATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANVLG" short_name="EANVLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="14" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SOVDZ" short_name="SOVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="20" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VANAME" short_name="VANAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="27" y="19"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANMENG" short_name="EANMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="54" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANFOLGE" short_name="EANFOLGE" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="19"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="72" y="19"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SONTXTK" short_name="SONTXTK" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="95" y="19"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANWERT" short_name="EANWERT" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="112" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="DATUMR" short_name="DATUMR" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="121" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SODATUM" short_name="SODATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANVLG" short_name="EANVLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="14" y="20"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SOVDZ" short_name="SOVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="20" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VANAME" short_name="VANAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="27" y="20"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANMENG" short_name="EANMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="54" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANFOLGE" short_name="EANFOLGE" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="20"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="72" y="20"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SONTXTK" short_name="SONTXTK" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="95" y="20"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANWERT" short_name="EANWERT" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="112" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="DATUMR" short_name="DATUMR" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="121" y="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SODATUM" short_name="SODATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="21"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANVLG" short_name="EANVLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="14" y="21"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SOVDZ" short_name="SOVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="20" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VANAME" short_name="VANAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="27" y="21"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANMENG" short_name="EANMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="54" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANFOLGE" short_name="EANFOLGE" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="21"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="72" y="21"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SONTXTK" short_name="SONTXTK" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="95" y="21"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANWERT" short_name="EANWERT" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="112" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="DATUMR" short_name="DATUMR" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="121" y="21"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SODATUM" short_name="SODATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="22"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANVLG" short_name="EANVLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="14" y="22"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SOVDZ" short_name="SOVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="20" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VANAME" short_name="VANAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="27" y="22"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANMENG" short_name="EANMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="54" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANFOLGE" short_name="EANFOLGE" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="22"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="72" y="22"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SONTXTK" short_name="SONTXTK" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="95" y="22"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANWERT" short_name="EANWERT" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="112" y="22"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="DATUMR" short_name="DATUMR" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="121" y="22"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SODATUM" short_name="SODATUM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="23"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANVLG" short_name="EANVLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="14" y="23"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SOVDZ" short_name="SOVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="20" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VANAME" short_name="VANAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="27" y="23"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANMENG" short_name="EANMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="54" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANFOLGE" short_name="EANFOLGE" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="23"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="72" y="23"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SONTXTK" short_name="SONTXTK" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="95" y="23"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EANWERT" short_name="EANWERT" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="112" y="23"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="DATUMR" short_name="DATUMR" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="121" y="23"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue" conditional="true"/>
+        </field>
+      </field>
+      <field field_type="subfile_end_more" value="Weitere ... " display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="119" y="24"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+      <field field_type="subfile_end_bottom" value="Ende        " display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="119" y="24"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="F3 = Beenden;  F12 = Zurück:  A= Satz anzeigen und ändern; X= Satz löschen" display_length="74" data_length="74">
+      <area>
+        <position x="1" y="26"/>
+        <size cx="74" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

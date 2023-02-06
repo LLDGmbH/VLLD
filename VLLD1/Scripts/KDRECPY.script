@@ -1,0 +1,45 @@
+﻿dim xkdnr, xdat, xrech, xja, xwo, ip, lw, lw_pfad, verz, lw_pfad_kd, comm, xmdir, datei as string
+dim file_ok, lin, zeil, spalt as integer
+
+ip = "@&IP@" 
+lw = "@&LWA@"
+lw_pfad = lw +  "kunden\" 
+
+rem ip = "mh520"
+rem lw = "z"
+rem lw_pfad = lw + ":/archiv/"
+
+file_ok = FileExists(lw_pfad)
+
+if file_ok = 0 then
+
+comm = "cmd.exe /c net use " + @"@&LW@" + ": \\" + ip + "\seagull pcuser /user:pcuser"
+PcCommand(4, comm)
+Wait(1)
+endif
+
+HostFieldGetData("kdkdnr", xkdnr)
+HostCursorGet(zeil, spalt)
+lin = zeil - 6
+HostFieldGetLineData("sfrdat", lin, xdat)
+HostFieldGetLineData("sfja", lin, xja)
+HostFieldGetLineData("sfwoc", lin, xwo)
+
+xrech= "20"+ xja + "_" + xwo + ".pdf"
+
+rem xkdnr = "57999"
+
+if (xkdnr <> "")  then
+
+lw_pfad_kd = lw_pfad + xkdnr
+file_ok = FileExists(lw_pfad_kd)
+if file_ok = 0 then
+comm = "cmd.exe /c md " + lw_pfad_kd
+PcCommand(4, comm)
+Wait(1)
+endif
+
+
+Datei = lw_pfad_kd + "rechnung\" + xrech
+PcCommand(4, datei)
+endif

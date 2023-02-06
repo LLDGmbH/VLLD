@@ -1,0 +1,80 @@
+﻿global filiale as string
+DIM ddehandle, i, j, msg, rc as integer
+dim x3pos, x3fil, x3obj, x3vdz, x3ta, x3wt, x3onam, x3folg, x3vog, x3vmng, x3vbtr, x3gmng, x3gbtr, x3dmng, x3dbtr, datei, pfad_datei, ErrMsg as string 
+dim source as string
+
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Rechnungsprüfung.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1",  "Pos")
+ddepoke( ddehandle, "Z1S2",  "Fil")
+ddepoke( ddehandle, "Z1S3",  "ObjNr")
+ddepoke( ddehandle, "Z1S4",  "VDZ Nr")
+ddepoke( ddehandle, "Z1S5",  "TA")
+ddepoke( ddehandle, "Z1S6",  "WT")
+ddepoke( ddehandle, "Z1S7",  "Bezeichnung")
+ddepoke( ddehandle, "Z1S8",  "Folge")
+ddepoke( ddehandle, "Z1S9",  "Vorgang")
+ddepoke( ddehandle, "Z1S10", "VL Menge")
+ddepoke( ddehandle, "Z1S11", "VL Betrag")
+ddepoke( ddehandle, "Z1S12", "GR Menge")
+ddepoke( ddehandle, "Z1S13", "GR Betrag")
+ddepoke( ddehandle, "Z1S14", "Diff Menge")
+ddepoke( ddehandle, "Z1S15", "Diff Betrag")
+
+nochmal:
+
+HostFieldGetLineData("s3pos",  i, x3pos)
+HostFieldGetLineData("s3fil",  i, x3fil)
+HostFieldGetLineData("s3obj",  i, x3obj)
+HostFieldGetLineData("s3vdz",  i, x3vdz)
+HostFieldGetLineData("s3ta",   i, x3ta)
+HostFieldGetLineData("s3wt",   i, x3wt)
+HostFieldGetLineData("s3onam", i, x3onam)
+HostFieldGetLineData("s3folg", i, x3folg)
+HostFieldGetLineData("s3vog",  i, x3vog)
+HostFieldGetLineData("s3vmng", i, x3vmng)
+HostFieldGetLineData("s3vbtr", i, x3vbtr)
+HostFieldGetLineData("s3gmng", i, x3gmng)
+HostFieldGetLineData("s3gbtr", i, x3gbtr)
+HostFieldGetLineData("s3dmng", i, x3dmng)
+HostFieldGetLineData("s3dbtr", i, x3dbtr)
+
+ddepoke( ddehandle, "Z" + str(j) +"S1",  x3pos)
+ddepoke( ddehandle, "Z" + str(j) +"S2",  x3fil)
+ddepoke( ddehandle, "Z" + str(j) +"S3",  x3obj)
+ddepoke( ddehandle, "Z" + str(j) +"S4",  x3vdz)
+ddepoke( ddehandle, "Z" + str(j) +"S5",  x3ta)
+ddepoke( ddehandle, "Z" + str(j) +"S6",  x3wt)
+ddepoke( ddehandle, "Z" + str(j) +"S7",  x3onam)
+ddepoke( ddehandle, "Z" + str(j) +"S8",  x3folg)
+ddepoke( ddehandle, "Z" + str(j) +"S9",  x3vog)
+ddepoke( ddehandle, "Z" + str(j) +"S10", x3vmng)
+ddepoke( ddehandle, "Z" + str(j) +"S11", x3vbtr)
+ddepoke( ddehandle, "Z" + str(j) +"S12", x3gmng)
+ddepoke( ddehandle, "Z" + str(j) +"S13", x3gbtr)
+ddepoke( ddehandle, "Z" + str(j) +"S14", x3dmng)
+ddepoke( ddehandle, "Z" + str(j) +"S15", x3dbtr)
+
+j=j+1 
+
+if i < 22 then
+i=i+1
+goto nochmal
+endif
+ 
+if x3pos <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

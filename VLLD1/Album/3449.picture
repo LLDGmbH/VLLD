@@ -1,0 +1,806 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="OSNA_SRC/VWRKIDDS(BAR0+FMT01C2)" library="OSNA_SRC" member_name="VWRKIDDS">
+    <size cx="80" cy="24"/>
+    <action key="f1" caption="F1" attention_key="false" conditional="true"/>
+    <action key="f3" caption="F3" attention_key="false" conditional="true"/>
+    <action key="f7" caption="F7" attention_key="false" conditional="true"/>
+    <action key="f10" caption="F10" attention_key="false" conditional="true"/>
+    <action key="f11" caption="F11" attention_key="false" conditional="true"/>
+    <action key="f12" caption="F12" attention_key="false"/>
+    <action key="f18" caption="F18" attention_key="false" conditional="true"/>
+    <action key="f21" caption="F21" attention_key="false" conditional="true"/>
+    <action key="f22" caption="F22" attention_key="false" conditional="true"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <field field_type="screen_part" name="BAR0" overlay="true">
+      <area>
+        <position/>
+        <size cx="80" cy="2"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="FMT01C2" overlay="true">
+      <area>
+        <position y="2"/>
+        <size cx="80" cy="18"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="1. Datei" display_length="8" data_length="8" special_field_type="menu_bar_text">
+      <area>
+        <position x="2"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name=".MNUBAR" short_name=".MNUBAR" data_type="alphanumeric" display_length="64" data_length="64" conditional="true" special_field_type="menu_bar_text">
+      <area>
+        <position x="13"/>
+        <size cx="64" cy="1"/>
+      </area>
+      <color foreground="white" conditional="true"/>
+    </field>
+    <field field_type="fixed_text" value="------------------------------------------------------------------------------" display_length="78" data_length="78" special_field_type="menu_bar_text">
+      <area>
+        <position x="1" y="1"/>
+        <size cx="78" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="JOB" short_name="JOB" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="1" y="2"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Zuordnung Reklamations-Bearbeiter" display_length="33" data_length="33" underline="true" high_intensity="true">
+          <area>
+            <position x="23" y="2"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="USER" short_name="USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="60" y="2"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="71" y="2"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="QQAKT" short_name="QQAKT" data_type="zoned_decimal" display_length="3" data_length="2" non_display="true" reverse_image="true" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <indicator negative="true" id="24"/>
+        </field>
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18" high_intensity="true" conditional="true">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="*SYSNAME" short_name="*SYSNAME" data_type="alphanumeric" display_length="8" data_length="8">
+          <area>
+            <position x="20" y="3"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="VWRKID" display_length="6" data_length="6">
+          <area>
+            <position x="60" y="3"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="71" y="3"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="MSGFLD" short_name="MSGFLD" data_type="alphanumeric" display_length="35" data_length="35" reverse_image="true" conditional="true">
+          <area>
+            <position x="44" y="4"/>
+            <size cx="35" cy="1"/>
+          </area>
+          <indicator id="50"/>
+        </field>
+      </field>
+    </field>
+    <field field_type="msgid_text" value="Anzeige wechseln  " display_length="18" data_length="18" conditional="true" special_field_type="menu_bar_text">
+      <area>
+        <position x="51" y="5"/>
+        <size cx="18" cy="1"/>
+      </area>
+      <color foreground="green" conditional="true"/>
+      <color foreground="blue" conditional="true"/>
+      <indicator id="41"/>
+    </field>
+    <field field_type="msgid_text" value="von vorne füllen  " display_length="18" data_length="18" conditional="true" special_field_type="menu_bar_text">
+      <area>
+        <position x="51" y="6"/>
+        <size cx="18" cy="1"/>
+      </area>
+      <color foreground="green" conditional="true"/>
+      <color foreground="blue" conditional="true"/>
+      <indicator id="41"/>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="fixed_text" value="A = Ändern, L = Löschen" display_length="23" data_length="23">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="23" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="fixed_text" value="A ID Name                   PLZ    KdNr Name         RK Name                   " display_length="79" data_length="79" underline="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="79" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" reverse_image="conditional" underline="true" high_intensity="conditional" conditional="true" position_cursor="true" exit_record="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSIDNR" short_name="WSIDNR" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="9"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSIDNAM" short_name="WSIDNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="6" y="9"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSPLZ" short_name="WSPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSKDNR" short_name="WSKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="33" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSKDNAM" short_name="WSKDNAM" data_type="alphanumeric" display_length="12" data_length="12" conditional="true">
+          <area>
+            <position x="41" y="9"/>
+            <size cx="12" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSRKID" short_name="WSRKID" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="54" y="9"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSRKNAM" short_name="WSRKNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="57" y="9"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_scrollbar" usage="output" data_type="alphanumeric" value=" " display_length="1" data_length="1" reverse_image="conditional" conditional="true">
+        <area>
+          <position x="78" y="9"/>
+          <size cx="1" cy="1"/>
+        </area>
+        <color foreground="white" conditional="true"/>
+      </field>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" reverse_image="conditional" underline="true" high_intensity="conditional" conditional="true" position_cursor="true" exit_record="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSIDNR" short_name="WSIDNR" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="10"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSIDNAM" short_name="WSIDNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="6" y="10"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSPLZ" short_name="WSPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSKDNR" short_name="WSKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="33" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSKDNAM" short_name="WSKDNAM" data_type="alphanumeric" display_length="12" data_length="12" conditional="true">
+          <area>
+            <position x="41" y="10"/>
+            <size cx="12" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSRKID" short_name="WSRKID" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="54" y="10"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSRKNAM" short_name="WSRKNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="57" y="10"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_scrollbar" usage="output" data_type="alphanumeric" value=" " display_length="1" data_length="1" reverse_image="conditional" conditional="true">
+        <area>
+          <position x="78" y="10"/>
+          <size cx="1" cy="1"/>
+        </area>
+        <color foreground="white" conditional="true"/>
+      </field>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" reverse_image="conditional" underline="true" high_intensity="conditional" conditional="true" position_cursor="true" exit_record="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSIDNR" short_name="WSIDNR" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="11"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSIDNAM" short_name="WSIDNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="6" y="11"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSPLZ" short_name="WSPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSKDNR" short_name="WSKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="33" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSKDNAM" short_name="WSKDNAM" data_type="alphanumeric" display_length="12" data_length="12" conditional="true">
+          <area>
+            <position x="41" y="11"/>
+            <size cx="12" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSRKID" short_name="WSRKID" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="54" y="11"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSRKNAM" short_name="WSRKNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="57" y="11"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_scrollbar" usage="output" data_type="alphanumeric" value=" " display_length="1" data_length="1" reverse_image="conditional" conditional="true">
+        <area>
+          <position x="78" y="11"/>
+          <size cx="1" cy="1"/>
+        </area>
+        <color foreground="white" conditional="true"/>
+      </field>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" reverse_image="conditional" underline="true" high_intensity="conditional" conditional="true" position_cursor="true" exit_record="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSIDNR" short_name="WSIDNR" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="12"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSIDNAM" short_name="WSIDNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="6" y="12"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSPLZ" short_name="WSPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSKDNR" short_name="WSKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="33" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSKDNAM" short_name="WSKDNAM" data_type="alphanumeric" display_length="12" data_length="12" conditional="true">
+          <area>
+            <position x="41" y="12"/>
+            <size cx="12" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSRKID" short_name="WSRKID" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="54" y="12"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSRKNAM" short_name="WSRKNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="57" y="12"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_scrollbar" usage="output" data_type="alphanumeric" value=" " display_length="1" data_length="1" reverse_image="conditional" conditional="true">
+        <area>
+          <position x="78" y="12"/>
+          <size cx="1" cy="1"/>
+        </area>
+        <color foreground="white" conditional="true"/>
+      </field>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" reverse_image="conditional" underline="true" high_intensity="conditional" conditional="true" position_cursor="true" exit_record="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSIDNR" short_name="WSIDNR" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="13"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSIDNAM" short_name="WSIDNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="6" y="13"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSPLZ" short_name="WSPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSKDNR" short_name="WSKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="33" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSKDNAM" short_name="WSKDNAM" data_type="alphanumeric" display_length="12" data_length="12" conditional="true">
+          <area>
+            <position x="41" y="13"/>
+            <size cx="12" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSRKID" short_name="WSRKID" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="54" y="13"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSRKNAM" short_name="WSRKNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="57" y="13"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_scrollbar" usage="output" data_type="alphanumeric" value=" " display_length="1" data_length="1" reverse_image="conditional" conditional="true">
+        <area>
+          <position x="78" y="13"/>
+          <size cx="1" cy="1"/>
+        </area>
+        <color foreground="white" conditional="true"/>
+      </field>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" reverse_image="conditional" underline="true" high_intensity="conditional" conditional="true" position_cursor="true" exit_record="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSIDNR" short_name="WSIDNR" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="14"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSIDNAM" short_name="WSIDNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="6" y="14"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSPLZ" short_name="WSPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSKDNR" short_name="WSKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="33" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSKDNAM" short_name="WSKDNAM" data_type="alphanumeric" display_length="12" data_length="12" conditional="true">
+          <area>
+            <position x="41" y="14"/>
+            <size cx="12" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSRKID" short_name="WSRKID" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="54" y="14"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSRKNAM" short_name="WSRKNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="57" y="14"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_scrollbar" usage="output" data_type="alphanumeric" value=" " display_length="1" data_length="1" reverse_image="conditional" conditional="true">
+        <area>
+          <position x="78" y="14"/>
+          <size cx="1" cy="1"/>
+        </area>
+        <color foreground="white" conditional="true"/>
+      </field>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" reverse_image="conditional" underline="true" high_intensity="conditional" conditional="true" position_cursor="true" exit_record="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSIDNR" short_name="WSIDNR" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="15"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSIDNAM" short_name="WSIDNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="6" y="15"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSPLZ" short_name="WSPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSKDNR" short_name="WSKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="33" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSKDNAM" short_name="WSKDNAM" data_type="alphanumeric" display_length="12" data_length="12" conditional="true">
+          <area>
+            <position x="41" y="15"/>
+            <size cx="12" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSRKID" short_name="WSRKID" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="54" y="15"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSRKNAM" short_name="WSRKNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="57" y="15"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_scrollbar" usage="output" data_type="alphanumeric" value=" " display_length="1" data_length="1" reverse_image="conditional" conditional="true">
+        <area>
+          <position x="78" y="15"/>
+          <size cx="1" cy="1"/>
+        </area>
+        <color foreground="white" conditional="true"/>
+      </field>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" reverse_image="conditional" underline="true" high_intensity="conditional" conditional="true" position_cursor="true" exit_record="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSIDNR" short_name="WSIDNR" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="16"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSIDNAM" short_name="WSIDNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="6" y="16"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSPLZ" short_name="WSPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSKDNR" short_name="WSKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="33" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSKDNAM" short_name="WSKDNAM" data_type="alphanumeric" display_length="12" data_length="12" conditional="true">
+          <area>
+            <position x="41" y="16"/>
+            <size cx="12" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSRKID" short_name="WSRKID" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="54" y="16"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSRKNAM" short_name="WSRKNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="57" y="16"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_scrollbar" usage="output" data_type="alphanumeric" value=" " display_length="1" data_length="1" reverse_image="conditional" conditional="true">
+        <area>
+          <position x="78" y="16"/>
+          <size cx="1" cy="1"/>
+        </area>
+        <color foreground="white" conditional="true"/>
+      </field>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" reverse_image="conditional" underline="true" high_intensity="conditional" conditional="true" position_cursor="true" exit_record="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSIDNR" short_name="WSIDNR" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="17"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSIDNAM" short_name="WSIDNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="6" y="17"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSPLZ" short_name="WSPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSKDNR" short_name="WSKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="33" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSKDNAM" short_name="WSKDNAM" data_type="alphanumeric" display_length="12" data_length="12" conditional="true">
+          <area>
+            <position x="41" y="17"/>
+            <size cx="12" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSRKID" short_name="WSRKID" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="54" y="17"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSRKNAM" short_name="WSRKNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="57" y="17"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_scrollbar" usage="output" data_type="alphanumeric" value=" " display_length="1" data_length="1" reverse_image="conditional" conditional="true">
+        <area>
+          <position x="78" y="17"/>
+          <size cx="1" cy="1"/>
+        </area>
+        <color foreground="white" conditional="true"/>
+      </field>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" reverse_image="conditional" underline="true" high_intensity="conditional" conditional="true" position_cursor="true" exit_record="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSIDNR" short_name="WSIDNR" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="18"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSIDNAM" short_name="WSIDNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="6" y="18"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSPLZ" short_name="WSPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSKDNR" short_name="WSKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="33" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSKDNAM" short_name="WSKDNAM" data_type="alphanumeric" display_length="12" data_length="12" conditional="true">
+          <area>
+            <position x="41" y="18"/>
+            <size cx="12" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSRKID" short_name="WSRKID" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="54" y="18"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSRKNAM" short_name="WSRKNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="57" y="18"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_scrollbar" usage="output" data_type="alphanumeric" value=" " display_length="1" data_length="1" reverse_image="conditional" conditional="true">
+        <area>
+          <position x="78" y="18"/>
+          <size cx="1" cy="1"/>
+        </area>
+        <color foreground="white" conditional="true"/>
+      </field>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" reverse_image="conditional" underline="true" high_intensity="conditional" conditional="true" position_cursor="true" exit_record="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSIDNR" short_name="WSIDNR" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="19"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSIDNAM" short_name="WSIDNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="6" y="19"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSPLZ" short_name="WSPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSKDNR" short_name="WSKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="33" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSKDNAM" short_name="WSKDNAM" data_type="alphanumeric" display_length="12" data_length="12" conditional="true">
+          <area>
+            <position x="41" y="19"/>
+            <size cx="12" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSRKID" short_name="WSRKID" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="54" y="19"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSRKNAM" short_name="WSRKNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="57" y="19"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_scrollbar" usage="output" data_type="alphanumeric" value=" " display_length="1" data_length="1" reverse_image="conditional" conditional="true">
+        <area>
+          <position x="78" y="19"/>
+          <size cx="1" cy="1"/>
+        </area>
+        <color foreground="white" conditional="true"/>
+      </field>
+    </field>
+  </screen>
+</header>

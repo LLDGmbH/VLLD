@@ -1,0 +1,75 @@
+﻿global filiale as string
+DIM ddehandle, i, j, msg, rc as integer
+dim xKdNr, xkdName, xFolg, xLF, xLFW, xNL, xNLW, xVN, xVNW, xREM, xREMW, xDIF, xDIFW, datei, pfad_datei, ErrMsg, sql1, sql2, f01 as string 
+dim source as string
+
+i = 0
+j=2
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "NLS21.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1" , "Kunde")
+ddepoke( ddehandle, "Z1S2" , "Name")
+ddepoke( ddehandle, "Z1S3" , "Folge")
+ddepoke( ddehandle, "Z1S4" , "Lfg.Expl.")
+ddepoke( ddehandle, "Z1S5" , "Wert")
+ddepoke( ddehandle, "Z1S6" , "NL+VMP Expl.")
+ddepoke( ddehandle, "Z1S7" , "Wert")
+ddepoke( ddehandle, "Z1S8" , "Früh.Expl.")
+ddepoke( ddehandle, "Z1S9" , "Wert")
+ddepoke( ddehandle, "Z1S10", "RemiExpl.")
+ddepoke( ddehandle, "Z1S11", "Wert")
+ddepoke( ddehandle, "Z1S12", "Bew.Expl.")
+ddepoke( ddehandle, "Z1S13", "Nachl.Wert")
+
+nochmal:
+
+HostFieldGetLineData("BS_kdKdNr",  i, xKdNr)
+HostFieldGetLineData("BS_KdName",  i, xKdName)
+HostFieldGetLineData("BS_Folg"  ,  i, xFolg)
+HostFieldGetLineData("BS_LF"    ,  i, xLF)
+HostFieldGetLineData("BS_LF_W"  ,  i, xLFW)
+HostFieldGetLineData("BS_NL"    ,  i, xNL)
+HostFieldGetLineData("BS_NL_W"  ,  i, xNLW)
+HostFieldGetLineData("BS_VN"    ,  i, xVN)
+HostFieldGetLineData("BS_VN_W"  ,  i, xVNW)
+HostFieldGetLineData("BS_REM"   ,  i, xREM)
+HostFieldGetLineData("BS_REM_W" ,  i, xREMW)
+HostFieldGetLineData("BS_DIF"   ,  i, xDIF)
+HostFieldGetLineData("BS_DIF_W" ,  i, xDIFW)
+
+
+ddepoke( ddehandle, "Z" + str(j) +"S1" , xKdNr)
+ddepoke( ddehandle, "Z" + str(j) +"S2" , xKdName)
+ddepoke( ddehandle, "Z" + str(j) +"S3" , xFolg)
+ddepoke( ddehandle, "Z" + str(j) +"S4" , xLF)
+ddepoke( ddehandle, "Z" + str(j) +"S5" , xLFW)
+ddepoke( ddehandle, "Z" + str(j) +"S6" , xNL)
+ddepoke( ddehandle, "Z" + str(j) +"S7" , xNLW)
+ddepoke( ddehandle, "Z" + str(j) +"S8" , xVN)
+ddepoke( ddehandle, "Z" + str(j) +"S9" , xVNW)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xREM)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xREMW)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xDIF)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xDIFW)
+
+j=j+1 
+
+if i < 15 then
+i=i+1
+goto nochmal
+endif
+ 
+if xKdNr <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

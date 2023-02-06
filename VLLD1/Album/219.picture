@@ -1,0 +1,3158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="LLD_OBJ/CL10DS(SAC)" library="LLD_OBJ" member_name="CL10DS">
+    <size cx="132" cy="27"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="f11" caption="F11" attention_key="false"/>
+    <action key="f12" caption="F12" attention_key="false"/>
+    <action key="f13" caption="F13" attention_key="false"/>
+    <action key="f16" caption="F16" attention_key="false"/>
+    <action key="f24" caption="F24" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="roll_up" caption="ROLL_UP" attention_key="false"/>
+    <action key="roll_down" caption="ROLL_DOWN" attention_key="false"/>
+    <field field_type="screen_part" name="SAC">
+      <area>
+        <position/>
+        <size cx="132" cy="26"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PGMTIT" short_name="PGMTIT" data_type="alphanumeric" display_length="30" data_length="30">
+          <area>
+            <position x="51"/>
+            <size cx="30" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="115"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="124"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="JOB" short_name="JOB" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="1" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="*SYSNAME" short_name="*SYSNAME" data_type="alphanumeric" display_length="8" data_length="8">
+          <area>
+            <position x="12" y="1"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="USER" short_name="USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="115" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="PGMNAM" short_name="PGMNAM" data_type="alphanumeric" display_length="6" data_length="6">
+          <area>
+            <position x="126" y="1"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="fixed_text" value="Programm:" display_length="9" data_length="9">
+          <area>
+            <position x="1" y="2"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZPGM" short_name="ZZPGM" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="11" y="2"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="B C D G M M M M L O P ? ? ? ? ? ? ? ? ?" display_length="39" data_length="39">
+          <area>
+            <position x="89" y="2"/>
+            <size cx="39" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="A Zeile Source                                                                          I H T E E I S U Z S L ? ? ? ? ? ? ? ? ?    " display_length="131" data_length="131" underline="true">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="131" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZZNR" short_name="ZZZNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="3" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZSRC1" short_name="ZZSRC1" data_type="alphanumeric" display_length="79" data_length="79" conditional="true">
+          <area>
+            <position x="9" y="4"/>
+            <size cx="79" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG01" short_name="ZZG01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="89" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG02" short_name="ZZG02" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="91" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG03" short_name="ZZG03" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="93" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG04" short_name="ZZG04" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="95" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG05" short_name="ZZG05" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="97" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG06" short_name="ZZG06" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="99" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG07" short_name="ZZG07" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="101" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG08" short_name="ZZG08" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="103" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG09" short_name="ZZG09" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="105" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG10" short_name="ZZG10" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG11" short_name="ZZG11" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="109" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG12" short_name="ZZG12" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="111" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG13" short_name="ZZG13" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="113" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG14" short_name="ZZG14" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="115" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG15" short_name="ZZG15" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="117" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG16" short_name="ZZG16" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="119" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG17" short_name="ZZG17" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="121" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG18" short_name="ZZG18" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="123" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG19" short_name="ZZG19" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="125" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG20" short_name="ZZG20" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="127" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZZNR" short_name="ZZZNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="3" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZSRC1" short_name="ZZSRC1" data_type="alphanumeric" display_length="79" data_length="79" conditional="true">
+          <area>
+            <position x="9" y="5"/>
+            <size cx="79" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG01" short_name="ZZG01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="89" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG02" short_name="ZZG02" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="91" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG03" short_name="ZZG03" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="93" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG04" short_name="ZZG04" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="95" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG05" short_name="ZZG05" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="97" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG06" short_name="ZZG06" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="99" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG07" short_name="ZZG07" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="101" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG08" short_name="ZZG08" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="103" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG09" short_name="ZZG09" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="105" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG10" short_name="ZZG10" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG11" short_name="ZZG11" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="109" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG12" short_name="ZZG12" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="111" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG13" short_name="ZZG13" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="113" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG14" short_name="ZZG14" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="115" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG15" short_name="ZZG15" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="117" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG16" short_name="ZZG16" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="119" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG17" short_name="ZZG17" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="121" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG18" short_name="ZZG18" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="123" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG19" short_name="ZZG19" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="125" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG20" short_name="ZZG20" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="127" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZZNR" short_name="ZZZNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="3" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZSRC1" short_name="ZZSRC1" data_type="alphanumeric" display_length="79" data_length="79" conditional="true">
+          <area>
+            <position x="9" y="6"/>
+            <size cx="79" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG01" short_name="ZZG01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="89" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG02" short_name="ZZG02" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="91" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG03" short_name="ZZG03" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="93" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG04" short_name="ZZG04" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="95" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG05" short_name="ZZG05" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="97" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG06" short_name="ZZG06" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="99" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG07" short_name="ZZG07" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="101" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG08" short_name="ZZG08" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="103" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG09" short_name="ZZG09" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="105" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG10" short_name="ZZG10" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG11" short_name="ZZG11" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="109" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG12" short_name="ZZG12" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="111" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG13" short_name="ZZG13" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="113" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG14" short_name="ZZG14" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="115" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG15" short_name="ZZG15" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="117" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG16" short_name="ZZG16" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="119" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG17" short_name="ZZG17" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="121" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG18" short_name="ZZG18" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="123" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG19" short_name="ZZG19" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="125" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG20" short_name="ZZG20" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="127" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZZNR" short_name="ZZZNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="3" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZSRC1" short_name="ZZSRC1" data_type="alphanumeric" display_length="79" data_length="79" conditional="true">
+          <area>
+            <position x="9" y="7"/>
+            <size cx="79" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG01" short_name="ZZG01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="89" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG02" short_name="ZZG02" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="91" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG03" short_name="ZZG03" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="93" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG04" short_name="ZZG04" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="95" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG05" short_name="ZZG05" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="97" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG06" short_name="ZZG06" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="99" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG07" short_name="ZZG07" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="101" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG08" short_name="ZZG08" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="103" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG09" short_name="ZZG09" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="105" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG10" short_name="ZZG10" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG11" short_name="ZZG11" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="109" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG12" short_name="ZZG12" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="111" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG13" short_name="ZZG13" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="113" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG14" short_name="ZZG14" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="115" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG15" short_name="ZZG15" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="117" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG16" short_name="ZZG16" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="119" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG17" short_name="ZZG17" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="121" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG18" short_name="ZZG18" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="123" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG19" short_name="ZZG19" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="125" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG20" short_name="ZZG20" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="127" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZZNR" short_name="ZZZNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="3" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZSRC1" short_name="ZZSRC1" data_type="alphanumeric" display_length="79" data_length="79" conditional="true">
+          <area>
+            <position x="9" y="8"/>
+            <size cx="79" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG01" short_name="ZZG01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="89" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG02" short_name="ZZG02" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="91" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG03" short_name="ZZG03" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="93" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG04" short_name="ZZG04" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="95" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG05" short_name="ZZG05" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="97" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG06" short_name="ZZG06" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="99" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG07" short_name="ZZG07" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="101" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG08" short_name="ZZG08" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="103" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG09" short_name="ZZG09" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="105" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG10" short_name="ZZG10" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG11" short_name="ZZG11" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="109" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG12" short_name="ZZG12" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="111" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG13" short_name="ZZG13" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="113" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG14" short_name="ZZG14" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="115" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG15" short_name="ZZG15" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="117" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG16" short_name="ZZG16" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="119" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG17" short_name="ZZG17" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="121" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG18" short_name="ZZG18" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="123" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG19" short_name="ZZG19" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="125" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG20" short_name="ZZG20" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="127" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZZNR" short_name="ZZZNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="3" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZSRC1" short_name="ZZSRC1" data_type="alphanumeric" display_length="79" data_length="79" conditional="true">
+          <area>
+            <position x="9" y="9"/>
+            <size cx="79" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG01" short_name="ZZG01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="89" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG02" short_name="ZZG02" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="91" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG03" short_name="ZZG03" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="93" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG04" short_name="ZZG04" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="95" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG05" short_name="ZZG05" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="97" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG06" short_name="ZZG06" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="99" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG07" short_name="ZZG07" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="101" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG08" short_name="ZZG08" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="103" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG09" short_name="ZZG09" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="105" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG10" short_name="ZZG10" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG11" short_name="ZZG11" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="109" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG12" short_name="ZZG12" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="111" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG13" short_name="ZZG13" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="113" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG14" short_name="ZZG14" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="115" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG15" short_name="ZZG15" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="117" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG16" short_name="ZZG16" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="119" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG17" short_name="ZZG17" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="121" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG18" short_name="ZZG18" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="123" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG19" short_name="ZZG19" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="125" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG20" short_name="ZZG20" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="127" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZZNR" short_name="ZZZNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="3" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZSRC1" short_name="ZZSRC1" data_type="alphanumeric" display_length="79" data_length="79" conditional="true">
+          <area>
+            <position x="9" y="10"/>
+            <size cx="79" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG01" short_name="ZZG01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="89" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG02" short_name="ZZG02" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="91" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG03" short_name="ZZG03" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="93" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG04" short_name="ZZG04" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="95" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG05" short_name="ZZG05" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="97" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG06" short_name="ZZG06" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="99" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG07" short_name="ZZG07" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="101" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG08" short_name="ZZG08" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="103" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG09" short_name="ZZG09" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="105" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG10" short_name="ZZG10" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG11" short_name="ZZG11" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="109" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG12" short_name="ZZG12" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="111" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG13" short_name="ZZG13" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="113" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG14" short_name="ZZG14" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="115" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG15" short_name="ZZG15" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="117" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG16" short_name="ZZG16" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="119" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG17" short_name="ZZG17" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="121" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG18" short_name="ZZG18" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="123" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG19" short_name="ZZG19" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="125" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG20" short_name="ZZG20" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="127" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZZNR" short_name="ZZZNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="3" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZSRC1" short_name="ZZSRC1" data_type="alphanumeric" display_length="79" data_length="79" conditional="true">
+          <area>
+            <position x="9" y="11"/>
+            <size cx="79" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG01" short_name="ZZG01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="89" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG02" short_name="ZZG02" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="91" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG03" short_name="ZZG03" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="93" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG04" short_name="ZZG04" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="95" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG05" short_name="ZZG05" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="97" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG06" short_name="ZZG06" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="99" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG07" short_name="ZZG07" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="101" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG08" short_name="ZZG08" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="103" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG09" short_name="ZZG09" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="105" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG10" short_name="ZZG10" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG11" short_name="ZZG11" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="109" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG12" short_name="ZZG12" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="111" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG13" short_name="ZZG13" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="113" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG14" short_name="ZZG14" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="115" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG15" short_name="ZZG15" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="117" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG16" short_name="ZZG16" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="119" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG17" short_name="ZZG17" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="121" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG18" short_name="ZZG18" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="123" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG19" short_name="ZZG19" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="125" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG20" short_name="ZZG20" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="127" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZZNR" short_name="ZZZNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="3" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZSRC1" short_name="ZZSRC1" data_type="alphanumeric" display_length="79" data_length="79" conditional="true">
+          <area>
+            <position x="9" y="12"/>
+            <size cx="79" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG01" short_name="ZZG01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="89" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG02" short_name="ZZG02" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="91" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG03" short_name="ZZG03" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="93" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG04" short_name="ZZG04" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="95" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG05" short_name="ZZG05" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="97" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG06" short_name="ZZG06" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="99" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG07" short_name="ZZG07" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="101" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG08" short_name="ZZG08" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="103" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG09" short_name="ZZG09" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="105" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG10" short_name="ZZG10" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG11" short_name="ZZG11" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="109" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG12" short_name="ZZG12" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="111" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG13" short_name="ZZG13" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="113" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG14" short_name="ZZG14" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="115" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG15" short_name="ZZG15" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="117" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG16" short_name="ZZG16" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="119" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG17" short_name="ZZG17" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="121" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG18" short_name="ZZG18" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="123" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG19" short_name="ZZG19" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="125" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG20" short_name="ZZG20" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="127" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZZNR" short_name="ZZZNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="3" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZSRC1" short_name="ZZSRC1" data_type="alphanumeric" display_length="79" data_length="79" conditional="true">
+          <area>
+            <position x="9" y="13"/>
+            <size cx="79" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG01" short_name="ZZG01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="89" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG02" short_name="ZZG02" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="91" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG03" short_name="ZZG03" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="93" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG04" short_name="ZZG04" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="95" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG05" short_name="ZZG05" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="97" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG06" short_name="ZZG06" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="99" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG07" short_name="ZZG07" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="101" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG08" short_name="ZZG08" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="103" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG09" short_name="ZZG09" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="105" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG10" short_name="ZZG10" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG11" short_name="ZZG11" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="109" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG12" short_name="ZZG12" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="111" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG13" short_name="ZZG13" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="113" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG14" short_name="ZZG14" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="115" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG15" short_name="ZZG15" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="117" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG16" short_name="ZZG16" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="119" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG17" short_name="ZZG17" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="121" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG18" short_name="ZZG18" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="123" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG19" short_name="ZZG19" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="125" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG20" short_name="ZZG20" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="127" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZZNR" short_name="ZZZNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="3" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZSRC1" short_name="ZZSRC1" data_type="alphanumeric" display_length="79" data_length="79" conditional="true">
+          <area>
+            <position x="9" y="14"/>
+            <size cx="79" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG01" short_name="ZZG01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="89" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG02" short_name="ZZG02" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="91" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG03" short_name="ZZG03" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="93" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG04" short_name="ZZG04" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="95" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG05" short_name="ZZG05" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="97" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG06" short_name="ZZG06" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="99" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG07" short_name="ZZG07" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="101" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG08" short_name="ZZG08" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="103" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG09" short_name="ZZG09" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="105" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG10" short_name="ZZG10" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG11" short_name="ZZG11" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="109" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG12" short_name="ZZG12" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="111" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG13" short_name="ZZG13" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="113" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG14" short_name="ZZG14" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="115" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG15" short_name="ZZG15" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="117" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG16" short_name="ZZG16" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="119" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG17" short_name="ZZG17" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="121" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG18" short_name="ZZG18" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="123" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG19" short_name="ZZG19" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="125" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG20" short_name="ZZG20" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="127" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZZNR" short_name="ZZZNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="3" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZSRC1" short_name="ZZSRC1" data_type="alphanumeric" display_length="79" data_length="79" conditional="true">
+          <area>
+            <position x="9" y="15"/>
+            <size cx="79" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG01" short_name="ZZG01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="89" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG02" short_name="ZZG02" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="91" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG03" short_name="ZZG03" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="93" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG04" short_name="ZZG04" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="95" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG05" short_name="ZZG05" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="97" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG06" short_name="ZZG06" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="99" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG07" short_name="ZZG07" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="101" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG08" short_name="ZZG08" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="103" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG09" short_name="ZZG09" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="105" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG10" short_name="ZZG10" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG11" short_name="ZZG11" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="109" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG12" short_name="ZZG12" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="111" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG13" short_name="ZZG13" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="113" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG14" short_name="ZZG14" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="115" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG15" short_name="ZZG15" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="117" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG16" short_name="ZZG16" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="119" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG17" short_name="ZZG17" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="121" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG18" short_name="ZZG18" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="123" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG19" short_name="ZZG19" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="125" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG20" short_name="ZZG20" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="127" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZZNR" short_name="ZZZNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="3" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZSRC1" short_name="ZZSRC1" data_type="alphanumeric" display_length="79" data_length="79" conditional="true">
+          <area>
+            <position x="9" y="16"/>
+            <size cx="79" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG01" short_name="ZZG01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="89" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG02" short_name="ZZG02" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="91" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG03" short_name="ZZG03" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="93" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG04" short_name="ZZG04" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="95" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG05" short_name="ZZG05" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="97" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG06" short_name="ZZG06" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="99" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG07" short_name="ZZG07" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="101" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG08" short_name="ZZG08" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="103" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG09" short_name="ZZG09" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="105" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG10" short_name="ZZG10" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG11" short_name="ZZG11" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="109" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG12" short_name="ZZG12" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="111" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG13" short_name="ZZG13" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="113" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG14" short_name="ZZG14" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="115" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG15" short_name="ZZG15" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="117" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG16" short_name="ZZG16" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="119" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG17" short_name="ZZG17" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="121" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG18" short_name="ZZG18" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="123" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG19" short_name="ZZG19" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="125" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG20" short_name="ZZG20" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="127" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZZNR" short_name="ZZZNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="3" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZSRC1" short_name="ZZSRC1" data_type="alphanumeric" display_length="79" data_length="79" conditional="true">
+          <area>
+            <position x="9" y="17"/>
+            <size cx="79" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG01" short_name="ZZG01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="89" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG02" short_name="ZZG02" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="91" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG03" short_name="ZZG03" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="93" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG04" short_name="ZZG04" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="95" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG05" short_name="ZZG05" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="97" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG06" short_name="ZZG06" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="99" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG07" short_name="ZZG07" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="101" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG08" short_name="ZZG08" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="103" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG09" short_name="ZZG09" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="105" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG10" short_name="ZZG10" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG11" short_name="ZZG11" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="109" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG12" short_name="ZZG12" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="111" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG13" short_name="ZZG13" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="113" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG14" short_name="ZZG14" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="115" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG15" short_name="ZZG15" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="117" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG16" short_name="ZZG16" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="119" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG17" short_name="ZZG17" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="121" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG18" short_name="ZZG18" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="123" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG19" short_name="ZZG19" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="125" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG20" short_name="ZZG20" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="127" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZZNR" short_name="ZZZNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="3" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZSRC1" short_name="ZZSRC1" data_type="alphanumeric" display_length="79" data_length="79" conditional="true">
+          <area>
+            <position x="9" y="18"/>
+            <size cx="79" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG01" short_name="ZZG01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="89" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG02" short_name="ZZG02" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="91" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG03" short_name="ZZG03" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="93" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG04" short_name="ZZG04" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="95" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG05" short_name="ZZG05" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="97" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG06" short_name="ZZG06" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="99" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG07" short_name="ZZG07" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="101" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG08" short_name="ZZG08" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="103" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG09" short_name="ZZG09" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="105" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG10" short_name="ZZG10" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG11" short_name="ZZG11" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="109" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG12" short_name="ZZG12" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="111" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG13" short_name="ZZG13" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="113" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG14" short_name="ZZG14" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="115" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG15" short_name="ZZG15" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="117" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG16" short_name="ZZG16" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="119" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG17" short_name="ZZG17" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="121" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG18" short_name="ZZG18" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="123" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG19" short_name="ZZG19" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="125" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG20" short_name="ZZG20" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="127" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZZNR" short_name="ZZZNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="3" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZSRC1" short_name="ZZSRC1" data_type="alphanumeric" display_length="79" data_length="79" conditional="true">
+          <area>
+            <position x="9" y="19"/>
+            <size cx="79" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG01" short_name="ZZG01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="89" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG02" short_name="ZZG02" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="91" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG03" short_name="ZZG03" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="93" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG04" short_name="ZZG04" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="95" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG05" short_name="ZZG05" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="97" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG06" short_name="ZZG06" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="99" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG07" short_name="ZZG07" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="101" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG08" short_name="ZZG08" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="103" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG09" short_name="ZZG09" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="105" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG10" short_name="ZZG10" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG11" short_name="ZZG11" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="109" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG12" short_name="ZZG12" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="111" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG13" short_name="ZZG13" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="113" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG14" short_name="ZZG14" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="115" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG15" short_name="ZZG15" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="117" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG16" short_name="ZZG16" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="119" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG17" short_name="ZZG17" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="121" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG18" short_name="ZZG18" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="123" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG19" short_name="ZZG19" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="125" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG20" short_name="ZZG20" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="127" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZZNR" short_name="ZZZNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="3" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZSRC1" short_name="ZZSRC1" data_type="alphanumeric" display_length="79" data_length="79" conditional="true">
+          <area>
+            <position x="9" y="20"/>
+            <size cx="79" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG01" short_name="ZZG01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="89" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG02" short_name="ZZG02" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="91" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG03" short_name="ZZG03" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="93" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG04" short_name="ZZG04" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="95" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG05" short_name="ZZG05" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="97" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG06" short_name="ZZG06" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="99" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG07" short_name="ZZG07" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="101" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG08" short_name="ZZG08" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="103" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG09" short_name="ZZG09" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="105" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG10" short_name="ZZG10" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG11" short_name="ZZG11" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="109" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG12" short_name="ZZG12" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="111" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG13" short_name="ZZG13" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="113" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG14" short_name="ZZG14" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="115" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG15" short_name="ZZG15" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="117" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG16" short_name="ZZG16" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="119" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG17" short_name="ZZG17" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="121" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG18" short_name="ZZG18" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="123" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG19" short_name="ZZG19" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="125" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG20" short_name="ZZG20" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="127" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZZNR" short_name="ZZZNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="3" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZSRC1" short_name="ZZSRC1" data_type="alphanumeric" display_length="79" data_length="79" conditional="true">
+          <area>
+            <position x="9" y="21"/>
+            <size cx="79" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG01" short_name="ZZG01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="89" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG02" short_name="ZZG02" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="91" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG03" short_name="ZZG03" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="93" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG04" short_name="ZZG04" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="95" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG05" short_name="ZZG05" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="97" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG06" short_name="ZZG06" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="99" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG07" short_name="ZZG07" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="101" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG08" short_name="ZZG08" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="103" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG09" short_name="ZZG09" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="105" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG10" short_name="ZZG10" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG11" short_name="ZZG11" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="109" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG12" short_name="ZZG12" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="111" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG13" short_name="ZZG13" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="113" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG14" short_name="ZZG14" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="115" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG15" short_name="ZZG15" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="117" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG16" short_name="ZZG16" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="119" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG17" short_name="ZZG17" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="121" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG18" short_name="ZZG18" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="123" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG19" short_name="ZZG19" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="125" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG20" short_name="ZZG20" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="127" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZZNR" short_name="ZZZNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="3" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZSRC1" short_name="ZZSRC1" data_type="alphanumeric" display_length="79" data_length="79" conditional="true">
+          <area>
+            <position x="9" y="22"/>
+            <size cx="79" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG01" short_name="ZZG01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="89" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG02" short_name="ZZG02" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="91" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG03" short_name="ZZG03" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="93" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG04" short_name="ZZG04" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="95" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG05" short_name="ZZG05" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="97" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG06" short_name="ZZG06" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="99" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG07" short_name="ZZG07" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="101" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG08" short_name="ZZG08" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="103" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG09" short_name="ZZG09" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="105" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG10" short_name="ZZG10" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG11" short_name="ZZG11" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="109" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG12" short_name="ZZG12" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="111" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG13" short_name="ZZG13" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="113" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG14" short_name="ZZG14" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="115" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG15" short_name="ZZG15" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="117" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG16" short_name="ZZG16" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="119" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG17" short_name="ZZG17" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="121" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG18" short_name="ZZG18" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="123" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG19" short_name="ZZG19" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="125" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG20" short_name="ZZG20" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="127" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZZNR" short_name="ZZZNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="3" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZSRC1" short_name="ZZSRC1" data_type="alphanumeric" display_length="79" data_length="79" conditional="true">
+          <area>
+            <position x="9" y="23"/>
+            <size cx="79" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG01" short_name="ZZG01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="89" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG02" short_name="ZZG02" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="91" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG03" short_name="ZZG03" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="93" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG04" short_name="ZZG04" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="95" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG05" short_name="ZZG05" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="97" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG06" short_name="ZZG06" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="99" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG07" short_name="ZZG07" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="101" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG08" short_name="ZZG08" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="103" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG09" short_name="ZZG09" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="105" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG10" short_name="ZZG10" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG11" short_name="ZZG11" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="109" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG12" short_name="ZZG12" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="111" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG13" short_name="ZZG13" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="113" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG14" short_name="ZZG14" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="115" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG15" short_name="ZZG15" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="117" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG16" short_name="ZZG16" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="119" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG17" short_name="ZZG17" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="121" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG18" short_name="ZZG18" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="123" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG19" short_name="ZZG19" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="125" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG20" short_name="ZZG20" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="127" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZZNR" short_name="ZZZNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="3" y="24"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZSRC1" short_name="ZZSRC1" data_type="alphanumeric" display_length="79" data_length="79" conditional="true">
+          <area>
+            <position x="9" y="24"/>
+            <size cx="79" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG01" short_name="ZZG01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="89" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG02" short_name="ZZG02" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="91" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG03" short_name="ZZG03" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="93" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG04" short_name="ZZG04" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="95" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG05" short_name="ZZG05" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="97" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG06" short_name="ZZG06" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="99" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG07" short_name="ZZG07" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="101" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG08" short_name="ZZG08" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="103" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG09" short_name="ZZG09" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="105" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG10" short_name="ZZG10" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG11" short_name="ZZG11" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="109" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG12" short_name="ZZG12" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="111" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG13" short_name="ZZG13" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="113" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG14" short_name="ZZG14" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="115" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG15" short_name="ZZG15" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="117" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG16" short_name="ZZG16" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="119" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG17" short_name="ZZG17" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="121" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG18" short_name="ZZG18" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="123" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG19" short_name="ZZG19" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="125" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG20" short_name="ZZG20" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="127" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="25"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZZNR" short_name="ZZZNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="3" y="25"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZSRC1" short_name="ZZSRC1" data_type="alphanumeric" display_length="79" data_length="79" conditional="true">
+          <area>
+            <position x="9" y="25"/>
+            <size cx="79" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG01" short_name="ZZG01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="89" y="25"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG02" short_name="ZZG02" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="91" y="25"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG03" short_name="ZZG03" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="93" y="25"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG04" short_name="ZZG04" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="95" y="25"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG05" short_name="ZZG05" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="97" y="25"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG06" short_name="ZZG06" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="99" y="25"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG07" short_name="ZZG07" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="101" y="25"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG08" short_name="ZZG08" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="103" y="25"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG09" short_name="ZZG09" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="105" y="25"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG10" short_name="ZZG10" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="25"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG11" short_name="ZZG11" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="109" y="25"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG12" short_name="ZZG12" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="111" y="25"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG13" short_name="ZZG13" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="113" y="25"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG14" short_name="ZZG14" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="115" y="25"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG15" short_name="ZZG15" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="117" y="25"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG16" short_name="ZZG16" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="119" y="25"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG17" short_name="ZZG17" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="121" y="25"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG18" short_name="ZZG18" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="123" y="25"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG19" short_name="ZZG19" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="125" y="25"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZG20" short_name="ZZG20" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="127" y="25"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+    </field>
+  </screen>
+</header>

@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="LZSRC/PVLLFUEBDS(SFLCTL+FUSS)" library="LZSRC" member_name="PVLLFUEBDS">
+    <size cx="80" cy="24"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <action key="roll_up" caption="ROLL_UP" attention_key="false"/>
+    <action key="roll_down" caption="ROLL_DOWN" attention_key="false"/>
+    <field field_type="screen_part" name="SFLCTL" overlay="true">
+      <area>
+        <position/>
+        <size cx="80" cy="21"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="FUSS">
+      <area>
+        <position y="22"/>
+        <size cx="80" cy="2"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="*USER" short_name="*USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value=" Auflistung Lieferscheine " display_length="26" data_length="26" underline="true">
+          <area>
+            <position x="25"/>
+            <size cx="26" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="72"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value=" A   Datum          Anz.Titel      Exemplare          Gewicht                 " display_length="78" data_length="78" underline="true">
+          <area>
+            <position x="1" y="2"/>
+            <size cx="78" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="PLAKTION" short_name="PLAKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="3"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PLDATEUR" short_name="PLDATEUR" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="6" y="3"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLTIT" short_name="PLTIT" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="21" y="3"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLEXP" short_name="PLEXP" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="36" y="3"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLGEW" short_name="PLGEW" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="55" y="3"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="PLAKTION" short_name="PLAKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PLDATEUR" short_name="PLDATEUR" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="6" y="4"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLTIT" short_name="PLTIT" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="21" y="4"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLEXP" short_name="PLEXP" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="36" y="4"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLGEW" short_name="PLGEW" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="55" y="4"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="PLAKTION" short_name="PLAKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PLDATEUR" short_name="PLDATEUR" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="6" y="5"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLTIT" short_name="PLTIT" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="21" y="5"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLEXP" short_name="PLEXP" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="36" y="5"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLGEW" short_name="PLGEW" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="55" y="5"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="PLAKTION" short_name="PLAKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PLDATEUR" short_name="PLDATEUR" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="6" y="6"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLTIT" short_name="PLTIT" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="21" y="6"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLEXP" short_name="PLEXP" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="36" y="6"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLGEW" short_name="PLGEW" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="55" y="6"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="PLAKTION" short_name="PLAKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PLDATEUR" short_name="PLDATEUR" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="6" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLTIT" short_name="PLTIT" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="21" y="7"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLEXP" short_name="PLEXP" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="36" y="7"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLGEW" short_name="PLGEW" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="55" y="7"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="PLAKTION" short_name="PLAKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PLDATEUR" short_name="PLDATEUR" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="6" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLTIT" short_name="PLTIT" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="21" y="8"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLEXP" short_name="PLEXP" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="36" y="8"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLGEW" short_name="PLGEW" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="55" y="8"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="PLAKTION" short_name="PLAKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PLDATEUR" short_name="PLDATEUR" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="6" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLTIT" short_name="PLTIT" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="21" y="9"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLEXP" short_name="PLEXP" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="36" y="9"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLGEW" short_name="PLGEW" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="55" y="9"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="PLAKTION" short_name="PLAKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PLDATEUR" short_name="PLDATEUR" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="6" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLTIT" short_name="PLTIT" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="21" y="10"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLEXP" short_name="PLEXP" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="36" y="10"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLGEW" short_name="PLGEW" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="55" y="10"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="PLAKTION" short_name="PLAKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PLDATEUR" short_name="PLDATEUR" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="6" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLTIT" short_name="PLTIT" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="21" y="11"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLEXP" short_name="PLEXP" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="36" y="11"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLGEW" short_name="PLGEW" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="55" y="11"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="PLAKTION" short_name="PLAKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PLDATEUR" short_name="PLDATEUR" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="6" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLTIT" short_name="PLTIT" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="21" y="12"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLEXP" short_name="PLEXP" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="36" y="12"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLGEW" short_name="PLGEW" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="55" y="12"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="PLAKTION" short_name="PLAKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PLDATEUR" short_name="PLDATEUR" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="6" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLTIT" short_name="PLTIT" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="21" y="13"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLEXP" short_name="PLEXP" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="36" y="13"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLGEW" short_name="PLGEW" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="55" y="13"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="PLAKTION" short_name="PLAKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PLDATEUR" short_name="PLDATEUR" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="6" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLTIT" short_name="PLTIT" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="21" y="14"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLEXP" short_name="PLEXP" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="36" y="14"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLGEW" short_name="PLGEW" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="55" y="14"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="PLAKTION" short_name="PLAKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PLDATEUR" short_name="PLDATEUR" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="6" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLTIT" short_name="PLTIT" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="21" y="15"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLEXP" short_name="PLEXP" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="36" y="15"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLGEW" short_name="PLGEW" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="55" y="15"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="PLAKTION" short_name="PLAKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PLDATEUR" short_name="PLDATEUR" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="6" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLTIT" short_name="PLTIT" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="21" y="16"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLEXP" short_name="PLEXP" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="36" y="16"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLGEW" short_name="PLGEW" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="55" y="16"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="PLAKTION" short_name="PLAKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PLDATEUR" short_name="PLDATEUR" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="6" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLTIT" short_name="PLTIT" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="21" y="17"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLEXP" short_name="PLEXP" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="36" y="17"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLGEW" short_name="PLGEW" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="55" y="17"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="PLAKTION" short_name="PLAKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PLDATEUR" short_name="PLDATEUR" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="6" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLTIT" short_name="PLTIT" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="21" y="18"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLEXP" short_name="PLEXP" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="36" y="18"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLGEW" short_name="PLGEW" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="55" y="18"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="PLAKTION" short_name="PLAKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PLDATEUR" short_name="PLDATEUR" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="6" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLTIT" short_name="PLTIT" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="21" y="19"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLEXP" short_name="PLEXP" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="36" y="19"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PLGEW" short_name="PLGEW" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="55" y="19"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_end_more" value="Weitere ... " display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="67" y="20"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+      <field field_type="subfile_end_bottom" value="Ende        " display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="67" y="20"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="                                                                                " display_length="80" data_length="80" underline="true">
+      <area>
+        <position y="22"/>
+        <size cx="80" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="A=Auswahl; F3 = beenden; Bild hoch/runter = blättern;" display_length="53" data_length="53">
+      <area>
+        <position x="1" y="23"/>
+        <size cx="53" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="© Gerd Gerstmann" display_length="16" data_length="16">
+      <area>
+        <position x="63" y="23"/>
+        <size cx="16" cy="1"/>
+      </area>
+      <color foreground="red"/>
+    </field>
+  </screen>
+</header>

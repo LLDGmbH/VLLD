@@ -1,0 +1,30 @@
+﻿dim text, ErrorMsg as String
+dim rc as Integer
+
+
+rem **GESCHÄFTSARTEN AUS GRGARP
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+
+rc = EzSQLQuery("SELECT digits(kdgart) concat digits(kdgaug), DIGITS(kdgart) concat ' ' concat DIGITS(kdgaug) concat ' - 'concat kdgtxt FROM GRGARP where kdgart < 20 order by digits(kdgart) concat digits(kdgaug)", text, ErrorMsg)
+PanelFieldSetProp ("GAGU", 5, text) 
+
+rc = EzSQLQuery("SELECT vlvlkz, digits(vlvlkz) concat ' - ' concat vlvbez FROM grvtlp order by vlvbez", text, ErrorMsg)
+PanelFieldSetProp ("Vtlkz", 5, text) 
+
+rc = EzSQLQuery("SELECT DIGITS(EHNR) concat Digits(ehunr), DIGITS(EHNR) concat Digits(ehunr) concat ' - 'concat EHTEXT FROM GRETXP  order by DIGITS(EHNR) concat Digits(ehunr)  ", text, ErrorMsg)
+PanelFieldSetProp ("obhg", 5, text) 
+
+rc = EzSQLQuery("SELECT DIGITS(VAVNR), DIGITS(VAVNR) concat ' ' concat vaname from gradrp  where vaname not like '*%' order by vaname", text, ErrorMsg)
+PanelFieldSetProp ("##vlg", 5, text) 
+
+rc = EzSQLQuery("SELECT DIGITS(EHNR) concat DIGITS(EHUNR), DIGITS(EHNR) concat ' ' concat DIGITS(EHUNR) concat ' - 'concat EHTEXT FROM GRETXP order by (EHNR * 100) + EHUNR", text, ErrorMsg)
+PanelFieldSetProp ("cdug", 5, text) 
+
+PanelUpdateEnable(2)
+
+ScriptCall("c_fil")

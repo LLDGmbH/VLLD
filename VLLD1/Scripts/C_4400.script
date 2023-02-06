@@ -1,0 +1,25 @@
+﻿dim text, ErrorMsg as String
+dim rc as Integer
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rc = EzSQLQuery("SELECT digits(vavnr), digits(vavnr) concat ' ' concat vaname from gradrp  order by vaname", text, ErrorMsg)
+PanelFieldSetProp ("##vlg", 5, text)
+PanelFieldSetProp ("##vlg2", 5, text)
+
+rc = EzSQLQuery("SELECT digits(mvlnr), digits(mvlnr) concat ' ' concat mvlnam1 from grmvlp  order by mvlnam1", text, ErrorMsg)
+PanelFieldSetProp ("##vlgmv", 5, text)
+
+rc = EzSQLQuery("SELECT digits(EHNR) concat digits(EHUNR), DIGITS(EHNR) concat ' ' concat DIGITS(EHUNR) concat ' - 'concat EHTEXT FROM GRETXP order by (EHNR * 100) + EHUNR", text, ErrorMsg)
+PanelFieldSetProp ("##ehcd", 5, text) 
+
+rem rc = EzSQLQuery("SELECT digits(JAHR) FROM GRJJZP order by JAHR desc", text, ErrorMsg)
+rc = EzSqlQuery("select distinct(digits(kajah4)) JAHR from grkalp order by JAHR desc" , text, ErrorMsg)
+PanelFieldSetProp ("jav", 5, text) 
+PanelFieldSetProp ("jab", 5, text) 
+PanelFieldSetProp ("vjav", 5, text) 
+PanelFieldSetProp ("vjab", 5, text)
+PanelUpdateEnable(2)

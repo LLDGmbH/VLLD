@@ -1,0 +1,1490 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="LLD_OBJ/MA50DS(SF2C+KEY01)" library="LLD_OBJ" member_name="MA50DS">
+    <size cx="80" cy="24"/>
+    <action key="f2" caption="F2" attention_key="false"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f5" caption="F5" attention_key="false"/>
+    <action key="f6" caption="F6" attention_key="false"/>
+    <action key="f7" caption="F7" attention_key="false"/>
+    <action key="f8" caption="F8" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <action key="roll_up" caption="ROLL_UP" attention_key="false"/>
+    <action key="roll_down" caption="ROLL_DOWN" attention_key="false"/>
+    <field field_type="screen_part" name="SF2C">
+      <area>
+        <position/>
+        <size cx="80" cy="23"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="KEY01" overlay="true">
+      <area>
+        <position y="23"/>
+        <size cx="80" cy="1"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="2"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Verkaufsanteile EH/Geschäftsart" display_length="31" data_length="31" underline="true">
+          <area>
+            <position x="27"/>
+            <size cx="31" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="63"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="72"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="MA50" display_length="4" data_length="4">
+          <area>
+            <position x="74" y="1"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="field" usage="both" name="XXKDNR" short_name="XXKDNR" data_type="zoned_decimal" display_length="7" data_length="7" underline="true" high_intensity="true" position_cursor="true" exit_record="true">
+          <area>
+            <position x="1" y="2"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33" high_intensity="true">
+          <area>
+            <position x="9" y="2"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGTXT" short_name="KDGTXT" data_type="alphanumeric" display_length="25" data_length="25" high_intensity="true">
+          <area>
+            <position x="43" y="2"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="YYJJMM" short_name="YYJJMM" data_type="zoned_decimal" display_length="5" data_length="4" underline="true" high_intensity="true" position_cursor="true" exit_record="true">
+          <area>
+            <position x="73" y="2"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25">
+          <area>
+            <position x="9" y="3"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="FF1:" display_length="4" data_length="4">
+          <area>
+            <position x="43" y="3"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="KDTAG" short_name="KDTAG" data_type="zoned_decimal" display_length="6" data_length="5">
+          <area>
+            <position x="48" y="3"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="YYREG3" short_name="YYREG3" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="57" y="3"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="white"/>
+          <indicator id="21"/>
+        </field>
+        <field field_type="fixed_text" value="kein Regal vorhanden" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="58" y="3"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+          <indicator id="22"/>
+        </field>
+        <field field_type="fixed_text" value="% Regalauslastung" display_length="17" data_length="17" conditional="true">
+          <area>
+            <position x="61" y="3"/>
+            <size cx="17" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+          <indicator id="21"/>
+        </field>
+        <field field_type="fixed_text" value="nach EH-Preisen   nach Exemplaren   Anz. Titel" display_length="46" data_length="46">
+          <area>
+            <position x="33" y="4"/>
+            <size cx="46" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="A     Objekt-Gruppe           DM-Kd  %-Kd  %-GA Ex-Kd  %-Kd  %-GA     Kd  Ges." display_length="78" data_length="78" underline="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="78" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXEHCD" short_name="XXEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="6"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTEXT" short_name="XXTEXT" data_type="alphanumeric" display_length="24" data_length="24" high_intensity="true" conditional="true">
+          <area>
+            <position x="6" y="6"/>
+            <size cx="24" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XKMENG" short_name="XKMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XKPROZ" short_name="XKPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="37" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XGPROZ" short_name="XGPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="YKMENG" short_name="YKMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="YKPROZ" short_name="YKPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="55" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="YGPROZ" short_name="YGPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="61" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXANZ" short_name="XXANZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="68" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XXANZS" short_name="XXANZS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="74" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXEHCD" short_name="XXEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="7"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTEXT" short_name="XXTEXT" data_type="alphanumeric" display_length="24" data_length="24" high_intensity="true" conditional="true">
+          <area>
+            <position x="6" y="7"/>
+            <size cx="24" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XKMENG" short_name="XKMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XKPROZ" short_name="XKPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="37" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XGPROZ" short_name="XGPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="YKMENG" short_name="YKMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="YKPROZ" short_name="YKPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="55" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="YGPROZ" short_name="YGPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="61" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXANZ" short_name="XXANZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="68" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XXANZS" short_name="XXANZS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="74" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXEHCD" short_name="XXEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="8"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTEXT" short_name="XXTEXT" data_type="alphanumeric" display_length="24" data_length="24" high_intensity="true" conditional="true">
+          <area>
+            <position x="6" y="8"/>
+            <size cx="24" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XKMENG" short_name="XKMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XKPROZ" short_name="XKPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="37" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XGPROZ" short_name="XGPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="YKMENG" short_name="YKMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="YKPROZ" short_name="YKPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="55" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="YGPROZ" short_name="YGPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="61" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXANZ" short_name="XXANZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="68" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XXANZS" short_name="XXANZS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="74" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXEHCD" short_name="XXEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="9"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTEXT" short_name="XXTEXT" data_type="alphanumeric" display_length="24" data_length="24" high_intensity="true" conditional="true">
+          <area>
+            <position x="6" y="9"/>
+            <size cx="24" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XKMENG" short_name="XKMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XKPROZ" short_name="XKPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="37" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XGPROZ" short_name="XGPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="YKMENG" short_name="YKMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="YKPROZ" short_name="YKPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="55" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="YGPROZ" short_name="YGPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="61" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXANZ" short_name="XXANZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="68" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XXANZS" short_name="XXANZS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="74" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXEHCD" short_name="XXEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="10"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTEXT" short_name="XXTEXT" data_type="alphanumeric" display_length="24" data_length="24" high_intensity="true" conditional="true">
+          <area>
+            <position x="6" y="10"/>
+            <size cx="24" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XKMENG" short_name="XKMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XKPROZ" short_name="XKPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="37" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XGPROZ" short_name="XGPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="YKMENG" short_name="YKMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="YKPROZ" short_name="YKPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="55" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="YGPROZ" short_name="YGPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="61" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXANZ" short_name="XXANZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="68" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XXANZS" short_name="XXANZS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="74" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXEHCD" short_name="XXEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="11"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTEXT" short_name="XXTEXT" data_type="alphanumeric" display_length="24" data_length="24" high_intensity="true" conditional="true">
+          <area>
+            <position x="6" y="11"/>
+            <size cx="24" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XKMENG" short_name="XKMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XKPROZ" short_name="XKPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="37" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XGPROZ" short_name="XGPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="YKMENG" short_name="YKMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="YKPROZ" short_name="YKPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="55" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="YGPROZ" short_name="YGPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="61" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXANZ" short_name="XXANZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="68" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XXANZS" short_name="XXANZS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="74" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXEHCD" short_name="XXEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="12"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTEXT" short_name="XXTEXT" data_type="alphanumeric" display_length="24" data_length="24" high_intensity="true" conditional="true">
+          <area>
+            <position x="6" y="12"/>
+            <size cx="24" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XKMENG" short_name="XKMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XKPROZ" short_name="XKPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="37" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XGPROZ" short_name="XGPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="YKMENG" short_name="YKMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="YKPROZ" short_name="YKPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="55" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="YGPROZ" short_name="YGPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="61" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXANZ" short_name="XXANZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="68" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XXANZS" short_name="XXANZS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="74" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXEHCD" short_name="XXEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="13"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTEXT" short_name="XXTEXT" data_type="alphanumeric" display_length="24" data_length="24" high_intensity="true" conditional="true">
+          <area>
+            <position x="6" y="13"/>
+            <size cx="24" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XKMENG" short_name="XKMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XKPROZ" short_name="XKPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="37" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XGPROZ" short_name="XGPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="YKMENG" short_name="YKMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="YKPROZ" short_name="YKPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="55" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="YGPROZ" short_name="YGPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="61" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXANZ" short_name="XXANZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="68" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XXANZS" short_name="XXANZS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="74" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXEHCD" short_name="XXEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="14"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTEXT" short_name="XXTEXT" data_type="alphanumeric" display_length="24" data_length="24" high_intensity="true" conditional="true">
+          <area>
+            <position x="6" y="14"/>
+            <size cx="24" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XKMENG" short_name="XKMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XKPROZ" short_name="XKPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="37" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XGPROZ" short_name="XGPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="YKMENG" short_name="YKMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="YKPROZ" short_name="YKPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="55" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="YGPROZ" short_name="YGPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="61" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXANZ" short_name="XXANZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="68" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XXANZS" short_name="XXANZS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="74" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXEHCD" short_name="XXEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="15"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTEXT" short_name="XXTEXT" data_type="alphanumeric" display_length="24" data_length="24" high_intensity="true" conditional="true">
+          <area>
+            <position x="6" y="15"/>
+            <size cx="24" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XKMENG" short_name="XKMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XKPROZ" short_name="XKPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="37" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XGPROZ" short_name="XGPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="YKMENG" short_name="YKMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="YKPROZ" short_name="YKPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="55" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="YGPROZ" short_name="YGPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="61" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXANZ" short_name="XXANZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="68" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XXANZS" short_name="XXANZS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="74" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXEHCD" short_name="XXEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="16"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTEXT" short_name="XXTEXT" data_type="alphanumeric" display_length="24" data_length="24" high_intensity="true" conditional="true">
+          <area>
+            <position x="6" y="16"/>
+            <size cx="24" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XKMENG" short_name="XKMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XKPROZ" short_name="XKPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="37" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XGPROZ" short_name="XGPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="YKMENG" short_name="YKMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="YKPROZ" short_name="YKPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="55" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="YGPROZ" short_name="YGPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="61" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXANZ" short_name="XXANZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="68" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XXANZS" short_name="XXANZS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="74" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXEHCD" short_name="XXEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="17"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTEXT" short_name="XXTEXT" data_type="alphanumeric" display_length="24" data_length="24" high_intensity="true" conditional="true">
+          <area>
+            <position x="6" y="17"/>
+            <size cx="24" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XKMENG" short_name="XKMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XKPROZ" short_name="XKPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="37" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XGPROZ" short_name="XGPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="YKMENG" short_name="YKMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="YKPROZ" short_name="YKPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="55" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="YGPROZ" short_name="YGPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="61" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXANZ" short_name="XXANZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="68" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XXANZS" short_name="XXANZS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="74" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXEHCD" short_name="XXEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="18"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTEXT" short_name="XXTEXT" data_type="alphanumeric" display_length="24" data_length="24" high_intensity="true" conditional="true">
+          <area>
+            <position x="6" y="18"/>
+            <size cx="24" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XKMENG" short_name="XKMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XKPROZ" short_name="XKPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="37" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XGPROZ" short_name="XGPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="YKMENG" short_name="YKMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="YKPROZ" short_name="YKPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="55" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="YGPROZ" short_name="YGPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="61" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXANZ" short_name="XXANZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="68" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XXANZS" short_name="XXANZS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="74" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXEHCD" short_name="XXEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="19"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTEXT" short_name="XXTEXT" data_type="alphanumeric" display_length="24" data_length="24" high_intensity="true" conditional="true">
+          <area>
+            <position x="6" y="19"/>
+            <size cx="24" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XKMENG" short_name="XKMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XKPROZ" short_name="XKPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="37" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XGPROZ" short_name="XGPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="YKMENG" short_name="YKMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="YKPROZ" short_name="YKPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="55" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="YGPROZ" short_name="YGPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="61" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXANZ" short_name="XXANZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="68" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XXANZS" short_name="XXANZS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="74" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXEHCD" short_name="XXEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="20"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTEXT" short_name="XXTEXT" data_type="alphanumeric" display_length="24" data_length="24" high_intensity="true" conditional="true">
+          <area>
+            <position x="6" y="20"/>
+            <size cx="24" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XKMENG" short_name="XKMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XKPROZ" short_name="XKPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="37" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XGPROZ" short_name="XGPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="YKMENG" short_name="YKMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="YKPROZ" short_name="YKPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="55" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="YGPROZ" short_name="YGPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="61" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXANZ" short_name="XXANZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="68" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XXANZS" short_name="XXANZS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="74" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXEHCD" short_name="XXEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="21"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTEXT" short_name="XXTEXT" data_type="alphanumeric" display_length="24" data_length="24" high_intensity="true" conditional="true">
+          <area>
+            <position x="6" y="21"/>
+            <size cx="24" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XKMENG" short_name="XKMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XKPROZ" short_name="XKPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="37" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XGPROZ" short_name="XGPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="YKMENG" short_name="YKMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="YKPROZ" short_name="YKPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="55" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="YGPROZ" short_name="YGPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="61" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXANZ" short_name="XXANZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="68" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XXANZS" short_name="XXANZS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="74" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXEHCD" short_name="XXEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="22"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTEXT" short_name="XXTEXT" data_type="alphanumeric" display_length="24" data_length="24" high_intensity="true" conditional="true">
+          <area>
+            <position x="6" y="22"/>
+            <size cx="24" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XKMENG" short_name="XKMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XKPROZ" short_name="XKPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="37" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XGPROZ" short_name="XGPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="43" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="YKMENG" short_name="YKMENG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="YKPROZ" short_name="YKPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="55" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="YGPROZ" short_name="YGPROZ" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="61" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXANZ" short_name="XXANZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="68" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XXANZS" short_name="XXANZS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="74" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="F2 = LF/VK  ; Kunde zurück/vor: F5/F6=nach FF; F7/F8 nur innerhalb der G.Art " display_length="77" data_length="77">
+      <area>
+        <position x="1" y="23"/>
+        <size cx="77" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

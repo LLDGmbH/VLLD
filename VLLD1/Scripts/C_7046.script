@@ -1,0 +1,55 @@
+﻿dim text, sql, ErrorMsg as String
+dim rc as Integer
+global filiale as string 
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rc = EzSQLQuery("SELECT digits(ksnr) concat ' - ' concat kstext FROM GRWKSTP order by digits(ksnr)", text, ErrorMsg)
+PanelFieldSetProp ("ws_ks01", 5, text) 
+
+rc = EzSQLQuery("SELECT digits(ksnr) concat ' - ' concat kstext FROM GRWKSTP order by digits(ksnr)", text, ErrorMsg)
+PanelFieldSetProp ("ws_ks02", 5, text) 
+
+rc = EzSQLQuery("SELECT digits(ksnr) concat ' - ' concat kstext FROM GRWKSTP order by digits(ksnr)", text, ErrorMsg)
+PanelFieldSetProp ("ws_ks03", 5, text) 
+
+rc = EzSQLQuery("SELECT digits(ksnr) concat ' - ' concat kstext FROM GRWKSTP order by digits(ksnr)", text, ErrorMsg)
+PanelFieldSetProp ("ws_ks04", 5, text) 
+
+rc = EzSQLQuery("SELECT digits(ksnr) concat ' - ' concat kstext FROM GRWKSTP order by digits(ksnr)", text, ErrorMsg)
+PanelFieldSetProp ("ws_ks05", 5, text) 
+
+rc = EzSQLQuery("SELECT digits(ksnr) concat ' - ' concat kstext FROM GRWKSTP order by digits(ksnr)", text, ErrorMsg)
+PanelFieldSetProp ("ws_ks06", 5, text) 
+
+rc = EzSQLQuery("SELECT digits(ksnr) concat ' - ' concat kstext FROM GRWKSTP order by digits(ksnr)", text, ErrorMsg)
+PanelFieldSetProp ("ws_ks07", 5, text) 
+
+rc = EzSQLQuery("SELECT digits(ksnr) concat ' - ' concat kstext FROM GRWKSTP order by digits(ksnr)", text, ErrorMsg)
+PanelFieldSetProp ("ws_ks08", 5, text) 
+
+rc = EzSQLQuery("SELECT digits(ksnr) concat ' - ' concat kstext FROM GRWKSTP order by digits(ksnr)", text, ErrorMsg)
+PanelFieldSetProp ("ws_ks09", 5, text) 
+
+rc = EzSQLQuery("SELECT digits(ksnr) concat ' - ' concat kstext FROM GRWKSTP order by digits(ksnr)", text, ErrorMsg)
+PanelFieldSetProp ("ws_ks10", 5, text) 
+
+rc = EzSQLQuery("SELECT digits(ksnr) concat ' - ' concat kstext FROM GRWKSTP order by digits(ksnr)", text, ErrorMsg)
+PanelFieldSetProp ("ws_ks11", 5, text) 
+
+rc = EzSQLQuery("SELECT digits(ksnr) concat ' - ' concat kstext FROM GRWKSTP order by digits(ksnr)", text, ErrorMsg)
+PanelFieldSetProp ("ws_ks12", 5, text) 
+
+rc = EzSQLQuery("SELECT digits(ksnr) concat ' - ' concat kstext FROM GRWKSTP order by digits(ksnr)", text, ErrorMsg)
+PanelFieldSetProp ("ws_ks13", 5, text) 
+
+rc = EzSQLQuery("SELECT digits(ksnr) concat ' - ' concat kstext FROM GRWKSTP order by digits(ksnr)", text, ErrorMsg)
+PanelFieldSetProp ("ws_ks14", 5, text) 
+
+rc = EzSQLQuery("SELECT digits(ksnr) concat ' - ' concat kstext FROM GRWKSTP order by digits(ksnr)", text, ErrorMsg)
+PanelFieldSetProp ("ws_ks15", 5, text) 
+
+PanelUpdateEnable(2)

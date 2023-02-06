@@ -1,0 +1,84 @@
+﻿DIM ddehandle, i, j, msg, rc  as integer
+dim x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12, x13, x14, x15, x16, x17, x18, datei, Errmsg, pfad_datei, source as string 
+i = 0
+j=1
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", Errmsg)
+
+datei = "Objektbewegungen " + x18 + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", "Woche")
+ddepoke( ddehandle, "Z" + str(j) +"S2", "Lieferung")
+ddepoke( ddehandle, "Z" + str(j) +"S3", "NaLi")
+ddepoke( ddehandle, "Z" + str(j) +"S4", "SofortRemi")
+ddepoke( ddehandle, "Z" + str(j) +"S5", "Anz.KD")
+ddepoke( ddehandle, "Z" + str(j) +"S6", "Frühremi")
+ddepoke( ddehandle, "Z" + str(j) +"S7", "Anz.KD")
+ddepoke( ddehandle, "Z" + str(j) +"S8", "Normalremi")
+ddepoke( ddehandle, "Z" + str(j) +"S9", "Anz.KD")
+ddepoke( ddehandle, "Z" + str(j) +"S10", "Expl.Teil")
+ddepoke( ddehandle, "Z" + str(j) +"S11", "Anz.KD")
+ddepoke( ddehandle, "Z" + str(j) +"S12", "Expl.Komplett")
+ddepoke( ddehandle, "Z" + str(j) +"S13", "Anz.KD")
+ddepoke( ddehandle, "Z" + str(j) +"S14", "%.Sofort")
+ddepoke( ddehandle, "Z" + str(j) +"S15", "%.Früh")
+ddepoke( ddehandle, "Z" + str(j) +"S16", "%.Normal")
+
+j=j+1
+
+nochmal:
+
+HostFieldGetLineData("s1wo", i, x1)
+HostFieldGetLineData("s1lief", i, x2)
+HostFieldGetLineData("s1nl", i, x3)
+HostFieldGetLineData("s1sr", i, x4)
+HostFieldGetLineData("s1srk", i, x5)
+HostFieldGetLineData("s1fr", i, x6)
+HostFieldGetLineData("s1frk", i, x7)
+HostFieldGetLineData("s1nr", i, x8)
+HostFieldGetLineData("s1nrk", i, x9)
+HostFieldGetLineData("s1etr", i, x10)
+HostFieldGetLineData("s1ktr", i, x11)
+HostFieldGetLineData("s1erk", i, x12)
+HostFieldGetLineData("s1kkr", i, x13)
+HostFieldGetLineData("pfr", i, x14)
+HostFieldGetLineData("psr", i, x15)
+HostFieldGetLineData("pnr", i, x16)
+
+if x1 <> ""  then
+ddepoke( ddehandle, "Z" + str(j) +"S1", x1)
+ddepoke( ddehandle, "Z" + str(j) +"S2", x2)
+ddepoke( ddehandle, "Z" + str(j) +"S3", x3)
+ddepoke( ddehandle, "Z" + str(j) +"S4", x4)
+ddepoke( ddehandle, "Z" + str(j) +"S5", x5)
+ddepoke( ddehandle, "Z" + str(j) +"S6", x6)
+ddepoke( ddehandle, "Z" + str(j) +"S7", x7)
+ddepoke( ddehandle, "Z" + str(j) +"S8", x8)
+ddepoke( ddehandle, "Z" + str(j) +"S9", x9)
+ddepoke( ddehandle, "Z" + str(j) +"S10", x10)
+ddepoke( ddehandle, "Z" + str(j) +"S11", x11)
+ddepoke( ddehandle, "Z" + str(j) +"S12", x12)
+ddepoke( ddehandle, "Z" + str(j) +"S13", x13)
+ddepoke( ddehandle, "Z" + str(j) +"S14", x14)
+ddepoke( ddehandle, "Z" + str(j) +"S15", x15)
+ddepoke( ddehandle, "Z" + str(j) +"S16", x16)
+
+j=j+1
+endif
+
+if i < 17 then
+i=i+1
+goto nochmal
+endif
+ 
+if x1 <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

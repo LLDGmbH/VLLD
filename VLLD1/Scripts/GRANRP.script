@@ -1,0 +1,22 @@
+﻿
+dim text, ErrorMsg as String
+dim rc as Integer
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rc = EzSQLQuery("SELECT annr, substr(antxt, 1, 20) concat ' - ' concat digits(annr) from granrp  order by substr(antxt, 1, 20) concat ' - ' concat digits(annr)", text, ErrorMsg)
+
+if ( rc < 0 ) then
+
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+
+else
+
+PanelFieldSetProp ("f1anre", 5, text) 
+
+PanelUpdateEnable(2)
+
+endif

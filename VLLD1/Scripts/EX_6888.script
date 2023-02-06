@@ -1,0 +1,60 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xkdnr, xwtnr, xwtbez, xwtobnr, xatname, xspr_nr, xspr_titel, xspr_sa, xende, errmsg, datei, pfad_datei, source as string 
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+HostFieldGetData("kdkdnr", xkdnr)
+
+datei = "Fehlende Toptitel_Kunde_" + xkdnr + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "Cd")
+ddepoke( ddehandle, "Z1S2", "Ehstra")
+ddepoke( ddehandle, "Z1S3", "Objektnummer")
+ddepoke( ddehandle, "Z1S4", "Titel")
+ddepoke( ddehandle, "Z1S5", "VKP")
+ddepoke( ddehandle, "Z1S6", "Vlg")
+ddepoke( ddehandle, "Z1S7", "Verlag")
+
+nochmal:
+
+HostFieldGetLineData("sfehcd",      i, xwtnr)
+HostFieldGetLineData("sfehtxt",     i, xwtbez)
+HostFieldGetLineData("sfobj",    i, xwtobnr)
+HostFieldGetLineData("sftitel",    i, xatname)
+HostFieldGetLineData("sfbneu",    i, xspr_nr)
+HostFieldGetLineData("sfvnr", i, xspr_titel)
+HostFieldGetLineData("sfvname",    i, xspr_sa)
+
+
+if (xwtnr <> "")  then
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", xwtnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xwtbez)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xwtobnr)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xatname)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xspr_nr)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xspr_titel)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xspr_sa)
+
+j=j+1
+endif
+
+if i < 21 then
+i=i+1
+goto nochmal
+endif
+
+HostFieldGetData("ende", xende) 
+if xende <> "Ende" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

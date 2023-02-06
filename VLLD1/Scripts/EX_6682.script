@@ -1,0 +1,87 @@
+﻿DIM ddehandle, i, j, msg as integer
+dim x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12, x13, x14, x15, xende, datei, pfad_datei, source as string 
+i = 0
+j=1
+
+
+datei = "Remisionswerte kundenweise.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", "Kdnr")
+ddepoke( ddehandle, "Z" + str(j) +"S2", "Name")
+ddepoke( ddehandle, "Z" + str(j) +"S3", "Bezug")
+ddepoke( ddehandle, "Z" + str(j) +"S4", "NaLi")
+ddepoke( ddehandle, "Z" + str(j) +"S5", "Sof.Remi")
+ddepoke( ddehandle, "Z" + str(j) +"S6", "Sof.Remi %")
+ddepoke( ddehandle, "Z" + str(j) +"S7", "Frühremi")
+ddepoke( ddehandle, "Z" + str(j) +"S8", "Frühremi %")
+ddepoke( ddehandle, "Z" + str(j) +"S9", "Normalremi")
+ddepoke( ddehandle, "Z" + str(j) +"S10", "Normalremi %")
+ddepoke( ddehandle, "Z" + str(j) +"S11", "Spätremi")
+ddepoke( ddehandle, "Z" + str(j) +"S12", "Spätremi %")
+ddepoke( ddehandle, "Z" + str(j) +"S13", "Abgelehnte Remi")
+ddepoke( ddehandle, "Z" + str(j) +"S14", "Abgelehnte Remi %")
+
+
+j=j+1
+
+
+nochmal:
+
+HostFieldGetLineData("s1kdnr", i, x1)
+HostFieldGetLineData("s1knam", i, x2)
+HostFieldGetLineData("s1bezw", i, x3)
+HostFieldGetLineData("s1nlw", i, x4)
+HostFieldGetLineData("s1srw", i, x5)
+HostFieldGetLineData("s1srwp", i, x6)
+HostFieldGetLineData("s1frw", i, x7)
+HostFieldGetLineData("s1frwp", i, x8)
+HostFieldGetLineData("s1nrw", i, x9)
+HostFieldGetLineData("s1nrwp", i, x10)
+HostFieldGetLineData("s1prw", i, x11)
+HostFieldGetLineData("s1prwp", i, x12)
+HostFieldGetLineData("s1arw", i, x13)
+HostFieldGetLineData("s1arwp", i, x14)
+
+
+
+HostFieldGetData("ende", xende)
+
+if x1 <> ""  then
+ddepoke( ddehandle, "Z" + str(j) +"S1", x1)
+ddepoke( ddehandle, "Z" + str(j) +"S2", x2)
+ddepoke( ddehandle, "Z" + str(j) +"S3", x3)
+ddepoke( ddehandle, "Z" + str(j) +"S4", x4)
+ddepoke( ddehandle, "Z" + str(j) +"S5", x5)
+ddepoke( ddehandle, "Z" + str(j) +"S6", x6)
+ddepoke( ddehandle, "Z" + str(j) +"S7", x7)
+ddepoke( ddehandle, "Z" + str(j) +"S8", x8)
+ddepoke( ddehandle, "Z" + str(j) +"S9", x9)
+ddepoke( ddehandle, "Z" + str(j) +"S10", x10)
+ddepoke( ddehandle, "Z" + str(j) +"S11", x11)
+ddepoke( ddehandle, "Z" + str(j) +"S12", x12)
+ddepoke( ddehandle, "Z" + str(j) +"S13", x13)
+ddepoke( ddehandle, "Z" + str(j) +"S14", x14)
+
+
+j=j+1
+endif
+
+if x2 <> "** Ende **" then
+
+if i < 19 then
+i=i+1
+goto nochmal
+endif
+ 
+if x2 <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif
+endif

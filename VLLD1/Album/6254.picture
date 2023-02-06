@@ -1,0 +1,1020 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="SRC5_LZ/PVLST39DS(STCTL+FUS)" library="SRC5_LZ" member_name="PVLST39DS">
+    <size cx="80" cy="24"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="f12" caption="F12" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <field field_type="screen_part" name="STCTL" overlay="true">
+      <area>
+        <position/>
+        <size cx="80" cy="23"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="FUS">
+      <area>
+        <position y="23"/>
+        <size cx="80" cy="1"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="*USER" short_name="*USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="62"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="72"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value=" Anzeige EH-CD Quartal     / Jahr     " display_length="38" data_length="38" underline="true">
+          <area>
+            <position x="22" y="1"/>
+            <size cx="38" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="Jahr ....:" display_length="10" data_length="10">
+          <area>
+            <position x="1" y="2"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="both" name="JAHR" short_name="JAHR" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" position_cursor="true">
+          <area>
+            <position x="13" y="2"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="/" display_length="1" data_length="1">
+          <area>
+            <position x="18" y="2"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="QUARTAL" short_name="QUARTAL" data_type="zoned_decimal" display_length="1" data_length="1" underline="true">
+          <area>
+            <position x="20" y="2"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="(1/2/3" display_length="6" data_length="6">
+          <area>
+            <position x="22" y="2"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="oder" display_length="4" data_length="4">
+          <area>
+            <position x="29" y="2"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="4)" display_length="2" data_length="2">
+          <area>
+            <position x="34" y="2"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value=" OB-GR Bez                            Absatz   Anteil           Umsatz  Anteil  " display_length="80" data_length="80" underline="true">
+          <area>
+            <position y="3"/>
+            <size cx="80" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="OG" short_name="OG" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional" conditional="true">
+          <area>
+            <position x="2" y="4"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="OGBEZ" short_name="OGBEZ" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="7" y="4"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ABSATZ" short_name="ABSATZ" data_type="zoned_decimal" display_length="10" data_length="8" non_display="conditional" conditional="true">
+          <area>
+            <position x="34" y="4"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ABSANTEIL" short_name="ABSANTEIL" data_type="zoned_decimal" display_length="6" data_length="5" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="4"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="UMSATZ" short_name="UMSATZ" data_type="zoned_decimal" display_length="15" data_length="12" non_display="conditional" conditional="true" decimal_positions="4">
+          <area>
+            <position x="55" y="4"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="UMSANTEIL" short_name="UMSANTEIL" data_type="zoned_decimal" display_length="6" data_length="5" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="72" y="4"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="OG" short_name="OG" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional" conditional="true">
+          <area>
+            <position x="2" y="5"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="OGBEZ" short_name="OGBEZ" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="7" y="5"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ABSATZ" short_name="ABSATZ" data_type="zoned_decimal" display_length="10" data_length="8" non_display="conditional" conditional="true">
+          <area>
+            <position x="34" y="5"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ABSANTEIL" short_name="ABSANTEIL" data_type="zoned_decimal" display_length="6" data_length="5" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="5"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="UMSATZ" short_name="UMSATZ" data_type="zoned_decimal" display_length="15" data_length="12" non_display="conditional" conditional="true" decimal_positions="4">
+          <area>
+            <position x="55" y="5"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="UMSANTEIL" short_name="UMSANTEIL" data_type="zoned_decimal" display_length="6" data_length="5" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="72" y="5"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="OG" short_name="OG" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional" conditional="true">
+          <area>
+            <position x="2" y="6"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="OGBEZ" short_name="OGBEZ" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="7" y="6"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ABSATZ" short_name="ABSATZ" data_type="zoned_decimal" display_length="10" data_length="8" non_display="conditional" conditional="true">
+          <area>
+            <position x="34" y="6"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ABSANTEIL" short_name="ABSANTEIL" data_type="zoned_decimal" display_length="6" data_length="5" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="6"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="UMSATZ" short_name="UMSATZ" data_type="zoned_decimal" display_length="15" data_length="12" non_display="conditional" conditional="true" decimal_positions="4">
+          <area>
+            <position x="55" y="6"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="UMSANTEIL" short_name="UMSANTEIL" data_type="zoned_decimal" display_length="6" data_length="5" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="72" y="6"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="OG" short_name="OG" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional" conditional="true">
+          <area>
+            <position x="2" y="7"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="OGBEZ" short_name="OGBEZ" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="7" y="7"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ABSATZ" short_name="ABSATZ" data_type="zoned_decimal" display_length="10" data_length="8" non_display="conditional" conditional="true">
+          <area>
+            <position x="34" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ABSANTEIL" short_name="ABSANTEIL" data_type="zoned_decimal" display_length="6" data_length="5" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="7"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="UMSATZ" short_name="UMSATZ" data_type="zoned_decimal" display_length="15" data_length="12" non_display="conditional" conditional="true" decimal_positions="4">
+          <area>
+            <position x="55" y="7"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="UMSANTEIL" short_name="UMSANTEIL" data_type="zoned_decimal" display_length="6" data_length="5" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="72" y="7"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="OG" short_name="OG" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional" conditional="true">
+          <area>
+            <position x="2" y="8"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="OGBEZ" short_name="OGBEZ" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="7" y="8"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ABSATZ" short_name="ABSATZ" data_type="zoned_decimal" display_length="10" data_length="8" non_display="conditional" conditional="true">
+          <area>
+            <position x="34" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ABSANTEIL" short_name="ABSANTEIL" data_type="zoned_decimal" display_length="6" data_length="5" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="8"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="UMSATZ" short_name="UMSATZ" data_type="zoned_decimal" display_length="15" data_length="12" non_display="conditional" conditional="true" decimal_positions="4">
+          <area>
+            <position x="55" y="8"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="UMSANTEIL" short_name="UMSANTEIL" data_type="zoned_decimal" display_length="6" data_length="5" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="72" y="8"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="OG" short_name="OG" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional" conditional="true">
+          <area>
+            <position x="2" y="9"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="OGBEZ" short_name="OGBEZ" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="7" y="9"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ABSATZ" short_name="ABSATZ" data_type="zoned_decimal" display_length="10" data_length="8" non_display="conditional" conditional="true">
+          <area>
+            <position x="34" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ABSANTEIL" short_name="ABSANTEIL" data_type="zoned_decimal" display_length="6" data_length="5" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="9"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="UMSATZ" short_name="UMSATZ" data_type="zoned_decimal" display_length="15" data_length="12" non_display="conditional" conditional="true" decimal_positions="4">
+          <area>
+            <position x="55" y="9"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="UMSANTEIL" short_name="UMSANTEIL" data_type="zoned_decimal" display_length="6" data_length="5" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="72" y="9"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="OG" short_name="OG" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional" conditional="true">
+          <area>
+            <position x="2" y="10"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="OGBEZ" short_name="OGBEZ" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="7" y="10"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ABSATZ" short_name="ABSATZ" data_type="zoned_decimal" display_length="10" data_length="8" non_display="conditional" conditional="true">
+          <area>
+            <position x="34" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ABSANTEIL" short_name="ABSANTEIL" data_type="zoned_decimal" display_length="6" data_length="5" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="10"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="UMSATZ" short_name="UMSATZ" data_type="zoned_decimal" display_length="15" data_length="12" non_display="conditional" conditional="true" decimal_positions="4">
+          <area>
+            <position x="55" y="10"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="UMSANTEIL" short_name="UMSANTEIL" data_type="zoned_decimal" display_length="6" data_length="5" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="72" y="10"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="OG" short_name="OG" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional" conditional="true">
+          <area>
+            <position x="2" y="11"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="OGBEZ" short_name="OGBEZ" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="7" y="11"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ABSATZ" short_name="ABSATZ" data_type="zoned_decimal" display_length="10" data_length="8" non_display="conditional" conditional="true">
+          <area>
+            <position x="34" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ABSANTEIL" short_name="ABSANTEIL" data_type="zoned_decimal" display_length="6" data_length="5" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="UMSATZ" short_name="UMSATZ" data_type="zoned_decimal" display_length="15" data_length="12" non_display="conditional" conditional="true" decimal_positions="4">
+          <area>
+            <position x="55" y="11"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="UMSANTEIL" short_name="UMSANTEIL" data_type="zoned_decimal" display_length="6" data_length="5" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="72" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="OG" short_name="OG" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional" conditional="true">
+          <area>
+            <position x="2" y="12"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="OGBEZ" short_name="OGBEZ" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="7" y="12"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ABSATZ" short_name="ABSATZ" data_type="zoned_decimal" display_length="10" data_length="8" non_display="conditional" conditional="true">
+          <area>
+            <position x="34" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ABSANTEIL" short_name="ABSANTEIL" data_type="zoned_decimal" display_length="6" data_length="5" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="12"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="UMSATZ" short_name="UMSATZ" data_type="zoned_decimal" display_length="15" data_length="12" non_display="conditional" conditional="true" decimal_positions="4">
+          <area>
+            <position x="55" y="12"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="UMSANTEIL" short_name="UMSANTEIL" data_type="zoned_decimal" display_length="6" data_length="5" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="72" y="12"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="OG" short_name="OG" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional" conditional="true">
+          <area>
+            <position x="2" y="13"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="OGBEZ" short_name="OGBEZ" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="7" y="13"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ABSATZ" short_name="ABSATZ" data_type="zoned_decimal" display_length="10" data_length="8" non_display="conditional" conditional="true">
+          <area>
+            <position x="34" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ABSANTEIL" short_name="ABSANTEIL" data_type="zoned_decimal" display_length="6" data_length="5" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="13"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="UMSATZ" short_name="UMSATZ" data_type="zoned_decimal" display_length="15" data_length="12" non_display="conditional" conditional="true" decimal_positions="4">
+          <area>
+            <position x="55" y="13"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="UMSANTEIL" short_name="UMSANTEIL" data_type="zoned_decimal" display_length="6" data_length="5" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="72" y="13"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="OG" short_name="OG" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional" conditional="true">
+          <area>
+            <position x="2" y="14"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="OGBEZ" short_name="OGBEZ" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="7" y="14"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ABSATZ" short_name="ABSATZ" data_type="zoned_decimal" display_length="10" data_length="8" non_display="conditional" conditional="true">
+          <area>
+            <position x="34" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ABSANTEIL" short_name="ABSANTEIL" data_type="zoned_decimal" display_length="6" data_length="5" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="14"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="UMSATZ" short_name="UMSATZ" data_type="zoned_decimal" display_length="15" data_length="12" non_display="conditional" conditional="true" decimal_positions="4">
+          <area>
+            <position x="55" y="14"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="UMSANTEIL" short_name="UMSANTEIL" data_type="zoned_decimal" display_length="6" data_length="5" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="72" y="14"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="OG" short_name="OG" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional" conditional="true">
+          <area>
+            <position x="2" y="15"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="OGBEZ" short_name="OGBEZ" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="7" y="15"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ABSATZ" short_name="ABSATZ" data_type="zoned_decimal" display_length="10" data_length="8" non_display="conditional" conditional="true">
+          <area>
+            <position x="34" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ABSANTEIL" short_name="ABSANTEIL" data_type="zoned_decimal" display_length="6" data_length="5" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="15"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="UMSATZ" short_name="UMSATZ" data_type="zoned_decimal" display_length="15" data_length="12" non_display="conditional" conditional="true" decimal_positions="4">
+          <area>
+            <position x="55" y="15"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="UMSANTEIL" short_name="UMSANTEIL" data_type="zoned_decimal" display_length="6" data_length="5" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="72" y="15"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="OG" short_name="OG" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional" conditional="true">
+          <area>
+            <position x="2" y="16"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="OGBEZ" short_name="OGBEZ" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="7" y="16"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ABSATZ" short_name="ABSATZ" data_type="zoned_decimal" display_length="10" data_length="8" non_display="conditional" conditional="true">
+          <area>
+            <position x="34" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ABSANTEIL" short_name="ABSANTEIL" data_type="zoned_decimal" display_length="6" data_length="5" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="16"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="UMSATZ" short_name="UMSATZ" data_type="zoned_decimal" display_length="15" data_length="12" non_display="conditional" conditional="true" decimal_positions="4">
+          <area>
+            <position x="55" y="16"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="UMSANTEIL" short_name="UMSANTEIL" data_type="zoned_decimal" display_length="6" data_length="5" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="72" y="16"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="OG" short_name="OG" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional" conditional="true">
+          <area>
+            <position x="2" y="17"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="OGBEZ" short_name="OGBEZ" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="7" y="17"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ABSATZ" short_name="ABSATZ" data_type="zoned_decimal" display_length="10" data_length="8" non_display="conditional" conditional="true">
+          <area>
+            <position x="34" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ABSANTEIL" short_name="ABSANTEIL" data_type="zoned_decimal" display_length="6" data_length="5" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="17"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="UMSATZ" short_name="UMSATZ" data_type="zoned_decimal" display_length="15" data_length="12" non_display="conditional" conditional="true" decimal_positions="4">
+          <area>
+            <position x="55" y="17"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="UMSANTEIL" short_name="UMSANTEIL" data_type="zoned_decimal" display_length="6" data_length="5" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="72" y="17"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="OG" short_name="OG" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional" conditional="true">
+          <area>
+            <position x="2" y="18"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="OGBEZ" short_name="OGBEZ" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="7" y="18"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ABSATZ" short_name="ABSATZ" data_type="zoned_decimal" display_length="10" data_length="8" non_display="conditional" conditional="true">
+          <area>
+            <position x="34" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ABSANTEIL" short_name="ABSANTEIL" data_type="zoned_decimal" display_length="6" data_length="5" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="18"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="UMSATZ" short_name="UMSATZ" data_type="zoned_decimal" display_length="15" data_length="12" non_display="conditional" conditional="true" decimal_positions="4">
+          <area>
+            <position x="55" y="18"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="UMSANTEIL" short_name="UMSANTEIL" data_type="zoned_decimal" display_length="6" data_length="5" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="72" y="18"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="OG" short_name="OG" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional" conditional="true">
+          <area>
+            <position x="2" y="19"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="OGBEZ" short_name="OGBEZ" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="7" y="19"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ABSATZ" short_name="ABSATZ" data_type="zoned_decimal" display_length="10" data_length="8" non_display="conditional" conditional="true">
+          <area>
+            <position x="34" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ABSANTEIL" short_name="ABSANTEIL" data_type="zoned_decimal" display_length="6" data_length="5" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="19"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="UMSATZ" short_name="UMSATZ" data_type="zoned_decimal" display_length="15" data_length="12" non_display="conditional" conditional="true" decimal_positions="4">
+          <area>
+            <position x="55" y="19"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="UMSANTEIL" short_name="UMSANTEIL" data_type="zoned_decimal" display_length="6" data_length="5" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="72" y="19"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="OG" short_name="OG" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional" conditional="true">
+          <area>
+            <position x="2" y="20"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="OGBEZ" short_name="OGBEZ" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="7" y="20"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ABSATZ" short_name="ABSATZ" data_type="zoned_decimal" display_length="10" data_length="8" non_display="conditional" conditional="true">
+          <area>
+            <position x="34" y="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ABSANTEIL" short_name="ABSANTEIL" data_type="zoned_decimal" display_length="6" data_length="5" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="20"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="UMSATZ" short_name="UMSATZ" data_type="zoned_decimal" display_length="15" data_length="12" non_display="conditional" conditional="true" decimal_positions="4">
+          <area>
+            <position x="55" y="20"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="UMSANTEIL" short_name="UMSANTEIL" data_type="zoned_decimal" display_length="6" data_length="5" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="72" y="20"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="OG" short_name="OG" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional" conditional="true">
+          <area>
+            <position x="2" y="21"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="OGBEZ" short_name="OGBEZ" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="7" y="21"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ABSATZ" short_name="ABSATZ" data_type="zoned_decimal" display_length="10" data_length="8" non_display="conditional" conditional="true">
+          <area>
+            <position x="34" y="21"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ABSANTEIL" short_name="ABSANTEIL" data_type="zoned_decimal" display_length="6" data_length="5" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="21"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="UMSATZ" short_name="UMSATZ" data_type="zoned_decimal" display_length="15" data_length="12" non_display="conditional" conditional="true" decimal_positions="4">
+          <area>
+            <position x="55" y="21"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="UMSANTEIL" short_name="UMSANTEIL" data_type="zoned_decimal" display_length="6" data_length="5" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="72" y="21"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+      </field>
+      <field field_type="subfile_end_more" value="Weitere ... " display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="67" y="22"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+      <field field_type="subfile_end_bottom" value="Ende        " display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="67" y="22"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="F3=Beenden" display_length="10" data_length="10">
+      <area>
+        <position x="1" y="23"/>
+        <size cx="10" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="F9=Speichern" display_length="12" data_length="12" conditional="true">
+      <area>
+        <position x="13" y="23"/>
+        <size cx="12" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+      <indicator id="81"/>
+    </field>
+    <field field_type="fixed_text" value="(c) Gerd Gerstmann" display_length="18" data_length="18">
+      <area>
+        <position x="61" y="23"/>
+        <size cx="18" cy="1"/>
+      </area>
+      <color foreground="red"/>
+    </field>
+  </screen>
+</header>

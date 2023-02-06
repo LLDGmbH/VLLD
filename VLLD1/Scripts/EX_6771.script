@@ -1,0 +1,90 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim errmsg, datei, pfad_datei, source as string 
+dim jahr, mm, xsf01, xsf02, xsf03, xsf04, xsf05, xsf06, xsf07, xsf08, xsf09, xsf10, xsf11, xsf12, xsf13, xsf14, xsf15, xsf16 as string 
+
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Remission monatsweise.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "Jahr")
+ddepoke( ddehandle, "Z1S2", "Monat")
+ddepoke( ddehandle, "Z1S3", "Ges Remi")
+ddepoke( ddehandle, "Z1S4", "Ges Rem %")
+ddepoke( ddehandle, "Z1S5", "Bezug")
+ddepoke( ddehandle, "Z1S6", "NaLi")
+ddepoke( ddehandle, "Z1S7", "Sof.Rem")
+ddepoke( ddehandle, "Z1S8", "Sof.Rem %")
+ddepoke( ddehandle, "Z1S9", "Früh.Rem")
+ddepoke( ddehandle, "Z1S10", "Früh.Rem %")
+ddepoke( ddehandle, "Z1S11", "So+Fr Rem")
+ddepoke( ddehandle, "Z1S12", "So+Fr Rem %")
+ddepoke( ddehandle, "Z1S13", "Normal Rem")
+ddepoke( ddehandle, "Z1S14", "Normal Rem %")
+ddepoke( ddehandle, "Z1S15", "SpätRem")
+ddepoke( ddehandle, "Z1S16", "SpätRem %")
+ddepoke( ddehandle, "Z1S17", "Abgelehnt")
+ddepoke( ddehandle, "Z1S18", "Abgelehnt %")
+
+nochmal:
+
+HostFieldGetLineData("s1jahr", i, jahr)
+HostFieldGetLineData("s1mm", i, mm)
+HostFieldGetLineData("sf01", i, xsf01)
+HostFieldGetLineData("sf02", i, xsf02)
+HostFieldGetLineData("sf03", i, xsf03)
+HostFieldGetLineData("sf04", i, xsf04)
+HostFieldGetLineData("sf05", i, xsf05)
+HostFieldGetLineData("sf06", i, xsf06)
+HostFieldGetLineData("sf07", i, xsf07)
+HostFieldGetLineData("sf08", i, xsf08)
+HostFieldGetLineData("sf09", i, xsf09)
+HostFieldGetLineData("sf10", i, xsf10)
+HostFieldGetLineData("sf11", i, xsf11)
+HostFieldGetLineData("sf12", i, xsf12)
+HostFieldGetLineData("sf13", i, xsf13)
+HostFieldGetLineData("sf14", i, xsf14)
+HostFieldGetLineData("sf15", i, xsf15)
+HostFieldGetLineData("sf16", i, xsf16)
+
+
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", jahr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", mm)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xsf01)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xsf02)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xsf03)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xsf04)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xsf05)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xsf06)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xsf07)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xsf08)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xsf09)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xsf10)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xsf11)
+ddepoke( ddehandle, "Z" + str(j) +"S14", xsf12)
+ddepoke( ddehandle, "Z" + str(j) +"S15", xsf13)
+ddepoke( ddehandle, "Z" + str(j) +"S16", xsf14)
+ddepoke( ddehandle, "Z" + str(j) +"S17", xsf15)
+ddepoke( ddehandle, "Z" + str(j) +"S18", xsf16)
+
+j=j+1
+
+if i < 19 then
+i=i+1
+goto nochmal
+endif
+ 
+if jahr <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

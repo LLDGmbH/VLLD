@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="LZSRC/PVLVMPDS(VMPMCTL+VMPFUS)" library="LZSRC" member_name="PVLVMPDS">
+    <size cx="80" cy="24"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f12" caption="F12" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <field field_type="screen_part" name="VMPMCTL" overlay="true">
+      <area>
+        <position/>
+        <size cx="80" cy="16"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="VMPFUS">
+      <area>
+        <position y="20"/>
+        <size cx="80" cy="3"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="*USER" short_name="*USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="62"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="72"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Anzeige Nachlieferungen / Monat" display_length="31" data_length="31" underline="true">
+          <area>
+            <position x="24" y="1"/>
+            <size cx="31" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="Jahr ....:" display_length="10" data_length="10">
+          <area>
+            <position x="1" y="2"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="both" name="JAHR" short_name="JAHR" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" position_cursor="true">
+          <area>
+            <position x="13" y="2"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="      Monat            Anz.Obj.      Menge           EK_Wert        VK-Wert   " display_length="78" data_length="78" underline="true">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="78" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="MONAT" short_name="MONAT" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="7" y="4"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ANZOBJ" short_name="ANZOBJ" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="25" y="4"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="MENGE" short_name="MENGE" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="37" y="4"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WERTN" short_name="WERTN" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="49" y="4"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WERTB" short_name="WERTB" data_type="zoned_decimal" display_length="10" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="66" y="4"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="MONAT" short_name="MONAT" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="7" y="5"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ANZOBJ" short_name="ANZOBJ" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="25" y="5"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="MENGE" short_name="MENGE" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="37" y="5"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WERTN" short_name="WERTN" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="49" y="5"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WERTB" short_name="WERTB" data_type="zoned_decimal" display_length="10" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="66" y="5"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="MONAT" short_name="MONAT" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="7" y="6"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ANZOBJ" short_name="ANZOBJ" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="25" y="6"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="MENGE" short_name="MENGE" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="37" y="6"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WERTN" short_name="WERTN" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="49" y="6"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WERTB" short_name="WERTB" data_type="zoned_decimal" display_length="10" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="66" y="6"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="MONAT" short_name="MONAT" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="7" y="7"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ANZOBJ" short_name="ANZOBJ" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="25" y="7"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="MENGE" short_name="MENGE" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="37" y="7"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WERTN" short_name="WERTN" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="49" y="7"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WERTB" short_name="WERTB" data_type="zoned_decimal" display_length="10" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="66" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="MONAT" short_name="MONAT" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="7" y="8"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ANZOBJ" short_name="ANZOBJ" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="25" y="8"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="MENGE" short_name="MENGE" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="37" y="8"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WERTN" short_name="WERTN" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="49" y="8"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WERTB" short_name="WERTB" data_type="zoned_decimal" display_length="10" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="66" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="MONAT" short_name="MONAT" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="7" y="9"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ANZOBJ" short_name="ANZOBJ" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="25" y="9"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="MENGE" short_name="MENGE" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="37" y="9"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WERTN" short_name="WERTN" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="49" y="9"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WERTB" short_name="WERTB" data_type="zoned_decimal" display_length="10" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="66" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="MONAT" short_name="MONAT" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="7" y="10"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ANZOBJ" short_name="ANZOBJ" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="25" y="10"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="MENGE" short_name="MENGE" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="37" y="10"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WERTN" short_name="WERTN" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="49" y="10"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WERTB" short_name="WERTB" data_type="zoned_decimal" display_length="10" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="66" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="MONAT" short_name="MONAT" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="7" y="11"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ANZOBJ" short_name="ANZOBJ" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="25" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="MENGE" short_name="MENGE" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="37" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WERTN" short_name="WERTN" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="49" y="11"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WERTB" short_name="WERTB" data_type="zoned_decimal" display_length="10" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="66" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="MONAT" short_name="MONAT" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="7" y="12"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ANZOBJ" short_name="ANZOBJ" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="25" y="12"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="MENGE" short_name="MENGE" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="37" y="12"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WERTN" short_name="WERTN" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="49" y="12"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WERTB" short_name="WERTB" data_type="zoned_decimal" display_length="10" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="66" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="MONAT" short_name="MONAT" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="7" y="13"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ANZOBJ" short_name="ANZOBJ" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="25" y="13"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="MENGE" short_name="MENGE" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="37" y="13"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WERTN" short_name="WERTN" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="49" y="13"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WERTB" short_name="WERTB" data_type="zoned_decimal" display_length="10" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="66" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="MONAT" short_name="MONAT" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="7" y="14"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ANZOBJ" short_name="ANZOBJ" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="25" y="14"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="MENGE" short_name="MENGE" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="37" y="14"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WERTN" short_name="WERTN" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="49" y="14"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WERTB" short_name="WERTB" data_type="zoned_decimal" display_length="10" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="66" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="MONAT" short_name="MONAT" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="7" y="15"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ANZOBJ" short_name="ANZOBJ" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="25" y="15"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="MENGE" short_name="MENGE" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="37" y="15"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WERTN" short_name="WERTN" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="49" y="15"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="WERTB" short_name="WERTB" data_type="zoned_decimal" display_length="10" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="66" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+      </field>
+      <field field_type="subfile_end_plus" value="+" display_length="1" data_length="1" conditional="true">
+        <area>
+          <position x="78" y="15"/>
+          <size cx="1" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="Gesamt   :" display_length="10" data_length="10" conditional="true">
+      <area>
+        <position x="1" y="20"/>
+        <size cx="10" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+      <indicator negative="true" id="60"/>
+    </field>
+    <field field_type="field" usage="output" name="GESOBJ" short_name="GESOBJ" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+      <area>
+        <position x="25" y="20"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+      <indicator negative="true" id="60"/>
+    </field>
+    <field field_type="field" usage="output" name="GESMENGE" short_name="GESMENGE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+      <area>
+        <position x="36" y="20"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+      <indicator negative="true" id="60"/>
+    </field>
+    <field field_type="field" usage="output" name="GESEK" short_name="GESEK" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+      <area>
+        <position x="49" y="20"/>
+        <size cx="12" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+      <indicator negative="true" id="60"/>
+    </field>
+    <field field_type="field" usage="output" name="GESVK" short_name="GESVK" data_type="zoned_decimal" display_length="10" data_length="9" conditional="true" decimal_positions="2">
+      <area>
+        <position x="66" y="20"/>
+        <size cx="10" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+      <indicator negative="true" id="60"/>
+    </field>
+    <field field_type="fixed_text" value="F3=Beenden" display_length="10" data_length="10">
+      <area>
+        <position x="1" y="22"/>
+        <size cx="10" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="F6=Falten" display_length="9" data_length="9" conditional="true">
+      <area>
+        <position x="14" y="22"/>
+        <size cx="9" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+      <indicator id="60"/>
+    </field>
+    <field field_type="fixed_text" value="(c) Gerd Gerstmann" display_length="18" data_length="18">
+      <area>
+        <position x="62" y="22"/>
+        <size cx="18" cy="1"/>
+      </area>
+      <color foreground="red"/>
+    </field>
+  </screen>
+</header>

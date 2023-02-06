@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="LLD_OBJ/DS31DS(FORMAT1)" library="LLD_OBJ" member_name="DS31DS">
+    <size cx="80" cy="24"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f5" caption="F5" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="f20" caption="F20" attention_key="false"/>
+    <action key="f21" caption="F21" attention_key="false"/>
+    <action key="f22" caption="F22" attention_key="false"/>
+    <action key="f23" caption="F23" attention_key="false"/>
+    <action key="f24" caption="F24" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <action key="roll_up" caption="ROLL_UP" attention_key="false"/>
+    <action key="roll_down" caption="ROLL_DOWN" attention_key="false"/>
+    <action key="help" caption="HELP" attention_key="false"/>
+    <field field_type="screen_part" name="FORMAT1">
+      <area>
+        <position/>
+        <size cx="80" cy="24"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+      <area>
+        <position x="2"/>
+        <size cx="18" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value=" DISPOSITION " display_length="13" data_length="13">
+      <area>
+        <position x="33"/>
+        <size cx="13" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+      <area>
+        <position x="63"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+      <area>
+        <position x="72"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="JOB" short_name="JOB" data_type="alphanumeric" display_length="10" data_length="10">
+      <area>
+        <position x="2" y="1"/>
+        <size cx="10" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="USER" short_name="USER" data_type="alphanumeric" display_length="10" data_length="10">
+      <area>
+        <position x="63" y="1"/>
+        <size cx="10" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="DS31" display_length="4" data_length="4">
+      <area>
+        <position x="74" y="1"/>
+        <size cx="4" cy="1"/>
+      </area>
+      <color foreground="yellow"/>
+    </field>
+    <field field_type="fixed_text" value="Objektnummer" display_length="12" data_length="12">
+      <area>
+        <position x="2" y="2"/>
+        <size cx="12" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="DSOBJ" short_name="DSOBJ" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" high_intensity="true" exit_required="true">
+      <area>
+        <position x="16" y="2"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true">
+      <area>
+        <position x="21" y="2"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Filiale" display_length="7" data_length="7">
+      <area>
+        <position x="51" y="2"/>
+        <size cx="7" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="DSFIL" short_name="DSFIL" data_type="zoned_decimal" display_length="2" data_length="2" underline="true" high_intensity="true">
+      <area>
+        <position x="59" y="2"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Keine Auslieferung" display_length="18" data_length="18">
+      <area>
+        <position x="2" y="3"/>
+        <size cx="18" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="XXKZKA" short_name="XXKZKA" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true">
+      <area>
+        <position x="21" y="3"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="J = Folge nicht ausliefern" display_length="26" data_length="26" conditional="true">
+      <area>
+        <position x="23" y="3"/>
+        <size cx="26" cy="1"/>
+      </area>
+      <color foreground="red"/>
+      <indicator id="77"/>
+    </field>
+    <field field_type="fixed_text" value="Altersfreigabe ab . :" display_length="21" data_length="21">
+      <area>
+        <position x="51" y="3"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="DSNSF3" short_name="DSNSF3" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true">
+      <area>
+        <position x="73" y="3"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Die nachstehenden Felder beziehen sich auf Folgenummer :" display_length="56" data_length="56">
+      <area>
+        <position x="2" y="4"/>
+        <size cx="56" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="DSFOLG" short_name="DSFOLG" data_type="zoned_decimal" display_length="6" data_length="6" underline="true" high_intensity="true">
+      <area>
+        <position x="59" y="4"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Lkz" display_length="3" data_length="3">
+      <area>
+        <position x="69" y="4"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="DSLKZ" short_name="DSLKZ" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true">
+      <area>
+        <position x="73" y="4"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Text 1" display_length="6" data_length="6">
+      <area>
+        <position x="2" y="5"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="XTEXT" short_name="XTEXT" data_type="alphanumeric" display_length="40" data_length="40" underline="true" high_intensity="true">
+      <area>
+        <position x="11" y="5"/>
+        <size cx="40" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="VJ.Nr:" display_length="6" data_length="6">
+      <area>
+        <position x="52" y="5"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="XXSFN4" short_name="XXSFN4" data_type="zoned_decimal" display_length="6" data_length="6" underline="true" high_intensity="true">
+      <area>
+        <position x="59" y="5"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="yellow"/>
+    </field>
+    <field field_type="fixed_text" value="EDI DISPO" display_length="9" data_length="9" non_display="conditional">
+      <area>
+        <position x="69" y="5"/>
+        <size cx="9" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="fixed_text" value="Text 2" display_length="6" data_length="6">
+      <area>
+        <position x="2" y="6"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="XXZTX1" short_name="XXZTX1" data_type="alphanumeric" display_length="40" data_length="40" underline="true" high_intensity="true">
+      <area>
+        <position x="11" y="6"/>
+        <size cx="40" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Init." display_length="5" data_length="5">
+      <area>
+        <position x="52" y="6"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="DSIN" short_name="DSIN" data_type="alphanumeric" display_length="2" data_length="2" underline="true" high_intensity="true">
+      <area>
+        <position x="59" y="6"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Dispo von" display_length="9" data_length="9">
+      <area>
+        <position x="63" y="6"/>
+        <size cx="9" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="DSSFA2" short_name="DSSFA2" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true">
+      <area>
+        <position x="73" y="6"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="DSSFA3" short_name="DSSFA3" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="75" y="6"/>
+        <size cx="1" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="Fax-Text" display_length="8" data_length="8">
+      <area>
+        <position x="2" y="7"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="FAXTXT" short_name="FAXTXT" data_type="alphanumeric" display_length="60" data_length="60" underline="true" high_intensity="true">
+      <area>
+        <position x="11" y="7"/>
+        <size cx="60" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Titel" display_length="5" data_length="5">
+      <area>
+        <position x="2" y="8"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="XXFTITEL" short_name="XXFTITEL" data_type="alphanumeric" display_length="21" data_length="21" underline="true" high_intensity="true">
+      <area>
+        <position x="11" y="8"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Erstauslieferung                                                           " display_length="75" data_length="75" underline="true">
+      <area>
+        <position x="2" y="9"/>
+        <size cx="75" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="Neubezug" display_length="8" data_length="8">
+      <area>
+        <position x="2" y="10"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="DSBEZ" short_name="DSBEZ" data_type="zoned_decimal" display_length="7" data_length="6" underline="true" high_intensity="true">
+      <area>
+        <position x="20" y="10"/>
+        <size cx="7" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Auslfg.Datum" display_length="12" data_length="12">
+      <area>
+        <position x="28" y="10"/>
+        <size cx="12" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="XXADAT" short_name="XXADAT" data_type="zoned_decimal" display_length="8" data_length="6" underline="true" high_intensity="true">
+      <area>
+        <position x="41" y="10"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Sollspitze" display_length="10" data_length="10">
+      <area>
+        <position x="50" y="10"/>
+        <size cx="10" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="DSSPIT" short_name="DSSPIT" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" high_intensity="true">
+      <area>
+        <position x="61" y="10"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Ist.Sp" display_length="6" data_length="6">
+      <area>
+        <position x="67" y="10"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="XXSPIT" short_name="XXSPIT" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" conditional="true">
+      <area>
+        <position x="74" y="10"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <indicator id="30"/>
+    </field>
+    <field field_type="fixed_text" value="Akt.Verteiler" display_length="13" data_length="13">
+      <area>
+        <position x="2" y="11"/>
+        <size cx="13" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ATAKVM" short_name="ATAKVM" data_type="zoned_decimal" display_length="9" data_length="7">
+      <area>
+        <position x="18" y="11"/>
+        <size cx="9" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="VP-Inh." display_length="7" data_length="7">
+      <area>
+        <position x="28" y="11"/>
+        <size cx="7" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="XXVPI" short_name="XXVPI" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true">
+      <area>
+        <position x="36" y="11"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Gew." display_length="4" data_length="4">
+      <area>
+        <position x="40" y="11"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="XXGEW" short_name="XXGEW" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" high_intensity="true">
+      <area>
+        <position x="45" y="11"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="*" display_length="1" data_length="1">
+      <area>
+        <position x="50" y="11"/>
+        <size cx="1" cy="1"/>
+      </area>
+      <color foreground="red"/>
+    </field>
+    <field field_type="fixed_text" value="VDZ-Nr." display_length="7" data_length="7">
+      <area>
+        <position x="52" y="11"/>
+        <size cx="7" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="XXVDZ" short_name="XXVDZ" data_type="zoned_decimal" display_length="5" data_length="5" underline="true" high_intensity="true">
+      <area>
+        <position x="60" y="11"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="*" display_length="1" data_length="1">
+      <area>
+        <position x="66" y="11"/>
+        <size cx="1" cy="1"/>
+      </area>
+      <color foreground="red"/>
+    </field>
+    <field field_type="fixed_text" value="Remission                                                                  " display_length="75" data_length="75" underline="true">
+      <area>
+        <position x="2" y="12"/>
+        <size cx="75" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="Abrufdatum" display_length="10" data_length="10">
+      <area>
+        <position x="2" y="13"/>
+        <size cx="10" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="XXAUF" short_name="XXAUF" data_type="zoned_decimal" display_length="8" data_length="6" underline="true" high_intensity="true">
+      <area>
+        <position x="19" y="13"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="automatisch errechnen" display_length="21" data_length="21">
+      <area>
+        <position x="32" y="13"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="DSSFA1" short_name="DSSFA1" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true">
+      <area>
+        <position x="55" y="13"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="N=nein" display_length="6" data_length="6">
+      <area>
+        <position x="57" y="13"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Sonderfach" display_length="10" data_length="10">
+      <area>
+        <position x="64" y="13"/>
+        <size cx="10" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="XXSOFA" short_name="XXSOFA" data_type="zoned_decimal" display_length="2" data_length="2" underline="true" high_intensity="true">
+      <area>
+        <position x="75" y="13"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Endremission" display_length="12" data_length="12">
+      <area>
+        <position x="2" y="14"/>
+        <size cx="12" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="XXENDE" short_name="XXENDE" data_type="zoned_decimal" display_length="8" data_length="6" underline="true" high_intensity="true">
+      <area>
+        <position x="19" y="14"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Zwischenaufruf" display_length="14" data_length="14">
+      <area>
+        <position x="32" y="14"/>
+        <size cx="14" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="XX4DAT" short_name="XX4DAT" data_type="zoned_decimal" display_length="8" data_length="6" underline="true" high_intensity="true">
+      <area>
+        <position x="55" y="14"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Zweitauslieferung        " display_length="25" data_length="25" underline="true">
+      <area>
+        <position x="2" y="15"/>
+        <size cx="25" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="EH-Nachlieferungen              " display_length="32" data_length="32" underline="true">
+      <area>
+        <position x="32" y="15"/>
+        <size cx="32" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="Datum " display_length="6" data_length="6">
+      <area>
+        <position x="2" y="16"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="XXZDAT" short_name="XXZDAT" data_type="zoned_decimal" display_length="8" data_length="6" underline="true" high_intensity="true">
+      <area>
+        <position x="19" y="16"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Folge(n):" display_length="9" data_length="9">
+      <area>
+        <position x="32" y="16"/>
+        <size cx="9" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="EHFOL1" short_name="EHFOL1" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="42" y="16"/>
+        <size cx="7" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Menge:" display_length="6" data_length="6">
+      <area>
+        <position x="51" y="16"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="EHMG1" short_name="EHMG1" data_type="zoned_decimal" display_length="6" data_length="6">
+      <area>
+        <position x="58" y="16"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Menge" display_length="5" data_length="5">
+      <area>
+        <position x="2" y="17"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="DSZM" short_name="DSZM" data_type="zoned_decimal" display_length="6" data_length="5" underline="true" high_intensity="true">
+      <area>
+        <position x="21" y="17"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="EHFOL2" short_name="EHFOL2" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="42" y="17"/>
+        <size cx="7" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="EHMG2" short_name="EHMG2" data_type="zoned_decimal" display_length="6" data_length="6">
+      <area>
+        <position x="58" y="17"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Dispositionsschluss      " display_length="25" data_length="25" underline="true">
+      <area>
+        <position x="2" y="18"/>
+        <size cx="25" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="EHFOL3" short_name="EHFOL3" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="42" y="18"/>
+        <size cx="7" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="EHMG3" short_name="EHMG3" data_type="zoned_decimal" display_length="6" data_length="6">
+      <area>
+        <position x="58" y="18"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Enddatum" display_length="8" data_length="8">
+      <area>
+        <position x="2" y="19"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="XXDDAT" short_name="XXDDAT" data_type="zoned_decimal" display_length="8" data_length="6" underline="true" high_intensity="true">
+      <area>
+        <position x="19" y="19"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="EHFOL4" short_name="EHFOL4" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="42" y="19"/>
+        <size cx="7" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="EHMG4" short_name="EHMG4" data_type="zoned_decimal" display_length="6" data_length="6">
+      <area>
+        <position x="58" y="19"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="EHFOL5" short_name="EHFOL5" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="42" y="20"/>
+        <size cx="7" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="EHMG5" short_name="EHMG5" data_type="zoned_decimal" display_length="6" data_length="6">
+      <area>
+        <position x="58" y="20"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="DSLFKZ" short_name="DSLFKZ" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="4" y="21"/>
+        <size cx="1" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="DSST00" short_name="DSST00" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="6" y="21"/>
+        <size cx="1" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="DSST01" short_name="DSST01" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="10" y="21"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="DSST02" short_name="DSST02" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="12" y="21"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="DSST03" short_name="DSST03" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="14" y="21"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="DSST04" short_name="DSST04" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="18" y="21"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="DSST05" short_name="DSST05" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="20" y="21"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="DSST06" short_name="DSST06" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="22" y="21"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="DSST07" short_name="DSST07" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="24" y="21"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="DSREC8" short_name="DSREC8" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="34" y="21"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Mit" display_length="3" data_length="3">
+      <area>
+        <position x="2" y="22"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="*" display_length="1" data_length="1">
+      <area>
+        <position x="6" y="22"/>
+        <size cx="1" cy="1"/>
+      </area>
+      <color foreground="red"/>
+    </field>
+    <field field_type="fixed_text" value="gekennzeichnete Daten kommen ab LF.Schreibung in den Artikelstamm" display_length="65" data_length="65">
+      <area>
+        <position x="8" y="22"/>
+        <size cx="65" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="F3=Verlassen; F9=Hinzufügen, Ändern F21-F23 Filiale 1-3            " display_length="67" data_length="67">
+      <area>
+        <position x="1" y="23"/>
+        <size cx="67" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

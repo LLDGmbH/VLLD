@@ -1,0 +1,53 @@
+﻿DIM ddehandle, i, j, msg as integer
+dim xs1, xs2, xs3, xs4, xs5, xs6, xs7, xs8, xende, datei, pfad_datei, source as string 
+i = 0
+j=2
+
+
+datei = "Defekte_Objekte_NL.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "Obnr")
+ddepoke( ddehandle, "Z1S2", "Folge")
+ddepoke( ddehandle, "Z1S3", "Titel")
+ddepoke( ddehandle, "Z1S4", "Defekt")
+ddepoke( ddehandle, "Z1S5", "Spitze")
+ddepoke( ddehandle, "Z1S6", "Datum")
+
+
+nochmal:
+
+HostFieldGetLineData("sp1", i, xs1)
+HostFieldGetLineData("sp2", i, xs2)
+HostFieldGetLineData("sp3", i, xs3)
+HostFieldGetLineData("sp4", i, xs4)
+HostFieldGetLineData("sp5", i, xs5)
+HostFieldGetLineData("sp6", i, xs6)
+
+HostFieldGetData("ende", xende)
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", xs1)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xs2)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xs3)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xs4)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xs5)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xs6)
+
+j=j+1
+
+if i < 18 then
+i=i+1
+goto nochmal
+endif
+ 
+if xende <> "Ende" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

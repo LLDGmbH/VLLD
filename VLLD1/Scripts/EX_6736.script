@@ -1,0 +1,66 @@
+﻿global filiale as string
+DIM ddehandle, i, j, msg, rc as integer
+dim x1lenr, x1nnam, x1str, x1plz, x1ort, x1ot, x1obj, x1zunr, xbeginn, xende, datei, pfad_datei, ErrMsg as string 
+dim source as string
+
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Leserliste.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "Leser")
+ddepoke( ddehandle, "Z1S2", "Nachname")
+ddepoke( ddehandle, "Z1S3", "Strasse")
+ddepoke( ddehandle, "Z1S4", "PLZ")
+ddepoke( ddehandle, "Z1S5", "Ort")
+ddepoke( ddehandle, "Z1S6", "Ortsteil")
+ddepoke( ddehandle, "Z1S7", "Obj-Nr")
+ddepoke( ddehandle, "Z1S8", "Zusteller")
+ddepoke( ddehandle, "Z1S9", "Beginn")
+ddepoke( ddehandle, "Z1S10", "Ende")
+
+nochmal:
+
+HostFieldGetLineData("s1lenr", i, x1lenr)
+HostFieldGetLineData("s1nnam", i, x1nnam)
+HostFieldGetLineData("s1str", i, x1str)
+HostFieldGetLineData("s1plz", i, x1plz)
+HostFieldGetLineData("s1ort", i, x1ort)
+HostFieldGetLineData("s1ot", i, x1ot)
+HostFieldGetLineData("s1obj", i, x1obj)
+HostFieldGetLineData("s1zunr", i, x1zunr)
+HostFieldGetLineData("beginn", i, xbeginn)
+HostFieldGetLineData("ende", i, xende)
+
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", x1lenr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", x1nnam)
+ddepoke( ddehandle, "Z" + str(j) +"S3", x1str)
+ddepoke( ddehandle, "Z" + str(j) +"S4", x1plz)
+ddepoke( ddehandle, "Z" + str(j) +"S5", x1ort)
+ddepoke( ddehandle, "Z" + str(j) +"S6", x1ot)
+ddepoke( ddehandle, "Z" + str(j) +"S7", x1obj)
+ddepoke( ddehandle, "Z" + str(j) +"S8", x1zunr)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xbeginn)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xende)
+
+j=j+1 
+
+if i < 21 then
+i=i+1
+goto nochmal
+endif
+ 
+if x1zunr <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="SRC5/LB21DSSG(FORMAT1)" library="SRC5" member_name="LB21DSSG">
+    <size cx="80" cy="24"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="f5" caption="F5" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <action key="roll_up" caption="ROLL_UP" attention_key="false"/>
+    <action key="roll_down" caption="ROLL_DOWN" attention_key="false"/>
+    <action key="help" caption="HELP" attention_key="false"/>
+    <field field_type="screen_part" name="FORMAT1">
+      <area>
+        <position/>
+        <size cx="80" cy="24"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+      <area>
+        <position x="1"/>
+        <size cx="18" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value=" LAGERBEWEGUNGEN " display_length="17" data_length="17">
+      <area>
+        <position x="31"/>
+        <size cx="17" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+      <area>
+        <position x="63"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+      <area>
+        <position x="72"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="SDS_JOB" short_name="SDS_JOB" data_type="alphanumeric" display_length="10" data_length="10">
+      <area>
+        <position x="1" y="1"/>
+        <size cx="10" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="*SYSNAME" short_name="*SYSNAME" data_type="alphanumeric" display_length="8" data_length="8">
+      <area>
+        <position x="12" y="1"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="SDS_USER" short_name="SDS_USER" data_type="alphanumeric" display_length="10" data_length="10">
+      <area>
+        <position x="63" y="1"/>
+        <size cx="10" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="PGMNAM" short_name="PGMNAM" data_type="alphanumeric" display_length="6" data_length="6">
+      <area>
+        <position x="74" y="1"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="yellow"/>
+    </field>
+    <field field_type="fixed_text" value="EAN:" display_length="4" data_length="4">
+      <area>
+        <position x="29" y="2"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="input" name="XXINP" short_name="XXINP" data_type="alphanumeric" display_length="18" data_length="18" underline="true" high_intensity="true" position_cursor="conditional" exit_record="true">
+      <area>
+        <position x="34" y="2"/>
+        <size cx="18" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Objn Titel  VDZ-Nr  V.Int.Nr EhCd Teil    Verlag " display_length="49" data_length="49" underline="true">
+      <area>
+        <position x="1" y="3"/>
+        <size cx="49" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="TITELB" short_name="TITELB" data_type="alphanumeric" display_length="18" data_length="18">
+      <area>
+        <position x="58" y="3"/>
+        <size cx="18" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="both" name="OBJNR" short_name="OBJNR" data_type="zoned_decimal" display_length="5" data_length="5" underline="true" high_intensity="true" position_cursor="conditional" exit_required="true">
+      <area>
+        <position x="1" y="4"/>
+        <size cx="5" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="input" name="STITEL" short_name="STITEL" data_type="alphanumeric" display_length="6" data_length="6" underline="true" high_intensity="true">
+      <area>
+        <position x="7" y="4"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="input" name="VDZ" short_name="VDZ" data_type="zoned_decimal" display_length="5" data_length="5" underline="true" high_intensity="true">
+      <area>
+        <position x="14" y="4"/>
+        <size cx="5" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="input" name="VINR" short_name="VINR" data_type="alphanumeric" display_length="6" data_length="6" underline="true" high_intensity="true">
+      <area>
+        <position x="22" y="4"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="input" name="EHCD" short_name="EHCD" data_type="zoned_decimal" display_length="2" data_length="2" underline="true" high_intensity="true">
+      <area>
+        <position x="31" y="4"/>
+        <size cx="2" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="input" name="TTITEL" short_name="TTITEL" data_type="alphanumeric" display_length="6" data_length="6" underline="true" high_intensity="true">
+      <area>
+        <position x="35" y="4"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="input" name="SVNR" short_name="SVNR" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" high_intensity="true">
+      <area>
+        <position x="44" y="4"/>
+        <size cx="4" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="Titel:" display_length="6" data_length="6">
+      <area>
+        <position x="1" y="6"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="F1ONAM1" short_name="F1ONAM1" data_type="alphanumeric" display_length="21" data_length="21">
+      <area>
+        <position x="8" y="6"/>
+        <size cx="21" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="Bestand :" display_length="9" data_length="9">
+      <area>
+        <position x="58" y="6"/>
+        <size cx="9" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="F1BEST" short_name="F1BEST" data_type="zoned_decimal" display_length="10" data_length="7">
+      <area>
+        <position x="68" y="6"/>
+        <size cx="10" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="F1ONAM2" short_name="F1ONAM2" data_type="alphanumeric" display_length="21" data_length="21">
+      <area>
+        <position x="8" y="7"/>
+        <size cx="21" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="Brutto  :" display_length="9" data_length="9">
+      <area>
+        <position x="58" y="7"/>
+        <size cx="9" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="F1BRUTTO" short_name="F1BRUTTO" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="74" y="7"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Netto   :" display_length="9" data_length="9">
+      <area>
+        <position x="58" y="8"/>
+        <size cx="9" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="F1NETTO" short_name="F1NETTO" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="74" y="8"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Folge:" display_length="6" data_length="6">
+      <area>
+        <position x="1" y="9"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="F1FOLGE" short_name="F1FOLGE" data_type="zoned_decimal" display_length="9" data_length="8" underline="true" high_intensity="true">
+      <area>
+        <position x="8" y="9"/>
+        <size cx="9" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Letzte ausgel. Folge:" display_length="21" data_length="21">
+      <area>
+        <position x="20" y="9"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="F1LAF" short_name="F1LAF" data_type="zoned_decimal" display_length="9" data_length="8">
+      <area>
+        <position x="42" y="9"/>
+        <size cx="9" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="MwSt    :" display_length="9" data_length="9">
+      <area>
+        <position x="58" y="9"/>
+        <size cx="9" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="F1MWST" short_name="F1MWST" data_type="zoned_decimal" display_length="5" data_length="4" decimal_positions="2">
+      <area>
+        <position x="75" y="9"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Menge:" display_length="6" data_length="6">
+      <area>
+        <position x="1" y="10"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="F1MENGE" short_name="F1MENGE" data_type="zoned_decimal" display_length="7" data_length="7" underline="true" high_intensity="true" position_cursor="conditional">
+      <area>
+        <position x="8" y="10"/>
+        <size cx="7" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Lagerort:" display_length="9" data_length="9">
+      <area>
+        <position x="58" y="10"/>
+        <size cx="9" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="F1REGAL" short_name="F1REGAL" data_type="zoned_decimal" display_length="2" data_length="2">
+      <area>
+        <position x="70" y="10"/>
+        <size cx="2" cy="1"/>
+      </area>
+      <color foreground="magenta"/>
+    </field>
+    <field field_type="field" usage="output" name="F1TURM" short_name="F1TURM" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="73" y="10"/>
+        <size cx="1" cy="1"/>
+      </area>
+      <color foreground="magenta"/>
+    </field>
+    <field field_type="field" usage="output" name="F1REI1" short_name="F1REI1" data_type="zoned_decimal" display_length="2" data_length="2">
+      <area>
+        <position x="75" y="10"/>
+        <size cx="2" cy="1"/>
+      </area>
+      <color foreground="magenta"/>
+    </field>
+    <field field_type="field" usage="output" name="F1PLA1" short_name="F1PLA1" data_type="zoned_decimal" display_length="2" data_length="2">
+      <area>
+        <position x="78" y="10"/>
+        <size cx="2" cy="1"/>
+      </area>
+      <color foreground="magenta"/>
+    </field>
+    <field field_type="fixed_text" value="Bewegungskz." display_length="12" data_length="12">
+      <area>
+        <position x="1" y="12"/>
+        <size cx="12" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="F1BEWKZ" short_name="F1BEWKZ" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true">
+      <area>
+        <position x="19" y="12"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="(leer=Endbestand, + = Zugang , - = Abgang )" display_length="43" data_length="43">
+      <area>
+        <position x="22" y="12"/>
+        <size cx="43" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Systemnachricht:" display_length="16" data_length="16">
+      <area>
+        <position x="1" y="22"/>
+        <size cx="16" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="MSG" short_name="MSG" data_type="alphanumeric" display_length="50" data_length="50" blink="conditional">
+      <area>
+        <position x="18" y="22"/>
+        <size cx="50" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="fixed_text" value="F3 = Ende ; F4 = Liste ; F9 = Hinzufügen/Ändern" display_length="47" data_length="47">
+      <area>
+        <position x="1" y="23"/>
+        <size cx="47" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

@@ -1,0 +1,70 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xtext, xxxehcd, xkdnr, xname, xxxtext, xxkmeng, xxkproz, xxgproz, xykmeng, xykproz, xygproz, xxktitp, xxgtitp, errmsg, datei, pfad_datei, source as string 
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+HostFieldGetData("xxkdnr",xkdnr)
+HostFieldGetData("kdname",xname)
+HostFieldGetData("##text",xtext)
+
+
+datei = xtext + "_Kunde_" + xkdnr + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", xname)
+
+ddepoke( ddehandle, "Z2S1", "EHCD")
+ddepoke( ddehandle, "Z2S2", "Gruppe")
+ddepoke( ddehandle, "Z2S3", "€ Kunde")
+ddepoke( ddehandle, "Z2S4", "% Kunde")
+ddepoke( ddehandle, "Z2S5", "% Geschäftsart")
+ddepoke( ddehandle, "Z2S6", "Expl. Kunde")
+ddepoke( ddehandle, "Z2S7", "% Kunde")
+ddepoke( ddehandle, "Z2S8", "% Geschäftsart")
+ddepoke( ddehandle, "Z2S9", "Anzahl Kunde")
+ddepoke( ddehandle, "Z2S10", "Titel gesamt")
+
+nochmal:
+
+HostFieldGetLineData("xxehcd", i, xxxehcd)
+HostFieldGetLineData("xxtext", i, xxxtext)
+HostFieldGetLineData("xkmeng", i, xxkmeng)
+HostFieldGetLineData("xkproz", i, xxkproz)
+HostFieldGetLineData("xgproz", i, xxgproz)
+HostFieldGetLineData("ykmeng", i, xykmeng)
+HostFieldGetLineData("ykproz", i, xykproz)
+HostFieldGetLineData("ygproz", i, xygproz)
+HostFieldGetLineData("xxanz" , i, xxktitp)
+HostFieldGetLineData("xxanzs", i, xxgtitp)
+
+if (xxxehcd <> "") then
+ddepoke( ddehandle, "Z" + str(j) +"S1" , xxxehcd)
+ddepoke( ddehandle, "Z" + str(j) +"S2" , xxxtext)
+ddepoke( ddehandle, "Z" + str(j) +"S3" , xxkmeng)
+ddepoke( ddehandle, "Z" + str(j) +"S4" , xxkproz)
+ddepoke( ddehandle, "Z" + str(j) +"S5" , xxgproz)
+ddepoke( ddehandle, "Z" + str(j) +"S6" , xykmeng)
+ddepoke( ddehandle, "Z" + str(j) +"S7" , xykproz)
+ddepoke( ddehandle, "Z" + str(j) +"S8" , xygproz)
+ddepoke( ddehandle, "Z" + str(j) +"S9" , xxktitp)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xxgtitp)
+
+j=j+1
+endif
+
+if i < 19 then
+i=i+1
+goto nochmal
+endif
+ 
+if xxxehcd <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

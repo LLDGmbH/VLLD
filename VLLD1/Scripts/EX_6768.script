@@ -1,0 +1,68 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xfil, xkdnr, xknam, xobj, xonam, xfolg, xcdug, xplfg, xabbez, xabvkp, xart, xzav, xzwa, errmsg, datei, pfad_datei, source as string 
+i = 0
+j=3
+
+datei = "Teilauslieferung.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "Filiale")
+ddepoke( ddehandle, "Z1S2", "KdNr")
+ddepoke( ddehandle, "Z1S3", "Name")
+ddepoke( ddehandle, "Z1S4", "ObjNr")
+ddepoke( ddehandle, "Z1S5", "Name")
+ddepoke( ddehandle, "Z1S6", "Folge")
+ddepoke( ddehandle, "Z1S7", "Ehastra")
+ddepoke( ddehandle, "Z1S8", "% Lfg")
+ddepoke( ddehandle, "Z1S9", "ab Bezug")
+ddepoke( ddehandle, "Z1S10", "ab VKP")
+ddepoke( ddehandle, "Z1S11", "Art")
+ddepoke( ddehandle, "Z1S12", "ZaV")
+ddepoke( ddehandle, "Z1S13", "ZWA")
+
+nochmal:
+
+HostFieldGetLineData("s1fil", i, xfil)
+HostFieldGetLineData("s1kdnr", i, xkdnr)
+HostFieldGetLineData("s1knam", i, xknam)
+HostFieldGetLineData("s1obj", i, xobj)
+HostFieldGetLineData("s1onam", i, xonam)
+HostFieldGetLineData("s1folg", i, xfolg)
+HostFieldGetLineData("s1cdug", i, xcdug)
+HostFieldGetLineData("s1pel", i, xplfg)
+HostFieldGetLineData("s1abbez", i, xabbez)
+HostFieldGetLineData("s1abvkp", i, xabvkp)
+HostFieldGetLineData("s1art", i, xart)
+HostFieldGetLineData("s1zavp", i, xzav)
+HostFieldGetLineData("s1zwav", i, xzwa)
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", xfil)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xkdnr)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xknam)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xobj)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xonam)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xfolg)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xcdug)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xplfg)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xabbez)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xabvkp)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xart)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xzav)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xzwa)
+j=j+1
+
+if i < 18 then
+i=i+1
+goto nochmal
+endif
+ 
+if xkdnr <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

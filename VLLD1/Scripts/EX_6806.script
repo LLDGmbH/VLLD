@@ -1,0 +1,109 @@
+﻿global filiale as string
+DIM ddehandle, i, j, msg, rc as integer
+dim xobj, xkdnr, xknam, xvk3, xvk2, xvk1, xbez, xnl, xrem, xvk, xrgkz, xvh, xzus, xamga, xagbz, xemga, xegbz, xdiff, xvkvl, xsn09, sql1, errmsg, datei, pfad_datei as string 
+dim source as string
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+HostFieldGetData("sfobj",xobj)
+
+datei = "Simulation Mengenanpassung" + xobj + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "Kunden Nr")
+ddepoke( ddehandle, "Z1S2", "Name")
+ddepoke( ddehandle, "Z1S3", "VK 3")
+ddepoke( ddehandle, "Z1S4", "VK 2")
+ddepoke( ddehandle, "Z1S5", "VK 1")
+ddepoke( ddehandle, "Z1S6", "Bezug")
+ddepoke( ddehandle, "Z1S7", "Na Li")
+ddepoke( ddehandle, "Z1S8", "Rem")
+ddepoke( ddehandle, "Z1S9", "Verkauf")
+ddepoke( ddehandle, "Z1S10", "Reg.Kz")
+ddepoke( ddehandle, "Z1S11", "VH")
+ddepoke( ddehandle, "Z1S12", "Zuschlag")
+ddepoke( ddehandle, "Z1S13", "alte MGa")
+ddepoke( ddehandle, "Z1S14", "alter Gbz")
+ddepoke( ddehandle, "Z1S15", "errech.MGa")
+ddepoke( ddehandle, "Z1S16", "errech.Gbz")
+ddepoke( ddehandle, "Z1S17", "Diff")
+ddepoke( ddehandle, "Z1S18", "Vkvl")
+ddepoke( ddehandle, "Z1S19", "EH Nummer")
+
+nochmal:
+
+HostFieldGetLineData("sfkdnr", i, xkdnr)
+HostFieldGetLineData("sfknam", i, xknam)
+HostFieldGetLineData("sfvk3", i, xvk3)
+HostFieldGetLineData("sfvk2", i, xvk2)
+HostFieldGetLineData("sfvk1", i, xvk1)
+HostFieldGetLineData("sfbez", i, xbez)
+HostFieldGetLineData("sfnl", i, xnl)
+HostFieldGetLineData("sfrem", i, xrem)
+HostFieldGetLineData("sfvk", i, xvk)
+HostFieldGetLineData("sfrgkz", i, xrgkz)
+HostFieldGetLineData("sfvh", i, xvh)
+HostFieldGetLineData("sfzus", i, xzus)
+HostFieldGetLineData("sfamga", i, xamga)
+HostFieldGetLineData("sfagbz", i, xagbz)
+HostFieldGetLineData("sfemga", i, xemga)
+HostFieldGetLineData("sfegbz", i, xegbz)
+HostFieldGetLineData("diff", i, xdiff)
+HostFieldGetLineData("vkvl", i, xvkvl)
+
+
+if  (filiale = "0" ) then
+sql1 = "SELECT kdsn09 FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+
+if  (filiale = "1" ) then
+sql1 = "SELECT kdsn09 FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+
+if  (filiale = "2" ) then
+sql1 = "SELECT kdsn09 FROM dipf02/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+
+
+if (xknam <> "") then
+rc = EzSQLQuery(sql1, xsn09, ErrMsg)
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", xkdnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xknam)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xvk3)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xvk2)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xvk1)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xbez)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xnl)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xrem)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xvk)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xrgkz)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xvh)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xzus)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xamga)
+ddepoke( ddehandle, "Z" + str(j) +"S14", xagbz)
+ddepoke( ddehandle, "Z" + str(j) +"S15", xemga)
+ddepoke( ddehandle, "Z" + str(j) +"S16", xegbz)
+ddepoke( ddehandle, "Z" + str(j) +"S17", xdiff)
+ddepoke( ddehandle, "Z" + str(j) +"S18", xvkvl)
+ddepoke( ddehandle, "Z" + str(j) +"S19", xsn09)
+
+j=j+1
+endif
+
+if i < 20 then
+i=i+1
+goto nochmal
+endif
+ 
+if xknam <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

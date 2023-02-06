@@ -1,0 +1,72 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xobnr, xtitel, xbnr, xada1, xada2, xbrut, xxauf, xrda1, xxfld1, xarg, xvrea, xxlfg, xutit, errmsg, datei, pfad_datei, source as string 
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Titel_mit_Frühremission" + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z2S1", "Obnr")
+ddepoke( ddehandle, "Z2S2", "Titel")
+ddepoke( ddehandle, "Z2S3", "Folge")
+ddepoke( ddehandle, "Z2S4", "Preis")
+ddepoke( ddehandle, "Z2S5", "EVT")
+ddepoke( ddehandle, "Z2S6", "ZWA")
+ddepoke( ddehandle, "Z2S7", "Aufruf")
+ddepoke( ddehandle, "Z2S8", "an Verlag")
+ddepoke( ddehandle, "Z2S9", "Bezug")
+ddepoke( ddehandle, "Z2S10", "Entg.")
+ddepoke( ddehandle, "Z2S11", "V-Remi")
+ddepoke( ddehandle, "Z2S12", "Info")
+
+nochmal:
+
+HostFieldGetLineData("atobj", i, xobnr)
+HostFieldGetLineData("atname", i, xtitel)
+HostFieldGetLineData("atbnr", i, xbnr)
+HostFieldGetLineData("wfbrut", i, xbrut)
+HostFieldGetLineData("wfada1", i, xada1)
+HostFieldGetLineData("wfada2", i, xada2)
+HostFieldGetLineData("xxauf", i, xxauf)
+HostFieldGetLineData("wfrda1", i, xrda1)
+HostFieldGetLineData("xxfld1", i, xxfld1)
+HostFieldGetLineData("wfvrea", i, xvrea)
+HostFieldGetLineData("xxlfg", i, xxlfg)
+HostFieldGetLineData("xxutit", i, xutit)
+
+
+if (xobnr <> "")  then
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", xobnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xtitel)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xbnr)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xbrut)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xada1)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xada2)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xxauf)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xrda1)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xxfld1)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xvrea)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xxlfg)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xutit)
+
+j=j+1
+endif
+
+if i < 21 then
+i=i+1
+goto nochmal
+endif
+ 
+if xtitel <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

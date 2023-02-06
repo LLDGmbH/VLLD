@@ -1,0 +1,60 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xobnr, x1zunr, x1knam, x1obj, x1onam, x1anze, x1tek, x1tekn, x1tnam, sql1, xleh2, sql2, xleh3, sql3, errmsg, datei, pfad_datei as string 
+dim source as string
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Tekturen.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z2S1", "KdNr")
+ddepoke( ddehandle, "Z2S2", "Name")
+ddepoke( ddehandle, "Z2S3", "ObjNr")
+ddepoke( ddehandle, "Z2S4", "Name")
+ddepoke( ddehandle, "Z2S5", "Anz.Expl")
+ddepoke( ddehandle, "Z2S6", "Tekturen")
+ddepoke( ddehandle, "Z2S7", "Tekt.Nr")
+ddepoke( ddehandle, "Z2S8", "Name.")
+
+nochmal:
+
+HostFieldGetLineData("s1zunr", i, x1zunr)
+HostFieldGetLineData("s1knam", i, x1knam)
+HostFieldGetLineData("s1obj", i, x1obj)
+HostFieldGetLineData("s1onam", i, x1onam)
+HostFieldGetLineData("s1anze", i, x1anze)
+HostFieldGetLineData("s1tek", i, x1tek)
+HostFieldGetLineData("s1tekn", i, x1tekn)
+HostFieldGetLineData("s1tnam", i, x1tnam)
+
+if (x1obj <> "")  then
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", x1zunr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", x1knam)
+ddepoke( ddehandle, "Z" + str(j) +"S3", x1obj)
+ddepoke( ddehandle, "Z" + str(j) +"S4", x1onam)
+ddepoke( ddehandle, "Z" + str(j) +"S5", x1anze)
+ddepoke( ddehandle, "Z" + str(j) +"S6", x1tek)
+ddepoke( ddehandle, "Z" + str(j) +"S7", x1tekn)
+ddepoke( ddehandle, "Z" + str(j) +"S8", x1tnam)
+
+j=j+1
+endif
+
+if i < 18 then
+i=i+1
+goto nochmal
+endif
+ 
+if x1obj <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

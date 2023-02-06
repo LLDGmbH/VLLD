@@ -1,0 +1,1561 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="OSNA_SRC/LIDL40DS(SFC)" library="OSNA_SRC" member_name="LIDL40DS">
+    <size cx="132" cy="27"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <field field_type="screen_part" name="SFC" overlay="true">
+      <area>
+        <position/>
+        <size cx="132" cy="25"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Zuordnung LIDL Org.-Kopie" display_length="25" data_length="25">
+          <area>
+            <position x="27"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="61"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="72"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="A   Kopie  FF1       Kdnr  FF1   Name                  PLZ  Ort                  Strasse               Zentrale    Urlaub         " display_length="130" data_length="130" underline="true">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="130" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="3" y="4"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDTAG" short_name="KDTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="11" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXKDNR" short_name="XXKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="19" y="4"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTAG" short_name="XXTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXNAME" short_name="XXNAME" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="34" y="4"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXORT" short_name="XXORT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="4"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXSTR" short_name="XXSTR" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="82" y="4"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDRECH" short_name="KDRECH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="104" y="4"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXUB" short_name="XXUB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="114" y="4"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="3" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDTAG" short_name="KDTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="11" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXKDNR" short_name="XXKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="19" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTAG" short_name="XXTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXNAME" short_name="XXNAME" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="34" y="5"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXORT" short_name="XXORT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="5"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXSTR" short_name="XXSTR" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="82" y="5"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDRECH" short_name="KDRECH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="104" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXUB" short_name="XXUB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="114" y="5"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="3" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDTAG" short_name="KDTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="11" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXKDNR" short_name="XXKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="19" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTAG" short_name="XXTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXNAME" short_name="XXNAME" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="34" y="6"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXORT" short_name="XXORT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="6"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXSTR" short_name="XXSTR" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="82" y="6"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDRECH" short_name="KDRECH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="104" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXUB" short_name="XXUB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="114" y="6"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="3" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDTAG" short_name="KDTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="11" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXKDNR" short_name="XXKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="19" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTAG" short_name="XXTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXNAME" short_name="XXNAME" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="34" y="7"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXORT" short_name="XXORT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="7"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXSTR" short_name="XXSTR" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="82" y="7"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDRECH" short_name="KDRECH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="104" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXUB" short_name="XXUB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="114" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="3" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDTAG" short_name="KDTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="11" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXKDNR" short_name="XXKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="19" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTAG" short_name="XXTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXNAME" short_name="XXNAME" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="34" y="8"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXORT" short_name="XXORT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="8"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXSTR" short_name="XXSTR" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="82" y="8"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDRECH" short_name="KDRECH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="104" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXUB" short_name="XXUB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="114" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="3" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDTAG" short_name="KDTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="11" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXKDNR" short_name="XXKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="19" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTAG" short_name="XXTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXNAME" short_name="XXNAME" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="34" y="9"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXORT" short_name="XXORT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="9"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXSTR" short_name="XXSTR" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="82" y="9"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDRECH" short_name="KDRECH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="104" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXUB" short_name="XXUB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="114" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="3" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDTAG" short_name="KDTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="11" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXKDNR" short_name="XXKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="19" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTAG" short_name="XXTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXNAME" short_name="XXNAME" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="34" y="10"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXORT" short_name="XXORT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="10"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXSTR" short_name="XXSTR" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="82" y="10"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDRECH" short_name="KDRECH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="104" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXUB" short_name="XXUB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="114" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="3" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDTAG" short_name="KDTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="11" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXKDNR" short_name="XXKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="19" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTAG" short_name="XXTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXNAME" short_name="XXNAME" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="34" y="11"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXORT" short_name="XXORT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="11"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXSTR" short_name="XXSTR" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="82" y="11"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDRECH" short_name="KDRECH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="104" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXUB" short_name="XXUB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="114" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="3" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDTAG" short_name="KDTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="11" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXKDNR" short_name="XXKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="19" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTAG" short_name="XXTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXNAME" short_name="XXNAME" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="34" y="12"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXORT" short_name="XXORT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="12"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXSTR" short_name="XXSTR" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="82" y="12"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDRECH" short_name="KDRECH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="104" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXUB" short_name="XXUB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="114" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="3" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDTAG" short_name="KDTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="11" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXKDNR" short_name="XXKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="19" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTAG" short_name="XXTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXNAME" short_name="XXNAME" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="34" y="13"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXORT" short_name="XXORT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="13"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXSTR" short_name="XXSTR" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="82" y="13"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDRECH" short_name="KDRECH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="104" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXUB" short_name="XXUB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="114" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="3" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDTAG" short_name="KDTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="11" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXKDNR" short_name="XXKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="19" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTAG" short_name="XXTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXNAME" short_name="XXNAME" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="34" y="14"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXORT" short_name="XXORT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="14"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXSTR" short_name="XXSTR" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="82" y="14"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDRECH" short_name="KDRECH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="104" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXUB" short_name="XXUB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="114" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="3" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDTAG" short_name="KDTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="11" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXKDNR" short_name="XXKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="19" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTAG" short_name="XXTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXNAME" short_name="XXNAME" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="34" y="15"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXORT" short_name="XXORT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="15"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXSTR" short_name="XXSTR" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="82" y="15"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDRECH" short_name="KDRECH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="104" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXUB" short_name="XXUB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="114" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="3" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDTAG" short_name="KDTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="11" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXKDNR" short_name="XXKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="19" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTAG" short_name="XXTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXNAME" short_name="XXNAME" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="34" y="16"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXORT" short_name="XXORT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="16"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXSTR" short_name="XXSTR" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="82" y="16"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDRECH" short_name="KDRECH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="104" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXUB" short_name="XXUB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="114" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="3" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDTAG" short_name="KDTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="11" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXKDNR" short_name="XXKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="19" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTAG" short_name="XXTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXNAME" short_name="XXNAME" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="34" y="17"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXORT" short_name="XXORT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="17"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXSTR" short_name="XXSTR" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="82" y="17"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDRECH" short_name="KDRECH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="104" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXUB" short_name="XXUB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="114" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="3" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDTAG" short_name="KDTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="11" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXKDNR" short_name="XXKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="19" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTAG" short_name="XXTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXNAME" short_name="XXNAME" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="34" y="18"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXORT" short_name="XXORT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="18"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXSTR" short_name="XXSTR" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="82" y="18"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDRECH" short_name="KDRECH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="104" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXUB" short_name="XXUB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="114" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="3" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDTAG" short_name="KDTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="11" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXKDNR" short_name="XXKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="19" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTAG" short_name="XXTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXNAME" short_name="XXNAME" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="34" y="19"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXORT" short_name="XXORT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="19"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXSTR" short_name="XXSTR" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="82" y="19"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDRECH" short_name="KDRECH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="104" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXUB" short_name="XXUB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="114" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="3" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDTAG" short_name="KDTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="11" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXKDNR" short_name="XXKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="19" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTAG" short_name="XXTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXNAME" short_name="XXNAME" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="34" y="20"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXORT" short_name="XXORT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="20"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXSTR" short_name="XXSTR" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="82" y="20"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDRECH" short_name="KDRECH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="104" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXUB" short_name="XXUB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="114" y="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="3" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDTAG" short_name="KDTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="11" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXKDNR" short_name="XXKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="19" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTAG" short_name="XXTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXNAME" short_name="XXNAME" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="34" y="21"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXORT" short_name="XXORT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="21"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXSTR" short_name="XXSTR" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="82" y="21"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDRECH" short_name="KDRECH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="104" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXUB" short_name="XXUB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="114" y="21"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="3" y="22"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDTAG" short_name="KDTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="11" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXKDNR" short_name="XXKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="19" y="22"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTAG" short_name="XXTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXNAME" short_name="XXNAME" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="34" y="22"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXORT" short_name="XXORT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="22"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXSTR" short_name="XXSTR" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="82" y="22"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDRECH" short_name="KDRECH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="104" y="22"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXUB" short_name="XXUB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="114" y="22"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="3" y="23"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDTAG" short_name="KDTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="11" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXKDNR" short_name="XXKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="19" y="23"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXTAG" short_name="XXTAG" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXNAME" short_name="XXNAME" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="34" y="23"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXORT" short_name="XXORT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="23"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXSTR" short_name="XXSTR" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="82" y="23"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDRECH" short_name="KDRECH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="104" y="23"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXUB" short_name="XXUB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="114" y="23"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_end_more" value=" Weitere ..." display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="119" y="24"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+      <field field_type="subfile_end_bottom" value="        Ende" display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="119" y="24"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+    </field>
+  </screen>
+</header>

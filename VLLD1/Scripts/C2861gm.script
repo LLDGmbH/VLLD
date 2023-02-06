@@ -1,0 +1,51 @@
+﻿dim text, ErrorMsg as String
+dim rc as Integer
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rc = EzSQLQuery("SELECT digits(EHNR) concat digits(ehunr), DIGITS(EHNR) concat digits(ehunr) concat ' - 'concat EHTEXT FROM GRETXP order by  EHNR", text, ErrorMsg)
+
+if ( rc < 0 ) then
+
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+
+else
+
+PanelFieldSetProp ("EHCD", 5, text) 
+
+
+PanelUpdateEnable(2)
+
+endif
+
+rem ** VERLAGSSTAMM bereitsttellen **
+rc = EzSQLQuery("SELECT digits(VAVNR), DIGITS(VAVNR) concat ' - 'concat VANAME FROM GRADRP order by VANAME", text, ErrorMsg)
+
+if ( rc < 0 ) then
+
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+
+else
+
+PanelFieldSetProp ("F1VNR",  5, text) 
+
+PanelUpdateEnable(2)
+
+endif
+
+rc = EzSQLQuery("SELECT digits(MVLNR), DIGITS(MVLNR) concat ' - 'concat MVLNAM1 FROM GRMVLP order by MVLNAM1", text, ErrorMsg)
+
+if ( rc < 0 ) then
+
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+
+else
+
+PanelFieldSetProp ("F1MVNR", 5, text) 
+
+PanelUpdateEnable(2)
+
+endif

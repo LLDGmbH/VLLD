@@ -1,0 +1,81 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim errmsg, datei, pfad_datei, source as string 
+dim xkdname, xxxkdnr, xkdstr, xkdplz, xkdort as string
+dim xsrobnr, xsrenr, xsrtitel, xsrstck, xsrpreis,xsrzeit, xdat1, xdat2, xsrschl, xdatv, xdatb as string 
+
+i = 0
+j=7
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+HostFieldGetData("kdkdnr",xxxkdnr)
+HostFieldGetData("kdname",xkdname)
+HostFieldGetData("kdstr",xkdstr)
+HostFieldGetData("kdplz",xkdplz)
+HostFieldGetData("kdort",xkdort)
+HostFieldGetData("rdat_von",xdatv)
+HostFieldGetData("rdat_bis",xdatb)
+
+datei = "Abgelehnte_Remi_Kunde_" + xxxkdnr + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", xdatv)
+ddepoke( ddehandle, "Z1S2", xdatb)
+ddepoke( ddehandle, "Z2S1", xxxkdnr)
+ddepoke( ddehandle, "Z2S2", xkdname)
+ddepoke( ddehandle, "Z3S2", xkdstr)
+ddepoke( ddehandle, "Z4S2", xkdplz)
+ddepoke( ddehandle, "Z4S3", xkdort)
+
+ddepoke( ddehandle, "Z6S1", "Objektnummer")
+ddepoke( ddehandle, "Z6S2", "Folge")
+ddepoke( ddehandle, "Z6S3", "Titel")
+ddepoke( ddehandle, "Z6S4", "Expl.")
+ddepoke( ddehandle, "Z6S5", "Preis")
+ddepoke( ddehandle, "Z6S6", "Wert")
+ddepoke( ddehandle, "Z6S7", "Scandatum")
+ddepoke( ddehandle, "Z6S8", "Aufruf")
+ddepoke( ddehandle, "Z6S9", "BS")
+
+nochmal:
+
+HostFieldGetLineData("srobnr", i, xsrobnr)
+HostFieldGetLineData("srenr", i,xsrenr)
+HostFieldGetLineData("srtitel", i, xsrtitel)
+HostFieldGetLineData("srstck", i, xsrstck)
+HostFieldGetLineData("srpreis", i, xsrpreis)
+HostFieldGetLineData("srzeit", i, xsrzeit)
+HostFieldGetLineData("srschl", i, xsrschl)
+HostFieldGetLineData("scandat_8", i, xdat1)
+HostFieldGetLineData("aufdat_6", i, xdat2)
+
+
+if (xsrtitel <> "Ende") then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xsrobnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xsrenr)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xsrtitel)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xsrstck)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xsrpreis)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xsrzeit)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xdat1)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xdat2)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xsrschl)
+
+j=j+1
+endif
+
+if i < 16 then
+i=i+1
+goto nochmal
+endif
+ 
+if xsrtitel <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

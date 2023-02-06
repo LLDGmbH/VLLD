@@ -1,0 +1,17 @@
+﻿dim text, ErrorMsg as String
+dim rc as Integer
+global filiale as string
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+Filiale = "2"
+rc = EzSQLQuery("SELECT VTNR, VTNAME FROM DIPF02/GRVERP order by VTNR", text, ErrorMsg)
+PanelFieldSetProp ("kdvtnr", 5, text) 
+PanelUpdateEnable(2)
+rc = EzSQLQuery("SELECT IDNR, IDNAME FROM DIPF02/GRINDP order by IDNR", text, ErrorMsg)
+PanelFieldSetProp ("kdsnf2", 5, text) 
+PanelUpdateEnable(2)
+HostScreenSendKey("F22")

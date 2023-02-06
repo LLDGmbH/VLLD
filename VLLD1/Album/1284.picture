@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="LLD_OBJ/REPSTADS(FORMAT1)" library="LLD_OBJ" member_name="REPSTADS">
+    <size cx="80" cy="24"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <action key="roll_up" caption="ROLL_UP" attention_key="false"/>
+    <action key="roll_down" caption="ROLL_DOWN" attention_key="false"/>
+    <action key="help" caption="HELP" attention_key="false"/>
+    <field field_type="screen_part" name="FORMAT1">
+      <area>
+        <position/>
+        <size cx="80" cy="24"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+      <area>
+        <position x="1"/>
+        <size cx="18" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="ERFASSEN WOCHENUMSATZ (NETTO)" display_length="29" data_length="29">
+      <area>
+        <position x="24"/>
+        <size cx="29" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+      <area>
+        <position x="62"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+      <area>
+        <position x="72"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="REPSTA" display_length="6" data_length="6">
+      <area>
+        <position x="72" y="1"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="yellow"/>
+    </field>
+    <field field_type="fixed_text" value=" Umsatz     Umsatz" display_length="18" data_length="18">
+      <area>
+        <position x="29" y="2"/>
+        <size cx="18" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="   KdNr      voll       halb " display_length="29" data_length="29">
+      <area>
+        <position x="19" y="3"/>
+        <size cx="29" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="both" name="KDN01" short_name="KDN01" data_type="zoned_decimal" display_length="7" data_length="7" underline="true" high_intensity="true">
+      <area>
+        <position x="19" y="4"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="UMS01" short_name="UMS01" data_type="zoned_decimal" display_length="8" data_length="7" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="29" y="4"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="*" display_length="1" data_length="1" blink="conditional" conditional="true">
+      <area>
+        <position x="38" y="4"/>
+        <size cx="1" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+      <indicator id="51"/>
+    </field>
+    <field field_type="field" usage="both" name="HLB01" short_name="HLB01" data_type="zoned_decimal" display_length="8" data_length="7" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="40" y="4"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="KDN02" short_name="KDN02" data_type="zoned_decimal" display_length="7" data_length="7" underline="true" high_intensity="true">
+      <area>
+        <position x="19" y="5"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="UMS02" short_name="UMS02" data_type="zoned_decimal" display_length="8" data_length="7" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="29" y="5"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="*" display_length="1" data_length="1" blink="conditional" conditional="true">
+      <area>
+        <position x="38" y="5"/>
+        <size cx="1" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+      <indicator id="52"/>
+    </field>
+    <field field_type="field" usage="both" name="HLB02" short_name="HLB02" data_type="zoned_decimal" display_length="8" data_length="7" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="40" y="5"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="KDN03" short_name="KDN03" data_type="zoned_decimal" display_length="7" data_length="7" underline="true" high_intensity="true">
+      <area>
+        <position x="19" y="6"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="UMS03" short_name="UMS03" data_type="zoned_decimal" display_length="8" data_length="7" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="29" y="6"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="*" display_length="1" data_length="1" blink="conditional" conditional="true">
+      <area>
+        <position x="38" y="6"/>
+        <size cx="1" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+      <indicator id="53"/>
+    </field>
+    <field field_type="field" usage="both" name="HLB03" short_name="HLB03" data_type="zoned_decimal" display_length="8" data_length="7" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="40" y="6"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="KDN04" short_name="KDN04" data_type="zoned_decimal" display_length="7" data_length="7" underline="true" high_intensity="true">
+      <area>
+        <position x="19" y="7"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="UMS04" short_name="UMS04" data_type="zoned_decimal" display_length="8" data_length="7" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="29" y="7"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="*" display_length="1" data_length="1" blink="conditional" conditional="true">
+      <area>
+        <position x="38" y="7"/>
+        <size cx="1" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+      <indicator id="54"/>
+    </field>
+    <field field_type="field" usage="both" name="HLB04" short_name="HLB04" data_type="zoned_decimal" display_length="8" data_length="7" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="40" y="7"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="KDN05" short_name="KDN05" data_type="zoned_decimal" display_length="7" data_length="7" underline="true" high_intensity="true">
+      <area>
+        <position x="19" y="8"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="UMS05" short_name="UMS05" data_type="zoned_decimal" display_length="8" data_length="7" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="29" y="8"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="*" display_length="1" data_length="1" blink="conditional" conditional="true">
+      <area>
+        <position x="38" y="8"/>
+        <size cx="1" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+      <indicator id="55"/>
+    </field>
+    <field field_type="field" usage="both" name="HLB05" short_name="HLB05" data_type="zoned_decimal" display_length="8" data_length="7" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="40" y="8"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="KDN06" short_name="KDN06" data_type="zoned_decimal" display_length="7" data_length="7" underline="true" high_intensity="true">
+      <area>
+        <position x="19" y="9"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="UMS06" short_name="UMS06" data_type="zoned_decimal" display_length="8" data_length="7" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="29" y="9"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="*" display_length="1" data_length="1" blink="conditional" conditional="true">
+      <area>
+        <position x="38" y="9"/>
+        <size cx="1" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+      <indicator id="56"/>
+    </field>
+    <field field_type="field" usage="both" name="HLB06" short_name="HLB06" data_type="zoned_decimal" display_length="8" data_length="7" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="40" y="9"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="KDN07" short_name="KDN07" data_type="zoned_decimal" display_length="7" data_length="7" underline="true" high_intensity="true">
+      <area>
+        <position x="19" y="10"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="UMS07" short_name="UMS07" data_type="zoned_decimal" display_length="8" data_length="7" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="29" y="10"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="*" display_length="1" data_length="1" blink="conditional" conditional="true">
+      <area>
+        <position x="38" y="10"/>
+        <size cx="1" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+      <indicator id="57"/>
+    </field>
+    <field field_type="field" usage="both" name="HLB07" short_name="HLB07" data_type="zoned_decimal" display_length="8" data_length="7" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="40" y="10"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="KDN08" short_name="KDN08" data_type="zoned_decimal" display_length="7" data_length="7" underline="true" high_intensity="true">
+      <area>
+        <position x="19" y="11"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="UMS08" short_name="UMS08" data_type="zoned_decimal" display_length="8" data_length="7" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="29" y="11"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="*" display_length="1" data_length="1" blink="conditional" conditional="true">
+      <area>
+        <position x="38" y="11"/>
+        <size cx="1" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+      <indicator id="58"/>
+    </field>
+    <field field_type="field" usage="both" name="HLB08" short_name="HLB08" data_type="zoned_decimal" display_length="8" data_length="7" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="40" y="11"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="KDN09" short_name="KDN09" data_type="zoned_decimal" display_length="7" data_length="7" underline="true" high_intensity="true">
+      <area>
+        <position x="19" y="12"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="UMS09" short_name="UMS09" data_type="zoned_decimal" display_length="8" data_length="7" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="29" y="12"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="*" display_length="1" data_length="1" blink="conditional" conditional="true">
+      <area>
+        <position x="38" y="12"/>
+        <size cx="1" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+      <indicator id="59"/>
+    </field>
+    <field field_type="field" usage="both" name="HLB09" short_name="HLB09" data_type="zoned_decimal" display_length="8" data_length="7" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="40" y="12"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="KDN10" short_name="KDN10" data_type="zoned_decimal" display_length="7" data_length="7" underline="true" high_intensity="true">
+      <area>
+        <position x="19" y="13"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="UMS10" short_name="UMS10" data_type="zoned_decimal" display_length="8" data_length="7" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="29" y="13"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="*" display_length="1" data_length="1" blink="conditional" conditional="true">
+      <area>
+        <position x="38" y="13"/>
+        <size cx="1" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+      <indicator id="60"/>
+    </field>
+    <field field_type="field" usage="both" name="HLB10" short_name="HLB10" data_type="zoned_decimal" display_length="8" data_length="7" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="40" y="13"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="KDN11" short_name="KDN11" data_type="zoned_decimal" display_length="7" data_length="7" underline="true" high_intensity="true">
+      <area>
+        <position x="19" y="14"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="UMS11" short_name="UMS11" data_type="zoned_decimal" display_length="8" data_length="7" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="29" y="14"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="*" display_length="1" data_length="1" blink="conditional" conditional="true">
+      <area>
+        <position x="38" y="14"/>
+        <size cx="1" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+      <indicator id="61"/>
+    </field>
+    <field field_type="field" usage="both" name="HLB11" short_name="HLB11" data_type="zoned_decimal" display_length="8" data_length="7" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="40" y="14"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="KDN12" short_name="KDN12" data_type="zoned_decimal" display_length="7" data_length="7" underline="true" high_intensity="true">
+      <area>
+        <position x="19" y="15"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="UMS12" short_name="UMS12" data_type="zoned_decimal" display_length="8" data_length="7" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="29" y="15"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="*" display_length="1" data_length="1" blink="conditional" conditional="true">
+      <area>
+        <position x="38" y="15"/>
+        <size cx="1" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+      <indicator id="62"/>
+    </field>
+    <field field_type="field" usage="both" name="HLB12" short_name="HLB12" data_type="zoned_decimal" display_length="8" data_length="7" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="40" y="15"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="KDN13" short_name="KDN13" data_type="zoned_decimal" display_length="7" data_length="7" underline="true" high_intensity="true">
+      <area>
+        <position x="19" y="16"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="UMS13" short_name="UMS13" data_type="zoned_decimal" display_length="8" data_length="7" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="29" y="16"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="*" display_length="1" data_length="1" blink="conditional" conditional="true">
+      <area>
+        <position x="38" y="16"/>
+        <size cx="1" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+      <indicator id="63"/>
+    </field>
+    <field field_type="field" usage="both" name="HLB13" short_name="HLB13" data_type="zoned_decimal" display_length="8" data_length="7" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="40" y="16"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="KDN14" short_name="KDN14" data_type="zoned_decimal" display_length="7" data_length="7" underline="true" high_intensity="true">
+      <area>
+        <position x="19" y="17"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="UMS14" short_name="UMS14" data_type="zoned_decimal" display_length="8" data_length="7" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="29" y="17"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="*" display_length="1" data_length="1" blink="conditional" conditional="true">
+      <area>
+        <position x="38" y="17"/>
+        <size cx="1" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+      <indicator id="64"/>
+    </field>
+    <field field_type="field" usage="both" name="HLB14" short_name="HLB14" data_type="zoned_decimal" display_length="8" data_length="7" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="40" y="17"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="KDN15" short_name="KDN15" data_type="zoned_decimal" display_length="7" data_length="7" underline="true" high_intensity="true">
+      <area>
+        <position x="19" y="18"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="UMS15" short_name="UMS15" data_type="zoned_decimal" display_length="8" data_length="7" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="29" y="18"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="*" display_length="1" data_length="1" blink="conditional" conditional="true">
+      <area>
+        <position x="38" y="18"/>
+        <size cx="1" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+      <indicator id="65"/>
+    </field>
+    <field field_type="field" usage="both" name="HLB15" short_name="HLB15" data_type="zoned_decimal" display_length="8" data_length="7" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="40" y="18"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="KDN16" short_name="KDN16" data_type="zoned_decimal" display_length="7" data_length="7" underline="true" high_intensity="true">
+      <area>
+        <position x="19" y="19"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="UMS16" short_name="UMS16" data_type="zoned_decimal" display_length="8" data_length="7" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="29" y="19"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="*" display_length="1" data_length="1" blink="conditional" conditional="true">
+      <area>
+        <position x="38" y="19"/>
+        <size cx="1" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+      <indicator id="66"/>
+    </field>
+    <field field_type="field" usage="both" name="HLB16" short_name="HLB16" data_type="zoned_decimal" display_length="8" data_length="7" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="40" y="19"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="KDN17" short_name="KDN17" data_type="zoned_decimal" display_length="7" data_length="7" underline="true" high_intensity="true">
+      <area>
+        <position x="19" y="20"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="UMS17" short_name="UMS17" data_type="zoned_decimal" display_length="8" data_length="7" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="29" y="20"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="*" display_length="1" data_length="1" blink="conditional" conditional="true">
+      <area>
+        <position x="38" y="20"/>
+        <size cx="1" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+      <indicator id="67"/>
+    </field>
+    <field field_type="field" usage="both" name="HLB17" short_name="HLB17" data_type="zoned_decimal" display_length="8" data_length="7" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="40" y="20"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="KDN18" short_name="KDN18" data_type="zoned_decimal" display_length="7" data_length="7" underline="true" high_intensity="true">
+      <area>
+        <position x="19" y="21"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="UMS18" short_name="UMS18" data_type="zoned_decimal" display_length="8" data_length="7" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="29" y="21"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="*" display_length="1" data_length="1" blink="conditional" conditional="true">
+      <area>
+        <position x="38" y="21"/>
+        <size cx="1" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+      <indicator id="68"/>
+    </field>
+    <field field_type="field" usage="both" name="HLB18" short_name="HLB18" data_type="zoned_decimal" display_length="8" data_length="7" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="40" y="21"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="Mögl.Fehlerursache: Kd-Nr falsch; entweder nur Kd-Nr oder nur Umsatz erfasst" display_length="76" data_length="76" blink="conditional" conditional="true">
+      <area>
+        <position x="1" y="22"/>
+        <size cx="76" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+      <indicator id="20"/>
+    </field>
+    <field field_type="fixed_text" value="F3=Verlassen; F9=Ausführen" display_length="26" data_length="26">
+      <area>
+        <position x="1" y="23"/>
+        <size cx="26" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

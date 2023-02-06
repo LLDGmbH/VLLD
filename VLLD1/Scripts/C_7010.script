@@ -1,0 +1,18 @@
+﻿dim text, ErrorMsg,sqlstmd as String
+dim rc as Integer
+dim con_table as integer
+
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rem *** Zugangsgrund
+sqlstmd = "SELECT zunr, zunr concat ' ' concat zutext FROM grzugp order by zunr"
+rc = EzSQLQuery(sqlstmd, text, ErrorMsg)
+
+PanelFieldSetProp ("zugg1", 5, text) 
+
+
+PanelUpdateEnable(2)

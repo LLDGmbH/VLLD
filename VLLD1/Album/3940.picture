@@ -1,0 +1,1570 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="LZSRC/ADBESU8DS(SFCTL+FUSS)" library="LZSRC" member_name="ADBESU8DS">
+    <size cx="132" cy="27"/>
+    <action key="f1" caption="F1" attention_key="false"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f12" caption="F12" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <action key="roll_up" caption="ROLL_UP" attention_key="false"/>
+    <action key="roll_down" caption="ROLL_DOWN" attention_key="false"/>
+    <field field_type="screen_part" name="SFCTL" overlay="true">
+      <area>
+        <position/>
+        <size cx="132" cy="19"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="FUSS">
+      <area>
+        <position y="20"/>
+        <size cx="132" cy="6"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="*USER" short_name="*USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="124"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value=" Anzeige Jahresstatistik  AD / Monat " display_length="37" data_length="37" underline="true">
+          <area>
+            <position x="44" y="1"/>
+            <size cx="37" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="ADBESUCH8" display_length="9" data_length="9">
+          <area>
+            <position x="123" y="1"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="fixed_text" value="Jahr :" display_length="6" data_length="6">
+          <area>
+            <position x="1" y="2"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="both" name="JAHRASW" short_name="JAHRASW" data_type="zoned_decimal" display_length="4" data_length="4" underline="true">
+          <area>
+            <position x="8" y="2"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="AD   :" display_length="6" data_length="6">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="both" name="ADASW" short_name="ADASW" data_type="zoned_decimal" display_length="2" data_length="2" underline="true">
+          <area>
+            <position x="8" y="3"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VTNAME" short_name="VTNAME" data_type="alphanumeric" display_length="25" data_length="25">
+          <area>
+            <position x="13" y="3"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="nur Berichtschlüssel" display_length="20" data_length="20">
+          <area>
+            <position x="43" y="3"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="both" name="SCHLUESSEL" short_name="SCHLUESSEL" data_type="zoned_decimal" display_length="2" data_length="2" underline="true">
+          <area>
+            <position x="65" y="3"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCHNAME" short_name="SCHNAME" data_type="alphanumeric" display_length="20" data_length="20">
+          <area>
+            <position x="69" y="3"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value=" Monat           1       2       3       4       5       6       7       8       9      10      11      12      13            Summe " display_length="132" data_length="132" underline="true" conditional="true">
+          <area>
+            <position y="4"/>
+            <size cx="132" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+          <indicator id="30"/>
+        </field>
+        <field field_type="fixed_text" value=" MONAT           1                                                                                                            SUMME " display_length="132" data_length="132" underline="true" conditional="true">
+          <area>
+            <position y="4"/>
+            <size cx="132" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+          <indicator id="31"/>
+        </field>
+        <field field_type="fixed_text" value=" MONAT           1       2                                                                                                    SUMME " display_length="132" data_length="132" underline="true" conditional="true">
+          <area>
+            <position y="4"/>
+            <size cx="132" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+          <indicator id="32"/>
+        </field>
+        <field field_type="fixed_text" value=" MONAT           1       2       3                                                                                            SUMME " display_length="132" data_length="132" underline="true" conditional="true">
+          <area>
+            <position y="4"/>
+            <size cx="132" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+          <indicator id="33"/>
+        </field>
+        <field field_type="fixed_text" value=" MONAT           1       2       3       4       5                               9                                            SUMME " display_length="132" data_length="132" underline="true" conditional="true">
+          <area>
+            <position y="4"/>
+            <size cx="132" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+          <indicator id="39"/>
+        </field>
+        <field field_type="fixed_text" value=" MONAT           1       2       3       4       5       6       7       8                                                    SUMME " display_length="132" data_length="132" underline="true" conditional="true">
+          <area>
+            <position y="4"/>
+            <size cx="132" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+          <indicator id="38"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="MONAT" short_name="MONAT" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1" short_name="S1" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="15" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2" short_name="S2" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="23" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3" short_name="S3" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="31" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S4" short_name="S4" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="39" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S5" short_name="S5" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="47" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S6" short_name="S6" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="55" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S7" short_name="S7" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="63" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S8" short_name="S8" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="71" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S9" short_name="S9" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="79" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S10" short_name="S10" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="87" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S11" short_name="S11" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="95" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S12" short_name="S12" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="103" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S13" short_name="S13" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="111" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S14" short_name="S14" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="119" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SUMME" short_name="SUMME" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="126" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="MONAT" short_name="MONAT" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1" short_name="S1" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="15" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2" short_name="S2" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="23" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3" short_name="S3" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="31" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S4" short_name="S4" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="39" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S5" short_name="S5" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="47" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S6" short_name="S6" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="55" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S7" short_name="S7" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="63" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S8" short_name="S8" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="71" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S9" short_name="S9" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="79" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S10" short_name="S10" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="87" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S11" short_name="S11" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="95" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S12" short_name="S12" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="103" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S13" short_name="S13" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="111" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S14" short_name="S14" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="119" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SUMME" short_name="SUMME" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="126" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="MONAT" short_name="MONAT" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1" short_name="S1" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="15" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2" short_name="S2" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="23" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3" short_name="S3" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="31" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S4" short_name="S4" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="39" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S5" short_name="S5" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="47" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S6" short_name="S6" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="55" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S7" short_name="S7" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="63" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S8" short_name="S8" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="71" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S9" short_name="S9" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="79" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S10" short_name="S10" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="87" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S11" short_name="S11" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="95" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S12" short_name="S12" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="103" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S13" short_name="S13" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="111" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S14" short_name="S14" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="119" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SUMME" short_name="SUMME" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="126" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="MONAT" short_name="MONAT" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1" short_name="S1" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="15" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2" short_name="S2" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="23" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3" short_name="S3" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="31" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S4" short_name="S4" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="39" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S5" short_name="S5" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="47" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S6" short_name="S6" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="55" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S7" short_name="S7" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="63" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S8" short_name="S8" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="71" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S9" short_name="S9" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="79" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S10" short_name="S10" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="87" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S11" short_name="S11" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="95" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S12" short_name="S12" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="103" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S13" short_name="S13" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="111" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S14" short_name="S14" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="119" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SUMME" short_name="SUMME" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="126" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="MONAT" short_name="MONAT" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1" short_name="S1" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="15" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2" short_name="S2" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="23" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3" short_name="S3" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="31" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S4" short_name="S4" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="39" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S5" short_name="S5" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="47" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S6" short_name="S6" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="55" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S7" short_name="S7" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="63" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S8" short_name="S8" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="71" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S9" short_name="S9" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="79" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S10" short_name="S10" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="87" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S11" short_name="S11" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="95" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S12" short_name="S12" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="103" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S13" short_name="S13" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="111" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S14" short_name="S14" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="119" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SUMME" short_name="SUMME" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="126" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="MONAT" short_name="MONAT" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1" short_name="S1" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="15" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2" short_name="S2" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="23" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3" short_name="S3" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="31" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S4" short_name="S4" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="39" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S5" short_name="S5" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="47" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S6" short_name="S6" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="55" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S7" short_name="S7" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="63" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S8" short_name="S8" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="71" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S9" short_name="S9" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="79" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S10" short_name="S10" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="87" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S11" short_name="S11" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="95" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S12" short_name="S12" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="103" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S13" short_name="S13" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="111" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S14" short_name="S14" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="119" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SUMME" short_name="SUMME" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="126" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="MONAT" short_name="MONAT" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1" short_name="S1" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="15" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2" short_name="S2" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="23" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3" short_name="S3" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="31" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S4" short_name="S4" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="39" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S5" short_name="S5" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="47" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S6" short_name="S6" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="55" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S7" short_name="S7" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="63" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S8" short_name="S8" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="71" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S9" short_name="S9" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="79" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S10" short_name="S10" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="87" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S11" short_name="S11" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="95" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S12" short_name="S12" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="103" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S13" short_name="S13" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="111" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S14" short_name="S14" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="119" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SUMME" short_name="SUMME" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="126" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="MONAT" short_name="MONAT" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1" short_name="S1" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="15" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2" short_name="S2" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="23" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3" short_name="S3" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="31" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S4" short_name="S4" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="39" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S5" short_name="S5" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="47" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S6" short_name="S6" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="55" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S7" short_name="S7" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="63" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S8" short_name="S8" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="71" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S9" short_name="S9" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="79" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S10" short_name="S10" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="87" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S11" short_name="S11" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="95" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S12" short_name="S12" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="103" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S13" short_name="S13" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="111" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S14" short_name="S14" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="119" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SUMME" short_name="SUMME" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="126" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="MONAT" short_name="MONAT" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1" short_name="S1" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="15" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2" short_name="S2" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="23" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3" short_name="S3" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="31" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S4" short_name="S4" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="39" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S5" short_name="S5" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="47" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S6" short_name="S6" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="55" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S7" short_name="S7" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="63" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S8" short_name="S8" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="71" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S9" short_name="S9" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="79" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S10" short_name="S10" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="87" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S11" short_name="S11" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="95" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S12" short_name="S12" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="103" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S13" short_name="S13" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="111" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S14" short_name="S14" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="119" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SUMME" short_name="SUMME" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="126" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="MONAT" short_name="MONAT" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1" short_name="S1" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="15" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2" short_name="S2" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="23" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3" short_name="S3" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="31" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S4" short_name="S4" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="39" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S5" short_name="S5" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="47" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S6" short_name="S6" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="55" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S7" short_name="S7" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="63" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S8" short_name="S8" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="71" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S9" short_name="S9" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="79" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S10" short_name="S10" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="87" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S11" short_name="S11" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="95" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S12" short_name="S12" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="103" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S13" short_name="S13" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="111" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S14" short_name="S14" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="119" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SUMME" short_name="SUMME" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="126" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="MONAT" short_name="MONAT" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1" short_name="S1" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="15" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2" short_name="S2" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="23" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3" short_name="S3" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="31" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S4" short_name="S4" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="39" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S5" short_name="S5" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="47" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S6" short_name="S6" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="55" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S7" short_name="S7" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="63" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S8" short_name="S8" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="71" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S9" short_name="S9" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="79" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S10" short_name="S10" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="87" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S11" short_name="S11" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="95" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S12" short_name="S12" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="103" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S13" short_name="S13" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="111" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S14" short_name="S14" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="119" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SUMME" short_name="SUMME" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="126" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="MONAT" short_name="MONAT" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1" short_name="S1" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="15" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2" short_name="S2" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="23" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3" short_name="S3" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="31" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S4" short_name="S4" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="39" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S5" short_name="S5" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="47" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S6" short_name="S6" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="55" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S7" short_name="S7" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="63" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S8" short_name="S8" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="71" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S9" short_name="S9" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="79" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S10" short_name="S10" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="87" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S11" short_name="S11" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="95" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S12" short_name="S12" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="103" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S13" short_name="S13" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="111" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S14" short_name="S14" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="119" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SUMME" short_name="SUMME" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="126" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="MONAT" short_name="MONAT" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1" short_name="S1" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="15" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2" short_name="S2" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="23" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3" short_name="S3" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="31" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S4" short_name="S4" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="39" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S5" short_name="S5" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="47" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S6" short_name="S6" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="55" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S7" short_name="S7" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="63" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S8" short_name="S8" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="71" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S9" short_name="S9" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="79" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S10" short_name="S10" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="87" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S11" short_name="S11" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="95" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S12" short_name="S12" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="103" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S13" short_name="S13" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="111" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S14" short_name="S14" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="119" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SUMME" short_name="SUMME" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="126" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_end_plus" value="+" display_length="1" data_length="1" conditional="true">
+        <area>
+          <position x="130" y="18"/>
+          <size cx="1" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="                                                                                                                                    " display_length="132" data_length="132" underline="true">
+      <area>
+        <position y="20"/>
+        <size cx="132" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="Gesamt :" display_length="8" data_length="8">
+      <area>
+        <position x="2" y="21"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="SUMM1" short_name="SUMM1" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="14" y="21"/>
+        <size cx="4" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="SUMM2" short_name="SUMM2" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="22" y="21"/>
+        <size cx="4" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="SUMM3" short_name="SUMM3" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="30" y="21"/>
+        <size cx="4" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="SUMM4" short_name="SUMM4" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="38" y="21"/>
+        <size cx="4" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="SUMM5" short_name="SUMM5" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="46" y="21"/>
+        <size cx="4" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="SUMM6" short_name="SUMM6" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="54" y="21"/>
+        <size cx="4" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="SUMM7" short_name="SUMM7" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="62" y="21"/>
+        <size cx="4" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="SUMM8" short_name="SUMM8" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="70" y="21"/>
+        <size cx="4" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="SUMM9" short_name="SUMM9" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="78" y="21"/>
+        <size cx="4" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="SUMM10" short_name="SUMM10" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="86" y="21"/>
+        <size cx="4" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="SUMM11" short_name="SUMM11" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="94" y="21"/>
+        <size cx="4" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="SUMM12" short_name="SUMM12" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="102" y="21"/>
+        <size cx="4" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="SUMM13" short_name="SUMM13" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="110" y="21"/>
+        <size cx="4" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="SUMM14" short_name="SUMM14" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="118" y="21"/>
+        <size cx="4" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="SUMMG" short_name="SUMMG" data_type="zoned_decimal" display_length="6" data_length="6">
+      <area>
+        <position x="125" y="21"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="                                                                                                                                    " display_length="132" data_length="132" underline="true">
+      <area>
+        <position y="24"/>
+        <size cx="132" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="F1 = Hilfe;" display_length="11" data_length="11">
+      <area>
+        <position x="1" y="25"/>
+        <size cx="11" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="F3 = Beenden " display_length="13" data_length="13">
+      <area>
+        <position x="14" y="25"/>
+        <size cx="13" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="© Gerd Gerstmann" display_length="16" data_length="16">
+      <area>
+        <position x="116" y="25"/>
+        <size cx="16" cy="1"/>
+      </area>
+      <color foreground="red"/>
+    </field>
+  </screen>
+</header>

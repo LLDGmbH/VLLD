@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="SRC5/DV30DS(SFC+KEY01)" library="SRC5" member_name="DV30DS">
+    <size cx="80" cy="24"/>
+    <action key="f1" caption="F1" attention_key="false"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <action key="roll_up" caption="ROLL_UP" attention_key="false"/>
+    <action key="roll_down" caption="ROLL_DOWN" attention_key="false"/>
+    <action key="help" caption="HELP" attention_key="false"/>
+    <field field_type="screen_part" name="SFC">
+      <area>
+        <position/>
+        <size cx="80" cy="21"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="KEY01" overlay="true">
+      <area>
+        <position y="23"/>
+        <size cx="80" cy="1"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="KONKURRENZZAHLEN" display_length="16" data_length="16">
+          <area>
+            <position x="32"/>
+            <size cx="16" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="63"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="72"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="USER" short_name="USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="1" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="JOB" short_name="JOB" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="63" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="DV20" display_length="4" data_length="4">
+          <area>
+            <position x="74" y="1"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="fixed_text" value=" VNR Objn A Objekt                Empfänger                                   " display_length="78" data_length="78" underline="true">
+          <area>
+            <position x="1" y="2"/>
+            <size cx="78" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="DMVLNR" short_name="DMVLNR" data_type="zoned_decimal" display_length="4" data_length="4">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMOBJ" short_name="DMOBJ" data_type="zoned_decimal" display_length="5" data_length="5">
+          <area>
+            <position x="6" y="3"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" exit_record="true">
+          <area>
+            <position x="12" y="3"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21">
+          <area>
+            <position x="14" y="3"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMNAME" short_name="DMNAME" data_type="alphanumeric" display_length="25" data_length="25">
+          <area>
+            <position x="36" y="3"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMVLNR" short_name="DMVLNR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMOBJ" short_name="DMOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="6" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="12" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="14" y="4"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMNAME" short_name="DMNAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="36" y="4"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMVLNR" short_name="DMVLNR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMOBJ" short_name="DMOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="6" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="12" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="14" y="5"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMNAME" short_name="DMNAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="36" y="5"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="DMVLNR" short_name="DMVLNR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMOBJ" short_name="DMOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="6" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="12" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="14" y="6"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMNAME" short_name="DMNAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="36" y="6"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMVLNR" short_name="DMVLNR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMOBJ" short_name="DMOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="6" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="12" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="14" y="7"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMNAME" short_name="DMNAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="36" y="7"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMVLNR" short_name="DMVLNR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMOBJ" short_name="DMOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="6" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="12" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="14" y="8"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMNAME" short_name="DMNAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="36" y="8"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="DMVLNR" short_name="DMVLNR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMOBJ" short_name="DMOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="6" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="12" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="14" y="9"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMNAME" short_name="DMNAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="36" y="9"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMVLNR" short_name="DMVLNR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMOBJ" short_name="DMOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="6" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="12" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="14" y="10"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMNAME" short_name="DMNAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="36" y="10"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMVLNR" short_name="DMVLNR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMOBJ" short_name="DMOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="6" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="12" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="14" y="11"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMNAME" short_name="DMNAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="36" y="11"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="DMVLNR" short_name="DMVLNR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMOBJ" short_name="DMOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="6" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="12" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="14" y="12"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMNAME" short_name="DMNAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="36" y="12"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMVLNR" short_name="DMVLNR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMOBJ" short_name="DMOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="6" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="12" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="14" y="13"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMNAME" short_name="DMNAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="36" y="13"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMVLNR" short_name="DMVLNR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMOBJ" short_name="DMOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="6" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="12" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="14" y="14"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMNAME" short_name="DMNAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="36" y="14"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="DMVLNR" short_name="DMVLNR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMOBJ" short_name="DMOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="6" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="12" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="14" y="15"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMNAME" short_name="DMNAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="36" y="15"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMVLNR" short_name="DMVLNR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMOBJ" short_name="DMOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="6" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="12" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="14" y="16"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMNAME" short_name="DMNAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="36" y="16"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMVLNR" short_name="DMVLNR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMOBJ" short_name="DMOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="6" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="12" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="14" y="17"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMNAME" short_name="DMNAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="36" y="17"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="DMVLNR" short_name="DMVLNR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMOBJ" short_name="DMOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="6" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="12" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="14" y="18"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMNAME" short_name="DMNAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="36" y="18"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMVLNR" short_name="DMVLNR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMOBJ" short_name="DMOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="6" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="12" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="14" y="19"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMNAME" short_name="DMNAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="36" y="19"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMVLNR" short_name="DMVLNR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMOBJ" short_name="DMOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="6" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="12" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="14" y="20"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="DMNAME" short_name="DMNAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="36" y="20"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="F3 = Ende" display_length="9" data_length="9">
+      <area>
+        <position x="1" y="23"/>
+        <size cx="9" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

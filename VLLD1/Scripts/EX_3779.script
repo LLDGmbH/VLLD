@@ -1,0 +1,66 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xobnr, xbez, xjahr, xplz, xort, xehlj, xumslj, xehvj, xumsvj, xind, errmsg, datei, pfad_datei, source as string 
+i = 0
+j=5
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+HostFieldGetData("wsobjn",xobnr)
+HostFieldGetData("wsujahr",xjahr)
+HostFieldGetData("wsobez",xbez)
+
+datei = "Umsatz_nach_PLZ.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "Jahr")    
+ddepoke( ddehandle, "Z1S2", xjahr)
+ddepoke( ddehandle, "Z2S1", "Objekt")
+ddepoke( ddehandle, "Z2S2", xobnr)
+ddepoke( ddehandle, "Z2S3", xbez)
+
+ddepoke( ddehandle, "Z4S1", "Titel")
+ddepoke( ddehandle, "Z4S2", "Gruppe")
+ddepoke( ddehandle, "Z4S3", "EK")
+ddepoke( ddehandle, "Z4S4", "VK")
+ddepoke( ddehandle, "Z4S5", "Rythmus")
+ddepoke( ddehandle, "Z4S6", "E-Tag")
+ddepoke( ddehandle, "Z4S7", "letzter Bezug")
+
+nochmal:
+
+HostFieldGetLineData("ws2plz", i, xplz)
+HostFieldGetLineData("ws2ort", i, xort)
+HostFieldGetLineData("ws2ehlj", i, xehlj)
+HostFieldGetLineData("ws2umslj", i, xumslj)
+HostFieldGetLineData("ws2ehvj", i, xehvj)
+HostFieldGetLineData("ws2umsvj", i, xumsvj)
+HostFieldGetLineData("ws2ind", i, xind)
+
+
+if (xplz <> "") then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xplz)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xort)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xehlj)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xumslj)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xehvj)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xumsvj)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xind)
+
+j=j+1
+endif
+
+if i < 12 then
+i=i+1
+goto nochmal
+endif
+ 
+if xplz <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

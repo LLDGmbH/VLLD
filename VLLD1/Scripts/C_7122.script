@@ -1,0 +1,22 @@
+﻿dim sqlstmd, ErrorMsg as String
+dim rc as Integer
+dim heute as long
+dim sHeute, endWoche, text as String
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+   MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+heute = CDate()
+sHeute = Format(heute, "00000000")
+rc = EzSQLQuery("SELECT ((kajwq * 100) + kawo) FROM grkalp WHERE kaJMT = " + sHeute, endWoche, ErrorMsg)
+
+REM sqlstmd = "SELECT DISTINCT digits((kajwq * 100) + kawo), digits((kajwq * 100) + kawo) FROM grkalp WHERE ((kajwq * 100) + kawo) >= 202248 AND ((kajwq * 100) + kawo) <= " + endWoche + " ORDER BY digits((kajwq * 100) + kawo) DESC"
+
+sqlstmd = "SELECT DISTINCT ((kajwq * 100) + kawo) FROM grkalp WHERE ((kajwq * 100) + kawo) >= 202248 AND ((kajwq * 100) + kawo) <= " + endWoche + " ORDER BY ((kajwq * 100) + kawo) DESC"
+
+rc = EzSQLQuery(sqlstmd, text, ErrorMsg)
+PanelFieldSetProp ("S1WOVON", 5, text)
+
+PanelUpdateEnable(2)

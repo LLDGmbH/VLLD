@@ -1,0 +1,71 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim x3kdnr, x3jahr, x3woch, x3obj, x3onam, x3folg, x3meng, x3ean, x3addon, x3vdat, x3vzeit, x3edat, x3ezeit, errmsg, datei, pfad_datei, source as string 
+i = 0
+j=4
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+HostFieldGetData("c3kdnr",x3kdnr)
+HostFieldGetData("c3jahr",x3jahr)
+HostFieldGetData("c3woch",x3woch)
+HostFieldGetData("c3obj", x3obj)
+HostFieldGetData("c3onam",x3onam)
+HostFieldGetData("c3folg",x3folg)
+
+datei = "Scanquote_Kunde_" + x3kdnr + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1",  "Kunde")
+ddepoke( ddehandle, "Z1S2",  x3kdnr)
+ddepoke( ddehandle, "Z1S3",  "Jahr")
+ddepoke( ddehandle, "Z1S4",  x3jahr)
+ddepoke( ddehandle, "Z1S5",  "Woche")
+ddepoke( ddehandle, "Z1S6",  x3woch)
+ddepoke( ddehandle, "Z1S7",  "Objekt")
+ddepoke( ddehandle, "Z1S8",  x3obj)
+ddepoke( ddehandle, "Z1S9" , x3onam)
+ddepoke( ddehandle, "Z1S10", x3folg)
+
+ddepoke( ddehandle, "Z3S1", "Menge")
+ddepoke( ddehandle, "Z3S2", "EAN")
+ddepoke( ddehandle, "Z3S3", "AddOn")
+ddepoke( ddehandle, "Z3S4", "VMP Datum")
+ddepoke( ddehandle, "Z3S5", "VMP Zeit")
+ddepoke( ddehandle, "Z3S6", "Eing.Datum")
+ddepoke( ddehandle, "Z3S7", "Eing.Zeit")
+
+nochmal:
+
+HostFieldGetLineData("s3meng",  i, x3meng)
+HostFieldGetLineData("s3ean",   i, x3ean)
+HostFieldGetLineData("s3addon", i, x3addon)
+HostFieldGetLineData("s3vdat",  i, x3vdat)
+HostFieldGetLineData("s3vzeit", i, x3vzeit)
+HostFieldGetLineData("s3edat",  i, x3edat)
+HostFieldGetLineData("s3ezeit", i, x3ezeit)
+
+if x3meng <> "" then
+ddepoke( ddehandle, "Z" + str(j) +"S1", x3meng)
+ddepoke( ddehandle, "Z" + str(j) +"S2", x3ean)
+ddepoke( ddehandle, "Z" + str(j) +"S3", x3addon)
+ddepoke( ddehandle, "Z" + str(j) +"S4", x3vdat)
+ddepoke( ddehandle, "Z" + str(j) +"S5", x3vzeit)
+ddepoke( ddehandle, "Z" + str(j) +"S6", x3edat)
+ddepoke( ddehandle, "Z" + str(j) +"S7", x3ezeit)
+j=j+1
+endif
+
+if i < 16 then
+i=i+1
+goto nochmal
+endif
+ 
+if x3meng <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

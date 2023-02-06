@@ -1,0 +1,30 @@
+﻿dim text, ErrorMsg as String
+dim rc as Integer
+
+
+rem **Füllen Combo-Box  aus GRETXP **
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+   MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rc = EzSQLQuery("SELECT digits(khshg) concat digits(khsug), DIGITS(khshg) concat DIGITS(khsug) concat ' - 'concat khstext FROM GRKHSP order by digits(khshg) concat digits(khsug)", text, ErrorMsg)
+if ( rc < 0 ) then
+   MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+   PanelFieldSetProp ("hgug", 5, text) 
+   PanelUpdateEnable(2)
+endif
+
+
+rc = EzSQLQuery("SELECT ((kdgart * 100) + kdgaug), digits(kdgart) concat digits(kdgaug) concat '-' concat kdgtxt FROM grgarp order by ((kdgart * 100) + kdgaug)", text, ErrorMsg)
+PanelFieldSetProp ("C3GAUG", 5, text) 
+
+
+
+rc = EzSQLQuery("SELECT substring(vlvlkz, 1, 6), substr(vlvlkz, 1, 6) concat ' ' concat TRIM(vlvbez) FROM  GRVTLL3 ORDER BY UPPER(vlVBez)", text, ErrorMsg)
+PanelFieldSetProp ("C3VTL", 5, text)
+
+REM rc = EzSQLQuery("SELECT vlvlkz,  TRIM(vlvbez) concat ' ' concat substring(digits(vlvlkz), 1, 6) FROM  GRVTLL3", text, ErrorMsg)
+REM rc = EzSQLQuery("SELECT DECIMAL(substring(digits(vlvlkz), 1, 6), 6, 0),  TRIM(vlvbez) concat ' ' concat substring(digits(vlvlkz), 1, 6) FROM  GRVTLL3", text, ErrorMsg)

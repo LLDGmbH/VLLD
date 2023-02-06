@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="OSNA_SRC/PT90DS(HEADER+CLR001+*022/024)" library="OSNA_SRC" member_name="PT90DS">
+    <size cx="80" cy="24"/>
+    <action key="f1" caption="F1" attention_key="false"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <action key="help" caption="HELP" attention_key="false"/>
+    <field field_type="screen_part" name="HEADER" overlay="true">
+      <area>
+        <position/>
+        <size cx="80" cy="2"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="CLR001" overlay="true">
+      <area>
+        <position y="2"/>
+        <size cx="80" cy="20"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="*022/024" overlay="true">
+      <area>
+        <position y="22"/>
+        <size cx="80" cy="2"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="HEAD01" short_name="HEAD01" data_type="alphanumeric" display_length="76" data_length="76" reverse_image="true">
+      <area>
+        <position x="2"/>
+        <size cx="76" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="HEAD02" short_name="HEAD02" data_type="alphanumeric" display_length="76" data_length="76" reverse_image="true">
+      <area>
+        <position x="2" y="1"/>
+        <size cx="76" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value=" " display_length="1" data_length="1">
+      <area>
+        <position x="2" y="2"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value=" " display_length="1" data_length="1">
+      <area>
+        <position x="2" y="21"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BOTT23" short_name="BOTT23" data_type="alphanumeric" display_length="76" data_length="76" conditional="true">
+      <area>
+        <position x="2" y="22"/>
+        <size cx="76" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name=".SFLMSGREC" short_name=".SFLMSGREC" data_type="alphanumeric" display_length="76" data_length="76" high_intensity="true" conditional="true">
+          <area>
+            <position x="1" y="23"/>
+            <size cx="76" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_end_plus" value="+" display_length="1" data_length="1" conditional="true">
+        <area>
+          <position x="78" y="23"/>
+          <size cx="1" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+    </field>
+  </screen>
+</header>

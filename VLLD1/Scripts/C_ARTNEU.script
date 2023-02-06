@@ -1,0 +1,42 @@
+﻿
+dim text, ErrorMsg as String
+dim rc as Integer
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rc = EzSQLQuery("SELECT DISNR, DISNAME FROM GRDSNP where disname <> ' '", text, ErrorMsg)
+
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelFieldSetProp ("ATSKN0", 5, text) 
+
+endif
+
+rc = EzSQLQuery("SELECT digits(ehnr) concat digits(ehunr), DIGITS(ehnr) concat ' ' concat DIGITS(ehunr) concat ' - 'concat ehtext FROM GRETXP order by digits(ehnr) concat digits(ehunr)", text, ErrorMsg)
+
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelFieldSetProp ("ehcd4", 5, text) 
+endif
+
+rc = EzSQLQuery("SELECT LYTYP, lytyp concat ' - ' concat LYTEXT FROM GRLTYP where LYTEXT <> ' '", text, ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelFieldSetProp ("ATLTYP", 5, text) 
+endif
+
+rc = EzSQLQuery("SELECT vavnr, substr(vaname, 1, 20) concat ' - ' concat digits(vavnr) from gradrp  order by substr(vaname, 1, 20) concat ' - ' concat digits(vavnr)", text, ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelFieldSetProp ("atvnr", 5, text) 
+endif
+
+
+PanelUpdateEnable(2)

@@ -1,0 +1,52 @@
+﻿dim text, ErrorMsg as String
+dim rc as Integer
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rem ** Query database
+rc = EzSQLQuery("SELECT digits(adkey), digits(adkey) concat '  ' concat ADTEXT FROM GRadtp where adaktiv <> 'N' order by adkey", text, ErrorMsg)
+
+if ( rc < 0 ) then
+
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+
+else
+
+PanelFieldSetProp ("adbg11", 5, text) 
+PanelFieldSetProp ("adbg12", 5, text) 
+PanelFieldSetProp ("adbg13", 5, text) 
+PanelFieldSetProp ("adbg14", 5, text) 
+PanelFieldSetProp ("adbg15", 5, text) 
+PanelFieldSetProp ("adbg16", 5, text) 
+PanelFieldSetProp ("adbg17", 5, text) 
+PanelFieldSetProp ("adbg18", 5, text) 
+PanelFieldSetProp ("adbg19", 5, text) 
+PanelFieldSetProp ("adbg20", 5, text) 
+PanelFieldSetProp ("adbg21", 5, text) 
+PanelFieldSetProp ("adbg22", 5, text) 
+PanelFieldSetProp ("adbg23", 5, text) 
+PanelFieldSetProp ("adbg24", 5, text) 
+PanelFieldSetProp ("adbg25", 5, text) 
+PanelFieldSetProp ("adbg26", 5, text) 
+PanelFieldSetProp ("adbg27", 5, text) 
+PanelFieldSetProp ("adbg28", 5, text) 
+PanelFieldSetProp ("adbg29", 5, text) 
+PanelFieldSetProp ("adbg30", 5, text) 
+PanelFieldSetProp ("adbg31", 5, text) 
+PanelFieldSetProp ("adbg32", 5, text) 
+PanelFieldSetProp ("adbg33", 5, text) 
+PanelFieldSetProp ("adbg34", 5, text) 
+PanelFieldSetProp ("adbg35", 5, text) 
+PanelFieldSetProp ("adbg36", 5, text) 
+PanelFieldSetProp ("adbg37", 5, text) 
+PanelFieldSetProp ("adbg38", 5, text) 
+PanelFieldSetProp ("adbg39", 5, text) 
+PanelFieldSetProp ("adbg40", 5, text) 
+
+
+PanelUpdateEnable(2)
+
+endif

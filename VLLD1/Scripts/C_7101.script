@@ -1,0 +1,14 @@
+﻿dim text, ErrorMsg as String
+dim rc as Integer
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rc = EzSQLQuery("SELECT LYTYP, LYTYP concat ' - ' concat LYTEXT FROM GRLTYP", text, ErrorMsg)
+PanelFieldSetProp ("C1LTYP", 5, text) 
+
+PanelUpdateEnable(2)
+
+ScriptCall("c_fil")

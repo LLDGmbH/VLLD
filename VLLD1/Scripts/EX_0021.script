@@ -1,0 +1,125 @@
+﻿global filiale as string
+DIM ddehandle, i, j, msg, rc as integer
+dim xdatum, xvon, xbis, xad, xxad, xtour, xkdnr, xname, xort, sql1, sql2, sql3, xxwums, xxgart, xbem, xbem1, xende, errmsg, errormsg, datei, pfad_datei, source as string 
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+HostFieldGetData("kdkdnr",xkdnr)
+
+datei = "ADBerichte_" + xxad + ".xls"
+pfad_datei = @"@&LWV@"  + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z2S1", "Datum")
+ddepoke( ddehandle, "Z2S2", "von")
+ddepoke( ddehandle, "Z2S3", "bis")
+ddepoke( ddehandle, "Z2S4", "AD")
+ddepoke( ddehandle, "Z2S5", "Tour")
+ddepoke( ddehandle, "Z2S6", "Kdnr")
+ddepoke( ddehandle, "Z2S7", "Name")
+ddepoke( ddehandle, "Z2S8", "Ort")
+ddepoke( ddehandle, "Z2S9", "Besuchsgrund")
+ddepoke( ddehandle, "Z2S10", "Bemerkung")
+ddepoke( ddehandle, "Z2S11", "W.-Ums.")
+ddepoke( ddehandle, "Z2S12", "G.-Art")
+
+nochmal:
+
+HostFieldGetLineData("addatn", i, xdatum)
+HostFieldGetLineData("advon", i, xvon)
+HostFieldGetLineData("adbis", i, xbis)
+HostFieldGetLineData("adma", i, xad)
+HostFieldGetLineData("xxtour", i, xtour)
+HostFieldGetLineData("adkdnr", i, xkdnr)
+HostFieldGetLineData("adname", i, xname)
+HostFieldGetLineData("adbemx", i, xbem)
+HostFieldGetLineData("adbem1", i, xbem1)
+
+if  (filiale = "0" ) then
+sql1 = "SELECT kdort FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdwums FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdgart FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "1" ) then
+sql1 = "SELECT kdort FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdwums FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdgart FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "2" ) then
+sql1 = "SELECT kdort FROM dipf02/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdwums FROM dipf02/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdgart FROM dipf02/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "3" ) then
+sql1 = "SELECT kdort FROM dipf03/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdwums FROM dipf03/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdgart FROM dipf03/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "4" ) then
+sql1 = "SELECT kdort FROM dipf04/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdwums FROM dipf04/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdgart FROM dipf04/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "5" ) then
+sql1 = "SELECT kdort FROM dipf05/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdwums FROM dipf05/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdgart FROM dipf05/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "6" ) then
+sql1 = "SELECT kdort FROM dipf06/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdwums FROM dipf06/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdgart FROM dipf06/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "7" ) then
+sql1 = "SELECT kdort FROM dipf07/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdwums FROM dipf07/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdgart FROM dipf07/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "8" ) then
+sql1 = "SELECT kdort FROM dipf08/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdwums FROM dipf08/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdgart FROM dipf08/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "9" ) then
+sql1 = "SELECT kdort FROM dipf09/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdwums FROM dipf09/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdgart FROM dipf09/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+
+if (xdatum <> "")  then
+rc = EzSQLQuery(sql1, xort, ErrMsg)
+rc = EzSQLQuery(sql2, xxwums, ErrMsg)
+rc = EzSQLQuery(sql3, xxgart, ErrMsg)
+ddepoke( ddehandle, "Z" + str(j) +"S1", xdatum)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xvon)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xbis)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xad)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xtour)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xkdnr)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xname)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xort)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xbem)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xbem1)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xxwums)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xxgart)
+
+j=j+1
+endif
+
+if i < 16 then
+i=i+1
+goto nochmal
+endif
+
+HostFieldGetData("ende", xende)
+ 
+if xende <> "Ende" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

@@ -1,0 +1,80 @@
+﻿global filiale as string
+DIM ddehandle, i, j, msg, rc as integer
+dim xtour, xff, xkdnr, xname, xstr, xplz, xort, xwums, xmo, xdi, xmi, xdo, xfr, xsa, xende, datei, pfad_datei, ErrMsg, sql1, sql2, sql3, sql4, sql5, sql6, sql7, f01 as string 
+dim source as string
+
+i = 0
+j=2
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Adressen_pro_tour.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "Tour")
+ddepoke( ddehandle, "Z1S2", "FF")
+ddepoke( ddehandle, "Z1S3", "Kdnr")
+ddepoke( ddehandle, "Z1S4", "Name")
+ddepoke( ddehandle, "Z1S5", "Strasse")
+ddepoke( ddehandle, "Z1S6", "Plz")
+ddepoke( ddehandle, "Z1S7", "Ort")
+ddepoke( ddehandle, "Z1S8", "Umsatz")
+ddepoke( ddehandle, "Z1S9", "Montag")
+ddepoke( ddehandle, "Z1S10", "Dienstag")
+ddepoke( ddehandle, "Z1S11", "Mittwoch")
+ddepoke( ddehandle, "Z1S12", "Donnerstag")
+ddepoke( ddehandle, "Z1S13", "Freitag")
+ddepoke( ddehandle, "Z1S14", "Samstag")
+
+nochmal:
+
+HostFieldGetLineData("tour", i, xtour)
+HostFieldGetLineData("ff", i, xff)
+HostFieldGetLineData("kdnr", i, xkdnr)
+HostFieldGetLineData("name", i, xname)
+HostFieldGetLineData("strasse", i, xstr)
+HostFieldGetLineData("plz", i, xplz)
+HostFieldGetLineData("ort", i, xort)
+HostFieldGetLineData("wums", i, xwums)
+HostFieldGetLineData("mo", i, xmo)
+HostFieldGetLineData("di", i, xdi)
+HostFieldGetLineData("mi", i, xmi)
+HostFieldGetLineData("do", i, xdo)
+HostFieldGetLineData("fr", i, xfr)
+HostFieldGetLineData("sa", i, xsa)
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", xtour)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xff)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xkdnr)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xname)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xstr)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xplz)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xort)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xwums)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xmo)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xdi)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xmi)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xdo)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xfr)
+ddepoke( ddehandle, "Z" + str(j) +"S14", xsa)
+
+
+j=j+1 
+
+
+if i < 18 then
+i=i+1
+goto nochmal
+endif
+ 
+HostFieldGetData("ende", xende)
+if xende <> "Ende" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

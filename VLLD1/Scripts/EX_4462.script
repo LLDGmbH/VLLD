@@ -1,0 +1,67 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xkdnr, xname, xplz, xort, xremn, xog, xug, xansp, xtel, errmsg, datei, pfad_datei, source as string 
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Kunden_ohne_remi.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+
+ddepoke( ddehandle, "Z2S1", "Kdnr")
+ddepoke( ddehandle, "Z2S2", "Name")
+ddepoke( ddehandle, "Z2S3", "Plz")
+ddepoke( ddehandle, "Z2S4", "Ort")
+ddepoke( ddehandle, "Z2S5", "Reminr.")
+ddepoke( ddehandle, "Z2S6", "OG")
+ddepoke( ddehandle, "Z2S7", "UG")
+ddepoke( ddehandle, "Z2S8", "Ansp.")
+ddepoke( ddehandle, "Z2S9", "Telefon")
+
+
+nochmal:
+
+HostFieldGetLineData("kdkdnr", i, xkdnr)
+HostFieldGetLineData("kdname", i, xname)
+HostFieldGetLineData("kdplz",  i, xplz)
+HostFieldGetLineData("kdort",  i, xort)
+HostFieldGetLineData("kdremn", i, xremn)
+HostFieldGetLineData("kdgart", i, xog)
+HostFieldGetLineData("kdgaug", i, xug)
+HostFieldGetLineData("kdanp",  i, xansp)
+HostFieldGetLineData("kdtele", i, xtel)
+
+
+
+
+
+if (xkdnr <> "") then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xkdnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xname)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xplz)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xort)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xremn)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xog)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xug)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xansp)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xtel)
+j=j+1
+endif
+
+if i < 16 then
+i=i+1
+goto nochmal
+endif
+ 
+if xname <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

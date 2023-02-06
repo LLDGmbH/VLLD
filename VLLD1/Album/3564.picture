@@ -1,0 +1,1602 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="LZSRC/PVLUSBWODS(USBSFLCTL+FUSS)" library="LZSRC" member_name="PVLUSBWODS">
+    <size cx="132" cy="27"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="f12" caption="F12" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <field field_type="screen_part" name="USBSFLCTL" overlay="true">
+      <area>
+        <position/>
+        <size cx="132" cy="25"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="FUSS">
+      <area>
+        <position y="25"/>
+        <size cx="132" cy="2"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="*USER" short_name="*USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value=" Umsatz Stück Bilanz / Woche " display_length="29" data_length="29" underline="true">
+          <area>
+            <position x="44"/>
+            <size cx="29" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="115"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="124"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="JAHR" display_length="4" data_length="4">
+          <area>
+            <position x="1" y="1"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="both" name="JAHR" short_name="JAHR" data_type="zoned_decimal" display_length="4" data_length="4" underline="true">
+          <area>
+            <position x="8" y="1"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="KDNR" display_length="4" data_length="4">
+          <area>
+            <position x="15" y="1"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="both" name="KDNRBS" short_name="KDNRBS" data_type="zoned_decimal" display_length="7" data_length="7" underline="true">
+          <area>
+            <position x="22" y="1"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value=" WO          LFG EXPL      LFG WERT             REMI EXPL      REMI WERT               VK EXPL        VK WERT          RMI EXPL. %  " display_length="132" data_length="132" underline="true">
+          <area>
+            <position y="2"/>
+            <size cx="132" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="WO" short_name="WO" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFEX" short_name="USBLFEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="10" y="4"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFNT" short_name="USBLFNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="24" y="4"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMEX" short_name="USBRMEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="46" y="4"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMNT" short_name="USBRMNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="4"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKEX" short_name="USBVKEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="83" y="4"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKNT" short_name="USBVKNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="98" y="4"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMPR" short_name="USBRMPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="119" y="4"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="128" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WO" short_name="WO" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFEX" short_name="USBLFEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="10" y="5"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFNT" short_name="USBLFNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="24" y="5"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMEX" short_name="USBRMEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="46" y="5"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMNT" short_name="USBRMNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="5"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKEX" short_name="USBVKEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="83" y="5"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKNT" short_name="USBVKNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="98" y="5"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMPR" short_name="USBRMPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="119" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="128" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WO" short_name="WO" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFEX" short_name="USBLFEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="10" y="6"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFNT" short_name="USBLFNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="24" y="6"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMEX" short_name="USBRMEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="46" y="6"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMNT" short_name="USBRMNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="6"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKEX" short_name="USBVKEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="83" y="6"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKNT" short_name="USBVKNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="98" y="6"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMPR" short_name="USBRMPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="119" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="128" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="WO" short_name="WO" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFEX" short_name="USBLFEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="10" y="7"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFNT" short_name="USBLFNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="24" y="7"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMEX" short_name="USBRMEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="46" y="7"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMNT" short_name="USBRMNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="7"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKEX" short_name="USBVKEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="83" y="7"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKNT" short_name="USBVKNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="98" y="7"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMPR" short_name="USBRMPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="119" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="128" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WO" short_name="WO" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFEX" short_name="USBLFEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="10" y="8"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFNT" short_name="USBLFNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="24" y="8"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMEX" short_name="USBRMEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="46" y="8"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMNT" short_name="USBRMNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="8"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKEX" short_name="USBVKEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="83" y="8"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKNT" short_name="USBVKNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="98" y="8"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMPR" short_name="USBRMPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="119" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="128" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WO" short_name="WO" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFEX" short_name="USBLFEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="10" y="9"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFNT" short_name="USBLFNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="24" y="9"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMEX" short_name="USBRMEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="46" y="9"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMNT" short_name="USBRMNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="9"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKEX" short_name="USBVKEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="83" y="9"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKNT" short_name="USBVKNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="98" y="9"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMPR" short_name="USBRMPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="119" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="128" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="WO" short_name="WO" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFEX" short_name="USBLFEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="10" y="10"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFNT" short_name="USBLFNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="24" y="10"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMEX" short_name="USBRMEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="46" y="10"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMNT" short_name="USBRMNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="10"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKEX" short_name="USBVKEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="83" y="10"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKNT" short_name="USBVKNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="98" y="10"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMPR" short_name="USBRMPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="119" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="128" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WO" short_name="WO" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFEX" short_name="USBLFEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="10" y="11"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFNT" short_name="USBLFNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="24" y="11"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMEX" short_name="USBRMEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="46" y="11"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMNT" short_name="USBRMNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="11"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKEX" short_name="USBVKEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="83" y="11"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKNT" short_name="USBVKNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="98" y="11"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMPR" short_name="USBRMPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="119" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="128" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WO" short_name="WO" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFEX" short_name="USBLFEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="10" y="12"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFNT" short_name="USBLFNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="24" y="12"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMEX" short_name="USBRMEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="46" y="12"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMNT" short_name="USBRMNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="12"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKEX" short_name="USBVKEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="83" y="12"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKNT" short_name="USBVKNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="98" y="12"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMPR" short_name="USBRMPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="119" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="128" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="WO" short_name="WO" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFEX" short_name="USBLFEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="10" y="13"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFNT" short_name="USBLFNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="24" y="13"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMEX" short_name="USBRMEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="46" y="13"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMNT" short_name="USBRMNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="13"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKEX" short_name="USBVKEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="83" y="13"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKNT" short_name="USBVKNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="98" y="13"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMPR" short_name="USBRMPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="119" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="128" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WO" short_name="WO" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFEX" short_name="USBLFEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="10" y="14"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFNT" short_name="USBLFNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="24" y="14"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMEX" short_name="USBRMEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="46" y="14"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMNT" short_name="USBRMNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="14"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKEX" short_name="USBVKEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="83" y="14"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKNT" short_name="USBVKNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="98" y="14"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMPR" short_name="USBRMPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="119" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="128" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WO" short_name="WO" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFEX" short_name="USBLFEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="10" y="15"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFNT" short_name="USBLFNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="24" y="15"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMEX" short_name="USBRMEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="46" y="15"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMNT" short_name="USBRMNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="15"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKEX" short_name="USBVKEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="83" y="15"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKNT" short_name="USBVKNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="98" y="15"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMPR" short_name="USBRMPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="119" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="128" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="WO" short_name="WO" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFEX" short_name="USBLFEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="10" y="16"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFNT" short_name="USBLFNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="24" y="16"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMEX" short_name="USBRMEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="46" y="16"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMNT" short_name="USBRMNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="16"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKEX" short_name="USBVKEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="83" y="16"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKNT" short_name="USBVKNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="98" y="16"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMPR" short_name="USBRMPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="119" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="128" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WO" short_name="WO" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFEX" short_name="USBLFEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="10" y="17"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFNT" short_name="USBLFNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="24" y="17"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMEX" short_name="USBRMEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="46" y="17"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMNT" short_name="USBRMNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="17"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKEX" short_name="USBVKEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="83" y="17"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKNT" short_name="USBVKNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="98" y="17"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMPR" short_name="USBRMPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="119" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="128" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WO" short_name="WO" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFEX" short_name="USBLFEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="10" y="18"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFNT" short_name="USBLFNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="24" y="18"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMEX" short_name="USBRMEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="46" y="18"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMNT" short_name="USBRMNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="18"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKEX" short_name="USBVKEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="83" y="18"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKNT" short_name="USBVKNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="98" y="18"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMPR" short_name="USBRMPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="119" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="128" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="WO" short_name="WO" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFEX" short_name="USBLFEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="10" y="19"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFNT" short_name="USBLFNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="24" y="19"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMEX" short_name="USBRMEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="46" y="19"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMNT" short_name="USBRMNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="19"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKEX" short_name="USBVKEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="83" y="19"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKNT" short_name="USBVKNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="98" y="19"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMPR" short_name="USBRMPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="119" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="128" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WO" short_name="WO" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFEX" short_name="USBLFEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="10" y="20"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFNT" short_name="USBLFNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="24" y="20"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMEX" short_name="USBRMEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="46" y="20"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMNT" short_name="USBRMNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="20"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKEX" short_name="USBVKEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="83" y="20"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKNT" short_name="USBVKNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="98" y="20"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMPR" short_name="USBRMPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="119" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="128" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WO" short_name="WO" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFEX" short_name="USBLFEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="10" y="21"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFNT" short_name="USBLFNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="24" y="21"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMEX" short_name="USBRMEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="46" y="21"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMNT" short_name="USBRMNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="21"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKEX" short_name="USBVKEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="83" y="21"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKNT" short_name="USBVKNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="98" y="21"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMPR" short_name="USBRMPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="119" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="128" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="WO" short_name="WO" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFEX" short_name="USBLFEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="10" y="22"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFNT" short_name="USBLFNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="24" y="22"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMEX" short_name="USBRMEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="46" y="22"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMNT" short_name="USBRMNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="22"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKEX" short_name="USBVKEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="83" y="22"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKNT" short_name="USBVKNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="98" y="22"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMPR" short_name="USBRMPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="119" y="22"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="128" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WO" short_name="WO" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFEX" short_name="USBLFEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="10" y="23"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFNT" short_name="USBLFNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="24" y="23"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMEX" short_name="USBRMEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="46" y="23"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMNT" short_name="USBRMNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="23"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKEX" short_name="USBVKEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="83" y="23"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKNT" short_name="USBVKNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="98" y="23"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMPR" short_name="USBRMPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="119" y="23"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="128" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="WO" short_name="WO" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="24"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFEX" short_name="USBLFEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="10" y="24"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBLFNT" short_name="USBLFNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="24" y="24"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMEX" short_name="USBRMEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="46" y="24"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMNT" short_name="USBRMNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="61" y="24"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKEX" short_name="USBVKEX" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="83" y="24"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBVKNT" short_name="USBVKNT" data_type="zoned_decimal" display_length="11" data_length="8" conditional="true">
+          <area>
+            <position x="98" y="24"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="USBRMPR" short_name="USBRMPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="119" y="24"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="%" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="128" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_end_plus" value="+" display_length="1" data_length="1" conditional="true">
+        <area>
+          <position x="130" y="24"/>
+          <size cx="1" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="                                                                                                                                  " display_length="130" data_length="130" underline="true">
+      <area>
+        <position x="1" y="25"/>
+        <size cx="130" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="F3=Ende;" display_length="8" data_length="8">
+      <area>
+        <position x="1" y="26"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="(c) Gerd Gerstmann PVL" display_length="22" data_length="22">
+      <area>
+        <position x="109" y="26"/>
+        <size cx="22" cy="1"/>
+      </area>
+      <color foreground="red"/>
+    </field>
+  </screen>
+</header>

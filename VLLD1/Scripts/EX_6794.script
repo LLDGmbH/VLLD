@@ -1,0 +1,63 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim x1kdnr, x1jahr, x1woch, x1mmtz, x1avtz, x1sqtz, x1mmotz, x1avotz, x1sqotz, errmsg, datei, pfad_datei, source as string 
+i = 0
+j=4
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+HostFieldGetData("c1kdnr",x1kdnr)
+
+datei = "Scanquote_Kunde_" + x1kdnr + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "Kunde")
+ddepoke( ddehandle, "Z1S2", x1kdnr)
+
+ddepoke( ddehandle, "Z3S1", "Jahr")
+ddepoke( ddehandle, "Z3S2", "Woche")
+ddepoke( ddehandle, "Z3S3", "Gruppe")
+ddepoke( ddehandle, "Z3S4", "MBR + TZ")
+ddepoke( ddehandle, "Z3S5", "VMP + TZ")
+ddepoke( ddehandle, "Z3S6", "Scanquote + TZ")
+ddepoke( ddehandle, "Z3S7", "MBR")
+ddepoke( ddehandle, "Z3S8", "VMP")
+ddepoke( ddehandle, "Z3S9", "Scanquote")
+
+nochmal:
+
+HostFieldGetLineData("s1jahr",  i, x1jahr)
+HostFieldGetLineData("s1woch",  i, x1woch)
+HostFieldGetLineData("s1mmtz",  i, x1mmtz)
+HostFieldGetLineData("s1avtz",  i, x1avtz)
+HostFieldGetLineData("s1sqtz",  i, x1sqtz)
+HostFieldGetLineData("s1mmotz", i, x1mmotz)
+HostFieldGetLineData("s1avotz", i, x1avotz)
+HostFieldGetLineData("s1sqotz", i, x1sqotz)
+
+if x1jahr <> "" then
+ddepoke( ddehandle, "Z" + str(j) +"S1", x1jahr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", x1woch)
+ddepoke( ddehandle, "Z" + str(j) +"S3", x1mmtz)
+ddepoke( ddehandle, "Z" + str(j) +"S4", x1avtz)
+ddepoke( ddehandle, "Z" + str(j) +"S5", x1sqtz)
+ddepoke( ddehandle, "Z" + str(j) +"S6", x1mmotz)
+ddepoke( ddehandle, "Z" + str(j) +"S7", x1avotz)
+ddepoke( ddehandle, "Z" + str(j) +"S8", x1sqotz)
+
+j=j+1
+endif
+
+if i < 17 then
+i=i+1
+goto nochmal
+endif
+ 
+if x1jahr <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

@@ -1,0 +1,81 @@
+﻿global filiale as string
+DIM ddehandle, i, j, rc, msg as integer
+dim xf0, xf1, xf2, xf3, xf4, xf5, xf6,xf7, xf8, xf9, xf10,xf11, xf12, xf13, xf14,  xende, errmsg, sql1, sql2, datei, pfad_datei as string 
+dim source as string
+i = 0
+j=2
+
+datei = "Regalauslastung unter 100.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "Ga")
+ddepoke( ddehandle, "Z1S2", "Kdnr")
+ddepoke( ddehandle, "Z1S3", "Name.")
+ddepoke( ddehandle, "Z1S4", "Ort")
+ddepoke( ddehandle, "Z1S5", "OGSp")
+ddepoke( ddehandle, "Z1S6", "RA%")
+ddepoke( ddehandle, "Z1S7", "RM")
+ddepoke( ddehandle, "Z1S8", "BM VSR")
+ddepoke( ddehandle, "Z1S9", "WoUms")
+ddepoke( ddehandle, "Z1S10", "Titel")
+ddepoke( ddehandle, "Z1S11", "AV%")
+ddepoke( ddehandle, "Z1S12", "NV%")
+ddepoke( ddehandle, "Z1S13", "AD")
+ddepoke( ddehandle, "Z1S14", "Kunde ab")
+
+
+
+
+nochmal:
+HostFieldGetLineData("f0", i, xf0)
+HostFieldGetLineData("f1", i, xf1)
+HostFieldGetLineData("f2", i, xf2)
+HostFieldGetLineData("f4", i, xf4)
+HostFieldGetLineData("f5", i, xf5)
+HostFieldGetLineData("f6", i, xf6)
+HostFieldGetLineData("f7", i, xf7)
+HostFieldGetLineData("f8", i, xf8)
+HostFieldGetLineData("f9", i, xf9)
+HostFieldGetLineData("f10", i, xf10)
+HostFieldGetLineData("f11", i, xf11)
+HostFieldGetLineData("f12", i, xf12)
+HostFieldGetLineData("f13", i, xf13)
+HostFieldGetLineData("f14", i, xf14)
+
+
+HostFieldGetData("ende", xende)
+
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", xf0)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xf1)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xf2)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xf4)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xf5)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xf6)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xf7)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xf8)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xf9)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xf10)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xf11)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xf12)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xf13)
+ddepoke( ddehandle, "Z" + str(j) +"S14", xf14)
+
+j=j+1
+
+if i < 14 then
+i=i+1
+goto nochmal
+endif
+ 
+if xende <> "Ende" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

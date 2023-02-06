@@ -1,0 +1,60 @@
+﻿global filiale as string
+DIM ddehandle, i, j, msg, rc as integer
+dim xFil, xObj, xONam, xDP1, xDP2, xDP3, xDP4, xDP5, datei, pfad_datei, ErrMsg, sql1, sql2, f01 as string 
+dim xxende, xxabgg, xxtext, xxablage, source as string
+
+i = 0
+j=2
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Depots.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "Filiale")
+ddepoke( ddehandle, "Z1S2", "ObjektNr")
+ddepoke( ddehandle, "Z1S3", "Objekt")
+ddepoke( ddehandle, "Z1S4", "Depot 1")
+ddepoke( ddehandle, "Z1S5", "Depot 2")
+ddepoke( ddehandle, "Z1S6", "Depot 3")
+ddepoke( ddehandle, "Z1S7", "Depot 4")
+ddepoke( ddehandle, "Z1S8", "Depot 5")
+
+nochmal:
+
+HostFieldGetLineData("s1Fil",  i, xFil)
+HostFieldGetLineData("s1Obj",  i, xObj)
+HostFieldGetLineData("s1ONam", i, xONam)
+HostFieldGetLineData("s1DP01",  i, xDP1)
+HostFieldGetLineData("s1DP02",  i, xDP2)
+HostFieldGetLineData("s1DP03",  i, xDP3)
+HostFieldGetLineData("s1DP04",  i, xDP4)
+HostFieldGetLineData("s1DP05",  i, xDP5)
+
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", xFil)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xObj)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xONam)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xDP1)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xDP2)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xDP3)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xDP4)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xDP5)
+
+j=j+1 
+
+if i < 17 then
+i=i+1
+goto nochmal
+endif
+ 
+if xObj <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

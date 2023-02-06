@@ -1,0 +1,901 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="SEATRUNK/ATUMSDS(FMT02C+FMTFU2)" library="SEATRUNK" member_name="ATUMSDS">
+    <size cx="80" cy="24"/>
+    <action key="f1" caption="F1" attention_key="false" conditional="true"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false" conditional="true"/>
+    <action key="f10" caption="F10" attention_key="false" conditional="true"/>
+    <action key="f11" caption="F11" attention_key="false" conditional="true"/>
+    <action key="f12" caption="F12" attention_key="false"/>
+    <action key="f17" caption="F17" attention_key="false" conditional="true"/>
+    <action key="f18" caption="F18" attention_key="false" conditional="true"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <field field_type="screen_part" name="FMT02C" overlay="true">
+      <area>
+        <position y="2"/>
+        <size cx="80" cy="18"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="FMTFU2">
+      <area>
+        <position y="21"/>
+        <size cx="80" cy="2"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18" high_intensity="true">
+          <area>
+            <position x="1" y="2"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="Artikelumsätze nach PLZ" display_length="23" data_length="23" underline="true" high_intensity="true">
+          <area>
+            <position x="28" y="2"/>
+            <size cx="23" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6" high_intensity="true">
+          <area>
+            <position x="59" y="2"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6" high_intensity="true">
+          <area>
+            <position x="70" y="2"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="JOB" short_name="JOB" data_type="alphanumeric" display_length="10" data_length="10" high_intensity="true">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="*USER" short_name="*USER" data_type="alphanumeric" display_length="10" data_length="10" high_intensity="true">
+          <area>
+            <position x="12" y="3"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="MSGFLD2" short_name="MSGFLD2" data_type="alphanumeric" display_length="30" data_length="30" reverse_image="true" conditional="true">
+          <area>
+            <position x="27" y="3"/>
+            <size cx="30" cy="1"/>
+          </area>
+          <indicator id="50"/>
+        </field>
+        <field field_type="fixed_text" value="Programm" display_length="8" data_length="8" high_intensity="true">
+          <area>
+            <position x="59" y="3"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="PGM" short_name="PGM" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="69" y="3"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="cyan"/>
+        </field>
+        <field field_type="fixed_text" value="Obj.:" display_length="5" data_length="5" underline="true">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSOBJN" short_name="WSOBJN" data_type="zoned_decimal" display_length="4" data_length="4">
+          <area>
+            <position x="7" y="4"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSOBEZ" short_name="WSOBEZ" data_type="alphanumeric" display_length="25" data_length="25">
+          <area>
+            <position x="12" y="4"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="Vergleich:" display_length="10" data_length="10" underline="true">
+          <area>
+            <position x="38" y="4"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSUJAHR" short_name="WSUJAHR" data_type="zoned_decimal" display_length="4" data_length="4">
+          <area>
+            <position x="49" y="4"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="/" display_length="1" data_length="1">
+          <area>
+            <position x="54" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WSVJAHR" short_name="WSVJAHR" data_type="zoned_decimal" display_length="4" data_length="4">
+          <area>
+            <position x="56" y="4"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="Stückbetrachtung" display_length="16" data_length="16" reverse_image="true" conditional="true">
+          <area>
+            <position x="61" y="4"/>
+            <size cx="16" cy="1"/>
+          </area>
+          <color foreground="red"/>
+          <indicator id="46"/>
+        </field>
+        <field field_type="fixed_text" value="Wertbetrachtung" display_length="15" data_length="15" reverse_image="true" conditional="true">
+          <area>
+            <position x="61" y="4"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="red"/>
+          <indicator negative="true" id="46"/>
+        </field>
+        <field field_type="fixed_text" value="Sort.:" display_length="6" data_length="6" high_intensity="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="WSSORT" short_name="WSSORT" data_type="zoned_decimal" display_length="1" data_length="1" underline="true" position_cursor="true" special_field_type="menu_bar_text">
+          <area>
+            <position x="9" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="1. PLZ  " display_length="8" data_length="8" special_field_type="menu_bar_text">
+      <area>
+        <position x="11" y="5"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="green" conditional="true"/>
+      <color foreground="blue" conditional="true"/>
+    </field>
+    <field field_type="fixed_text" value="2. Index" display_length="8" data_length="8" special_field_type="menu_bar_text">
+      <area>
+        <position x="23" y="5"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="green" conditional="true"/>
+      <color foreground="blue" conditional="true"/>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="fixed_text" value=" PLZ   Ort                          EH     Umsatz     EH     Umsatz    Index  " display_length="78" data_length="78" underline="true" high_intensity="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="78" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="WS2PLZ" short_name="WS2PLZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2ORT" short_name="WS2ORT" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="8" y="7"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2EHLJ" short_name="WS2EHLJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="35" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2UMSLJ" short_name="WS2UMSLJ" data_type="zoned_decimal" display_length="11" data_length="9" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="40" y="7"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2EHVJ" short_name="WS2EHVJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="53" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2UMSVJ" short_name="WS2UMSVJ" data_type="zoned_decimal" display_length="11" data_length="9" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="58" y="7"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2IND" short_name="WS2IND" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="73" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_scrollbar" usage="output" data_type="alphanumeric" value=" " display_length="1" data_length="1" reverse_image="conditional" conditional="true">
+        <area>
+          <position x="78" y="7"/>
+          <size cx="1" cy="1"/>
+        </area>
+        <color foreground="white" conditional="true"/>
+      </field>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="WS2PLZ" short_name="WS2PLZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2ORT" short_name="WS2ORT" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="8" y="8"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2EHLJ" short_name="WS2EHLJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="35" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2UMSLJ" short_name="WS2UMSLJ" data_type="zoned_decimal" display_length="11" data_length="9" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="40" y="8"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2EHVJ" short_name="WS2EHVJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="53" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2UMSVJ" short_name="WS2UMSVJ" data_type="zoned_decimal" display_length="11" data_length="9" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="58" y="8"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2IND" short_name="WS2IND" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="73" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_scrollbar" usage="output" data_type="alphanumeric" value=" " display_length="1" data_length="1" reverse_image="conditional" conditional="true">
+        <area>
+          <position x="78" y="8"/>
+          <size cx="1" cy="1"/>
+        </area>
+        <color foreground="white" conditional="true"/>
+      </field>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="WS2PLZ" short_name="WS2PLZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2ORT" short_name="WS2ORT" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="8" y="9"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2EHLJ" short_name="WS2EHLJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="35" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2UMSLJ" short_name="WS2UMSLJ" data_type="zoned_decimal" display_length="11" data_length="9" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="40" y="9"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2EHVJ" short_name="WS2EHVJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="53" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2UMSVJ" short_name="WS2UMSVJ" data_type="zoned_decimal" display_length="11" data_length="9" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="58" y="9"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2IND" short_name="WS2IND" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="73" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_scrollbar" usage="output" data_type="alphanumeric" value=" " display_length="1" data_length="1" reverse_image="conditional" conditional="true">
+        <area>
+          <position x="78" y="9"/>
+          <size cx="1" cy="1"/>
+        </area>
+        <color foreground="white" conditional="true"/>
+      </field>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="WS2PLZ" short_name="WS2PLZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2ORT" short_name="WS2ORT" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="8" y="10"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2EHLJ" short_name="WS2EHLJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="35" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2UMSLJ" short_name="WS2UMSLJ" data_type="zoned_decimal" display_length="11" data_length="9" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="40" y="10"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2EHVJ" short_name="WS2EHVJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="53" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2UMSVJ" short_name="WS2UMSVJ" data_type="zoned_decimal" display_length="11" data_length="9" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="58" y="10"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2IND" short_name="WS2IND" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="73" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_scrollbar" usage="output" data_type="alphanumeric" value=" " display_length="1" data_length="1" reverse_image="conditional" conditional="true">
+        <area>
+          <position x="78" y="10"/>
+          <size cx="1" cy="1"/>
+        </area>
+        <color foreground="white" conditional="true"/>
+      </field>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="WS2PLZ" short_name="WS2PLZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2ORT" short_name="WS2ORT" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="8" y="11"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2EHLJ" short_name="WS2EHLJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="35" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2UMSLJ" short_name="WS2UMSLJ" data_type="zoned_decimal" display_length="11" data_length="9" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="40" y="11"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2EHVJ" short_name="WS2EHVJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="53" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2UMSVJ" short_name="WS2UMSVJ" data_type="zoned_decimal" display_length="11" data_length="9" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="58" y="11"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2IND" short_name="WS2IND" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="73" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_scrollbar" usage="output" data_type="alphanumeric" value=" " display_length="1" data_length="1" reverse_image="conditional" conditional="true">
+        <area>
+          <position x="78" y="11"/>
+          <size cx="1" cy="1"/>
+        </area>
+        <color foreground="white" conditional="true"/>
+      </field>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="WS2PLZ" short_name="WS2PLZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2ORT" short_name="WS2ORT" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="8" y="12"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2EHLJ" short_name="WS2EHLJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="35" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2UMSLJ" short_name="WS2UMSLJ" data_type="zoned_decimal" display_length="11" data_length="9" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="40" y="12"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2EHVJ" short_name="WS2EHVJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="53" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2UMSVJ" short_name="WS2UMSVJ" data_type="zoned_decimal" display_length="11" data_length="9" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="58" y="12"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2IND" short_name="WS2IND" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="73" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_scrollbar" usage="output" data_type="alphanumeric" value=" " display_length="1" data_length="1" reverse_image="conditional" conditional="true">
+        <area>
+          <position x="78" y="12"/>
+          <size cx="1" cy="1"/>
+        </area>
+        <color foreground="white" conditional="true"/>
+      </field>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="WS2PLZ" short_name="WS2PLZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2ORT" short_name="WS2ORT" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="8" y="13"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2EHLJ" short_name="WS2EHLJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="35" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2UMSLJ" short_name="WS2UMSLJ" data_type="zoned_decimal" display_length="11" data_length="9" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="40" y="13"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2EHVJ" short_name="WS2EHVJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="53" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2UMSVJ" short_name="WS2UMSVJ" data_type="zoned_decimal" display_length="11" data_length="9" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="58" y="13"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2IND" short_name="WS2IND" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="73" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_scrollbar" usage="output" data_type="alphanumeric" value=" " display_length="1" data_length="1" reverse_image="conditional" conditional="true">
+        <area>
+          <position x="78" y="13"/>
+          <size cx="1" cy="1"/>
+        </area>
+        <color foreground="white" conditional="true"/>
+      </field>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="WS2PLZ" short_name="WS2PLZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2ORT" short_name="WS2ORT" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="8" y="14"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2EHLJ" short_name="WS2EHLJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="35" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2UMSLJ" short_name="WS2UMSLJ" data_type="zoned_decimal" display_length="11" data_length="9" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="40" y="14"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2EHVJ" short_name="WS2EHVJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="53" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2UMSVJ" short_name="WS2UMSVJ" data_type="zoned_decimal" display_length="11" data_length="9" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="58" y="14"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2IND" short_name="WS2IND" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="73" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_scrollbar" usage="output" data_type="alphanumeric" value=" " display_length="1" data_length="1" reverse_image="conditional" conditional="true">
+        <area>
+          <position x="78" y="14"/>
+          <size cx="1" cy="1"/>
+        </area>
+        <color foreground="white" conditional="true"/>
+      </field>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="WS2PLZ" short_name="WS2PLZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2ORT" short_name="WS2ORT" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="8" y="15"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2EHLJ" short_name="WS2EHLJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="35" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2UMSLJ" short_name="WS2UMSLJ" data_type="zoned_decimal" display_length="11" data_length="9" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="40" y="15"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2EHVJ" short_name="WS2EHVJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="53" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2UMSVJ" short_name="WS2UMSVJ" data_type="zoned_decimal" display_length="11" data_length="9" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="58" y="15"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2IND" short_name="WS2IND" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="73" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_scrollbar" usage="output" data_type="alphanumeric" value=" " display_length="1" data_length="1" reverse_image="conditional" conditional="true">
+        <area>
+          <position x="78" y="15"/>
+          <size cx="1" cy="1"/>
+        </area>
+        <color foreground="white" conditional="true"/>
+      </field>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="WS2PLZ" short_name="WS2PLZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2ORT" short_name="WS2ORT" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="8" y="16"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2EHLJ" short_name="WS2EHLJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="35" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2UMSLJ" short_name="WS2UMSLJ" data_type="zoned_decimal" display_length="11" data_length="9" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="40" y="16"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2EHVJ" short_name="WS2EHVJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="53" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2UMSVJ" short_name="WS2UMSVJ" data_type="zoned_decimal" display_length="11" data_length="9" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="58" y="16"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2IND" short_name="WS2IND" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="73" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_scrollbar" usage="output" data_type="alphanumeric" value=" " display_length="1" data_length="1" reverse_image="conditional" conditional="true">
+        <area>
+          <position x="78" y="16"/>
+          <size cx="1" cy="1"/>
+        </area>
+        <color foreground="white" conditional="true"/>
+      </field>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="WS2PLZ" short_name="WS2PLZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2ORT" short_name="WS2ORT" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="8" y="17"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2EHLJ" short_name="WS2EHLJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="35" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2UMSLJ" short_name="WS2UMSLJ" data_type="zoned_decimal" display_length="11" data_length="9" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="40" y="17"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2EHVJ" short_name="WS2EHVJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="53" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2UMSVJ" short_name="WS2UMSVJ" data_type="zoned_decimal" display_length="11" data_length="9" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="58" y="17"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2IND" short_name="WS2IND" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="73" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_scrollbar" usage="output" data_type="alphanumeric" value=" " display_length="1" data_length="1" reverse_image="conditional" conditional="true">
+        <area>
+          <position x="78" y="17"/>
+          <size cx="1" cy="1"/>
+        </area>
+        <color foreground="white" conditional="true"/>
+      </field>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="WS2PLZ" short_name="WS2PLZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2ORT" short_name="WS2ORT" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="8" y="18"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2EHLJ" short_name="WS2EHLJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="35" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2UMSLJ" short_name="WS2UMSLJ" data_type="zoned_decimal" display_length="11" data_length="9" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="40" y="18"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2EHVJ" short_name="WS2EHVJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="53" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2UMSVJ" short_name="WS2UMSVJ" data_type="zoned_decimal" display_length="11" data_length="9" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="58" y="18"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2IND" short_name="WS2IND" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="73" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_scrollbar" usage="output" data_type="alphanumeric" value=" " display_length="1" data_length="1" reverse_image="conditional" conditional="true">
+        <area>
+          <position x="78" y="18"/>
+          <size cx="1" cy="1"/>
+        </area>
+        <color foreground="white" conditional="true"/>
+      </field>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="WS2PLZ" short_name="WS2PLZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2ORT" short_name="WS2ORT" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="8" y="19"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2EHLJ" short_name="WS2EHLJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="35" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2UMSLJ" short_name="WS2UMSLJ" data_type="zoned_decimal" display_length="11" data_length="9" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="40" y="19"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2EHVJ" short_name="WS2EHVJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="53" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2UMSVJ" short_name="WS2UMSVJ" data_type="zoned_decimal" display_length="11" data_length="9" non_display="conditional" conditional="true" decimal_positions="2">
+          <area>
+            <position x="58" y="19"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WS2IND" short_name="WS2IND" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="73" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_scrollbar" usage="output" data_type="alphanumeric" value=" " display_length="1" data_length="1" reverse_image="conditional" conditional="true">
+        <area>
+          <position x="78" y="19"/>
+          <size cx="1" cy="1"/>
+        </area>
+        <color foreground="white" conditional="true"/>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="                                                                              " display_length="78" data_length="78" underline="true">
+      <area>
+        <position x="1" y="21"/>
+        <size cx="78" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="F3 = Ende" display_length="9" data_length="9">
+      <area>
+        <position x="1" y="22"/>
+        <size cx="9" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="F9 = Drucken" display_length="12" data_length="12" conditional="true">
+      <area>
+        <position x="14" y="22"/>
+        <size cx="12" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+      <indicator negative="true" id="45"/>
+    </field>
+    <field field_type="fixed_text" value="F12 = Zurück" display_length="12" data_length="12">
+      <area>
+        <position x="30" y="22"/>
+        <size cx="12" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

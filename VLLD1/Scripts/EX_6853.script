@@ -1,0 +1,55 @@
+﻿global filiale as string
+DIM ddehandle, i, j, msg, rc as integer
+dim x1vnr, x1ispc, x1vnam, x1rnr, x1rdat, x1anzp, x1zabe, datei, pfad_datei, ErrMsg, source as string 
+
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Rechnungsprüfung.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "Verl-Nr")
+ddepoke( ddehandle, "Z1S2", "ISPC-Nr")
+ddepoke( ddehandle, "Z1S3", "Name")
+ddepoke( ddehandle, "Z1S4", "Rech.Nr")
+ddepoke( ddehandle, "Z1S5", "Rech.Datum")
+ddepoke( ddehandle, "Z1S6", "Anz Pos")
+ddepoke( ddehandle, "Z1S7", "Zahlbetrag")
+
+nochmal:
+
+HostFieldGetLineData("s1vnr",  i, x1vnr)
+HostFieldGetLineData("s1ispc", i, x1ispc)
+HostFieldGetLineData("s1vnam", i, x1vnam)
+HostFieldGetLineData("s1rnr",  i, x1rnr)
+HostFieldGetLineData("s1rdat", i, x1rdat)
+HostFieldGetLineData("s1anzp", i, x1anzp)
+HostFieldGetLineData("s1zabe", i, x1zabe)
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", x1vnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", x1ispc)
+ddepoke( ddehandle, "Z" + str(j) +"S3", x1vnam)
+ddepoke( ddehandle, "Z" + str(j) +"S4", x1rnr)
+ddepoke( ddehandle, "Z" + str(j) +"S5", x1rdat)
+ddepoke( ddehandle, "Z" + str(j) +"S6", x1anzp)
+ddepoke( ddehandle, "Z" + str(j) +"S7", x1zabe)
+
+j=j+1 
+
+if i < 21 then
+i=i+1
+goto nochmal
+endif
+ 
+if x1vnr <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

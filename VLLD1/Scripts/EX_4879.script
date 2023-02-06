@@ -1,0 +1,106 @@
+﻿DIM ddehandle, i, j, rc, msg as integer
+dim  xfil, xdat, xzeit, xdatum, xobjn, xobj, xtitel, xfolge_6, sql1, sql2, xltyp, xwein, xms, xlbez, xexdisp, xexges, xexfest, xehges, xehfest, xavp, xnvp, xende, xnullvk1, xsqr, xspit, xvmpspit, xcpprs, datei, errmsg, pfad_datei as string 
+dim source as string
+i = 0
+j=2
+
+HostFieldGetData("datum_sav",xdatum)
+HostFieldGetData("f1fil",xfil)
+
+datei = "Lfs_vom_" + xdatum +".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "Typ")
+ddepoke( ddehandle, "Z2S2", "W")
+ddepoke( ddehandle, "Z1S3", " ")
+ddepoke( ddehandle, "Z1S4", "Obj")
+ddepoke( ddehandle, "Z1S5", "Titel")
+ddepoke( ddehandle, "Z1S6", "Folge")
+ddepoke( ddehandle, "Z1S7", "letzte Menge")
+ddepoke( ddehandle, "Z1S8", "Dispomenge")
+ddepoke( ddehandle, "Z1S9", "Expl.Ges.")
+ddepoke( ddehandle, "Z1S10", "Expl.Fest")
+ddepoke( ddehandle, "Z1S11", "EH Ges.")
+ddepoke( ddehandle, "Z1S12", "EH Fest")
+ddepoke( ddehandle, "Z1S13", "EH AV%")
+ddepoke( ddehandle, "Z1S14", "EH NV%")
+ddepoke( ddehandle, "Z1S15", "EH NV")
+ddepoke( ddehandle, "Z1S16", "SQR++")
+ddepoke( ddehandle, "Z1S17", "Rest NL")
+ddepoke( ddehandle, "Z1S18", "VMP Spitze")
+ddepoke( ddehandle, "Z1S19", "Preis")
+ddepoke( ddehandle, "Z1S20", "WE Datum")
+ddepoke( ddehandle, "Z1S21", "WE Zeit")
+
+
+nochmal:
+
+HostFieldGetLineData("ltyp", i, xltyp)
+HostFieldGetLineData("wein", i, xwein)
+HostFieldGetLineData("##ms", i, xms)
+HostFieldGetLineData("objn", i, xobjn)
+HostFieldGetLineData("titel", i, xtitel)
+HostFieldGetLineData("folge_6", i, xfolge_6)
+HostFieldGetLineData("lbez", i, xlbez)
+HostFieldGetLineData("exdisp", i, xexdisp)
+HostFieldGetLineData("exges", i, xexges)
+HostFieldGetLineData("exfest", i, xexfest)
+HostFieldGetLineData("ehges", i, xehges)
+HostFieldGetLineData("ehfest", i, xehfest)
+HostFieldGetLineData("avp", i, xavp)
+HostFieldGetLineData("nvp", i, xnvp)
+HostFieldGetLineData("nullvk1", i, xnullvk1)
+HostFieldGetLineData("##sqr", i, xsqr)
+HostFieldGetLineData("spit", i, xspit)
+HostFieldGetLineData("vmpspit", i, xvmpspit)
+HostFieldGetLineData("cpprs", i, xcpprs)
+
+sql1 = "SELECT wpeinr FROM grweiscp where wpobj = " + xobjn + " and wpfolg = "+ xfolge_6 + " and wpfil = " + xfil + ""
+sql2 = "SELECT wpzeit FROM grweiscp where wpobj = " + xobjn + " and wpfolg = "+ xfolge_6 + " and wpfil = " + xfil + ""
+rc = EzSQLQuery(sql1, xdat, ErrMsg)
+rc = EzSQLQuery(sql2, xzeit, ErrMsg)
+
+
+
+if (xtitel <> "")  then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xltyp)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xwein)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xms)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xobjn)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xtitel)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xfolge_6)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xlbez)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xexdisp)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xexges)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xexfest)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xehges)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xehfest)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xavp)
+ddepoke( ddehandle, "Z" + str(j) +"S14", xnvp)
+ddepoke( ddehandle, "Z" + str(j) +"S15", xnullvk1)
+ddepoke( ddehandle, "Z" + str(j) +"S16", xsqr)
+ddepoke( ddehandle, "Z" + str(j) +"S17", xspit)
+ddepoke( ddehandle, "Z" + str(j) +"S18", xvmpspit)
+ddepoke( ddehandle, "Z" + str(j) +"S19", xcpprs)
+ddepoke( ddehandle, "Z" + str(j) +"S20", xdat)
+ddepoke( ddehandle, "Z" + str(j) +"S21", xzeit)
+
+j=j+1
+endif
+
+if i < 18 then
+i=i+1
+goto nochmal
+endif
+ 
+HostFieldGetData("ende", xende)
+if xende <> "Ende" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

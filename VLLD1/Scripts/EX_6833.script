@@ -1,0 +1,70 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim yykdnr, xxkdnr, xxknam, xxdvk, xxgbz, xxrgkz, xxavq, xxnvq, xxgrem, xxhrem, xxtext, xxaend, errmsg, datei, pfad_datei, source as string 
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Objektauffälligkeiten.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "Kunden-Nr")
+ddepoke( ddehandle, "Z1S2", "Name")
+ddepoke( ddehandle, "Z1S3", "Druch.VK")
+ddepoke( ddehandle, "Z1S4", "GBz")
+ddepoke( ddehandle, "Z1S5", "Reg.Kz")
+ddepoke( ddehandle, "Z1S6", "AV")
+ddepoke( ddehandle, "Z1S7", "NV")
+ddepoke( ddehandle, "Z1S8", "geringe Remi")
+ddepoke( ddehandle, "Z1S9", "hohe Remi")
+ddepoke( ddehandle, "Z1S10", "Text")
+ddepoke( ddehandle, "Z1S11", "Änd")
+
+
+nochmal:
+
+HostFieldGetLineData("sfkdnr", i, xxkdnr)
+HostFieldGetLineData("sfknam", i, xxknam)
+HostFieldGetLineData("sfdvk",  i, xxdvk)
+HostFieldGetLineData("sfgbz",  i, xxgbz)
+HostFieldGetLineData("sfrgkz", i, xxrgkz)
+HostFieldGetLineData("sfavq",  i, xxavq)
+HostFieldGetLineData("sfnvq",  i, xxnvq)
+HostFieldGetLineData("sfgrem", i, xxgrem)
+HostFieldGetLineData("sfhrem", i, xxhrem)
+HostFieldGetLineData("sftext", i, xxtext)
+HostFieldGetLineData("sfaend", i, xxaend)
+
+HostFieldGetLineData("sfkdnr", i, yykdnr)
+
+
+if (xxkdnr <> "") then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xxkdnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xxknam)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xxdvk)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xxgbz)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xxrgkz)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xxavq)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xxnvq)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xxgrem)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xxhrem)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xxtext)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xxaend)
+j=j+1
+endif
+
+if i < 19 then
+i=i+1
+goto nochmal
+endif
+
+if yykdnr <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

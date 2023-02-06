@@ -1,0 +1,27 @@
+﻿dim text, ErrorMsg as String
+dim rc as Integer
+
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+
+rc = EzSQLQuery("SELECT digits(mpnr), DIGITS(mpnr) concat ' 'concat mpname FROM GRMPAP order by digits(mpnr)", text, ErrorMsg)
+PanelFieldSetProp ("C2NR01", 5, text) 
+PanelFieldSetProp ("C2NR02", 5, text) 
+PanelFieldSetProp ("C2NR03", 5, text) 
+PanelFieldSetProp ("C2NR04", 5, text) 
+PanelFieldSetProp ("C2NR05", 5, text) 
+PanelFieldSetProp ("C2NR06", 5, text) 
+PanelFieldSetProp ("C2NR07", 5, text) 
+PanelFieldSetProp ("C2NR08", 5, text) 
+PanelFieldSetProp ("C2NR09", 5, text) 
+PanelFieldSetProp ("C2NR10", 5, text) 
+PanelFieldSetProp ("C2NR11", 5, text) 
+PanelFieldSetProp ("C2NR12", 5, text) 
+PanelFieldSetProp ("C2NR99", 5, text) 
+
+
+PanelUpdateEnable(2)

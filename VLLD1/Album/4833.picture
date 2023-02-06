@@ -1,0 +1,957 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="SRC5/KU20DSMU(FORMAT1)" library="SRC5" member_name="KU20DSMU">
+    <size cx="80" cy="24"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f6" caption="F6" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="roll_up" caption="ROLL_UP" attention_key="false"/>
+    <action key="roll_down" caption="ROLL_DOWN" attention_key="false"/>
+    <field field_type="screen_part" name="FORMAT1">
+      <area>
+        <position/>
+        <size cx="80" cy="24"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+      <area>
+        <position x="1"/>
+        <size cx="18" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="PGMTIT" short_name="PGMTIT" data_type="alphanumeric" display_length="30" data_length="30">
+      <area>
+        <position x="25"/>
+        <size cx="30" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+      <area>
+        <position x="63"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+      <area>
+        <position x="72"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="JOB" short_name="JOB" data_type="alphanumeric" display_length="10" data_length="10">
+      <area>
+        <position x="1" y="1"/>
+        <size cx="10" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="*SYSNAME" short_name="*SYSNAME" data_type="alphanumeric" display_length="8" data_length="8">
+      <area>
+        <position x="12" y="1"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="USER" short_name="USER" data_type="alphanumeric" display_length="10" data_length="10">
+      <area>
+        <position x="63" y="1"/>
+        <size cx="10" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="PGMNAM" short_name="PGMNAM" data_type="alphanumeric" display_length="6" data_length="6">
+      <area>
+        <position x="74" y="1"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="yellow"/>
+    </field>
+    <field field_type="fixed_text" value="   KdNr  Name   FF 1  FF 2 Stat.Nr Ga Ug  Teil  Kunde                          " display_length="79" data_length="79" underline="true">
+      <area>
+        <position x="1" y="2"/>
+        <size cx="79" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="both" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" underline="true" high_intensity="true">
+      <area>
+        <position x="1" y="3"/>
+        <size cx="7" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="GART" short_name="GART" data_type="zoned_decimal" display_length="2" data_length="2" underline="true" high_intensity="true">
+      <area>
+        <position x="36" y="3"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="GAUG" short_name="GAUG" data_type="zoned_decimal" display_length="2" data_length="2" underline="true" high_intensity="true">
+      <area>
+        <position x="39" y="3"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="TEIL" short_name="TEIL" data_type="alphanumeric" display_length="6" data_length="6" underline="true" high_intensity="true">
+      <area>
+        <position x="42" y="3"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="XXKNAM" short_name="XXKNAM" data_type="alphanumeric" display_length="31" data_length="31">
+      <area>
+        <position x="49" y="3"/>
+        <size cx="31" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Von Kunde :" display_length="11" data_length="11">
+      <area>
+        <position x="1" y="5"/>
+        <size cx="11" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="XXVKDNR" short_name="XXVKDNR" data_type="zoned_decimal" display_length="7" data_length="7" underline="true" high_intensity="true">
+      <area>
+        <position x="13" y="5"/>
+        <size cx="7" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="XXVKDNAM" short_name="XXVKDNAM" data_type="alphanumeric" display_length="19" data_length="19">
+      <area>
+        <position x="21" y="5"/>
+        <size cx="19" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Nach Kunde:" display_length="11" data_length="11">
+      <area>
+        <position x="41" y="5"/>
+        <size cx="11" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="XXNKDNR" short_name="XXNKDNR" data_type="zoned_decimal" display_length="7" data_length="7" underline="true" high_intensity="true">
+      <area>
+        <position x="53" y="5"/>
+        <size cx="7" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="XXNKDNAM" short_name="XXNKDNAM" data_type="alphanumeric" display_length="19" data_length="19">
+      <area>
+        <position x="61" y="5"/>
+        <size cx="19" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="EHASTRA   :" display_length="11" data_length="11">
+      <area>
+        <position x="1" y="6"/>
+        <size cx="11" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="EHASTRA" short_name="EHASTRA" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true">
+      <area>
+        <position x="13" y="6"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Sortierung:" display_length="11" data_length="11">
+      <area>
+        <position x="1" y="7"/>
+        <size cx="11" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="XXSORT" short_name="XXSORT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true">
+      <area>
+        <position x="13" y="7"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="(W = nach Warengruppe/Titel, sonst alphabetisch)" display_length="48" data_length="48">
+      <area>
+        <position x="15" y="7"/>
+        <size cx="48" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="          ObjN    Folge  Preis Menge Titel  VDZ-Nr V.Int.Nr EhCd Teil   Verlag " display_length="79" data_length="79" underline="true">
+      <area>
+        <position x="1" y="8"/>
+        <size cx="79" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="Zusätzl.:" display_length="9" data_length="9">
+      <area>
+        <position x="1" y="9"/>
+        <size cx="9" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="OBJNR" short_name="OBJNR" data_type="zoned_decimal" display_length="5" data_length="5" underline="true" high_intensity="true">
+      <area>
+        <position x="11" y="9"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="XXFOLG" short_name="XXFOLG" data_type="zoned_decimal" display_length="8" data_length="8" underline="true" high_intensity="true">
+      <area>
+        <position x="17" y="9"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="XXBNEU" short_name="XXBNEU" data_type="zoned_decimal" display_length="5" data_length="5" underline="true" high_intensity="true" decimal_positions="2">
+      <area>
+        <position x="26" y="9"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="XXMENG" short_name="XXMENG" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" high_intensity="true">
+      <area>
+        <position x="32" y="9"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="input" name="STITEL" short_name="STITEL" data_type="alphanumeric" display_length="6" data_length="6" underline="true" high_intensity="true">
+      <area>
+        <position x="38" y="9"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="input" name="VDZ" short_name="VDZ" data_type="zoned_decimal" display_length="5" data_length="5" underline="true" high_intensity="true">
+      <area>
+        <position x="46" y="9"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="input" name="VINR" short_name="VINR" data_type="alphanumeric" display_length="6" data_length="6" underline="true" high_intensity="true">
+      <area>
+        <position x="53" y="9"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="input" name="EHCD" short_name="EHCD" data_type="zoned_decimal" display_length="2" data_length="2" underline="true" high_intensity="true">
+      <area>
+        <position x="60" y="9"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="input" name="EHUNR" short_name="EHUNR" data_type="zoned_decimal" display_length="2" data_length="2" underline="true" high_intensity="true">
+      <area>
+        <position x="63" y="9"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="input" name="TTITEL" short_name="TTITEL" data_type="alphanumeric" display_length="6" data_length="6" underline="true" high_intensity="true">
+      <area>
+        <position x="66" y="9"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="input" name="SVNR" short_name="SVNR" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" high_intensity="true">
+      <area>
+        <position x="74" y="9"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="XXONAM" short_name="XXONAM" data_type="alphanumeric" display_length="21" data_length="21">
+      <area>
+        <position x="11" y="10"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value=" EhCd ObjN     Folge Objektbezeichnung    Bezug  Preis Menge    Gesamt ERRH G  " display_length="79" data_length="79" underline="true">
+      <area>
+        <position x="1" y="11"/>
+        <size cx="79" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="EHCD01" short_name="EHCD01" data_type="zoned_decimal" display_length="2" data_length="2">
+      <area>
+        <position x="1" y="12"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="EHUG01" short_name="EHUG01" data_type="zoned_decimal" display_length="2" data_length="2">
+      <area>
+        <position x="4" y="12"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="OBJ01" short_name="OBJ01" data_type="zoned_decimal" display_length="5" data_length="5">
+      <area>
+        <position x="7" y="12"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="FOL01" short_name="FOL01" data_type="zoned_decimal" display_length="8" data_length="8" underline="true" high_intensity="true">
+      <area>
+        <position x="13" y="12"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ONAM01" short_name="ONAM01" data_type="alphanumeric" display_length="21" data_length="21">
+      <area>
+        <position x="22" y="12"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BEZ01" short_name="BEZ01" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="44" y="12"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BNEU01" short_name="BNEU01" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="49" y="12"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="MENG01" short_name="MENG01" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" high_intensity="true">
+      <area>
+        <position x="57" y="12"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GES01" short_name="GES01" data_type="zoned_decimal" display_length="9" data_length="7" decimal_positions="2">
+      <area>
+        <position x="62" y="12"/>
+        <size cx="9" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ERRH01" short_name="ERRH01" data_type="zoned_decimal" display_length="1" data_length="1">
+      <area>
+        <position x="73" y="12"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GEB01" short_name="GEB01" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="77" y="12"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="EHCD02" short_name="EHCD02" data_type="zoned_decimal" display_length="2" data_length="2">
+      <area>
+        <position x="1" y="13"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="EHUG02" short_name="EHUG02" data_type="zoned_decimal" display_length="2" data_length="2">
+      <area>
+        <position x="4" y="13"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="OBJ02" short_name="OBJ02" data_type="zoned_decimal" display_length="5" data_length="5">
+      <area>
+        <position x="7" y="13"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="FOL02" short_name="FOL02" data_type="zoned_decimal" display_length="8" data_length="8" underline="true" high_intensity="true">
+      <area>
+        <position x="13" y="13"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ONAM02" short_name="ONAM02" data_type="alphanumeric" display_length="21" data_length="21">
+      <area>
+        <position x="22" y="13"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BEZ02" short_name="BEZ02" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="44" y="13"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BNEU02" short_name="BNEU02" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="49" y="13"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="MENG02" short_name="MENG02" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" high_intensity="true">
+      <area>
+        <position x="57" y="13"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GES02" short_name="GES02" data_type="zoned_decimal" display_length="9" data_length="7" decimal_positions="2">
+      <area>
+        <position x="62" y="13"/>
+        <size cx="9" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ERRH02" short_name="ERRH02" data_type="zoned_decimal" display_length="1" data_length="1">
+      <area>
+        <position x="73" y="13"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GEB02" short_name="GEB02" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="77" y="13"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="EHCD03" short_name="EHCD03" data_type="zoned_decimal" display_length="2" data_length="2">
+      <area>
+        <position x="1" y="14"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="EHUG03" short_name="EHUG03" data_type="zoned_decimal" display_length="2" data_length="2">
+      <area>
+        <position x="4" y="14"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="OBJ03" short_name="OBJ03" data_type="zoned_decimal" display_length="5" data_length="5">
+      <area>
+        <position x="7" y="14"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="FOL03" short_name="FOL03" data_type="zoned_decimal" display_length="8" data_length="8" underline="true" high_intensity="true">
+      <area>
+        <position x="13" y="14"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ONAM03" short_name="ONAM03" data_type="alphanumeric" display_length="21" data_length="21">
+      <area>
+        <position x="22" y="14"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BEZ03" short_name="BEZ03" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="44" y="14"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BNEU03" short_name="BNEU03" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="49" y="14"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="MENG03" short_name="MENG03" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" high_intensity="true">
+      <area>
+        <position x="57" y="14"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GES03" short_name="GES03" data_type="zoned_decimal" display_length="9" data_length="7" decimal_positions="2">
+      <area>
+        <position x="62" y="14"/>
+        <size cx="9" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ERRH03" short_name="ERRH03" data_type="zoned_decimal" display_length="1" data_length="1">
+      <area>
+        <position x="73" y="14"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GEB03" short_name="GEB03" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="77" y="14"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="EHCD04" short_name="EHCD04" data_type="zoned_decimal" display_length="2" data_length="2">
+      <area>
+        <position x="1" y="15"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="EHUG04" short_name="EHUG04" data_type="zoned_decimal" display_length="2" data_length="2">
+      <area>
+        <position x="4" y="15"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="OBJ04" short_name="OBJ04" data_type="zoned_decimal" display_length="5" data_length="5">
+      <area>
+        <position x="7" y="15"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="FOL04" short_name="FOL04" data_type="zoned_decimal" display_length="8" data_length="8" underline="true" high_intensity="true">
+      <area>
+        <position x="13" y="15"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ONAM04" short_name="ONAM04" data_type="alphanumeric" display_length="21" data_length="21">
+      <area>
+        <position x="22" y="15"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BEZ04" short_name="BEZ04" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="44" y="15"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BNEU04" short_name="BNEU04" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="49" y="15"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="MENG04" short_name="MENG04" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" high_intensity="true">
+      <area>
+        <position x="57" y="15"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GES04" short_name="GES04" data_type="zoned_decimal" display_length="9" data_length="7" decimal_positions="2">
+      <area>
+        <position x="62" y="15"/>
+        <size cx="9" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ERRH04" short_name="ERRH04" data_type="zoned_decimal" display_length="1" data_length="1">
+      <area>
+        <position x="73" y="15"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GEB04" short_name="GEB04" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="77" y="15"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="EHCD05" short_name="EHCD05" data_type="zoned_decimal" display_length="2" data_length="2">
+      <area>
+        <position x="1" y="16"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="EHUG05" short_name="EHUG05" data_type="zoned_decimal" display_length="2" data_length="2">
+      <area>
+        <position x="4" y="16"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="OBJ05" short_name="OBJ05" data_type="zoned_decimal" display_length="5" data_length="5">
+      <area>
+        <position x="7" y="16"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="FOL05" short_name="FOL05" data_type="zoned_decimal" display_length="8" data_length="8" underline="true" high_intensity="true">
+      <area>
+        <position x="13" y="16"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ONAM05" short_name="ONAM05" data_type="alphanumeric" display_length="21" data_length="21">
+      <area>
+        <position x="22" y="16"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BEZ05" short_name="BEZ05" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="44" y="16"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BNEU05" short_name="BNEU05" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="49" y="16"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="MENG05" short_name="MENG05" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" high_intensity="true">
+      <area>
+        <position x="57" y="16"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GES05" short_name="GES05" data_type="zoned_decimal" display_length="9" data_length="7" decimal_positions="2">
+      <area>
+        <position x="62" y="16"/>
+        <size cx="9" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ERRH05" short_name="ERRH05" data_type="zoned_decimal" display_length="1" data_length="1">
+      <area>
+        <position x="73" y="16"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GEB05" short_name="GEB05" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="77" y="16"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="EHCD06" short_name="EHCD06" data_type="zoned_decimal" display_length="2" data_length="2">
+      <area>
+        <position x="1" y="17"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="EHUG06" short_name="EHUG06" data_type="zoned_decimal" display_length="2" data_length="2">
+      <area>
+        <position x="4" y="17"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="OBJ06" short_name="OBJ06" data_type="zoned_decimal" display_length="5" data_length="5">
+      <area>
+        <position x="7" y="17"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="FOL06" short_name="FOL06" data_type="zoned_decimal" display_length="8" data_length="8" underline="true" high_intensity="true">
+      <area>
+        <position x="13" y="17"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ONAM06" short_name="ONAM06" data_type="alphanumeric" display_length="21" data_length="21">
+      <area>
+        <position x="22" y="17"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BEZ06" short_name="BEZ06" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="44" y="17"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BNEU06" short_name="BNEU06" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="49" y="17"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="MENG06" short_name="MENG06" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" high_intensity="true">
+      <area>
+        <position x="57" y="17"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GES06" short_name="GES06" data_type="zoned_decimal" display_length="9" data_length="7" decimal_positions="2">
+      <area>
+        <position x="62" y="17"/>
+        <size cx="9" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ERRH06" short_name="ERRH06" data_type="zoned_decimal" display_length="1" data_length="1">
+      <area>
+        <position x="73" y="17"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GEB06" short_name="GEB06" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="77" y="17"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="EHCD07" short_name="EHCD07" data_type="zoned_decimal" display_length="2" data_length="2">
+      <area>
+        <position x="1" y="18"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="EHUG07" short_name="EHUG07" data_type="zoned_decimal" display_length="2" data_length="2">
+      <area>
+        <position x="4" y="18"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="OBJ07" short_name="OBJ07" data_type="zoned_decimal" display_length="5" data_length="5">
+      <area>
+        <position x="7" y="18"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="FOL07" short_name="FOL07" data_type="zoned_decimal" display_length="8" data_length="8" underline="true" high_intensity="true">
+      <area>
+        <position x="13" y="18"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ONAM07" short_name="ONAM07" data_type="alphanumeric" display_length="21" data_length="21">
+      <area>
+        <position x="22" y="18"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BEZ07" short_name="BEZ07" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="44" y="18"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BNEU07" short_name="BNEU07" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="49" y="18"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="MENG07" short_name="MENG07" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" high_intensity="true">
+      <area>
+        <position x="57" y="18"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GES07" short_name="GES07" data_type="zoned_decimal" display_length="9" data_length="7" decimal_positions="2">
+      <area>
+        <position x="62" y="18"/>
+        <size cx="9" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ERRH07" short_name="ERRH07" data_type="zoned_decimal" display_length="1" data_length="1">
+      <area>
+        <position x="73" y="18"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GEB07" short_name="GEB07" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="77" y="18"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="EHCD08" short_name="EHCD08" data_type="zoned_decimal" display_length="2" data_length="2">
+      <area>
+        <position x="1" y="19"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="EHUG08" short_name="EHUG08" data_type="zoned_decimal" display_length="2" data_length="2">
+      <area>
+        <position x="4" y="19"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="OBJ08" short_name="OBJ08" data_type="zoned_decimal" display_length="5" data_length="5">
+      <area>
+        <position x="7" y="19"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="FOL08" short_name="FOL08" data_type="zoned_decimal" display_length="8" data_length="8" underline="true" high_intensity="true">
+      <area>
+        <position x="13" y="19"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ONAM08" short_name="ONAM08" data_type="alphanumeric" display_length="21" data_length="21">
+      <area>
+        <position x="22" y="19"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BEZ08" short_name="BEZ08" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="44" y="19"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BNEU08" short_name="BNEU08" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="49" y="19"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="MENG08" short_name="MENG08" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" high_intensity="true">
+      <area>
+        <position x="57" y="19"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GES08" short_name="GES08" data_type="zoned_decimal" display_length="9" data_length="7" decimal_positions="2">
+      <area>
+        <position x="62" y="19"/>
+        <size cx="9" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ERRH08" short_name="ERRH08" data_type="zoned_decimal" display_length="1" data_length="1">
+      <area>
+        <position x="73" y="19"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GEB08" short_name="GEB08" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="77" y="19"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="EHCD09" short_name="EHCD09" data_type="zoned_decimal" display_length="2" data_length="2">
+      <area>
+        <position x="1" y="20"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="EHUG09" short_name="EHUG09" data_type="zoned_decimal" display_length="2" data_length="2">
+      <area>
+        <position x="4" y="20"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="OBJ09" short_name="OBJ09" data_type="zoned_decimal" display_length="5" data_length="5">
+      <area>
+        <position x="7" y="20"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="FOL09" short_name="FOL09" data_type="zoned_decimal" display_length="8" data_length="8" underline="true" high_intensity="true">
+      <area>
+        <position x="13" y="20"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ONAM09" short_name="ONAM09" data_type="alphanumeric" display_length="21" data_length="21">
+      <area>
+        <position x="22" y="20"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BEZ09" short_name="BEZ09" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="44" y="20"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BNEU09" short_name="BNEU09" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="49" y="20"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="MENG09" short_name="MENG09" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" high_intensity="true">
+      <area>
+        <position x="57" y="20"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GES09" short_name="GES09" data_type="zoned_decimal" display_length="9" data_length="7" decimal_positions="2">
+      <area>
+        <position x="62" y="20"/>
+        <size cx="9" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ERRH09" short_name="ERRH09" data_type="zoned_decimal" display_length="1" data_length="1">
+      <area>
+        <position x="73" y="20"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GEB09" short_name="GEB09" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="77" y="20"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="EHCD10" short_name="EHCD10" data_type="zoned_decimal" display_length="2" data_length="2">
+      <area>
+        <position x="1" y="21"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="EHUG10" short_name="EHUG10" data_type="zoned_decimal" display_length="2" data_length="2">
+      <area>
+        <position x="4" y="21"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="OBJ10" short_name="OBJ10" data_type="zoned_decimal" display_length="5" data_length="5">
+      <area>
+        <position x="7" y="21"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="FOL10" short_name="FOL10" data_type="zoned_decimal" display_length="8" data_length="8" underline="true" high_intensity="true">
+      <area>
+        <position x="13" y="21"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ONAM10" short_name="ONAM10" data_type="alphanumeric" display_length="21" data_length="21">
+      <area>
+        <position x="22" y="21"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BEZ10" short_name="BEZ10" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="44" y="21"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BNEU10" short_name="BNEU10" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="49" y="21"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="MENG10" short_name="MENG10" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" high_intensity="true">
+      <area>
+        <position x="57" y="21"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GES10" short_name="GES10" data_type="zoned_decimal" display_length="9" data_length="7" decimal_positions="2">
+      <area>
+        <position x="62" y="21"/>
+        <size cx="9" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ERRH10" short_name="ERRH10" data_type="zoned_decimal" display_length="1" data_length="1">
+      <area>
+        <position x="73" y="21"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GEB10" short_name="GEB10" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="77" y="21"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Systemnachricht:" display_length="16" data_length="16">
+      <area>
+        <position x="1" y="22"/>
+        <size cx="16" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="MSG" short_name="MSG" data_type="alphanumeric" display_length="55" data_length="55" blink="conditional">
+      <area>
+        <position x="18" y="22"/>
+        <size cx="55" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="XXWEITER" short_name="XXWEITER" data_type="alphanumeric" display_length="4" data_length="4">
+      <area>
+        <position x="75" y="22"/>
+        <size cx="4" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="F3 = Ende ; F6 = Verbuchen ; F9 = Objekt hizufügen" display_length="50" data_length="50">
+      <area>
+        <position x="1" y="23"/>
+        <size cx="50" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

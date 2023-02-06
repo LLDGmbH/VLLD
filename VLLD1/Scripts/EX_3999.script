@@ -1,0 +1,71 @@
+﻿DIM ddehandle, i, j, tn, msg, rc as integer
+dim xfil, xobnr, xtitel, xfolge, xmenge, xdatum, xltyp, xpos, xende, sql, errmsg, text, text2, datei, pfad_datei as string 
+dim source as string
+i = 0
+j=2
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+HostFieldGetData("datum_sav", xdatum)
+HostFieldGetData("typ",xltyp)
+
+datei = "LFS_" + xltyp + "_" + xdatum + "_.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "Obnr")
+ddepoke( ddehandle, "Z1S2", "Titel")
+ddepoke( ddehandle, "Z1S3", "Folge")
+ddepoke( ddehandle, "Z1S4", "Menge Filiale 1")
+ddepoke( ddehandle, "Z1S5", "Menge Filiale 2")
+rem ddepoke( ddehandle, "Z1S6", "Dispo Filiale 2")
+
+
+nochmal:
+
+HostFieldGetLineData("objn", i, xobnr)
+HostFieldGetLineData("titel", i, xtitel)
+HostFieldGetLineData("folge_6", i, xfolge)
+HostFieldGetLineData("exdisp", i, xmenge)
+HostFieldGetLineData("posalt", i, xpos)
+
+text = ""
+
+if ( xobnr <> "" ) then
+sql = "SELECT exdisp FROM dipf02/xxregp where objn = " + xobnr + " and folge = 20" + xfolge 
+rc = EzSQLQuery(sql, text, errMsg)
+
+Text2 = trim(text)
+if ( text2 = "0" ) then
+sql = "SELECT lbez FROM dipf02/xxregp where objn = " + xobnr + " and folge = 20" + xfolge 
+rc = EzSQLQuery(sql, text, errMsg)
+endif
+endif
+
+if (xfolge <> "") then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xobnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xtitel)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xfolge)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xmenge)
+ddepoke( ddehandle, "Z" + str(j) +"S5", text)
+rem ddepoke( ddehandle, "Z" + str(j) +"S5", text2)
+
+j=j+1
+endif
+
+if i < 18 then
+i=i+1
+goto nochmal
+endif
+ 
+HostFieldGetData("ende",xende)
+
+if xende <> "Ende" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

@@ -1,0 +1,112 @@
+﻿REM EX_7112
+
+DIM ddehandle, i, j, msg, rc as integer
+dim xObj, xNam, xFolg1,  xFolg2, xFolg3, xFolgA, xKdNr, xKNam, xGArt, xBez1, xRem1, xVK1, xD1, xBez2, xRem2, xVK2, xD2, xBez3, xRem3, xVK3, xD3, xBezA, xDpMg, xRemA, xVKA, errmsg, datei, pfad_datei as string 
+
+dim source as string
+i = 0
+j=5
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+HostFieldGetData("S2OBJ", xObj)
+HostFieldGetData("S2NAM", xNam)
+HostFieldGetData("S2FOLG1", xFolg1)
+HostFieldGetData("S2FOLG2", xFolg2)
+HostFieldGetData("S2FOLG3", xFolg3)
+HostFieldGetData("S2FOLGA", xFolgA)
+
+datei = "Displayauslieferungen_Kunden.xls"
+pfad_datei = @"@&LWV@"  + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "Objekt")
+ddepoke( ddehandle, "Z1S2", xObj)
+ddepoke( ddehandle, "Z1S3", xNam)
+
+ddepoke( ddehandle, "Z3S5" , xFolg1)
+ddepoke( ddehandle, "Z3S9" , xFolg2)
+ddepoke( ddehandle, "Z3S13", xFolg3)
+ddepoke( ddehandle, "Z3S17", xFolgA)
+
+
+ddepoke( ddehandle, "Z4S1" , "Kd-Nr")
+ddepoke( ddehandle, "Z4S2" , "Name")
+ddepoke( ddehandle, "Z4S3" , "G-Art")
+ddepoke( ddehandle, "Z4S4" , "Bezug")
+ddepoke( ddehandle, "Z4S5" , "Rem")
+ddepoke( ddehandle, "Z4S6" , "Vk")
+ddepoke( ddehandle, "Z4S7" , "D")
+ddepoke( ddehandle, "Z4S8" , "Bezug")
+ddepoke( ddehandle, "Z4S9" , "Rem")
+ddepoke( ddehandle, "Z4S10", "Vk")
+ddepoke( ddehandle, "Z4S11", "D")
+ddepoke( ddehandle, "Z4S12", "Bezug")
+ddepoke( ddehandle, "Z4S13", "Rem")
+ddepoke( ddehandle, "Z4S14", "Vk")
+ddepoke( ddehandle, "Z4S15", "D")
+ddepoke( ddehandle, "Z4S16", "Bezug")
+ddepoke( ddehandle, "Z4S17", "DpMg")
+ddepoke( ddehandle, "Z4S18", "Rem")
+ddepoke( ddehandle, "Z4S19", "Vk")
+
+
+nochmal:
+
+HostFieldGetLineData("S2KdNr", i, xKdNr)
+HostFieldGetLineData("S2KNam", i, xKNAM)
+HostFieldGetLineData("S2GArt", i, xGArt)
+HostFieldGetLineData("S2Bez1", i, xBez1)
+HostFieldGetLineData("S2Rem1", i, xRem1)
+HostFieldGetLineData("S2Vk1" , i, xVk1)
+HostFieldGetLineData("S2DSP1", i, xD1)
+HostFieldGetLineData("S2Bez2", i, xBez2)
+HostFieldGetLineData("S2Rem2", i, xRem2)
+HostFieldGetLineData("S2Vk2" , i, xVk2)
+HostFieldGetLineData("S2DSP2", i, xD2)
+HostFieldGetLineData("S2Bez3", i, xBez3)
+HostFieldGetLineData("S2Rem3", i, xRem3)
+HostFieldGetLineData("S2Vk3" , i, xVk3)
+HostFieldGetLineData("S2DSP3", i, xD3)
+HostFieldGetLineData("S2BezA", i, xBezA)
+HostFieldGetLineData("S2DBZA", i, xDpMg)
+HostFieldGetLineData("S2RemA", i, xRemA)
+HostFieldGetLineData("S2VkA" , i, xVkA)
+
+
+if (xKNam <> "") then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xKdNr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xKNAM)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xGArt)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xBez1)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xRem1)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xVk1)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xD1)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xBez2)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xRem2)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xVk2)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xD2)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xBez3)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xRem3)
+ddepoke( ddehandle, "Z" + str(j) +"S14", xVk3)
+ddepoke( ddehandle, "Z" + str(j) +"S15", xD3)
+ddepoke( ddehandle, "Z" + str(j) +"S16", xBezA)
+ddepoke( ddehandle, "Z" + str(j) +"S17", xDpMg)
+ddepoke( ddehandle, "Z" + str(j) +"S18", xRemA)
+ddepoke( ddehandle, "Z" + str(j) +"S19", xVkA)
+j=j+1
+endif
+
+if i < 17 then
+i=i+1
+goto nochmal
+endif
+ 
+if xKNam <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

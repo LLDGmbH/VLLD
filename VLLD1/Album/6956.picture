@@ -1,0 +1,2320 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="OSNA_COL/IS32NDS(SFC1+KEY01)" library="OSNA_COL" member_name="IS32NDS">
+    <size cx="132" cy="27"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="f24" caption="F24" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <field field_type="screen_part" name="SFC1" overlay="true">
+      <area>
+        <position/>
+        <size cx="132" cy="25"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="KEY01" overlay="true">
+      <area>
+        <position y="25"/>
+        <size cx="132" cy="2"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SDS_JOB" short_name="SDS_JOB" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="ISPC-Daten manuell eingeben" display_length="27" data_length="27">
+          <area>
+            <position x="51"/>
+            <size cx="27" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SDS_USER" short_name="SDS_USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="96"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="IS32S1" display_length="6" data_length="6">
+          <area>
+            <position x="107"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="114"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="123"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Fi ObjNr Name               Folge      Diff      IUmb      Remi    ErfDat   ErfZeit ErfUsr      BelDat  BelNr   VerDat   VerZeit A" display_length="130" data_length="130" underline="true">
+          <area>
+            <position x="1" y="2"/>
+            <size cx="130" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S1FIL" short_name="S1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="3"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="10" y="3"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1FOLG" short_name="S1FOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="29" y="3"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DIFF" short_name="S1DIFF" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="37" y="3"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1IUMB" short_name="S1IUMB" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="47" y="3"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VREM" short_name="S1VREM" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="57" y="3"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1EDAT" short_name="S1EDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="67" y="3"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUHR" short_name="S1EUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="76" y="3"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUSR" short_name="S1EUSR" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="85" y="3"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLDAT" short_name="S1BLDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="96" y="3"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLNR" short_name="S1BLNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="105" y="3"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VDAT" short_name="S1VDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="112" y="3"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VUHR" short_name="S1VUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="121" y="3"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AKT" short_name="S1AKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="3"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1FIL" short_name="S1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="10" y="4"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1FOLG" short_name="S1FOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="29" y="4"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DIFF" short_name="S1DIFF" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="37" y="4"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1IUMB" short_name="S1IUMB" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="47" y="4"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VREM" short_name="S1VREM" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="57" y="4"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1EDAT" short_name="S1EDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="67" y="4"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUHR" short_name="S1EUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="76" y="4"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUSR" short_name="S1EUSR" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="85" y="4"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLDAT" short_name="S1BLDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="96" y="4"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLNR" short_name="S1BLNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="105" y="4"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VDAT" short_name="S1VDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="112" y="4"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VUHR" short_name="S1VUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="121" y="4"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AKT" short_name="S1AKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1FIL" short_name="S1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="10" y="5"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1FOLG" short_name="S1FOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="29" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DIFF" short_name="S1DIFF" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="37" y="5"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1IUMB" short_name="S1IUMB" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="47" y="5"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VREM" short_name="S1VREM" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="57" y="5"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1EDAT" short_name="S1EDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="67" y="5"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUHR" short_name="S1EUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="76" y="5"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUSR" short_name="S1EUSR" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="85" y="5"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLDAT" short_name="S1BLDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="96" y="5"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLNR" short_name="S1BLNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="105" y="5"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VDAT" short_name="S1VDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="112" y="5"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VUHR" short_name="S1VUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="121" y="5"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AKT" short_name="S1AKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S1FIL" short_name="S1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="10" y="6"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1FOLG" short_name="S1FOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="29" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DIFF" short_name="S1DIFF" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="37" y="6"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1IUMB" short_name="S1IUMB" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="47" y="6"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VREM" short_name="S1VREM" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="57" y="6"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1EDAT" short_name="S1EDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="67" y="6"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUHR" short_name="S1EUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="76" y="6"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUSR" short_name="S1EUSR" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="85" y="6"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLDAT" short_name="S1BLDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="96" y="6"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLNR" short_name="S1BLNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="105" y="6"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VDAT" short_name="S1VDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="112" y="6"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VUHR" short_name="S1VUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="121" y="6"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AKT" short_name="S1AKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1FIL" short_name="S1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="10" y="7"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1FOLG" short_name="S1FOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="29" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DIFF" short_name="S1DIFF" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="37" y="7"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1IUMB" short_name="S1IUMB" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="47" y="7"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VREM" short_name="S1VREM" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="57" y="7"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1EDAT" short_name="S1EDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="67" y="7"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUHR" short_name="S1EUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="76" y="7"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUSR" short_name="S1EUSR" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="85" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLDAT" short_name="S1BLDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="96" y="7"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLNR" short_name="S1BLNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="105" y="7"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VDAT" short_name="S1VDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="112" y="7"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VUHR" short_name="S1VUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="121" y="7"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AKT" short_name="S1AKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1FIL" short_name="S1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="10" y="8"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1FOLG" short_name="S1FOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="29" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DIFF" short_name="S1DIFF" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="37" y="8"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1IUMB" short_name="S1IUMB" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="47" y="8"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VREM" short_name="S1VREM" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="57" y="8"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1EDAT" short_name="S1EDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="67" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUHR" short_name="S1EUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="76" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUSR" short_name="S1EUSR" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="85" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLDAT" short_name="S1BLDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="96" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLNR" short_name="S1BLNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="105" y="8"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VDAT" short_name="S1VDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="112" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VUHR" short_name="S1VUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="121" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AKT" short_name="S1AKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S1FIL" short_name="S1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="10" y="9"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1FOLG" short_name="S1FOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="29" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DIFF" short_name="S1DIFF" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="37" y="9"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1IUMB" short_name="S1IUMB" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="47" y="9"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VREM" short_name="S1VREM" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="57" y="9"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1EDAT" short_name="S1EDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="67" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUHR" short_name="S1EUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="76" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUSR" short_name="S1EUSR" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="85" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLDAT" short_name="S1BLDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="96" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLNR" short_name="S1BLNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="105" y="9"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VDAT" short_name="S1VDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="112" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VUHR" short_name="S1VUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="121" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AKT" short_name="S1AKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1FIL" short_name="S1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="10" y="10"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1FOLG" short_name="S1FOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="29" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DIFF" short_name="S1DIFF" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="37" y="10"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1IUMB" short_name="S1IUMB" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="47" y="10"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VREM" short_name="S1VREM" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="57" y="10"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1EDAT" short_name="S1EDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="67" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUHR" short_name="S1EUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="76" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUSR" short_name="S1EUSR" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="85" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLDAT" short_name="S1BLDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="96" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLNR" short_name="S1BLNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="105" y="10"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VDAT" short_name="S1VDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="112" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VUHR" short_name="S1VUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="121" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AKT" short_name="S1AKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1FIL" short_name="S1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="10" y="11"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1FOLG" short_name="S1FOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="29" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DIFF" short_name="S1DIFF" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="37" y="11"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1IUMB" short_name="S1IUMB" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="47" y="11"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VREM" short_name="S1VREM" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="57" y="11"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1EDAT" short_name="S1EDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="67" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUHR" short_name="S1EUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="76" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUSR" short_name="S1EUSR" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="85" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLDAT" short_name="S1BLDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="96" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLNR" short_name="S1BLNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="105" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VDAT" short_name="S1VDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="112" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VUHR" short_name="S1VUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="121" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AKT" short_name="S1AKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S1FIL" short_name="S1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="10" y="12"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1FOLG" short_name="S1FOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="29" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DIFF" short_name="S1DIFF" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="37" y="12"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1IUMB" short_name="S1IUMB" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="47" y="12"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VREM" short_name="S1VREM" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="57" y="12"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1EDAT" short_name="S1EDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="67" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUHR" short_name="S1EUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="76" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUSR" short_name="S1EUSR" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="85" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLDAT" short_name="S1BLDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="96" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLNR" short_name="S1BLNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="105" y="12"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VDAT" short_name="S1VDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="112" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VUHR" short_name="S1VUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="121" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AKT" short_name="S1AKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1FIL" short_name="S1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="10" y="13"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1FOLG" short_name="S1FOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="29" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DIFF" short_name="S1DIFF" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="37" y="13"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1IUMB" short_name="S1IUMB" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="47" y="13"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VREM" short_name="S1VREM" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="57" y="13"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1EDAT" short_name="S1EDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="67" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUHR" short_name="S1EUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="76" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUSR" short_name="S1EUSR" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="85" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLDAT" short_name="S1BLDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="96" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLNR" short_name="S1BLNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="105" y="13"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VDAT" short_name="S1VDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="112" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VUHR" short_name="S1VUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="121" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AKT" short_name="S1AKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1FIL" short_name="S1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="10" y="14"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1FOLG" short_name="S1FOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="29" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DIFF" short_name="S1DIFF" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="37" y="14"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1IUMB" short_name="S1IUMB" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="47" y="14"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VREM" short_name="S1VREM" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="57" y="14"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1EDAT" short_name="S1EDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="67" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUHR" short_name="S1EUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="76" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUSR" short_name="S1EUSR" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="85" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLDAT" short_name="S1BLDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="96" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLNR" short_name="S1BLNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="105" y="14"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VDAT" short_name="S1VDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="112" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VUHR" short_name="S1VUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="121" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AKT" short_name="S1AKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S1FIL" short_name="S1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="10" y="15"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1FOLG" short_name="S1FOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="29" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DIFF" short_name="S1DIFF" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="37" y="15"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1IUMB" short_name="S1IUMB" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="47" y="15"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VREM" short_name="S1VREM" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="57" y="15"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1EDAT" short_name="S1EDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="67" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUHR" short_name="S1EUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="76" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUSR" short_name="S1EUSR" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="85" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLDAT" short_name="S1BLDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="96" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLNR" short_name="S1BLNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="105" y="15"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VDAT" short_name="S1VDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="112" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VUHR" short_name="S1VUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="121" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AKT" short_name="S1AKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1FIL" short_name="S1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="10" y="16"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1FOLG" short_name="S1FOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="29" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DIFF" short_name="S1DIFF" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="37" y="16"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1IUMB" short_name="S1IUMB" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="47" y="16"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VREM" short_name="S1VREM" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="57" y="16"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1EDAT" short_name="S1EDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="67" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUHR" short_name="S1EUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="76" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUSR" short_name="S1EUSR" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="85" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLDAT" short_name="S1BLDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="96" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLNR" short_name="S1BLNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="105" y="16"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VDAT" short_name="S1VDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="112" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VUHR" short_name="S1VUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="121" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AKT" short_name="S1AKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1FIL" short_name="S1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="10" y="17"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1FOLG" short_name="S1FOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="29" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DIFF" short_name="S1DIFF" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="37" y="17"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1IUMB" short_name="S1IUMB" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="47" y="17"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VREM" short_name="S1VREM" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="57" y="17"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1EDAT" short_name="S1EDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="67" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUHR" short_name="S1EUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="76" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUSR" short_name="S1EUSR" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="85" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLDAT" short_name="S1BLDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="96" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLNR" short_name="S1BLNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="105" y="17"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VDAT" short_name="S1VDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="112" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VUHR" short_name="S1VUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="121" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AKT" short_name="S1AKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S1FIL" short_name="S1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="10" y="18"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1FOLG" short_name="S1FOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="29" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DIFF" short_name="S1DIFF" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="37" y="18"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1IUMB" short_name="S1IUMB" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="47" y="18"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VREM" short_name="S1VREM" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="57" y="18"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1EDAT" short_name="S1EDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="67" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUHR" short_name="S1EUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="76" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUSR" short_name="S1EUSR" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="85" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLDAT" short_name="S1BLDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="96" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLNR" short_name="S1BLNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="105" y="18"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VDAT" short_name="S1VDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="112" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VUHR" short_name="S1VUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="121" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AKT" short_name="S1AKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1FIL" short_name="S1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="10" y="19"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1FOLG" short_name="S1FOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="29" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DIFF" short_name="S1DIFF" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="37" y="19"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1IUMB" short_name="S1IUMB" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="47" y="19"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VREM" short_name="S1VREM" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="57" y="19"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1EDAT" short_name="S1EDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="67" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUHR" short_name="S1EUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="76" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUSR" short_name="S1EUSR" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="85" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLDAT" short_name="S1BLDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="96" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLNR" short_name="S1BLNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="105" y="19"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VDAT" short_name="S1VDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="112" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VUHR" short_name="S1VUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="121" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AKT" short_name="S1AKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1FIL" short_name="S1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="10" y="20"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1FOLG" short_name="S1FOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="29" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DIFF" short_name="S1DIFF" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="37" y="20"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1IUMB" short_name="S1IUMB" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="47" y="20"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VREM" short_name="S1VREM" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="57" y="20"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1EDAT" short_name="S1EDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="67" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUHR" short_name="S1EUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="76" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUSR" short_name="S1EUSR" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="85" y="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLDAT" short_name="S1BLDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="96" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLNR" short_name="S1BLNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="105" y="20"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VDAT" short_name="S1VDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="112" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VUHR" short_name="S1VUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="121" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AKT" short_name="S1AKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S1FIL" short_name="S1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="21"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="10" y="21"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1FOLG" short_name="S1FOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="29" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DIFF" short_name="S1DIFF" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="37" y="21"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1IUMB" short_name="S1IUMB" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="47" y="21"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VREM" short_name="S1VREM" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="57" y="21"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1EDAT" short_name="S1EDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="67" y="21"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUHR" short_name="S1EUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="76" y="21"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUSR" short_name="S1EUSR" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="85" y="21"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLDAT" short_name="S1BLDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="96" y="21"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLNR" short_name="S1BLNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="105" y="21"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VDAT" short_name="S1VDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="112" y="21"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VUHR" short_name="S1VUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="121" y="21"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AKT" short_name="S1AKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1FIL" short_name="S1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="22"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="10" y="22"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1FOLG" short_name="S1FOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="29" y="22"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DIFF" short_name="S1DIFF" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="37" y="22"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1IUMB" short_name="S1IUMB" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="47" y="22"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VREM" short_name="S1VREM" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="57" y="22"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1EDAT" short_name="S1EDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="67" y="22"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUHR" short_name="S1EUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="76" y="22"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUSR" short_name="S1EUSR" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="85" y="22"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLDAT" short_name="S1BLDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="96" y="22"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLNR" short_name="S1BLNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="105" y="22"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VDAT" short_name="S1VDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="112" y="22"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VUHR" short_name="S1VUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="121" y="22"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AKT" short_name="S1AKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1FIL" short_name="S1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="23"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="10" y="23"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1FOLG" short_name="S1FOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="29" y="23"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DIFF" short_name="S1DIFF" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="37" y="23"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1IUMB" short_name="S1IUMB" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="47" y="23"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VREM" short_name="S1VREM" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="57" y="23"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1EDAT" short_name="S1EDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="67" y="23"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUHR" short_name="S1EUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="76" y="23"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUSR" short_name="S1EUSR" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="85" y="23"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLDAT" short_name="S1BLDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="96" y="23"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLNR" short_name="S1BLNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="105" y="23"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VDAT" short_name="S1VDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="112" y="23"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VUHR" short_name="S1VUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="121" y="23"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AKT" short_name="S1AKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S1FIL" short_name="S1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="24"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="24"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="10" y="24"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1FOLG" short_name="S1FOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="29" y="24"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1DIFF" short_name="S1DIFF" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="37" y="24"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1IUMB" short_name="S1IUMB" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="47" y="24"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VREM" short_name="S1VREM" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="57" y="24"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1EDAT" short_name="S1EDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="67" y="24"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUHR" short_name="S1EUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="76" y="24"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EUSR" short_name="S1EUSR" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="85" y="24"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLDAT" short_name="S1BLDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="96" y="24"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1BLNR" short_name="S1BLNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="105" y="24"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VDAT" short_name="S1VDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="112" y="24"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1VUHR" short_name="S1VUHR" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="121" y="24"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AKT" short_name="S1AKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="Systemnachricht:" display_length="16" data_length="16">
+      <area>
+        <position x="1" y="25"/>
+        <size cx="16" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="MSG" short_name="MSG" data_type="alphanumeric" display_length="60" data_length="60" blink="conditional">
+      <area>
+        <position x="18" y="25"/>
+        <size cx="60" cy="1"/>
+      </area>
+      <color foreground="red"/>
+    </field>
+    <field field_type="fixed_text" value="F3 = Ende; X = Löschen" display_length="22" data_length="22">
+      <area>
+        <position x="1" y="26"/>
+        <size cx="22" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

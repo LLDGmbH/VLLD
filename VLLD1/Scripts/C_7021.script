@@ -1,0 +1,15 @@
+﻿dim text, xxnr, ErrorMsg,sqlstmd as String
+dim rc as Integer
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+sqlstmd = "select disnr, digits(disnr) concat ' ' concat disname from grdsnp"
+
+rc = EzSQLQuery(sqlstmd, text, ErrorMsg)
+
+PanelFieldSetProp ("SF1_DISPO", 5, text) 
+
+PanelUpdateEnable(2)

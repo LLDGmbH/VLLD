@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="SEATRUNK/SC52DSREM2(FORMAT1)" library="SEATRUNK" member_name="SC52DSREM2">
+    <size cx="80" cy="24"/>
+    <action key="f1" caption="F1" attention_key="false"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <action key="roll_up" caption="ROLL_UP" attention_key="false"/>
+    <action key="roll_down" caption="ROLL_DOWN" attention_key="false"/>
+    <action key="help" caption="HELP" attention_key="false"/>
+    <field field_type="screen_part" name="FORMAT1">
+      <area>
+        <position/>
+        <size cx="80" cy="24"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Objektprüfung am Rundband II" display_length="28" data_length="28">
+      <area>
+        <position x="24"/>
+        <size cx="28" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="input" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" non_display="true" reverse_image="true" underline="true" high_intensity="true">
+      <area>
+        <position x="4" y="4"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="OBJNR" short_name="OBJNR" data_type="zoned_decimal" display_length="4" data_length="4" non_display="true" reverse_image="true" underline="true" high_intensity="true">
+      <area>
+        <position x="8" y="4"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="input" name="STITEL" short_name="STITEL" data_type="alphanumeric" display_length="6" data_length="6" non_display="true" reverse_image="true" underline="true" high_intensity="true">
+      <area>
+        <position x="13" y="4"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="input" name="VDZ" short_name="VDZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="true" reverse_image="true" underline="true" high_intensity="true">
+      <area>
+        <position x="22" y="4"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="input" name="VINR" short_name="VINR" data_type="alphanumeric" display_length="6" data_length="6" non_display="true" reverse_image="true" underline="true" high_intensity="true">
+      <area>
+        <position x="31" y="4"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="input" name="EHCD" short_name="EHCD" data_type="zoned_decimal" display_length="2" data_length="2" non_display="true" reverse_image="true" underline="true" high_intensity="true">
+      <area>
+        <position x="39" y="4"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="input" name="EHUNR" short_name="EHUNR" data_type="zoned_decimal" display_length="2" data_length="2" non_display="true" reverse_image="true" underline="true" high_intensity="true">
+      <area>
+        <position x="42" y="4"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="input" name="TTITEL" short_name="TTITEL" data_type="alphanumeric" display_length="6" data_length="6" non_display="true" reverse_image="true" underline="true" high_intensity="true">
+      <area>
+        <position x="45" y="4"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="input" name="SVNR" short_name="SVNR" data_type="zoned_decimal" display_length="4" data_length="4" non_display="true" reverse_image="true" underline="true" high_intensity="true">
+      <area>
+        <position x="54" y="4"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Eingabe:" display_length="8" data_length="8">
+      <area>
+        <position x="1" y="6"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="input" name="INPFLD" short_name="INPFLD" data_type="alphanumeric" display_length="18" data_length="18" underline="true" high_intensity="true" position_cursor="conditional" exit_record="true">
+      <area>
+        <position x="10" y="6"/>
+        <size cx="18" cy="1"/>
+      </area>
+      <color foreground="red"/>
+    </field>
+    <field field_type="fixed_text" value="EAN :" display_length="5" data_length="5">
+      <area>
+        <position x="31" y="6"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="EAN" short_name="EAN" data_type="zoned_decimal" display_length="17" data_length="13">
+      <area>
+        <position x="37" y="6"/>
+        <size cx="17" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="AddOn :" display_length="7" data_length="7">
+      <area>
+        <position x="57" y="6"/>
+        <size cx="7" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="OAADD" short_name="OAADD" data_type="zoned_decimal" display_length="5" data_length="5">
+      <area>
+        <position x="65" y="6"/>
+        <size cx="5" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="INENR" short_name="INENR" data_type="zoned_decimal" display_length="6" data_length="6" non_display="true" reverse_image="true" underline="true" high_intensity="true">
+      <area>
+        <position x="10" y="7"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="FOLGE8" short_name="FOLGE8" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="20" y="7"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="magenta"/>
+    </field>
+    <field field_type="fixed_text" value="EVT :" display_length="5" data_length="5">
+      <area>
+        <position x="31" y="7"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="DSADAT" short_name="DSADAT" data_type="zoned_decimal" display_length="8" data_length="6">
+      <area>
+        <position x="37" y="7"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="magenta"/>
+    </field>
+    <field field_type="fixed_text" value="Lesart:" display_length="7" data_length="7">
+      <area>
+        <position x="57" y="7"/>
+        <size cx="7" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ATLAAO" short_name="ATLAAO" data_type="alphanumeric" display_length="2" data_length="2">
+      <area>
+        <position x="65" y="7"/>
+        <size cx="2" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="DISPTXT" short_name="DISPTXT" data_type="alphanumeric" display_length="33" data_length="33">
+      <area>
+        <position x="10" y="9"/>
+        <size cx="33" cy="1"/>
+      </area>
+      <color foreground="red"/>
+    </field>
+    <field field_type="fixed_text" value="Objekt:" display_length="7" data_length="7">
+      <area>
+        <position x="1" y="10"/>
+        <size cx="7" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="OAOBJ" short_name="OAOBJ" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="9" y="10"/>
+        <size cx="4" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21">
+      <area>
+        <position x="14" y="10"/>
+        <size cx="21" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="Preis :" display_length="7" data_length="7">
+      <area>
+        <position x="1" y="11"/>
+        <size cx="7" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ATBNEU" short_name="ATBNEU" data_type="zoned_decimal" display_length="6" data_length="5" blink="conditional" decimal_positions="2">
+      <area>
+        <position x="9" y="11"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="white" conditional="true"/>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="LBEZ" short_name="LBEZ" data_type="zoned_decimal" display_length="6" data_length="6" non_display="true" reverse_image="true" underline="true" high_intensity="true">
+      <area>
+        <position x="9" y="13"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Remi-Art:" display_length="9" data_length="9">
+      <area>
+        <position x="17" y="13"/>
+        <size cx="9" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="YYABKR" short_name="YYABKR" data_type="alphanumeric" display_length="2" data_length="2">
+      <area>
+        <position x="27" y="13"/>
+        <size cx="2" cy="1"/>
+      </area>
+      <color foreground="magenta"/>
+    </field>
+    <field field_type="fixed_text" value="Menge :" display_length="7" data_length="7">
+      <area>
+        <position x="1" y="14"/>
+        <size cx="7" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="DSWASTCK" short_name="DSWASTCK" data_type="zoned_decimal" display_length="6" data_length="6">
+      <area>
+        <position x="9" y="14"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="magenta"/>
+    </field>
+    <field field_type="field" usage="output" name="REMIART" short_name="REMIART" data_type="alphanumeric" display_length="33" data_length="33">
+      <area>
+        <position x="17" y="14"/>
+        <size cx="33" cy="1"/>
+      </area>
+      <color foreground="magenta"/>
+    </field>
+    <field field_type="fixed_text" value="für   :" display_length="7" data_length="7">
+      <area>
+        <position x="1" y="15"/>
+        <size cx="7" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="AUSLOES" short_name="AUSLOES" data_type="alphanumeric" display_length="6" data_length="6">
+      <area>
+        <position x="9" y="15"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="magenta"/>
+    </field>
+    <field field_type="field" usage="output" name="REMIAM" short_name="REMIAM" data_type="alphanumeric" display_length="2" data_length="2">
+      <area>
+        <position x="17" y="15"/>
+        <size cx="2" cy="1"/>
+      </area>
+      <color foreground="magenta"/>
+    </field>
+    <field field_type="field" usage="output" name="DSZDAT" short_name="DSZDAT" data_type="zoned_decimal" display_length="8" data_length="6">
+      <area>
+        <position x="20" y="15"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="magenta"/>
+    </field>
+    <field field_type="fixed_text" value="Verlag       :" display_length="14" data_length="14">
+      <area>
+        <position x="1" y="18"/>
+        <size cx="14" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ATVNR" short_name="ATVNR" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="16" y="18"/>
+        <size cx="4" cy="1"/>
+      </area>
+      <color foreground="magenta"/>
+    </field>
+    <field field_type="field" usage="output" name="XXVNA2" short_name="XXVNA2" data_type="alphanumeric" display_length="25" data_length="25">
+      <area>
+        <position x="21" y="18"/>
+        <size cx="25" cy="1"/>
+      </area>
+      <color foreground="magenta"/>
+    </field>
+    <field field_type="fixed_text" value="Text         :" display_length="14" data_length="14">
+      <area>
+        <position x="1" y="20"/>
+        <size cx="14" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ATTX01" short_name="ATTX01" data_type="alphanumeric" display_length="50" data_length="50">
+      <area>
+        <position x="16" y="20"/>
+        <size cx="50" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="ATTX02" short_name="ATTX02" data_type="alphanumeric" display_length="50" data_length="50">
+      <area>
+        <position x="16" y="21"/>
+        <size cx="50" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="Systemnachricht :" display_length="17" data_length="17">
+      <area>
+        <position x="1" y="22"/>
+        <size cx="17" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="MSG" short_name="MSG" data_type="alphanumeric" display_length="60" data_length="60" blink="conditional">
+      <area>
+        <position x="19" y="22"/>
+        <size cx="60" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="fixed_text" value="F3=Verlassen" display_length="12" data_length="12">
+      <area>
+        <position x="1" y="23"/>
+        <size cx="12" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

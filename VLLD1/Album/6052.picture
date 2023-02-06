@@ -1,0 +1,1224 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="SEATRUNK/SAMTPDS(SFC1+FUSS0)" library="SEATRUNK" member_name="SAMTPDS">
+    <size cx="80" cy="24"/>
+    <action key="f3" caption="F3" attention_key="false" conditional="true"/>
+    <action key="f6" caption="F6" attention_key="false" conditional="true"/>
+    <action key="f7" caption="F7" attention_key="false" conditional="true"/>
+    <action key="f8" caption="F8" attention_key="false" conditional="true"/>
+    <action key="f9" caption="F9" attention_key="false" conditional="true"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <field field_type="screen_part" name="SFC1" overlay="true">
+      <area>
+        <position/>
+        <size cx="80" cy="21"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="FUSS0">
+      <area>
+        <position y="21"/>
+        <size cx="80" cy="1"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="TITEL PERSONAL" display_length="14" data_length="14">
+          <area>
+            <position x="33"/>
+            <size cx="14" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="63"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="72"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*USER" short_name="*USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="1" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="JOB" short_name="JOB" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="63" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PGM" short_name="PGM" data_type="alphanumeric" display_length="6" data_length="6">
+          <area>
+            <position x="74" y="1"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="fixed_text" value="ObNr. X/L Objektbezeichnung      Menge  Rhythmus      Folge        Tag     Per" display_length="78" data_length="78" underline="true">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="78" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S1OBNR" short_name="S1OBNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="8" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBBZ" short_name="S1OBBZ" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="11" y="4"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1STCK" short_name="S1STCK" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="34" y="4"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ERRH" short_name="S1ERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="41" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ERRHBZ" short_name="S1ERRHBZ" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="43" y="4"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1SCHL" short_name="S1SCHL" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="55" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SCHLBZ" short_name="S1SCHLBZ" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="57" y="4"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1TAG" short_name="S1TAG" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="68" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TAGBZ" short_name="S1TAGBZ" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="70" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KZ1" short_name="S1KZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="77" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBNR" short_name="S1OBNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="8" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBBZ" short_name="S1OBBZ" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="11" y="5"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1STCK" short_name="S1STCK" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="34" y="5"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ERRH" short_name="S1ERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="41" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ERRHBZ" short_name="S1ERRHBZ" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="43" y="5"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1SCHL" short_name="S1SCHL" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="55" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SCHLBZ" short_name="S1SCHLBZ" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="57" y="5"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1TAG" short_name="S1TAG" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="68" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TAGBZ" short_name="S1TAGBZ" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="70" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KZ1" short_name="S1KZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="77" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBNR" short_name="S1OBNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="8" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBBZ" short_name="S1OBBZ" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="11" y="6"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1STCK" short_name="S1STCK" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="34" y="6"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ERRH" short_name="S1ERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="41" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ERRHBZ" short_name="S1ERRHBZ" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="43" y="6"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1SCHL" short_name="S1SCHL" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="55" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SCHLBZ" short_name="S1SCHLBZ" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="57" y="6"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1TAG" short_name="S1TAG" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="68" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TAGBZ" short_name="S1TAGBZ" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="70" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KZ1" short_name="S1KZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="77" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBNR" short_name="S1OBNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="8" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBBZ" short_name="S1OBBZ" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="11" y="7"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1STCK" short_name="S1STCK" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="34" y="7"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ERRH" short_name="S1ERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="41" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ERRHBZ" short_name="S1ERRHBZ" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="43" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1SCHL" short_name="S1SCHL" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="55" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SCHLBZ" short_name="S1SCHLBZ" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="57" y="7"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1TAG" short_name="S1TAG" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="68" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TAGBZ" short_name="S1TAGBZ" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="70" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KZ1" short_name="S1KZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="77" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S1OBNR" short_name="S1OBNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="8" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBBZ" short_name="S1OBBZ" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="11" y="8"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1STCK" short_name="S1STCK" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="34" y="8"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ERRH" short_name="S1ERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="41" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ERRHBZ" short_name="S1ERRHBZ" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="43" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1SCHL" short_name="S1SCHL" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="55" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SCHLBZ" short_name="S1SCHLBZ" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="57" y="8"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1TAG" short_name="S1TAG" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="68" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TAGBZ" short_name="S1TAGBZ" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="70" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KZ1" short_name="S1KZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="77" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBNR" short_name="S1OBNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="8" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBBZ" short_name="S1OBBZ" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="11" y="9"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1STCK" short_name="S1STCK" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="34" y="9"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ERRH" short_name="S1ERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="41" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ERRHBZ" short_name="S1ERRHBZ" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="43" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1SCHL" short_name="S1SCHL" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="55" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SCHLBZ" short_name="S1SCHLBZ" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="57" y="9"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1TAG" short_name="S1TAG" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="68" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TAGBZ" short_name="S1TAGBZ" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="70" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KZ1" short_name="S1KZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="77" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBNR" short_name="S1OBNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="8" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBBZ" short_name="S1OBBZ" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="11" y="10"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1STCK" short_name="S1STCK" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="34" y="10"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ERRH" short_name="S1ERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="41" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ERRHBZ" short_name="S1ERRHBZ" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="43" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1SCHL" short_name="S1SCHL" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="55" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SCHLBZ" short_name="S1SCHLBZ" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="57" y="10"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1TAG" short_name="S1TAG" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="68" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TAGBZ" short_name="S1TAGBZ" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="70" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KZ1" short_name="S1KZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="77" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBNR" short_name="S1OBNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="8" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBBZ" short_name="S1OBBZ" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="11" y="11"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1STCK" short_name="S1STCK" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="34" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ERRH" short_name="S1ERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="41" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ERRHBZ" short_name="S1ERRHBZ" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="43" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1SCHL" short_name="S1SCHL" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="55" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SCHLBZ" short_name="S1SCHLBZ" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="57" y="11"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1TAG" short_name="S1TAG" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="68" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TAGBZ" short_name="S1TAGBZ" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="70" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KZ1" short_name="S1KZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="77" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S1OBNR" short_name="S1OBNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="8" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBBZ" short_name="S1OBBZ" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="11" y="12"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1STCK" short_name="S1STCK" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="34" y="12"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ERRH" short_name="S1ERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="41" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ERRHBZ" short_name="S1ERRHBZ" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="43" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1SCHL" short_name="S1SCHL" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="55" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SCHLBZ" short_name="S1SCHLBZ" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="57" y="12"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1TAG" short_name="S1TAG" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="68" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TAGBZ" short_name="S1TAGBZ" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="70" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KZ1" short_name="S1KZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="77" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBNR" short_name="S1OBNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="8" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBBZ" short_name="S1OBBZ" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="11" y="13"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1STCK" short_name="S1STCK" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="34" y="13"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ERRH" short_name="S1ERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="41" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ERRHBZ" short_name="S1ERRHBZ" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="43" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1SCHL" short_name="S1SCHL" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="55" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SCHLBZ" short_name="S1SCHLBZ" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="57" y="13"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1TAG" short_name="S1TAG" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="68" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TAGBZ" short_name="S1TAGBZ" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="70" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KZ1" short_name="S1KZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="77" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBNR" short_name="S1OBNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="8" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBBZ" short_name="S1OBBZ" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="11" y="14"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1STCK" short_name="S1STCK" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="34" y="14"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ERRH" short_name="S1ERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="41" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ERRHBZ" short_name="S1ERRHBZ" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="43" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1SCHL" short_name="S1SCHL" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="55" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SCHLBZ" short_name="S1SCHLBZ" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="57" y="14"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1TAG" short_name="S1TAG" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="68" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TAGBZ" short_name="S1TAGBZ" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="70" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KZ1" short_name="S1KZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="77" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBNR" short_name="S1OBNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="8" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBBZ" short_name="S1OBBZ" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="11" y="15"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1STCK" short_name="S1STCK" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="34" y="15"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ERRH" short_name="S1ERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="41" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ERRHBZ" short_name="S1ERRHBZ" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="43" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1SCHL" short_name="S1SCHL" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="55" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SCHLBZ" short_name="S1SCHLBZ" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="57" y="15"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1TAG" short_name="S1TAG" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="68" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TAGBZ" short_name="S1TAGBZ" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="70" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KZ1" short_name="S1KZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="77" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S1OBNR" short_name="S1OBNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="8" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBBZ" short_name="S1OBBZ" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="11" y="16"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1STCK" short_name="S1STCK" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="34" y="16"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ERRH" short_name="S1ERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="41" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ERRHBZ" short_name="S1ERRHBZ" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="43" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1SCHL" short_name="S1SCHL" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="55" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SCHLBZ" short_name="S1SCHLBZ" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="57" y="16"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1TAG" short_name="S1TAG" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="68" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TAGBZ" short_name="S1TAGBZ" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="70" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KZ1" short_name="S1KZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="77" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBNR" short_name="S1OBNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="8" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBBZ" short_name="S1OBBZ" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="11" y="17"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1STCK" short_name="S1STCK" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="34" y="17"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ERRH" short_name="S1ERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="41" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ERRHBZ" short_name="S1ERRHBZ" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="43" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1SCHL" short_name="S1SCHL" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="55" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SCHLBZ" short_name="S1SCHLBZ" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="57" y="17"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1TAG" short_name="S1TAG" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="68" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TAGBZ" short_name="S1TAGBZ" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="70" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KZ1" short_name="S1KZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="77" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBNR" short_name="S1OBNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="8" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBBZ" short_name="S1OBBZ" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="11" y="18"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1STCK" short_name="S1STCK" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="34" y="18"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ERRH" short_name="S1ERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="41" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ERRHBZ" short_name="S1ERRHBZ" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="43" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1SCHL" short_name="S1SCHL" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="55" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SCHLBZ" short_name="S1SCHLBZ" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="57" y="18"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1TAG" short_name="S1TAG" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="68" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TAGBZ" short_name="S1TAGBZ" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="70" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KZ1" short_name="S1KZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="77" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBNR" short_name="S1OBNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="8" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBBZ" short_name="S1OBBZ" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="11" y="19"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1STCK" short_name="S1STCK" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="34" y="19"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ERRH" short_name="S1ERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="41" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ERRHBZ" short_name="S1ERRHBZ" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="43" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1SCHL" short_name="S1SCHL" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="55" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SCHLBZ" short_name="S1SCHLBZ" data_type="alphanumeric" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="57" y="19"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1TAG" short_name="S1TAG" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="68" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TAGBZ" short_name="S1TAGBZ" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="70" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KZ1" short_name="S1KZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="77" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_end_more" value="Weitere ... " display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="67" y="20"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+      <field field_type="subfile_end_bottom" value="Ende        " display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="67" y="20"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="Systemnachricht:" display_length="16" data_length="16">
+      <area>
+        <position x="1" y="21"/>
+        <size cx="16" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ERRMSG" short_name="ERRMSG" data_type="alphanumeric" display_length="60" data_length="60" blink="conditional">
+      <area>
+        <position x="18" y="21"/>
+        <size cx="60" cy="1"/>
+      </area>
+    </field>
+  </screen>
+</header>

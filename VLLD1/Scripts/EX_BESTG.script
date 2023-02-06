@@ -1,0 +1,70 @@
+﻿global filiale as string
+dim errmsg, datei, pfad_datei, source, xende as string 
+DIM ddehandle, i, j, msg, rc as integer
+dim xkdnr, xname, xtitel, xverlag, xobnr, xfolge, xmenge, xwert, xdatum, xsort as string 
+
+i = 0
+j=2
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+
+datei = "Rueckstandsliste.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "Kdnr")
+ddepoke( ddehandle, "Z1S2", "Name")
+ddepoke( ddehandle, "Z1S3", "Ort")
+ddepoke( ddehandle, "Z1S4", "Folgen")
+ddepoke( ddehandle, "Z1S5", "Menge")
+ddepoke( ddehandle, "Z1S6", "Wert")
+ddepoke( ddehandle, "Z1S7", "GsArt")
+ddepoke( ddehandle, "Z1S8", "Umsatz")
+ddepoke( ddehandle, "Z1S9", "VMP")
+ddepoke( ddehandle, "Z1S10", "MA")
+
+
+nochmal:
+
+HostFieldGetLineData("s1", i, xkdnr)
+HostFieldGetLineData("s2", i, xname)
+HostFieldGetLineData("s3", i, xtitel)
+HostFieldGetLineData("s4", i, xverlag)
+HostFieldGetLineData("s5", i, xobnr)
+HostFieldGetLineData("s6", i, xfolge)
+HostFieldGetLineData("s7", i, xmenge)
+HostFieldGetLineData("s8", i, xwert)
+HostFieldGetLineData("s9", i, xdatum)
+HostFieldGetLineData("s10", i, xsort)
+
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", xkdnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xname)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xtitel)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xverlag)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xobnr)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xfolge)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xmenge)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xwert)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xdatum)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xsort)
+
+j=j+1 
+
+
+if i < 18 then
+i=i+1
+goto nochmal
+endif
+ 
+HostFieldGetData("ende", xende)
+if xende <> "Ende" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

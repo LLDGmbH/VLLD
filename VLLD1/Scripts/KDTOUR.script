@@ -1,0 +1,31 @@
+﻿dim pccom1, xstr, xplz, xort as string
+dim i as integer
+i=0
+
+pccom1 = "http://maps.google.de/maps?f=d&source=s_d&saddr="
+
+HostFieldGetLineData("kdstr", i, xstr)
+HostFieldGetLineData("kdplz", i, xplz)
+HostFieldGetLineData("kdort", i, xort)
+if xplz <> "" then
+pccom1 = pccom1 + xstr + ",+" + xplz + "+" + xort
+endif
+i=i+1
+nochmal:
+
+HostFieldGetLineData("s1str", i, xstr)
+HostFieldGetLineData("kdplz", i, xplz)
+HostFieldGetLineData("kdort", i, xort)
+if xplz <> "" then
+pccom1 = pccom1 + "+to:"
+pccom1 = pccom1 + xstr + ",+" + xplz + "+" + xort
+endif
+
+if i < 20 then
+i=i+1
+goto nochmal
+endif
+ 
+
+
+UrlOpen(pccom1)

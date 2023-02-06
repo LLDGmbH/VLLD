@@ -1,0 +1,1148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="OSNA_SRC/OA27DS(SGC+FMFOOT)" library="OSNA_SRC" member_name="OA27DS">
+    <size cx="80" cy="24"/>
+    <action key="f3" caption="F3" attention_key="false" conditional="true"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <action key="roll_up" caption="ROLL_UP" attention_key="false"/>
+    <action key="roll_down" caption="ROLL_DOWN" attention_key="false"/>
+    <field field_type="screen_part" name="SGC" overlay="true">
+      <area>
+        <position/>
+        <size cx="80" cy="23"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="FMFOOT" overlay="true">
+      <area>
+        <position y="23"/>
+        <size cx="80" cy="1"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Anzeigen und ändern EAN-Codes" display_length="29" data_length="29" high_intensity="true">
+          <area>
+            <position x="26"/>
+            <size cx="29" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="63"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="72"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="OA27" display_length="4" data_length="4">
+          <area>
+            <position x="74" y="1"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="fixed_text" value="      Aktion Objn Titel    VDZ-Nr  V.Int.Nr EhCd Teil    Verlag                " display_length="79" data_length="79" underline="true">
+          <area>
+            <position x="1" y="2"/>
+            <size cx="79" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" exit_record="true">
+          <area>
+            <position x="9" y="3"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="OBJNR" short_name="OBJNR" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" position_cursor="true" exit_record="true">
+          <area>
+            <position x="14" y="3"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="input" name="STITEL" short_name="STITEL" data_type="alphanumeric" display_length="6" data_length="6" underline="true">
+          <area>
+            <position x="19" y="3"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="input" name="VDZ" short_name="VDZ" data_type="zoned_decimal" display_length="5" data_length="5" underline="true">
+          <area>
+            <position x="28" y="3"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="input" name="VINR" short_name="VINR" data_type="alphanumeric" display_length="6" data_length="6" underline="true">
+          <area>
+            <position x="37" y="3"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="input" name="EHCD" short_name="EHCD" data_type="zoned_decimal" display_length="2" data_length="2" underline="true">
+          <area>
+            <position x="46" y="3"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="input" name="TTITEL" short_name="TTITEL" data_type="alphanumeric" display_length="6" data_length="6" underline="true">
+          <area>
+            <position x="50" y="3"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="input" name="SVNR" short_name="SVNR" data_type="zoned_decimal" display_length="4" data_length="4" underline="true">
+          <area>
+            <position x="59" y="3"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21">
+          <area>
+            <position x="14" y="5"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value=" Folge      EvT    Rem-Dat.  aufgedruckter Code     Code für Ryll   H  cdlzt  " display_length="78" data_length="78" underline="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="78" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="XX_JAH2" short_name="XX_JAH2" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XX_FOL4" short_name="XX_FOL4" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="4" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="EVTDAT" short_name="EVTDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="10" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="REMDAT" short_name="REMDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="20" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="CDC18" short_name="CDC18" data_type="alphanumeric" display_length="18" data_length="18" underline="true" conditional="true">
+          <area>
+            <position x="30" y="8"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="CDC18BL" short_name="CDC18BL" data_type="alphanumeric" display_length="13" data_length="13" conditional="true">
+          <area>
+            <position x="49" y="8"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="CDC18BR" short_name="CDC18BR" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="63" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="CDKZIN" short_name="CDKZIN" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="69" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="LZTDAT" short_name="LZTDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="71" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="XX_JAH2" short_name="XX_JAH2" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XX_FOL4" short_name="XX_FOL4" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="4" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="EVTDAT" short_name="EVTDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="10" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="REMDAT" short_name="REMDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="20" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="CDC18" short_name="CDC18" data_type="alphanumeric" display_length="18" data_length="18" underline="true" conditional="true">
+          <area>
+            <position x="30" y="9"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="CDC18BL" short_name="CDC18BL" data_type="alphanumeric" display_length="13" data_length="13" conditional="true">
+          <area>
+            <position x="49" y="9"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="CDC18BR" short_name="CDC18BR" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="63" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="CDKZIN" short_name="CDKZIN" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="69" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="LZTDAT" short_name="LZTDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="71" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="XX_JAH2" short_name="XX_JAH2" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XX_FOL4" short_name="XX_FOL4" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="4" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="EVTDAT" short_name="EVTDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="10" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="REMDAT" short_name="REMDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="20" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="CDC18" short_name="CDC18" data_type="alphanumeric" display_length="18" data_length="18" underline="true" conditional="true">
+          <area>
+            <position x="30" y="10"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="CDC18BL" short_name="CDC18BL" data_type="alphanumeric" display_length="13" data_length="13" conditional="true">
+          <area>
+            <position x="49" y="10"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="CDC18BR" short_name="CDC18BR" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="63" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="CDKZIN" short_name="CDKZIN" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="69" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="LZTDAT" short_name="LZTDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="71" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="XX_JAH2" short_name="XX_JAH2" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XX_FOL4" short_name="XX_FOL4" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="4" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="EVTDAT" short_name="EVTDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="10" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="REMDAT" short_name="REMDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="20" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="CDC18" short_name="CDC18" data_type="alphanumeric" display_length="18" data_length="18" underline="true" conditional="true">
+          <area>
+            <position x="30" y="11"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="CDC18BL" short_name="CDC18BL" data_type="alphanumeric" display_length="13" data_length="13" conditional="true">
+          <area>
+            <position x="49" y="11"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="CDC18BR" short_name="CDC18BR" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="63" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="CDKZIN" short_name="CDKZIN" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="69" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="LZTDAT" short_name="LZTDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="71" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="XX_JAH2" short_name="XX_JAH2" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XX_FOL4" short_name="XX_FOL4" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="4" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="EVTDAT" short_name="EVTDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="10" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="REMDAT" short_name="REMDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="20" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="CDC18" short_name="CDC18" data_type="alphanumeric" display_length="18" data_length="18" underline="true" conditional="true">
+          <area>
+            <position x="30" y="12"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="CDC18BL" short_name="CDC18BL" data_type="alphanumeric" display_length="13" data_length="13" conditional="true">
+          <area>
+            <position x="49" y="12"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="CDC18BR" short_name="CDC18BR" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="63" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="CDKZIN" short_name="CDKZIN" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="69" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="LZTDAT" short_name="LZTDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="71" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="XX_JAH2" short_name="XX_JAH2" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XX_FOL4" short_name="XX_FOL4" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="4" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="EVTDAT" short_name="EVTDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="10" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="REMDAT" short_name="REMDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="20" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="CDC18" short_name="CDC18" data_type="alphanumeric" display_length="18" data_length="18" underline="true" conditional="true">
+          <area>
+            <position x="30" y="13"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="CDC18BL" short_name="CDC18BL" data_type="alphanumeric" display_length="13" data_length="13" conditional="true">
+          <area>
+            <position x="49" y="13"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="CDC18BR" short_name="CDC18BR" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="63" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="CDKZIN" short_name="CDKZIN" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="69" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="LZTDAT" short_name="LZTDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="71" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="XX_JAH2" short_name="XX_JAH2" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XX_FOL4" short_name="XX_FOL4" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="4" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="EVTDAT" short_name="EVTDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="10" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="REMDAT" short_name="REMDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="20" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="CDC18" short_name="CDC18" data_type="alphanumeric" display_length="18" data_length="18" underline="true" conditional="true">
+          <area>
+            <position x="30" y="14"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="CDC18BL" short_name="CDC18BL" data_type="alphanumeric" display_length="13" data_length="13" conditional="true">
+          <area>
+            <position x="49" y="14"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="CDC18BR" short_name="CDC18BR" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="63" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="CDKZIN" short_name="CDKZIN" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="69" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="LZTDAT" short_name="LZTDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="71" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="XX_JAH2" short_name="XX_JAH2" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XX_FOL4" short_name="XX_FOL4" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="4" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="EVTDAT" short_name="EVTDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="10" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="REMDAT" short_name="REMDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="20" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="CDC18" short_name="CDC18" data_type="alphanumeric" display_length="18" data_length="18" underline="true" conditional="true">
+          <area>
+            <position x="30" y="15"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="CDC18BL" short_name="CDC18BL" data_type="alphanumeric" display_length="13" data_length="13" conditional="true">
+          <area>
+            <position x="49" y="15"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="CDC18BR" short_name="CDC18BR" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="63" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="CDKZIN" short_name="CDKZIN" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="69" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="LZTDAT" short_name="LZTDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="71" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="XX_JAH2" short_name="XX_JAH2" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XX_FOL4" short_name="XX_FOL4" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="4" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="EVTDAT" short_name="EVTDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="10" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="REMDAT" short_name="REMDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="20" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="CDC18" short_name="CDC18" data_type="alphanumeric" display_length="18" data_length="18" underline="true" conditional="true">
+          <area>
+            <position x="30" y="16"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="CDC18BL" short_name="CDC18BL" data_type="alphanumeric" display_length="13" data_length="13" conditional="true">
+          <area>
+            <position x="49" y="16"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="CDC18BR" short_name="CDC18BR" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="63" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="CDKZIN" short_name="CDKZIN" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="69" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="LZTDAT" short_name="LZTDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="71" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="XX_JAH2" short_name="XX_JAH2" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XX_FOL4" short_name="XX_FOL4" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="4" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="EVTDAT" short_name="EVTDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="10" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="REMDAT" short_name="REMDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="20" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="CDC18" short_name="CDC18" data_type="alphanumeric" display_length="18" data_length="18" underline="true" conditional="true">
+          <area>
+            <position x="30" y="17"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="CDC18BL" short_name="CDC18BL" data_type="alphanumeric" display_length="13" data_length="13" conditional="true">
+          <area>
+            <position x="49" y="17"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="CDC18BR" short_name="CDC18BR" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="63" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="CDKZIN" short_name="CDKZIN" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="69" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="LZTDAT" short_name="LZTDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="71" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="XX_JAH2" short_name="XX_JAH2" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XX_FOL4" short_name="XX_FOL4" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="4" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="EVTDAT" short_name="EVTDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="10" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="REMDAT" short_name="REMDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="20" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="CDC18" short_name="CDC18" data_type="alphanumeric" display_length="18" data_length="18" underline="true" conditional="true">
+          <area>
+            <position x="30" y="18"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="CDC18BL" short_name="CDC18BL" data_type="alphanumeric" display_length="13" data_length="13" conditional="true">
+          <area>
+            <position x="49" y="18"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="CDC18BR" short_name="CDC18BR" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="63" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="CDKZIN" short_name="CDKZIN" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="69" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="LZTDAT" short_name="LZTDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="71" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="XX_JAH2" short_name="XX_JAH2" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XX_FOL4" short_name="XX_FOL4" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="4" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="EVTDAT" short_name="EVTDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="10" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="REMDAT" short_name="REMDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="20" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="CDC18" short_name="CDC18" data_type="alphanumeric" display_length="18" data_length="18" underline="true" conditional="true">
+          <area>
+            <position x="30" y="19"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="CDC18BL" short_name="CDC18BL" data_type="alphanumeric" display_length="13" data_length="13" conditional="true">
+          <area>
+            <position x="49" y="19"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="CDC18BR" short_name="CDC18BR" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="63" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="CDKZIN" short_name="CDKZIN" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="69" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="LZTDAT" short_name="LZTDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="71" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="XX_JAH2" short_name="XX_JAH2" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XX_FOL4" short_name="XX_FOL4" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="4" y="20"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="EVTDAT" short_name="EVTDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="10" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="REMDAT" short_name="REMDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="20" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="CDC18" short_name="CDC18" data_type="alphanumeric" display_length="18" data_length="18" underline="true" conditional="true">
+          <area>
+            <position x="30" y="20"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="CDC18BL" short_name="CDC18BL" data_type="alphanumeric" display_length="13" data_length="13" conditional="true">
+          <area>
+            <position x="49" y="20"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="CDC18BR" short_name="CDC18BR" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="63" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="CDKZIN" short_name="CDKZIN" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="69" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="LZTDAT" short_name="LZTDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="71" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="XX_JAH2" short_name="XX_JAH2" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="21"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XX_FOL4" short_name="XX_FOL4" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="4" y="21"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="EVTDAT" short_name="EVTDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="10" y="21"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="REMDAT" short_name="REMDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="20" y="21"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="CDC18" short_name="CDC18" data_type="alphanumeric" display_length="18" data_length="18" underline="true" conditional="true">
+          <area>
+            <position x="30" y="21"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="CDC18BL" short_name="CDC18BL" data_type="alphanumeric" display_length="13" data_length="13" conditional="true">
+          <area>
+            <position x="49" y="21"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="CDC18BR" short_name="CDC18BR" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="63" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="CDKZIN" short_name="CDKZIN" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="69" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="LZTDAT" short_name="LZTDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="71" y="21"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="XX_JAH2" short_name="XX_JAH2" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="22"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="XX_FOL4" short_name="XX_FOL4" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="4" y="22"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="EVTDAT" short_name="EVTDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="10" y="22"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="REMDAT" short_name="REMDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="20" y="22"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="CDC18" short_name="CDC18" data_type="alphanumeric" display_length="18" data_length="18" underline="true" conditional="true">
+          <area>
+            <position x="30" y="22"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="CDC18BL" short_name="CDC18BL" data_type="alphanumeric" display_length="13" data_length="13" conditional="true">
+          <area>
+            <position x="49" y="22"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="green" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="CDC18BR" short_name="CDC18BR" data_type="alphanumeric" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="63" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="CDKZIN" short_name="CDKZIN" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="69" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="LZTDAT" short_name="LZTDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="71" y="22"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+      </field>
+      <field field_type="subfile_end_plus" value="+" display_length="1" data_length="1" conditional="true">
+        <area>
+          <position x="78" y="22"/>
+          <size cx="1" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="Cmd 03 = Zurück zum Startformat" display_length="31" data_length="31" high_intensity="true">
+      <area>
+        <position x="4" y="23"/>
+        <size cx="31" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

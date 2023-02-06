@@ -1,0 +1,2648 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="SEATRUNK/VG15DS(SFC)" library="SEATRUNK" member_name="VG15DS">
+    <size cx="132" cy="27"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="f24" caption="F24" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <field field_type="screen_part" name="SFC" overlay="true">
+      <area>
+        <position/>
+        <size cx="132" cy="25"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Verkaufsgrößenklassen" display_length="21" data_length="21">
+          <area>
+            <position x="27"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="61"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="72"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Objekt:" display_length="7" data_length="7">
+          <area>
+            <position x="1" y="1"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="##OBNR" short_name="##OBNR" data_type="zoned_decimal" display_length="5" data_length="5" underline="true" high_intensity="true">
+          <area>
+            <position x="9" y="1"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="##FOLGV" short_name="##FOLGV" data_type="zoned_decimal" display_length="8" data_length="8" underline="true" high_intensity="true">
+          <area>
+            <position x="15" y="1"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="##FOLGB" short_name="##FOLGB" data_type="zoned_decimal" display_length="8" data_length="8" underline="true" high_intensity="true">
+          <area>
+            <position x="24" y="1"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21">
+          <area>
+            <position x="33" y="1"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="##FIL" short_name="##FIL" data_type="zoned_decimal" display_length="2" data_length="2" underline="true" high_intensity="true">
+          <area>
+            <position x="55" y="1"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="VG15" display_length="4" data_length="4">
+          <area>
+            <position x="76" y="1"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="   EH  EH                                                     EH          SQR+   Abw.   Abw.     Abw.   EH          AV    AV      " display_length="130" data_length="130">
+          <area>
+            <position x="1" y="2"/>
+            <size cx="130" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="A  Gs  Ant    Bezug    LD    LA      VK    VK%   VD     Remi  Remi  Remi% RQ     SQR++  SQR+Ex   S++E  3AV    AV%   BZ    VD      " display_length="130" data_length="130" underline="true">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="130" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="SFAUSW" short_name="SFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH" short_name="SFEH" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="3" y="4"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHANT" short_name="SFEHANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="8" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBZ" short_name="SFBZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="14" y="4"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLD" short_name="SFLD" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="22" y="4"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLANT" short_name="SFLANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="29" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVK" short_name="SFVK" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="35" y="4"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVKANT" short_name="SFVKANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="43" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVD" short_name="SFVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="49" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRM" short_name="SFRM" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="55" y="4"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMEH" short_name="SFRMEH" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="63" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMP" short_name="SFRMP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="69" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRP" short_name="SFSQRP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="75" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW" short_name="SFSQRABW" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="81" y="4"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW2" short_name="SFSQRABW2" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="88" y="4"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW3" short_name="SFSQRABW3" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="97" y="4"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH3AV" short_name="SFEH3AV" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="104" y="4"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVP" short_name="SFAVP" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="109" y="4"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVBZ" short_name="SFAVBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="116" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVVD" short_name="SFAVVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="122" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGRKL" short_name="SFGRKL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="128" y="4"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAUSW" short_name="SFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH" short_name="SFEH" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="3" y="5"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHANT" short_name="SFEHANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="8" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBZ" short_name="SFBZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="14" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLD" short_name="SFLD" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="22" y="5"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLANT" short_name="SFLANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="29" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVK" short_name="SFVK" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="35" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVKANT" short_name="SFVKANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="43" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVD" short_name="SFVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="49" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRM" short_name="SFRM" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="55" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMEH" short_name="SFRMEH" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="63" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMP" short_name="SFRMP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="69" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRP" short_name="SFSQRP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="75" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW" short_name="SFSQRABW" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="81" y="5"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW2" short_name="SFSQRABW2" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="88" y="5"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW3" short_name="SFSQRABW3" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="97" y="5"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH3AV" short_name="SFEH3AV" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="104" y="5"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVP" short_name="SFAVP" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="109" y="5"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVBZ" short_name="SFAVBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="116" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVVD" short_name="SFAVVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="122" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGRKL" short_name="SFGRKL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="128" y="5"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAUSW" short_name="SFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH" short_name="SFEH" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="3" y="6"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHANT" short_name="SFEHANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="8" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBZ" short_name="SFBZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="14" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLD" short_name="SFLD" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="22" y="6"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLANT" short_name="SFLANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="29" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVK" short_name="SFVK" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="35" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVKANT" short_name="SFVKANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="43" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVD" short_name="SFVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="49" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRM" short_name="SFRM" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="55" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMEH" short_name="SFRMEH" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="63" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMP" short_name="SFRMP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="69" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRP" short_name="SFSQRP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="75" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW" short_name="SFSQRABW" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="81" y="6"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW2" short_name="SFSQRABW2" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="88" y="6"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW3" short_name="SFSQRABW3" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="97" y="6"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH3AV" short_name="SFEH3AV" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="104" y="6"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVP" short_name="SFAVP" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="109" y="6"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVBZ" short_name="SFAVBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="116" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVVD" short_name="SFAVVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="122" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGRKL" short_name="SFGRKL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="128" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAUSW" short_name="SFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH" short_name="SFEH" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="3" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHANT" short_name="SFEHANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="8" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBZ" short_name="SFBZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="14" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLD" short_name="SFLD" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="22" y="7"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLANT" short_name="SFLANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="29" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVK" short_name="SFVK" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="35" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVKANT" short_name="SFVKANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="43" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVD" short_name="SFVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="49" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRM" short_name="SFRM" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="55" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMEH" short_name="SFRMEH" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="63" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMP" short_name="SFRMP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="69" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRP" short_name="SFSQRP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="75" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW" short_name="SFSQRABW" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="81" y="7"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW2" short_name="SFSQRABW2" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="88" y="7"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW3" short_name="SFSQRABW3" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="97" y="7"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH3AV" short_name="SFEH3AV" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="104" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVP" short_name="SFAVP" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="109" y="7"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVBZ" short_name="SFAVBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="116" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVVD" short_name="SFAVVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="122" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGRKL" short_name="SFGRKL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="128" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="SFAUSW" short_name="SFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH" short_name="SFEH" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="3" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHANT" short_name="SFEHANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="8" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBZ" short_name="SFBZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="14" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLD" short_name="SFLD" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="22" y="8"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLANT" short_name="SFLANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="29" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVK" short_name="SFVK" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="35" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVKANT" short_name="SFVKANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="43" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVD" short_name="SFVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="49" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRM" short_name="SFRM" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="55" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMEH" short_name="SFRMEH" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="63" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMP" short_name="SFRMP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="69" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRP" short_name="SFSQRP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="75" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW" short_name="SFSQRABW" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="81" y="8"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW2" short_name="SFSQRABW2" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="88" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW3" short_name="SFSQRABW3" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="97" y="8"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH3AV" short_name="SFEH3AV" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="104" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVP" short_name="SFAVP" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="109" y="8"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVBZ" short_name="SFAVBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="116" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVVD" short_name="SFAVVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="122" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGRKL" short_name="SFGRKL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="128" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAUSW" short_name="SFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH" short_name="SFEH" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="3" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHANT" short_name="SFEHANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="8" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBZ" short_name="SFBZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="14" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLD" short_name="SFLD" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="22" y="9"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLANT" short_name="SFLANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="29" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVK" short_name="SFVK" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="35" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVKANT" short_name="SFVKANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="43" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVD" short_name="SFVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="49" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRM" short_name="SFRM" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="55" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMEH" short_name="SFRMEH" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="63" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMP" short_name="SFRMP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="69" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRP" short_name="SFSQRP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="75" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW" short_name="SFSQRABW" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="81" y="9"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW2" short_name="SFSQRABW2" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="88" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW3" short_name="SFSQRABW3" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="97" y="9"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH3AV" short_name="SFEH3AV" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="104" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVP" short_name="SFAVP" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="109" y="9"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVBZ" short_name="SFAVBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="116" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVVD" short_name="SFAVVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="122" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGRKL" short_name="SFGRKL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="128" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAUSW" short_name="SFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH" short_name="SFEH" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="3" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHANT" short_name="SFEHANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="8" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBZ" short_name="SFBZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="14" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLD" short_name="SFLD" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="22" y="10"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLANT" short_name="SFLANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="29" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVK" short_name="SFVK" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="35" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVKANT" short_name="SFVKANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="43" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVD" short_name="SFVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="49" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRM" short_name="SFRM" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="55" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMEH" short_name="SFRMEH" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="63" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMP" short_name="SFRMP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="69" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRP" short_name="SFSQRP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="75" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW" short_name="SFSQRABW" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="81" y="10"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW2" short_name="SFSQRABW2" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="88" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW3" short_name="SFSQRABW3" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="97" y="10"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH3AV" short_name="SFEH3AV" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="104" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVP" short_name="SFAVP" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="109" y="10"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVBZ" short_name="SFAVBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="116" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVVD" short_name="SFAVVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="122" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGRKL" short_name="SFGRKL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="128" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAUSW" short_name="SFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH" short_name="SFEH" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="3" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHANT" short_name="SFEHANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="8" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBZ" short_name="SFBZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="14" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLD" short_name="SFLD" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="22" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLANT" short_name="SFLANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="29" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVK" short_name="SFVK" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="35" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVKANT" short_name="SFVKANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="43" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVD" short_name="SFVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="49" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRM" short_name="SFRM" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="55" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMEH" short_name="SFRMEH" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="63" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMP" short_name="SFRMP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="69" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRP" short_name="SFSQRP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="75" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW" short_name="SFSQRABW" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="81" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW2" short_name="SFSQRABW2" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="88" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW3" short_name="SFSQRABW3" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="97" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH3AV" short_name="SFEH3AV" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="104" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVP" short_name="SFAVP" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="109" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVBZ" short_name="SFAVBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="116" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVVD" short_name="SFAVVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="122" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGRKL" short_name="SFGRKL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="128" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="SFAUSW" short_name="SFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH" short_name="SFEH" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="3" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHANT" short_name="SFEHANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="8" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBZ" short_name="SFBZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="14" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLD" short_name="SFLD" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="22" y="12"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLANT" short_name="SFLANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="29" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVK" short_name="SFVK" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="35" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVKANT" short_name="SFVKANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="43" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVD" short_name="SFVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="49" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRM" short_name="SFRM" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="55" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMEH" short_name="SFRMEH" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="63" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMP" short_name="SFRMP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="69" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRP" short_name="SFSQRP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="75" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW" short_name="SFSQRABW" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="81" y="12"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW2" short_name="SFSQRABW2" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="88" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW3" short_name="SFSQRABW3" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="97" y="12"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH3AV" short_name="SFEH3AV" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="104" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVP" short_name="SFAVP" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="109" y="12"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVBZ" short_name="SFAVBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="116" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVVD" short_name="SFAVVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="122" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGRKL" short_name="SFGRKL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="128" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAUSW" short_name="SFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH" short_name="SFEH" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="3" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHANT" short_name="SFEHANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="8" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBZ" short_name="SFBZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="14" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLD" short_name="SFLD" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="22" y="13"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLANT" short_name="SFLANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="29" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVK" short_name="SFVK" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="35" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVKANT" short_name="SFVKANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="43" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVD" short_name="SFVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="49" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRM" short_name="SFRM" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="55" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMEH" short_name="SFRMEH" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="63" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMP" short_name="SFRMP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="69" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRP" short_name="SFSQRP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="75" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW" short_name="SFSQRABW" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="81" y="13"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW2" short_name="SFSQRABW2" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="88" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW3" short_name="SFSQRABW3" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="97" y="13"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH3AV" short_name="SFEH3AV" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="104" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVP" short_name="SFAVP" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="109" y="13"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVBZ" short_name="SFAVBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="116" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVVD" short_name="SFAVVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="122" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGRKL" short_name="SFGRKL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="128" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAUSW" short_name="SFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH" short_name="SFEH" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="3" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHANT" short_name="SFEHANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="8" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBZ" short_name="SFBZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="14" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLD" short_name="SFLD" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="22" y="14"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLANT" short_name="SFLANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="29" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVK" short_name="SFVK" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="35" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVKANT" short_name="SFVKANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="43" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVD" short_name="SFVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="49" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRM" short_name="SFRM" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="55" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMEH" short_name="SFRMEH" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="63" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMP" short_name="SFRMP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="69" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRP" short_name="SFSQRP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="75" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW" short_name="SFSQRABW" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="81" y="14"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW2" short_name="SFSQRABW2" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="88" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW3" short_name="SFSQRABW3" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="97" y="14"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH3AV" short_name="SFEH3AV" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="104" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVP" short_name="SFAVP" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="109" y="14"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVBZ" short_name="SFAVBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="116" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVVD" short_name="SFAVVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="122" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGRKL" short_name="SFGRKL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="128" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAUSW" short_name="SFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH" short_name="SFEH" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="3" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHANT" short_name="SFEHANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="8" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBZ" short_name="SFBZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="14" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLD" short_name="SFLD" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="22" y="15"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLANT" short_name="SFLANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="29" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVK" short_name="SFVK" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="35" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVKANT" short_name="SFVKANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="43" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVD" short_name="SFVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="49" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRM" short_name="SFRM" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="55" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMEH" short_name="SFRMEH" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="63" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMP" short_name="SFRMP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="69" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRP" short_name="SFSQRP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="75" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW" short_name="SFSQRABW" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="81" y="15"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW2" short_name="SFSQRABW2" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="88" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW3" short_name="SFSQRABW3" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="97" y="15"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH3AV" short_name="SFEH3AV" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="104" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVP" short_name="SFAVP" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="109" y="15"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVBZ" short_name="SFAVBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="116" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVVD" short_name="SFAVVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="122" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGRKL" short_name="SFGRKL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="128" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="SFAUSW" short_name="SFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH" short_name="SFEH" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="3" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHANT" short_name="SFEHANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="8" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBZ" short_name="SFBZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="14" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLD" short_name="SFLD" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="22" y="16"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLANT" short_name="SFLANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="29" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVK" short_name="SFVK" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="35" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVKANT" short_name="SFVKANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="43" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVD" short_name="SFVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="49" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRM" short_name="SFRM" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="55" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMEH" short_name="SFRMEH" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="63" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMP" short_name="SFRMP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="69" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRP" short_name="SFSQRP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="75" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW" short_name="SFSQRABW" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="81" y="16"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW2" short_name="SFSQRABW2" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="88" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW3" short_name="SFSQRABW3" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="97" y="16"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH3AV" short_name="SFEH3AV" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="104" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVP" short_name="SFAVP" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="109" y="16"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVBZ" short_name="SFAVBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="116" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVVD" short_name="SFAVVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="122" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGRKL" short_name="SFGRKL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="128" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAUSW" short_name="SFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH" short_name="SFEH" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="3" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHANT" short_name="SFEHANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="8" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBZ" short_name="SFBZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="14" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLD" short_name="SFLD" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="22" y="17"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLANT" short_name="SFLANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="29" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVK" short_name="SFVK" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="35" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVKANT" short_name="SFVKANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="43" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVD" short_name="SFVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="49" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRM" short_name="SFRM" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="55" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMEH" short_name="SFRMEH" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="63" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMP" short_name="SFRMP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="69" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRP" short_name="SFSQRP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="75" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW" short_name="SFSQRABW" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="81" y="17"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW2" short_name="SFSQRABW2" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="88" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW3" short_name="SFSQRABW3" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="97" y="17"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH3AV" short_name="SFEH3AV" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="104" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVP" short_name="SFAVP" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="109" y="17"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVBZ" short_name="SFAVBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="116" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVVD" short_name="SFAVVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="122" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGRKL" short_name="SFGRKL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="128" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAUSW" short_name="SFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH" short_name="SFEH" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="3" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHANT" short_name="SFEHANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="8" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBZ" short_name="SFBZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="14" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLD" short_name="SFLD" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="22" y="18"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLANT" short_name="SFLANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="29" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVK" short_name="SFVK" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="35" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVKANT" short_name="SFVKANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="43" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVD" short_name="SFVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="49" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRM" short_name="SFRM" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="55" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMEH" short_name="SFRMEH" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="63" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMP" short_name="SFRMP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="69" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRP" short_name="SFSQRP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="75" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW" short_name="SFSQRABW" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="81" y="18"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW2" short_name="SFSQRABW2" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="88" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW3" short_name="SFSQRABW3" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="97" y="18"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH3AV" short_name="SFEH3AV" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="104" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVP" short_name="SFAVP" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="109" y="18"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVBZ" short_name="SFAVBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="116" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVVD" short_name="SFAVVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="122" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGRKL" short_name="SFGRKL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="128" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAUSW" short_name="SFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH" short_name="SFEH" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="3" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHANT" short_name="SFEHANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="8" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBZ" short_name="SFBZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="14" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLD" short_name="SFLD" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="22" y="19"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLANT" short_name="SFLANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="29" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVK" short_name="SFVK" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="35" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVKANT" short_name="SFVKANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="43" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVD" short_name="SFVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="49" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRM" short_name="SFRM" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="55" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMEH" short_name="SFRMEH" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="63" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMP" short_name="SFRMP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="69" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRP" short_name="SFSQRP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="75" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW" short_name="SFSQRABW" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="81" y="19"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW2" short_name="SFSQRABW2" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="88" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW3" short_name="SFSQRABW3" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="97" y="19"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH3AV" short_name="SFEH3AV" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="104" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVP" short_name="SFAVP" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="109" y="19"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVBZ" short_name="SFAVBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="116" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVVD" short_name="SFAVVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="122" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGRKL" short_name="SFGRKL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="128" y="19"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="SFAUSW" short_name="SFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH" short_name="SFEH" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="3" y="20"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHANT" short_name="SFEHANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="8" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBZ" short_name="SFBZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="14" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLD" short_name="SFLD" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="22" y="20"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLANT" short_name="SFLANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="29" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVK" short_name="SFVK" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="35" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVKANT" short_name="SFVKANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="43" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVD" short_name="SFVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="49" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRM" short_name="SFRM" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="55" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMEH" short_name="SFRMEH" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="63" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMP" short_name="SFRMP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="69" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRP" short_name="SFSQRP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="75" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW" short_name="SFSQRABW" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="81" y="20"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW2" short_name="SFSQRABW2" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="88" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW3" short_name="SFSQRABW3" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="97" y="20"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH3AV" short_name="SFEH3AV" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="104" y="20"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVP" short_name="SFAVP" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="109" y="20"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVBZ" short_name="SFAVBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="116" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVVD" short_name="SFAVVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="122" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGRKL" short_name="SFGRKL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="128" y="20"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAUSW" short_name="SFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH" short_name="SFEH" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="3" y="21"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHANT" short_name="SFEHANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="8" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBZ" short_name="SFBZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="14" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLD" short_name="SFLD" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="22" y="21"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLANT" short_name="SFLANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="29" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVK" short_name="SFVK" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="35" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVKANT" short_name="SFVKANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="43" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVD" short_name="SFVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="49" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRM" short_name="SFRM" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="55" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMEH" short_name="SFRMEH" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="63" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMP" short_name="SFRMP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="69" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRP" short_name="SFSQRP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="75" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW" short_name="SFSQRABW" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="81" y="21"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW2" short_name="SFSQRABW2" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="88" y="21"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW3" short_name="SFSQRABW3" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="97" y="21"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH3AV" short_name="SFEH3AV" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="104" y="21"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVP" short_name="SFAVP" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="109" y="21"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVBZ" short_name="SFAVBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="116" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVVD" short_name="SFAVVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="122" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGRKL" short_name="SFGRKL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="128" y="21"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAUSW" short_name="SFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH" short_name="SFEH" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="3" y="22"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHANT" short_name="SFEHANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="8" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBZ" short_name="SFBZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="14" y="22"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLD" short_name="SFLD" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="22" y="22"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLANT" short_name="SFLANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="29" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVK" short_name="SFVK" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="35" y="22"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVKANT" short_name="SFVKANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="43" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVD" short_name="SFVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="49" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRM" short_name="SFRM" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="55" y="22"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMEH" short_name="SFRMEH" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="63" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMP" short_name="SFRMP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="69" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRP" short_name="SFSQRP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="75" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW" short_name="SFSQRABW" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="81" y="22"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW2" short_name="SFSQRABW2" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="88" y="22"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW3" short_name="SFSQRABW3" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="97" y="22"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH3AV" short_name="SFEH3AV" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="104" y="22"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVP" short_name="SFAVP" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="109" y="22"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVBZ" short_name="SFAVBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="116" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVVD" short_name="SFAVVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="122" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGRKL" short_name="SFGRKL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="128" y="22"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAUSW" short_name="SFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH" short_name="SFEH" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="3" y="23"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHANT" short_name="SFEHANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="8" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBZ" short_name="SFBZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="14" y="23"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLD" short_name="SFLD" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="22" y="23"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLANT" short_name="SFLANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="29" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVK" short_name="SFVK" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="35" y="23"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVKANT" short_name="SFVKANT" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="43" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVD" short_name="SFVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="49" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRM" short_name="SFRM" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="55" y="23"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMEH" short_name="SFRMEH" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="63" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRMP" short_name="SFRMP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="69" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRP" short_name="SFSQRP" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="75" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW" short_name="SFSQRABW" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="81" y="23"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW2" short_name="SFSQRABW2" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="88" y="23"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSQRABW3" short_name="SFSQRABW3" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="97" y="23"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEH3AV" short_name="SFEH3AV" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="104" y="23"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVP" short_name="SFAVP" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="109" y="23"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVBZ" short_name="SFAVBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="116" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFAVVD" short_name="SFAVVD" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="122" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGRKL" short_name="SFGRKL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="128" y="23"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_end_more" value="Weitere ... " display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="119" y="24"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+      <field field_type="subfile_end_bottom" value="Ende        " display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="119" y="24"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+    </field>
+  </screen>
+</header>

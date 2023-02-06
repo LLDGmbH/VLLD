@@ -1,0 +1,1032 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="SEATRUNK/ZS20DS(VFC)" library="SEATRUNK" member_name="ZS20DS">
+    <size cx="132" cy="27"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="f5" caption="F5" attention_key="false"/>
+    <action key="f6" caption="F6" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="f24" caption="F24" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <field field_type="screen_part" name="VFC" overlay="true">
+      <area>
+        <position/>
+        <size cx="132" cy="27"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SDS_USER" short_name="SDS_USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SDS_JOB" short_name="SDS_JOB" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="31"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="Zuschlagssteuerung Verkaufsklassen/Geschäftsart/Vertriebsline" display_length="61" data_length="61">
+          <area>
+            <position x="45"/>
+            <size cx="61" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="ZS20" display_length="4" data_length="4">
+          <area>
+            <position x="110"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="115"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="124"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="F3=Ende;A=Auswahl;K=Löschen komplett;X=Löschen;" display_length="47" data_length="47">
+          <area>
+            <position x="85" y="1"/>
+            <size cx="47" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="VFOBJ" short_name="VFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="2"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VFANAM" short_name="VFANAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="7" y="2"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFGENS" short_name="VFGENS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="2"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZGA" short_name="VFANZGA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="31" y="2"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZVL" short_name="VFANZVL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="34" y="2"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VFAUSW" short_name="VFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="38" y="2"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFOBJ" short_name="VFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VFANAM" short_name="VFANAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="7" y="3"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFGENS" short_name="VFGENS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="3"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZGA" short_name="VFANZGA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="31" y="3"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZVL" short_name="VFANZVL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="34" y="3"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VFAUSW" short_name="VFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="38" y="3"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="VFOBJ" short_name="VFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VFANAM" short_name="VFANAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="7" y="4"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFGENS" short_name="VFGENS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZGA" short_name="VFANZGA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="31" y="4"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZVL" short_name="VFANZVL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="34" y="4"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VFAUSW" short_name="VFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="38" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFOBJ" short_name="VFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VFANAM" short_name="VFANAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="7" y="5"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFGENS" short_name="VFGENS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZGA" short_name="VFANZGA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="31" y="5"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZVL" short_name="VFANZVL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="34" y="5"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VFAUSW" short_name="VFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="38" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="VFOBJ" short_name="VFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VFANAM" short_name="VFANAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="7" y="6"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFGENS" short_name="VFGENS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZGA" short_name="VFANZGA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="31" y="6"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZVL" short_name="VFANZVL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="34" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VFAUSW" short_name="VFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="38" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFOBJ" short_name="VFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VFANAM" short_name="VFANAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="7" y="7"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFGENS" short_name="VFGENS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZGA" short_name="VFANZGA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="31" y="7"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZVL" short_name="VFANZVL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="34" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VFAUSW" short_name="VFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="38" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="VFOBJ" short_name="VFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VFANAM" short_name="VFANAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="7" y="8"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFGENS" short_name="VFGENS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZGA" short_name="VFANZGA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="31" y="8"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZVL" short_name="VFANZVL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="34" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VFAUSW" short_name="VFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="38" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFOBJ" short_name="VFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VFANAM" short_name="VFANAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="7" y="9"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFGENS" short_name="VFGENS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZGA" short_name="VFANZGA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="31" y="9"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZVL" short_name="VFANZVL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="34" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VFAUSW" short_name="VFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="38" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="VFOBJ" short_name="VFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VFANAM" short_name="VFANAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="7" y="10"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFGENS" short_name="VFGENS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZGA" short_name="VFANZGA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="31" y="10"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZVL" short_name="VFANZVL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="34" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VFAUSW" short_name="VFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="38" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFOBJ" short_name="VFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VFANAM" short_name="VFANAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="7" y="11"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFGENS" short_name="VFGENS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZGA" short_name="VFANZGA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="31" y="11"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZVL" short_name="VFANZVL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="34" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VFAUSW" short_name="VFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="38" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="VFOBJ" short_name="VFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VFANAM" short_name="VFANAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="7" y="12"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFGENS" short_name="VFGENS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZGA" short_name="VFANZGA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="31" y="12"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZVL" short_name="VFANZVL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="34" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VFAUSW" short_name="VFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="38" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFOBJ" short_name="VFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VFANAM" short_name="VFANAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="7" y="13"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFGENS" short_name="VFGENS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZGA" short_name="VFANZGA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="31" y="13"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZVL" short_name="VFANZVL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="34" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VFAUSW" short_name="VFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="38" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="VFOBJ" short_name="VFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VFANAM" short_name="VFANAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="7" y="14"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFGENS" short_name="VFGENS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZGA" short_name="VFANZGA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="31" y="14"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZVL" short_name="VFANZVL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="34" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VFAUSW" short_name="VFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="38" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFOBJ" short_name="VFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VFANAM" short_name="VFANAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="7" y="15"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFGENS" short_name="VFGENS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZGA" short_name="VFANZGA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="31" y="15"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZVL" short_name="VFANZVL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="34" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VFAUSW" short_name="VFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="38" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="VFOBJ" short_name="VFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VFANAM" short_name="VFANAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="7" y="16"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFGENS" short_name="VFGENS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZGA" short_name="VFANZGA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="31" y="16"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZVL" short_name="VFANZVL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="34" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VFAUSW" short_name="VFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="38" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFOBJ" short_name="VFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VFANAM" short_name="VFANAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="7" y="17"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFGENS" short_name="VFGENS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZGA" short_name="VFANZGA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="31" y="17"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZVL" short_name="VFANZVL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="34" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VFAUSW" short_name="VFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="38" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="VFOBJ" short_name="VFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VFANAM" short_name="VFANAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="7" y="18"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFGENS" short_name="VFGENS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZGA" short_name="VFANZGA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="31" y="18"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZVL" short_name="VFANZVL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="34" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VFAUSW" short_name="VFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="38" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFOBJ" short_name="VFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VFANAM" short_name="VFANAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="7" y="19"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFGENS" short_name="VFGENS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZGA" short_name="VFANZGA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="31" y="19"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZVL" short_name="VFANZVL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="34" y="19"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VFAUSW" short_name="VFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="38" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="VFOBJ" short_name="VFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VFANAM" short_name="VFANAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="7" y="20"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFGENS" short_name="VFGENS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZGA" short_name="VFANZGA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="31" y="20"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZVL" short_name="VFANZVL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="34" y="20"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VFAUSW" short_name="VFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="38" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFOBJ" short_name="VFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VFANAM" short_name="VFANAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="7" y="21"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFGENS" short_name="VFGENS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZGA" short_name="VFANZGA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="31" y="21"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZVL" short_name="VFANZVL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="34" y="21"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VFAUSW" short_name="VFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="38" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="VFOBJ" short_name="VFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VFANAM" short_name="VFANAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="7" y="22"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFGENS" short_name="VFGENS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZGA" short_name="VFANZGA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="31" y="22"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZVL" short_name="VFANZVL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="34" y="22"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VFAUSW" short_name="VFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="38" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFOBJ" short_name="VFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VFANAM" short_name="VFANAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="7" y="23"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFGENS" short_name="VFGENS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZGA" short_name="VFANZGA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="31" y="23"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZVL" short_name="VFANZVL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="34" y="23"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VFAUSW" short_name="VFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="38" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="VFOBJ" short_name="VFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="24"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VFANAM" short_name="VFANAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="7" y="24"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFGENS" short_name="VFGENS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZGA" short_name="VFANZGA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="31" y="24"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZVL" short_name="VFANZVL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="34" y="24"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VFAUSW" short_name="VFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="38" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFOBJ" short_name="VFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="25"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VFANAM" short_name="VFANAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="7" y="25"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFGENS" short_name="VFGENS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="25"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZGA" short_name="VFANZGA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="31" y="25"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZVL" short_name="VFANZVL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="34" y="25"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VFAUSW" short_name="VFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="38" y="25"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="VFOBJ" short_name="VFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="26"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VFANAM" short_name="VFANAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="7" y="26"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFGENS" short_name="VFGENS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="29" y="26"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZGA" short_name="VFANZGA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="31" y="26"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VFANZVL" short_name="VFANZVL" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="34" y="26"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VFAUSW" short_name="VFAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="38" y="26"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+    </field>
+  </screen>
+</header>

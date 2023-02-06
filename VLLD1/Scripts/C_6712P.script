@@ -1,0 +1,18 @@
+﻿dim text, xxobj, ErrorMsg,sqlstmd as String
+dim rc as Integer
+dim con_table as integer
+
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+PanelFieldGetData("F1OBJ", xxobj, 0)
+rem xxobj = "627"
+sqlstmd = "select pzmanr, digits(pzobjn) concat ' ' concat pzbez from grflpzp where pzobjn = " + xxobj
+rc = EzSQLQuery(sqlstmd, text, ErrorMsg)
+PanelFieldSetProp ("F1PRAE", 5, text) 
+
+
+PanelUpdateEnable(2)

@@ -1,0 +1,1676 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="GESRC/VMP061SF(VMP061FK+VMP061F3)" library="GESRC" member_name="VMP061SF">
+    <size cx="132" cy="27"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <field field_type="screen_part" name="VMP061FK" overlay="true">
+      <area>
+        <position/>
+        <size cx="132" cy="23"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="VMP061F3">
+      <area>
+        <position y="24"/>
+        <size cx="132" cy="2"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="fixed_text" value="Blättern um :" display_length="13" data_length="13">
+          <area>
+            <position x="1"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="ANZNR" short_name="ANZNR" data_type="zoned_decimal" display_length="4" data_length="3" underline="true">
+          <area>
+            <position x="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="Datenmeldung Erfolgskontrolle" display_length="29" data_length="29">
+          <area>
+            <position x="44"/>
+            <size cx="29" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="JAHR" short_name="JAHR" data_type="zoned_decimal" display_length="4" data_length="4">
+          <area>
+            <position x="77"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="Datum:" display_length="6" data_length="6">
+          <area>
+            <position x="115" y="1"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="123" y="1"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="Programm: " display_length="10" data_length="10">
+          <area>
+            <position y="2"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="PROG2" short_name="PROG2" data_type="alphanumeric" display_length="6" data_length="6">
+          <area>
+            <position x="15" y="2"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="von Woche : " display_length="12" data_length="12">
+          <area>
+            <position x="42" y="2"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="VONWO" short_name="VONWO" data_type="zoned_decimal" display_length="2" data_length="2">
+          <area>
+            <position x="57" y="2"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="bis Woche :" display_length="11" data_length="11">
+          <area>
+            <position x="63" y="2"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="BISWO" short_name="BISWO" data_type="zoned_decimal" display_length="2" data_length="2">
+          <area>
+            <position x="77" y="2"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="Zeit :" display_length="6" data_length="6">
+          <area>
+            <position x="115" y="2"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="123" y="2"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="                                                                                                                                  " display_length="130" data_length="130" underline="true">
+          <area>
+            <position y="3"/>
+            <size cx="130" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="Stat.Nr  Name , Vorname             Verkauf     Nali   in %    Remi   in %  Gretplr  Avki   Avks  Scso  Sctl Sortim   lief.   Tbhf" display_length="130" data_length="130" high_intensity="true">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="130" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="STATNR" short_name="STATNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="NAME" short_name="NAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="10" y="6"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESVERK" short_name="GESVERK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="37" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESNALI" short_name="GESNALI" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="47" y="6"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESNLPR" short_name="GESNLPR" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="56" y="6"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESREMI" short_name="GESREMI" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="62" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESREPR" short_name="GESREPR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="71" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AVKIST" short_name="AVKIST" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="78" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GRETPLR" short_name="GRETPLR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="85" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AVKSOL" short_name="AVKSOL" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="92" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCANSO" short_name="SCANSO" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="99" y="6"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCNNTL" short_name="SCNNTL" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="105" y="6"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESSOR" short_name="GESSOR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="111" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESLIE" short_name="GESLIE" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="118" y="6"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANTBTL" short_name="ANTBTL" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="126" y="6"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="STATNR" short_name="STATNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="NAME" short_name="NAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="10" y="7"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESVERK" short_name="GESVERK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="37" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESNALI" short_name="GESNALI" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="47" y="7"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESNLPR" short_name="GESNLPR" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="56" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESREMI" short_name="GESREMI" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="62" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESREPR" short_name="GESREPR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="71" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AVKIST" short_name="AVKIST" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="78" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GRETPLR" short_name="GRETPLR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="85" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AVKSOL" short_name="AVKSOL" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="92" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCANSO" short_name="SCANSO" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="99" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCNNTL" short_name="SCNNTL" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="105" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESSOR" short_name="GESSOR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="111" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESLIE" short_name="GESLIE" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="118" y="7"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANTBTL" short_name="ANTBTL" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="126" y="7"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="STATNR" short_name="STATNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="NAME" short_name="NAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="10" y="8"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESVERK" short_name="GESVERK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="37" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESNALI" short_name="GESNALI" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="47" y="8"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESNLPR" short_name="GESNLPR" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="56" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESREMI" short_name="GESREMI" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="62" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESREPR" short_name="GESREPR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="71" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AVKIST" short_name="AVKIST" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="78" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GRETPLR" short_name="GRETPLR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="85" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AVKSOL" short_name="AVKSOL" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="92" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCANSO" short_name="SCANSO" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="99" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCNNTL" short_name="SCNNTL" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="105" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESSOR" short_name="GESSOR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="111" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESLIE" short_name="GESLIE" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="118" y="8"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANTBTL" short_name="ANTBTL" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="126" y="8"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="STATNR" short_name="STATNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="NAME" short_name="NAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="10" y="9"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESVERK" short_name="GESVERK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="37" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESNALI" short_name="GESNALI" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="47" y="9"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESNLPR" short_name="GESNLPR" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="56" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESREMI" short_name="GESREMI" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="62" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESREPR" short_name="GESREPR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="71" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AVKIST" short_name="AVKIST" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="78" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GRETPLR" short_name="GRETPLR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="85" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AVKSOL" short_name="AVKSOL" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="92" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCANSO" short_name="SCANSO" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="99" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCNNTL" short_name="SCNNTL" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="105" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESSOR" short_name="GESSOR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="111" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESLIE" short_name="GESLIE" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="118" y="9"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANTBTL" short_name="ANTBTL" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="126" y="9"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="STATNR" short_name="STATNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="NAME" short_name="NAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="10" y="10"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESVERK" short_name="GESVERK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="37" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESNALI" short_name="GESNALI" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="47" y="10"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESNLPR" short_name="GESNLPR" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="56" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESREMI" short_name="GESREMI" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="62" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESREPR" short_name="GESREPR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="71" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AVKIST" short_name="AVKIST" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="78" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GRETPLR" short_name="GRETPLR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="85" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AVKSOL" short_name="AVKSOL" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="92" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCANSO" short_name="SCANSO" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="99" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCNNTL" short_name="SCNNTL" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="105" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESSOR" short_name="GESSOR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="111" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESLIE" short_name="GESLIE" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="118" y="10"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANTBTL" short_name="ANTBTL" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="126" y="10"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="STATNR" short_name="STATNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="NAME" short_name="NAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="10" y="11"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESVERK" short_name="GESVERK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="37" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESNALI" short_name="GESNALI" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="47" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESNLPR" short_name="GESNLPR" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="56" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESREMI" short_name="GESREMI" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="62" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESREPR" short_name="GESREPR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="71" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AVKIST" short_name="AVKIST" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="78" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GRETPLR" short_name="GRETPLR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="85" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AVKSOL" short_name="AVKSOL" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="92" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCANSO" short_name="SCANSO" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="99" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCNNTL" short_name="SCNNTL" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="105" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESSOR" short_name="GESSOR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="111" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESLIE" short_name="GESLIE" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="118" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANTBTL" short_name="ANTBTL" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="126" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="STATNR" short_name="STATNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="NAME" short_name="NAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="10" y="12"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESVERK" short_name="GESVERK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="37" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESNALI" short_name="GESNALI" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="47" y="12"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESNLPR" short_name="GESNLPR" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="56" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESREMI" short_name="GESREMI" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="62" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESREPR" short_name="GESREPR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="71" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AVKIST" short_name="AVKIST" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="78" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GRETPLR" short_name="GRETPLR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="85" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AVKSOL" short_name="AVKSOL" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="92" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCANSO" short_name="SCANSO" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="99" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCNNTL" short_name="SCNNTL" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="105" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESSOR" short_name="GESSOR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="111" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESLIE" short_name="GESLIE" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="118" y="12"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANTBTL" short_name="ANTBTL" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="126" y="12"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="STATNR" short_name="STATNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="NAME" short_name="NAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="10" y="13"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESVERK" short_name="GESVERK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="37" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESNALI" short_name="GESNALI" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="47" y="13"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESNLPR" short_name="GESNLPR" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="56" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESREMI" short_name="GESREMI" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="62" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESREPR" short_name="GESREPR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="71" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AVKIST" short_name="AVKIST" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="78" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GRETPLR" short_name="GRETPLR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="85" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AVKSOL" short_name="AVKSOL" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="92" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCANSO" short_name="SCANSO" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="99" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCNNTL" short_name="SCNNTL" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="105" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESSOR" short_name="GESSOR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="111" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESLIE" short_name="GESLIE" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="118" y="13"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANTBTL" short_name="ANTBTL" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="126" y="13"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="STATNR" short_name="STATNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="NAME" short_name="NAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="10" y="14"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESVERK" short_name="GESVERK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="37" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESNALI" short_name="GESNALI" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="47" y="14"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESNLPR" short_name="GESNLPR" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="56" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESREMI" short_name="GESREMI" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="62" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESREPR" short_name="GESREPR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="71" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AVKIST" short_name="AVKIST" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="78" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GRETPLR" short_name="GRETPLR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="85" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AVKSOL" short_name="AVKSOL" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="92" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCANSO" short_name="SCANSO" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="99" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCNNTL" short_name="SCNNTL" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="105" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESSOR" short_name="GESSOR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="111" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESLIE" short_name="GESLIE" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="118" y="14"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANTBTL" short_name="ANTBTL" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="126" y="14"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="STATNR" short_name="STATNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="NAME" short_name="NAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="10" y="15"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESVERK" short_name="GESVERK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="37" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESNALI" short_name="GESNALI" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="47" y="15"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESNLPR" short_name="GESNLPR" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="56" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESREMI" short_name="GESREMI" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="62" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESREPR" short_name="GESREPR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="71" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AVKIST" short_name="AVKIST" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="78" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GRETPLR" short_name="GRETPLR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="85" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AVKSOL" short_name="AVKSOL" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="92" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCANSO" short_name="SCANSO" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="99" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCNNTL" short_name="SCNNTL" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="105" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESSOR" short_name="GESSOR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="111" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESLIE" short_name="GESLIE" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="118" y="15"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANTBTL" short_name="ANTBTL" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="126" y="15"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="STATNR" short_name="STATNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="NAME" short_name="NAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="10" y="16"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESVERK" short_name="GESVERK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="37" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESNALI" short_name="GESNALI" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="47" y="16"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESNLPR" short_name="GESNLPR" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="56" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESREMI" short_name="GESREMI" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="62" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESREPR" short_name="GESREPR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="71" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AVKIST" short_name="AVKIST" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="78" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GRETPLR" short_name="GRETPLR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="85" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AVKSOL" short_name="AVKSOL" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="92" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCANSO" short_name="SCANSO" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="99" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCNNTL" short_name="SCNNTL" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="105" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESSOR" short_name="GESSOR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="111" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESLIE" short_name="GESLIE" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="118" y="16"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANTBTL" short_name="ANTBTL" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="126" y="16"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="STATNR" short_name="STATNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="NAME" short_name="NAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="10" y="17"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESVERK" short_name="GESVERK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="37" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESNALI" short_name="GESNALI" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="47" y="17"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESNLPR" short_name="GESNLPR" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="56" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESREMI" short_name="GESREMI" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="62" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESREPR" short_name="GESREPR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="71" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AVKIST" short_name="AVKIST" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="78" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GRETPLR" short_name="GRETPLR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="85" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AVKSOL" short_name="AVKSOL" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="92" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCANSO" short_name="SCANSO" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="99" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCNNTL" short_name="SCNNTL" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="105" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESSOR" short_name="GESSOR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="111" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESLIE" short_name="GESLIE" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="118" y="17"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANTBTL" short_name="ANTBTL" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="126" y="17"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="STATNR" short_name="STATNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="NAME" short_name="NAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="10" y="18"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESVERK" short_name="GESVERK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="37" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESNALI" short_name="GESNALI" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="47" y="18"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESNLPR" short_name="GESNLPR" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="56" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESREMI" short_name="GESREMI" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="62" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESREPR" short_name="GESREPR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="71" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AVKIST" short_name="AVKIST" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="78" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GRETPLR" short_name="GRETPLR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="85" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AVKSOL" short_name="AVKSOL" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="92" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCANSO" short_name="SCANSO" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="99" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCNNTL" short_name="SCNNTL" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="105" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESSOR" short_name="GESSOR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="111" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESLIE" short_name="GESLIE" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="118" y="18"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANTBTL" short_name="ANTBTL" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="126" y="18"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="STATNR" short_name="STATNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="NAME" short_name="NAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="10" y="19"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESVERK" short_name="GESVERK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="37" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESNALI" short_name="GESNALI" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="47" y="19"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESNLPR" short_name="GESNLPR" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="56" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESREMI" short_name="GESREMI" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="62" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESREPR" short_name="GESREPR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="71" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AVKIST" short_name="AVKIST" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="78" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GRETPLR" short_name="GRETPLR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="85" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AVKSOL" short_name="AVKSOL" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="92" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCANSO" short_name="SCANSO" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="99" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCNNTL" short_name="SCNNTL" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="105" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESSOR" short_name="GESSOR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="111" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESLIE" short_name="GESLIE" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="118" y="19"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANTBTL" short_name="ANTBTL" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="126" y="19"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="STATNR" short_name="STATNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="NAME" short_name="NAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="10" y="20"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESVERK" short_name="GESVERK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="37" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESNALI" short_name="GESNALI" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="47" y="20"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESNLPR" short_name="GESNLPR" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="56" y="20"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESREMI" short_name="GESREMI" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="62" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESREPR" short_name="GESREPR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="71" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AVKIST" short_name="AVKIST" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="78" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GRETPLR" short_name="GRETPLR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="85" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AVKSOL" short_name="AVKSOL" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="92" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCANSO" short_name="SCANSO" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="99" y="20"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCNNTL" short_name="SCNNTL" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="105" y="20"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESSOR" short_name="GESSOR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="111" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESLIE" short_name="GESLIE" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="118" y="20"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANTBTL" short_name="ANTBTL" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="126" y="20"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="STATNR" short_name="STATNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="NAME" short_name="NAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="10" y="21"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESVERK" short_name="GESVERK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="37" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESNALI" short_name="GESNALI" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="47" y="21"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESNLPR" short_name="GESNLPR" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="56" y="21"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESREMI" short_name="GESREMI" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="62" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESREPR" short_name="GESREPR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true" decimal_positions="2">
+          <area>
+            <position x="71" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AVKIST" short_name="AVKIST" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="78" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GRETPLR" short_name="GRETPLR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="85" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AVKSOL" short_name="AVKSOL" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="92" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCANSO" short_name="SCANSO" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="99" y="21"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCNNTL" short_name="SCNNTL" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true" decimal_positions="1">
+          <area>
+            <position x="105" y="21"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESSOR" short_name="GESSOR" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="111" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GESLIE" short_name="GESLIE" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="118" y="21"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANTBTL" short_name="ANTBTL" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="126" y="21"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_end_more" value=" Weitere ..." display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="119" y="22"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+      <field field_type="subfile_end_bottom" value="        Ende" display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="119" y="22"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="                                                                                                                                  " display_length="130" data_length="130" underline="true">
+      <area>
+        <position y="24"/>
+        <size cx="130" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="Gesamt-Summen : " display_length="16" data_length="16">
+      <area>
+        <position x="11" y="25"/>
+        <size cx="16" cy="1"/>
+      </area>
+      <color foreground="red"/>
+    </field>
+    <field field_type="field" usage="output" name="SUMVERK" short_name="SUMVERK" data_type="zoned_decimal" display_length="9" data_length="7">
+      <area>
+        <position x="36" y="25"/>
+        <size cx="9" cy="1"/>
+      </area>
+      <color foreground="red"/>
+    </field>
+    <field field_type="field" usage="output" name="SUMNALI" short_name="SUMNALI" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="47" y="25"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="red"/>
+    </field>
+    <field field_type="fixed_text" value="F3 = Ende" display_length="9" data_length="9">
+      <area>
+        <position x="93" y="25"/>
+        <size cx="9" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="©" display_length="1" data_length="1">
+      <area>
+        <position x="116" y="25"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="by R.G 2001" display_length="11" data_length="11">
+      <area>
+        <position x="118" y="25"/>
+        <size cx="11" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

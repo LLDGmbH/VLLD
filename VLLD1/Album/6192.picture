@@ -1,0 +1,1770 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="SRC5/RSC502DS(SFC2+FUSS2)" library="SRC5" member_name="RSC502DS">
+    <size cx="132" cy="27"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <field field_type="screen_part" name="SFC2" overlay="true">
+      <area>
+        <position/>
+        <size cx="132" cy="25"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="FUSS2">
+      <area>
+        <position y="26"/>
+        <size cx="132" cy="1"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Änderungen Remissionsabsammlung" display_length="31" data_length="31">
+          <area>
+            <position x="35"/>
+            <size cx="31" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="92"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="103"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Objekt suchen:" display_length="14" data_length="14">
+          <area>
+            <position x="36" y="1"/>
+            <size cx="14" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SUOBJ" short_name="SUOBJ" data_type="zoned_decimal" display_length="5" data_length="5" underline="true" high_intensity="true">
+          <area>
+            <position x="52" y="1"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="Obnr Folge   Titel                 Menge Datum            Menge    Datum        geändert am           von      " display_length="111" data_length="111" underline="true">
+          <area>
+            <position x="1" y="2"/>
+            <size cx="111" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SMOBNR" short_name="SMOBNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMENR" short_name="SMENR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="7" y="4"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMOBBZ" short_name="SMOBBZ" data_type="alphanumeric" display_length="21" data_length="21" underline="true" conditional="true">
+          <area>
+            <position x="14" y="4"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMSTCKDS" short_name="SMSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="36" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMDSPDAT" short_name="SMDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="4"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMKZ1" short_name="SMKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="53" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNSTCKDS" short_name="SNSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNPM" short_name="SNPM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="65" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDSPDAT" short_name="SNDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="68" y="4"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNKZ1" short_name="SNKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="79" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDAT" short_name="SNDAT" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="81" y="4"/>
+            <size cx="19" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SNUSER" short_name="SNUSER" data_type="alphanumeric" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="103" y="4"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SMOBNR" short_name="SMOBNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMENR" short_name="SMENR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="7" y="5"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMOBBZ" short_name="SMOBBZ" data_type="alphanumeric" display_length="21" data_length="21" underline="true" conditional="true">
+          <area>
+            <position x="14" y="5"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMSTCKDS" short_name="SMSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="36" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMDSPDAT" short_name="SMDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="5"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMKZ1" short_name="SMKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="53" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNSTCKDS" short_name="SNSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNPM" short_name="SNPM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="65" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDSPDAT" short_name="SNDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="68" y="5"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNKZ1" short_name="SNKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="79" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDAT" short_name="SNDAT" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="81" y="5"/>
+            <size cx="19" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SNUSER" short_name="SNUSER" data_type="alphanumeric" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="103" y="5"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SMOBNR" short_name="SMOBNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMENR" short_name="SMENR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="7" y="6"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMOBBZ" short_name="SMOBBZ" data_type="alphanumeric" display_length="21" data_length="21" underline="true" conditional="true">
+          <area>
+            <position x="14" y="6"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMSTCKDS" short_name="SMSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="36" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMDSPDAT" short_name="SMDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="6"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMKZ1" short_name="SMKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="53" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNSTCKDS" short_name="SNSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNPM" short_name="SNPM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="65" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDSPDAT" short_name="SNDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="68" y="6"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNKZ1" short_name="SNKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="79" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDAT" short_name="SNDAT" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="81" y="6"/>
+            <size cx="19" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SNUSER" short_name="SNUSER" data_type="alphanumeric" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="103" y="6"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SMOBNR" short_name="SMOBNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMENR" short_name="SMENR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="7" y="7"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMOBBZ" short_name="SMOBBZ" data_type="alphanumeric" display_length="21" data_length="21" underline="true" conditional="true">
+          <area>
+            <position x="14" y="7"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMSTCKDS" short_name="SMSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="36" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMDSPDAT" short_name="SMDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMKZ1" short_name="SMKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="53" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNSTCKDS" short_name="SNSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNPM" short_name="SNPM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="65" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDSPDAT" short_name="SNDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="68" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNKZ1" short_name="SNKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="79" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDAT" short_name="SNDAT" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="81" y="7"/>
+            <size cx="19" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SNUSER" short_name="SNUSER" data_type="alphanumeric" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="103" y="7"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SMOBNR" short_name="SMOBNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMENR" short_name="SMENR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="7" y="8"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMOBBZ" short_name="SMOBBZ" data_type="alphanumeric" display_length="21" data_length="21" underline="true" conditional="true">
+          <area>
+            <position x="14" y="8"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMSTCKDS" short_name="SMSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="36" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMDSPDAT" short_name="SMDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMKZ1" short_name="SMKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="53" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNSTCKDS" short_name="SNSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNPM" short_name="SNPM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="65" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDSPDAT" short_name="SNDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="68" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNKZ1" short_name="SNKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="79" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDAT" short_name="SNDAT" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="81" y="8"/>
+            <size cx="19" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SNUSER" short_name="SNUSER" data_type="alphanumeric" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="103" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SMOBNR" short_name="SMOBNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMENR" short_name="SMENR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="7" y="9"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMOBBZ" short_name="SMOBBZ" data_type="alphanumeric" display_length="21" data_length="21" underline="true" conditional="true">
+          <area>
+            <position x="14" y="9"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMSTCKDS" short_name="SMSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="36" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMDSPDAT" short_name="SMDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMKZ1" short_name="SMKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="53" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNSTCKDS" short_name="SNSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNPM" short_name="SNPM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="65" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDSPDAT" short_name="SNDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="68" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNKZ1" short_name="SNKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="79" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDAT" short_name="SNDAT" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="81" y="9"/>
+            <size cx="19" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SNUSER" short_name="SNUSER" data_type="alphanumeric" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="103" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SMOBNR" short_name="SMOBNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMENR" short_name="SMENR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="7" y="10"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMOBBZ" short_name="SMOBBZ" data_type="alphanumeric" display_length="21" data_length="21" underline="true" conditional="true">
+          <area>
+            <position x="14" y="10"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMSTCKDS" short_name="SMSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="36" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMDSPDAT" short_name="SMDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMKZ1" short_name="SMKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="53" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNSTCKDS" short_name="SNSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNPM" short_name="SNPM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="65" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDSPDAT" short_name="SNDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="68" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNKZ1" short_name="SNKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="79" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDAT" short_name="SNDAT" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="81" y="10"/>
+            <size cx="19" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SNUSER" short_name="SNUSER" data_type="alphanumeric" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="103" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SMOBNR" short_name="SMOBNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMENR" short_name="SMENR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="7" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMOBBZ" short_name="SMOBBZ" data_type="alphanumeric" display_length="21" data_length="21" underline="true" conditional="true">
+          <area>
+            <position x="14" y="11"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMSTCKDS" short_name="SMSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="36" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMDSPDAT" short_name="SMDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMKZ1" short_name="SMKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="53" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNSTCKDS" short_name="SNSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNPM" short_name="SNPM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="65" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDSPDAT" short_name="SNDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="68" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNKZ1" short_name="SNKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="79" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDAT" short_name="SNDAT" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="81" y="11"/>
+            <size cx="19" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SNUSER" short_name="SNUSER" data_type="alphanumeric" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="103" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SMOBNR" short_name="SMOBNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMENR" short_name="SMENR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="7" y="12"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMOBBZ" short_name="SMOBBZ" data_type="alphanumeric" display_length="21" data_length="21" underline="true" conditional="true">
+          <area>
+            <position x="14" y="12"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMSTCKDS" short_name="SMSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="36" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMDSPDAT" short_name="SMDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMKZ1" short_name="SMKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="53" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNSTCKDS" short_name="SNSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNPM" short_name="SNPM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="65" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDSPDAT" short_name="SNDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="68" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNKZ1" short_name="SNKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="79" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDAT" short_name="SNDAT" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="81" y="12"/>
+            <size cx="19" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SNUSER" short_name="SNUSER" data_type="alphanumeric" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="103" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SMOBNR" short_name="SMOBNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMENR" short_name="SMENR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="7" y="13"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMOBBZ" short_name="SMOBBZ" data_type="alphanumeric" display_length="21" data_length="21" underline="true" conditional="true">
+          <area>
+            <position x="14" y="13"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMSTCKDS" short_name="SMSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="36" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMDSPDAT" short_name="SMDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMKZ1" short_name="SMKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="53" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNSTCKDS" short_name="SNSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNPM" short_name="SNPM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="65" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDSPDAT" short_name="SNDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="68" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNKZ1" short_name="SNKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="79" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDAT" short_name="SNDAT" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="81" y="13"/>
+            <size cx="19" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SNUSER" short_name="SNUSER" data_type="alphanumeric" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="103" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SMOBNR" short_name="SMOBNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMENR" short_name="SMENR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="7" y="14"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMOBBZ" short_name="SMOBBZ" data_type="alphanumeric" display_length="21" data_length="21" underline="true" conditional="true">
+          <area>
+            <position x="14" y="14"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMSTCKDS" short_name="SMSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="36" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMDSPDAT" short_name="SMDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMKZ1" short_name="SMKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="53" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNSTCKDS" short_name="SNSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNPM" short_name="SNPM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="65" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDSPDAT" short_name="SNDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="68" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNKZ1" short_name="SNKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="79" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDAT" short_name="SNDAT" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="81" y="14"/>
+            <size cx="19" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SNUSER" short_name="SNUSER" data_type="alphanumeric" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="103" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SMOBNR" short_name="SMOBNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMENR" short_name="SMENR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="7" y="15"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMOBBZ" short_name="SMOBBZ" data_type="alphanumeric" display_length="21" data_length="21" underline="true" conditional="true">
+          <area>
+            <position x="14" y="15"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMSTCKDS" short_name="SMSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="36" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMDSPDAT" short_name="SMDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMKZ1" short_name="SMKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="53" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNSTCKDS" short_name="SNSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNPM" short_name="SNPM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="65" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDSPDAT" short_name="SNDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="68" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNKZ1" short_name="SNKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="79" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDAT" short_name="SNDAT" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="81" y="15"/>
+            <size cx="19" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SNUSER" short_name="SNUSER" data_type="alphanumeric" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="103" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SMOBNR" short_name="SMOBNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMENR" short_name="SMENR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="7" y="16"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMOBBZ" short_name="SMOBBZ" data_type="alphanumeric" display_length="21" data_length="21" underline="true" conditional="true">
+          <area>
+            <position x="14" y="16"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMSTCKDS" short_name="SMSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="36" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMDSPDAT" short_name="SMDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMKZ1" short_name="SMKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="53" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNSTCKDS" short_name="SNSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNPM" short_name="SNPM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="65" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDSPDAT" short_name="SNDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="68" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNKZ1" short_name="SNKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="79" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDAT" short_name="SNDAT" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="81" y="16"/>
+            <size cx="19" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SNUSER" short_name="SNUSER" data_type="alphanumeric" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="103" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SMOBNR" short_name="SMOBNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMENR" short_name="SMENR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="7" y="17"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMOBBZ" short_name="SMOBBZ" data_type="alphanumeric" display_length="21" data_length="21" underline="true" conditional="true">
+          <area>
+            <position x="14" y="17"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMSTCKDS" short_name="SMSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="36" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMDSPDAT" short_name="SMDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMKZ1" short_name="SMKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="53" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNSTCKDS" short_name="SNSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNPM" short_name="SNPM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="65" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDSPDAT" short_name="SNDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="68" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNKZ1" short_name="SNKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="79" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDAT" short_name="SNDAT" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="81" y="17"/>
+            <size cx="19" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SNUSER" short_name="SNUSER" data_type="alphanumeric" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="103" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SMOBNR" short_name="SMOBNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMENR" short_name="SMENR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="7" y="18"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMOBBZ" short_name="SMOBBZ" data_type="alphanumeric" display_length="21" data_length="21" underline="true" conditional="true">
+          <area>
+            <position x="14" y="18"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMSTCKDS" short_name="SMSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="36" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMDSPDAT" short_name="SMDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMKZ1" short_name="SMKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="53" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNSTCKDS" short_name="SNSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNPM" short_name="SNPM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="65" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDSPDAT" short_name="SNDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="68" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNKZ1" short_name="SNKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="79" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDAT" short_name="SNDAT" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="81" y="18"/>
+            <size cx="19" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SNUSER" short_name="SNUSER" data_type="alphanumeric" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="103" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SMOBNR" short_name="SMOBNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMENR" short_name="SMENR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="7" y="19"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMOBBZ" short_name="SMOBBZ" data_type="alphanumeric" display_length="21" data_length="21" underline="true" conditional="true">
+          <area>
+            <position x="14" y="19"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMSTCKDS" short_name="SMSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="36" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMDSPDAT" short_name="SMDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMKZ1" short_name="SMKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="53" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNSTCKDS" short_name="SNSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNPM" short_name="SNPM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="65" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDSPDAT" short_name="SNDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="68" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNKZ1" short_name="SNKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="79" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDAT" short_name="SNDAT" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="81" y="19"/>
+            <size cx="19" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SNUSER" short_name="SNUSER" data_type="alphanumeric" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="103" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SMOBNR" short_name="SMOBNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMENR" short_name="SMENR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="7" y="20"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMOBBZ" short_name="SMOBBZ" data_type="alphanumeric" display_length="21" data_length="21" underline="true" conditional="true">
+          <area>
+            <position x="14" y="20"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMSTCKDS" short_name="SMSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="36" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMDSPDAT" short_name="SMDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMKZ1" short_name="SMKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="53" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNSTCKDS" short_name="SNSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNPM" short_name="SNPM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="65" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDSPDAT" short_name="SNDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="68" y="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNKZ1" short_name="SNKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="79" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDAT" short_name="SNDAT" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="81" y="20"/>
+            <size cx="19" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SNUSER" short_name="SNUSER" data_type="alphanumeric" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="103" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SMOBNR" short_name="SMOBNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMENR" short_name="SMENR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="7" y="21"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMOBBZ" short_name="SMOBBZ" data_type="alphanumeric" display_length="21" data_length="21" underline="true" conditional="true">
+          <area>
+            <position x="14" y="21"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMSTCKDS" short_name="SMSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="36" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMDSPDAT" short_name="SMDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="21"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMKZ1" short_name="SMKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="53" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNSTCKDS" short_name="SNSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNPM" short_name="SNPM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="65" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDSPDAT" short_name="SNDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="68" y="21"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNKZ1" short_name="SNKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="79" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDAT" short_name="SNDAT" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="81" y="21"/>
+            <size cx="19" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SNUSER" short_name="SNUSER" data_type="alphanumeric" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="103" y="21"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SMOBNR" short_name="SMOBNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMENR" short_name="SMENR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="7" y="22"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMOBBZ" short_name="SMOBBZ" data_type="alphanumeric" display_length="21" data_length="21" underline="true" conditional="true">
+          <area>
+            <position x="14" y="22"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMSTCKDS" short_name="SMSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="36" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMDSPDAT" short_name="SMDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="22"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMKZ1" short_name="SMKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="53" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNSTCKDS" short_name="SNSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNPM" short_name="SNPM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="65" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDSPDAT" short_name="SNDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="68" y="22"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNKZ1" short_name="SNKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="79" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDAT" short_name="SNDAT" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="81" y="22"/>
+            <size cx="19" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SNUSER" short_name="SNUSER" data_type="alphanumeric" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="103" y="22"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SMOBNR" short_name="SMOBNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMENR" short_name="SMENR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="7" y="23"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMOBBZ" short_name="SMOBBZ" data_type="alphanumeric" display_length="21" data_length="21" underline="true" conditional="true">
+          <area>
+            <position x="14" y="23"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMSTCKDS" short_name="SMSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="36" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMDSPDAT" short_name="SMDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="23"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SMKZ1" short_name="SMKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="53" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="fixed_text" value="|" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNSTCKDS" short_name="SNSTCKDS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNPM" short_name="SNPM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="65" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDSPDAT" short_name="SNDSPDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="68" y="23"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNKZ1" short_name="SNKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="79" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="SNDAT" short_name="SNDAT" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="81" y="23"/>
+            <size cx="19" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SNUSER" short_name="SNUSER" data_type="alphanumeric" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="103" y="23"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_end_more" value="Weitere ... " display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="119" y="24"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+      <field field_type="subfile_end_bottom" value="Ende        " display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="119" y="24"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="F3 = Beenden " display_length="13" data_length="13">
+      <area>
+        <position x="1" y="26"/>
+        <size cx="13" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

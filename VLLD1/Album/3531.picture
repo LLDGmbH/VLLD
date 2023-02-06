@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="LZSRC/PVLEANRMDS(FORMAT1)" library="LZSRC" member_name="PVLEANRMDS">
+    <size cx="80" cy="24"/>
+    <action key="f1" caption="F1" attention_key="false"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="f6" caption="F6" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="f12" caption="F12" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <field field_type="screen_part" name="FORMAT1">
+      <area>
+        <position/>
+        <size cx="80" cy="24"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="*USER" short_name="*USER" data_type="alphanumeric" display_length="10" data_length="10">
+      <area>
+        <position x="1"/>
+        <size cx="10" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value=" Erfassung für EAN-CODE-Fehler " display_length="31" data_length="31" underline="true">
+      <area>
+        <position x="25"/>
+        <size cx="31" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+      <area>
+        <position x="72"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="PVLEANRM" display_length="8" data_length="8">
+      <area>
+        <position x="72" y="1"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="yellow"/>
+    </field>
+    <field field_type="fixed_text" value="Obj   Titel   VDZ     Teil " display_length="27" data_length="27">
+      <area>
+        <position x="2" y="3"/>
+        <size cx="27" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="both" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" position_cursor="conditional">
+      <area>
+        <position x="2" y="4"/>
+        <size cx="4" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="input" name="STITEL" short_name="STITEL" data_type="alphanumeric" display_length="6" data_length="6" underline="true">
+      <area>
+        <position x="8" y="4"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="input" name="VDZ" short_name="VDZ" data_type="zoned_decimal" display_length="5" data_length="5" underline="true">
+      <area>
+        <position x="16" y="4"/>
+        <size cx="5" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="input" name="TTITEL" short_name="TTITEL" data_type="alphanumeric" display_length="6" data_length="6" underline="true">
+      <area>
+        <position x="24" y="4"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="both" name="$$SLT" short_name="$$SLT" data_type="zoned_decimal" display_length="2" data_length="2" underline="true" position_cursor="conditional" special_field_type="menu_bar_text">
+      <area>
+        <position x="36" y="4"/>
+        <size cx="2" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="msgid_text" value="                                         " display_length="41" data_length="41" special_field_type="menu_bar_text">
+      <area>
+        <position x="39" y="4"/>
+        <size cx="41" cy="1"/>
+      </area>
+      <color foreground="green" conditional="true"/>
+      <color foreground="blue" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+      <area>
+        <position x="2" y="5"/>
+        <size cx="21" cy="1"/>
+      </area>
+      <color foreground="white"/>
+      <indicator negative="true" id="71"/>
+    </field>
+    <field field_type="msgid_text" value="                                         " display_length="41" data_length="41" special_field_type="menu_bar_text">
+      <area>
+        <position x="39" y="5"/>
+        <size cx="41" cy="1"/>
+      </area>
+      <color foreground="green" conditional="true"/>
+      <color foreground="blue" conditional="true"/>
+    </field>
+    <field field_type="field" usage="both" name="EANFOLGE" short_name="EANFOLGE" data_type="zoned_decimal" display_length="9" data_length="8" underline="true" conditional="true" position_cursor="conditional">
+      <area>
+        <position x="2" y="6"/>
+        <size cx="9" cy="1"/>
+      </area>
+      <color foreground="white"/>
+      <indicator negative="true" id="71"/>
+    </field>
+    <field field_type="fixed_text" value="(JJJJ-FFFF)" display_length="11" data_length="11" conditional="true">
+      <area>
+        <position x="13" y="6"/>
+        <size cx="11" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+      <indicator negative="true" id="71"/>
+    </field>
+    <field field_type="msgid_text" value="                                         " display_length="41" data_length="41" special_field_type="menu_bar_text">
+      <area>
+        <position x="39" y="6"/>
+        <size cx="41" cy="1"/>
+      </area>
+      <color foreground="green" conditional="true"/>
+      <color foreground="blue" conditional="true"/>
+    </field>
+    <field field_type="msgid_text" value="                                         " display_length="41" data_length="41" special_field_type="menu_bar_text">
+      <area>
+        <position x="39" y="7"/>
+        <size cx="41" cy="1"/>
+      </area>
+      <color foreground="green" conditional="true"/>
+      <color foreground="blue" conditional="true"/>
+    </field>
+    <field field_type="field" usage="both" name="BS_HEUTE" short_name="BS_HEUTE" data_type="alphanumeric" display_length="10" data_length="10" underline="true" conditional="true" position_cursor="conditional">
+      <area>
+        <position x="2" y="8"/>
+        <size cx="10" cy="1"/>
+      </area>
+      <color foreground="white"/>
+      <indicator negative="true" id="71"/>
+    </field>
+    <field field_type="fixed_text" value="(Datum EVT)" display_length="11" data_length="11" conditional="true">
+      <area>
+        <position x="13" y="8"/>
+        <size cx="11" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+      <indicator negative="true" id="71"/>
+    </field>
+    <field field_type="msgid_text" value="                                         " display_length="41" data_length="41" special_field_type="menu_bar_text">
+      <area>
+        <position x="39" y="8"/>
+        <size cx="41" cy="1"/>
+      </area>
+      <color foreground="green" conditional="true"/>
+      <color foreground="blue" conditional="true"/>
+    </field>
+    <field field_type="fixed_text" value=" TT.MM.JJJJ " display_length="12" data_length="12" conditional="true">
+      <area>
+        <position x="1" y="9"/>
+        <size cx="12" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+      <indicator negative="true" id="71"/>
+    </field>
+    <field field_type="msgid_text" value="                                         " display_length="41" data_length="41" special_field_type="menu_bar_text">
+      <area>
+        <position x="39" y="9"/>
+        <size cx="41" cy="1"/>
+      </area>
+      <color foreground="green" conditional="true"/>
+      <color foreground="blue" conditional="true"/>
+    </field>
+    <field field_type="field" usage="both" name="BS_INFO" short_name="BS_INFO" data_type="alphanumeric" display_length="30" data_length="30" lowercase="true" underline="true" conditional="true" position_cursor="conditional" exit_record="true">
+      <area>
+        <position x="2" y="10"/>
+        <size cx="30" cy="1"/>
+      </area>
+      <color foreground="white"/>
+      <indicator negative="true" id="71"/>
+    </field>
+    <field field_type="msgid_text" value="                                         " display_length="41" data_length="41" special_field_type="menu_bar_text">
+      <area>
+        <position x="39" y="10"/>
+        <size cx="41" cy="1"/>
+      </area>
+      <color foreground="green" conditional="true"/>
+      <color foreground="blue" conditional="true"/>
+    </field>
+    <field field_type="msgid_text" value="                                         " display_length="41" data_length="41" special_field_type="menu_bar_text">
+      <area>
+        <position x="39" y="11"/>
+        <size cx="41" cy="1"/>
+      </area>
+      <color foreground="green" conditional="true"/>
+      <color foreground="blue" conditional="true"/>
+    </field>
+    <field field_type="fixed_text" value="Verlag" display_length="6" data_length="6" conditional="true">
+      <area>
+        <position x="2" y="12"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+      <indicator negative="true" id="71"/>
+    </field>
+    <field field_type="msgid_text" value="                                         " display_length="41" data_length="41" special_field_type="menu_bar_text">
+      <area>
+        <position x="39" y="12"/>
+        <size cx="41" cy="1"/>
+      </area>
+      <color foreground="green" conditional="true"/>
+      <color foreground="blue" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="ATVNR" short_name="ATVNR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+      <area>
+        <position x="2" y="13"/>
+        <size cx="4" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+      <indicator negative="true" id="71"/>
+    </field>
+    <field field_type="msgid_text" value="                                         " display_length="41" data_length="41" special_field_type="menu_bar_text">
+      <area>
+        <position x="39" y="13"/>
+        <size cx="41" cy="1"/>
+      </area>
+      <color foreground="green" conditional="true"/>
+      <color foreground="blue" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="VANAME" short_name="VANAME" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+      <area>
+        <position x="2" y="14"/>
+        <size cx="25" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+      <indicator negative="true" id="71"/>
+    </field>
+    <field field_type="msgid_text" value="                                         " display_length="41" data_length="41" special_field_type="menu_bar_text">
+      <area>
+        <position x="39" y="14"/>
+        <size cx="41" cy="1"/>
+      </area>
+      <color foreground="green" conditional="true"/>
+      <color foreground="blue" conditional="true"/>
+    </field>
+    <field field_type="msgid_text" value="                                         " display_length="41" data_length="41" special_field_type="menu_bar_text">
+      <area>
+        <position x="39" y="15"/>
+        <size cx="41" cy="1"/>
+      </area>
+      <color foreground="green" conditional="true"/>
+      <color foreground="blue" conditional="true"/>
+    </field>
+    <field field_type="msgid_text" value="                                         " display_length="41" data_length="41" special_field_type="menu_bar_text">
+      <area>
+        <position x="39" y="16"/>
+        <size cx="41" cy="1"/>
+      </area>
+      <color foreground="green" conditional="true"/>
+      <color foreground="blue" conditional="true"/>
+    </field>
+    <field field_type="msgid_text" value="                                         " display_length="41" data_length="41" special_field_type="menu_bar_text">
+      <area>
+        <position x="39" y="17"/>
+        <size cx="41" cy="1"/>
+      </area>
+      <color foreground="green" conditional="true"/>
+      <color foreground="blue" conditional="true"/>
+    </field>
+    <field field_type="msgid_text" value="                                         " display_length="41" data_length="41" special_field_type="menu_bar_text">
+      <area>
+        <position x="39" y="18"/>
+        <size cx="41" cy="1"/>
+      </area>
+      <color foreground="green" conditional="true"/>
+      <color foreground="blue" conditional="true"/>
+    </field>
+    <field field_type="msgid_text" value="                                         " display_length="41" data_length="41" special_field_type="menu_bar_text">
+      <area>
+        <position x="39" y="19"/>
+        <size cx="41" cy="1"/>
+      </area>
+      <color foreground="green" conditional="true"/>
+      <color foreground="blue" conditional="true"/>
+    </field>
+    <field field_type="msgid_text" value="                                         " display_length="41" data_length="41" special_field_type="menu_bar_text">
+      <area>
+        <position x="39" y="20"/>
+        <size cx="41" cy="1"/>
+      </area>
+      <color foreground="green" conditional="true"/>
+      <color foreground="blue" conditional="true"/>
+    </field>
+    <field field_type="msgid_text" value="                                         " display_length="41" data_length="41" special_field_type="menu_bar_text">
+      <area>
+        <position x="39" y="21"/>
+        <size cx="41" cy="1"/>
+      </area>
+      <color foreground="green" conditional="true"/>
+      <color foreground="blue" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="MSG" short_name="MSG" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+      <area>
+        <position x="1" y="22"/>
+        <size cx="25" cy="1"/>
+      </area>
+      <color foreground="red"/>
+      <indicator id="13"/>
+    </field>
+    <field field_type="fixed_text" value="F3 = Ende; F4 = Liste;" display_length="22" data_length="22">
+      <area>
+        <position x="1" y="23"/>
+        <size cx="22" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="F9 = speichern" display_length="14" data_length="14" conditional="true" position_cursor="conditional">
+      <area>
+        <position x="25" y="23"/>
+        <size cx="14" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+      <indicator id="75"/>
+    </field>
+    <field field_type="fixed_text" value="© G.Gerstmann" display_length="13" data_length="13">
+      <area>
+        <position x="67" y="23"/>
+        <size cx="13" cy="1"/>
+      </area>
+      <color foreground="red"/>
+    </field>
+  </screen>
+</header>

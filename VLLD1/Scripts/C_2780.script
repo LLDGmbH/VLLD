@@ -1,0 +1,31 @@
+﻿dim xobnr, text, xsql, ErrorMsg as String
+dim rc as Integer
+global dsp_2780 as integer
+global pic_nummer, pic_jahr, pic_folge, pic_name, y0, y1, y2, y3 as string
+y1 = " "
+y2 = "0"
+y3 = " "
+
+
+dsp_2780 = 0
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rc = EzSQLQuery("SELECT NLTXNR, NLTEXT FROM GRNLTP where nltext <> 'frei'order by NLTXNR", text, ErrorMsg)
+
+if ( rc < 0 ) then
+
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+
+else
+
+PanelFieldSetProp ("textkz", 5, text) 
+PanelUpdateEnable(2)
+
+endif
+
+
+HostScreenSendKey("ENTER")

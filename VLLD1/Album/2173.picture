@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="LLD_OBJ/VP22PDS(SF5C+FUSS1)" library="LLD_OBJ" member_name="VP22PDS">
+    <size cx="80" cy="24"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="f13" caption="F13" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <action key="help" caption="HELP" attention_key="false"/>
+    <field field_type="screen_part" name="SF5C" overlay="true">
+      <area>
+        <position/>
+        <size cx="80" cy="22"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="FUSS1">
+      <area>
+        <position y="23"/>
+        <size cx="80" cy="1"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PTITEL" short_name="PTITEL" data_type="alphanumeric" display_length="21" data_length="21">
+          <area>
+            <position x="29"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="62"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="71"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*SYSNAME" short_name="*SYSNAME" data_type="alphanumeric" display_length="8" data_length="8">
+          <area>
+            <position x="1" y="1"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Vertriebslinien" display_length="15" data_length="15">
+          <area>
+            <position x="32" y="1"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*USER" short_name="*USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="62" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F0PGM" short_name="F0PGM" data_type="alphanumeric" display_length="6" data_length="6">
+          <area>
+            <position x="73" y="1"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="fixed_text" value="Liste ab Kennzeichen        Suchbegriff                                       " display_length="78" data_length="78" underline="true">
+          <area>
+            <position x="1" y="2"/>
+            <size cx="78" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="both" name="S5VLAB" short_name="S5VLAB" data_type="zoned_decimal" display_length="11" data_length="9" underline="true" high_intensity="true">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S5SUCH" short_name="S5SUCH" data_type="alphanumeric" display_length="12" data_length="12" underline="true" high_intensity="true">
+          <area>
+            <position x="29" y="3"/>
+            <size cx="12" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="VL-Kennz.     A   Bezeichnung                                                 " display_length="78" data_length="78" underline="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="78" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S5VLKZ" short_name="S5VLKZ" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+        </field>
+        <field field_type="field" usage="input" name="S5AUSW" short_name="S5AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="15" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S5VBEZ" short_name="S5VBEZ" data_type="alphanumeric" display_length="40" data_length="40" conditional="true">
+          <area>
+            <position x="19" y="6"/>
+            <size cx="40" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S5KNAM" short_name="S5KNAM" data_type="alphanumeric" display_length="40" data_length="40" conditional="true">
+          <area>
+            <position x="29" y="7"/>
+            <size cx="40" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S5KPLZ" short_name="S5KPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="29" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S5KORT" short_name="S5KORT" data_type="alphanumeric" display_length="40" data_length="40" conditional="true">
+          <area>
+            <position x="35" y="8"/>
+            <size cx="40" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S5VLKZ" short_name="S5VLKZ" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+        </field>
+        <field field_type="field" usage="input" name="S5AUSW" short_name="S5AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="15" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S5VBEZ" short_name="S5VBEZ" data_type="alphanumeric" display_length="40" data_length="40" conditional="true">
+          <area>
+            <position x="19" y="9"/>
+            <size cx="40" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S5KNAM" short_name="S5KNAM" data_type="alphanumeric" display_length="40" data_length="40" conditional="true">
+          <area>
+            <position x="29" y="10"/>
+            <size cx="40" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S5KPLZ" short_name="S5KPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="29" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S5KORT" short_name="S5KORT" data_type="alphanumeric" display_length="40" data_length="40" conditional="true">
+          <area>
+            <position x="35" y="11"/>
+            <size cx="40" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S5VLKZ" short_name="S5VLKZ" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+        </field>
+        <field field_type="field" usage="input" name="S5AUSW" short_name="S5AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="15" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S5VBEZ" short_name="S5VBEZ" data_type="alphanumeric" display_length="40" data_length="40" conditional="true">
+          <area>
+            <position x="19" y="12"/>
+            <size cx="40" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S5KNAM" short_name="S5KNAM" data_type="alphanumeric" display_length="40" data_length="40" conditional="true">
+          <area>
+            <position x="29" y="13"/>
+            <size cx="40" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S5KPLZ" short_name="S5KPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="29" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S5KORT" short_name="S5KORT" data_type="alphanumeric" display_length="40" data_length="40" conditional="true">
+          <area>
+            <position x="35" y="14"/>
+            <size cx="40" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S5VLKZ" short_name="S5VLKZ" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+        </field>
+        <field field_type="field" usage="input" name="S5AUSW" short_name="S5AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="15" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S5VBEZ" short_name="S5VBEZ" data_type="alphanumeric" display_length="40" data_length="40" conditional="true">
+          <area>
+            <position x="19" y="15"/>
+            <size cx="40" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S5KNAM" short_name="S5KNAM" data_type="alphanumeric" display_length="40" data_length="40" conditional="true">
+          <area>
+            <position x="29" y="16"/>
+            <size cx="40" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S5KPLZ" short_name="S5KPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="29" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S5KORT" short_name="S5KORT" data_type="alphanumeric" display_length="40" data_length="40" conditional="true">
+          <area>
+            <position x="35" y="17"/>
+            <size cx="40" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S5VLKZ" short_name="S5VLKZ" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+        </field>
+        <field field_type="field" usage="input" name="S5AUSW" short_name="S5AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="15" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S5VBEZ" short_name="S5VBEZ" data_type="alphanumeric" display_length="40" data_length="40" conditional="true">
+          <area>
+            <position x="19" y="18"/>
+            <size cx="40" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S5KNAM" short_name="S5KNAM" data_type="alphanumeric" display_length="40" data_length="40" conditional="true">
+          <area>
+            <position x="29" y="19"/>
+            <size cx="40" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S5KPLZ" short_name="S5KPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="29" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S5KORT" short_name="S5KORT" data_type="alphanumeric" display_length="40" data_length="40" conditional="true">
+          <area>
+            <position x="35" y="20"/>
+            <size cx="40" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_end_more" value=" Weitere ..." display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="67" y="21"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+      <field field_type="subfile_end_bottom" value="        Ende" display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="67" y="21"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="F3=Zurück; weiß=Pressefachhändler" display_length="33" data_length="33">
+      <area>
+        <position x="1" y="23"/>
+        <size cx="33" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

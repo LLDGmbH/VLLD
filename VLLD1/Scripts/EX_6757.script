@@ -1,0 +1,73 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim errmsg, datei, pfad_datei, source as string 
+dim x1vtl, x1vnr, x1vnam, x1objn, x1onam, x1bez, x1rem, x1vk, x1kdgs, x1vd, x1proz, x1sqr as string
+
+i = 0
+j = 2
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Koordiniertes Vertriebsmarketing.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "VTL")
+ddepoke( ddehandle, "Z1S2", "Verlag")
+ddepoke( ddehandle, "Z1S3", "Name")
+ddepoke( ddehandle, "Z1S4", "ObjNr")
+ddepoke( ddehandle, "Z1S5", "Name")
+ddepoke( ddehandle, "Z1S6", "Bezug")
+ddepoke( ddehandle, "Z1S7", "Remi")
+ddepoke( ddehandle, "Z1S8", "Verkauf")
+ddepoke( ddehandle, "Z1S9", "EH")
+ddepoke( ddehandle, "Z1S10", "VD")
+ddepoke( ddehandle, "Z1S11", "Remi %")
+ddepoke( ddehandle, "Z1S12", "Max %")
+
+nochmal:
+
+HostFieldGetLineData("s1vtl", i, x1vtl)
+HostFieldGetLineData("s1vnr", i,x1vnr)
+HostFieldGetLineData("s1vnam", i, x1vnam)
+HostFieldGetLineData("s1objn", i, x1objn)
+HostFieldGetLineData("s1onam", i, x1onam)
+HostFieldGetLineData("s1bez", i, x1bez)
+HostFieldGetLineData("s1rem", i, x1rem)
+HostFieldGetLineData("s1vk", i, x1vk)
+HostFieldGetLineData("s1kdgs", i, x1kdgs)
+HostFieldGetLineData("s1vd", i, x1vd)
+HostFieldGetLineData("s1proz", i, x1proz)
+HostFieldGetLineData("s1sqr", i, x1sqr)
+
+
+if (x1vnr <> "") then
+ddepoke( ddehandle, "Z" + str(j) +"S1", x1vtl)
+ddepoke( ddehandle, "Z" + str(j) +"S2", x1vnr)
+ddepoke( ddehandle, "Z" + str(j) +"S3", x1vnam)
+ddepoke( ddehandle, "Z" + str(j) +"S4", x1objn)
+ddepoke( ddehandle, "Z" + str(j) +"S5", x1onam)
+ddepoke( ddehandle, "Z" + str(j) +"S6", x1bez)
+ddepoke( ddehandle, "Z" + str(j) +"S7", x1rem)
+ddepoke( ddehandle, "Z" + str(j) +"S8", x1vk)
+ddepoke( ddehandle, "Z" + str(j) +"S9", x1kdgs)
+ddepoke( ddehandle, "Z" + str(j) +"S10", x1vd)
+ddepoke( ddehandle, "Z" + str(j) +"S11", x1proz)
+ddepoke( ddehandle, "Z" + str(j) +"S12", x1sqr)
+j=j+1
+endif
+
+if i < 19 then
+i=i+1
+goto nochmal
+endif
+ 
+if x1vnr <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

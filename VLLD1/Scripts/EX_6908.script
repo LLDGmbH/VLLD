@@ -1,0 +1,95 @@
+﻿global filiale as string
+DIM ddehandle, i, j, msg, rc as integer
+dim x2zunr, x2name, x2str, x2plz, x2ort, x2alo1, x2alo2, x2alo3, x2alo4, x2alo5, x2alo6, x2Sum, x2Nach as string
+dim x2kn1, x2kn2, x2kn3, x2kn4, x2kn5, x2kn6, x2obj1, x2obj2, x2obj3, x2obj4, x2obj5, x2obj6, xprov, datei, pfad_datei, ErrMsg as string 
+dim f01, f02, f03, f04, f05, f06, f07, f08, f09, f10, f11, f12 as string
+dim source as string
+
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+HostFieldGetData("c2kn1",x2kn1)
+HostFieldGetData("c2kn2",x2kn2)
+HostFieldGetData("c2kn3",x2kn3)
+HostFieldGetData("c2kn4",x2kn4)
+HostFieldGetData("c2kn5",x2kn5)
+HostFieldGetData("c2kn6",x2kn6)
+
+HostFieldGetData("c2obj1",x2obj1)
+HostFieldGetData("c2obj2",x2obj2)
+HostFieldGetData("c2obj3",x2obj3)
+HostFieldGetData("c2obj4",x2obj4)
+HostFieldGetData("c2obj5",x2obj5)
+HostFieldGetData("c2obj6",x2obj6)
+
+
+datei = "Gebietsverkausleiter.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1",  "Zu-Nr")
+ddepoke( ddehandle, "Z1S2",  "Name")
+ddepoke( ddehandle, "Z1S3",  "Strasse")
+ddepoke( ddehandle, "Z1S4",  "PLZ")
+ddepoke( ddehandle, "Z1S5",  "Ort")
+ddepoke( ddehandle, "Z1S6",  x2kn1)
+ddepoke( ddehandle, "Z1S7",  x2kn2)
+ddepoke( ddehandle, "Z1S8",  x2kn3)
+ddepoke( ddehandle, "Z1S9",  x2kn4)
+ddepoke( ddehandle, "Z1S10", x2kn5)
+ddepoke( ddehandle, "Z1S11", x2kn6)
+ddepoke( ddehandle, "Z1S12", "Prov")
+ddepoke( ddehandle, "Z1S13", "Summe")
+ddepoke( ddehandle, "Z1S14", "FF-2")
+
+nochmal:
+
+HostFieldGetLineData("s2zunr", i, x2zunr)
+HostFieldGetLineData("s2name", i, x2name)
+HostFieldGetLineData("s2str",  i, x2str)
+HostFieldGetLineData("s2plz",  i, x2plz)
+HostFieldGetLineData("s2ort",  i, x2ort)
+HostFieldGetLineData("s2alo1", i, x2alo1)
+HostFieldGetLineData("s2alo2", i, x2alo2)
+HostFieldGetLineData("s2alo3", i, x2alo3)
+HostFieldGetLineData("s2alo4", i, x2alo4)
+HostFieldGetLineData("s2alo5", i, x2alo5)
+HostFieldGetLineData("s2alo6", i, x2alo6)
+HostFieldGetLineData("prov",   i, xprov)
+HostFieldGetLineData("s2Sum",  i, x2Sum)
+HostFieldGetLineData("s2Nach", i, x2Nach)
+
+if x2Name <> "" then
+   ddepoke( ddehandle, "Z" + str(j) +"S1", x2zunr)
+   ddepoke( ddehandle, "Z" + str(j) +"S2", x2name)
+   ddepoke( ddehandle, "Z" + str(j) +"S3", x2str)
+   ddepoke( ddehandle, "Z" + str(j) +"S4", x2plz)
+   ddepoke( ddehandle, "Z" + str(j) +"S5", x2ort)
+   ddepoke( ddehandle, "Z" + str(j) +"S6", x2alo1)
+   ddepoke( ddehandle, "Z" + str(j) +"S7", x2alo2)
+   ddepoke( ddehandle, "Z" + str(j) +"S8", x2alo3)
+   ddepoke( ddehandle, "Z" + str(j) +"S9", x2alo4)
+   ddepoke( ddehandle, "Z" + str(j) +"S10", x2alo5)
+   ddepoke( ddehandle, "Z" + str(j) +"S11", x2alo6)
+   ddepoke( ddehandle, "Z" + str(j) +"S12", xprov)
+   ddepoke( ddehandle, "Z" + str(j) +"S13", x2Sum)
+   ddepoke( ddehandle, "Z" + str(j) +"S14", x2Nach)
+   j=j+1 
+endif
+
+if i < 17 then
+i=i+1
+goto nochmal
+endif
+ 
+if x2name <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

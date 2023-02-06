@@ -1,0 +1,52 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xkdnr, xname, xkalf, xapos1, xbpos1, xproz, xpos, x1, x2, x3, x4, x5, x6, x7, sql1, sql2, sql3, sql4, sql5, sql6, sql7, errmsg, datei, pfad_datei, source as string 
+i = 0
+j=3
+
+
+datei = "überflüssige NL" + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "KdNr")
+ddepoke( ddehandle, "Z1S2", "Name")
+ddepoke( ddehandle, "Z1S3", "VMP")
+ddepoke( ddehandle, "Z1S4", "Ex NaLi")
+ddepoke( ddehandle, "Z1S5", "Ex Remi")
+ddepoke( ddehandle, "Z1S6", "Proz")
+ddepoke( ddehandle, "Z1S7", "Pos")
+
+nochmal:
+
+HostFieldGetLineData("kdkdnr", i, xkdnr)
+HostFieldGetLineData("kdname", i, xname)
+HostFieldGetLineData("kdkalf", i, xkalf)
+HostFieldGetLineData("aapos1", i, xapos1)
+HostFieldGetLineData("bbpos1", i, xbpos1)
+HostFieldGetLineData("proz", i, xproz)
+HostFieldGetLineData("pos", i, xpos)
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", xkdnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xname)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xkalf)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xapos1)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xbpos1)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xproz)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xpos)
+
+j=j+1
+
+if i < 19 then
+i=i+1
+goto nochmal
+endif
+ 
+if xkdnr <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

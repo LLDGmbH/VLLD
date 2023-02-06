@@ -1,0 +1,74 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim x1epan, x1kdnr, x1knam, x1ort, x1bdat, x1gart, x1gaug, x1note, x1vdat, x1vzeit, x1ad, x1stat, x1vmp, errmsg, datei, pfad_datei, source as string 
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Regalpflege.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1",  "EPA-Nr")
+ddepoke( ddehandle, "Z1S2",  "KdNr")
+ddepoke( ddehandle, "Z1S3",  "Name")
+ddepoke( ddehandle, "Z1S4",  "Ort")
+ddepoke( ddehandle, "Z1S5",  "GA")
+ddepoke( ddehandle, "Z1S6",  "UG")
+ddepoke( ddehandle, "Z1S7",  "Besuch am")
+ddepoke( ddehandle, "Z1S8",  "Note")
+ddepoke( ddehandle, "Z1S9",  "verarb. am")
+ddepoke( ddehandle, "Z1S10", "verarb. um")
+ddepoke( ddehandle, "Z1S11", "AD")
+ddepoke( ddehandle, "Z1S12", "Status")
+ddepoke( ddehandle, "Z1S13", "VMP")
+
+
+nochmal:
+
+HostFieldGetLineData("s1epan",  i, x1epan)
+HostFieldGetLineData("s1kdnr",  i, x1kdnr)
+HostFieldGetLineData("s1knam",  i, x1knam)
+HostFieldGetLineData("s1ort",   i, x1ort)
+HostFieldGetLineData("s1gart",  i, x1gart)
+HostFieldGetLineData("s1gaug",  i, x1gaug)
+HostFieldGetLineData("s1bdat",  i, x1bdat)
+HostFieldGetLineData("s1note",  i, x1note)
+HostFieldGetLineData("s1vdat",  i, x1vdat)
+HostFieldGetLineData("s1vzeit", i, x1vzeit)
+HostFieldGetLineData("ad",      i, x1ad)
+HostFieldGetLineData("s1stat",  i, x1stat)
+HostFieldGetLineData("vmp",     i, x1vmp)
+
+
+if (x1knam <> "") then
+ddepoke( ddehandle, "Z" + str(j) +"S1", x1epan)
+ddepoke( ddehandle, "Z" + str(j) +"S2", x1kdnr)
+ddepoke( ddehandle, "Z" + str(j) +"S3", x1knam)
+ddepoke( ddehandle, "Z" + str(j) +"S4", x1ort)
+ddepoke( ddehandle, "Z" + str(j) +"S5", x1gart)
+ddepoke( ddehandle, "Z" + str(j) +"S6", x1gaug)
+ddepoke( ddehandle, "Z" + str(j) +"S7", x1bdat)
+ddepoke( ddehandle, "Z" + str(j) +"S8", x1note)
+ddepoke( ddehandle, "Z" + str(j) +"S9", x1vdat)
+ddepoke( ddehandle, "Z" + str(j) +"S10", x1vzeit)
+ddepoke( ddehandle, "Z" + str(j) +"S11", x1ad)
+ddepoke( ddehandle, "Z" + str(j) +"S12", x1stat)
+ddepoke( ddehandle, "Z" + str(j) +"S13", x1vmp)
+j=j+1
+endif
+
+if i < 18 then
+i=i+1
+goto nochmal
+endif
+ 
+if x1knam <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

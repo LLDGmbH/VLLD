@@ -1,0 +1,50 @@
+﻿DIM ddehandle, i, j, msg, rc  as integer
+dim x1, x2, x3, x4, x15, datei, Errmsg, pfad_datei, source as string 
+i = 0
+j=1
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", Errmsg)
+
+datei = "Kunden ohne Remi " + x15 + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", "KdNr")
+ddepoke( ddehandle, "Z" + str(j) +"S2", "Name")
+ddepoke( ddehandle, "Z" + str(j) +"S3", "Wochen")
+ddepoke( ddehandle, "Z" + str(j) +"S4", "letzte Remi Woche")
+
+
+j=j+1
+
+nochmal:
+
+HostFieldGetLineData("s1kdnr", i, x1)
+HostFieldGetLineData("s1knam", i, x2)
+HostFieldGetLineData("wochen", i, x3)
+HostFieldGetLineData("s1sn04", i, x4)
+
+if x1 <> ""  then
+ddepoke( ddehandle, "Z" + str(j) +"S1", x1)
+ddepoke( ddehandle, "Z" + str(j) +"S2", x2)
+ddepoke( ddehandle, "Z" + str(j) +"S3", x3)
+ddepoke( ddehandle, "Z" + str(j) +"S4", x4)
+
+
+j=j+1
+endif
+
+if i < 19 then
+i=i+1
+goto nochmal
+endif
+ 
+if x1 <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

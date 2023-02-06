@@ -1,0 +1,20 @@
+﻿dim text, ErrorMsg as String
+dim rc as Integer
+
+
+rem **GESCHÄFTSARTEN AUS GRGARP
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+
+rc = EzSQLQuery("SELECT digits(kdgart) concat digits(kdgaug), DIGITS(kdgart) concat ' ' concat DIGITS(kdgaug) concat ' - 'concat kdgtxt FROM GRGARP order by digits(kdgart) concat digits(kdgaug)", text, ErrorMsg)
+PanelFieldSetProp ("GAGU", 5, text) 
+
+
+rc = EzSQLQuery("SELECT vlvlkz, digits(vlvlkz) concat ' ' concat vlvbez FROM grvtlp order by vlvbez", text, ErrorMsg)
+PanelFieldSetProp ("vlkz", 5, text) 
+
+
+PanelUpdateEnable(2)

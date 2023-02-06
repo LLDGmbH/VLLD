@@ -1,0 +1,109 @@
+﻿global filiale as string
+DIM ddehandle, i, j, msg, rc as integer
+dim xkdnr, xname, xstr, xplz, xort, xgart, xgaug, xmax, xist, sql1, sql2, sql3, sql4, sql5, errmsg, datei, pfad_datei, source as string 
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Kunden_Maxtitel.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z2S1", "Kdnr")
+ddepoke( ddehandle, "Z2S2", "Name")
+ddepoke( ddehandle, "Z2S3", "Ort")
+ddepoke( ddehandle, "Z2S4", "Gart")
+ddepoke( ddehandle, "Z2S5", "Gaug")
+ddepoke( ddehandle, "Z2S6", "Max")
+ddepoke( ddehandle, "Z2S7", "Ist")
+
+nochmal:
+
+HostFieldGetLineData("sfkdnr", i, xkdnr)
+HostFieldGetLineData("sfname", i, xname)
+HostFieldGetLineData("sfort", i, xort)
+HostFieldGetLineData("sfmaxt", i, xmax)
+HostFieldGetLineData("sfist", i, xist)
+
+if  (filiale = "0" ) then
+sql2 = "SELECT kdgart FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdgaug FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+
+if  (filiale = "1" ) then
+sql2 = "SELECT kdgart FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdgaug FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+
+if  (filiale = "2" ) then
+sql2 = "SELECT kdgart FROM dipf02/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdgaug FROM dipf02/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+
+if  (filiale = "3" ) then
+sql2 = "SELECT kdgart FROM dipf03/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdgaug FROM dipf03/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+
+if  (filiale = "4" ) then
+sql2 = "SELECT kdgart FROM dipf04/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdgaug FROM dipf04/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+
+if  (filiale = "5" ) then
+sql2 = "SELECT kdgart FROM dipf05/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdgaug FROM dipf05/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+
+if  (filiale = "6" ) then
+sql2 = "SELECT kdgart FROM dipf06/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdgaug FROM dipf06/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+
+if  (filiale = "7" ) then
+sql2 = "SELECT kdgart FROM dipf07/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdgaug FROM dipf07/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+
+if  (filiale = "8" ) then
+sql2 = "SELECT kdgart FROM dipf08/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdgaug FROM dipf08/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+
+if  (filiale = "9" ) then
+sql2 = "SELECT kdgart FROM dipf09/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdgaug FROM dipf09/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+
+rc = EzSQLQuery(sql2, xgart, ErrMsg)
+rc = EzSQLQuery(sql3, xgaug, ErrMsg)
+
+
+if (xkdnr <> "") then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xkdnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xname)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xort)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xgart)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xgaug)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xmax)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xist)
+
+j=j+1
+endif
+
+if i < 17 then
+i=i+1
+goto nochmal
+endif
+ 
+if xkdnr <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

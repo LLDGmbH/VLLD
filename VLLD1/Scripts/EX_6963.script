@@ -1,0 +1,92 @@
+﻿
+DIM ddehandle, i, j, msg, rc as integer
+dim xarg, xxx, sql1, errmsg, datei, pfad_datei as string 
+dim xObj, xONam as string 
+dim xFolge, xLiefer, xRemi, xRemP, xVk, xAnzEh, xAnzEhS, xMengeS, xAntpS, xAnzEhF, xMengeF, xAntpF, xAnzEhG, xMengeG, xAntpG as string 
+dim source as string
+i = 0
+j=4
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+HostFieldGetData("sc_ObjNr",xObj)
+HostFieldGetData("sc_ANam",xONam)
+HostFieldGetData("arg",xarg)
+
+datei = "Sofort_Fruehremi_" + xObj + ".xls"
+pfad_datei = @"@&LWV@"  + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "ObjNr")
+ddepoke( ddehandle, "Z1S2", "Titel")
+
+ddepoke( ddehandle, "Z2S8" , "Sofort-Remi")
+ddepoke( ddehandle, "Z2S11", "Früh-Remi")
+ddepoke( ddehandle, "Z2S14", "Ges.-Früh-Remi")
+
+ddepoke( ddehandle, "Z3S1" , "Folge")
+ddepoke( ddehandle, "Z3S2" , "Lieferung")
+ddepoke( ddehandle, "Z3S3" , "Remi")
+ddepoke( ddehandle, "Z3S4" , "Remi%")
+ddepoke( ddehandle, "Z3S5" , "Verkauf")
+ddepoke( ddehandle, "Z3S6" , "Anz.EH")
+ddepoke( ddehandle, "Z3S7" , "Anz.EH")
+ddepoke( ddehandle, "Z3S8" , "Menge")
+ddepoke( ddehandle, "Z3S9" , "Ant.%")
+ddepoke( ddehandle, "Z3S10", "Anz.EH")
+ddepoke( ddehandle, "Z3S11", "Menge")
+ddepoke( ddehandle, "Z3S12", "Ant.%")
+ddepoke( ddehandle, "Z3S13", "Anz.EH")
+ddepoke( ddehandle, "Z3S14", "MengeG")
+ddepoke( ddehandle, "Z3S15", "Ant.%")
+
+nochmal:
+
+HostFieldGetLineData("SF_FOLG"  , i, xFolge)
+HostFieldGetLineData("SF_LIEF"  , i, xLiefer)
+HostFieldGetLineData("SF_REM"   , i, xRemi)
+HostFieldGetLineData("SF_REMP"  , i, xRemP)
+HostFieldGetLineData("SF_VERK"  , i, xVk)
+HostFieldGetLineData("SF_ANZEH" , i, xAnzEh)
+HostFieldGetLineData("SF_SRAEH" , i, xAnzEhS)
+HostFieldGetLineData("SF_SRAEX" , i, xMengeS)
+HostFieldGetLineData("SF_SRPROZ", i, xAntpS)
+HostFieldGetLineData("SF_FRAEH" , i, xAnzEhF)
+HostFieldGetLineData("SF_FRAEX" , i, xMengeF)
+HostFieldGetLineData("SF_FRPROZ", i, xAntpF)
+HostFieldGetLineData("SF_AEHG"  , i, xAnzEhG)
+HostFieldGetLineData("SF_AEXG"  , i, xMengeG)
+HostFieldGetLineData("SF_PROZG" , i, xAntpG)
+
+
+ddepoke( ddehandle, "Z" + str(j) +"S1",  xFolge)
+ddepoke( ddehandle, "Z" + str(j) +"S2",  xLiefer)
+ddepoke( ddehandle, "Z" + str(j) +"S3",  xRemi)
+ddepoke( ddehandle, "Z" + str(j) +"S4",  xRemP)
+ddepoke( ddehandle, "Z" + str(j) +"S5",  xVk)
+ddepoke( ddehandle, "Z" + str(j) +"S6",  xAnzEh)
+ddepoke( ddehandle, "Z" + str(j) +"S7",  xAnzEhS)
+ddepoke( ddehandle, "Z" + str(j) +"S8",  xMengeS)
+ddepoke( ddehandle, "Z" + str(j) +"S9",  xAntpS)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xAnzEhF)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xMengeF)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xAntpF)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xAnzEhG)
+ddepoke( ddehandle, "Z" + str(j) +"S14", xMengeG)
+ddepoke( ddehandle, "Z" + str(j) +"S14", xAntpG)
+
+j=j+1 
+
+if (i < 15) then
+   i=i+1
+   goto nochmal
+endif
+ 
+if (xFolge <> "") then
+   i=0
+   HostScreenSendKey("Page Down")
+   goto nochmal
+endif

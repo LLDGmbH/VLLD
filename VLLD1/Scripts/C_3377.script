@@ -1,0 +1,23 @@
+﻿
+dim text, ErrorMsg as String
+dim rc as Integer
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rem ** Query database
+rc = EzSQLQuery("SELECT (EHNR * 100) + EHUNR, DIGITS(EHNR) concat ' ' concat DIGITS(EHUNR) concat ' - 'concat EHTEXT FROM GRETXP order by (EHNR * 100) + EHUNR", text, ErrorMsg)
+
+if ( rc < 0 ) then
+
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+
+else
+
+PanelFieldSetProp ("ehcd4", 5, text) 
+
+PanelUpdateEnable(2)
+
+endif

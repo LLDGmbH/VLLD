@@ -1,0 +1,1793 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="OSNA_SRC/RA30DS(SFC2+KEY01)" library="OSNA_SRC" member_name="RA30DS">
+    <size cx="132" cy="27"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="f21" caption="F21" attention_key="false"/>
+    <action key="f22" caption="F22" attention_key="false"/>
+    <action key="f23" caption="F23" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <field field_type="screen_part" name="SFC2">
+      <area>
+        <position/>
+        <size cx="132" cy="24"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="KEY01" overlay="true">
+      <area>
+        <position y="25"/>
+        <size cx="132" cy="2"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Regalauslastung" display_length="15" data_length="15">
+          <area>
+            <position x="31"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="62"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="71"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SDS_JOB" short_name="SDS_JOB" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="1" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="Gesch.Art:" display_length="10" data_length="10">
+          <area>
+            <position x="16" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="C2GART" short_name="C2GART" data_type="zoned_decimal" display_length="2" data_length="2">
+          <area>
+            <position x="27" y="1"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="C2GAUG" short_name="C2GAUG" data_type="zoned_decimal" display_length="2" data_length="2">
+          <area>
+            <position x="30" y="1"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SDS_USER" short_name="SDS_USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="62" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="RA30S2" display_length="6" data_length="6">
+          <area>
+            <position x="73" y="1"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="field" usage="output" name="C2KDNR" short_name="C2KDNR" data_type="zoned_decimal" display_length="7" data_length="7">
+          <area>
+            <position x="1" y="2"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="C2KNAM" short_name="C2KNAM" data_type="alphanumeric" display_length="33" data_length="33">
+          <area>
+            <position x="9" y="2"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="Jahr Wo SmFR1 SmFR2 SmFR3 S.mFR  SoFR1 SoFR2 SoFR3 S.oFR  SollT Ausl.mFR Ausl.oFR                                                 " display_length="130" data_length="130" underline="true">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="130" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S2JAHR" short_name="S2JAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2WOCH" short_name="S2WOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="4"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR1" short_name="S2SMFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="9" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR2" short_name="S2SMFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="15" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR3" short_name="S2SMFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="21" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR" short_name="S2SMFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR1" short_name="S2SOFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="34" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR2" short_name="S2SOFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR3" short_name="S2SOFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR" short_name="S2SOFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOLT" short_name="S2SOLT" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AMFR" short_name="S2AMFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="65" y="4"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AOFR" short_name="S2AOFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="74" y="4"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2JAHR" short_name="S2JAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2WOCH" short_name="S2WOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="5"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR1" short_name="S2SMFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="9" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR2" short_name="S2SMFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="15" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR3" short_name="S2SMFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="21" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR" short_name="S2SMFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR1" short_name="S2SOFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="34" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR2" short_name="S2SOFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR3" short_name="S2SOFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR" short_name="S2SOFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOLT" short_name="S2SOLT" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AMFR" short_name="S2AMFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="65" y="5"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AOFR" short_name="S2AOFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="74" y="5"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2JAHR" short_name="S2JAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2WOCH" short_name="S2WOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="6"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR1" short_name="S2SMFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="9" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR2" short_name="S2SMFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="15" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR3" short_name="S2SMFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="21" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR" short_name="S2SMFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR1" short_name="S2SOFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="34" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR2" short_name="S2SOFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR3" short_name="S2SOFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR" short_name="S2SOFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOLT" short_name="S2SOLT" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AMFR" short_name="S2AMFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="65" y="6"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AOFR" short_name="S2AOFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="74" y="6"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2JAHR" short_name="S2JAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2WOCH" short_name="S2WOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="7"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR1" short_name="S2SMFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="9" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR2" short_name="S2SMFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="15" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR3" short_name="S2SMFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="21" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR" short_name="S2SMFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR1" short_name="S2SOFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="34" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR2" short_name="S2SOFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR3" short_name="S2SOFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR" short_name="S2SOFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOLT" short_name="S2SOLT" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AMFR" short_name="S2AMFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="65" y="7"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AOFR" short_name="S2AOFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="74" y="7"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S2JAHR" short_name="S2JAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2WOCH" short_name="S2WOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="8"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR1" short_name="S2SMFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="9" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR2" short_name="S2SMFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="15" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR3" short_name="S2SMFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="21" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR" short_name="S2SMFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR1" short_name="S2SOFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="34" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR2" short_name="S2SOFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR3" short_name="S2SOFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR" short_name="S2SOFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOLT" short_name="S2SOLT" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AMFR" short_name="S2AMFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="65" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AOFR" short_name="S2AOFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="74" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2JAHR" short_name="S2JAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2WOCH" short_name="S2WOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="9"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR1" short_name="S2SMFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="9" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR2" short_name="S2SMFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="15" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR3" short_name="S2SMFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="21" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR" short_name="S2SMFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR1" short_name="S2SOFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="34" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR2" short_name="S2SOFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR3" short_name="S2SOFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR" short_name="S2SOFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOLT" short_name="S2SOLT" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AMFR" short_name="S2AMFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="65" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AOFR" short_name="S2AOFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="74" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2JAHR" short_name="S2JAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2WOCH" short_name="S2WOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="10"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR1" short_name="S2SMFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="9" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR2" short_name="S2SMFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="15" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR3" short_name="S2SMFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="21" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR" short_name="S2SMFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR1" short_name="S2SOFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="34" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR2" short_name="S2SOFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR3" short_name="S2SOFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR" short_name="S2SOFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOLT" short_name="S2SOLT" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AMFR" short_name="S2AMFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="65" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AOFR" short_name="S2AOFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="74" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2JAHR" short_name="S2JAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2WOCH" short_name="S2WOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="11"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR1" short_name="S2SMFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="9" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR2" short_name="S2SMFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="15" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR3" short_name="S2SMFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="21" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR" short_name="S2SMFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR1" short_name="S2SOFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="34" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR2" short_name="S2SOFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR3" short_name="S2SOFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR" short_name="S2SOFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOLT" short_name="S2SOLT" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AMFR" short_name="S2AMFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="65" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AOFR" short_name="S2AOFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="74" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S2JAHR" short_name="S2JAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2WOCH" short_name="S2WOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="12"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR1" short_name="S2SMFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="9" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR2" short_name="S2SMFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="15" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR3" short_name="S2SMFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="21" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR" short_name="S2SMFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR1" short_name="S2SOFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="34" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR2" short_name="S2SOFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR3" short_name="S2SOFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR" short_name="S2SOFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOLT" short_name="S2SOLT" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AMFR" short_name="S2AMFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="65" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AOFR" short_name="S2AOFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="74" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2JAHR" short_name="S2JAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2WOCH" short_name="S2WOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="13"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR1" short_name="S2SMFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="9" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR2" short_name="S2SMFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="15" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR3" short_name="S2SMFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="21" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR" short_name="S2SMFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR1" short_name="S2SOFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="34" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR2" short_name="S2SOFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR3" short_name="S2SOFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR" short_name="S2SOFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOLT" short_name="S2SOLT" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AMFR" short_name="S2AMFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="65" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AOFR" short_name="S2AOFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="74" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2JAHR" short_name="S2JAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2WOCH" short_name="S2WOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="14"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR1" short_name="S2SMFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="9" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR2" short_name="S2SMFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="15" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR3" short_name="S2SMFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="21" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR" short_name="S2SMFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR1" short_name="S2SOFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="34" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR2" short_name="S2SOFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR3" short_name="S2SOFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR" short_name="S2SOFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOLT" short_name="S2SOLT" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AMFR" short_name="S2AMFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="65" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AOFR" short_name="S2AOFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="74" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2JAHR" short_name="S2JAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2WOCH" short_name="S2WOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="15"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR1" short_name="S2SMFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="9" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR2" short_name="S2SMFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="15" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR3" short_name="S2SMFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="21" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR" short_name="S2SMFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR1" short_name="S2SOFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="34" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR2" short_name="S2SOFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR3" short_name="S2SOFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR" short_name="S2SOFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOLT" short_name="S2SOLT" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AMFR" short_name="S2AMFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="65" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AOFR" short_name="S2AOFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="74" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S2JAHR" short_name="S2JAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2WOCH" short_name="S2WOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="16"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR1" short_name="S2SMFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="9" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR2" short_name="S2SMFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="15" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR3" short_name="S2SMFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="21" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR" short_name="S2SMFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR1" short_name="S2SOFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="34" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR2" short_name="S2SOFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR3" short_name="S2SOFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR" short_name="S2SOFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOLT" short_name="S2SOLT" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AMFR" short_name="S2AMFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="65" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AOFR" short_name="S2AOFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="74" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2JAHR" short_name="S2JAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2WOCH" short_name="S2WOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="17"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR1" short_name="S2SMFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="9" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR2" short_name="S2SMFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="15" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR3" short_name="S2SMFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="21" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR" short_name="S2SMFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR1" short_name="S2SOFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="34" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR2" short_name="S2SOFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR3" short_name="S2SOFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR" short_name="S2SOFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOLT" short_name="S2SOLT" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AMFR" short_name="S2AMFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="65" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AOFR" short_name="S2AOFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="74" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2JAHR" short_name="S2JAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2WOCH" short_name="S2WOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="18"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR1" short_name="S2SMFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="9" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR2" short_name="S2SMFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="15" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR3" short_name="S2SMFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="21" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR" short_name="S2SMFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR1" short_name="S2SOFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="34" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR2" short_name="S2SOFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR3" short_name="S2SOFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR" short_name="S2SOFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOLT" short_name="S2SOLT" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AMFR" short_name="S2AMFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="65" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AOFR" short_name="S2AOFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="74" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2JAHR" short_name="S2JAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2WOCH" short_name="S2WOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="19"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR1" short_name="S2SMFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="9" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR2" short_name="S2SMFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="15" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR3" short_name="S2SMFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="21" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR" short_name="S2SMFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR1" short_name="S2SOFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="34" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR2" short_name="S2SOFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR3" short_name="S2SOFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR" short_name="S2SOFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOLT" short_name="S2SOLT" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AMFR" short_name="S2AMFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="65" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AOFR" short_name="S2AOFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="74" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S2JAHR" short_name="S2JAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2WOCH" short_name="S2WOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="20"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR1" short_name="S2SMFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="9" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR2" short_name="S2SMFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="15" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR3" short_name="S2SMFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="21" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR" short_name="S2SMFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR1" short_name="S2SOFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="34" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR2" short_name="S2SOFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR3" short_name="S2SOFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR" short_name="S2SOFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOLT" short_name="S2SOLT" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AMFR" short_name="S2AMFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="65" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AOFR" short_name="S2AOFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="74" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2JAHR" short_name="S2JAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="21"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2WOCH" short_name="S2WOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="21"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR1" short_name="S2SMFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="9" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR2" short_name="S2SMFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="15" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR3" short_name="S2SMFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="21" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR" short_name="S2SMFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR1" short_name="S2SOFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="34" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR2" short_name="S2SOFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR3" short_name="S2SOFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR" short_name="S2SOFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOLT" short_name="S2SOLT" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AMFR" short_name="S2AMFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="65" y="21"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AOFR" short_name="S2AOFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="74" y="21"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2JAHR" short_name="S2JAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="22"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2WOCH" short_name="S2WOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="22"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR1" short_name="S2SMFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="9" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR2" short_name="S2SMFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="15" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR3" short_name="S2SMFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="21" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR" short_name="S2SMFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR1" short_name="S2SOFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="34" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR2" short_name="S2SOFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR3" short_name="S2SOFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR" short_name="S2SOFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOLT" short_name="S2SOLT" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AMFR" short_name="S2AMFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="65" y="22"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AOFR" short_name="S2AOFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="74" y="22"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2JAHR" short_name="S2JAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="23"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2WOCH" short_name="S2WOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="23"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR1" short_name="S2SMFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="9" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR2" short_name="S2SMFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="15" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR3" short_name="S2SMFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="21" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SMFR" short_name="S2SMFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="27" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR1" short_name="S2SOFR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="34" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR2" short_name="S2SOFR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR3" short_name="S2SOFR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOFR" short_name="S2SOFR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S2SOLT" short_name="S2SOLT" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="59" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AMFR" short_name="S2AMFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="65" y="23"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S2AOFR" short_name="S2AOFR" data_type="zoned_decimal" display_length="8" data_length="5" conditional="true" decimal_positions="1">
+          <area>
+            <position x="74" y="23"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="Systemnachricht:" display_length="16" data_length="16">
+      <area>
+        <position x="1" y="25"/>
+        <size cx="16" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="K1MSG" short_name="K1MSG" data_type="alphanumeric" display_length="60" data_length="60" blink="true">
+      <area>
+        <position x="18" y="25"/>
+        <size cx="60" cy="1"/>
+      </area>
+      <color foreground="red"/>
+    </field>
+    <field field_type="fixed_text" value="F3 = Zurück" display_length="11" data_length="11">
+      <area>
+        <position x="1" y="26"/>
+        <size cx="11" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="; F4 = Kunden selektieren" display_length="25" data_length="25">
+      <area>
+        <position x="13" y="26"/>
+        <size cx="25" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

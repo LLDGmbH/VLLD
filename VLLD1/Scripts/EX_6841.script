@@ -1,0 +1,39 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xNote, xAnz, errmsg, datei, pfad_datei, source as string 
+i = 0
+j=2
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "RegalpflegeNotenspiegel.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1",  "Note")
+ddepoke( ddehandle, "Z1S2",  "Anzahl")
+
+nochmal:
+
+HostFieldGetLineData("s5Note",   i, xNote)
+HostFieldGetLineData("s5Anz", i, xAnz)
+
+if (xNote <> "") then
+ddepoke( ddehandle, "Z" + str(j) +"S1",  xNote)
+ddepoke( ddehandle, "Z" + str(j) +"S2",  xAnz)
+j=j+1
+endif
+
+if i < 17 then
+i=i+1
+goto nochmal
+endif
+ 
+if xNote <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

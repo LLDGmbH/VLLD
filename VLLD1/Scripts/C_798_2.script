@@ -1,0 +1,130 @@
+﻿dim xl1, xr1 as string
+dim xl2, xr2 as string
+dim xl3, xr3 as string
+dim xl4, xr4 as string
+dim xl5, xr5 as string
+dim xl6, xr6 as string
+dim xl7, xr7 as string
+
+dim l1, r1 as double
+dim l2, r2 as double
+dim l3, r3 as double
+dim l4, r4 as double
+dim l5, r5 as double
+dim l6, r6 as double
+dim l7, r7 as double
+
+global u1, u2, u3, u4,u5,u6, u7 as integer
+global v1, v2, v3, v4, v5, v6, v7 as integer
+
+dim punkt, komma as string
+punkt = "."
+komma = ","
+
+HostFieldGetData("l1lief", xl1)
+HostFieldGetData("l1remi", xr1)
+HostFieldGetData("l2lief", xl2)
+HostFieldGetData("l2remi", xr2)
+HostFieldGetData("h1lief", xl3)
+HostFieldGetData("h1remi", xr3)
+HostFieldGetData("l3lief", xl4)
+HostFieldGetData("l3remi", xr4)
+HostFieldGetData("l4lief", xl5)
+HostFieldGetData("l4remi", xr5)
+HostFieldGetData("h2lief", xl6)
+HostFieldGetData("h2remi", xr6)
+HostFieldGetData("glief", xl7)
+HostFieldGetData("gremi", xr7)
+
+xl1 = Replace(xl1, komma, punkt, 0)
+xr1 = Replace(xr1, komma, punkt, 0)
+xl2 = Replace(xl2, komma, punkt, 0)
+xr2 = Replace(xr2, komma, punkt, 0)
+xl3 = Replace(xl3, komma, punkt, 0)
+xr3 = Replace(xr3, komma, punkt, 0)
+xl4 = Replace(xl4, komma, punkt, 0)
+xr4 = Replace(xr4, komma, punkt, 0)
+xl5 = Replace(xl5, komma, punkt, 0)
+xr5 = Replace(xr5, komma, punkt, 0)
+xl6 = Replace(xl6, komma, punkt, 0)
+xr6 = Replace(xr6, komma, punkt, 0)
+xl7 = Replace(xl7, komma, punkt, 0)
+xr7 = Replace(xr7, komma, punkt, 0)
+
+l1 = val(xl1)
+r1 = val(xr1)
+l2 = val(xl2)
+r2 = val(xr2)
+l3 = val(xl3)
+r3 = val(xr3)
+l4 = val(xl4)
+r4 = val(xr4)
+l5 = val(xl5)
+r5 = val(xr5)
+l6 = val(xl6)
+r6 = val(xr6)
+l7 = val(xl7)
+r7 = val(xr7)
+
+u1 = l1 - r1
+u2 = l2 - r2
+u3 = l3 - r3
+u4 = l4 - r4
+u5 = l5 - r5
+u6 = l6 - r6
+u7 = l7 - r7
+
+HostFieldGetData("v1lief", xl1)
+HostFieldGetData("v1remi", xr1)
+HostFieldGetData("v2lief", xl2)
+HostFieldGetData("v2remi", xr2)
+HostFieldGetData("hv1lief", xl3)
+HostFieldGetData("hv1remi", xr3)
+HostFieldGetData("v3lief", xl4)
+HostFieldGetData("v3remi", xr4)
+HostFieldGetData("v4lief", xl5)
+HostFieldGetData("v4remi", xr5)
+HostFieldGetData("hv2lief", xl6)
+HostFieldGetData("hv2remi", xr6)
+HostFieldGetData("gvlief", xl7)
+HostFieldGetData("gvremi", xr7)
+
+xl1 = Replace(xl1, komma, punkt, 0)
+xr1 = Replace(xr1, komma, punkt, 0)
+xl2 = Replace(xl2, komma, punkt, 0)
+xr2 = Replace(xr2, komma, punkt, 0)
+xl3 = Replace(xl3, komma, punkt, 0)
+xr3 = Replace(xr3, komma, punkt, 0)
+xl4 = Replace(xl4, komma, punkt, 0)
+xr4 = Replace(xr4, komma, punkt, 0)
+xl5 = Replace(xl5, komma, punkt, 0)
+xr5 = Replace(xr5, komma, punkt, 0)
+xl6 = Replace(xl6, komma, punkt, 0)
+xr6 = Replace(xr6, komma, punkt, 0)
+xl7 = Replace(xl7, komma, punkt, 0)
+xr7 = Replace(xr7, komma, punkt, 0)
+
+l1 = val(xl1)
+r1 = val(xr1)
+l2 = val(xl2)
+r2 = val(xr2)
+l3 = val(xl3)
+r3 = val(xr3)
+l4 = val(xl4)
+r4 = val(xr4)
+l5 = val(xl5)
+r5 = val(xr5)
+l6 = val(xl6)
+r6 = val(xr6)
+l7 = val(xl7)
+r7 = val(xr7)
+
+v1 = l1 - r1
+v2 = l2 - r2
+v3 = l3 - r3
+v4 = l4 - r4
+v5 = l5 - r5
+v6 = l6 - r6
+v7 = l7 - r7
+
+PanelUpdateEnable(2)

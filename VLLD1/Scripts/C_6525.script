@@ -1,0 +1,11 @@
+﻿dim text, ErrorMsg as String
+dim rc as Integer
+
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+
+rc = EzSQLQuery("SELECT digits(LCCLNR), DIGITS(LCCLNR) concat ' - 'concat LCCLNAME  FROM GRLMCP order by digits(lcclnr) ", text, ErrorMsg)
+
+
+PanelFieldSetProp ("##lmc", 5, text) 
+PanelUpdateEnable(2)

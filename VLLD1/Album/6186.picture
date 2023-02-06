@@ -1,0 +1,1145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="OSNA_SRC/OB90DS(SFC)" library="OSNA_SRC" member_name="OB90DS">
+    <size cx="132" cy="27"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <field field_type="screen_part" name="SFC" overlay="true">
+      <area>
+        <position/>
+        <size cx="132" cy="22"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="     Spannensimulation       " display_length="29" data_length="29">
+          <area>
+            <position x="25"/>
+            <size cx="29" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="OB90" display_length="4" data_length="4">
+          <area>
+            <position x="55"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="61"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="72"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Anteil   :" display_length="10" data_length="10">
+          <area>
+            <position x="1" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="ANT" short_name="ANT" data_type="zoned_decimal" display_length="6" data_length="5" underline="true" high_intensity="true" decimal_positions="2">
+          <area>
+            <position x="12" y="1"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AG" short_name="AG" data_type="zoned_decimal" display_length="9" data_length="9">
+          <area>
+            <position x="23" y="1"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="UG" short_name="UG" data_type="zoned_decimal" display_length="8" data_length="8">
+          <area>
+            <position x="33" y="1"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="UG0" short_name="UG0" data_type="zoned_decimal" display_length="8" data_length="8">
+          <area>
+            <position x="42" y="1"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="UG1" short_name="UG1" data_type="zoned_decimal" display_length="8" data_length="8">
+          <area>
+            <position x="51" y="1"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="UG2" short_name="UG2" data_type="zoned_decimal" display_length="8" data_length="8">
+          <area>
+            <position x="60" y="1"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="UG3" short_name="UG3" data_type="zoned_decimal" display_length="8" data_length="8">
+          <area>
+            <position x="69" y="1"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value=" Obnr Titel            Absatz    Umsatz    2010     2012     2014     2016   " display_length="77" data_length="77" underline="true">
+          <area>
+            <position x="1" y="2"/>
+            <size cx="77" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFOBJNR" short_name="SFOBJNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SFTITEL" short_name="SFTITEL" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="7" y="3"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFABSATZ" short_name="SFABSATZ" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="23" y="3"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ" short_name="SFUMSATZ" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="33" y="3"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ0" short_name="SFUMSATZ0" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="3"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ1" short_name="SFUMSATZ1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="51" y="3"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ2" short_name="SFUMSATZ2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="60" y="3"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ3" short_name="SFUMSATZ3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="69" y="3"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJNR" short_name="SFOBJNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SFTITEL" short_name="SFTITEL" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="7" y="4"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFABSATZ" short_name="SFABSATZ" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="23" y="4"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ" short_name="SFUMSATZ" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="33" y="4"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ0" short_name="SFUMSATZ0" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="4"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ1" short_name="SFUMSATZ1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="51" y="4"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ2" short_name="SFUMSATZ2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="60" y="4"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ3" short_name="SFUMSATZ3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="69" y="4"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJNR" short_name="SFOBJNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SFTITEL" short_name="SFTITEL" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="7" y="5"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFABSATZ" short_name="SFABSATZ" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="23" y="5"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ" short_name="SFUMSATZ" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="33" y="5"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ0" short_name="SFUMSATZ0" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="5"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ1" short_name="SFUMSATZ1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="51" y="5"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ2" short_name="SFUMSATZ2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="60" y="5"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ3" short_name="SFUMSATZ3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="69" y="5"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFOBJNR" short_name="SFOBJNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SFTITEL" short_name="SFTITEL" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="7" y="6"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFABSATZ" short_name="SFABSATZ" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="23" y="6"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ" short_name="SFUMSATZ" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="33" y="6"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ0" short_name="SFUMSATZ0" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="6"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ1" short_name="SFUMSATZ1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="51" y="6"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ2" short_name="SFUMSATZ2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="60" y="6"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ3" short_name="SFUMSATZ3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="69" y="6"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJNR" short_name="SFOBJNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SFTITEL" short_name="SFTITEL" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="7" y="7"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFABSATZ" short_name="SFABSATZ" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="23" y="7"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ" short_name="SFUMSATZ" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="33" y="7"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ0" short_name="SFUMSATZ0" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="7"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ1" short_name="SFUMSATZ1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="51" y="7"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ2" short_name="SFUMSATZ2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="60" y="7"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ3" short_name="SFUMSATZ3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="69" y="7"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJNR" short_name="SFOBJNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SFTITEL" short_name="SFTITEL" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="7" y="8"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFABSATZ" short_name="SFABSATZ" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="23" y="8"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ" short_name="SFUMSATZ" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="33" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ0" short_name="SFUMSATZ0" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ1" short_name="SFUMSATZ1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="51" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ2" short_name="SFUMSATZ2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="60" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ3" short_name="SFUMSATZ3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="69" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFOBJNR" short_name="SFOBJNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SFTITEL" short_name="SFTITEL" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="7" y="9"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFABSATZ" short_name="SFABSATZ" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="23" y="9"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ" short_name="SFUMSATZ" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="33" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ0" short_name="SFUMSATZ0" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ1" short_name="SFUMSATZ1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="51" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ2" short_name="SFUMSATZ2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="60" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ3" short_name="SFUMSATZ3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="69" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJNR" short_name="SFOBJNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SFTITEL" short_name="SFTITEL" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="7" y="10"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFABSATZ" short_name="SFABSATZ" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="23" y="10"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ" short_name="SFUMSATZ" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="33" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ0" short_name="SFUMSATZ0" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ1" short_name="SFUMSATZ1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="51" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ2" short_name="SFUMSATZ2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="60" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ3" short_name="SFUMSATZ3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="69" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJNR" short_name="SFOBJNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SFTITEL" short_name="SFTITEL" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="7" y="11"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFABSATZ" short_name="SFABSATZ" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="23" y="11"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ" short_name="SFUMSATZ" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="33" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ0" short_name="SFUMSATZ0" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ1" short_name="SFUMSATZ1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="51" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ2" short_name="SFUMSATZ2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="60" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ3" short_name="SFUMSATZ3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="69" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFOBJNR" short_name="SFOBJNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SFTITEL" short_name="SFTITEL" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="7" y="12"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFABSATZ" short_name="SFABSATZ" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="23" y="12"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ" short_name="SFUMSATZ" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="33" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ0" short_name="SFUMSATZ0" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ1" short_name="SFUMSATZ1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="51" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ2" short_name="SFUMSATZ2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="60" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ3" short_name="SFUMSATZ3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="69" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJNR" short_name="SFOBJNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SFTITEL" short_name="SFTITEL" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="7" y="13"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFABSATZ" short_name="SFABSATZ" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="23" y="13"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ" short_name="SFUMSATZ" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="33" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ0" short_name="SFUMSATZ0" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ1" short_name="SFUMSATZ1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="51" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ2" short_name="SFUMSATZ2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="60" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ3" short_name="SFUMSATZ3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="69" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJNR" short_name="SFOBJNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SFTITEL" short_name="SFTITEL" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="7" y="14"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFABSATZ" short_name="SFABSATZ" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="23" y="14"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ" short_name="SFUMSATZ" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="33" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ0" short_name="SFUMSATZ0" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ1" short_name="SFUMSATZ1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="51" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ2" short_name="SFUMSATZ2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="60" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ3" short_name="SFUMSATZ3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="69" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFOBJNR" short_name="SFOBJNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SFTITEL" short_name="SFTITEL" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="7" y="15"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFABSATZ" short_name="SFABSATZ" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="23" y="15"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ" short_name="SFUMSATZ" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="33" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ0" short_name="SFUMSATZ0" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ1" short_name="SFUMSATZ1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="51" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ2" short_name="SFUMSATZ2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="60" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ3" short_name="SFUMSATZ3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="69" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJNR" short_name="SFOBJNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SFTITEL" short_name="SFTITEL" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="7" y="16"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFABSATZ" short_name="SFABSATZ" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="23" y="16"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ" short_name="SFUMSATZ" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="33" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ0" short_name="SFUMSATZ0" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ1" short_name="SFUMSATZ1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="51" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ2" short_name="SFUMSATZ2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="60" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ3" short_name="SFUMSATZ3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="69" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJNR" short_name="SFOBJNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SFTITEL" short_name="SFTITEL" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="7" y="17"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFABSATZ" short_name="SFABSATZ" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="23" y="17"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ" short_name="SFUMSATZ" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="33" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ0" short_name="SFUMSATZ0" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ1" short_name="SFUMSATZ1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="51" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ2" short_name="SFUMSATZ2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="60" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ3" short_name="SFUMSATZ3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="69" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFOBJNR" short_name="SFOBJNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SFTITEL" short_name="SFTITEL" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="7" y="18"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFABSATZ" short_name="SFABSATZ" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="23" y="18"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ" short_name="SFUMSATZ" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="33" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ0" short_name="SFUMSATZ0" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ1" short_name="SFUMSATZ1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="51" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ2" short_name="SFUMSATZ2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="60" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ3" short_name="SFUMSATZ3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="69" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJNR" short_name="SFOBJNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SFTITEL" short_name="SFTITEL" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="7" y="19"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFABSATZ" short_name="SFABSATZ" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="23" y="19"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ" short_name="SFUMSATZ" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="33" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ0" short_name="SFUMSATZ0" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ1" short_name="SFUMSATZ1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="51" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ2" short_name="SFUMSATZ2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="60" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ3" short_name="SFUMSATZ3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="69" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJNR" short_name="SFOBJNR" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="SFTITEL" short_name="SFTITEL" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="7" y="20"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFABSATZ" short_name="SFABSATZ" data_type="zoned_decimal" display_length="9" data_length="9" conditional="true">
+          <area>
+            <position x="23" y="20"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ" short_name="SFUMSATZ" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="33" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ0" short_name="SFUMSATZ0" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="42" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ1" short_name="SFUMSATZ1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="51" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ2" short_name="SFUMSATZ2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="60" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSATZ3" short_name="SFUMSATZ3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="69" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_end_more" value="Weitere ... " display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="119" y="21"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+      <field field_type="subfile_end_bottom" value="Ende        " display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="119" y="21"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+    </field>
+  </screen>
+</header>

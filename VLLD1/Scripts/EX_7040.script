@@ -1,0 +1,74 @@
+﻿DIM ddehandle, i, j, zz, msg as integer
+dim xtitel, xKdNr, xKNam, xGArt, xGAUG, xVLKZ, xDVK, xAVer, xGBz, xRGKZ, xAPrz, datei, y0, y1, y2, pfad_datei, source as string 
+i = 0
+j=3
+zz=0
+y1 = " "
+y2 = "_"
+
+
+datei = "prozErhoehung.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "KdNr")
+ddepoke( ddehandle, "Z1S2", "Name")
+ddepoke( ddehandle, "Z1S3", "GArt")
+ddepoke( ddehandle, "Z1S4", "UArt")
+ddepoke( ddehandle, "Z1S5", "VLKZ")
+ddepoke( ddehandle, "Z1S6", "D-Vk")
+ddepoke( ddehandle, "Z1S7", "A-Ver")
+ddepoke( ddehandle, "Z1S8", "G-Bz")
+ddepoke( ddehandle, "Z1S9", "RGKZ")
+ddepoke( ddehandle, "Z1S10", "%")
+
+nochmal:
+
+zz=zz+1
+
+HostFieldGetLineData("scKdNr", i, xKdNr)
+HostFieldGetLineData("scKNam", i, xKNam)
+HostFieldGetLineData("scGArt", i, xGArt)
+HostFieldGetLineData("scGAUG", i, xGAUG)
+HostFieldGetLineData("scVLKZ", i, xVLKZ)
+HostFieldGetLineData("scDVK",  i, xDVK)
+HostFieldGetLineData("scAVer", i, xAVer)
+HostFieldGetLineData("scGBz",  i, xGBz)
+HostFieldGetLineData("scRGKZ", i, xRGKZ)
+HostFieldGetLineData("scAPrz", i, xAPrz)
+
+if xKNam = "" then
+goto Ende
+endif
+
+if (xKNam <> "")  then
+ddepoke( ddehandle, "Z" + str(j) +"S1",  xKdNr)
+ddepoke( ddehandle, "Z" + str(j) +"S2",  xKNam)
+ddepoke( ddehandle, "Z" + str(j) +"S3",  xGArt)
+ddepoke( ddehandle, "Z" + str(j) +"S4",  xGAUG)
+ddepoke( ddehandle, "Z" + str(j) +"S5",  xVLKZ)
+ddepoke( ddehandle, "Z" + str(j) +"S6",  xDVK)
+ddepoke( ddehandle, "Z" + str(j) +"S7",  xAVer)
+ddepoke( ddehandle, "Z" + str(j) +"S8",  xGBz)
+ddepoke( ddehandle, "Z" + str(j) +"S9",  xRGKZ)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xAPrz)
+j=j+1
+endif
+
+if i < 20 then
+i=i+1
+goto nochmal
+endif
+ 
+if xKNam <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif
+
+Ende:

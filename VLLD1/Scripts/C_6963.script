@@ -1,0 +1,69 @@
+﻿rem **Füllen Combo-Box  mit Folgenummer ** 
+
+dim text, ErrorMsg, sqlstmd as String
+dim rc as Integer
+dim xxFil as string
+dim sFil as string
+dim xxObj as string
+dim con_table as integer
+
+
+PanelFieldGetData("SC_OBJNR",xxObj, 0)
+PanelFieldGetData("F1FIL",xxFil, 0)
+
+if (xxFil = "00") or (xxFil = "") then
+   sFil = "wfFil = 0"
+endif 
+
+if (xxFil = "01") then
+   sFil = "wfFil = 1"
+endif
+
+if (xxFil = "02") then
+   sFil = "wfFil = 2"
+endif
+
+if (xxFil = "03") then
+   sFil = "wfFil = 3"
+endif
+
+if (xxFil = "04") then
+   sFil = "wfFil = 4"
+endif
+
+if (xxFil = "05") then
+   sFil = "wfFil = 5"
+endif
+
+if (xxFil = "06") then
+   sFil = "wfFil = 6"
+endif
+
+if (xxFil = "07") then
+   sFil = "wfFil = 7"
+endif
+
+if (xxFil = "08") then
+   sFil = "wfFil = 8"
+endif
+
+if (xxFil = "09") then
+   sFil = "wfFil = 9"
+endif
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+REM (so hätte ich es gern)   sqlstmd = "SELECT wffol8, digits(wffol8) FROM grwfl0 where wfFil = " + xxFil + " and wfobj = " + xxObj + " order by wffol8 desc"
+REM                  sqlstmd = "SELECT distinct wffol8, digits(wffol8) FROM grwfl0 where wfobj = " + xxObj + " order by wffol8 desc"
+sqlstmd = "SELECT wffol8, digits(wffol8) FROM grwfl0 where " + sFil + " and wfobj = " + xxObj + " order by wffol8 desc"
+
+rc = EzSQLQuery(sqlstmd, text, ErrorMsg)
+if (rc < 0) then
+   MessageBox("Query Error", ErrorMsg, 4, 1)
+else
+   PanelFieldSetProp ("c1folg", 5, text) 
+   PanelUpdateEnable(2)
+endif

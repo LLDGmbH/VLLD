@@ -1,0 +1,74 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xkdnr, xname, xstr, xplz, xort, xobj, xtitel, xbezug, xremi, xverkauf, xdatum, xwert, xende, errmsg, datei, pfad_datei, source as string 
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+HostFieldGetData("kdkdnrbs", xkdnr)
+HostFieldGetData("kdname", xname)
+HostFieldGetData("kdstr", xstr)
+HostFieldGetData("kdplz", xplz)
+HostFieldGetData("kdort", xort)
+
+
+datei = "TOP_BC_Titel_" + xkdnr +".xls" 
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", xkdnr)
+ddepoke( ddehandle, "Z1S2", xname)
+ddepoke( ddehandle, "Z1S3", xstr)
+ddepoke( ddehandle, "Z1S4", xplz)
+ddepoke( ddehandle, "Z1S5", xort)
+
+
+ddepoke( ddehandle, "Z2S1", "Objnr")
+ddepoke( ddehandle, "Z2S2", "Titel")
+ddepoke( ddehandle, "Z2S3", "Bezug")
+ddepoke( ddehandle, "Z2S4", "Remi")
+ddepoke( ddehandle, "Z2S5", "Verkauf")
+ddepoke( ddehandle, "Z2S6", "Datum")
+ddepoke( ddehandle, "Z2S7", "Wert")
+
+
+nochmal:
+
+HostFieldGetLineData("atobj", i, xobj)
+HostFieldGetLineData("atname", i, xtitel)
+HostFieldGetLineData("bezug", i, xbezug)
+HostFieldGetLineData("remi", i, xremi)
+HostFieldGetLineData("verkauf", i, xverkauf)
+HostFieldGetLineData("datum", i, xdatum)
+HostFieldGetLineData("wert", i, xwert)
+
+
+if (xobj <> "")  then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xobj)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xtitel)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xbezug)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xremi)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xverkauf)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xdatum)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xwert)
+
+j=j+1
+endif
+
+if i < 17 then
+i=i+1
+goto nochmal
+endif
+
+HostFieldGetData("ende", xende)
+
+ 
+if xende <> "Ende" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

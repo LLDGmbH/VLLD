@@ -1,0 +1,60 @@
+﻿rem **Füllen Combo-Box   **
+
+dim text, ErrorMsg as String
+dim rc as Integer
+
+
+
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+
+
+
+rc = EzSQLQuery("SELECT kdplz, kdort concat '-' concat digits(kdplz) FROM XXPLZ order by kdort concat '-' concat digits(kdplz)", text, ErrorMsg)
+
+if ( rc < 0 ) then
+
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+
+else
+
+PanelFieldSetProp ("PLZ001", 5, text) 
+PanelFieldSetProp ("PLZ002", 5, text) 
+PanelFieldSetProp ("PLZ003", 5, text) 
+PanelFieldSetProp ("PLZ004", 5, text) 
+PanelFieldSetProp ("PLZ005", 5, text) 
+PanelFieldSetProp ("PLZ006", 5, text) 
+PanelFieldSetProp ("PLZ007", 5, text) 
+PanelFieldSetProp ("PLZ008", 5, text) 
+PanelUpdateEnable(2)
+
+endif
+
+
+
+rc = EzSQLQuery("SELECT ((kdgart * 100) + kdgaug), digits(kdgart) concat digits(kdgaug) concat '-' concat kdgtxt FROM grgarp order by ((kdgart * 100) + kdgaug)", text, ErrorMsg)
+
+if ( rc < 0 ) then
+
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+
+else
+
+PanelFieldSetProp ("GESA01", 5, text) 
+PanelFieldSetProp ("GESA02", 5, text) 
+PanelFieldSetProp ("GESA03", 5, text) 
+PanelFieldSetProp ("GESA04", 5, text) 
+PanelFieldSetProp ("GESA05", 5, text) 
+PanelFieldSetProp ("GESA06", 5, text) 
+PanelFieldSetProp ("GESA07", 5, text) 
+PanelFieldSetProp ("GESA08", 5, text) 
+PanelFieldSetProp ("GESA09", 5, text) 
+PanelFieldSetProp ("GESA10", 5, text) 
+
+PanelUpdateEnable(2)
+
+endif

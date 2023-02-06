@@ -1,0 +1,1288 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="LLD_OBJ/GU66DS(SFC+KEY02)" library="LLD_OBJ" member_name="GU66DS">
+    <size cx="80" cy="24"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="f5" caption="F5" attention_key="false"/>
+    <action key="f8" caption="F8" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <action key="roll_up" caption="ROLL_UP" attention_key="false"/>
+    <action key="roll_down" caption="ROLL_DOWN" attention_key="false"/>
+    <action key="help" caption="HELP" attention_key="false"/>
+    <field field_type="screen_part" name="SFC">
+      <area>
+        <position/>
+        <size cx="80" cy="22"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="KEY02" overlay="true">
+      <area>
+        <position y="23"/>
+        <size cx="80" cy="1"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="FRÜHREMI" display_length="8" data_length="8">
+          <area>
+            <position x="21"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="von:" display_length="4" data_length="4">
+          <area>
+            <position x="30"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DATVON" short_name="DATVON" data_type="zoned_decimal" display_length="10" data_length="8">
+          <area>
+            <position x="35"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="bis:" display_length="4" data_length="4">
+          <area>
+            <position x="46"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DATBIS" short_name="DATBIS" data_type="zoned_decimal" display_length="10" data_length="8">
+          <area>
+            <position x="51"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="63"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="72"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="USER" short_name="USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="1" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="JOB" short_name="JOB" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="63" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="GU66" display_length="4" data_length="4">
+          <area>
+            <position x="76" y="1"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="fixed_text" value="nur Ehastracode  :" display_length="18" data_length="18">
+          <area>
+            <position x="1" y="2"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="XXEHCD" short_name="XXEHCD" data_type="zoned_decimal" display_length="2" data_length="2" underline="true" high_intensity="true">
+          <area>
+            <position x="20" y="2"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="Rückgabe" display_length="8" data_length="8">
+          <area>
+            <position x="25" y="2"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="XXTAGE" short_name="XXTAGE" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" column_separator="true">
+          <area>
+            <position x="34" y="2"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Tage nach EVT oder" display_length="18" data_length="18">
+          <area>
+            <position x="38" y="2"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="XXANTAG" short_name="XXANTAG" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true">
+          <area>
+            <position x="57" y="2"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="Tage vor Aufruf" display_length="15" data_length="15">
+          <area>
+            <position x="61" y="2"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="Remimenge grösser:" display_length="18" data_length="18">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="XXMENG" short_name="XXMENG" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true">
+          <area>
+            <position x="20" y="3"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="  KD-Nr Name   Teil     ObjN Name   Teil  " display_length="42" data_length="42" underline="true">
+          <area>
+            <position x="30" y="3"/>
+            <size cx="42" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="nur 1 Kunde oder 1 Objekt -&gt;" display_length="28" data_length="28">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="28" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="XXKDNR" short_name="XXKDNR" data_type="zoned_decimal" display_length="7" data_length="7" underline="true" high_intensity="true">
+          <area>
+            <position x="30" y="4"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="MCKNAM" short_name="MCKNAM" data_type="alphanumeric" display_length="6" data_length="6" underline="true" high_intensity="true">
+          <area>
+            <position x="38" y="4"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="MCKTEIL" short_name="MCKTEIL" data_type="alphanumeric" display_length="6" data_length="6" underline="true" high_intensity="true">
+          <area>
+            <position x="45" y="4"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="XXOBJ" short_name="XXOBJ" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" high_intensity="true">
+          <area>
+            <position x="54" y="4"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="MCANAM" short_name="MCANAM" data_type="alphanumeric" display_length="6" data_length="6" underline="true" high_intensity="true">
+          <area>
+            <position x="59" y="4"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="MCATEIL" short_name="MCATEIL" data_type="alphanumeric" display_length="6" data_length="6" underline="true" high_intensity="true">
+          <area>
+            <position x="66" y="4"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="A EH ObNr Name                 Folge Meng Lieferdat. Aufrufdat. EVT END ROH-Gew" display_length="79" data_length="79" underline="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="79" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHCD" short_name="SFEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="6"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="6" y="6"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBEZ" short_name="SFBEZ" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="11" y="6"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFFOLG" short_name="SFFOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="30" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFMENG" short_name="SFMENG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="38" y="6"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="LDAT" short_name="LDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="43" y="6"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="RDAT" short_name="RDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="54" y="6"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NEVT" short_name="NEVT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="65" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VENDE" short_name="VENDE" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="69" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ROHG" short_name="ROHG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="73" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHCD" short_name="SFEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="7"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="6" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBEZ" short_name="SFBEZ" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="11" y="7"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFFOLG" short_name="SFFOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="30" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFMENG" short_name="SFMENG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="38" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="LDAT" short_name="LDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="43" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="RDAT" short_name="RDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="54" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NEVT" short_name="NEVT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="65" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VENDE" short_name="VENDE" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="69" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ROHG" short_name="ROHG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="73" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHCD" short_name="SFEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="8"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="6" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBEZ" short_name="SFBEZ" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="11" y="8"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFFOLG" short_name="SFFOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="30" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFMENG" short_name="SFMENG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="38" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="LDAT" short_name="LDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="43" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="RDAT" short_name="RDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="54" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NEVT" short_name="NEVT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="65" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VENDE" short_name="VENDE" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="69" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ROHG" short_name="ROHG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="73" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHCD" short_name="SFEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="9"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="6" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBEZ" short_name="SFBEZ" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="11" y="9"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFFOLG" short_name="SFFOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="30" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFMENG" short_name="SFMENG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="38" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="LDAT" short_name="LDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="43" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="RDAT" short_name="RDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="54" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NEVT" short_name="NEVT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="65" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VENDE" short_name="VENDE" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="69" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ROHG" short_name="ROHG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="73" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHCD" short_name="SFEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="10"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="6" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBEZ" short_name="SFBEZ" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="11" y="10"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFFOLG" short_name="SFFOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="30" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFMENG" short_name="SFMENG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="38" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="LDAT" short_name="LDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="43" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="RDAT" short_name="RDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="54" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NEVT" short_name="NEVT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="65" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VENDE" short_name="VENDE" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="69" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ROHG" short_name="ROHG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="73" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHCD" short_name="SFEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="11"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="6" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBEZ" short_name="SFBEZ" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="11" y="11"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFFOLG" short_name="SFFOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="30" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFMENG" short_name="SFMENG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="38" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="LDAT" short_name="LDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="43" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="RDAT" short_name="RDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="54" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NEVT" short_name="NEVT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="65" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VENDE" short_name="VENDE" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="69" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ROHG" short_name="ROHG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="73" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHCD" short_name="SFEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="12"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="6" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBEZ" short_name="SFBEZ" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="11" y="12"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFFOLG" short_name="SFFOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="30" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFMENG" short_name="SFMENG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="38" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="LDAT" short_name="LDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="43" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="RDAT" short_name="RDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="54" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NEVT" short_name="NEVT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="65" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VENDE" short_name="VENDE" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="69" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ROHG" short_name="ROHG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="73" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHCD" short_name="SFEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="13"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="6" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBEZ" short_name="SFBEZ" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="11" y="13"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFFOLG" short_name="SFFOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="30" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFMENG" short_name="SFMENG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="38" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="LDAT" short_name="LDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="43" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="RDAT" short_name="RDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="54" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NEVT" short_name="NEVT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="65" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VENDE" short_name="VENDE" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="69" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ROHG" short_name="ROHG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="73" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHCD" short_name="SFEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="14"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="6" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBEZ" short_name="SFBEZ" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="11" y="14"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFFOLG" short_name="SFFOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="30" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFMENG" short_name="SFMENG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="38" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="LDAT" short_name="LDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="43" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="RDAT" short_name="RDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="54" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NEVT" short_name="NEVT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="65" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VENDE" short_name="VENDE" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="69" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ROHG" short_name="ROHG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="73" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHCD" short_name="SFEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="15"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="6" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBEZ" short_name="SFBEZ" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="11" y="15"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFFOLG" short_name="SFFOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="30" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFMENG" short_name="SFMENG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="38" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="LDAT" short_name="LDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="43" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="RDAT" short_name="RDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="54" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NEVT" short_name="NEVT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="65" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VENDE" short_name="VENDE" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="69" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ROHG" short_name="ROHG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="73" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHCD" short_name="SFEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="16"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="6" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBEZ" short_name="SFBEZ" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="11" y="16"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFFOLG" short_name="SFFOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="30" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFMENG" short_name="SFMENG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="38" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="LDAT" short_name="LDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="43" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="RDAT" short_name="RDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="54" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NEVT" short_name="NEVT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="65" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VENDE" short_name="VENDE" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="69" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ROHG" short_name="ROHG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="73" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHCD" short_name="SFEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="17"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="6" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBEZ" short_name="SFBEZ" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="11" y="17"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFFOLG" short_name="SFFOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="30" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFMENG" short_name="SFMENG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="38" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="LDAT" short_name="LDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="43" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="RDAT" short_name="RDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="54" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NEVT" short_name="NEVT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="65" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VENDE" short_name="VENDE" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="69" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ROHG" short_name="ROHG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="73" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHCD" short_name="SFEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="18"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="6" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBEZ" short_name="SFBEZ" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="11" y="18"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFFOLG" short_name="SFFOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="30" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFMENG" short_name="SFMENG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="38" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="LDAT" short_name="LDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="43" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="RDAT" short_name="RDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="54" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NEVT" short_name="NEVT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="65" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VENDE" short_name="VENDE" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="69" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ROHG" short_name="ROHG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="73" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHCD" short_name="SFEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="19"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="6" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBEZ" short_name="SFBEZ" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="11" y="19"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFFOLG" short_name="SFFOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="30" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFMENG" short_name="SFMENG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="38" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="LDAT" short_name="LDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="43" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="RDAT" short_name="RDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="54" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NEVT" short_name="NEVT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="65" y="19"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VENDE" short_name="VENDE" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="69" y="19"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ROHG" short_name="ROHG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="73" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHCD" short_name="SFEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="20"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="6" y="20"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBEZ" short_name="SFBEZ" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="11" y="20"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFFOLG" short_name="SFFOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="30" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFMENG" short_name="SFMENG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="38" y="20"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="LDAT" short_name="LDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="43" y="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="RDAT" short_name="RDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="54" y="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NEVT" short_name="NEVT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="65" y="20"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VENDE" short_name="VENDE" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="69" y="20"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ROHG" short_name="ROHG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="73" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHCD" short_name="SFEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="3" y="21"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="6" y="21"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBEZ" short_name="SFBEZ" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="11" y="21"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFFOLG" short_name="SFFOLG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="30" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFMENG" short_name="SFMENG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="38" y="21"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="LDAT" short_name="LDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="43" y="21"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="RDAT" short_name="RDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="54" y="21"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NEVT" short_name="NEVT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="65" y="21"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VENDE" short_name="VENDE" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="69" y="21"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ROHG" short_name="ROHG" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="73" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="Eingabetaste = ZURÜCK; E = Bezugseinzelsatz; A = alle Objekte des KD; F03=Ende" display_length="78" data_length="78">
+      <area>
+        <position x="1" y="23"/>
+        <size cx="78" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

@@ -1,0 +1,39 @@
+﻿dim text, ErrorMsg as String
+dim rc as Integer
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rc = EzSQLQuery("SELECT DISNR, DISNAME FROM GRDSNP where disname <> ' ' order by disname", text, ErrorMsg)
+
+if ( rc < 0 ) then
+
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+
+else
+
+PanelFieldSetProp ("xxdsp", 5, text) 
+PanelUpdateEnable(2)
+
+endif
+
+rc = EzSQLQuery("SELECT vavnr, vaname FROM GRADRp order by vaname", text, ErrorMsg)
+
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelFieldSetProp ("xxvlg", 5, text) 
+endif
+
+
+rc = EzSQLQuery("SELECT DIGITS(EHNR), DIGITS(EHNR) concat ' - 'concat EHTEXT FROM GRETXP  where ehunr = 0 order by DIGITS(EHNR)", text, ErrorMsg)
+
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelFieldSetProp ("ehcd", 5, text) 
+endif
+
+PanelUpdateEnable(2)

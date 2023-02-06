@@ -1,0 +1,1641 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="OSNA_COL/NL75DS(SFC1)" library="OSNA_COL" member_name="NL75DS">
+    <size cx="132" cy="27"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <field field_type="screen_part" name="SFC1">
+      <area>
+        <position/>
+        <size cx="132" cy="24"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SDS_JOB" short_name="SDS_JOB" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="Nachlieferpool drucken" display_length="22" data_length="22">
+          <area>
+            <position x="52"/>
+            <size cx="22" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SDS_USER" short_name="SDS_USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="96"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="NL75S1" display_length="6" data_length="6">
+          <area>
+            <position x="107"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="114"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="123"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Tour" display_length="4" data_length="4">
+          <area>
+            <position x="1" y="1"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="both" name="S1VONT" short_name="S1VONT" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true">
+          <area>
+            <position x="6" y="1"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="bis" display_length="3" data_length="3">
+          <area>
+            <position x="10" y="1"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="both" name="S1BIST" short_name="S1BIST" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true">
+          <area>
+            <position x="14" y="1"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="VIP-Kunden" display_length="10" data_length="10">
+          <area>
+            <position x="33" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AVIP" short_name="S1AVIP" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" exit_record="true">
+          <area>
+            <position x="44" y="1"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="Non-Press (UVP)" display_length="15" data_length="15">
+          <area>
+            <position x="52" y="1"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="both" name="S1ANP" short_name="S1ANP" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" exit_record="true">
+          <area>
+            <position x="68" y="1"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value=" Tour      KdNr.  Name                               V   Plz   Ort                        AnzPo   AnzEx   N                 D  A  " display_length="130" data_length="130" underline="true">
+          <area>
+            <position x="1" y="2"/>
+            <size cx="130" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S1FF" short_name="S1FF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KDNR" short_name="S1KDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="10" y="3"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="19" y="3"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VIP" short_name="S1VIP" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="54" y="3"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PLZ" short_name="S1PLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="57" y="3"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ORT" short_name="S1ORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="64" y="3"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="91" y="3"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="98" y="3"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1NPV" short_name="S1NPV" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="3"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1NLDR" short_name="S1NLDR" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="125" y="3"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="128" y="3"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1FF" short_name="S1FF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KDNR" short_name="S1KDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="10" y="4"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="19" y="4"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VIP" short_name="S1VIP" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="54" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PLZ" short_name="S1PLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="57" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ORT" short_name="S1ORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="64" y="4"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="91" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="98" y="4"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1NPV" short_name="S1NPV" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1NLDR" short_name="S1NLDR" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="125" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="128" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1FF" short_name="S1FF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KDNR" short_name="S1KDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="10" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="19" y="5"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VIP" short_name="S1VIP" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="54" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PLZ" short_name="S1PLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="57" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ORT" short_name="S1ORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="64" y="5"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="91" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="98" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1NPV" short_name="S1NPV" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1NLDR" short_name="S1NLDR" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="125" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="128" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S1FF" short_name="S1FF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KDNR" short_name="S1KDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="10" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="19" y="6"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VIP" short_name="S1VIP" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="54" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PLZ" short_name="S1PLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="57" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ORT" short_name="S1ORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="64" y="6"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="91" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="98" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1NPV" short_name="S1NPV" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1NLDR" short_name="S1NLDR" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="125" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="128" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1FF" short_name="S1FF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KDNR" short_name="S1KDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="10" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="19" y="7"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VIP" short_name="S1VIP" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="54" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PLZ" short_name="S1PLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="57" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ORT" short_name="S1ORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="64" y="7"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="91" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="98" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1NPV" short_name="S1NPV" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1NLDR" short_name="S1NLDR" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="125" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="128" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1FF" short_name="S1FF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KDNR" short_name="S1KDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="10" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="19" y="8"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VIP" short_name="S1VIP" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="54" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PLZ" short_name="S1PLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="57" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ORT" short_name="S1ORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="64" y="8"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="91" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="98" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1NPV" short_name="S1NPV" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1NLDR" short_name="S1NLDR" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="125" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="128" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S1FF" short_name="S1FF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KDNR" short_name="S1KDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="10" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="19" y="9"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VIP" short_name="S1VIP" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="54" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PLZ" short_name="S1PLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="57" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ORT" short_name="S1ORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="64" y="9"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="91" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="98" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1NPV" short_name="S1NPV" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1NLDR" short_name="S1NLDR" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="125" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="128" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1FF" short_name="S1FF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KDNR" short_name="S1KDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="10" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="19" y="10"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VIP" short_name="S1VIP" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="54" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PLZ" short_name="S1PLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="57" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ORT" short_name="S1ORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="64" y="10"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="91" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="98" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1NPV" short_name="S1NPV" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1NLDR" short_name="S1NLDR" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="125" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="128" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1FF" short_name="S1FF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KDNR" short_name="S1KDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="10" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="19" y="11"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VIP" short_name="S1VIP" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="54" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PLZ" short_name="S1PLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="57" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ORT" short_name="S1ORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="64" y="11"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="91" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="98" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1NPV" short_name="S1NPV" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1NLDR" short_name="S1NLDR" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="125" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="128" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S1FF" short_name="S1FF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KDNR" short_name="S1KDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="10" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="19" y="12"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VIP" short_name="S1VIP" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="54" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PLZ" short_name="S1PLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="57" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ORT" short_name="S1ORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="64" y="12"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="91" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="98" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1NPV" short_name="S1NPV" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1NLDR" short_name="S1NLDR" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="125" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="128" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1FF" short_name="S1FF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KDNR" short_name="S1KDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="10" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="19" y="13"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VIP" short_name="S1VIP" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="54" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PLZ" short_name="S1PLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="57" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ORT" short_name="S1ORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="64" y="13"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="91" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="98" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1NPV" short_name="S1NPV" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1NLDR" short_name="S1NLDR" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="125" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="128" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1FF" short_name="S1FF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KDNR" short_name="S1KDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="10" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="19" y="14"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VIP" short_name="S1VIP" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="54" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PLZ" short_name="S1PLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="57" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ORT" short_name="S1ORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="64" y="14"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="91" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="98" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1NPV" short_name="S1NPV" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1NLDR" short_name="S1NLDR" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="125" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="128" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S1FF" short_name="S1FF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KDNR" short_name="S1KDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="10" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="19" y="15"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VIP" short_name="S1VIP" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="54" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PLZ" short_name="S1PLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="57" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ORT" short_name="S1ORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="64" y="15"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="91" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="98" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1NPV" short_name="S1NPV" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1NLDR" short_name="S1NLDR" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="125" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="128" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1FF" short_name="S1FF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KDNR" short_name="S1KDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="10" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="19" y="16"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VIP" short_name="S1VIP" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="54" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PLZ" short_name="S1PLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="57" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ORT" short_name="S1ORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="64" y="16"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="91" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="98" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1NPV" short_name="S1NPV" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1NLDR" short_name="S1NLDR" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="125" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="128" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1FF" short_name="S1FF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KDNR" short_name="S1KDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="10" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="19" y="17"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VIP" short_name="S1VIP" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="54" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PLZ" short_name="S1PLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="57" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ORT" short_name="S1ORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="64" y="17"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="91" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="98" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1NPV" short_name="S1NPV" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1NLDR" short_name="S1NLDR" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="125" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="128" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S1FF" short_name="S1FF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KDNR" short_name="S1KDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="10" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="19" y="18"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VIP" short_name="S1VIP" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="54" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PLZ" short_name="S1PLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="57" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ORT" short_name="S1ORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="64" y="18"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="91" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="98" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1NPV" short_name="S1NPV" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1NLDR" short_name="S1NLDR" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="125" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="128" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1FF" short_name="S1FF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KDNR" short_name="S1KDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="10" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="19" y="19"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VIP" short_name="S1VIP" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="54" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PLZ" short_name="S1PLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="57" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ORT" short_name="S1ORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="64" y="19"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="91" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="98" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1NPV" short_name="S1NPV" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1NLDR" short_name="S1NLDR" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="125" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="128" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1FF" short_name="S1FF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KDNR" short_name="S1KDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="10" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="19" y="20"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VIP" short_name="S1VIP" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="54" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PLZ" short_name="S1PLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="57" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ORT" short_name="S1ORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="64" y="20"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="91" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="98" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1NPV" short_name="S1NPV" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1NLDR" short_name="S1NLDR" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="125" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="128" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S1FF" short_name="S1FF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KDNR" short_name="S1KDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="10" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="19" y="21"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VIP" short_name="S1VIP" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="54" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PLZ" short_name="S1PLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="57" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ORT" short_name="S1ORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="64" y="21"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="91" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="98" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1NPV" short_name="S1NPV" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1NLDR" short_name="S1NLDR" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="125" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="128" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1FF" short_name="S1FF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="22"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KDNR" short_name="S1KDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="10" y="22"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="19" y="22"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VIP" short_name="S1VIP" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="54" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PLZ" short_name="S1PLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="57" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ORT" short_name="S1ORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="64" y="22"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="91" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="98" y="22"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1NPV" short_name="S1NPV" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1NLDR" short_name="S1NLDR" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="125" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="128" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1FF" short_name="S1FF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="23"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KDNR" short_name="S1KDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="10" y="23"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="19" y="23"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1VIP" short_name="S1VIP" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="54" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PLZ" short_name="S1PLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="57" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ORT" short_name="S1ORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="64" y="23"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="91" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="98" y="23"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1NPV" short_name="S1NPV" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="107" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="S1NLDR" short_name="S1NLDR" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="125" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="128" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_end_plus" value="+" display_length="1" data_length="1" conditional="true">
+        <area>
+          <position x="130" y="23"/>
+          <size cx="1" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+    </field>
+  </screen>
+</header>

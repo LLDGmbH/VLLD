@@ -1,0 +1,67 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xs1lenr, xs1lnam, xs1str, xs1plz, xs1ort, xs1oknam, xs1lfb1, xs1ende, xs1wkd, xs1zatx, errmsg, datei, pfad_datei, source as string 
+i = 0
+j = 3
+
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Neuleser SoMa.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z2S1", "Leser")
+ddepoke( ddehandle, "Z2S2", "Name.")
+ddepoke( ddehandle, "Z2S3", "Strasse")
+ddepoke( ddehandle, "Z2S4", "PLZ")
+ddepoke( ddehandle, "Z2S5", "Ort")
+ddepoke( ddehandle, "Z2S6", "Objekt")
+ddepoke( ddehandle, "Z2S7", "Lieferbeginn")
+ddepoke( ddehandle, "Z2S8", "Lieferende")
+ddepoke( ddehandle, "Z2S9", "Prämie")
+ddepoke( ddehandle, "Z2S10", "Abgangsgrund")
+
+nochmal:
+
+HostFieldGetLineData("s1lenr", i, xs1lenr)
+HostFieldGetLineData("s1lnam", i, xs1lnam)
+HostFieldGetLineData("s1str", i, xs1str)
+HostFieldGetLineData("s1plz", i, xs1plz)
+HostFieldGetLineData("s1ort", i, xs1ort)
+HostFieldGetLineData("s1oknam", i, xs1oknam)
+HostFieldGetLineData("s1lfb1", i, xs1lfb1)
+HostFieldGetLineData("s1ende", i, xs1ende)
+HostFieldGetLineData("s1wkd", i, xs1wkd)
+HostFieldGetLineData("s1zatx", i, xs1zatx)
+
+ddepoke( ddehandle, "Z" + str(j) + "S1", xs1lenr)
+ddepoke( ddehandle, "Z" + str(j) + "S2", xs1lnam)
+ddepoke( ddehandle, "Z" + str(j) + "S3", xs1str)
+ddepoke( ddehandle, "Z" + str(j) + "S4", xs1plz)
+ddepoke( ddehandle, "Z" + str(j) + "S5", xs1ort)
+ddepoke( ddehandle, "Z" + str(j) + "S6", xs1oknam)
+ddepoke( ddehandle, "Z" + str(j) + "S7", xs1lfb1)
+ddepoke( ddehandle, "Z" + str(j) + "S8", xs1ende)
+ddepoke( ddehandle, "Z" + str(j) + "S9", xs1wkd)
+ddepoke( ddehandle, "Z" + str(j) + "S10", xs1zatx)
+
+j=j+1
+
+if xs1lenr = "" then
+goto ende
+endif
+
+if i < 19 then
+i=i+1
+goto nochmal
+endif
+
+HostScreenSendKey("Page Down")
+i=0
+goto nochmal
+
+ende:

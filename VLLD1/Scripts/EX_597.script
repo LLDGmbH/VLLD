@@ -1,0 +1,78 @@
+﻿global filiale as string
+DIM ddehandle, i, j, msg, rc as integer
+dim yname, xobjnr, xtitel, xgbz, xkdnr, xname, xstr, xplz, xort, xstat, xanp, datei, pfad_datei, ErrMsg, sql1, sql2, sql3, sql4, sql5, sql6 as string 
+dim source as string
+
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+HostFieldGetData("objnr",xobjnr)
+HostFieldGetData("atname",xtitel)
+
+datei = "Objektstreuung_" + xobjnr + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "Objektstreuung")
+ddepoke( ddehandle, "Z1S2", xtitel)
+ddepoke( ddehandle, "Z2S1", "Kundennummer")
+ddepoke( ddehandle, "Z2S2", "Name")
+ddepoke( ddehandle, "Z2S3", "Ansprechpartner")
+ddepoke( ddehandle, "Z2S4", "Strasse")
+ddepoke( ddehandle, "Z2S5", "Plz")
+ddepoke( ddehandle, "Z2S6", "Ort")
+ddepoke( ddehandle, "Z2S7", "Exemplare")
+
+
+nochmal:
+
+HostFieldGetLineData("kdnr5", i, xkdnr)
+HostFieldGetLineData("sname", i, yname)
+HostFieldGetLineData("gbz", i, xgbz)
+
+if xkdnr <> "" then
+
+
+sql1 = "SELECT kdstr FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdplz FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdort FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+sql4 = "SELECT kdname FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+sql5 = "SELECT kdstat FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+sql6 = "SELECT kdanp FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+
+
+rc = EzSQLQuery(sql1, xstr, ErrMsg)
+rc = EzSQLQuery(sql2, xplz, ErrMsg)
+rc = EzSQLQuery(sql3, xort, ErrMsg)
+rc = EzSQLQuery(sql4, xname, ErrMsg)
+rc = EzSQLQuery(sql5, xstat, ErrMsg)
+rc = EzSQLQuery(sql6, xanp, ErrMsg)
+
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", xstat)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xname)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xanp)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xstr)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xplz)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xort)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xgbz)
+
+j=j+1 
+endif
+
+if i < 17 then
+i=i+1
+goto nochmal
+endif
+ 
+if yname <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

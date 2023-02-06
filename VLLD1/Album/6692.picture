@@ -1,0 +1,911 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="OSNA_SRC/KD50DS(CTLSF5+FUSS)" library="OSNA_SRC" member_name="KD50DS">
+    <size cx="132" cy="27"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f6" caption="F6" attention_key="false"/>
+    <action key="f12" caption="F12" attention_key="false"/>
+    <action key="f21" caption="F21" attention_key="false"/>
+    <action key="f22" caption="F22" attention_key="false"/>
+    <action key="f23" caption="F23" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <field field_type="screen_part" name="CTLSF5" overlay="true">
+      <area>
+        <position/>
+        <size cx="132" cy="26"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="FUSS">
+      <area>
+        <position y="26"/>
+        <size cx="132" cy="1"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="fixed_text" value="KD50S5" display_length="6" data_length="6">
+          <area>
+            <position x="126"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="fixed_text" value="Anzeigen EH nach bestimmten Kriterien" display_length="37" data_length="37" underline="true">
+          <area>
+            <position x="41" y="1"/>
+            <size cx="37" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="UEB" short_name="UEB" data_type="alphanumeric" display_length="35" data_length="35" underline="true">
+          <area>
+            <position x="42" y="2"/>
+            <size cx="35" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="  KD-NR.  GA-UG NAME                              STRASSE                    PLZ    ORT                       WO-UMS  KASSE       " display_length="130" data_length="130" underline="true">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="130" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" non_display="conditional" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="3" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDGART" short_name="KDGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="11" y="5"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDGAUG" short_name="KDGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="14" y="5"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="17" y="5"/>
+            <size cx="33" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="51" y="5"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="78" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="85" y="5"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDWUMS1" short_name="KDWUMS1" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="111" y="5"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="BS_KASSE" short_name="BS_KASSE" data_type="alphanumeric" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="119" y="5"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDADNEU" short_name="KDADNEU" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="6"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" non_display="conditional" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="3" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDGART" short_name="KDGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="11" y="7"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDGAUG" short_name="KDGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="14" y="7"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="17" y="7"/>
+            <size cx="33" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="51" y="7"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="78" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="85" y="7"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDWUMS1" short_name="KDWUMS1" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="111" y="7"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="BS_KASSE" short_name="BS_KASSE" data_type="alphanumeric" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="119" y="7"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDADNEU" short_name="KDADNEU" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" non_display="conditional" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="3" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDGART" short_name="KDGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="11" y="9"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDGAUG" short_name="KDGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="14" y="9"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="17" y="9"/>
+            <size cx="33" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="51" y="9"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="78" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="85" y="9"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDWUMS1" short_name="KDWUMS1" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="111" y="9"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="BS_KASSE" short_name="BS_KASSE" data_type="alphanumeric" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="119" y="9"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="KDADNEU" short_name="KDADNEU" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" non_display="conditional" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="3" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDGART" short_name="KDGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="11" y="11"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDGAUG" short_name="KDGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="14" y="11"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="17" y="11"/>
+            <size cx="33" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="51" y="11"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="78" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="85" y="11"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDWUMS1" short_name="KDWUMS1" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="111" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="BS_KASSE" short_name="BS_KASSE" data_type="alphanumeric" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="119" y="11"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDADNEU" short_name="KDADNEU" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" non_display="conditional" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="3" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDGART" short_name="KDGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="11" y="13"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDGAUG" short_name="KDGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="14" y="13"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="17" y="13"/>
+            <size cx="33" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="51" y="13"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="78" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="85" y="13"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDWUMS1" short_name="KDWUMS1" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="111" y="13"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="BS_KASSE" short_name="BS_KASSE" data_type="alphanumeric" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="119" y="13"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDADNEU" short_name="KDADNEU" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" non_display="conditional" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="3" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDGART" short_name="KDGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="11" y="15"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDGAUG" short_name="KDGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="14" y="15"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="17" y="15"/>
+            <size cx="33" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="51" y="15"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="78" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="85" y="15"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDWUMS1" short_name="KDWUMS1" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="111" y="15"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="BS_KASSE" short_name="BS_KASSE" data_type="alphanumeric" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="119" y="15"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDADNEU" short_name="KDADNEU" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" non_display="conditional" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="3" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDGART" short_name="KDGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="11" y="17"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDGAUG" short_name="KDGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="14" y="17"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="17" y="17"/>
+            <size cx="33" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="51" y="17"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="78" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="85" y="17"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDWUMS1" short_name="KDWUMS1" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="111" y="17"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="BS_KASSE" short_name="BS_KASSE" data_type="alphanumeric" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="119" y="17"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDADNEU" short_name="KDADNEU" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" non_display="conditional" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="3" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDGART" short_name="KDGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="11" y="19"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDGAUG" short_name="KDGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="14" y="19"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="17" y="19"/>
+            <size cx="33" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="51" y="19"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="78" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="85" y="19"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDWUMS1" short_name="KDWUMS1" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="111" y="19"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="BS_KASSE" short_name="BS_KASSE" data_type="alphanumeric" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="119" y="19"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="KDADNEU" short_name="KDADNEU" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" non_display="conditional" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="3" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDGART" short_name="KDGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="11" y="21"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDGAUG" short_name="KDGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="14" y="21"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="17" y="21"/>
+            <size cx="33" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="51" y="21"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="78" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="85" y="21"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDWUMS1" short_name="KDWUMS1" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="111" y="21"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="BS_KASSE" short_name="BS_KASSE" data_type="alphanumeric" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="119" y="21"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDADNEU" short_name="KDADNEU" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="22"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" non_display="conditional" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="3" y="23"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDGART" short_name="KDGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="11" y="23"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDGAUG" short_name="KDGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="14" y="23"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="17" y="23"/>
+            <size cx="33" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="51" y="23"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="78" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="85" y="23"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDWUMS1" short_name="KDWUMS1" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="111" y="23"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="BS_KASSE" short_name="BS_KASSE" data_type="alphanumeric" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="119" y="23"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="KDADNEU" short_name="KDADNEU" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="24"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_end_more" value="Weitere ... " display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="119" y="25"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+      <field field_type="subfile_end_bottom" value="Ende        " display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="119" y="25"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="F3 = Beenden des Programmes" display_length="27" data_length="27">
+      <area>
+        <position x="1" y="26"/>
+        <size cx="27" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="F12 = Abbruch" display_length="13" data_length="13">
+      <area>
+        <position x="31" y="26"/>
+        <size cx="13" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="© Gerd Gerstmann" display_length="16" data_length="16">
+      <area>
+        <position x="115" y="26"/>
+        <size cx="16" cy="1"/>
+      </area>
+      <color foreground="red"/>
+    </field>
+  </screen>
+</header>

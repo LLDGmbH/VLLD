@@ -1,0 +1,484 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim x01, x02, x03, x04, x05, x06, x07, x08, x09, x10, x11, x12, x13, x14, x15, x16, x17, x18, x19, x20, x21, x22, x23, x24, x25, x26, x27, x28, x29, x30, x31, x32, x33, x34, x35, x36, x37, x38, x39, x40, x41, x42, x43, x44, x45, x46, x47, x48, x49, x50, xkdnr, xdaten, xk1msg, xkdkdnr, xkdname, v01, v02, v03, v04, v05, v06, v07, v08, v09, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32, v33, v34, v35, v36, v37, v38, v39, v40, v41, v42, v43, v44, v45, v46, v47, v48, v49, v50, sql01, sql02, sql03, sql04, sql05, sql06, sql07, sql08, sql09, sql10, sql11, sql12, sql13, sql14, sql15, sql16, sql17, sql18, sql19, sql20, sql21, sql22, sql23, sql24, sql25, sql26, sql27, sql28, sql29, sql30, sql31, sql32, sql33, sql34, sql35, sql36, sql37, sql38, sql39, sql40, sql41, sql42, sql43, sql44, sql45, sql46, sql47, sql48, sql49, sql50, errmsg, datei, pfad_datei as string 
+dim source as string
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+HostFieldGetData("k1msg", xk1msg)
+HostFieldGetData("F001",v01)
+HostFieldGetData("F002",v02)
+HostFieldGetData("F003",v03)
+HostFieldGetData("F004",v04)
+HostFieldGetData("F005",v05)
+HostFieldGetData("F006",v06)
+HostFieldGetData("F007",v07)
+HostFieldGetData("F008",v08)
+HostFieldGetData("F009",v09)
+HostFieldGetData("F010",v10)
+HostFieldGetData("F011",v11)
+HostFieldGetData("F012",v12)
+HostFieldGetData("F013",v13)
+HostFieldGetData("F014",v14)
+HostFieldGetData("F015",v15)
+HostFieldGetData("F016",v16)
+HostFieldGetData("F017",v17)
+HostFieldGetData("F018",v18)
+HostFieldGetData("F019",v19)
+HostFieldGetData("F020",v20)
+HostFieldGetData("F021",v21)
+HostFieldGetData("F022",v22)
+HostFieldGetData("F023",v23)
+HostFieldGetData("F024",v24)
+HostFieldGetData("F025",v25)
+HostFieldGetData("F026",v26)
+HostFieldGetData("F027",v27)
+HostFieldGetData("F028",v28)
+HostFieldGetData("F029",v29)
+HostFieldGetData("F030",v30)
+HostFieldGetData("F031",v31)
+HostFieldGetData("F032",v32)
+HostFieldGetData("F033",v33)
+HostFieldGetData("F034",v34)
+HostFieldGetData("F035",v35)
+HostFieldGetData("F036",v36)
+HostFieldGetData("F037",v37)
+HostFieldGetData("F038",v38)
+HostFieldGetData("F039",v39)
+HostFieldGetData("F040",v40)
+HostFieldGetData("F041",v41)
+HostFieldGetData("F042",v42)
+HostFieldGetData("F043",v43)
+HostFieldGetData("F044",v44)
+HostFieldGetData("F045",v45)
+HostFieldGetData("F046",v46)
+HostFieldGetData("F047",v47)
+HostFieldGetData("F048",v48)
+HostFieldGetData("F049",v49)
+HostFieldGetData("F050",v50)
+
+
+datei = "TEST.XLS"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "Daten")
+
+nochmal:
+
+HostFieldGetLineData("s2kdnr", i, xkdnr)
+
+if v01 <> " " then
+sql01 = "SELECT " + V01 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif 
+if v02 <> " " then
+sql02 = "SELECT " + V02 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v03 <> " " then
+sql03 = "SELECT " + V03 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v04 <> " " then
+sql04 = "SELECT " + V04 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v05 <> " " then
+sql05 = "SELECT " + V05 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v06 <> " " then
+sql06 = "SELECT " + V06 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v07 <> " " then
+sql07 = "SELECT " + V07 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v08 <> " " then
+sql08 = "SELECT " + V08 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v09 <> " " then
+sql09 = "SELECT " + V09 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v10 <> " " then
+sql10 = "SELECT " + V10 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v11 <> " " then
+sql11 = "SELECT " + V11 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif 
+if v12 <> " " then
+sql12 = "SELECT " + V12 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v13 <> " " then
+sql13 = "SELECT " + V13 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v14 <> " " then
+sql14 = "SELECT " + V14 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v15 <> " " then 
+sql15 = "SELECT " + V15 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v16 <> " " then
+sql16 = "SELECT " + V16 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v17 <> " " then
+sql17 = "SELECT " + V17 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v18 <> " " then
+sql18 = "SELECT " + V18 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v19 <> " " then
+sql19 = "SELECT " + V19 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v20 <> " " then
+sql20 = "SELECT " + V20 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v21 <> " " then
+sql21 = "SELECT " + V21 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif 
+if v22 <> " " then
+sql22 = "SELECT " + V22 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v23 <> " " then
+sql23 = "SELECT " + V23 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v24 <> " " then
+sql24 = "SELECT " + V24 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v25 <> " " then
+sql25 = "SELECT " + V25 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v26 <> " " then
+sql26 = "SELECT " + V26 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v27 <> " " then
+sql27 = "SELECT " + V27 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v28 <> " " then
+sql28 = "SELECT " + V28 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v29 <> " " then
+sql29 = "SELECT " + V29 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v30 <> " " then
+sql30 = "SELECT " + V30 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v31 <> " " then
+sql31 = "SELECT " + V31 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif 
+if v32 <> " " then
+sql32 = "SELECT " + V32 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v33 <> " " then
+sql33 = "SELECT " + V33 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v34 <> " " then
+sql34 = "SELECT " + V34 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v35 <> " " then 
+sql35 = "SELECT " + V35 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v36 <> " " then
+sql36 = "SELECT " + V36 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v37 <> " " then
+sql37 = "SELECT " + V37 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v38 <> " " then
+sql38 = "SELECT " + V38 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v39 <> " " then
+sql39 = "SELECT " + V39 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v40 <> " " then
+sql40 = "SELECT " + V40 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v41 <> " " then
+sql41 = "SELECT " + V41 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif 
+if v42 <> " " then
+sql42 = "SELECT " + V42 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v43 <> " " then
+sql43 = "SELECT " + V43 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v44 <> " " then
+sql44 = "SELECT " + V44 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v45 <> " " then
+sql45 = "SELECT " + V45 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v46 <> " " then
+sql46 = "SELECT " + V46 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v47 <> " " then
+sql47 = "SELECT " + V47 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v48 <> " " then
+sql48 = "SELECT " + V48 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v49 <> " " then
+sql49 = "SELECT " + V49 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+if v50 <> " " then
+sql50 = "SELECT " + V50 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = " + xkdnr + ""
+endif
+
+goto weiter
+
+sql01 = "SELECT " + V01 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = xkdnr"
+sql02 = "SELECT " + V02 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = xkdnr"
+sql03 = "SELECT " + V03 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = xkdnr"
+sql04 = "SELECT " + V04 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = xkdnr"
+sql05 = "SELECT " + V05 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = xkdnr"
+sql06 = "SELECT " + V06 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = xkdnr"
+sql07 = "SELECT " + V07 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = xkdnr"
+sql08 = "SELECT " + V08 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = xkdnr"
+sql09 = "SELECT " + V09 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = xkdnr"
+sql10 = "SELECT " + V10 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = xkdnr"
+sql11 = "SELECT " + V11 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = xkdnr"
+sql12 = "SELECT " + V12 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = xkdnr"
+sql13 = "SELECT " + V13 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = xkdnr"
+sql14 = "SELECT " + V14 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = xkdnr"
+sql15 = "SELECT " + V15 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = xkdnr"
+sql16 = "SELECT " + V16 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = xkdnr"
+sql17 = "SELECT " + V17 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = xkdnr"
+sql18 = "SELECT " + V18 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = xkdnr"
+sql19 = "SELECT " + V19 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = xkdnr"
+sql20 = "SELECT " + V20 + " FROM grkdsges INNER JOIN grehnasql ON kdkdnr = ehnKdNr where kdkdnr = xkdnr"
+
+rem sql1 = "" + xk1msg + ""
+
+weiter:
+
+if v01 <> " " then
+rc = EzSQLQuery(sql01, x01, ErrMsg)
+endif
+if v02 <> " " then
+rc = EzSQLQuery(sql02, x02, ErrMsg)
+endif
+if v03 <> " " then
+rc = EzSQLQuery(sql03, x03, ErrMsg)
+endif
+if v04 <> " " then
+rc = EzSQLQuery(sql04, x04, ErrMsg)
+endif
+if v05 <> " " then
+rc = EzSQLQuery(sql05, x05, ErrMsg)
+endif
+if v06 <> " " then
+rc = EzSQLQuery(sql06, x06, ErrMsg)
+endif
+if v07 <> " " then
+rc = EzSQLQuery(sql07, x07, ErrMsg)
+endif
+if v08 <> " " then
+rc = EzSQLQuery(sql08, x08, ErrMsg)
+endif
+if v09 <> " " then
+rc = EzSQLQuery(sql09, x09, ErrMsg)
+endif
+if v10 <> " " then
+rc = EzSQLQuery(sql10, x10, ErrMsg)
+endif
+if v11 <> " " then
+rc = EzSQLQuery(sql11, x11, ErrMsg)
+endif
+if v12 <> " " then
+rc = EzSQLQuery(sql12, x12, ErrMsg)
+endif
+if v13 <> " " then
+rc = EzSQLQuery(sql13, x13, ErrMsg)
+endif
+if v14 <> " " then
+rc = EzSQLQuery(sql14, x14, ErrMsg)
+endif
+if v15 <> " " then
+rc = EzSQLQuery(sql15, x15, ErrMsg)
+endif
+if v16 <> " " then
+rc = EzSQLQuery(sql16, x16, ErrMsg)
+endif
+if v17 <> " " then
+rc = EzSQLQuery(sql17, x17, ErrMsg)
+endif
+if v18 <> " " then
+rc = EzSQLQuery(sql18, x18, ErrMsg)
+endif
+if v19 <> " " then
+rc = EzSQLQuery(sql19, x19, ErrMsg)
+endif
+if v20 <> " " then
+rc = EzSQLQuery(sql20, x20, ErrMsg)
+endif
+if v21 <> " " then
+rc = EzSQLQuery(sql21, x21, ErrMsg)
+endif
+if v22 <> " " then
+rc = EzSQLQuery(sql22, x22, ErrMsg)
+endif
+if v23 <> " " then
+rc = EzSQLQuery(sql23, x23, ErrMsg)
+endif
+if v24 <> " " then
+rc = EzSQLQuery(sql24, x24, ErrMsg)
+endif
+if v25 <> " " then
+rc = EzSQLQuery(sql25, x25, ErrMsg)
+endif
+if v26 <> " " then
+rc = EzSQLQuery(sql26, x26, ErrMsg)
+endif
+if v27 <> " " then
+rc = EzSQLQuery(sql27, x27, ErrMsg)
+endif
+if v28 <> " " then
+rc = EzSQLQuery(sql28, x28, ErrMsg)
+endif
+if v29 <> " " then
+rc = EzSQLQuery(sql29, x29, ErrMsg)
+endif
+if v30 <> " " then
+rc = EzSQLQuery(sql30, x30, ErrMsg)
+endif
+if v31 <> " " then
+rc = EzSQLQuery(sql31, x31, ErrMsg)
+endif
+if v32 <> " " then
+rc = EzSQLQuery(sql32, x32, ErrMsg)
+endif
+if v33 <> " " then
+rc = EzSQLQuery(sql33, x33, ErrMsg)
+endif
+if v34 <> " " then
+rc = EzSQLQuery(sql34, x34, ErrMsg)
+endif
+if v35 <> " " then
+rc = EzSQLQuery(sql35, x15, ErrMsg)
+endif
+if v36 <> " " then
+rc = EzSQLQuery(sql36, x16, ErrMsg)
+endif
+if v37 <> " " then
+rc = EzSQLQuery(sql37, x37, ErrMsg)
+endif
+if v38 <> " " then
+rc = EzSQLQuery(sql38, x38, ErrMsg)
+endif
+if v39 <> " " then
+rc = EzSQLQuery(sql39, x39, ErrMsg)
+endif
+if v40 <> " " then
+rc = EzSQLQuery(sql40, x40, ErrMsg)
+endif
+if v41 <> " " then
+rc = EzSQLQuery(sql41, x41, ErrMsg)
+endif
+if v42 <> " " then
+rc = EzSQLQuery(sql42, x42, ErrMsg)
+endif
+if v43 <> " " then
+rc = EzSQLQuery(sql43, x43, ErrMsg)
+endif
+if v44 <> " " then
+rc = EzSQLQuery(sql44, x44, ErrMsg)
+endif
+if v45 <> " " then
+rc = EzSQLQuery(sql45, x45, ErrMsg)
+endif
+if v46 <> " " then
+rc = EzSQLQuery(sql46, x46, ErrMsg)
+endif
+if v47 <> " " then
+rc = EzSQLQuery(sql47, x47, ErrMsg)
+endif
+if v48 <> " " then
+rc = EzSQLQuery(sql48, x48, ErrMsg)
+endif
+if v49 <> " " then
+rc = EzSQLQuery(sql49, x49, ErrMsg)
+endif
+if v50 <> " " then
+rc = EzSQLQuery(sql50, x50, ErrMsg)
+endif
+
+
+rem rc = EzSQLQuery(sql11, x11, ErrMsg)
+rem rc = EzSQLQuery(sql12, x12, ErrMsg)
+rem rc = EzSQLQuery(sql13, x13, ErrMsg)
+rem rc = EzSQLQuery(sql14, x14, ErrMsg)
+rem rc = EzSQLQuery(sql15, x15, ErrMsg)
+rem rc = EzSQLQuery(sql16, x16, ErrMsg)
+rem rc = EzSQLQuery(sql17, x17, ErrMsg)
+rem rc = EzSQLQuery(sql18, x18, ErrMsg)
+rem rc = EzSQLQuery(sql19, x19, ErrMsg)
+rem rc = EzSQLQuery(sql20, x20, ErrMsg)
+
+rem rc = EzSQLQuery(sql1, ErrMsg)
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", x01)
+ddepoke( ddehandle, "Z" + str(j) +"S2", x02)
+ddepoke( ddehandle, "Z" + str(j) +"S3", x03)
+ddepoke( ddehandle, "Z" + str(j) +"S4", x04)
+ddepoke( ddehandle, "Z" + str(j) +"S5", x05)
+ddepoke( ddehandle, "Z" + str(j) +"S6", x06)
+ddepoke( ddehandle, "Z" + str(j) +"S7", x07)
+ddepoke( ddehandle, "Z" + str(j) +"S8", x08)
+ddepoke( ddehandle, "Z" + str(j) +"S9", x09)
+ddepoke( ddehandle, "Z" + str(j) +"S10", x10)
+ddepoke( ddehandle, "Z" + str(j) +"S11", x11)
+ddepoke( ddehandle, "Z" + str(j) +"S12", x12)
+ddepoke( ddehandle, "Z" + str(j) +"S13", x13)
+ddepoke( ddehandle, "Z" + str(j) +"S14", x14)
+ddepoke( ddehandle, "Z" + str(j) +"S15", x15)
+ddepoke( ddehandle, "Z" + str(j) +"S16", x16)
+ddepoke( ddehandle, "Z" + str(j) +"S17", x17)
+ddepoke( ddehandle, "Z" + str(j) +"S18", x18)
+ddepoke( ddehandle, "Z" + str(j) +"S19", x09)
+ddepoke( ddehandle, "Z" + str(j) +"S20", x20)
+ddepoke( ddehandle, "Z" + str(j) +"S21", x21)
+ddepoke( ddehandle, "Z" + str(j) +"S22", x22)
+ddepoke( ddehandle, "Z" + str(j) +"S23", x23)
+ddepoke( ddehandle, "Z" + str(j) +"S24", x24)
+ddepoke( ddehandle, "Z" + str(j) +"S25", x25)
+ddepoke( ddehandle, "Z" + str(j) +"S26", x26)
+ddepoke( ddehandle, "Z" + str(j) +"S27", x27)
+ddepoke( ddehandle, "Z" + str(j) +"S28", x28)
+ddepoke( ddehandle, "Z" + str(j) +"S29", x29)
+ddepoke( ddehandle, "Z" + str(j) +"S30", x30)
+ddepoke( ddehandle, "Z" + str(j) +"S31", x31)
+ddepoke( ddehandle, "Z" + str(j) +"S32", x32)
+ddepoke( ddehandle, "Z" + str(j) +"S33", x33)
+ddepoke( ddehandle, "Z" + str(j) +"S34", x34)
+ddepoke( ddehandle, "Z" + str(j) +"S35", x35)
+ddepoke( ddehandle, "Z" + str(j) +"S36", x36)
+ddepoke( ddehandle, "Z" + str(j) +"S37", x37)
+ddepoke( ddehandle, "Z" + str(j) +"S38", x38)
+ddepoke( ddehandle, "Z" + str(j) +"S39", x39)
+ddepoke( ddehandle, "Z" + str(j) +"S40", x40)
+ddepoke( ddehandle, "Z" + str(j) +"S41", x41)
+ddepoke( ddehandle, "Z" + str(j) +"S42", x42)
+ddepoke( ddehandle, "Z" + str(j) +"S43", x43)
+ddepoke( ddehandle, "Z" + str(j) +"S44", x44)
+ddepoke( ddehandle, "Z" + str(j) +"S45", x45)
+ddepoke( ddehandle, "Z" + str(j) +"S46", x46)
+ddepoke( ddehandle, "Z" + str(j) +"S47", x47)
+ddepoke( ddehandle, "Z" + str(j) +"S48", x48)
+ddepoke( ddehandle, "Z" + str(j) +"S49", x49)
+ddepoke( ddehandle, "Z" + str(j) +"S50", x50)
+
+
+rem ddepoke( ddehandle, "Z" + str(j) +"S1", psnr)
+
+j=j+1
+
+if i < 9 then
+i=i+1
+goto nochmal
+endif
+
+if xkdnr <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

@@ -1,0 +1,68 @@
+﻿global filiale as string
+DIM ddehandle, i, j, msg, rc as integer
+dim x1fil, x1obj, x1vdz, x1onam, x1folg, x1vtxt, x1vmng, x1vbtr, x1budat, x1buzeit, xisbnr, datei, pfad_datei, ErrMsg as string 
+dim source as string
+
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Rechnungspruefung.xlsx"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xlsx"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1",  "Fil")
+ddepoke( ddehandle, "Z1S2",  "ObjNr")
+ddepoke( ddehandle, "Z1S3",  "VDT Nr")
+ddepoke( ddehandle, "Z1S4",  "Bezeichnung")
+ddepoke( ddehandle, "Z1S5",  "Folge")
+ddepoke( ddehandle, "Z1S6",  "Vorgang")
+ddepoke( ddehandle, "Z1S7",  "Menge")
+ddepoke( ddehandle, "Z1S8",  "Betag")
+ddepoke( ddehandle, "Z1S9",  "Datum")
+ddepoke( ddehandle, "Z1S10", "Zeit")
+ddepoke( ddehandle, "Z1S11", "IS Bnr")
+
+nochmal:
+
+HostFieldGetLineData("s1fil",    i, x1fil)
+HostFieldGetLineData("s1obj",    i, x1obj)
+HostFieldGetLineData("s1vdz",    i, x1vdz)
+HostFieldGetLineData("s1onam",   i, x1onam)
+HostFieldGetLineData("s1folg",   i, x1folg)
+HostFieldGetLineData("s1vtxt",   i, x1vtxt)
+HostFieldGetLineData("s1vmng",   i, x1vmng)
+HostFieldGetLineData("s1vbtr",   i, x1vbtr)
+HostFieldGetLineData("s1budat",  i, x1budat)
+HostFieldGetLineData("s1buzeit", i, x1buzeit)
+HostFieldGetLineData("isbnr",    i, xisbnr)
+
+ddepoke( ddehandle, "Z" + str(j) +"S1",  x1fil)
+ddepoke( ddehandle, "Z" + str(j) +"S2",  x1obj)
+ddepoke( ddehandle, "Z" + str(j) +"S3",  x1vdz)
+ddepoke( ddehandle, "Z" + str(j) +"S4",  x1onam)
+ddepoke( ddehandle, "Z" + str(j) +"S5",  x1folg)
+ddepoke( ddehandle, "Z" + str(j) +"S6",  x1vtxt)
+ddepoke( ddehandle, "Z" + str(j) +"S7",  x1vmng)
+ddepoke( ddehandle, "Z" + str(j) +"S8",  x1vbtr)
+ddepoke( ddehandle, "Z" + str(j) +"S9",  x1budat)
+ddepoke( ddehandle, "Z" + str(j) +"S10", x1buzeit)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xisbnr)
+
+j=j+1 
+
+if i < 21 then
+i=i+1
+goto nochmal
+endif
+ 
+if x1obj <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

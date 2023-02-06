@@ -1,0 +1,44 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim x1nr1, x1name1, x1nr2, x1name2, errmsg, datei, pfad_datei, source as string 
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Zuordnung Kunden-Nr.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "Nummer 1")
+ddepoke( ddehandle, "Z1S2", "Name 1")
+ddepoke( ddehandle, "Z1S3", "Nummer 2")
+ddepoke( ddehandle, "Z1S4", "Name 2")
+
+nochmal:
+
+HostFieldGetLineData("s1nr1", i, x1nr1)
+HostFieldGetLineData("s1name1", i, x1name1)
+HostFieldGetLineData("s1nr2", i, x1nr2)
+HostFieldGetLineData("s1name2", i, x1name2)
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", x1nr1)
+ddepoke( ddehandle, "Z" + str(j) +"S2", x1name1)
+ddepoke( ddehandle, "Z" + str(j) +"S3", x1nr2)
+ddepoke( ddehandle, "Z" + str(j) +"S4", x1name2)
+
+j=j+1
+
+if i < 14 then
+i=i+1
+goto nochmal
+endif
+ 
+if x1nr1 <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

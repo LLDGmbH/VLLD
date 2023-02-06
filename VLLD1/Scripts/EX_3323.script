@@ -1,0 +1,63 @@
+﻿DIM ddehandle, i, j, msg as integer
+dim xobnr, xenr, xobbz, xstck, xbetrag, xdatume, xdatuma, datei, y0, y1, y2, pfad_datei, source as string 
+i = 0
+j=2
+y1 = " "
+y2 = "_"
+
+
+datei = "Rechnungspositionen" + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "Obnr")
+ddepoke( ddehandle, "Z1S2", "Folge")
+ddepoke( ddehandle, "Z1S3", "Titel")
+ddepoke( ddehandle, "Z1S4", "Expl.")
+ddepoke( ddehandle, "Z1S5", "Betrag")
+ddepoke( ddehandle, "Z1S6", "Datum EVT")
+ddepoke( ddehandle, "Z1S7", "Datum Aufruf")
+
+
+
+nochmal:
+
+HostFieldGetLineData("s2obj", i, xobnr)
+HostFieldGetLineData("s2folge", i, xenr)
+HostFieldGetLineData("s2oname", i, xobbz)
+HostFieldGetLineData("s2vmenge", i, xstck)
+HostFieldGetLineData("s2vbetrag", i, xbetrag)
+HostFieldGetLineData("auslief", i, xdatume)
+HostFieldGetLineData("aufruf", i, xdatuma)
+
+
+
+
+if (xobnr <> "")  then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xobnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xenr)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xobbz)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xstck)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xbetrag)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xdatume)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xdatuma)
+
+
+j=j+1
+endif
+
+if i < 16 then
+i=i+1
+goto nochmal
+endif
+ 
+if xobnr <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

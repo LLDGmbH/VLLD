@@ -1,0 +1,71 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xobjnr, xtitel, xfolge, xdatv, xdatb, xkdnr, xname, xmenge, xdat, xtim, xuser, datei, pfad_datei, ErrMsg, source as string 
+
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+
+HostFieldGetData("atobj",xobjnr)
+HostFieldGetData("atname",xtitel)
+HostFieldGetData("folge_6",xfolge)
+HostFieldGetData("rdat_von",xdatv)
+HostFieldGetData("rdat_bis",xdatb)
+
+datei = "Erfasste_Remission_" + xobjnr + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "Objekt")
+ddepoke( ddehandle, "Z1S2", xobjnr)
+ddepoke( ddehandle, "Z1S3", xfolge)
+ddepoke( ddehandle, "Z1S4", xtitel)
+ddepoke( ddehandle, "Z1S5", xdatv)
+ddepoke( ddehandle, "Z1S6", "bis")
+ddepoke( ddehandle, "Z1S7", xdatb)
+
+ddepoke( ddehandle, "Z2S1", "Kdnr")
+ddepoke( ddehandle, "Z2S2", "Name")
+ddepoke( ddehandle, "Z2S3", "Expl.")
+ddepoke( ddehandle, "Z2S4", "Datum")
+ddepoke( ddehandle, "Z2S5", "Zeit")
+ddepoke( ddehandle, "Z2S6", "Benutzer")
+
+nochmal:
+
+HostFieldGetLineData("rrkdnr", i, xkdnr)
+HostFieldGetLineData("kdname", i, xname)
+HostFieldGetLineData("rrmeng", i, xmenge)
+HostFieldGetLineData("rscvdat_6", i, xdat)
+HostFieldGetLineData("rrzeit", i, xtim)
+HostFieldGetLineData("rrjob", i, xuser)
+
+
+if xkdnr <> "" then
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", xkdnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xname)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xmenge)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xdat)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xtim)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xuser)
+
+
+j=j+1 
+endif
+
+if i < 16 then
+i=i+1
+goto nochmal
+endif
+ 
+if xkdnr <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

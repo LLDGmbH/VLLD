@@ -1,0 +1,71 @@
+﻿DIM ddehandle, i, j, msg as integer
+dim xobnr, xenr, xobbz, xstck, xdatum, xkr, xort1,xort2, xvlg, xverlag, xende, datei, y0, y1, y2, pfad_datei, source as string 
+i = 0
+j=2
+y1 = " "
+y2 = "_"
+
+datei = "Lagerbestand_Remission" + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "Obnr")
+ddepoke( ddehandle, "Z1S2", "Folge")
+ddepoke( ddehandle, "Z1S3", "Titel")
+ddepoke( ddehandle, "Z1S4", "Expl.")
+ddepoke( ddehandle, "Z1S5", "Datum")
+ddepoke( ddehandle, "Z1S6", "KR")
+ddepoke( ddehandle, "Z1S7", "Platz")
+ddepoke( ddehandle, "Z1S9", "Verlag")
+
+
+
+nochmal:
+
+HostFieldGetLineData("raobnr", i, xobnr)
+HostFieldGetLineData("raenr", i, xenr)
+HostFieldGetLineData("raobbz", i, xobbz)
+HostFieldGetLineData("rastck", i, xstck)
+HostFieldGetLineData("radatum", i, xdatum)
+HostFieldGetLineData("rakr", i, xkr)
+HostFieldGetLineData("raort1", i, xort1)
+HostFieldGetLineData("ort2", i, xort2)
+HostFieldGetLineData("ravlg", i, xvlg)
+HostFieldGetLineData("raverlag", i, xverlag)
+
+
+
+if (xobnr <> "")  then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xobnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xenr)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xobbz)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xstck)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xdatum)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xkr)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xort1)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xort1)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xvlg)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xverlag)
+
+
+j=j+1
+endif
+
+if i < 16 then
+i=i+1
+goto nochmal
+endif
+ 
+HostFieldGetData("ende",xende)
+
+
+if xende <> "Ende" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

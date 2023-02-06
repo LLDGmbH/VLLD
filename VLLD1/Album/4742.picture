@@ -1,0 +1,1075 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="SRC5/EV20DS(SCC+KEY02)" library="SRC5" member_name="EV20DS">
+    <size cx="80" cy="24"/>
+    <action key="f1" caption="F1" attention_key="false"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <action key="roll_up" caption="ROLL_UP" attention_key="false"/>
+    <action key="roll_down" caption="ROLL_DOWN" attention_key="false"/>
+    <action key="help" caption="HELP" attention_key="false"/>
+    <field field_type="screen_part" name="SCC">
+      <area>
+        <position/>
+        <size cx="80" cy="22"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="KEY02" overlay="true">
+      <area>
+        <position y="23"/>
+        <size cx="80" cy="1"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="PGMTIT" short_name="PGMTIT" data_type="alphanumeric" display_length="31" data_length="31">
+          <area>
+            <position x="25"/>
+            <size cx="31" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="63"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="72"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="USER" short_name="USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="1" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="Korrektur/Übernahme der EVT-Daten" display_length="33" data_length="33">
+          <area>
+            <position x="24" y="1"/>
+            <size cx="33" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="JOB" short_name="JOB" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="63" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="PGMNAM" short_name="PGMNAM" data_type="alphanumeric" display_length="6" data_length="6">
+          <area>
+            <position x="74" y="1"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="fixed_text" value="Verlag:" display_length="7" data_length="7">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZVNR" short_name="ZZVNR" data_type="zoned_decimal" display_length="4" data_length="4">
+          <area>
+            <position x="9" y="3"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZVNAM" short_name="ZZVNAM" data_type="alphanumeric" display_length="25" data_length="25">
+          <area>
+            <position x="14" y="3"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="Objekt:" display_length="7" data_length="7">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZOBJ" short_name="ZZOBJ" data_type="zoned_decimal" display_length="5" data_length="5">
+          <area>
+            <position x="9" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZONAM" short_name="ZZONAM" data_type="alphanumeric" display_length="21" data_length="21">
+          <area>
+            <position x="15" y="4"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="Soll-Wochentag:" display_length="15" data_length="15">
+          <area>
+            <position x="3" y="5"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="ZZSOLLWT" short_name="ZZSOLLWT" data_type="alphanumeric" display_length="1" data_length="1" underline="true">
+          <area>
+            <position x="19" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Rhythmus:" display_length="9" data_length="9">
+          <area>
+            <position x="25" y="5"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZERRH" short_name="ZZERRH" data_type="zoned_decimal" display_length="1" data_length="1">
+          <area>
+            <position x="35" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZERRHS" short_name="ZZERRHS" data_type="alphanumeric" display_length="23" data_length="23">
+          <area>
+            <position x="37" y="5"/>
+            <size cx="23" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="  Folge    WT-alt WT-neu RemiWo   Art Dispo-Datum   EVT-Datum  L=Löschen      " display_length="78" data_length="78" underline="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="78" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="ZZFOLG" short_name="ZZFOLG" data_type="zoned_decimal" display_length="9" data_length="8">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZWTA" short_name="ZZWTA" data_type="alphanumeric" display_length="1" data_length="1">
+          <area>
+            <position x="14" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZWTN" short_name="ZZWTN" data_type="alphanumeric" display_length="1" data_length="1">
+          <area>
+            <position x="21" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZREMW" short_name="ZZREMW" data_type="zoned_decimal" display_length="7" data_length="6">
+          <area>
+            <position x="26" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZART" short_name="ZZART" data_type="alphanumeric" display_length="3" data_length="3">
+          <area>
+            <position x="35" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="ZZDIS" short_name="ZZDIS" data_type="zoned_decimal" display_length="10" data_length="8" underline="true">
+          <area>
+            <position x="40" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="ZZEVT" short_name="ZZEVT" data_type="zoned_decimal" display_length="10" data_length="8" underline="true">
+          <area>
+            <position x="52" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true">
+          <area>
+            <position x="64" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZTAG" short_name="ZZTAG" data_type="alphanumeric" display_length="10" data_length="10" non_display="conditional">
+          <area>
+            <position x="66" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZFOLG" short_name="ZZFOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZWTA" short_name="ZZWTA" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="14" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZWTN" short_name="ZZWTN" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="21" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZREMW" short_name="ZZREMW" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="26" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZART" short_name="ZZART" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="35" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="ZZDIS" short_name="ZZDIS" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="40" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="ZZEVT" short_name="ZZEVT" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="52" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true">
+          <area>
+            <position x="64" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZTAG" short_name="ZZTAG" data_type="alphanumeric" display_length="10" data_length="10" non_display="conditional" conditional="true">
+          <area>
+            <position x="66" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZFOLG" short_name="ZZFOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZWTA" short_name="ZZWTA" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="14" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZWTN" short_name="ZZWTN" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="21" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZREMW" short_name="ZZREMW" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="26" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZART" short_name="ZZART" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="35" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="ZZDIS" short_name="ZZDIS" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="40" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="ZZEVT" short_name="ZZEVT" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="52" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true">
+          <area>
+            <position x="64" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZTAG" short_name="ZZTAG" data_type="alphanumeric" display_length="10" data_length="10" non_display="conditional" conditional="true">
+          <area>
+            <position x="66" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZFOLG" short_name="ZZFOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZWTA" short_name="ZZWTA" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="14" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZWTN" short_name="ZZWTN" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="21" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZREMW" short_name="ZZREMW" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="26" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZART" short_name="ZZART" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="35" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="ZZDIS" short_name="ZZDIS" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="40" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="ZZEVT" short_name="ZZEVT" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="52" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true">
+          <area>
+            <position x="64" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZTAG" short_name="ZZTAG" data_type="alphanumeric" display_length="10" data_length="10" non_display="conditional" conditional="true">
+          <area>
+            <position x="66" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZFOLG" short_name="ZZFOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZWTA" short_name="ZZWTA" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="14" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZWTN" short_name="ZZWTN" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="21" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZREMW" short_name="ZZREMW" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="26" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZART" short_name="ZZART" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="35" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="ZZDIS" short_name="ZZDIS" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="40" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="ZZEVT" short_name="ZZEVT" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="52" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true">
+          <area>
+            <position x="64" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZTAG" short_name="ZZTAG" data_type="alphanumeric" display_length="10" data_length="10" non_display="conditional" conditional="true">
+          <area>
+            <position x="66" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZFOLG" short_name="ZZFOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZWTA" short_name="ZZWTA" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="14" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZWTN" short_name="ZZWTN" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="21" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZREMW" short_name="ZZREMW" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="26" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZART" short_name="ZZART" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="35" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="ZZDIS" short_name="ZZDIS" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="40" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="ZZEVT" short_name="ZZEVT" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="52" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true">
+          <area>
+            <position x="64" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZTAG" short_name="ZZTAG" data_type="alphanumeric" display_length="10" data_length="10" non_display="conditional" conditional="true">
+          <area>
+            <position x="66" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZFOLG" short_name="ZZFOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZWTA" short_name="ZZWTA" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="14" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZWTN" short_name="ZZWTN" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="21" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZREMW" short_name="ZZREMW" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="26" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZART" short_name="ZZART" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="35" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="ZZDIS" short_name="ZZDIS" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="40" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="ZZEVT" short_name="ZZEVT" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="52" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true">
+          <area>
+            <position x="64" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZTAG" short_name="ZZTAG" data_type="alphanumeric" display_length="10" data_length="10" non_display="conditional" conditional="true">
+          <area>
+            <position x="66" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="ZZFOLG" short_name="ZZFOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZWTA" short_name="ZZWTA" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="14" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZWTN" short_name="ZZWTN" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="21" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZREMW" short_name="ZZREMW" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="26" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZART" short_name="ZZART" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="35" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="ZZDIS" short_name="ZZDIS" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="40" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="ZZEVT" short_name="ZZEVT" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="52" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true">
+          <area>
+            <position x="64" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZTAG" short_name="ZZTAG" data_type="alphanumeric" display_length="10" data_length="10" non_display="conditional" conditional="true">
+          <area>
+            <position x="66" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZFOLG" short_name="ZZFOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZWTA" short_name="ZZWTA" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="14" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZWTN" short_name="ZZWTN" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="21" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZREMW" short_name="ZZREMW" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="26" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZART" short_name="ZZART" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="35" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="ZZDIS" short_name="ZZDIS" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="40" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="ZZEVT" short_name="ZZEVT" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="52" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true">
+          <area>
+            <position x="64" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZTAG" short_name="ZZTAG" data_type="alphanumeric" display_length="10" data_length="10" non_display="conditional" conditional="true">
+          <area>
+            <position x="66" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZFOLG" short_name="ZZFOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZWTA" short_name="ZZWTA" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="14" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZWTN" short_name="ZZWTN" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="21" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZREMW" short_name="ZZREMW" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="26" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZART" short_name="ZZART" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="35" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="ZZDIS" short_name="ZZDIS" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="40" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="ZZEVT" short_name="ZZEVT" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="52" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true">
+          <area>
+            <position x="64" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZTAG" short_name="ZZTAG" data_type="alphanumeric" display_length="10" data_length="10" non_display="conditional" conditional="true">
+          <area>
+            <position x="66" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZFOLG" short_name="ZZFOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZWTA" short_name="ZZWTA" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="14" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZWTN" short_name="ZZWTN" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="21" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZREMW" short_name="ZZREMW" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="26" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZART" short_name="ZZART" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="35" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="ZZDIS" short_name="ZZDIS" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="40" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="ZZEVT" short_name="ZZEVT" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="52" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true">
+          <area>
+            <position x="64" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZTAG" short_name="ZZTAG" data_type="alphanumeric" display_length="10" data_length="10" non_display="conditional" conditional="true">
+          <area>
+            <position x="66" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZFOLG" short_name="ZZFOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZWTA" short_name="ZZWTA" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="14" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZWTN" short_name="ZZWTN" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="21" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZREMW" short_name="ZZREMW" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="26" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZART" short_name="ZZART" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="35" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="ZZDIS" short_name="ZZDIS" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="40" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="ZZEVT" short_name="ZZEVT" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="52" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true">
+          <area>
+            <position x="64" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZTAG" short_name="ZZTAG" data_type="alphanumeric" display_length="10" data_length="10" non_display="conditional" conditional="true">
+          <area>
+            <position x="66" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZFOLG" short_name="ZZFOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZWTA" short_name="ZZWTA" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="14" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZWTN" short_name="ZZWTN" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="21" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZREMW" short_name="ZZREMW" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="26" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZART" short_name="ZZART" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="35" y="19"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="ZZDIS" short_name="ZZDIS" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="40" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="ZZEVT" short_name="ZZEVT" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="52" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true">
+          <area>
+            <position x="64" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZTAG" short_name="ZZTAG" data_type="alphanumeric" display_length="10" data_length="10" non_display="conditional" conditional="true">
+          <area>
+            <position x="66" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZFOLG" short_name="ZZFOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZWTA" short_name="ZZWTA" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="14" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZWTN" short_name="ZZWTN" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="21" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZREMW" short_name="ZZREMW" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="26" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZART" short_name="ZZART" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="35" y="20"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="ZZDIS" short_name="ZZDIS" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="40" y="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="ZZEVT" short_name="ZZEVT" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="52" y="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true">
+          <area>
+            <position x="64" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZTAG" short_name="ZZTAG" data_type="alphanumeric" display_length="10" data_length="10" non_display="conditional" conditional="true">
+          <area>
+            <position x="66" y="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="ZZFOLG" short_name="ZZFOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="1" y="21"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZWTA" short_name="ZZWTA" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="14" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ZZWTN" short_name="ZZWTN" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="21" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZREMW" short_name="ZZREMW" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="26" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZART" short_name="ZZART" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="35" y="21"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="ZZDIS" short_name="ZZDIS" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="40" y="21"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="ZZEVT" short_name="ZZEVT" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="52" y="21"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSWAHL" short_name="AUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true">
+          <area>
+            <position x="64" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ZZTAG" short_name="ZZTAG" data_type="alphanumeric" display_length="10" data_length="10" non_display="conditional" conditional="true">
+          <area>
+            <position x="66" y="21"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="F3 = Ende ; F9 = Übernahme" display_length="26" data_length="26">
+      <area>
+        <position x="1" y="23"/>
+        <size cx="26" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

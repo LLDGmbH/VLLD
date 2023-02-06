@@ -1,0 +1,18 @@
+﻿dim text, ErrorMsg,sqlstmd as String
+dim rc,obnr as Integer
+dim yyobj as string
+dim con_table as integer
+global dsp_570 as integer
+
+
+PanelFieldGetData("f1obj1",yyOBJ, con_table)
+
+sqlstmd = "SELECT wffol8, digits(wffol6) from grwfl0 where (wffil = 0 or wffil = 1) and wfobj = " + yyobj + " order by wffol8 desc"
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+
+rc = EzSQLQuery(sqlstmd, text, ErrorMsg)
+
+PanelFieldSetProp ("f1fol1", 5, text) 
+
+PanelUpdateEnable(2)

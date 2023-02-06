@@ -1,0 +1,66 @@
+﻿global filiale as string
+DIM ddehandle, i, j, msg, sql_handle_stmt, rc as integer
+dim xkdnr, xname, xstr, xplz, xort, xtele, xaufd, xuv, xub, sql1, xresult, datei, pfad_datei, ErrMsg, source as string 
+
+sql_handle_stmt = 3
+i = 0
+j=2
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Kundenliste nach Selektion" + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "KdNr")
+ddepoke( ddehandle, "Z1S2", "Name")
+ddepoke( ddehandle, "Z1S3", "Strasse")
+ddepoke( ddehandle, "Z1S4", "PLZ")
+ddepoke( ddehandle, "Z1S5", "Ort")
+ddepoke( ddehandle, "Z1S6", "Telefon")
+ddepoke( ddehandle, "Z1S7", "Aufnahme")
+
+nochmal:
+
+HostFieldGetLineData("F1KDNR", i, xkdnr)
+HostFieldGetLineData("F1NAME", i, xname)
+HostFieldGetLineData("F1STR", i, xstr)
+HostFieldGetLineData("F1PLZ", i, xplz)
+HostFieldGetLineData("F1ORT", i, xort)
+HostFieldGetLineData("F1TELE", i, xtele)
+HostFieldGetLineData("F1AUFD", i, xaufd)
+
+
+rem sql1 = "SELECT kduv from grkdsall where kdkdnr = " + xkdnr + ""
+
+rem rc = EzSQLQuery(sql1, xub, xub, ErrMsg)
+rem rc = SQLGetErrorAsString(sql_handle_stmt, xresult, 1, xuv)
+rem rc = SQLGetErrorAsString(sql_handle_stmt, xresult, 2, xub)
+
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", xkdnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xname)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xstr)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xplz)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xort)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xtele)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xaufd)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xuv)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xub)
+
+j=j+1 
+
+if i < 23 then
+i=i+1
+goto nochmal
+endif
+ 
+if xkdnr <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

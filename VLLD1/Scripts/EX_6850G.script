@@ -1,0 +1,103 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xobnr, xtitel, xehcd, xehug, xbneu, xrgkz, xkr, xjj, xff, xmwn, xvnr, xerrh, xarg, xbnr, xdla, xleh1, xbestand, xnetto, xgbz, sql1, xleh2, sql2, xleh3, sql3, errmsg, datei, pfad_datei as string 
+dim source as string
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+HostFieldGetData("arg",xarg)
+
+datei = "Titel_" + xarg + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z2S1", "EHCD")
+ddepoke( ddehandle, "Z2S2", "EHUG")
+ddepoke( ddehandle, "Z2S3", "Objektnummer")
+ddepoke( ddehandle, "Z2S4", "Titel")
+ddepoke( ddehandle, "Z2S5", "Preis")
+ddepoke( ddehandle, "Z2S6", "Mwst")
+ddepoke( ddehandle, "Z2S7", "Verlag")
+ddepoke( ddehandle, "Z2S8", "Reg.")
+ddepoke( ddehandle, "Z2S9", "KR")
+ddepoke( ddehandle, "Z2S10", "Eryth.")
+ddepoke( ddehandle, "Z2S11", "akt. Folge")
+ddepoke( ddehandle, "Z2S12", "akt. Datum")
+ddepoke( ddehandle, "Z2S13", "akt. Verteilerbreite Fil.1")
+ddepoke( ddehandle, "Z2S14", "akt. Verteilerbreite Fil.2")
+ddepoke( ddehandle, "Z2S15", "akt. Verteilerbreite Fil.3")
+ddepoke( ddehandle, "Z2S16", "akt. Bestand")
+ddepoke( ddehandle, "Z2S17", "akt. Netto")
+ddepoke( ddehandle, "Z2S18", "GBZ")
+
+nochmal:
+
+HostFieldGetLineData("s1ehcd", i, xehcd)
+HostFieldGetLineData("s1ehug", i, xehug)
+HostFieldGetLineData("s1obj", i, xobnr)
+HostFieldGetLineData("s1name", i, xtitel)
+HostFieldGetLineData("s1bneu", i, xbneu)
+HostFieldGetLineData("s1mwn", i, xmwn)
+HostFieldGetLineData("s1vnr", i, xvnr)
+HostFieldGetLineData("s1rgkz", i, xrgkz)
+HostFieldGetLineData("s1krkz", i, xkr)
+HostFieldGetLineData("s1errh", i, xerrh)
+rem HostFieldGetLineData("s1bnr", i, xbnr)
+HostFieldGetLineData("jj", i, xjj)
+HostFieldGetLineData("ff", i, xff)
+HostFieldGetLineData("s1dla", i, xdla)
+HostFieldGetLineData("bestand", i, xbestand)
+HostFieldGetLineData("netto", i, xnetto)
+HostFieldGetLineData("gbz", i, xgbz)
+xbnr = xjj + xff
+
+
+
+sql1 = "SELECT atleh FROM dipf01/grartp where atobj = " + xobnr + ""
+sql2 = "SELECT atleh FROM dipf02/grartp where atobj = " + xobnr + ""
+sql3 = "SELECT atleh FROM dipf03/grartp where atobj = " + xobnr + ""
+
+rc = EzSQLQuery(sql1, xleh1, ErrMsg)
+rc = EzSQLQuery(sql2, xleh2, ErrMsg)
+rc = EzSQLQuery(sql3, xleh3, ErrMsg)
+
+if (xobnr <> "")  then
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", xehcd)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xehug)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xobnr)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xtitel)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xbneu)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xmwn)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xvnr)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xrgkz)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xkr)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xerrh)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xbnr)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xdla)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xleh1)
+ddepoke( ddehandle, "Z" + str(j) +"S14", xleh2)
+ddepoke( ddehandle, "Z" + str(j) +"S15", xleh3)
+ddepoke( ddehandle, "Z" + str(j) +"S16", xbestand)
+ddepoke( ddehandle, "Z" + str(j) +"S17", xnetto)
+ddepoke( ddehandle, "Z" + str(j) +"S18", xgbz)
+
+
+j=j+1
+endif
+
+if i < 18 then
+i=i+1
+goto nochmal
+endif
+ 
+if xtitel <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

@@ -1,0 +1,67 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xsagsnr, xsbkdnr, xsbknam, xsbedat, xsbezeit, xsbapid, xsbvdat, xsbvrnr, xsbkdat, xsbkrnr, xsbanzg, xsbsum, errmsg, datei, pfad_datei, source as string 
+i = 0
+j=2
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Abgerechnete Gutscheine.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "Kunden-Nr")
+ddepoke( ddehandle, "Z1S2", "Name")
+ddepoke( ddehandle, "Z1S3", "Erf.Datum")
+ddepoke( ddehandle, "Z1S4", "Erf.Zeit")
+ddepoke( ddehandle, "Z1S5", "App-Id")
+ddepoke( ddehandle, "Z1S6", "Abrechnung")
+ddepoke( ddehandle, "Z1S7", "Verlag")
+ddepoke( ddehandle, "Z1S8", "Abrechnung")
+ddepoke( ddehandle, "Z1S9", "Kunde")
+ddepoke( ddehandle, "Z1S10", "Menge")
+ddepoke( ddehandle, "Z1S11", "Summe")
+
+nochmal:
+
+HostFieldGetLineData("sbkdnr",  i, xsbkdnr)
+HostFieldGetLineData("sbknam",  i, xsbknam)
+HostFieldGetLineData("sbedat",  i, xsbedat)
+HostFieldGetLineData("sbezeit", i, xsbezeit)
+HostFieldGetLineData("sbapid",  i, xsbapid)
+HostFieldGetLineData("sbvdat",  i, xsbvdat)
+HostFieldGetLineData("sbvrnr",  i, xsbvrnr)
+HostFieldGetLineData("sbkdat",  i, xsbkdat)
+HostFieldGetLineData("sbkrnr",  i, xsbkrnr)
+HostFieldGetLineData("sbanzg",  i, xsbanzg)
+HostFieldGetLineData("sbsum",   i, xsbsum)
+
+
+ddepoke( ddehandle, "Z" + str(j) +  "S1", xsbkdnr)
+ddepoke( ddehandle, "Z" + str(j) +  "S2", xsbknam)
+ddepoke( ddehandle, "Z" + str(j) +  "S3", xsbedat)
+ddepoke( ddehandle, "Z" + str(j) +  "S4", xsbezeit)
+ddepoke( ddehandle, "Z" + str(j) +  "S5", xsbapid)
+ddepoke( ddehandle, "Z" + str(j) +  "S6", xsbvdat)
+ddepoke( ddehandle, "Z" + str(j) +  "S7", xsbvrnr)
+ddepoke( ddehandle, "Z" + str(j) +  "S8", xsbkdat)
+ddepoke( ddehandle, "Z" + str(j) +  "S9", xsbkrnr)
+ddepoke( ddehandle, "Z" + str(j) + "S10", xsbanzg)
+ddepoke( ddehandle, "Z" + str(j) + "S11", xsbsum)
+
+j=j+1
+
+if i < 21 then
+i=i+1
+goto nochmal
+endif
+ 
+if xsbkdnr <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

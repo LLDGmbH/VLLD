@@ -1,0 +1,51 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xKdNr, xKNam, xMeng, xTour, xFF, xarg, errmsg, datei, pfad_datei as string 
+dim source as string
+i = 0
+j=2
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+HostFieldGetData("arg",xarg)
+
+datei = "AusgelieferteObjekte_Kunden_" + xarg + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1" , "KundenNr")
+ddepoke( ddehandle, "Z1S2" , "Name")
+ddepoke( ddehandle, "Z1S3" , "Menge")
+ddepoke( ddehandle, "Z1S4" , "Tour")
+ddepoke( ddehandle, "Z1S5" , "FF")
+
+nochmal:
+
+HostFieldGetLineData("s2KdNr" , i, xKdNr)
+HostFieldGetLineData("s2KNam" , i, xKNam)
+HostFieldGetLineData("s2Meng" , i, xMeng)
+HostFieldGetLineData("s2Tour" , i, xTour)
+HostFieldGetLineData("s2FF" , i, xFF)
+
+if (xKNam <> "")  then
+   ddepoke( ddehandle, "Z" + str(j) +"S1" , xKdNr)
+   ddepoke( ddehandle, "Z" + str(j) +"S2" , xKNam)
+   ddepoke( ddehandle, "Z" + str(j) +"S3" , xMeng)
+   ddepoke( ddehandle, "Z" + str(j) +"S4" , xTour)
+   ddepoke( ddehandle, "Z" + str(j) +"S5" , xFF)
+   j=j+1
+endif
+
+if (i < 18) then
+   i=i+1
+   goto nochmal
+endif
+ 
+if (xKNam <> "") then
+   i=0
+   HostScreenSendKey("Page Down")
+   goto nochmal
+endif

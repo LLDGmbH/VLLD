@@ -1,0 +1,69 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xxobj, xxanam, xxehcd, xxehug, xxfolg, xxmeng, xxvkpr, xxehpr, xxmwst, xxbldat, xxtext, errmsg, datei, pfad_datei, source as string 
+i = 1
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Umsatz_Absatz ein EH.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "ObjNr")
+ddepoke( ddehandle, "Z1S2", "Name")
+ddepoke( ddehandle, "Z1S3", "EHCD")
+ddepoke( ddehandle, "Z1S4", "EHUg")
+ddepoke( ddehandle, "Z1S5", "Folge")
+ddepoke( ddehandle, "Z1S6", "Menge")
+ddepoke( ddehandle, "Z1S7", "VK Preis")
+ddepoke( ddehandle, "Z1S8", "EH Preis")
+ddepoke( ddehandle, "Z1S9", "MwSt")
+ddepoke( ddehandle, "Z1S10", "Datum")
+ddepoke( ddehandle, "Z1S11", "Text")
+
+
+nochmal:
+
+HostFieldGetLineData("tfobj", i, xxobj)
+HostFieldGetLineData("tfanam", i, xxanam)
+HostFieldGetLineData("tfehcd", i, xxehcd)
+HostFieldGetLineData("tfehug", i, xxehug)
+HostFieldGetLineData("tffolg", i, xxfolg)
+HostFieldGetLineData("tfmeng", i, xxmeng)
+HostFieldGetLineData("tfvkpr", i, xxvkpr)
+HostFieldGetLineData("tfehpr", i, xxehpr)
+HostFieldGetLineData("tfmwst", i, xxmwst)
+HostFieldGetLineData("tfbldat", i, xxbldat)
+HostFieldGetLineData("tftext", i, xxtext)
+
+
+
+if (xxobj <> "") then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xxobj)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xxanam)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xxehcd)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xxehug)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xxfolg)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xxmeng)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xxvkpr)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xxehpr)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xxmwst)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xxbldat)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xxtext)
+j=j+1
+endif
+
+if (i < 22) and (xxobj <> " ") then
+i=i+1
+goto nochmal
+endif
+ 
+if xxobj <> "" then
+i=1
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

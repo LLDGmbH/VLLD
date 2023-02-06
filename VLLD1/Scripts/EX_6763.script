@@ -1,0 +1,59 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim errmsg, datei, pfad_datei, source as string 
+dim x1lfdnr, x1kdnr, x1knam, x1abs, x1ums, x1absg, x1umsg as string
+
+i = 0
+j = 2
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Top Kunden nach EHASTRA Code.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "LfdNr")
+ddepoke( ddehandle, "Z1S2", "Kd-Nr")
+ddepoke( ddehandle, "Z1S3", "Name")
+ddepoke( ddehandle, "Z1S4", "Absatz Wo")
+ddepoke( ddehandle, "Z1S5", "Umsatz Wo")
+ddepoke( ddehandle, "Z1S6", "Absatz Ges")
+ddepoke( ddehandle, "Z1S7", "Umsatz Ges")
+
+
+nochmal:
+
+HostFieldGetLineData("s1lfdnr", i, x1lfdnr)
+HostFieldGetLineData("s1kdnr", i, x1kdnr)
+HostFieldGetLineData("s1knam", i, x1knam)
+HostFieldGetLineData("s1abs", i, x1abs)
+HostFieldGetLineData("s1ums", i, x1ums)
+HostFieldGetLineData("s1absg", i, x1absg)
+HostFieldGetLineData("s1umsg", i, x1umsg)
+
+if (x1kdnr <> "") then
+ddepoke( ddehandle, "Z" + str(j) +"S1", x1lfdnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", x1kdnr)
+ddepoke( ddehandle, "Z" + str(j) +"S3", x1knam)
+ddepoke( ddehandle, "Z" + str(j) +"S4", x1abs)
+ddepoke( ddehandle, "Z" + str(j) +"S5", x1ums)
+ddepoke( ddehandle, "Z" + str(j) +"S6", x1absg)
+ddepoke( ddehandle, "Z" + str(j) +"S7", x1umsg)
+
+j=j+1
+endif
+
+if i < 16 then
+i=i+1
+goto nochmal
+endif
+ 
+if x1kdnr <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

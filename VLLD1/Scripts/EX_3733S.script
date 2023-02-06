@@ -1,0 +1,72 @@
+﻿DIM ddehandle, i, j, h, msg, rc as integer
+dim xda, xtyp, xobj, xtitel, xfolg, xdep, xmeng, xmeng2, xende, datei, pfad_datei, ErrMsg, source as string 
+i = 0
+j=2
+
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+HostFieldGetData("datum_sav",xda)
+HostFieldGetData("ltyp",xtyp)
+
+
+datei = "Lfs-Vorschlag.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDehandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "defil")
+ddepoke( ddehandle, "Z1S2", "deobj")
+ddepoke( ddehandle, "Z1S4", "defolg")
+ddepoke( ddehandle, "Z1S5", "dedep")
+ddepoke( ddehandle, "Z1S6", "lbez")
+ddepoke( ddehandle, "Z1S7", "dsp")
+ddepoke( ddehandle, "Z1S8", "demeng")
+
+
+nochmal:
+
+HostFieldGetLineData("objn", i, xobj)
+HostFieldGetLineData("titel", i, xtitel)
+HostFieldGetLineData("folge_6", i, xfolg)
+HostFieldGetLineData("lbez", i, xmeng)
+HostFieldGetLineData("exdisp", i, xmeng2)
+
+
+if xobj <> "" then
+ddepoke( ddehandle, "Z" + str(j) +"S1", "2")
+ddepoke( ddehandle, "Z" + str(j) +"S2", xobj)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xtitel)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xfolg)
+ddepoke( ddehandle, "Z" + str(j) +"S5", "2")
+ddepoke( ddehandle, "Z" + str(j) +"S6", xmeng)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xmeng2)
+ddepoke( ddehandle, "Z" + str(j) +"S10", "Allgäu")
+j=j+1 
+ddepoke( ddehandle, "Z" + str(j) +"S1", "2")
+ddepoke( ddehandle, "Z" + str(j) +"S2", xobj)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xtitel)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xfolg)
+ddepoke( ddehandle, "Z" + str(j) +"S5", "4")
+ddepoke( ddehandle, "Z" + str(j) +"S6", xmeng)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xmeng2)
+ddepoke( ddehandle, "Z" + str(j) +"S10", "Ulm")
+endif
+
+if i < 18 then
+i=i+1
+j=j+2 
+goto nochmal
+endif
+
+HostFieldGetData("ende", xende) 
+if xende <> "Ende" then
+i=0
+j=j+1 
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

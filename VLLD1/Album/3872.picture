@@ -1,0 +1,1199 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="OSNA_SRC/VX39DS(SAC)" library="OSNA_SRC" member_name="VX39DS">
+    <size cx="80" cy="24"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="f21" caption="F21" attention_key="false"/>
+    <action key="f22" caption="F22" attention_key="false"/>
+    <action key="f23" caption="F23" attention_key="false"/>
+    <action key="f24" caption="F24" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <action key="roll_up" caption="ROLL_UP" attention_key="false"/>
+    <action key="roll_down" caption="ROLL_DOWN" attention_key="false"/>
+    <field field_type="screen_part" name="SAC">
+      <area>
+        <position/>
+        <size cx="80" cy="22"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Nicht zu sendende Kunden" display_length="24" data_length="24">
+          <area>
+            <position x="28"/>
+            <size cx="24" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="63"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="72"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="JOB" short_name="JOB" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="1" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="*SYSNAME" short_name="*SYSNAME" data_type="alphanumeric" display_length="8" data_length="8">
+          <area>
+            <position x="12" y="1"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="USER" short_name="USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="63" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="PGMNAM" short_name="PGMNAM" data_type="alphanumeric" display_length="6" data_length="6">
+          <area>
+            <position x="74" y="1"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="fixed_text" value="A Fil VDZNr Objekt               Folge      Termin     S Sende-Dat. Verl  ISPC " display_length="79" data_length="79" underline="true">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="79" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="input" name="YYAUSWAHL" short_name="YYAUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYFIL" short_name="YYFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="4" y="4"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYVDZ" short_name="YYVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="7" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYONAM" short_name="YYONAM" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="13" y="4"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYFOLG" short_name="YYFOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="34" y="4"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYTERM" short_name="YYTERM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="45" y="4"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYSTAT" short_name="YYSTAT" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYGESD" short_name="YYGESD" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="58" y="4"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYVNR" short_name="YYVNR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="69" y="4"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYISPC" short_name="YYISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="75" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="input" name="YYAUSWAHL" short_name="YYAUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYFIL" short_name="YYFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="4" y="5"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYVDZ" short_name="YYVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="7" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYONAM" short_name="YYONAM" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="13" y="5"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYFOLG" short_name="YYFOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="34" y="5"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYTERM" short_name="YYTERM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="45" y="5"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYSTAT" short_name="YYSTAT" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYGESD" short_name="YYGESD" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="58" y="5"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYVNR" short_name="YYVNR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="69" y="5"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYISPC" short_name="YYISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="75" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="input" name="YYAUSWAHL" short_name="YYAUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYFIL" short_name="YYFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="4" y="6"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYVDZ" short_name="YYVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="7" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYONAM" short_name="YYONAM" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="13" y="6"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYFOLG" short_name="YYFOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="34" y="6"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYTERM" short_name="YYTERM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="45" y="6"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYSTAT" short_name="YYSTAT" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYGESD" short_name="YYGESD" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="58" y="6"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYVNR" short_name="YYVNR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="69" y="6"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYISPC" short_name="YYISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="75" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="input" name="YYAUSWAHL" short_name="YYAUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYFIL" short_name="YYFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="4" y="7"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYVDZ" short_name="YYVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="7" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYONAM" short_name="YYONAM" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="13" y="7"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYFOLG" short_name="YYFOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="34" y="7"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYTERM" short_name="YYTERM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="45" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYSTAT" short_name="YYSTAT" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYGESD" short_name="YYGESD" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="58" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYVNR" short_name="YYVNR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="69" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYISPC" short_name="YYISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="75" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="input" name="YYAUSWAHL" short_name="YYAUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYFIL" short_name="YYFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="4" y="8"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYVDZ" short_name="YYVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="7" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYONAM" short_name="YYONAM" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="13" y="8"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYFOLG" short_name="YYFOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="34" y="8"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYTERM" short_name="YYTERM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="45" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYSTAT" short_name="YYSTAT" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYGESD" short_name="YYGESD" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="58" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYVNR" short_name="YYVNR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="69" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYISPC" short_name="YYISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="75" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="input" name="YYAUSWAHL" short_name="YYAUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYFIL" short_name="YYFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="4" y="9"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYVDZ" short_name="YYVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="7" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYONAM" short_name="YYONAM" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="13" y="9"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYFOLG" short_name="YYFOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="34" y="9"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYTERM" short_name="YYTERM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="45" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYSTAT" short_name="YYSTAT" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYGESD" short_name="YYGESD" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="58" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYVNR" short_name="YYVNR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="69" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYISPC" short_name="YYISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="75" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="input" name="YYAUSWAHL" short_name="YYAUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYFIL" short_name="YYFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="4" y="10"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYVDZ" short_name="YYVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="7" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYONAM" short_name="YYONAM" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="13" y="10"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYFOLG" short_name="YYFOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="34" y="10"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYTERM" short_name="YYTERM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="45" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYSTAT" short_name="YYSTAT" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYGESD" short_name="YYGESD" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="58" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYVNR" short_name="YYVNR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="69" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYISPC" short_name="YYISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="75" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="input" name="YYAUSWAHL" short_name="YYAUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYFIL" short_name="YYFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="4" y="11"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYVDZ" short_name="YYVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="7" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYONAM" short_name="YYONAM" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="13" y="11"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYFOLG" short_name="YYFOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="34" y="11"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYTERM" short_name="YYTERM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="45" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYSTAT" short_name="YYSTAT" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYGESD" short_name="YYGESD" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="58" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYVNR" short_name="YYVNR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="69" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYISPC" short_name="YYISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="75" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="input" name="YYAUSWAHL" short_name="YYAUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYFIL" short_name="YYFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="4" y="12"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYVDZ" short_name="YYVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="7" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYONAM" short_name="YYONAM" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="13" y="12"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYFOLG" short_name="YYFOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="34" y="12"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYTERM" short_name="YYTERM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="45" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYSTAT" short_name="YYSTAT" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYGESD" short_name="YYGESD" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="58" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYVNR" short_name="YYVNR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="69" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYISPC" short_name="YYISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="75" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="input" name="YYAUSWAHL" short_name="YYAUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYFIL" short_name="YYFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="4" y="13"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYVDZ" short_name="YYVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="7" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYONAM" short_name="YYONAM" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="13" y="13"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYFOLG" short_name="YYFOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="34" y="13"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYTERM" short_name="YYTERM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="45" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYSTAT" short_name="YYSTAT" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYGESD" short_name="YYGESD" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="58" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYVNR" short_name="YYVNR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="69" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYISPC" short_name="YYISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="75" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="input" name="YYAUSWAHL" short_name="YYAUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYFIL" short_name="YYFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="4" y="14"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYVDZ" short_name="YYVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="7" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYONAM" short_name="YYONAM" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="13" y="14"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYFOLG" short_name="YYFOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="34" y="14"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYTERM" short_name="YYTERM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="45" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYSTAT" short_name="YYSTAT" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYGESD" short_name="YYGESD" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="58" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYVNR" short_name="YYVNR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="69" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYISPC" short_name="YYISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="75" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="input" name="YYAUSWAHL" short_name="YYAUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYFIL" short_name="YYFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="4" y="15"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYVDZ" short_name="YYVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="7" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYONAM" short_name="YYONAM" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="13" y="15"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYFOLG" short_name="YYFOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="34" y="15"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYTERM" short_name="YYTERM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="45" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYSTAT" short_name="YYSTAT" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYGESD" short_name="YYGESD" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="58" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYVNR" short_name="YYVNR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="69" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYISPC" short_name="YYISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="75" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="input" name="YYAUSWAHL" short_name="YYAUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYFIL" short_name="YYFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="4" y="16"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYVDZ" short_name="YYVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="7" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYONAM" short_name="YYONAM" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="13" y="16"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYFOLG" short_name="YYFOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="34" y="16"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYTERM" short_name="YYTERM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="45" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYSTAT" short_name="YYSTAT" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYGESD" short_name="YYGESD" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="58" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYVNR" short_name="YYVNR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="69" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYISPC" short_name="YYISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="75" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="input" name="YYAUSWAHL" short_name="YYAUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYFIL" short_name="YYFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="4" y="17"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYVDZ" short_name="YYVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="7" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYONAM" short_name="YYONAM" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="13" y="17"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYFOLG" short_name="YYFOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="34" y="17"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYTERM" short_name="YYTERM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="45" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYSTAT" short_name="YYSTAT" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYGESD" short_name="YYGESD" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="58" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYVNR" short_name="YYVNR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="69" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYISPC" short_name="YYISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="75" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="input" name="YYAUSWAHL" short_name="YYAUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYFIL" short_name="YYFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="4" y="18"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYVDZ" short_name="YYVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="7" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYONAM" short_name="YYONAM" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="13" y="18"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYFOLG" short_name="YYFOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="34" y="18"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYTERM" short_name="YYTERM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="45" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYSTAT" short_name="YYSTAT" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYGESD" short_name="YYGESD" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="58" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYVNR" short_name="YYVNR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="69" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYISPC" short_name="YYISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="75" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="input" name="YYAUSWAHL" short_name="YYAUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYFIL" short_name="YYFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="4" y="19"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYVDZ" short_name="YYVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="7" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYONAM" short_name="YYONAM" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="13" y="19"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYFOLG" short_name="YYFOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="34" y="19"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYTERM" short_name="YYTERM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="45" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYSTAT" short_name="YYSTAT" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYGESD" short_name="YYGESD" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="58" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYVNR" short_name="YYVNR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="69" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYISPC" short_name="YYISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="75" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="input" name="YYAUSWAHL" short_name="YYAUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYFIL" short_name="YYFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="4" y="20"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYVDZ" short_name="YYVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="7" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYONAM" short_name="YYONAM" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="13" y="20"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYFOLG" short_name="YYFOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="34" y="20"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYTERM" short_name="YYTERM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="45" y="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYSTAT" short_name="YYSTAT" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYGESD" short_name="YYGESD" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="58" y="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYVNR" short_name="YYVNR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="69" y="20"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYISPC" short_name="YYISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="75" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="input" name="YYAUSWAHL" short_name="YYAUSWAHL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYFIL" short_name="YYFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="4" y="21"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYVDZ" short_name="YYVDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="7" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYONAM" short_name="YYONAM" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="13" y="21"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYFOLG" short_name="YYFOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="34" y="21"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYTERM" short_name="YYTERM" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="45" y="21"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYSTAT" short_name="YYSTAT" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="56" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYGESD" short_name="YYGESD" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="58" y="21"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYVNR" short_name="YYVNR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="69" y="21"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="YYISPC" short_name="YYISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="75" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+      </field>
+    </field>
+  </screen>
+</header>

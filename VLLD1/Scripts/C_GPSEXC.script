@@ -1,0 +1,53 @@
+﻿dim text(), ErrorMsg,sqlstmd as String
+dim con_table as integer
+DIM ddehandle, i, j, x, msg, rc as integer
+dim xkdnr, xname, errmsg, datei, pfad_datei, source as string 
+
+j=3
+x=1
+
+HostFieldGetData("kdnr",xkdnr)
+HostFieldGetData("kdname",xname)
+
+
+sqlstmd = "SELECT gpstext  FROM gpsdat where gpskdnr = " + xkdnr 
+
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+
+rc = EzSQLQuery(sqlstmd, text(), ErrorMsg)
+
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+endif
+
+
+datei = "Anlieferzeiten_" + xkdnr + ".xls"
+pfad_datei = @"@&LWV@"  + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "Kdnr")
+ddepoke( ddehandle, "Z1S2", xkdnr)
+ddepoke( ddehandle, "Z2S1", "Name")
+ddepoke( ddehandle, "Z2S2", xname)
+ddepoke( ddehandle, "Z3S1", "Zeit")
+
+nochmal:
+
+
+if (text(x) <> "")  then
+ddepoke( ddehandle, "Z" + str(j) +"S2", text(x))
+
+j=j+1
+x=x+1
+
+goto nochmal
+endif

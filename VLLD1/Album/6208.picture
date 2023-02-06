@@ -1,0 +1,1033 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="SRC5_LZ/VB01DS(SFCTL+FUSS)" library="SRC5_LZ" member_name="VB01DS">
+    <size cx="80" cy="24"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <field field_type="screen_part" name="SFCTL" overlay="true">
+      <area>
+        <position/>
+        <size cx="80" cy="23"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="FUSS" overlay="true">
+      <area>
+        <position y="23"/>
+        <size cx="80" cy="1"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="*USER" short_name="*USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="72"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="Verlagsremission (B-Remi)" display_length="25" data_length="25" underline="true">
+          <area>
+            <position x="27" y="1"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="im Überblick " display_length="13" data_length="13" underline="true">
+          <area>
+            <position x="32" y="2"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value=" A  Obj.  Folge    Titel                  Menge   Belegnr  Pos   Vlg   B.Datum " display_length="79" data_length="79" underline="true">
+          <area>
+            <position y="4"/>
+            <size cx="79" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="OB" short_name="OB" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="FOLGE" short_name="FOLGE" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="10" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANAME" short_name="ANAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="19" y="5"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANZ" short_name="ANZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="42" y="5"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BNR" short_name="BNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="50" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="POS" short_name="POS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="59" y="5"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VN" short_name="VN" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="65" y="5"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BDAT" short_name="BDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="71" y="5"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="OB" short_name="OB" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="FOLGE" short_name="FOLGE" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="10" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANAME" short_name="ANAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="19" y="6"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANZ" short_name="ANZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="42" y="6"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BNR" short_name="BNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="50" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="POS" short_name="POS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="59" y="6"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VN" short_name="VN" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="65" y="6"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BDAT" short_name="BDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="71" y="6"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="OB" short_name="OB" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="FOLGE" short_name="FOLGE" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="10" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANAME" short_name="ANAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="19" y="7"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANZ" short_name="ANZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="42" y="7"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BNR" short_name="BNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="50" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="POS" short_name="POS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="59" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VN" short_name="VN" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="65" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BDAT" short_name="BDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="71" y="7"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="OB" short_name="OB" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="FOLGE" short_name="FOLGE" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="10" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANAME" short_name="ANAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="19" y="8"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANZ" short_name="ANZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="42" y="8"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BNR" short_name="BNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="50" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="POS" short_name="POS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="59" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VN" short_name="VN" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="65" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BDAT" short_name="BDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="71" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="OB" short_name="OB" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="FOLGE" short_name="FOLGE" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="10" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANAME" short_name="ANAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="19" y="9"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANZ" short_name="ANZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="42" y="9"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BNR" short_name="BNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="50" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="POS" short_name="POS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="59" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VN" short_name="VN" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="65" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BDAT" short_name="BDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="71" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="OB" short_name="OB" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="FOLGE" short_name="FOLGE" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="10" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANAME" short_name="ANAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="19" y="10"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANZ" short_name="ANZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="42" y="10"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BNR" short_name="BNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="50" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="POS" short_name="POS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="59" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VN" short_name="VN" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="65" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BDAT" short_name="BDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="71" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="OB" short_name="OB" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="FOLGE" short_name="FOLGE" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="10" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANAME" short_name="ANAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="19" y="11"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANZ" short_name="ANZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="42" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BNR" short_name="BNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="50" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="POS" short_name="POS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="59" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VN" short_name="VN" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="65" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BDAT" short_name="BDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="71" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="OB" short_name="OB" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="FOLGE" short_name="FOLGE" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="10" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANAME" short_name="ANAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="19" y="12"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANZ" short_name="ANZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="42" y="12"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BNR" short_name="BNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="50" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="POS" short_name="POS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="59" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VN" short_name="VN" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="65" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BDAT" short_name="BDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="71" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="OB" short_name="OB" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="FOLGE" short_name="FOLGE" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="10" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANAME" short_name="ANAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="19" y="13"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANZ" short_name="ANZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="42" y="13"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BNR" short_name="BNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="50" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="POS" short_name="POS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="59" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VN" short_name="VN" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="65" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BDAT" short_name="BDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="71" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="OB" short_name="OB" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="FOLGE" short_name="FOLGE" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="10" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANAME" short_name="ANAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="19" y="14"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANZ" short_name="ANZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="42" y="14"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BNR" short_name="BNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="50" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="POS" short_name="POS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="59" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VN" short_name="VN" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="65" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BDAT" short_name="BDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="71" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="OB" short_name="OB" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="FOLGE" short_name="FOLGE" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="10" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANAME" short_name="ANAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="19" y="15"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANZ" short_name="ANZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="42" y="15"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BNR" short_name="BNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="50" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="POS" short_name="POS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="59" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VN" short_name="VN" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="65" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BDAT" short_name="BDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="71" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="OB" short_name="OB" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="FOLGE" short_name="FOLGE" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="10" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANAME" short_name="ANAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="19" y="16"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANZ" short_name="ANZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="42" y="16"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BNR" short_name="BNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="50" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="POS" short_name="POS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="59" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VN" short_name="VN" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="65" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BDAT" short_name="BDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="71" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="OB" short_name="OB" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="FOLGE" short_name="FOLGE" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="10" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANAME" short_name="ANAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="19" y="17"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANZ" short_name="ANZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="42" y="17"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BNR" short_name="BNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="50" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="POS" short_name="POS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="59" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VN" short_name="VN" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="65" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BDAT" short_name="BDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="71" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="OB" short_name="OB" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="FOLGE" short_name="FOLGE" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="10" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANAME" short_name="ANAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="19" y="18"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANZ" short_name="ANZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="42" y="18"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BNR" short_name="BNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="50" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="POS" short_name="POS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="59" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VN" short_name="VN" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="65" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BDAT" short_name="BDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="71" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="OB" short_name="OB" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="FOLGE" short_name="FOLGE" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="10" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANAME" short_name="ANAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="19" y="19"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANZ" short_name="ANZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="42" y="19"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BNR" short_name="BNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="50" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="POS" short_name="POS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="59" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VN" short_name="VN" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="65" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BDAT" short_name="BDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="71" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="OB" short_name="OB" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="FOLGE" short_name="FOLGE" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="10" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANAME" short_name="ANAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="19" y="20"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANZ" short_name="ANZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="42" y="20"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BNR" short_name="BNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="50" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="POS" short_name="POS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="59" y="20"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VN" short_name="VN" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="65" y="20"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BDAT" short_name="BDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="71" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="OB" short_name="OB" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="FOLGE" short_name="FOLGE" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="10" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANAME" short_name="ANAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="19" y="21"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ANZ" short_name="ANZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true">
+          <area>
+            <position x="42" y="21"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BNR" short_name="BNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="50" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="POS" short_name="POS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="59" y="21"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VN" short_name="VN" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="65" y="21"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BDAT" short_name="BDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="71" y="21"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_end_more" value="Weitere ... " display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="67" y="22"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+      <field field_type="subfile_end_bottom" value="Ende        " display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="67" y="22"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="Datenfreigabe = zurück; sonst Auswahl" display_length="37" data_length="37">
+      <area>
+        <position x="1" y="23"/>
+        <size cx="37" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="© PV-Leipzig / G.Gerstmann" display_length="26" data_length="26">
+      <area>
+        <position x="53" y="23"/>
+        <size cx="26" cy="1"/>
+      </area>
+      <color foreground="red"/>
+    </field>
+  </screen>
+</header>

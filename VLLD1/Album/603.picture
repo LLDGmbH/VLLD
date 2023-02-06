@@ -1,0 +1,1983 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="LLD_OBJ/GV30DS(SFC+KEY01)" library="LLD_OBJ" member_name="GV30DS">
+    <size cx="80" cy="24"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f17" caption="F17" attention_key="false"/>
+    <action key="f18" caption="F18" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <action key="roll_up" caption="ROLL_UP" attention_key="false"/>
+    <action key="roll_down" caption="ROLL_DOWN" attention_key="false"/>
+    <action key="help" caption="HELP" attention_key="false"/>
+    <field field_type="screen_part" name="SFC">
+      <area>
+        <position/>
+        <size cx="80" cy="22"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="KEY01" overlay="true">
+      <area>
+        <position y="23"/>
+        <size cx="80" cy="1"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="Kundenbezüge in einer Objektgruppe" display_length="34" data_length="34" underline="true">
+          <area>
+            <position x="25"/>
+            <size cx="34" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="63"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="72"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33">
+          <area>
+            <position x="1" y="1"/>
+            <size cx="33" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="EHTEXT" short_name="EHTEXT" data_type="alphanumeric" display_length="24" data_length="24">
+          <area>
+            <position x="37" y="1"/>
+            <size cx="24" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="nach Ums/Wo" display_length="11" data_length="11">
+          <area>
+            <position x="63" y="1"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="GV30" display_length="4" data_length="4">
+          <area>
+            <position x="75" y="1"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="fixed_text" value="Kdnr" display_length="4" data_length="4">
+          <area>
+            <position x="7" y="2"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="XXKDNR" short_name="XXKDNR" data_type="zoned_decimal" display_length="7" data_length="7" underline="true" high_intensity="true" position_cursor="true">
+          <area>
+            <position x="12" y="2"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="Name" display_length="4" data_length="4">
+          <area>
+            <position x="20" y="2"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="KDKNAM" short_name="KDKNAM" data_type="alphanumeric" display_length="6" data_length="6" underline="true" high_intensity="true">
+          <area>
+            <position x="26" y="2"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="Tag" display_length="3" data_length="3">
+          <area>
+            <position x="33" y="2"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="KDTAG" short_name="KDTAG" data_type="zoned_decimal" display_length="5" data_length="5" underline="true" high_intensity="true">
+          <area>
+            <position x="37" y="2"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="Nacht" display_length="5" data_length="5">
+          <area>
+            <position x="43" y="2"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="KDNACH" short_name="KDNACH" data_type="zoned_decimal" display_length="5" data_length="5" underline="true" high_intensity="true">
+          <area>
+            <position x="49" y="2"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="Stat" display_length="4" data_length="4">
+          <area>
+            <position x="55" y="2"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="KDSTAT" short_name="KDSTAT" data_type="zoned_decimal" display_length="7" data_length="7" underline="true" high_intensity="true">
+          <area>
+            <position x="60" y="2"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="OB-Code" display_length="7" data_length="7">
+          <area>
+            <position x="68" y="2"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="XXEHCD" short_name="XXEHCD" data_type="zoned_decimal" display_length="2" data_length="2" underline="true" high_intensity="true">
+          <area>
+            <position x="76" y="2"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="Objn Titel                  B1  R1  B2  R2  B3  R3  B4  R4   E UG  K neu K Gbz" display_length="78" data_length="78" underline="true">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="78" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="XXOBJ" short_name="XXOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNAME" short_name="SNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="6" y="4"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ1" short_name="BEZ1" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="28" y="4"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM1" short_name="AREM1" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="32" y="4"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ2" short_name="BEZ2" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="36" y="4"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM2" short_name="AREM2" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="40" y="4"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ3" short_name="BEZ3" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="44" y="4"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM3" short_name="AREM3" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="48" y="4"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ4" short_name="BEZ4" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="52" y="4"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM4" short_name="AREM4" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="56" y="4"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXERRH" short_name="XXERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="62" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXEHUG" short_name="XXEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="64" y="4"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="RXRGKZ" short_name="RXRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="68" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="NBEZ" short_name="NBEZ" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="70" y="4"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="REGKZN" short_name="REGKZN" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="74" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GBEZ" short_name="GBEZ" data_type="zoned_decimal" display_length="3" data_length="3" underline="conditional" conditional="true">
+          <area>
+            <position x="76" y="4"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="magenta" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXOBJ" short_name="XXOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNAME" short_name="SNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="6" y="5"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ1" short_name="BEZ1" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="28" y="5"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM1" short_name="AREM1" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="32" y="5"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ2" short_name="BEZ2" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="36" y="5"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM2" short_name="AREM2" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="40" y="5"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ3" short_name="BEZ3" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="44" y="5"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM3" short_name="AREM3" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="48" y="5"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ4" short_name="BEZ4" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="52" y="5"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM4" short_name="AREM4" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="56" y="5"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXERRH" short_name="XXERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="62" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXEHUG" short_name="XXEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="64" y="5"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="RXRGKZ" short_name="RXRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="68" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="NBEZ" short_name="NBEZ" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="70" y="5"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="REGKZN" short_name="REGKZN" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="74" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GBEZ" short_name="GBEZ" data_type="zoned_decimal" display_length="3" data_length="3" underline="conditional" conditional="true">
+          <area>
+            <position x="76" y="5"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="magenta" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXOBJ" short_name="XXOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNAME" short_name="SNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="6" y="6"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ1" short_name="BEZ1" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="28" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM1" short_name="AREM1" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="32" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ2" short_name="BEZ2" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="36" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM2" short_name="AREM2" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="40" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ3" short_name="BEZ3" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="44" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM3" short_name="AREM3" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="48" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ4" short_name="BEZ4" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="52" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM4" short_name="AREM4" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="56" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXERRH" short_name="XXERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="62" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXEHUG" short_name="XXEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="64" y="6"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="RXRGKZ" short_name="RXRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="68" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="NBEZ" short_name="NBEZ" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="70" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="REGKZN" short_name="REGKZN" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="74" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GBEZ" short_name="GBEZ" data_type="zoned_decimal" display_length="3" data_length="3" underline="conditional" conditional="true">
+          <area>
+            <position x="76" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="magenta" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXOBJ" short_name="XXOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNAME" short_name="SNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="6" y="7"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ1" short_name="BEZ1" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="28" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM1" short_name="AREM1" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="32" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ2" short_name="BEZ2" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="36" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM2" short_name="AREM2" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="40" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ3" short_name="BEZ3" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="44" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM3" short_name="AREM3" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="48" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ4" short_name="BEZ4" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="52" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM4" short_name="AREM4" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="56" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXERRH" short_name="XXERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="62" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXEHUG" short_name="XXEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="64" y="7"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="RXRGKZ" short_name="RXRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="68" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="NBEZ" short_name="NBEZ" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="70" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="REGKZN" short_name="REGKZN" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="74" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GBEZ" short_name="GBEZ" data_type="zoned_decimal" display_length="3" data_length="3" underline="conditional" conditional="true">
+          <area>
+            <position x="76" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="magenta" conditional="true"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="XXOBJ" short_name="XXOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNAME" short_name="SNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="6" y="8"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ1" short_name="BEZ1" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="28" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM1" short_name="AREM1" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="32" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ2" short_name="BEZ2" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="36" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM2" short_name="AREM2" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="40" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ3" short_name="BEZ3" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="44" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM3" short_name="AREM3" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="48" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ4" short_name="BEZ4" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="52" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM4" short_name="AREM4" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="56" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXERRH" short_name="XXERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="62" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXEHUG" short_name="XXEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="64" y="8"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="RXRGKZ" short_name="RXRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="68" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="NBEZ" short_name="NBEZ" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="70" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="REGKZN" short_name="REGKZN" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="74" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GBEZ" short_name="GBEZ" data_type="zoned_decimal" display_length="3" data_length="3" underline="conditional" conditional="true">
+          <area>
+            <position x="76" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="magenta" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXOBJ" short_name="XXOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNAME" short_name="SNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="6" y="9"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ1" short_name="BEZ1" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="28" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM1" short_name="AREM1" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="32" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ2" short_name="BEZ2" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="36" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM2" short_name="AREM2" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="40" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ3" short_name="BEZ3" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="44" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM3" short_name="AREM3" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="48" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ4" short_name="BEZ4" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="52" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM4" short_name="AREM4" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="56" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXERRH" short_name="XXERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="62" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXEHUG" short_name="XXEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="64" y="9"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="RXRGKZ" short_name="RXRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="68" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="NBEZ" short_name="NBEZ" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="70" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="REGKZN" short_name="REGKZN" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="74" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GBEZ" short_name="GBEZ" data_type="zoned_decimal" display_length="3" data_length="3" underline="conditional" conditional="true">
+          <area>
+            <position x="76" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="magenta" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXOBJ" short_name="XXOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNAME" short_name="SNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="6" y="10"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ1" short_name="BEZ1" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="28" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM1" short_name="AREM1" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="32" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ2" short_name="BEZ2" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="36" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM2" short_name="AREM2" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="40" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ3" short_name="BEZ3" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="44" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM3" short_name="AREM3" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="48" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ4" short_name="BEZ4" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="52" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM4" short_name="AREM4" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="56" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXERRH" short_name="XXERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="62" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXEHUG" short_name="XXEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="64" y="10"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="RXRGKZ" short_name="RXRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="68" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="NBEZ" short_name="NBEZ" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="70" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="REGKZN" short_name="REGKZN" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="74" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GBEZ" short_name="GBEZ" data_type="zoned_decimal" display_length="3" data_length="3" underline="conditional" conditional="true">
+          <area>
+            <position x="76" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="magenta" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXOBJ" short_name="XXOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNAME" short_name="SNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="6" y="11"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ1" short_name="BEZ1" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="28" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM1" short_name="AREM1" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="32" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ2" short_name="BEZ2" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="36" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM2" short_name="AREM2" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="40" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ3" short_name="BEZ3" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="44" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM3" short_name="AREM3" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="48" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ4" short_name="BEZ4" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="52" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM4" short_name="AREM4" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="56" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXERRH" short_name="XXERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="62" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXEHUG" short_name="XXEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="64" y="11"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="RXRGKZ" short_name="RXRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="68" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="NBEZ" short_name="NBEZ" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="70" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="REGKZN" short_name="REGKZN" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="74" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GBEZ" short_name="GBEZ" data_type="zoned_decimal" display_length="3" data_length="3" underline="conditional" conditional="true">
+          <area>
+            <position x="76" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="magenta" conditional="true"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="XXOBJ" short_name="XXOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNAME" short_name="SNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="6" y="12"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ1" short_name="BEZ1" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="28" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM1" short_name="AREM1" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="32" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ2" short_name="BEZ2" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="36" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM2" short_name="AREM2" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="40" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ3" short_name="BEZ3" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="44" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM3" short_name="AREM3" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="48" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ4" short_name="BEZ4" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="52" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM4" short_name="AREM4" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="56" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXERRH" short_name="XXERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="62" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXEHUG" short_name="XXEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="64" y="12"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="RXRGKZ" short_name="RXRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="68" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="NBEZ" short_name="NBEZ" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="70" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="REGKZN" short_name="REGKZN" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="74" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GBEZ" short_name="GBEZ" data_type="zoned_decimal" display_length="3" data_length="3" underline="conditional" conditional="true">
+          <area>
+            <position x="76" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="magenta" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXOBJ" short_name="XXOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNAME" short_name="SNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="6" y="13"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ1" short_name="BEZ1" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="28" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM1" short_name="AREM1" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="32" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ2" short_name="BEZ2" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="36" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM2" short_name="AREM2" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="40" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ3" short_name="BEZ3" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="44" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM3" short_name="AREM3" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="48" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ4" short_name="BEZ4" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="52" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM4" short_name="AREM4" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="56" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXERRH" short_name="XXERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="62" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXEHUG" short_name="XXEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="64" y="13"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="RXRGKZ" short_name="RXRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="68" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="NBEZ" short_name="NBEZ" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="70" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="REGKZN" short_name="REGKZN" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="74" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GBEZ" short_name="GBEZ" data_type="zoned_decimal" display_length="3" data_length="3" underline="conditional" conditional="true">
+          <area>
+            <position x="76" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="magenta" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXOBJ" short_name="XXOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNAME" short_name="SNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="6" y="14"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ1" short_name="BEZ1" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="28" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM1" short_name="AREM1" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="32" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ2" short_name="BEZ2" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="36" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM2" short_name="AREM2" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="40" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ3" short_name="BEZ3" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="44" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM3" short_name="AREM3" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="48" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ4" short_name="BEZ4" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="52" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM4" short_name="AREM4" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="56" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXERRH" short_name="XXERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="62" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXEHUG" short_name="XXEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="64" y="14"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="RXRGKZ" short_name="RXRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="68" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="NBEZ" short_name="NBEZ" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="70" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="REGKZN" short_name="REGKZN" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="74" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GBEZ" short_name="GBEZ" data_type="zoned_decimal" display_length="3" data_length="3" underline="conditional" conditional="true">
+          <area>
+            <position x="76" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="magenta" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXOBJ" short_name="XXOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNAME" short_name="SNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="6" y="15"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ1" short_name="BEZ1" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="28" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM1" short_name="AREM1" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="32" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ2" short_name="BEZ2" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="36" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM2" short_name="AREM2" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="40" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ3" short_name="BEZ3" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="44" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM3" short_name="AREM3" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="48" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ4" short_name="BEZ4" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="52" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM4" short_name="AREM4" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="56" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXERRH" short_name="XXERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="62" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXEHUG" short_name="XXEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="64" y="15"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="RXRGKZ" short_name="RXRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="68" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="NBEZ" short_name="NBEZ" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="70" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="REGKZN" short_name="REGKZN" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="74" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GBEZ" short_name="GBEZ" data_type="zoned_decimal" display_length="3" data_length="3" underline="conditional" conditional="true">
+          <area>
+            <position x="76" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="magenta" conditional="true"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="XXOBJ" short_name="XXOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNAME" short_name="SNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="6" y="16"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ1" short_name="BEZ1" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="28" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM1" short_name="AREM1" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="32" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ2" short_name="BEZ2" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="36" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM2" short_name="AREM2" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="40" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ3" short_name="BEZ3" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="44" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM3" short_name="AREM3" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="48" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ4" short_name="BEZ4" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="52" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM4" short_name="AREM4" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="56" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXERRH" short_name="XXERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="62" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXEHUG" short_name="XXEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="64" y="16"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="RXRGKZ" short_name="RXRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="68" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="NBEZ" short_name="NBEZ" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="70" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="REGKZN" short_name="REGKZN" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="74" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GBEZ" short_name="GBEZ" data_type="zoned_decimal" display_length="3" data_length="3" underline="conditional" conditional="true">
+          <area>
+            <position x="76" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="magenta" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXOBJ" short_name="XXOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNAME" short_name="SNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="6" y="17"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ1" short_name="BEZ1" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="28" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM1" short_name="AREM1" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="32" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ2" short_name="BEZ2" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="36" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM2" short_name="AREM2" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="40" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ3" short_name="BEZ3" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="44" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM3" short_name="AREM3" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="48" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ4" short_name="BEZ4" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="52" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM4" short_name="AREM4" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="56" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXERRH" short_name="XXERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="62" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXEHUG" short_name="XXEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="64" y="17"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="RXRGKZ" short_name="RXRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="68" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="NBEZ" short_name="NBEZ" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="70" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="REGKZN" short_name="REGKZN" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="74" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GBEZ" short_name="GBEZ" data_type="zoned_decimal" display_length="3" data_length="3" underline="conditional" conditional="true">
+          <area>
+            <position x="76" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="magenta" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXOBJ" short_name="XXOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNAME" short_name="SNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="6" y="18"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ1" short_name="BEZ1" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="28" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM1" short_name="AREM1" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="32" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ2" short_name="BEZ2" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="36" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM2" short_name="AREM2" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="40" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ3" short_name="BEZ3" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="44" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM3" short_name="AREM3" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="48" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ4" short_name="BEZ4" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="52" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM4" short_name="AREM4" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="56" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXERRH" short_name="XXERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="62" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXEHUG" short_name="XXEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="64" y="18"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="RXRGKZ" short_name="RXRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="68" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="NBEZ" short_name="NBEZ" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="70" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="REGKZN" short_name="REGKZN" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="74" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GBEZ" short_name="GBEZ" data_type="zoned_decimal" display_length="3" data_length="3" underline="conditional" conditional="true">
+          <area>
+            <position x="76" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="magenta" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXOBJ" short_name="XXOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNAME" short_name="SNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="6" y="19"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ1" short_name="BEZ1" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="28" y="19"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM1" short_name="AREM1" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="32" y="19"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ2" short_name="BEZ2" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="36" y="19"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM2" short_name="AREM2" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="40" y="19"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ3" short_name="BEZ3" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="44" y="19"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM3" short_name="AREM3" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="48" y="19"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ4" short_name="BEZ4" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="52" y="19"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM4" short_name="AREM4" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="56" y="19"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXERRH" short_name="XXERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="62" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXEHUG" short_name="XXEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="64" y="19"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="RXRGKZ" short_name="RXRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="68" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="NBEZ" short_name="NBEZ" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="70" y="19"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="REGKZN" short_name="REGKZN" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="74" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GBEZ" short_name="GBEZ" data_type="zoned_decimal" display_length="3" data_length="3" underline="conditional" conditional="true">
+          <area>
+            <position x="76" y="19"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="magenta" conditional="true"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="XXOBJ" short_name="XXOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNAME" short_name="SNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="6" y="20"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ1" short_name="BEZ1" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="28" y="20"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM1" short_name="AREM1" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="32" y="20"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ2" short_name="BEZ2" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="36" y="20"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM2" short_name="AREM2" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="40" y="20"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ3" short_name="BEZ3" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="44" y="20"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM3" short_name="AREM3" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="48" y="20"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ4" short_name="BEZ4" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="52" y="20"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM4" short_name="AREM4" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="56" y="20"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXERRH" short_name="XXERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="62" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXEHUG" short_name="XXEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="64" y="20"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="RXRGKZ" short_name="RXRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="68" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="NBEZ" short_name="NBEZ" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="70" y="20"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="REGKZN" short_name="REGKZN" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="74" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GBEZ" short_name="GBEZ" data_type="zoned_decimal" display_length="3" data_length="3" underline="conditional" conditional="true">
+          <area>
+            <position x="76" y="20"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="magenta" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXOBJ" short_name="XXOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="21"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SNAME" short_name="SNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="6" y="21"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ1" short_name="BEZ1" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="28" y="21"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM1" short_name="AREM1" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="32" y="21"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ2" short_name="BEZ2" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="36" y="21"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM2" short_name="AREM2" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="40" y="21"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ3" short_name="BEZ3" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="44" y="21"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM3" short_name="AREM3" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="48" y="21"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BEZ4" short_name="BEZ4" data_type="zoned_decimal" display_length="3" data_length="3" high_intensity="true" conditional="true">
+          <area>
+            <position x="52" y="21"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AREM4" short_name="AREM4" data_type="alphanumeric" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="56" y="21"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXERRH" short_name="XXERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="62" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXEHUG" short_name="XXEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="64" y="21"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="RXRGKZ" short_name="RXRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="68" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="NBEZ" short_name="NBEZ" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="70" y="21"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="REGKZN" short_name="REGKZN" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="74" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="GBEZ" short_name="GBEZ" data_type="zoned_decimal" display_length="3" data_length="3" underline="conditional" conditional="true">
+          <area>
+            <position x="76" y="21"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="magenta" conditional="true"/>
+        </field>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="F3 = Verlassen; F17 = zum Anfang; F18 = zum Ende der Anzeige springen      " display_length="75" data_length="75">
+      <area>
+        <position x="2" y="23"/>
+        <size cx="75" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="SRC5/LI01DSN(FORMAT1)" library="SRC5" member_name="LI01DSN">
+    <size cx="132" cy="27"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="f7" caption="F7" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <action key="roll_up" caption="ROLL_UP" attention_key="false"/>
+    <action key="roll_down" caption="ROLL_DOWN" attention_key="false"/>
+    <action key="help" caption="HELP" attention_key="false"/>
+    <field field_type="screen_part" name="FORMAT1">
+      <area>
+        <position/>
+        <size cx="132" cy="24"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+      <area>
+        <position x="2"/>
+        <size cx="18" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="LIEFERSCHEIN-EINGABE" display_length="20" data_length="20">
+      <area>
+        <position x="30"/>
+        <size cx="20" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+      <area>
+        <position x="63"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+      <area>
+        <position x="72"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="LI01" display_length="4" data_length="4">
+      <area>
+        <position x="74" y="1"/>
+        <size cx="4" cy="1"/>
+      </area>
+      <color foreground="yellow"/>
+    </field>
+    <field field_type="fixed_text" value="Von Tour . . . . . . :" display_length="22" data_length="22">
+      <area>
+        <position x="1" y="3"/>
+        <size cx="22" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="VKVON" short_name="VKVON" data_type="zoned_decimal" display_length="6" data_length="5" underline="true" high_intensity="true">
+      <area>
+        <position x="24" y="3"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="bis" display_length="3" data_length="3">
+      <area>
+        <position x="31" y="3"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="VKBIS" short_name="VKBIS" data_type="zoned_decimal" display_length="6" data_length="5" underline="true" high_intensity="true">
+      <area>
+        <position x="35" y="3"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="Lieferscheindatum :" display_length="19" data_length="19">
+      <area>
+        <position x="42" y="3"/>
+        <size cx="19" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="VKDAT" short_name="VKDAT" data_type="zoned_decimal" display_length="8" data_length="6">
+      <area>
+        <position x="63" y="3"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="Sort. nach Fahrfolge :" display_length="22" data_length="22">
+      <area>
+        <position x="1" y="5"/>
+        <size cx="22" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="SORTFF" short_name="SORTFF" data_type="zoned_decimal" display_length="2" data_length="2" underline="true" high_intensity="true">
+      <area>
+        <position x="24" y="5"/>
+        <size cx="2" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="1 = FF 1; 2 = FF 2; 3 = ... bis 10" display_length="34" data_length="34" underline="true">
+      <area>
+        <position x="28" y="5"/>
+        <size cx="34" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="Aktion . . . . . . . :" display_length="22" data_length="22">
+      <area>
+        <position x="1" y="7"/>
+        <size cx="22" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true">
+      <area>
+        <position x="24" y="7"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Lieferscheintyp :" display_length="17" data_length="17">
+      <area>
+        <position x="26" y="7"/>
+        <size cx="17" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="LTYP" short_name="LTYP" data_type="alphanumeric" display_length="2" data_length="2" underline="true" high_intensity="true">
+      <area>
+        <position x="44" y="7"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="LYTEXT" short_name="LYTEXT" data_type="alphanumeric" display_length="25" data_length="25">
+      <area>
+        <position x="47" y="7"/>
+        <size cx="25" cy="1"/>
+      </area>
+      <color foreground="magenta"/>
+    </field>
+    <field field_type="fixed_text" value="Position   . . . . . :" display_length="22" data_length="22">
+      <area>
+        <position x="1" y="8"/>
+        <size cx="22" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="POS" short_name="POS" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" position_cursor="true" exit_required="true">
+      <area>
+        <position x="24" y="8"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Objektnummer . . . . :" display_length="22" data_length="22">
+      <area>
+        <position x="1" y="10"/>
+        <size cx="22" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="VKOBJ" short_name="VKOBJ" data_type="zoned_decimal" display_length="5" data_length="5" underline="true" high_intensity="true" exit_required="true">
+      <area>
+        <position x="24" y="10"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true">
+      <area>
+        <position x="30" y="10"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Folgenummer  . . . . :" display_length="22" data_length="22">
+      <area>
+        <position x="1" y="11"/>
+        <size cx="22" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="VKJAHR" short_name="VKJAHR" data_type="zoned_decimal" display_length="2" data_length="2" underline="true" high_intensity="true">
+      <area>
+        <position x="24" y="11"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="VKFOLG" short_name="VKFOLG" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" high_intensity="true" exit_required="true">
+      <area>
+        <position x="27" y="11"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Eingangsmenge  . . . :" display_length="22" data_length="22">
+      <area>
+        <position x="1" y="13"/>
+        <size cx="22" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="VKEING" short_name="VKEING" data_type="zoned_decimal" display_length="9" data_length="7" underline="true" high_intensity="true" exit_required="true">
+      <area>
+        <position x="24" y="13"/>
+        <size cx="9" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Verteilungsmenge . . :" display_length="22" data_length="22">
+      <area>
+        <position x="1" y="14"/>
+        <size cx="22" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="VKVERT" short_name="VKVERT" data_type="zoned_decimal" display_length="9" data_length="7" underline="true" high_intensity="true" exit_required="true">
+      <area>
+        <position x="24" y="14"/>
+        <size cx="9" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Spitze" display_length="6" data_length="6">
+      <area>
+        <position x="34" y="14"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="SPIT" short_name="SPIT" data_type="zoned_decimal" display_length="5" data_length="5">
+      <area>
+        <position x="41" y="14"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Regulierung  . . . . :" display_length="22" data_length="22">
+      <area>
+        <position x="1" y="16"/>
+        <size cx="22" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="VKKZ" short_name="VKKZ" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true">
+      <area>
+        <position x="24" y="16"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Anz.Vollballenlisten :" display_length="22" data_length="22">
+      <area>
+        <position x="26" y="16"/>
+        <size cx="22" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="VKVOLL" short_name="VKVOLL" data_type="zoned_decimal" display_length="1" data_length="1" underline="true" high_intensity="true">
+      <area>
+        <position x="49" y="16"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="2.Auslieferung . . . :" display_length="22" data_length="22">
+      <area>
+        <position x="51" y="16"/>
+        <size cx="22" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="VKZAUS" short_name="VKZAUS" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true">
+      <area>
+        <position x="74" y="16"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Teilauslieferung . . :" display_length="22" data_length="22">
+      <area>
+        <position x="51" y="17"/>
+        <size cx="22" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="KZTEIL" short_name="KZTEIL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true">
+      <area>
+        <position x="74" y="17"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="I n f o                                                                       " display_length="78" data_length="78" underline="true">
+      <area>
+        <position x="1" y="18"/>
+        <size cx="78" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="Letzte Folge war . . :" display_length="22" data_length="22">
+      <area>
+        <position x="1" y="19"/>
+        <size cx="22" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ATBNR" short_name="ATBNR" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="24" y="19"/>
+        <size cx="7" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="am" display_length="2" data_length="2">
+      <area>
+        <position x="32" y="19"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ATDLA" short_name="ATDLA" data_type="zoned_decimal" display_length="8" data_length="6">
+      <area>
+        <position x="35" y="19"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value=" Bezug war" display_length="10" data_length="10">
+      <area>
+        <position x="44" y="19"/>
+        <size cx="10" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ATLBEZ" short_name="ATLBEZ" data_type="zoned_decimal" display_length="9" data_length="7">
+      <area>
+        <position x="55" y="19"/>
+        <size cx="9" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="an" display_length="2" data_length="2">
+      <area>
+        <position x="65" y="19"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ATLEH" short_name="ATLEH" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="68" y="19"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="EH" display_length="2" data_length="2">
+      <area>
+        <position x="73" y="19"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Letzte Position war  :" display_length="22" data_length="22">
+      <area>
+        <position x="1" y="20"/>
+        <size cx="22" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ATPOS" short_name="ATPOS" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="27" y="20"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Spitze" display_length="6" data_length="6">
+      <area>
+        <position x="45" y="20"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ATSPIT" short_name="ATSPIT" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="61" y="20"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Systemnachricht :" display_length="17" data_length="17">
+      <area>
+        <position x="1" y="22"/>
+        <size cx="17" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ERRMSG" short_name="ERRMSG" data_type="alphanumeric" display_length="60" data_length="60" blink="conditional">
+      <area>
+        <position x="19" y="22"/>
+        <size cx="60" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="fixed_text" value="F3=Verlassen; F4=Anzeigen; F7=Neu nummerieren; F9=Hinzufügen" display_length="60" data_length="60">
+      <area>
+        <position x="1" y="23"/>
+        <size cx="60" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

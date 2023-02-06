@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="OSNA_SRC/AD61NDS(FORMAT1)" library="OSNA_SRC" member_name="AD61NDS">
+    <size cx="132" cy="27"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="f12" caption="F12" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <field field_type="screen_part" name="FORMAT1" overlay="true">
+      <area>
+        <position/>
+        <size cx="132" cy="24"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+      <area>
+        <position x="1"/>
+        <size cx="18" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="Außendienstbesuche verwalten" display_length="28" data_length="28">
+      <area>
+        <position x="26"/>
+        <size cx="28" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+      <area>
+        <position x="61"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+      <area>
+        <position x="72"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="*USER" short_name="*USER" data_type="alphanumeric" display_length="10" data_length="10">
+      <area>
+        <position x="1" y="1"/>
+        <size cx="10" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="AD20" display_length="4" data_length="4">
+      <area>
+        <position x="76" y="1"/>
+        <size cx="4" cy="1"/>
+      </area>
+      <color foreground="magenta"/>
+    </field>
+    <field field_type="fixed_text" value="Kundennr.:" display_length="10" data_length="10">
+      <area>
+        <position x="1" y="2"/>
+        <size cx="10" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" position_cursor="conditional">
+      <area>
+        <position x="12" y="2"/>
+        <size cx="7" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33" underline="true">
+      <area>
+        <position x="20" y="2"/>
+        <size cx="33" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="Fahrfolge   :" display_length="13" data_length="13">
+      <area>
+        <position x="55" y="2"/>
+        <size cx="13" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="KDTAG" short_name="KDTAG" data_type="zoned_decimal" display_length="6" data_length="5" underline="true">
+      <area>
+        <position x="69" y="2"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="Straße   :" display_length="10" data_length="10">
+      <area>
+        <position x="1" y="3"/>
+        <size cx="10" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" underline="true">
+      <area>
+        <position x="12" y="3"/>
+        <size cx="25" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="Geschäftsart:" display_length="13" data_length="13">
+      <area>
+        <position x="55" y="3"/>
+        <size cx="13" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="KDGART" short_name="KDGART" data_type="zoned_decimal" display_length="2" data_length="2" underline="true">
+      <area>
+        <position x="69" y="3"/>
+        <size cx="2" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="KDGAUG" short_name="KDGAUG" data_type="zoned_decimal" display_length="2" data_length="2" underline="true">
+      <area>
+        <position x="72" y="3"/>
+        <size cx="2" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="KDGTXT" short_name="KDGTXT" data_type="alphanumeric" display_length="25" data_length="25">
+      <area>
+        <position x="82" y="3"/>
+        <size cx="25" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="PLZ/Ort  :" display_length="10" data_length="10">
+      <area>
+        <position x="1" y="4"/>
+        <size cx="10" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" underline="true">
+      <area>
+        <position x="12" y="4"/>
+        <size cx="5" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" underline="true">
+      <area>
+        <position x="18" y="4"/>
+        <size cx="25" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="Tel." display_length="4" data_length="4">
+      <area>
+        <position x="55" y="4"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="KDTELE" short_name="KDTELE" data_type="alphanumeric" display_length="15" data_length="15" underline="true">
+      <area>
+        <position x="60" y="4"/>
+        <size cx="15" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="IDNAME25" short_name="IDNAME25" data_type="alphanumeric" display_length="25" data_length="25">
+      <area>
+        <position x="1" y="5"/>
+        <size cx="25" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="IDMAIL" short_name="IDMAIL" data_type="alphanumeric" display_length="50" data_length="50">
+      <area>
+        <position x="27" y="5"/>
+        <size cx="50" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Datum    AD-Mitarbeiter               Gesprochen mit       Besuchszeit  (Min.) " display_length="79" data_length="79" underline="true">
+      <area>
+        <position x="1" y="6"/>
+        <size cx="79" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="#DATUM" short_name="#DATUM" data_type="zoned_decimal" display_length="8" data_length="6" position_cursor="conditional">
+      <area>
+        <position x="1" y="7"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="MA" short_name="MA" data_type="zoned_decimal" display_length="2" data_length="2">
+      <area>
+        <position x="10" y="7"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="VTNAME" short_name="VTNAME" data_type="alphanumeric" display_length="25" data_length="25">
+      <area>
+        <position x="13" y="7"/>
+        <size cx="25" cy="1"/>
+      </area>
+      <color foreground="magenta"/>
+    </field>
+    <field field_type="field" usage="output" name="ANSP" short_name="ANSP" data_type="alphanumeric" display_length="20" data_length="20" position_cursor="conditional">
+      <area>
+        <position x="39" y="7"/>
+        <size cx="20" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="VON" short_name="VON" data_type="zoned_decimal" display_length="5" data_length="4" position_cursor="conditional">
+      <area>
+        <position x="60" y="7"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="-" display_length="1" data_length="1">
+      <area>
+        <position x="66" y="7"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BIS" short_name="BIS" data_type="zoned_decimal" display_length="5" data_length="4" position_cursor="conditional">
+      <area>
+        <position x="68" y="7"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="MIN" short_name="MIN" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="74" y="7"/>
+        <size cx="4" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="Besuchsgründe" display_length="13" data_length="13" underline="true">
+      <area>
+        <position x="1" y="8"/>
+        <size cx="13" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="Priorität( ! ? ):" display_length="17" data_length="17">
+      <area>
+        <position x="17" y="8"/>
+        <size cx="17" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BG15" short_name="BG15" data_type="alphanumeric" display_length="1" data_length="1" underline="true">
+      <area>
+        <position x="35" y="8"/>
+        <size cx="1" cy="1"/>
+      </area>
+      <color foreground="yellow" conditional="true"/>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="ADBG1" short_name="ADBG1" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="4" y="9"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG11" short_name="ADBG11" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="9" y="9"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBEM1" short_name="ADBEM1" data_type="alphanumeric" display_length="50" data_length="50">
+      <area>
+        <position x="14" y="9"/>
+        <size cx="50" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG21" short_name="ADBG21" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="65" y="9"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG31" short_name="ADBG31" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="70" y="9"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADAUF1" short_name="ADAUF1" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="76" y="9"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADAUF11" short_name="ADAUF11" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="81" y="9"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADOK1" short_name="ADOK1" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="86" y="9"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADOK11" short_name="ADOK11" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="88" y="9"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG2" short_name="ADBG2" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="4" y="10"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG12" short_name="ADBG12" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="9" y="10"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBEM2" short_name="ADBEM2" data_type="alphanumeric" display_length="50" data_length="50">
+      <area>
+        <position x="14" y="10"/>
+        <size cx="50" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG22" short_name="ADBG22" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="65" y="10"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG32" short_name="ADBG32" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="70" y="10"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADAUF2" short_name="ADAUF2" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="76" y="10"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADAUF12" short_name="ADAUF12" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="81" y="10"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADOK2" short_name="ADOK2" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="86" y="10"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADOK12" short_name="ADOK12" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="88" y="10"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG3" short_name="ADBG3" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="4" y="11"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG13" short_name="ADBG13" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="9" y="11"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBEM3" short_name="ADBEM3" data_type="alphanumeric" display_length="50" data_length="50">
+      <area>
+        <position x="14" y="11"/>
+        <size cx="50" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG23" short_name="ADBG23" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="65" y="11"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG33" short_name="ADBG33" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="70" y="11"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADAUF3" short_name="ADAUF3" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="76" y="11"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADAUF13" short_name="ADAUF13" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="81" y="11"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADOK3" short_name="ADOK3" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="86" y="11"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADOK13" short_name="ADOK13" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="88" y="11"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG4" short_name="ADBG4" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="4" y="12"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG14" short_name="ADBG14" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="9" y="12"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBEM4" short_name="ADBEM4" data_type="alphanumeric" display_length="50" data_length="50">
+      <area>
+        <position x="14" y="12"/>
+        <size cx="50" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG24" short_name="ADBG24" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="65" y="12"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG34" short_name="ADBG34" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="70" y="12"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADAUF4" short_name="ADAUF4" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="76" y="12"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADAUF14" short_name="ADAUF14" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="81" y="12"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADOK4" short_name="ADOK4" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="86" y="12"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADOK14" short_name="ADOK14" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="88" y="12"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG5" short_name="ADBG5" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="4" y="13"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG15" short_name="ADBG15" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="9" y="13"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBEM5" short_name="ADBEM5" data_type="alphanumeric" display_length="50" data_length="50">
+      <area>
+        <position x="14" y="13"/>
+        <size cx="50" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG25" short_name="ADBG25" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="65" y="13"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG35" short_name="ADBG35" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="70" y="13"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADAUF5" short_name="ADAUF5" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="76" y="13"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADAUF15" short_name="ADAUF15" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="81" y="13"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADOK5" short_name="ADOK5" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="86" y="13"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADOK15" short_name="ADOK15" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="88" y="13"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG6" short_name="ADBG6" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="4" y="14"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG16" short_name="ADBG16" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="9" y="14"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBEM6" short_name="ADBEM6" data_type="alphanumeric" display_length="50" data_length="50">
+      <area>
+        <position x="14" y="14"/>
+        <size cx="50" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG26" short_name="ADBG26" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="65" y="14"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG36" short_name="ADBG36" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="70" y="14"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADAUF6" short_name="ADAUF6" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="76" y="14"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADAUF16" short_name="ADAUF16" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="81" y="14"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADOK6" short_name="ADOK6" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="86" y="14"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADOK16" short_name="ADOK16" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="88" y="14"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG7" short_name="ADBG7" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="4" y="15"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG17" short_name="ADBG17" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="9" y="15"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBEM7" short_name="ADBEM7" data_type="alphanumeric" display_length="50" data_length="50">
+      <area>
+        <position x="14" y="15"/>
+        <size cx="50" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG27" short_name="ADBG27" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="65" y="15"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG37" short_name="ADBG37" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="70" y="15"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADAUF7" short_name="ADAUF7" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="76" y="15"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADAUF17" short_name="ADAUF17" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="81" y="15"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADOK7" short_name="ADOK7" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="86" y="15"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADOK17" short_name="ADOK17" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="88" y="15"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG8" short_name="ADBG8" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="4" y="16"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG18" short_name="ADBG18" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="9" y="16"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBEM8" short_name="ADBEM8" data_type="alphanumeric" display_length="50" data_length="50">
+      <area>
+        <position x="14" y="16"/>
+        <size cx="50" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG28" short_name="ADBG28" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="65" y="16"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG38" short_name="ADBG38" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="70" y="16"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADAUF8" short_name="ADAUF8" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="76" y="16"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADAUF18" short_name="ADAUF18" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="81" y="16"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADOK8" short_name="ADOK8" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="86" y="16"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADOK18" short_name="ADOK18" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="88" y="16"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG9" short_name="ADBG9" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="4" y="17"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG19" short_name="ADBG19" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="9" y="17"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBEM9" short_name="ADBEM9" data_type="alphanumeric" display_length="50" data_length="50">
+      <area>
+        <position x="14" y="17"/>
+        <size cx="50" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG29" short_name="ADBG29" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="65" y="17"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG39" short_name="ADBG39" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="70" y="17"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADAUF9" short_name="ADAUF9" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="76" y="17"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADAUF19" short_name="ADAUF19" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="81" y="17"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADOK9" short_name="ADOK9" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="86" y="17"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADOK19" short_name="ADOK19" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="88" y="17"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG10" short_name="ADBG10" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="4" y="18"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG20" short_name="ADBG20" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="9" y="18"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBEM10" short_name="ADBEM10" data_type="alphanumeric" display_length="50" data_length="50">
+      <area>
+        <position x="14" y="18"/>
+        <size cx="50" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG30" short_name="ADBG30" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="65" y="18"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADBG40" short_name="ADBG40" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="70" y="18"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADAUF10" short_name="ADAUF10" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="76" y="18"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADAUF20" short_name="ADAUF20" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="81" y="18"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADOK10" short_name="ADOK10" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="86" y="18"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADOK20" short_name="ADOK20" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="88" y="18"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="#DATUMA" short_name="#DATUMA" data_type="zoned_decimal" display_length="8" data_length="6" position_cursor="conditional">
+      <area>
+        <position x="1" y="19"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADAUF1T" short_name="ADAUF1T" data_type="alphanumeric" display_length="50" data_length="50">
+      <area>
+        <position x="14" y="19"/>
+        <size cx="50" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADAUF2T" short_name="ADAUF2T" data_type="alphanumeric" display_length="50" data_length="50">
+      <area>
+        <position x="14" y="20"/>
+        <size cx="50" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ADAUF3T" short_name="ADAUF3T" data_type="alphanumeric" display_length="50" data_length="50">
+      <area>
+        <position x="14" y="21"/>
+        <size cx="50" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="input" name="LOEKZ" short_name="LOEKZ" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true">
+      <area>
+        <position x="65" y="22"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="(X = Löschen)" display_length="13" data_length="13">
+      <area>
+        <position x="67" y="22"/>
+        <size cx="13" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="F3=Ende F4=Letzter Bericht F9=Ändern" display_length="36" data_length="36">
+      <area>
+        <position x="1" y="23"/>
+        <size cx="36" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="F5=Kundenstamm" display_length="14" data_length="14">
+      <area>
+        <position x="39" y="23"/>
+        <size cx="14" cy="1"/>
+      </area>
+    </field>
+  </screen>
+</header>

@@ -1,0 +1,82 @@
+﻿REM EX_7111
+REM  dim xKdNr, xKNam, xGArt, xBez1, xRem1, xVK1, xD1, xBez2, xRem2, xVK2, xD2, xBez3, xRem3, xVK3, xD3, xBezA, xDpMg, xRemA, xVKA, xFolg1,  xFolg2, xFolg3, xFolgA, errmsg, datei, pfad_datei as string 
+
+DIM ddehandle, i, j, msg, rc as integer
+dim xSOBJ, xSDOBJ, xSBVON, xSBBIS, xOBJ, xNAM, xFOLG, xDOBJ, xDNAM, xEXPL, xBVON, xBBIS, errmsg, datei, pfad_datei as string 
+dim source as string
+i = 0
+j=5
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+HostFieldGetData("kdkdnr",xSOBJ)
+HostFieldGetData("kdkdnr",xSDOBJ)
+HostFieldGetData("kdkdnr",xSBVON)
+HostFieldGetData("kdkdnr",xSBBIS)
+
+
+datei = "Displayauslieferungen.xls"
+pfad_datei = @"@&LWV@"  + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "Objekt")
+ddepoke( ddehandle, "Z1S2", xSOBJ)
+
+ddepoke( ddehandle, "Z1S4", "D-Objekt")
+ddepoke( ddehandle, "Z1S5", xSDOBJ)
+
+ddepoke( ddehandle, "Z2S1", "Zeitraum von")
+ddepoke( ddehandle, "Z3S2", xSBVON)
+
+ddepoke( ddehandle, "Z2S4", "bis")
+ddepoke( ddehandle, "Z3S5", xSBBis)
+
+
+ddepoke( ddehandle, "Z4S1", "Obj-Nr")
+ddepoke( ddehandle, "Z4S2", "Titel")
+ddepoke( ddehandle, "Z4S3", "Folge")
+ddepoke( ddehandle, "Z4S4", "D-Obj")
+ddepoke( ddehandle, "Z4S5", "Displaybez.")
+ddepoke( ddehandle, "Z4S6", "Expl.")
+ddepoke( ddehandle, "Z4S7", "Bel.von")
+ddepoke( ddehandle, "Z4S8", "Bel.bis")
+
+
+nochmal:
+
+
+HostFieldGetLineData("S1OBJ",  i, xOBJ)
+HostFieldGetLineData("S1NAM",  i, xNAM)
+HostFieldGetLineData("S1FOLG", i, xFOLG)
+HostFieldGetLineData("S1DOBJ", i, xDOBJ)
+HostFieldGetLineData("S1DNAM", i, xDNAM)
+HostFieldGetLineData("S1EXPL", i, xEXPL)
+HostFieldGetLineData("S1BVON", i, xBVON)
+HostFieldGetLineData("S1BBIS", i, xBBIS)
+
+
+if (xNam <> "") then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xOBJ)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xNAM)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xFOLG)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xDOBJ)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xDNAM)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xEXPL)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xBVON)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xBBIS)
+j=j+1
+endif
+
+if i < 17 then
+i=i+1
+goto nochmal
+endif
+ 
+if xNam <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

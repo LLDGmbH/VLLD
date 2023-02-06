@@ -1,0 +1,900 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="LLD_OBJ/WF242VDS(FORMAT1+FORMAT2+FORMAT3)" library="LLD_OBJ" member_name="WF242VDS">
+    <size cx="80" cy="24"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f7" caption="F7" attention_key="false"/>
+    <action key="f10" caption="F10" attention_key="false"/>
+    <action key="f11" caption="F11" attention_key="false"/>
+    <action key="f12" caption="F12" attention_key="false"/>
+    <action key="f20" caption="F20" attention_key="false"/>
+    <action key="f21" caption="F21" attention_key="false"/>
+    <action key="f22" caption="F22" attention_key="false"/>
+    <action key="f23" caption="F23" attention_key="false"/>
+    <action key="f24" caption="F24" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <action key="roll_up" caption="ROLL_UP" attention_key="false"/>
+    <action key="roll_down" caption="ROLL_DOWN" attention_key="false"/>
+    <action key="help" caption="HELP" attention_key="false"/>
+    <field field_type="screen_part" name="FORMAT1">
+      <area>
+        <position/>
+        <size cx="80" cy="17"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="FORMAT2" overlay="true">
+      <area>
+        <position y="17"/>
+        <size cx="80" cy="6"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="FORMAT3" overlay="true">
+      <area>
+        <position y="23"/>
+        <size cx="80" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+      <area>
+        <position x="1"/>
+        <size cx="18" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="JAHRESZAHLEN" display_length="12" data_length="12">
+      <area>
+        <position x="34"/>
+        <size cx="12" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+      <area>
+        <position x="61"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+      <area>
+        <position x="70"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="SDS_JOB" short_name="SDS_JOB" data_type="alphanumeric" display_length="10" data_length="10">
+      <area>
+        <position x="1" y="1"/>
+        <size cx="10" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="*SYSNAME" short_name="*SYSNAME" data_type="alphanumeric" display_length="8" data_length="8">
+      <area>
+        <position x="12" y="1"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="Durchschnittswerte pro Folge" display_length="28" data_length="28" conditional="true">
+      <area>
+        <position x="26" y="1"/>
+        <size cx="28" cy="1"/>
+      </area>
+      <color foreground="white"/>
+      <indicator id="87"/>
+    </field>
+    <field field_type="field" usage="output" name="SDS_USER" short_name="SDS_USER" data_type="alphanumeric" display_length="10" data_length="10">
+      <area>
+        <position x="61" y="1"/>
+        <size cx="10" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="PGMNAM" short_name="PGMNAM" data_type="alphanumeric" display_length="6" data_length="6">
+      <area>
+        <position x="72" y="1"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="yellow"/>
+    </field>
+    <field field_type="fixed_text" value="Aktion" display_length="6" data_length="6">
+      <area>
+        <position x="1" y="2"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="input" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true">
+      <area>
+        <position x="13" y="2"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Datum" display_length="5" data_length="5">
+      <area>
+        <position x="18" y="2"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="DATUM" short_name="DATUM" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" high_intensity="true">
+      <area>
+        <position x="24" y="2"/>
+        <size cx="10" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Verlag  . :" display_length="11" data_length="11">
+      <area>
+        <position x="1" y="3"/>
+        <size cx="11" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="XXVNR" short_name="XXVNR" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" high_intensity="true" position_cursor="true">
+      <area>
+        <position x="13" y="3"/>
+        <size cx="4" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="VLNAM" short_name="VLNAM" data_type="alphanumeric" display_length="24" data_length="24">
+      <area>
+        <position x="18" y="3"/>
+        <size cx="24" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="VJ vollst.?" display_length="11" data_length="11">
+      <area>
+        <position x="58" y="3"/>
+        <size cx="11" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="KZVJA" short_name="KZVJA" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" exit_record="true">
+      <area>
+        <position x="70" y="3"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="N=Nein" display_length="6" data_length="6">
+      <area>
+        <position x="72" y="3"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="- - - - - - -" display_length="13" data_length="13">
+      <area>
+        <position x="4" y="5"/>
+        <size cx="13" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="LFDJAHR" short_name="LFDJAHR" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="19" y="5"/>
+        <size cx="4" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="- - - - - -" display_length="11" data_length="11">
+      <area>
+        <position x="26" y="5"/>
+        <size cx="11" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="- - - - - - -" display_length="13" data_length="13">
+      <area>
+        <position x="46" y="5"/>
+        <size cx="13" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="VORJAHR" short_name="VORJAHR" data_type="zoned_decimal" display_length="4" data_length="4">
+      <area>
+        <position x="61" y="5"/>
+        <size cx="4" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="- - - - - -" display_length="11" data_length="11">
+      <area>
+        <position x="68" y="5"/>
+        <size cx="11" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="Ges-Lfg  Ges-Rem  Rem-%  Ges-Verk" display_length="33" data_length="33">
+      <area>
+        <position x="4" y="6"/>
+        <size cx="33" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="INDEX" display_length="5" data_length="5" high_intensity="true">
+      <area>
+        <position x="39" y="6"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Ges-Lfg  Ges-Rem  Rem-%  Ges-Verk" display_length="33" data_length="33">
+      <area>
+        <position x="46" y="6"/>
+        <size cx="33" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="1Q" display_length="2" data_length="2">
+      <area>
+        <position y="8"/>
+        <size cx="2" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="Q1GL" short_name="Q1GL" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="3" y="8"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="Q1RM" short_name="Q1RM" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="12" y="8"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="Q1RP" short_name="Q1RP" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="21" y="8"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="Q1VK" short_name="Q1VK" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="29" y="8"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="INT1" short_name="INT1" data_type="zoned_decimal" display_length="6" data_length="5" high_intensity="conditional" decimal_positions="2">
+      <area>
+        <position x="38" y="8"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="Q1GLV" short_name="Q1GLV" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="45" y="8"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="Q1RMV" short_name="Q1RMV" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="54" y="8"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="Q1RPV" short_name="Q1RPV" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="63" y="8"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="Q1VKV" short_name="Q1VKV" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="71" y="8"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="2Q" display_length="2" data_length="2">
+      <area>
+        <position y="9"/>
+        <size cx="2" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="Q2GL" short_name="Q2GL" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="3" y="9"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="Q2RM" short_name="Q2RM" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="12" y="9"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="Q2RP" short_name="Q2RP" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="21" y="9"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="Q2VK" short_name="Q2VK" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="29" y="9"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="INT2" short_name="INT2" data_type="zoned_decimal" display_length="6" data_length="5" high_intensity="conditional" decimal_positions="2">
+      <area>
+        <position x="38" y="9"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="Q2GLV" short_name="Q2GLV" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="45" y="9"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="Q2RMV" short_name="Q2RMV" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="54" y="9"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="Q2RPV" short_name="Q2RPV" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="63" y="9"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="Q2VKV" short_name="Q2VKV" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="71" y="9"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="3Q" display_length="2" data_length="2">
+      <area>
+        <position y="10"/>
+        <size cx="2" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="Q3GL" short_name="Q3GL" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="3" y="10"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="Q3RM" short_name="Q3RM" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="12" y="10"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="Q3RP" short_name="Q3RP" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="21" y="10"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="Q3VK" short_name="Q3VK" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="29" y="10"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="INT3" short_name="INT3" data_type="zoned_decimal" display_length="6" data_length="5" high_intensity="conditional" decimal_positions="2">
+      <area>
+        <position x="38" y="10"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="Q3GLV" short_name="Q3GLV" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="45" y="10"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="Q3RMV" short_name="Q3RMV" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="54" y="10"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="Q3RPV" short_name="Q3RPV" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="63" y="10"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="Q3VKV" short_name="Q3VKV" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="71" y="10"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="4Q" display_length="2" data_length="2">
+      <area>
+        <position y="11"/>
+        <size cx="2" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="Q4GL" short_name="Q4GL" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="3" y="11"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="Q4RM" short_name="Q4RM" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="12" y="11"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="Q4RP" short_name="Q4RP" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="21" y="11"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="Q4VK" short_name="Q4VK" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="29" y="11"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="INT4" short_name="INT4" data_type="zoned_decimal" display_length="6" data_length="5" high_intensity="conditional" decimal_positions="2">
+      <area>
+        <position x="38" y="11"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="Q4GLV" short_name="Q4GLV" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="45" y="11"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="Q4RMV" short_name="Q4RMV" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="54" y="11"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="Q4RPV" short_name="Q4RPV" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="63" y="11"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="Q4VKV" short_name="Q4VKV" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="71" y="11"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="1H" display_length="2" data_length="2">
+      <area>
+        <position y="13"/>
+        <size cx="2" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="H1GL" short_name="H1GL" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="3" y="13"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="H1RM" short_name="H1RM" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="12" y="13"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="H1RP" short_name="H1RP" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="21" y="13"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="H1VK" short_name="H1VK" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="29" y="13"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="INT5" short_name="INT5" data_type="zoned_decimal" display_length="6" data_length="5" high_intensity="conditional" decimal_positions="2">
+      <area>
+        <position x="38" y="13"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="H1GLV" short_name="H1GLV" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="45" y="13"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="H1RMV" short_name="H1RMV" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="54" y="13"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="H1RPV" short_name="H1RPV" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="63" y="13"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="H1VKV" short_name="H1VKV" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="71" y="13"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="2H" display_length="2" data_length="2">
+      <area>
+        <position y="14"/>
+        <size cx="2" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="H2GL" short_name="H2GL" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="3" y="14"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="H2RM" short_name="H2RM" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="12" y="14"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="H2RP" short_name="H2RP" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="21" y="14"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="H2VK" short_name="H2VK" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="29" y="14"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="INT6" short_name="INT6" data_type="zoned_decimal" display_length="6" data_length="5" high_intensity="conditional" decimal_positions="2">
+      <area>
+        <position x="38" y="14"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="H2GLV" short_name="H2GLV" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="45" y="14"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="H2RMV" short_name="H2RMV" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="54" y="14"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="H2RPV" short_name="H2RPV" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="63" y="14"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="H2VKV" short_name="H2VKV" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="71" y="14"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="JA" display_length="2" data_length="2">
+      <area>
+        <position y="16"/>
+        <size cx="2" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="JAGL" short_name="JAGL" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="3" y="16"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="JARM" short_name="JARM" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="12" y="16"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="JARP" short_name="JARP" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="21" y="16"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="JAVK" short_name="JAVK" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="29" y="16"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="INT7" short_name="INT7" data_type="zoned_decimal" display_length="6" data_length="5" high_intensity="conditional" decimal_positions="2">
+      <area>
+        <position x="38" y="16"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="JAGLV" short_name="JAGLV" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="45" y="16"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="JARMV" short_name="JARMV" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="54" y="16"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="JARPV" short_name="JARPV" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="63" y="16"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="JAVKV" short_name="JAVKV" data_type="zoned_decimal" display_length="8" data_length="8">
+      <area>
+        <position x="71" y="16"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Umsatz" display_length="6" data_length="6">
+      <area>
+        <position x="14" y="17"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="   Rohgewinn" display_length="12" data_length="12">
+      <area>
+        <position x="25" y="17"/>
+        <size cx="12" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="+/- %" display_length="5" data_length="5">
+      <area>
+        <position x="39" y="17"/>
+        <size cx="5" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="Umsatz" display_length="6" data_length="6">
+      <area>
+        <position x="56" y="17"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="   Rohgewinn" display_length="12" data_length="12">
+      <area>
+        <position x="67" y="17"/>
+        <size cx="12" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="1.Quar" display_length="6" data_length="6">
+      <area>
+        <position y="18"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="Q1BRN" short_name="Q1BRN" data_type="zoned_decimal" display_length="13" data_length="10" decimal_positions="2">
+      <area>
+        <position x="7" y="18"/>
+        <size cx="13" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="Q1GWN" short_name="Q1GWN" data_type="zoned_decimal" display_length="13" data_length="10" decimal_positions="2">
+      <area>
+        <position x="24" y="18"/>
+        <size cx="13" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="EPR1" short_name="EPR1" data_type="zoned_decimal" display_length="7" data_length="5" decimal_positions="2">
+      <area>
+        <position x="38" y="18"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="Q1BRA" short_name="Q1BRA" data_type="zoned_decimal" display_length="13" data_length="10" decimal_positions="2">
+      <area>
+        <position x="49" y="18"/>
+        <size cx="13" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="Q1GWA" short_name="Q1GWA" data_type="zoned_decimal" display_length="13" data_length="10" decimal_positions="2">
+      <area>
+        <position x="66" y="18"/>
+        <size cx="13" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="2.Quar" display_length="6" data_length="6">
+      <area>
+        <position y="19"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="Q2BRN" short_name="Q2BRN" data_type="zoned_decimal" display_length="13" data_length="10" decimal_positions="2">
+      <area>
+        <position x="7" y="19"/>
+        <size cx="13" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="Q2GWN" short_name="Q2GWN" data_type="zoned_decimal" display_length="13" data_length="10" decimal_positions="2">
+      <area>
+        <position x="24" y="19"/>
+        <size cx="13" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="EPR2" short_name="EPR2" data_type="zoned_decimal" display_length="7" data_length="5" decimal_positions="2">
+      <area>
+        <position x="38" y="19"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="Q2BRA" short_name="Q2BRA" data_type="zoned_decimal" display_length="13" data_length="10" decimal_positions="2">
+      <area>
+        <position x="49" y="19"/>
+        <size cx="13" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="Q2GWA" short_name="Q2GWA" data_type="zoned_decimal" display_length="13" data_length="10" decimal_positions="2">
+      <area>
+        <position x="66" y="19"/>
+        <size cx="13" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="3.Quar" display_length="6" data_length="6">
+      <area>
+        <position y="20"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="Q3BRN" short_name="Q3BRN" data_type="zoned_decimal" display_length="13" data_length="10" decimal_positions="2">
+      <area>
+        <position x="7" y="20"/>
+        <size cx="13" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="Q3GWN" short_name="Q3GWN" data_type="zoned_decimal" display_length="13" data_length="10" decimal_positions="2">
+      <area>
+        <position x="24" y="20"/>
+        <size cx="13" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="EPR3" short_name="EPR3" data_type="zoned_decimal" display_length="7" data_length="5" decimal_positions="2">
+      <area>
+        <position x="38" y="20"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="Q3BRA" short_name="Q3BRA" data_type="zoned_decimal" display_length="13" data_length="10" decimal_positions="2">
+      <area>
+        <position x="49" y="20"/>
+        <size cx="13" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="Q3GWA" short_name="Q3GWA" data_type="zoned_decimal" display_length="13" data_length="10" decimal_positions="2">
+      <area>
+        <position x="66" y="20"/>
+        <size cx="13" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="4.Quar" display_length="6" data_length="6">
+      <area>
+        <position y="21"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="Q4BRN" short_name="Q4BRN" data_type="zoned_decimal" display_length="13" data_length="10" decimal_positions="2">
+      <area>
+        <position x="7" y="21"/>
+        <size cx="13" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="Q4GWN" short_name="Q4GWN" data_type="zoned_decimal" display_length="13" data_length="10" decimal_positions="2">
+      <area>
+        <position x="24" y="21"/>
+        <size cx="13" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="EPR4" short_name="EPR4" data_type="zoned_decimal" display_length="7" data_length="5" decimal_positions="2">
+      <area>
+        <position x="38" y="21"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="Q4BRA" short_name="Q4BRA" data_type="zoned_decimal" display_length="13" data_length="10" decimal_positions="2">
+      <area>
+        <position x="49" y="21"/>
+        <size cx="13" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="Q4GWA" short_name="Q4GWA" data_type="zoned_decimal" display_length="13" data_length="10" decimal_positions="2">
+      <area>
+        <position x="66" y="21"/>
+        <size cx="13" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="  Jahr" display_length="6" data_length="6">
+      <area>
+        <position y="22"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="JABRN" short_name="JABRN" data_type="zoned_decimal" display_length="13" data_length="10" decimal_positions="2">
+      <area>
+        <position x="7" y="22"/>
+        <size cx="13" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="JAGWN" short_name="JAGWN" data_type="zoned_decimal" display_length="13" data_length="10" decimal_positions="2">
+      <area>
+        <position x="24" y="22"/>
+        <size cx="13" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="EPRJ" short_name="EPRJ" data_type="zoned_decimal" display_length="7" data_length="5" decimal_positions="2">
+      <area>
+        <position x="38" y="22"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="JABRA" short_name="JABRA" data_type="zoned_decimal" display_length="13" data_length="10" decimal_positions="2">
+      <area>
+        <position x="49" y="22"/>
+        <size cx="13" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="JAGWA" short_name="JAGWA" data_type="zoned_decimal" display_length="13" data_length="10" decimal_positions="2">
+      <area>
+        <position x="66" y="22"/>
+        <size cx="13" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="F3 = Ende   F20 = Gesamt  F21 = Fil.1  F22 = Fil.2  F23 = Fil.3 " display_length="64" data_length="64">
+      <area>
+        <position x="2" y="23"/>
+        <size cx="64" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

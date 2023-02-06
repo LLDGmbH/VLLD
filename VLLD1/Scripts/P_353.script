@@ -1,0 +1,57 @@
+﻿rem **Füllen Combo-Box  aus GRVERP **
+
+dim text, ErrorMsg as String
+dim rc as Integer
+
+
+
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rem ** Query database
+rc = EzSQLQuery("SELECT VTNR, VTNAME FROM GRVERP order by VTNAME", text, ErrorMsg)
+
+if ( rc < 0 ) then
+
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+
+else
+
+rem ** Clear combo box control
+rem PanelFieldPutData ("C_VTNR", -1, "") 
+
+rem ** Populate combo box control with the string returned by the query
+PanelFieldSetProp ("C_VTNR", 5, text) 
+PanelUpdateEnable(2)
+
+endif
+
+
+rem **Füllen Combo-Box  aus GRWOHP **
+
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rem ** Query database
+rc = EzSQLQuery("SELECT GKZ, ORT FROM GRENWGP order by ORT", text, ErrorMsg)
+
+if ( rc < 0 ) then
+
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+
+else
+
+rem ** Clear combo box control
+rem PanelFieldPutData ("C_ORT", -1, "") 
+
+rem ** Populate combo box control with the string returned by the query
+PanelFieldSetProp ("C_ORT", 5, text) 
+PanelUpdateEnable(2)
+
+endif

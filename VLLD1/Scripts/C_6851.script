@@ -1,0 +1,15 @@
+﻿global filiale as string
+dim text, xxfil, ErrorMsg as String
+dim rc as Integer
+global filiale as string
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rc = EzSQLQuery("SELECT substr(vlvlkz, 1, 6),  vlvbez concat ' ' concat substr(vlvlkz, 1, 6) FROM  GRVTLL3", text, ErrorMsg)
+
+PanelFieldSetProp ("F1VLKZ", 5, text) 
+
+PanelUpdateEnable(2)

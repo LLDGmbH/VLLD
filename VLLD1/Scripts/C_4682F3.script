@@ -1,0 +1,14 @@
+﻿dim text, xxfil, ErrorMsg as String
+dim rc as Integer
+
+
+HostFieldGetData("f1Fil3", xxfil)
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+
+rc = EzSQLQuery("SELECT filnam FROM grfilp WHERE filFil = " + xxFil, text, ErrorMsg)
+
+PanelFieldSetProp ("Filiale3", 5, text)  
+
+
+PanelUpdateEnable(2)

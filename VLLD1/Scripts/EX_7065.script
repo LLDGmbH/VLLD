@@ -1,0 +1,59 @@
+﻿global filiale as string
+DIM ddehandle, i, j, msg, rc as integer
+dim x1von, x1bis, x1Grund, x1AD, x1ZKA10, x1am, x1um, x1user, datei, pfad_datei, ErrMsg, sql1, sql2, sql3, sql4, sql5, sql6, sql7, sql8, f01 as string 
+dim source as string
+
+i = 0
+j=2
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Urlaubshistorie.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "Urlaub von")
+ddepoke( ddehandle, "Z1S2", "Urlaub bis")
+ddepoke( ddehandle, "Z1S3", "Grund")
+ddepoke( ddehandle, "Z1S4", "Ausgeschieden")
+ddepoke( ddehandle, "Z1S5", "LZB-Verstoß")
+ddepoke( ddehandle, "Z1S6", "geändert am")
+ddepoke( ddehandle, "Z1S7", "um")
+ddepoke( ddehandle, "Z1S8", "von Benutzer")
+
+nochmal:
+
+HostFieldGetLineData("s1von",   i, x1von)
+HostFieldGetLineData("s1bis",   i, x1bis)
+HostFieldGetLineData("s1UGrd",  i, x1Grund)
+HostFieldGetLineData("s1AD",    i, x1AD)
+HostFieldGetLineData("s1ZKA10", i, x1ZKA10)
+HostFieldGetLineData("s1am",    i, x1am)
+HostFieldGetLineData("s1um",    i, x1um)
+HostFieldGetLineData("s1user",  i, x1user)
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", x1von)
+ddepoke( ddehandle, "Z" + str(j) +"S2", x1bis)
+ddepoke( ddehandle, "Z" + str(j) +"S3", x1Grund)
+ddepoke( ddehandle, "Z" + str(j) +"S4", x1AD)
+ddepoke( ddehandle, "Z" + str(j) +"S5", x1ZKA10)
+ddepoke( ddehandle, "Z" + str(j) +"S6", x1am)
+ddepoke( ddehandle, "Z" + str(j) +"S7", x1um)
+ddepoke( ddehandle, "Z" + str(j) +"S8", x1user)
+
+j=j+1 
+
+if i < 20 then
+i=i+1
+goto nochmal
+endif
+ 
+if x1von <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

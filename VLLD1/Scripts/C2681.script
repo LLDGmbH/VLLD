@@ -1,0 +1,14 @@
+﻿dim text, ErrorMsg as String
+dim rc as Integer
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+
+rc = EzSQLQuery("SELECT DIGITS(VAVNR), DIGITS(VAVNR) concat ' ' concat vaname from gradrp  order by DIGITS(VAVNR)", text, ErrorMsg)
+PanelFieldSetProp ("remivlg", 5, text) 
+
+
+PanelUpdateEnable(2)

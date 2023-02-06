@@ -1,0 +1,20 @@
+﻿rem **Füllen Combo-Box  aus GRVERP **
+
+dim text, ErrorMsg as String
+dim rc as Integer
+
+
+
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rc = EzSQLQuery("SELECT logsspednr, digits(logsspednr) concat ' ' concat logsfirm1 FROM grlogspedp  order by digits(logsspednr)", text, ErrorMsg)
+PanelFieldSetProp ("logrspednr", 5, text) 
+
+rc = EzSQLQuery("SELECT logvvnr, digits(logvvnr) concat ' ' concat logvbez FROM GRLOGVORGP  where logvkz <> 'H' order by digits(logvvnr)", text, ErrorMsg)
+PanelFieldSetProp ("logrvorg", 5, text) 
+
+PanelUpdateEnable(2)

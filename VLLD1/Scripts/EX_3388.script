@@ -1,0 +1,72 @@
+﻿DIM ddehandle, i, j, msg as integer
+dim xobj, xtitel, xfolge, xtag, xgruppe, xrmkz, xeryth, xadat, xbnr, xdla, xaufruf, datei, y0, y1, y2, pfad_datei, source as string 
+i = 0
+j=3
+y1 = " "
+y2 = "_"
+
+HostFieldGetData("aufruf",y0)
+xaufruf = Replace(y0, y1, y2, 0)
+
+datei = "Remiaufruf_vom_" + xaufruf + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "Aufruf")
+ddepoke( ddehandle, "Z1S2", xaufruf)
+
+ddepoke( ddehandle, "Z2S1", "Tag")
+ddepoke( ddehandle, "Z2S2", "Gruppe")
+ddepoke( ddehandle, "Z2S3", "Obnr")
+ddepoke( ddehandle, "Z2S4", "Folge")
+ddepoke( ddehandle, "Z2S5", "Titel")
+ddepoke( ddehandle, "Z2S6", "RMKZ")
+ddepoke( ddehandle, "Z2S7", "eryth")
+ddepoke( ddehandle, "Z2S8", "EVT")
+ddepoke( ddehandle, "Z2S10", "Folge aktuell")
+ddepoke( ddehandle, "Z2S11", "geliefert am")
+
+nochmal:
+
+HostFieldGetLineData("xxwt", i, xtag)
+HostFieldGetLineData("xxregr", i, xgruppe)
+HostFieldGetLineData("xxobj", i, xobj)
+HostFieldGetLineData("xxfolg", i, xfolge)
+HostFieldGetLineData("atname", i, xtitel)
+HostFieldGetLineData("xxkzrm", i, xrmkz)
+HostFieldGetLineData("aterrh", i, xeryth)
+HostFieldGetLineData("xxadat", i, xadat)
+HostFieldGetLineData("xxbnr", i, xbnr)
+HostFieldGetLineData("xxdla", i, xdla)
+
+
+if (xfolge <> "")  then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xtag)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xgruppe)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xobj)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xfolge)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xtitel)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xrmkz)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xeryth)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xadat)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xbnr)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xdla)
+
+j=j+1
+endif
+
+if i < 17 then
+i=i+1
+goto nochmal
+endif
+ 
+if xfolge <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

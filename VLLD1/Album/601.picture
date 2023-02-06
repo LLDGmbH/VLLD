@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="LLD_OBJ/GV25DS(FORMAT1)" library="LLD_OBJ" member_name="GV25DS">
+    <size cx="80" cy="24"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <action key="roll_up" caption="ROLL_UP" attention_key="false"/>
+    <action key="help" caption="HELP" attention_key="false"/>
+    <field field_type="screen_part" name="FORMAT1">
+      <area>
+        <position/>
+        <size cx="80" cy="24"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+      <area>
+        <position x="1"/>
+        <size cx="18" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="VERKÄUFE JE GESCHÄFTSART" display_length="24" data_length="24">
+      <area>
+        <position x="28"/>
+        <size cx="24" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+      <area>
+        <position x="63"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+      <area>
+        <position x="72"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="JOB" short_name="JOB" data_type="alphanumeric" display_length="10" data_length="10">
+      <area>
+        <position x="1" y="1"/>
+        <size cx="10" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="USER" short_name="USER" data_type="alphanumeric" display_length="10" data_length="10">
+      <area>
+        <position x="63" y="1"/>
+        <size cx="10" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="GV25" display_length="4" data_length="4">
+      <area>
+        <position x="76" y="1"/>
+        <size cx="4" cy="1"/>
+      </area>
+      <color foreground="yellow"/>
+    </field>
+    <field field_type="fixed_text" value="Objn Titel  VDZ-Nr  V.Int.Nr EhCd Teil    Verlag " display_length="49" data_length="49" underline="true">
+      <area>
+        <position x="1" y="2"/>
+        <size cx="49" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="both" name="OBJNR" short_name="OBJNR" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" exit_required="true">
+      <area>
+        <position x="1" y="3"/>
+        <size cx="4" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="input" name="STITEL" short_name="STITEL" data_type="alphanumeric" display_length="6" data_length="6" underline="true">
+      <area>
+        <position x="6" y="3"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="input" name="VDZ" short_name="VDZ" data_type="zoned_decimal" display_length="5" data_length="5" underline="true">
+      <area>
+        <position x="13" y="3"/>
+        <size cx="5" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="input" name="VINR" short_name="VINR" data_type="alphanumeric" display_length="6" data_length="6" underline="true">
+      <area>
+        <position x="22" y="3"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="input" name="EHCD" short_name="EHCD" data_type="zoned_decimal" display_length="2" data_length="2" underline="true">
+      <area>
+        <position x="31" y="3"/>
+        <size cx="2" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="input" name="TTITEL" short_name="TTITEL" data_type="alphanumeric" display_length="6" data_length="6" underline="true">
+      <area>
+        <position x="35" y="3"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="input" name="SVNR" short_name="SVNR" data_type="zoned_decimal" display_length="4" data_length="4" underline="true">
+      <area>
+        <position x="44" y="3"/>
+        <size cx="4" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="Objektbezeichnung" display_length="17" data_length="17">
+      <area>
+        <position x="1" y="5"/>
+        <size cx="17" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21">
+      <area>
+        <position x="20" y="5"/>
+        <size cx="21" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="Ausgeliefert:" display_length="13" data_length="13">
+      <area>
+        <position x="55" y="5"/>
+        <size cx="13" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ATBNR8" short_name="ATBNR8" data_type="zoned_decimal" display_length="9" data_length="8">
+      <area>
+        <position x="69" y="5"/>
+        <size cx="9" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Aufgerufen  :" display_length="13" data_length="13">
+      <area>
+        <position x="55" y="6"/>
+        <size cx="13" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ATANR8" short_name="ATANR8" data_type="zoned_decimal" display_length="9" data_length="8">
+      <area>
+        <position x="69" y="6"/>
+        <size cx="9" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Geschäftsart    :" display_length="17" data_length="17">
+      <area>
+        <position x="1" y="7"/>
+        <size cx="17" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="EGART" short_name="EGART" data_type="zoned_decimal" display_length="2" data_length="2" underline="true">
+      <area>
+        <position x="20" y="7"/>
+        <size cx="2" cy="1"/>
+      </area>
+      <color foreground="magenta"/>
+    </field>
+    <field field_type="field" usage="both" name="EGAUG" short_name="EGAUG" data_type="zoned_decimal" display_length="2" data_length="2" underline="true">
+      <area>
+        <position x="23" y="7"/>
+        <size cx="2" cy="1"/>
+      </area>
+      <color foreground="magenta"/>
+    </field>
+    <field field_type="field" usage="output" name="GTXT" short_name="GTXT" data_type="alphanumeric" display_length="26" data_length="26">
+      <area>
+        <position x="26" y="7"/>
+        <size cx="26" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Abgerechnet :" display_length="13" data_length="13">
+      <area>
+        <position x="55" y="7"/>
+        <size cx="13" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ATRNR8" short_name="ATRNR8" data_type="zoned_decimal" display_length="9" data_length="8">
+      <area>
+        <position x="69" y="7"/>
+        <size cx="9" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Folgen     :" display_length="12" data_length="12">
+      <area>
+        <position x="1" y="11"/>
+        <size cx="12" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ATFO01" short_name="ATFO01" data_type="zoned_decimal" display_length="7" data_length="6" underline="true">
+      <area>
+        <position x="14" y="11"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="ATFO02" short_name="ATFO02" data_type="zoned_decimal" display_length="7" data_length="6" underline="true">
+      <area>
+        <position x="22" y="11"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="ATFO03" short_name="ATFO03" data_type="zoned_decimal" display_length="7" data_length="6" underline="true">
+      <area>
+        <position x="30" y="11"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="ATFO04" short_name="ATFO04" data_type="zoned_decimal" display_length="7" data_length="6" underline="true">
+      <area>
+        <position x="38" y="11"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="ATFO05" short_name="ATFO05" data_type="zoned_decimal" display_length="7" data_length="6" underline="true">
+      <area>
+        <position x="46" y="11"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="ATFO06" short_name="ATFO06" data_type="zoned_decimal" display_length="7" data_length="6" underline="true">
+      <area>
+        <position x="54" y="11"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="ATFO07" short_name="ATFO07" data_type="zoned_decimal" display_length="7" data_length="6" underline="true">
+      <area>
+        <position x="62" y="11"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="ATFO08" short_name="ATFO08" data_type="zoned_decimal" display_length="7" data_length="6" underline="true">
+      <area>
+        <position x="70" y="11"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="Bezug      :" display_length="12" data_length="12">
+      <area>
+        <position x="1" y="13"/>
+        <size cx="12" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BEZ1" short_name="BEZ1" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="15" y="13"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="BEZ2" short_name="BEZ2" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="23" y="13"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="BEZ3" short_name="BEZ3" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="31" y="13"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="BEZ4" short_name="BEZ4" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="39" y="13"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="BEZ5" short_name="BEZ5" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="47" y="13"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="BEZ6" short_name="BEZ6" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="55" y="13"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="BEZ7" short_name="BEZ7" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="63" y="13"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="BEZ8" short_name="BEZ8" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="71" y="13"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="Remission  :" display_length="12" data_length="12">
+      <area>
+        <position x="1" y="14"/>
+        <size cx="12" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="REMI1" short_name="REMI1" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="15" y="14"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="REMI2" short_name="REMI2" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="23" y="14"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="REMI3" short_name="REMI3" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="31" y="14"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="REMI4" short_name="REMI4" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="39" y="14"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="REMI5" short_name="REMI5" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="47" y="14"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="REMI6" short_name="REMI6" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="55" y="14"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="REMI7" short_name="REMI7" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="63" y="14"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="REMI8" short_name="REMI8" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="71" y="14"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="------" display_length="6" data_length="6">
+      <area>
+        <position x="15" y="15"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="------" display_length="6" data_length="6">
+      <area>
+        <position x="23" y="15"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="------" display_length="6" data_length="6">
+      <area>
+        <position x="31" y="15"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="------" display_length="6" data_length="6">
+      <area>
+        <position x="39" y="15"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="------" display_length="6" data_length="6">
+      <area>
+        <position x="47" y="15"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="------" display_length="6" data_length="6">
+      <area>
+        <position x="55" y="15"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="------" display_length="6" data_length="6">
+      <area>
+        <position x="63" y="15"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="------" display_length="6" data_length="6">
+      <area>
+        <position x="71" y="15"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Verkauf    :" display_length="12" data_length="12">
+      <area>
+        <position x="1" y="16"/>
+        <size cx="12" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="VERK1" short_name="VERK1" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="15" y="16"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="VERK2" short_name="VERK2" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="23" y="16"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="VERK3" short_name="VERK3" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="31" y="16"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="VERK4" short_name="VERK4" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="39" y="16"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="VERK5" short_name="VERK5" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="47" y="16"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="VERK6" short_name="VERK6" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="55" y="16"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="VERK7" short_name="VERK7" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="63" y="16"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="VERK8" short_name="VERK8" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="71" y="16"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="Ges.Verkauf:" display_length="12" data_length="12">
+      <area>
+        <position x="1" y="18"/>
+        <size cx="12" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GSVERK1" short_name="GSVERK1" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="15" y="18"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="GSVERK2" short_name="GSVERK2" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="23" y="18"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="GSVERK3" short_name="GSVERK3" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="31" y="18"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="GSVERK4" short_name="GSVERK4" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="39" y="18"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="GSVERK5" short_name="GSVERK5" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="47" y="18"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="GSVERK6" short_name="GSVERK6" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="55" y="18"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="GSVERK7" short_name="GSVERK7" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="63" y="18"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="GSVERK8" short_name="GSVERK8" data_type="zoned_decimal" display_length="7" data_length="6">
+      <area>
+        <position x="71" y="18"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="% Anteil   :" display_length="12" data_length="12">
+      <area>
+        <position x="1" y="20"/>
+        <size cx="12" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="PROZ1" short_name="PROZ1" data_type="zoned_decimal" display_length="7" data_length="5" decimal_positions="2">
+      <area>
+        <position x="15" y="20"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="PROZ2" short_name="PROZ2" data_type="zoned_decimal" display_length="7" data_length="5" decimal_positions="2">
+      <area>
+        <position x="23" y="20"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="PROZ3" short_name="PROZ3" data_type="zoned_decimal" display_length="7" data_length="5" decimal_positions="2">
+      <area>
+        <position x="31" y="20"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="PROZ4" short_name="PROZ4" data_type="zoned_decimal" display_length="7" data_length="5" decimal_positions="2">
+      <area>
+        <position x="39" y="20"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="PROZ5" short_name="PROZ5" data_type="zoned_decimal" display_length="7" data_length="5" decimal_positions="2">
+      <area>
+        <position x="47" y="20"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="PROZ6" short_name="PROZ6" data_type="zoned_decimal" display_length="7" data_length="5" decimal_positions="2">
+      <area>
+        <position x="55" y="20"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="PROZ7" short_name="PROZ7" data_type="zoned_decimal" display_length="7" data_length="5" decimal_positions="2">
+      <area>
+        <position x="63" y="20"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="PROZ8" short_name="PROZ8" data_type="zoned_decimal" display_length="7" data_length="5" decimal_positions="2">
+      <area>
+        <position x="71" y="20"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="Systemnachricht" display_length="15" data_length="15">
+      <area>
+        <position x="1" y="22"/>
+        <size cx="15" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="MSG" short_name="MSG" data_type="alphanumeric" display_length="60" data_length="60" blink="conditional">
+      <area>
+        <position x="17" y="22"/>
+        <size cx="60" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="fixed_text" value="F3=Verlassen; F4=Liste Geschäftsarten; F9=Zählen" display_length="48" data_length="48">
+      <area>
+        <position x="1" y="23"/>
+        <size cx="48" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

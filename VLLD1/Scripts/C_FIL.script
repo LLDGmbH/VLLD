@@ -1,0 +1,47 @@
+﻿global filiale as string
+dim text, xxfil, ErrorMsg as String
+dim rc as Integer
+
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+
+rc = EzSQLQuery("SELECT digits(filfil), digits(filfil) concat ' ' concat filnam FROM GRFILP order by filfil", text, ErrorMsg)
+
+PanelFieldSetProp ("f1fil", 5, text)  
+
+
+HostFieldGetData("f1fil", xxfil)
+
+
+if xxfil = "00" then
+filiale = "0"
+endif
+if xxfil = "01" then
+filiale = "1"
+endif
+if xxfil = "02" then
+filiale = "2"
+endif
+if xxfil = "03" then
+filiale = "3"
+endif
+if xxfil = "04" then
+filiale = "4"
+endif
+if xxfil = "05" then
+filiale = "5"
+endif
+if xxfil = "06" then
+filiale = "6"
+endif
+if xxfil = "07" then
+filiale = "7"
+endif
+if xxfil = "08" then
+filiale = "8"
+endif
+if xxfil = "09" then
+filiale = "9"
+endif
+
+PanelUpdateEnable(2)

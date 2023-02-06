@@ -1,0 +1,12 @@
+﻿global filiale as string
+dim text, xxfil, ErrorMsg, txt as String
+dim rc as Integer
+
+
+rc = EzSQLQuery("SELECT dxdepot, digits(dxdepot) concat ' - ' concat dxtext FROM GRDPXP  where digits(dxfil) = " + xxfil + " order by dxdepot", text, ErrorMsg)
+
+PanelFieldSetProp ("kdfinr", 5, text)  
+  
+
+
+PanelUpdateEnable(2)

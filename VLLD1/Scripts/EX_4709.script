@@ -1,0 +1,53 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xdmvlnr, xdmobj, xta, xwt, xatname, xdmname, xdatum, errmsg, datei, pfad_datei, source as string 
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Konkurrenzzahlen.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "Verlag")
+ddepoke( ddehandle, "Z1S2", "VDZ-Nr")
+ddepoke( ddehandle, "Z1S3", "TA")
+ddepoke( ddehandle, "Z1S4", "WT")
+ddepoke( ddehandle, "Z1S5", "Name")
+ddepoke( ddehandle, "Z1S6", "Empfänger")
+ddepoke( ddehandle, "Z1S7", "Datum")
+
+nochmal:
+
+HostFieldGetLineData("dmvlnr", i, xdmvlnr)
+HostFieldGetLineData("dmobj",  i, xdmobj)
+HostFieldGetLineData("ta",     i, xta)
+HostFieldGetLineData("wt",     i, xwt)
+HostFieldGetLineData("atname", i, xatname)
+HostFieldGetLineData("dmname", i, xdmname)
+HostFieldGetLineData("datum",  i, xdatum)
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", xdmvlnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xdmobj)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xta)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xwt)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xatname)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xdmname)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xdatum)
+
+j=j+1
+
+if i < 15 then
+i=i+1
+goto nochmal
+endif
+ 
+if xdmvlnr <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

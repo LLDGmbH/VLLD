@@ -1,0 +1,1633 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="LZSRC/CHECKRUNDS(CTLSF1+FUSS)" library="LZSRC" member_name="CHECKRUNDS">
+    <size cx="132" cy="27"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f12" caption="F12" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <field field_type="screen_part" name="CTLSF1" overlay="true">
+      <area>
+        <position/>
+        <size cx="132" cy="26"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="FUSS">
+      <area>
+        <position y="26"/>
+        <size cx="132" cy="1"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="fixed_text" value="CHECKRUND" display_length="9" data_length="9">
+          <area>
+            <position x="123"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="fixed_text" value="Anzeige der Objekte welche nicht Abrufdatum Freitag haben und Rundschreiben = J " display_length="80" data_length="80">
+          <area>
+            <position x="23" y="1"/>
+            <size cx="80" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="Objnr." display_length="6" data_length="6">
+          <area>
+            <position x="4" y="3"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="Titel" display_length="5" data_length="5">
+          <area>
+            <position x="13" y="3"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="EH-CD" display_length="5" data_length="5">
+          <area>
+            <position x="36" y="3"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="Remischein" display_length="10" data_length="10">
+          <area>
+            <position x="44" y="3"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="EW" display_length="2" data_length="2">
+          <area>
+            <position x="56" y="3"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="Rundschreiben" display_length="13" data_length="13">
+          <area>
+            <position x="61" y="3"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="Folge" display_length="5" data_length="5">
+          <area>
+            <position x="77" y="3"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="Remi-Datum" display_length="10" data_length="10">
+          <area>
+            <position x="87" y="3"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="Disponent" display_length="9" data_length="9">
+          <area>
+            <position x="104" y="3"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="Dsp-Satz !" display_length="10" data_length="10">
+          <area>
+            <position x="121" y="3"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="----------------------------------------------------------------------------------------------------------------------------------" display_length="130" data_length="130">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="130" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="5" y="5"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="13" y="5"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHCD" short_name="ATEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="5"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHUG" short_name="ATEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="39" y="5"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATKZRM" short_name="ATKZRM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="49" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATERRH" short_name="ATERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATXA01" short_name="ATXA01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="66" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSFOL8" short_name="DSFOL8" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="76" y="5"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSAUF8G" short_name="DSAUF8G" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="87" y="5"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NAME" short_name="NAME" data_type="alphanumeric" display_length="16" data_length="16" conditional="true">
+          <area>
+            <position x="104" y="5"/>
+            <size cx="16" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSPSATZ" short_name="DSPSATZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="124" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="5" y="6"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="13" y="6"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHCD" short_name="ATEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="6"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHUG" short_name="ATEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="39" y="6"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATKZRM" short_name="ATKZRM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="49" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATERRH" short_name="ATERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATXA01" short_name="ATXA01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="66" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSFOL8" short_name="DSFOL8" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="76" y="6"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSAUF8G" short_name="DSAUF8G" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="87" y="6"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NAME" short_name="NAME" data_type="alphanumeric" display_length="16" data_length="16" conditional="true">
+          <area>
+            <position x="104" y="6"/>
+            <size cx="16" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSPSATZ" short_name="DSPSATZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="124" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="5" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="13" y="7"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHCD" short_name="ATEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="7"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHUG" short_name="ATEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="39" y="7"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATKZRM" short_name="ATKZRM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="49" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATERRH" short_name="ATERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATXA01" short_name="ATXA01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="66" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSFOL8" short_name="DSFOL8" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="76" y="7"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSAUF8G" short_name="DSAUF8G" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="87" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NAME" short_name="NAME" data_type="alphanumeric" display_length="16" data_length="16" conditional="true">
+          <area>
+            <position x="104" y="7"/>
+            <size cx="16" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSPSATZ" short_name="DSPSATZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="124" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="5" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="13" y="8"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHCD" short_name="ATEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="8"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHUG" short_name="ATEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="39" y="8"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATKZRM" short_name="ATKZRM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="49" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATERRH" short_name="ATERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATXA01" short_name="ATXA01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="66" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSFOL8" short_name="DSFOL8" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="76" y="8"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSAUF8G" short_name="DSAUF8G" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="87" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NAME" short_name="NAME" data_type="alphanumeric" display_length="16" data_length="16" conditional="true">
+          <area>
+            <position x="104" y="8"/>
+            <size cx="16" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSPSATZ" short_name="DSPSATZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="124" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="5" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="13" y="9"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHCD" short_name="ATEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="9"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHUG" short_name="ATEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="39" y="9"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATKZRM" short_name="ATKZRM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="49" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATERRH" short_name="ATERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATXA01" short_name="ATXA01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="66" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSFOL8" short_name="DSFOL8" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="76" y="9"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSAUF8G" short_name="DSAUF8G" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="87" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NAME" short_name="NAME" data_type="alphanumeric" display_length="16" data_length="16" conditional="true">
+          <area>
+            <position x="104" y="9"/>
+            <size cx="16" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSPSATZ" short_name="DSPSATZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="124" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="5" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="13" y="10"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHCD" short_name="ATEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="10"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHUG" short_name="ATEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="39" y="10"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATKZRM" short_name="ATKZRM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="49" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATERRH" short_name="ATERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATXA01" short_name="ATXA01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="66" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSFOL8" short_name="DSFOL8" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="76" y="10"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSAUF8G" short_name="DSAUF8G" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="87" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NAME" short_name="NAME" data_type="alphanumeric" display_length="16" data_length="16" conditional="true">
+          <area>
+            <position x="104" y="10"/>
+            <size cx="16" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSPSATZ" short_name="DSPSATZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="124" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="5" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="13" y="11"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHCD" short_name="ATEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="11"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHUG" short_name="ATEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="39" y="11"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATKZRM" short_name="ATKZRM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="49" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATERRH" short_name="ATERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATXA01" short_name="ATXA01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="66" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSFOL8" short_name="DSFOL8" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="76" y="11"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSAUF8G" short_name="DSAUF8G" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="87" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NAME" short_name="NAME" data_type="alphanumeric" display_length="16" data_length="16" conditional="true">
+          <area>
+            <position x="104" y="11"/>
+            <size cx="16" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSPSATZ" short_name="DSPSATZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="124" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="5" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="13" y="12"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHCD" short_name="ATEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="12"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHUG" short_name="ATEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="39" y="12"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATKZRM" short_name="ATKZRM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="49" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATERRH" short_name="ATERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATXA01" short_name="ATXA01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="66" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSFOL8" short_name="DSFOL8" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="76" y="12"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSAUF8G" short_name="DSAUF8G" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="87" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NAME" short_name="NAME" data_type="alphanumeric" display_length="16" data_length="16" conditional="true">
+          <area>
+            <position x="104" y="12"/>
+            <size cx="16" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSPSATZ" short_name="DSPSATZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="124" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="5" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="13" y="13"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHCD" short_name="ATEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="13"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHUG" short_name="ATEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="39" y="13"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATKZRM" short_name="ATKZRM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="49" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATERRH" short_name="ATERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATXA01" short_name="ATXA01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="66" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSFOL8" short_name="DSFOL8" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="76" y="13"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSAUF8G" short_name="DSAUF8G" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="87" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NAME" short_name="NAME" data_type="alphanumeric" display_length="16" data_length="16" conditional="true">
+          <area>
+            <position x="104" y="13"/>
+            <size cx="16" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSPSATZ" short_name="DSPSATZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="124" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="5" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="13" y="14"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHCD" short_name="ATEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="14"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHUG" short_name="ATEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="39" y="14"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATKZRM" short_name="ATKZRM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="49" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATERRH" short_name="ATERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATXA01" short_name="ATXA01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="66" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSFOL8" short_name="DSFOL8" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="76" y="14"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSAUF8G" short_name="DSAUF8G" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="87" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NAME" short_name="NAME" data_type="alphanumeric" display_length="16" data_length="16" conditional="true">
+          <area>
+            <position x="104" y="14"/>
+            <size cx="16" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSPSATZ" short_name="DSPSATZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="124" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="5" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="13" y="15"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHCD" short_name="ATEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="15"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHUG" short_name="ATEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="39" y="15"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATKZRM" short_name="ATKZRM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="49" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATERRH" short_name="ATERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATXA01" short_name="ATXA01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="66" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSFOL8" short_name="DSFOL8" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="76" y="15"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSAUF8G" short_name="DSAUF8G" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="87" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NAME" short_name="NAME" data_type="alphanumeric" display_length="16" data_length="16" conditional="true">
+          <area>
+            <position x="104" y="15"/>
+            <size cx="16" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSPSATZ" short_name="DSPSATZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="124" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="5" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="13" y="16"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHCD" short_name="ATEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="16"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHUG" short_name="ATEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="39" y="16"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATKZRM" short_name="ATKZRM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="49" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATERRH" short_name="ATERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATXA01" short_name="ATXA01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="66" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSFOL8" short_name="DSFOL8" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="76" y="16"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSAUF8G" short_name="DSAUF8G" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="87" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NAME" short_name="NAME" data_type="alphanumeric" display_length="16" data_length="16" conditional="true">
+          <area>
+            <position x="104" y="16"/>
+            <size cx="16" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSPSATZ" short_name="DSPSATZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="124" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="5" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="13" y="17"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHCD" short_name="ATEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="17"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHUG" short_name="ATEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="39" y="17"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATKZRM" short_name="ATKZRM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="49" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATERRH" short_name="ATERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATXA01" short_name="ATXA01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="66" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSFOL8" short_name="DSFOL8" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="76" y="17"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSAUF8G" short_name="DSAUF8G" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="87" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NAME" short_name="NAME" data_type="alphanumeric" display_length="16" data_length="16" conditional="true">
+          <area>
+            <position x="104" y="17"/>
+            <size cx="16" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSPSATZ" short_name="DSPSATZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="124" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="5" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="13" y="18"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHCD" short_name="ATEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="18"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHUG" short_name="ATEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="39" y="18"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATKZRM" short_name="ATKZRM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="49" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATERRH" short_name="ATERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATXA01" short_name="ATXA01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="66" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSFOL8" short_name="DSFOL8" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="76" y="18"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSAUF8G" short_name="DSAUF8G" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="87" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NAME" short_name="NAME" data_type="alphanumeric" display_length="16" data_length="16" conditional="true">
+          <area>
+            <position x="104" y="18"/>
+            <size cx="16" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSPSATZ" short_name="DSPSATZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="124" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="5" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="13" y="19"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHCD" short_name="ATEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="19"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHUG" short_name="ATEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="39" y="19"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATKZRM" short_name="ATKZRM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="49" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATERRH" short_name="ATERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATXA01" short_name="ATXA01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="66" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSFOL8" short_name="DSFOL8" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="76" y="19"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSAUF8G" short_name="DSAUF8G" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="87" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NAME" short_name="NAME" data_type="alphanumeric" display_length="16" data_length="16" conditional="true">
+          <area>
+            <position x="104" y="19"/>
+            <size cx="16" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSPSATZ" short_name="DSPSATZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="124" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="5" y="20"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="13" y="20"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHCD" short_name="ATEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="20"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHUG" short_name="ATEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="39" y="20"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATKZRM" short_name="ATKZRM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="49" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATERRH" short_name="ATERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATXA01" short_name="ATXA01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="66" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSFOL8" short_name="DSFOL8" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="76" y="20"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSAUF8G" short_name="DSAUF8G" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="87" y="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NAME" short_name="NAME" data_type="alphanumeric" display_length="16" data_length="16" conditional="true">
+          <area>
+            <position x="104" y="20"/>
+            <size cx="16" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSPSATZ" short_name="DSPSATZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="124" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="5" y="21"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="13" y="21"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHCD" short_name="ATEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="21"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHUG" short_name="ATEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="39" y="21"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATKZRM" short_name="ATKZRM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="49" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATERRH" short_name="ATERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATXA01" short_name="ATXA01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="66" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSFOL8" short_name="DSFOL8" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="76" y="21"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSAUF8G" short_name="DSAUF8G" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="87" y="21"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NAME" short_name="NAME" data_type="alphanumeric" display_length="16" data_length="16" conditional="true">
+          <area>
+            <position x="104" y="21"/>
+            <size cx="16" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSPSATZ" short_name="DSPSATZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="124" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="5" y="22"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="13" y="22"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHCD" short_name="ATEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="22"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHUG" short_name="ATEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="39" y="22"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATKZRM" short_name="ATKZRM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="49" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATERRH" short_name="ATERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATXA01" short_name="ATXA01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="66" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSFOL8" short_name="DSFOL8" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="76" y="22"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSAUF8G" short_name="DSAUF8G" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="87" y="22"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NAME" short_name="NAME" data_type="alphanumeric" display_length="16" data_length="16" conditional="true">
+          <area>
+            <position x="104" y="22"/>
+            <size cx="16" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSPSATZ" short_name="DSPSATZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="124" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="5" y="23"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="13" y="23"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHCD" short_name="ATEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="23"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHUG" short_name="ATEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="39" y="23"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATKZRM" short_name="ATKZRM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="49" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATERRH" short_name="ATERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATXA01" short_name="ATXA01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="66" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSFOL8" short_name="DSFOL8" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="76" y="23"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSAUF8G" short_name="DSAUF8G" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="87" y="23"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NAME" short_name="NAME" data_type="alphanumeric" display_length="16" data_length="16" conditional="true">
+          <area>
+            <position x="104" y="23"/>
+            <size cx="16" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSPSATZ" short_name="DSPSATZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="124" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="5" y="24"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="13" y="24"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHCD" short_name="ATEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="24"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATEHUG" short_name="ATEHUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="39" y="24"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATKZRM" short_name="ATKZRM" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="49" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATERRH" short_name="ATERRH" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="57" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATXA01" short_name="ATXA01" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="66" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSFOL8" short_name="DSFOL8" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="76" y="24"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSAUF8G" short_name="DSAUF8G" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="87" y="24"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NAME" short_name="NAME" data_type="alphanumeric" display_length="16" data_length="16" conditional="true">
+          <area>
+            <position x="104" y="24"/>
+            <size cx="16" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DSPSATZ" short_name="DSPSATZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="124" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+      </field>
+      <field field_type="subfile_end_more" value="Weitere ... " display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="119" y="25"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+      <field field_type="subfile_end_bottom" value="Ende        " display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="119" y="25"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="F3 = Beenden des Programmes" display_length="27" data_length="27">
+      <area>
+        <position x="1" y="26"/>
+        <size cx="27" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="© Gerd Gerstmann" display_length="16" data_length="16">
+      <area>
+        <position x="115" y="26"/>
+        <size cx="16" cy="1"/>
+      </area>
+      <color foreground="red"/>
+    </field>
+  </screen>
+</header>

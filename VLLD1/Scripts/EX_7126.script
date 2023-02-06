@@ -1,0 +1,61 @@
+﻿global filiale as string
+DIM ddehandle, i, j, msg, rc as integer
+dim xTitel, xPNr, xBuDat, xAnzPos, xKdNr, xFF, xKNam, xPLZ, xORT, xRemP as string
+dim source, ErrMsg, Datei, pfad_datei as string
+
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+HostFieldGetData("s4PNr", xPNr)
+HostFieldGetData("s4BuDat", xBuDat)
+HostFieldGetData("s4AnzP", xAnzPos)
+xTitel = "Paket " + xPNr + ", vom " + xBuDat + ", Anzahl Pos.: " + xAnzPos
+
+datei = "Pakete_unbekannte_Remi_" + xPNr + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", xtitel)
+
+ddepoke( ddehandle, "Z2S1",  "KdNr")
+ddepoke( ddehandle, "Z2S2",  "Fahrfolge")
+ddepoke( ddehandle, "Z2S3",  "Kunde")
+ddepoke( ddehandle, "Z2S4",  "PLZ")
+ddepoke( ddehandle, "Z2S5",  "Ort")
+ddepoke( ddehandle, "Z2S6",  "RemP")
+
+nochmal:
+
+HostFieldGetLineData("s4KdNr" ,  i, xKdNr)
+HostFieldGetLineData("s4FF"   ,  i, xFF)
+HostFieldGetLineData("s4Name" ,  i, xKNam)
+HostFieldGetLineData("s4PLZ"  ,  i, xPLZ)
+HostFieldGetLineData("s4Ort"  ,  i, xOrt)
+HostFieldGetLineData("s4AnzRP",  i, xRemP)
+
+if (xKdNr <> "") then
+   ddepoke( ddehandle, "Z" + str(j) +"S1",  xKdNr)
+   ddepoke( ddehandle, "Z" + str(j) +"S2",  xFF)
+   ddepoke( ddehandle, "Z" + str(j) +"S3",  xKNam)
+   ddepoke( ddehandle, "Z" + str(j) +"S4",  xPLZ)
+   ddepoke( ddehandle, "Z" + str(j) +"S5",  xOrt)
+   ddepoke( ddehandle, "Z" + str(j) +"S6",  xRemP)
+   j=j+1 
+endif
+
+if (i < 19) then
+   i=i+1
+   goto nochmal
+endif
+ 
+if (xKdNr <> "") then
+   i=0
+   HostScreenSendKey("Page Down")
+   goto nochmal
+endif

@@ -1,0 +1,59 @@
+﻿global filiale as string
+DIM ddehandle, i, j, msg, rc as integer
+dim xvon, xbis, x01, x02, x03, x04, x05, x06, x07, x08, x09, x10, x11, x12, x13, x14, x15, x16, x17, x18, x19, x20, xende, errmsg, errormsg, datei, pfad_datei, source as string 
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+
+datei = "Toptitel 200.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z2S1", "Rang")
+ddepoke( ddehandle, "Z2S2", "Vnr")
+ddepoke( ddehandle, "Z2S3", "Verlag")
+ddepoke( ddehandle, "Z2S4", "Obnr")
+ddepoke( ddehandle, "Z2S5", "Titel")
+ddepoke( ddehandle, "Z2S6", "Umsatz")
+
+nochmal:
+
+HostFieldGetLineData("s1rang", i, x01)
+HostFieldGetLineData("s1vnr", i, x02)
+HostFieldGetLineData("s1vnam", i, x03)
+HostFieldGetLineData("s1obj", i, x04)
+HostFieldGetLineData("s1onam", i, x05)
+HostFieldGetLineData("s1ums", i, x06)
+
+
+if (x01 <> "")  then
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", x01)
+ddepoke( ddehandle, "Z" + str(j) +"S2", x02)
+ddepoke( ddehandle, "Z" + str(j) +"S3", x03)
+ddepoke( ddehandle, "Z" + str(j) +"S4", x04)
+ddepoke( ddehandle, "Z" + str(j) +"S5", x05)
+ddepoke( ddehandle, "Z" + str(j) +"S6", x06)
+
+
+j=j+1
+endif
+
+if i < 14 then
+i=i+1
+goto nochmal
+endif
+
+
+ 
+if x01 <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

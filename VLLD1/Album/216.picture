@@ -1,0 +1,927 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="LLD_OBJ/BZ32MUDS(SFC+FUSS)" library="LLD_OBJ" member_name="BZ32MUDS">
+    <size cx="80" cy="24"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <field field_type="screen_part" name="SFC" overlay="true">
+      <area>
+        <position/>
+        <size cx="80" cy="21"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="FUSS">
+      <area>
+        <position y="22"/>
+        <size cx="80" cy="1"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="BEZUGSÄNDERUNGEN" display_length="16" data_length="16">
+          <area>
+            <position x="31"/>
+            <size cx="16" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="63"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="72"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="BZ32" display_length="4" data_length="4">
+          <area>
+            <position x="75" y="1"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7">
+          <area>
+            <position x="1" y="2"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33">
+          <area>
+            <position x="9" y="2"/>
+            <size cx="33" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Such-Objekt:" display_length="12" data_length="12">
+          <area>
+            <position x="44" y="2"/>
+            <size cx="12" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="OBNR" short_name="OBNR" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" high_intensity="true">
+          <area>
+            <position x="57" y="2"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="ObNr Bezeichnung           Alt Neu R    Datum     Zeit Bediener                " display_length="79" data_length="79" underline="true">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="79" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="6" y="4"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ALT" short_name="ALT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="28" y="4"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NEU" short_name="NEU" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="32" y="4"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="RKZ" short_name="RKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="36" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DATUM" short_name="DATUM" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="38" y="4"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="TICTAC" short_name="TICTAC" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="4"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BED10" short_name="BED10" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="56" y="4"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="6" y="5"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ALT" short_name="ALT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="28" y="5"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NEU" short_name="NEU" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="32" y="5"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="RKZ" short_name="RKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="36" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DATUM" short_name="DATUM" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="38" y="5"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="TICTAC" short_name="TICTAC" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="5"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BED10" short_name="BED10" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="56" y="5"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="6" y="6"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ALT" short_name="ALT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="28" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NEU" short_name="NEU" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="32" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="RKZ" short_name="RKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="36" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DATUM" short_name="DATUM" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="38" y="6"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="TICTAC" short_name="TICTAC" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="6"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BED10" short_name="BED10" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="56" y="6"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="6" y="7"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ALT" short_name="ALT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="28" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NEU" short_name="NEU" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="32" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="RKZ" short_name="RKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="36" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DATUM" short_name="DATUM" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="38" y="7"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="TICTAC" short_name="TICTAC" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="7"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BED10" short_name="BED10" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="56" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="6" y="8"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ALT" short_name="ALT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="28" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NEU" short_name="NEU" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="32" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="RKZ" short_name="RKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="36" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DATUM" short_name="DATUM" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="38" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="TICTAC" short_name="TICTAC" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BED10" short_name="BED10" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="56" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="6" y="9"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ALT" short_name="ALT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="28" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NEU" short_name="NEU" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="32" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="RKZ" short_name="RKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="36" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DATUM" short_name="DATUM" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="38" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="TICTAC" short_name="TICTAC" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BED10" short_name="BED10" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="56" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="6" y="10"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ALT" short_name="ALT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="28" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NEU" short_name="NEU" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="32" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="RKZ" short_name="RKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="36" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DATUM" short_name="DATUM" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="38" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="TICTAC" short_name="TICTAC" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BED10" short_name="BED10" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="56" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="6" y="11"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ALT" short_name="ALT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="28" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NEU" short_name="NEU" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="32" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="RKZ" short_name="RKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="36" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DATUM" short_name="DATUM" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="38" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="TICTAC" short_name="TICTAC" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BED10" short_name="BED10" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="56" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="6" y="12"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ALT" short_name="ALT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="28" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NEU" short_name="NEU" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="32" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="RKZ" short_name="RKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="36" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DATUM" short_name="DATUM" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="38" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="TICTAC" short_name="TICTAC" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BED10" short_name="BED10" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="56" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="6" y="13"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ALT" short_name="ALT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="28" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NEU" short_name="NEU" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="32" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="RKZ" short_name="RKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="36" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DATUM" short_name="DATUM" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="38" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="TICTAC" short_name="TICTAC" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BED10" short_name="BED10" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="56" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="6" y="14"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ALT" short_name="ALT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="28" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NEU" short_name="NEU" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="32" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="RKZ" short_name="RKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="36" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DATUM" short_name="DATUM" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="38" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="TICTAC" short_name="TICTAC" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BED10" short_name="BED10" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="56" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="6" y="15"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ALT" short_name="ALT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="28" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NEU" short_name="NEU" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="32" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="RKZ" short_name="RKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="36" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DATUM" short_name="DATUM" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="38" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="TICTAC" short_name="TICTAC" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BED10" short_name="BED10" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="56" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="6" y="16"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ALT" short_name="ALT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="28" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NEU" short_name="NEU" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="32" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="RKZ" short_name="RKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="36" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DATUM" short_name="DATUM" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="38" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="TICTAC" short_name="TICTAC" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BED10" short_name="BED10" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="56" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="6" y="17"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ALT" short_name="ALT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="28" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NEU" short_name="NEU" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="32" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="RKZ" short_name="RKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="36" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DATUM" short_name="DATUM" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="38" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="TICTAC" short_name="TICTAC" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BED10" short_name="BED10" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="56" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="6" y="18"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ALT" short_name="ALT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="28" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NEU" short_name="NEU" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="32" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="RKZ" short_name="RKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="36" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DATUM" short_name="DATUM" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="38" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="TICTAC" short_name="TICTAC" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BED10" short_name="BED10" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="56" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="6" y="19"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ALT" short_name="ALT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="28" y="19"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NEU" short_name="NEU" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="32" y="19"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="RKZ" short_name="RKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="36" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DATUM" short_name="DATUM" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="38" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="TICTAC" short_name="TICTAC" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BED10" short_name="BED10" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="56" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="ATOBJ" short_name="ATOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="6" y="20"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ALT" short_name="ALT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="28" y="20"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="NEU" short_name="NEU" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="32" y="20"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="RKZ" short_name="RKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="36" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="DATUM" short_name="DATUM" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="38" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="TICTAC" short_name="TICTAC" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="BED10" short_name="BED10" data_type="alphanumeric" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="56" y="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="F3=Verlassen" display_length="12" data_length="12">
+      <area>
+        <position x="2" y="22"/>
+        <size cx="12" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

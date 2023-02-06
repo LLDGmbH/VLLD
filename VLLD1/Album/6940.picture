@@ -1,0 +1,848 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="OSNA_COL/LB40DS(SFC+KEY01)" library="OSNA_COL" member_name="LB40DS">
+    <size cx="132" cy="27"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f6" caption="F6" attention_key="false"/>
+    <action key="f21" caption="F21" attention_key="false"/>
+    <action key="f22" caption="F22" attention_key="false"/>
+    <action key="f23" caption="F23" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <field field_type="screen_part" name="SFC">
+      <area>
+        <position/>
+        <size cx="132" cy="24"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="KEY01" overlay="true">
+      <area>
+        <position y="26"/>
+        <size cx="132" cy="1"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Anzeige Historie Lagerbestandsbuchungen" display_length="39" data_length="39">
+          <area>
+            <position x="46"/>
+            <size cx="39" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="114"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="123"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="JOB" short_name="JOB" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="1" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="both" name="SC1_OBJ" short_name="SC1_OBJ" data_type="zoned_decimal" display_length="5" data_length="5" underline="true" high_intensity="true">
+          <area>
+            <position x="23" y="1"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SC1_ONAM" short_name="SC1_ONAM" data_type="alphanumeric" display_length="21" data_length="21">
+          <area>
+            <position x="29" y="1"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="USER" short_name="USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="114" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="LB40S1" display_length="6" data_length="6">
+          <area>
+            <position x="125" y="1"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="field" usage="output" name="SC1_OLNAM" short_name="SC1_OLNAM" data_type="alphanumeric" display_length="45" data_length="45">
+          <area>
+            <position x="29" y="2"/>
+            <size cx="45" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="    Folge      Datum     Zeit  NL Alt   NL Neu  VMP Alt  VMP Neu                                                                  " display_length="130" data_length="130" underline="true">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="130" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SF1_FOLG" short_name="SF1_FOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_DATEN" short_name="SF1_DATEN" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="11" y="4"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLALT" short_name="SF1_NLALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="31" y="4"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLNEU" short_name="SF1_NLNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="40" y="4"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPNEU" short_name="SF1_VMPNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="49" y="4"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPALT" short_name="SF1_VMPALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="58" y="4"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_FOLG" short_name="SF1_FOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_DATEN" short_name="SF1_DATEN" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="11" y="5"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLALT" short_name="SF1_NLALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="31" y="5"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLNEU" short_name="SF1_NLNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="40" y="5"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPNEU" short_name="SF1_VMPNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="49" y="5"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPALT" short_name="SF1_VMPALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="58" y="5"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_FOLG" short_name="SF1_FOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_DATEN" short_name="SF1_DATEN" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="11" y="6"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLALT" short_name="SF1_NLALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="31" y="6"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLNEU" short_name="SF1_NLNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="40" y="6"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPNEU" short_name="SF1_VMPNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="49" y="6"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPALT" short_name="SF1_VMPALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="58" y="6"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_FOLG" short_name="SF1_FOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_DATEN" short_name="SF1_DATEN" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="11" y="7"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLALT" short_name="SF1_NLALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="31" y="7"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLNEU" short_name="SF1_NLNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="40" y="7"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPNEU" short_name="SF1_VMPNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="49" y="7"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPALT" short_name="SF1_VMPALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="58" y="7"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SF1_FOLG" short_name="SF1_FOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_DATEN" short_name="SF1_DATEN" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="11" y="8"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLALT" short_name="SF1_NLALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="31" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLNEU" short_name="SF1_NLNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="40" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPNEU" short_name="SF1_VMPNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="49" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPALT" short_name="SF1_VMPALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="58" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_FOLG" short_name="SF1_FOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_DATEN" short_name="SF1_DATEN" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="11" y="9"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLALT" short_name="SF1_NLALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="31" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLNEU" short_name="SF1_NLNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="40" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPNEU" short_name="SF1_VMPNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="49" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPALT" short_name="SF1_VMPALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="58" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_FOLG" short_name="SF1_FOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_DATEN" short_name="SF1_DATEN" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="11" y="10"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLALT" short_name="SF1_NLALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="31" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLNEU" short_name="SF1_NLNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="40" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPNEU" short_name="SF1_VMPNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="49" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPALT" short_name="SF1_VMPALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="58" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_FOLG" short_name="SF1_FOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_DATEN" short_name="SF1_DATEN" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="11" y="11"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLALT" short_name="SF1_NLALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="31" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLNEU" short_name="SF1_NLNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="40" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPNEU" short_name="SF1_VMPNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="49" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPALT" short_name="SF1_VMPALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="58" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SF1_FOLG" short_name="SF1_FOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_DATEN" short_name="SF1_DATEN" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="11" y="12"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLALT" short_name="SF1_NLALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="31" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLNEU" short_name="SF1_NLNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="40" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPNEU" short_name="SF1_VMPNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="49" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPALT" short_name="SF1_VMPALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="58" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_FOLG" short_name="SF1_FOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_DATEN" short_name="SF1_DATEN" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="11" y="13"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLALT" short_name="SF1_NLALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="31" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLNEU" short_name="SF1_NLNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="40" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPNEU" short_name="SF1_VMPNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="49" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPALT" short_name="SF1_VMPALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="58" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_FOLG" short_name="SF1_FOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_DATEN" short_name="SF1_DATEN" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="11" y="14"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLALT" short_name="SF1_NLALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="31" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLNEU" short_name="SF1_NLNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="40" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPNEU" short_name="SF1_VMPNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="49" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPALT" short_name="SF1_VMPALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="58" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_FOLG" short_name="SF1_FOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_DATEN" short_name="SF1_DATEN" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="11" y="15"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLALT" short_name="SF1_NLALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="31" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLNEU" short_name="SF1_NLNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="40" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPNEU" short_name="SF1_VMPNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="49" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPALT" short_name="SF1_VMPALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="58" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SF1_FOLG" short_name="SF1_FOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_DATEN" short_name="SF1_DATEN" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="11" y="16"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLALT" short_name="SF1_NLALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="31" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLNEU" short_name="SF1_NLNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="40" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPNEU" short_name="SF1_VMPNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="49" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPALT" short_name="SF1_VMPALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="58" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_FOLG" short_name="SF1_FOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_DATEN" short_name="SF1_DATEN" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="11" y="17"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLALT" short_name="SF1_NLALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="31" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLNEU" short_name="SF1_NLNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="40" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPNEU" short_name="SF1_VMPNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="49" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPALT" short_name="SF1_VMPALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="58" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_FOLG" short_name="SF1_FOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_DATEN" short_name="SF1_DATEN" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="11" y="18"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLALT" short_name="SF1_NLALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="31" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLNEU" short_name="SF1_NLNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="40" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPNEU" short_name="SF1_VMPNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="49" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPALT" short_name="SF1_VMPALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="58" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_FOLG" short_name="SF1_FOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_DATEN" short_name="SF1_DATEN" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="11" y="19"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLALT" short_name="SF1_NLALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="31" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLNEU" short_name="SF1_NLNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="40" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPNEU" short_name="SF1_VMPNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="49" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPALT" short_name="SF1_VMPALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="58" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SF1_FOLG" short_name="SF1_FOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_DATEN" short_name="SF1_DATEN" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="11" y="20"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLALT" short_name="SF1_NLALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="31" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLNEU" short_name="SF1_NLNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="40" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPNEU" short_name="SF1_VMPNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="49" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPALT" short_name="SF1_VMPALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="58" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_FOLG" short_name="SF1_FOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="1" y="21"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_DATEN" short_name="SF1_DATEN" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="11" y="21"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLALT" short_name="SF1_NLALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="31" y="21"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLNEU" short_name="SF1_NLNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="40" y="21"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPNEU" short_name="SF1_VMPNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="49" y="21"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPALT" short_name="SF1_VMPALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="58" y="21"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_FOLG" short_name="SF1_FOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="1" y="22"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_DATEN" short_name="SF1_DATEN" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="11" y="22"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLALT" short_name="SF1_NLALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="31" y="22"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLNEU" short_name="SF1_NLNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="40" y="22"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPNEU" short_name="SF1_VMPNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="49" y="22"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPALT" short_name="SF1_VMPALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="58" y="22"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_FOLG" short_name="SF1_FOLG" data_type="zoned_decimal" display_length="9" data_length="8" conditional="true">
+          <area>
+            <position x="1" y="23"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_DATEN" short_name="SF1_DATEN" data_type="alphanumeric" display_length="19" data_length="19" conditional="true">
+          <area>
+            <position x="11" y="23"/>
+            <size cx="19" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLALT" short_name="SF1_NLALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="31" y="23"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_NLNEU" short_name="SF1_NLNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="40" y="23"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPNEU" short_name="SF1_VMPNEU" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="49" y="23"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SF1_VMPALT" short_name="SF1_VMPALT" data_type="zoned_decimal" display_length="8" data_length="7" conditional="true">
+          <area>
+            <position x="58" y="23"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="F3 = Ende; F6 = Obj.suchen" display_length="26" data_length="26">
+      <area>
+        <position x="1" y="26"/>
+        <size cx="26" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="MSG" short_name="MSG" data_type="alphanumeric" display_length="60" data_length="60">
+      <area>
+        <position x="71" y="26"/>
+        <size cx="60" cy="1"/>
+      </area>
+      <color foreground="red"/>
+    </field>
+  </screen>
+</header>

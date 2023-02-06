@@ -1,0 +1,17 @@
+﻿
+dim xfilial, xfil2, ErrorMsg,sqlstmd as String
+dim yfil1, yfil2 as integer
+yfil1 = 1
+yfil2 = 2
+
+HostFieldGetData("Filial",Xfilial)
+
+if xfilial = "2" then
+HostFieldPutData("fil2", 0, "01")
+endif
+
+if xfilial = "1" then
+HostFieldPutData("fil2", 0, "02")
+endif
+
+PanelUpdateEnable(2)

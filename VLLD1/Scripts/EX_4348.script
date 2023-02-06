@@ -1,0 +1,72 @@
+﻿DIM ddehandle, i, j, msg as integer
+dim xvdat, xbdat, xpos, xxxobj, xxxname, xxehcd, xxGBZ1, xxxverk, xums, xroerl,xxxkdnr, xkdname, datei, y0, y1, y2, pfad_datei, source as string 
+i = 0  
+j=4
+y1 = " "
+y2 = "_"
+
+HostFieldGetData("vdat",xvdat)
+HostFieldGetData("bdat",xbdat)
+HostFieldGetData("xxkdnr",xxxkdnr)
+HostFieldGetData("kdname",xkdname)
+
+datei = "Toptitel_" + xxxkdnr + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S2", xxxkdnr)
+ddepoke( ddehandle, "Z1S3", xkdname)
+ddepoke( ddehandle, "Z2S2", xvdat)
+ddepoke( ddehandle, "Z2S4", xbdat)
+
+ddepoke( ddehandle, "Z3S1", "Pos")
+ddepoke( ddehandle, "Z3S2", "Obnr")
+ddepoke( ddehandle, "Z3S3", "Titel")
+ddepoke( ddehandle, "Z3S4", "EH CD")
+ddepoke( ddehandle, "Z3S5", "Gbz")
+ddepoke( ddehandle, "Z3S6", "Verkauf")
+ddepoke( ddehandle, "Z3S7", "Umsatz")
+ddepoke( ddehandle, "Z3S8", "Roherlös")
+
+
+nochmal:
+
+HostFieldGetLineData("posnr"  , i, xpos)
+HostFieldGetLineData("xxobj"  , i, xxxobj)
+HostFieldGetLineData("xxname" , i, xxxname)
+HostFieldGetLineData("SF_EHCD", i, xxehcd)
+HostFieldGetLineData("GBZ1"   , i, xxGbz1)
+HostFieldGetLineData("xxverk" , i, xxxverk)
+HostFieldGetLineData("ums"    , i, xums)
+HostFieldGetLineData("roerl"  , i, xroerl)
+
+
+if (xxxname <> "Ende")  then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xpos)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xxxobj)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xxxname)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xxehcd)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xxGBZ1)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xxxverk)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xums)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xroerl)
+
+
+j=j+1
+endif
+
+if i < 15 then
+i=i+1
+goto nochmal
+endif
+
+ 
+if xpos <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

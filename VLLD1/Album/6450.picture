@@ -1,0 +1,835 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="SEATRUNK/MA60MUDS(SFC)" library="SEATRUNK" member_name="MA60MUDS">
+    <size cx="132" cy="27"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <field field_type="screen_part" name="SFC" overlay="true">
+      <area>
+        <position/>
+        <size cx="132" cy="24"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Sortimentsübersicht" display_length="19" data_length="19">
+          <area>
+            <position x="27"/>
+            <size cx="19" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="61"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="72"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="NGAGU" short_name="NGAGU" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" high_intensity="true">
+          <area>
+            <position x="2" y="1"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="NVTLKZ" short_name="NVTLKZ" data_type="zoned_decimal" display_length="9" data_length="9" underline="true" high_intensity="true">
+          <area>
+            <position x="7" y="1"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="NJAHR" short_name="NJAHR" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" high_intensity="true">
+          <area>
+            <position x="17" y="1"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="NMON" short_name="NMON" data_type="zoned_decimal" display_length="2" data_length="2" underline="true" high_intensity="true">
+          <area>
+            <position x="22" y="1"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="MA60MU" display_length="6" data_length="6">
+          <area>
+            <position x="72" y="1"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value=" EH Text                     V-Expl  V-Ums   G-Expl  G-Ums                    " display_length="78" data_length="78" underline="true">
+          <area>
+            <position x="1" y="2"/>
+            <size cx="78" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFEHCD" short_name="SFEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="2" y="3"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHTXT" short_name="SFEHTXT" data_type="alphanumeric" display_length="24" data_length="24" conditional="true">
+          <area>
+            <position x="5" y="3"/>
+            <size cx="24" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVEXPL" short_name="SFVEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="30" y="3"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVUMS" short_name="SFVUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="39" y="3"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGEXPL" short_name="SFGEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="48" y="3"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUMS" short_name="SFGUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="57" y="3"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHCD" short_name="SFEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="2" y="4"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHTXT" short_name="SFEHTXT" data_type="alphanumeric" display_length="24" data_length="24" conditional="true">
+          <area>
+            <position x="5" y="4"/>
+            <size cx="24" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVEXPL" short_name="SFVEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="30" y="4"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVUMS" short_name="SFVUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="39" y="4"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGEXPL" short_name="SFGEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="48" y="4"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUMS" short_name="SFGUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="57" y="4"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHCD" short_name="SFEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="2" y="5"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHTXT" short_name="SFEHTXT" data_type="alphanumeric" display_length="24" data_length="24" conditional="true">
+          <area>
+            <position x="5" y="5"/>
+            <size cx="24" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVEXPL" short_name="SFVEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="30" y="5"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVUMS" short_name="SFVUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="39" y="5"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGEXPL" short_name="SFGEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="48" y="5"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUMS" short_name="SFGUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="57" y="5"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFEHCD" short_name="SFEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="2" y="6"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHTXT" short_name="SFEHTXT" data_type="alphanumeric" display_length="24" data_length="24" conditional="true">
+          <area>
+            <position x="5" y="6"/>
+            <size cx="24" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVEXPL" short_name="SFVEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="30" y="6"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVUMS" short_name="SFVUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="39" y="6"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGEXPL" short_name="SFGEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="48" y="6"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUMS" short_name="SFGUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="57" y="6"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHCD" short_name="SFEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="2" y="7"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHTXT" short_name="SFEHTXT" data_type="alphanumeric" display_length="24" data_length="24" conditional="true">
+          <area>
+            <position x="5" y="7"/>
+            <size cx="24" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVEXPL" short_name="SFVEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="30" y="7"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVUMS" short_name="SFVUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="39" y="7"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGEXPL" short_name="SFGEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="48" y="7"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUMS" short_name="SFGUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="57" y="7"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHCD" short_name="SFEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="2" y="8"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHTXT" short_name="SFEHTXT" data_type="alphanumeric" display_length="24" data_length="24" conditional="true">
+          <area>
+            <position x="5" y="8"/>
+            <size cx="24" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVEXPL" short_name="SFVEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="30" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVUMS" short_name="SFVUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="39" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGEXPL" short_name="SFGEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="48" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUMS" short_name="SFGUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="57" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFEHCD" short_name="SFEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="2" y="9"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHTXT" short_name="SFEHTXT" data_type="alphanumeric" display_length="24" data_length="24" conditional="true">
+          <area>
+            <position x="5" y="9"/>
+            <size cx="24" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVEXPL" short_name="SFVEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="30" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVUMS" short_name="SFVUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="39" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGEXPL" short_name="SFGEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="48" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUMS" short_name="SFGUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="57" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHCD" short_name="SFEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="2" y="10"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHTXT" short_name="SFEHTXT" data_type="alphanumeric" display_length="24" data_length="24" conditional="true">
+          <area>
+            <position x="5" y="10"/>
+            <size cx="24" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVEXPL" short_name="SFVEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="30" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVUMS" short_name="SFVUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="39" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGEXPL" short_name="SFGEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="48" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUMS" short_name="SFGUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="57" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHCD" short_name="SFEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="2" y="11"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHTXT" short_name="SFEHTXT" data_type="alphanumeric" display_length="24" data_length="24" conditional="true">
+          <area>
+            <position x="5" y="11"/>
+            <size cx="24" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVEXPL" short_name="SFVEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="30" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVUMS" short_name="SFVUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="39" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGEXPL" short_name="SFGEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="48" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUMS" short_name="SFGUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="57" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFEHCD" short_name="SFEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="2" y="12"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHTXT" short_name="SFEHTXT" data_type="alphanumeric" display_length="24" data_length="24" conditional="true">
+          <area>
+            <position x="5" y="12"/>
+            <size cx="24" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVEXPL" short_name="SFVEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="30" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVUMS" short_name="SFVUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="39" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGEXPL" short_name="SFGEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="48" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUMS" short_name="SFGUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="57" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHCD" short_name="SFEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="2" y="13"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHTXT" short_name="SFEHTXT" data_type="alphanumeric" display_length="24" data_length="24" conditional="true">
+          <area>
+            <position x="5" y="13"/>
+            <size cx="24" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVEXPL" short_name="SFVEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="30" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVUMS" short_name="SFVUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="39" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGEXPL" short_name="SFGEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="48" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUMS" short_name="SFGUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="57" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHCD" short_name="SFEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="2" y="14"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHTXT" short_name="SFEHTXT" data_type="alphanumeric" display_length="24" data_length="24" conditional="true">
+          <area>
+            <position x="5" y="14"/>
+            <size cx="24" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVEXPL" short_name="SFVEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="30" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVUMS" short_name="SFVUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="39" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGEXPL" short_name="SFGEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="48" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUMS" short_name="SFGUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="57" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFEHCD" short_name="SFEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="2" y="15"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHTXT" short_name="SFEHTXT" data_type="alphanumeric" display_length="24" data_length="24" conditional="true">
+          <area>
+            <position x="5" y="15"/>
+            <size cx="24" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVEXPL" short_name="SFVEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="30" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVUMS" short_name="SFVUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="39" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGEXPL" short_name="SFGEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="48" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUMS" short_name="SFGUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="57" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHCD" short_name="SFEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="2" y="16"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHTXT" short_name="SFEHTXT" data_type="alphanumeric" display_length="24" data_length="24" conditional="true">
+          <area>
+            <position x="5" y="16"/>
+            <size cx="24" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVEXPL" short_name="SFVEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="30" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVUMS" short_name="SFVUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="39" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGEXPL" short_name="SFGEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="48" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUMS" short_name="SFGUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="57" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHCD" short_name="SFEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="2" y="17"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHTXT" short_name="SFEHTXT" data_type="alphanumeric" display_length="24" data_length="24" conditional="true">
+          <area>
+            <position x="5" y="17"/>
+            <size cx="24" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVEXPL" short_name="SFVEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="30" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVUMS" short_name="SFVUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="39" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGEXPL" short_name="SFGEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="48" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUMS" short_name="SFGUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="57" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFEHCD" short_name="SFEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="2" y="18"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHTXT" short_name="SFEHTXT" data_type="alphanumeric" display_length="24" data_length="24" conditional="true">
+          <area>
+            <position x="5" y="18"/>
+            <size cx="24" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVEXPL" short_name="SFVEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="30" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVUMS" short_name="SFVUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="39" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGEXPL" short_name="SFGEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="48" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUMS" short_name="SFGUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="57" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHCD" short_name="SFEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="2" y="19"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHTXT" short_name="SFEHTXT" data_type="alphanumeric" display_length="24" data_length="24" conditional="true">
+          <area>
+            <position x="5" y="19"/>
+            <size cx="24" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVEXPL" short_name="SFVEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="30" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVUMS" short_name="SFVUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="39" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGEXPL" short_name="SFGEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="48" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUMS" short_name="SFGUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="57" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHCD" short_name="SFEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="2" y="20"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHTXT" short_name="SFEHTXT" data_type="alphanumeric" display_length="24" data_length="24" conditional="true">
+          <area>
+            <position x="5" y="20"/>
+            <size cx="24" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVEXPL" short_name="SFVEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="30" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVUMS" short_name="SFVUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="39" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGEXPL" short_name="SFGEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="48" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUMS" short_name="SFGUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="57" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFEHCD" short_name="SFEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="2" y="21"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHTXT" short_name="SFEHTXT" data_type="alphanumeric" display_length="24" data_length="24" conditional="true">
+          <area>
+            <position x="5" y="21"/>
+            <size cx="24" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVEXPL" short_name="SFVEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="30" y="21"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVUMS" short_name="SFVUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="39" y="21"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGEXPL" short_name="SFGEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="48" y="21"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUMS" short_name="SFGUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="57" y="21"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHCD" short_name="SFEHCD" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="2" y="22"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFEHTXT" short_name="SFEHTXT" data_type="alphanumeric" display_length="24" data_length="24" conditional="true">
+          <area>
+            <position x="5" y="22"/>
+            <size cx="24" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVEXPL" short_name="SFVEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="30" y="22"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFVUMS" short_name="SFVUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="39" y="22"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGEXPL" short_name="SFGEXPL" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="48" y="22"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUMS" short_name="SFGUMS" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true" decimal_positions="2">
+          <area>
+            <position x="57" y="22"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_end_more" value="Weitere ... " display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="119" y="23"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+      <field field_type="subfile_end_bottom" value="Ende        " display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="119" y="23"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+    </field>
+  </screen>
+</header>

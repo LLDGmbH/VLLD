@@ -1,0 +1,77 @@
+﻿DIM ddehandle, i, j, msg as integer
+dim  xvnr, xvnam, xkdnr, xname, xobj, xatname, xauf, xfolg, xehcd, xehug, xbrutt, xanzkd, xbez, xrem,  xdatum, xtictac, xbed10, datei, pfad_datei, source as string 
+i = 0
+j=4
+
+datei = "Aufrufe.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+
+ddepoke( ddehandle, "Z1S1", "Vnr.")
+ddepoke( ddehandle, "Z1S2", "Verlag")
+ddepoke( ddehandle, "Z1S3", "Obj")
+ddepoke( ddehandle, "Z1S4", "Titel")
+ddepoke( ddehandle, "Z1S5", "Folge")
+ddepoke( ddehandle, "Z1S6", "Aufruf")
+ddepoke( ddehandle, "Z1S7", "Ehcd")
+ddepoke( ddehandle, "Z1S8", "EHug")
+ddepoke( ddehandle, "Z1S9", "Brutto")
+ddepoke( ddehandle, "Z1S10", "Kdnr")
+ddepoke( ddehandle, "Z1S11", "Name")
+ddepoke( ddehandle, "Z1S12", "AnzK")
+ddepoke( ddehandle, "Z1S13", "Bezug")
+ddepoke( ddehandle, "Z1S14", "Remi")
+
+nochmal:
+
+HostFieldGetLineData("s1vnr", i, xvnr)
+HostFieldGetLineData("s1vnam", i, xvnam)
+HostFieldGetLineData("s1obj", i, xobj)
+HostFieldGetLineData("s1onam", i, xatname)
+HostFieldGetLineData("s1folg", i, xfolg)
+HostFieldGetLineData("s1aufd", i, xauf)
+HostFieldGetLineData("s1ehcd", i, xehcd)
+HostFieldGetLineData("s1ehug", i, xehug)
+HostFieldGetLineData("s1brut", i, xbrutt)
+HostFieldGetLineData("s1kdnr", i, xkdnr)
+HostFieldGetLineData("s1knam", i, xname)
+HostFieldGetLineData("s1anzk", i, xanzkd)
+HostFieldGetLineData("s1bez", i, xbez)
+HostFieldGetLineData("s1rna", i, xrem)
+
+
+if (xobj <> "")  then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xvnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xvnam)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xobj)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xatname)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xfolg)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xauf)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xehcd)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xehug)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xbrutt)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xkdnr)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xname)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xanzkd)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xbez)
+ddepoke( ddehandle, "Z" + str(j) +"S14", xrem)
+
+j=j+1
+endif
+
+if i < 14 then
+i=i+1
+goto nochmal
+endif
+ 
+if xanzkd <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

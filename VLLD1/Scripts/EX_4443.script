@@ -1,0 +1,102 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xvnr, xbdatum, xedatum, xebnr, xwert, xdiff, xfil, xobj, xvkz, xtitel, xfolge, xek, xvhlf, xnlf, xvdl, xwfdiff, xpreis, xmenge, xdatum, xp, datei, pfad_datei, ErrMsg, source as string 
+
+i = 0
+j=5
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+HostFieldGetData("vavnr",xvnr)
+HostFieldGetData("bdatum1",xbdatum)
+HostFieldGetData("edatum1",xedatum)
+HostFieldGetData("ebnr1",xebnr)
+HostFieldGetData("ewert",xwert)
+HostFieldGetData("wert",xdiff)
+
+datei = "Rechnungsprüfung_" + xvnr + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "Verlag")
+ddepoke( ddehandle, "Z1S2", "Buchungsdatum")
+ddepoke( ddehandle, "Z1S3", "Rechnungsdatum")
+ddepoke( ddehandle, "Z1S4", "Belegnummer")
+ddepoke( ddehandle, "Z1S5", "Betrag")
+ddepoke( ddehandle, "Z1S6", "Differenz")
+ddepoke( ddehandle, "Z2S1", xvnr)
+ddepoke( ddehandle, "Z2S2", xbdatum)
+ddepoke( ddehandle, "Z2S3", xedatum)
+ddepoke( ddehandle, "Z2S4", xebnr)
+ddepoke( ddehandle, "Z2S5", xwert)
+ddepoke( ddehandle, "Z2S6", xdiff)
+
+
+ddepoke( ddehandle, "Z4S1", "Filiale")
+ddepoke( ddehandle, "Z4S2", "Obnr")
+ddepoke( ddehandle, "Z4S3", "VDZ")
+ddepoke( ddehandle, "Z4S4", "Titel")
+ddepoke( ddehandle, "Z4S5", "Folge")
+ddepoke( ddehandle, "Z4S6", "EK")
+ddepoke( ddehandle, "Z4S7", "Hlf")
+ddepoke( ddehandle, "Z4S8", "Nlf")
+ddepoke( ddehandle, "Z4S9", "Dlf")
+ddepoke( ddehandle, "Z4S10", "Diff")
+ddepoke( ddehandle, "Z4S11", "Betrag")
+ddepoke( ddehandle, "Z4S12", "Menge")
+ddepoke( ddehandle, "Z4S13", "Datum")
+ddepoke( ddehandle, "Z4S14", "geprüft")
+
+
+nochmal:
+
+HostFieldGetLineData("skfil", i, xfil)
+HostFieldGetLineData("atobj", i, xobj)
+HostFieldGetLineData("atvkz", i, xvkz)
+HostFieldGetLineData("atname", i, xtitel)
+HostFieldGetLineData("folge", i, xfolge)
+HostFieldGetLineData("wfek", i, xek)
+HostFieldGetLineData("wfvhlf", i, xvhlf)
+HostFieldGetLineData("wfnlf", i, xnlf)
+HostFieldGetLineData("wfvdl", i, xvdl)
+HostFieldGetLineData("wfdiff", i, xwfdiff)
+HostFieldGetLineData("preis", i, xpreis)
+HostFieldGetLineData("menge", i, xmenge)
+HostFieldGetLineData("datum", i, xdatum)
+HostFieldGetLineData("lkz", i, xp)
+
+
+if xobj <> "" then
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", xfil)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xobj)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xvkz)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xtitel)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xfolge)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xek)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xvhlf)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xnlf)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xvdl)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xwfdiff)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xpreis)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xmenge)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xdatum)
+ddepoke( ddehandle, "Z" + str(j) +"S14", xp)
+
+
+j=j+1 
+endif
+
+if i < 15 then
+i=i+1
+goto nochmal
+endif
+ 
+if xobj <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

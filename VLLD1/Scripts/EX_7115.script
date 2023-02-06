@@ -1,0 +1,91 @@
+﻿DIM ddehandle, i, j, msg as integer
+dim datei, pfad_datei, source as string 
+dim xFil, xBDat, xNr, xVNr, xVNam as string 
+dim xGANR, xGNam, xVDZ as string 
+dim xKFolg, xVTA, xVKPR, xWert as string 
+dim xKdNr, xKNam, xKDat, xKRNR, xAnzG as String
+
+i = 0
+j=7
+
+HostFieldGetData("c3fil",  xFil)
+HostFieldGetData("c3bdat", xBDat)
+HostFieldGetData("c3nr",   xNR)
+HostFieldGetData("c3vnr",  xVNr)
+HostFieldGetData("c3vnam", xVNam)
+
+HostFieldGetData("c3GANR", xGANR)
+HostFieldGetData("c3GNAM", xGNAM)
+HostFieldGetData("c3VDZ",  xVDZ)
+
+HostFieldGetData("c3KFolg", xKFolg)
+HostFieldGetData("c3VTA",   xVTA)
+HostFieldGetData("c3VKPR",  xVKPR)
+HostFieldGetData("c3Wert",  xWert)
+
+datei = "Entgentsberichtigung.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "Filiale")
+ddepoke( ddehandle, "Z1S2", xFil)
+ddepoke( ddehandle, "Z1S4", "Buchungsdatum")
+ddepoke( ddehandle, "Z1S5", xBDat)
+ddepoke( ddehandle, "Z1S7", "Nr")
+ddepoke( ddehandle, "Z1S8", xNr)
+ddepoke( ddehandle, "Z1S10", "Verlag")
+ddepoke( ddehandle, "Z1S11", xVNr)
+ddepoke( ddehandle, "Z1S12", xVNam)
+
+ddepoke( ddehandle, "Z2S1", "Gutschein")
+ddepoke( ddehandle, "Z2S2", xGANr)
+ddepoke( ddehandle, "Z2S3", xGNam)
+ddepoke( ddehandle, "Z2S5", "VDZ-Nr")
+ddepoke( ddehandle, "Z2S6", xVDZ)
+
+ddepoke( ddehandle, "Z3S1",  "Folg")
+ddepoke( ddehandle, "Z3S2",  xKFolg)
+ddepoke( ddehandle, "Z3S4",  "Teilausgabe")
+ddepoke( ddehandle, "Z3S5",  xVTA)
+ddepoke( ddehandle, "Z3S7",  "VKP")
+ddepoke( ddehandle, "Z3S8",  xVKPR)
+ddepoke( ddehandle, "Z3S10", "Wert")
+ddepoke( ddehandle, "Z3S11", xWert)
+
+ddepoke( ddehandle, "Z6S1",  "Kunden-Nr")
+ddepoke( ddehandle, "Z6S2",  "Name")
+ddepoke( ddehandle, "Z6S3",  "Abr.Dat.Kunde")
+ddepoke( ddehandle, "Z6S4",  "Rechn.Nr Kunde")
+ddepoke( ddehandle, "Z6S5",  "Menge")
+
+nochmal:
+
+HostFieldGetLineData("s3KdNr",  i, xKdNr)
+HostFieldGetLineData("s3KNam",  i, xKNam)
+HostFieldGetLineData("s3KDat",  i, xKDat)
+HostFieldGetLineData("s3KRNR",  i, xKRNR)
+HostFieldGetLineData("s3AnzG",  i, xAnzG)
+
+if xKNam <> ""  then
+ddepoke( ddehandle, "Z" + str(j) +"S1",  xKdNr)
+ddepoke( ddehandle, "Z" + str(j) +"S2",  xKNam)
+ddepoke( ddehandle, "Z" + str(j) +"S3",  xKDat)
+ddepoke( ddehandle, "Z" + str(j) +"S4",  xKRNR)
+ddepoke( ddehandle, "Z" + str(j) +"S5",  xAnzG)
+j=j+1
+endif
+
+if i < 15 then
+i=i+1
+goto nochmal
+endif
+ 
+if xKNam <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

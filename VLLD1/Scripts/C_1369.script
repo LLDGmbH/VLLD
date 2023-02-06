@@ -1,0 +1,22 @@
+﻿dim text, ErrorMsg as String
+dim rc as Integer
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+
+
+rc = EzSQLQuery("SELECT DIGITS(EHNR),  DIGITS(EHNR) concat ' - 'concat EHTEXT FROM GRETXP where ehunr = 0 order by  DIGITS(EHNR)", text, ErrorMsg)
+
+PanelFieldSetProp ("EHCD", 5, text) 
+
+
+rc = EzSQLQuery("SELECT DIGITS(EHNR) concat digits(ehunr),  DIGITS(EHNR) concat ' ' concat digits(ehunr) concat ' - 'concat EHTEXT FROM GRETXP order by  DIGITS(EHNR) concat digits(ehunr)", text, ErrorMsg)
+
+PanelFieldSetProp ("EHUG", 5, text) 
+
+
+rc = EzSQLQuery("SELECT DIGITS(vavnr),  DIGITS(vavnr) concat ' - 'concat vaname FROM gradrp order by  vaname", text, ErrorMsg)
+
+PanelFieldSetProp ("nvlg", 5, text)
+
+
+PanelUpdateEnable(2)

@@ -1,0 +1,76 @@
+﻿global filiale as string
+DIM ddehandle, i, j, msg, rc as integer
+dim x1zunr, x1knam, x1lenr, x1lnam, x1str, x1plz, x1ort, x1oknam, x1lfb, x1ende, x1woch, x1wkd, x1zatx, datei, pfad_datei, ErrMsg, sql1, sql2, sql3, sql4, sql5, sql6, sql7, sql8, f01 as string 
+dim source as string
+
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+
+HostFieldGetData("c1zunr",x1zunr)
+HostFieldGetData("c1knam",x1knam)
+
+datei = "Zusteller_" + x1zunr + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "Zusteller")
+ddepoke( ddehandle, "Z1S2", x1zunr)
+ddepoke( ddehandle, "Z1S3", "Name")
+ddepoke( ddehandle, "Z1S4", x1knam)
+ddepoke( ddehandle, "Z2S1", "Leser")
+ddepoke( ddehandle, "Z2S2", "Name")
+ddepoke( ddehandle, "Z2S3", "Strasse")
+ddepoke( ddehandle, "Z2S4", "PLZ")
+ddepoke( ddehandle, "Z2S5", "Ort")
+ddepoke( ddehandle, "Z2S6", "Objekt")
+ddepoke( ddehandle, "Z2S7", "Lieferbeginn")
+ddepoke( ddehandle, "Z2S8", "Lieferende")
+ddepoke( ddehandle, "Z2S9", "Woche")
+ddepoke( ddehandle, "Z2S10", "Prämie")
+ddepoke( ddehandle, "Z2S11", "Abgangsgrund")
+
+nochmal:
+
+HostFieldGetLineData("s1lenr", i, x1lenr)
+HostFieldGetLineData("s1lnam", i, x1lnam)
+HostFieldGetLineData("s1str", i, x1str)
+HostFieldGetLineData("s1plz", i, x1plz)
+HostFieldGetLineData("s1ort", i, x1ort)
+HostFieldGetLineData("s1oknam", i, x1oknam)
+HostFieldGetLineData("s1lfb", i, x1lfb)
+HostFieldGetLineData("s1ende", i, x1ende)
+HostFieldGetLineData("s1woch", i, x1woch)
+HostFieldGetLineData("s1wkd", i, x1wkd)
+HostFieldGetLineData("s1zatx", i, x1zatx)
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", x1lenr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", x1lnam)
+ddepoke( ddehandle, "Z" + str(j) +"S3", x1str)
+ddepoke( ddehandle, "Z" + str(j) +"S4", x1plz)
+ddepoke( ddehandle, "Z" + str(j) +"S5", x1ort)
+ddepoke( ddehandle, "Z" + str(j) +"S6", x1oknam)
+ddepoke( ddehandle, "Z" + str(j) +"S7", x1lfb)
+ddepoke( ddehandle, "Z" + str(j) +"S8", x1ende)
+ddepoke( ddehandle, "Z" + str(j) +"S9", x1woch)
+ddepoke( ddehandle, "Z" + str(j) +"S10", x1wkd)
+ddepoke( ddehandle, "Z" + str(j) +"S11", x1zatx)
+
+j=j+1 
+
+if i < 19 then
+i=i+1
+goto nochmal
+endif
+ 
+if x1lenr <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

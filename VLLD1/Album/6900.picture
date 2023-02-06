@@ -1,0 +1,1106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="OSNA_COL/FL33DS(SFC1+KEY01)" library="OSNA_COL" member_name="FL33DS">
+    <size cx="132" cy="27"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f21" caption="F21" attention_key="false"/>
+    <action key="f22" caption="F22" attention_key="false"/>
+    <action key="f23" caption="F23" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <field field_type="screen_part" name="SFC1">
+      <area>
+        <position/>
+        <size cx="132" cy="24"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="KEY01" overlay="true">
+      <area>
+        <position y="25"/>
+        <size cx="132" cy="2"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="112"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="121"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SDS_JOB" short_name="SDS_JOB" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="1" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="*SYSNAME" short_name="*SYSNAME" data_type="alphanumeric" display_length="8" data_length="8">
+          <area>
+            <position x="12" y="1"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SDS_USER" short_name="SDS_USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="112" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="FL33" display_length="4" data_length="4">
+          <area>
+            <position x="123" y="1"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="fixed_text" value="Folge:" display_length="6" data_length="6">
+          <area>
+            <position x="1" y="2"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="C1FOLG" short_name="C1FOLG" data_type="zoned_decimal" display_length="6" data_length="6" underline="true" high_intensity="true">
+          <area>
+            <position x="8" y="2"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="Nur Zusteller mit Tekturen:" display_length="27" data_length="27">
+          <area>
+            <position x="18" y="2"/>
+            <size cx="27" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="C1TJN" short_name="C1TJN" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true">
+          <area>
+            <position x="46" y="2"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="(J/N)" display_length="5" data_length="5">
+          <area>
+            <position x="48" y="2"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="   KdNr Name                              ObjNr Bezeichnung           AnzE Tek TekNr Tektur                                      " display_length="129" data_length="129" underline="true">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="129" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S1ZUNR" short_name="S1ZUNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="4"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="49" y="4"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="71" y="4"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEK" short_name="S1TEK" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="76" y="4"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEKN" short_name="S1TEKN" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="80" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TNAM" short_name="S1TNAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="86" y="4"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ZUNR" short_name="S1ZUNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="5"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="49" y="5"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="71" y="5"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEK" short_name="S1TEK" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="76" y="5"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEKN" short_name="S1TEKN" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="80" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TNAM" short_name="S1TNAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="86" y="5"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ZUNR" short_name="S1ZUNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="6"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="49" y="6"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="71" y="6"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEK" short_name="S1TEK" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="76" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEKN" short_name="S1TEKN" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="80" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TNAM" short_name="S1TNAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="86" y="6"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ZUNR" short_name="S1ZUNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="7"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="49" y="7"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="71" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEK" short_name="S1TEK" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="76" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEKN" short_name="S1TEKN" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="80" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TNAM" short_name="S1TNAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="86" y="7"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S1ZUNR" short_name="S1ZUNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="8"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="49" y="8"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="71" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEK" short_name="S1TEK" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="76" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEKN" short_name="S1TEKN" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="80" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TNAM" short_name="S1TNAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="86" y="8"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ZUNR" short_name="S1ZUNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="9"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="49" y="9"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="71" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEK" short_name="S1TEK" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="76" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEKN" short_name="S1TEKN" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="80" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TNAM" short_name="S1TNAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="86" y="9"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ZUNR" short_name="S1ZUNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="10"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="49" y="10"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="71" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEK" short_name="S1TEK" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="76" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEKN" short_name="S1TEKN" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="80" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TNAM" short_name="S1TNAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="86" y="10"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ZUNR" short_name="S1ZUNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="11"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="49" y="11"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="71" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEK" short_name="S1TEK" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="76" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEKN" short_name="S1TEKN" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="80" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TNAM" short_name="S1TNAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="86" y="11"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S1ZUNR" short_name="S1ZUNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="12"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="49" y="12"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="71" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEK" short_name="S1TEK" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="76" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEKN" short_name="S1TEKN" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="80" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TNAM" short_name="S1TNAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="86" y="12"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ZUNR" short_name="S1ZUNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="13"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="49" y="13"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="71" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEK" short_name="S1TEK" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="76" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEKN" short_name="S1TEKN" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="80" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TNAM" short_name="S1TNAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="86" y="13"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ZUNR" short_name="S1ZUNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="14"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="49" y="14"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="71" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEK" short_name="S1TEK" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="76" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEKN" short_name="S1TEKN" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="80" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TNAM" short_name="S1TNAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="86" y="14"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ZUNR" short_name="S1ZUNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="15"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="49" y="15"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="71" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEK" short_name="S1TEK" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="76" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEKN" short_name="S1TEKN" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="80" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TNAM" short_name="S1TNAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="86" y="15"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S1ZUNR" short_name="S1ZUNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="16"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="49" y="16"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="71" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEK" short_name="S1TEK" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="76" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEKN" short_name="S1TEKN" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="80" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TNAM" short_name="S1TNAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="86" y="16"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ZUNR" short_name="S1ZUNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="17"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="49" y="17"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="71" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEK" short_name="S1TEK" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="76" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEKN" short_name="S1TEKN" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="80" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TNAM" short_name="S1TNAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="86" y="17"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ZUNR" short_name="S1ZUNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="18"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="49" y="18"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="71" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEK" short_name="S1TEK" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="76" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEKN" short_name="S1TEKN" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="80" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TNAM" short_name="S1TNAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="86" y="18"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ZUNR" short_name="S1ZUNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="19"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="49" y="19"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="71" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEK" short_name="S1TEK" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="76" y="19"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEKN" short_name="S1TEKN" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="80" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TNAM" short_name="S1TNAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="86" y="19"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S1ZUNR" short_name="S1ZUNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="20"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="49" y="20"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="71" y="20"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEK" short_name="S1TEK" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="76" y="20"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEKN" short_name="S1TEKN" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="80" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TNAM" short_name="S1TNAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="86" y="20"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ZUNR" short_name="S1ZUNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="21"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="49" y="21"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="71" y="21"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEK" short_name="S1TEK" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="76" y="21"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEKN" short_name="S1TEKN" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="80" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TNAM" short_name="S1TNAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="86" y="21"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ZUNR" short_name="S1ZUNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="22"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="22"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="49" y="22"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="71" y="22"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEK" short_name="S1TEK" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="76" y="22"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEKN" short_name="S1TEKN" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="80" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TNAM" short_name="S1TNAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="86" y="22"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ZUNR" short_name="S1ZUNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="23"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="23"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1OBJ" short_name="S1OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ONAM" short_name="S1ONAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="49" y="23"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="71" y="23"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEK" short_name="S1TEK" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="76" y="23"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TEKN" short_name="S1TEKN" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="80" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1TNAM" short_name="S1TNAM" data_type="alphanumeric" display_length="21" data_length="21" conditional="true">
+          <area>
+            <position x="86" y="23"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="Systemmeldung:" display_length="14" data_length="14">
+      <area>
+        <position x="1" y="25"/>
+        <size cx="14" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="K1MSG" short_name="K1MSG" data_type="alphanumeric" display_length="60" data_length="60" blink="true">
+      <area>
+        <position x="16" y="25"/>
+        <size cx="60" cy="1"/>
+      </area>
+      <color foreground="red"/>
+    </field>
+    <field field_type="fixed_text" value="F3 = Zurück" display_length="11" data_length="11">
+      <area>
+        <position x="1" y="26"/>
+        <size cx="11" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

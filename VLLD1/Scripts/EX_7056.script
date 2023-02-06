@@ -1,0 +1,84 @@
+﻿global filiale as string
+DIM ddehandle, i, j, msg, rc as integer
+dim datei, pfad_datei, ErrMsg, sql1, sql2, sql3, sql4, sql5, sql6, sql7, sql8, f01 as string
+dim xxFil, xxFNam, xxAVQ2, xxAVQ1, xxAVQA, xxNVQ2, xxNVQ1, xxNVQA, xxGRQ2, xxGRQ1, xxGRQA, xxRNQ2, xxRNQ1, xxRNQA, xxGesQ2, xxGesQ1, xxGesQA as string
+dim source as string
+
+i = 0
+j=2
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Auffaelligkeiten.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1" , "Filiale")
+ddepoke( ddehandle, "Z1S2" , "AV Q-2")
+ddepoke( ddehandle, "Z1S3" , "AV Q-1")
+ddepoke( ddehandle, "Z1S4" , "AV QA")
+ddepoke( ddehandle, "Z1S5" , "NV Q-2")
+ddepoke( ddehandle, "Z1S6" , "NV Q-1")
+ddepoke( ddehandle, "Z1S7" , "NV QA")
+ddepoke( ddehandle, "Z1S8" , "GR Q-2")
+ddepoke( ddehandle, "Z1S9" , "GR Q-1")
+ddepoke( ddehandle, "Z1S10", "GR QA")
+ddepoke( ddehandle, "Z1S11", "RN Q-2")
+ddepoke( ddehandle, "Z1S12", "RN Q-1")
+ddepoke( ddehandle, "Z1S13", "RN QA")
+ddepoke( ddehandle, "Z1S14", "Ges Q-2")
+ddepoke( ddehandle, "Z1S15", "Ges Q-1")
+ddepoke( ddehandle, "Z1S16", "Ges QA")
+
+nochmal:
+
+HostFieldGetLineData("FNam",  i, xxFNam)
+HostFieldGetLineData("AVQ2",  i, xxAVQ2)
+HostFieldGetLineData("AVQ1",  i, xxAVQ1)
+HostFieldGetLineData("AVQA",  i, xxAVQA)
+HostFieldGetLineData("NVQ2",  i, xxNVQ2)
+HostFieldGetLineData("NVQ1",  i, xxNVQ1)
+HostFieldGetLineData("NVQA",  i, xxNVQA)
+HostFieldGetLineData("GRQ2",  i, xxGRQ2)
+HostFieldGetLineData("GRQ1",  i, xxGRQ1)
+HostFieldGetLineData("GRQA",  i, xxGRQA)
+HostFieldGetLineData("RNQ2",  i, xxRNQ2)
+HostFieldGetLineData("RNQ1",  i, xxRNQ1)
+HostFieldGetLineData("RNQA",  i, xxRNQA)
+HostFieldGetLineData("GESQ2", i, xxGesQ2)
+HostFieldGetLineData("GESQ1", i, xxGesQ1)
+HostFieldGetLineData("GesQA", i, xxGesQA)
+
+ddepoke( ddehandle, "Z" + str(j) +"S1" , xxFNam)
+ddepoke( ddehandle, "Z" + str(j) +"S2" , xxAVQ2)
+ddepoke( ddehandle, "Z" + str(j) +"S3" , xxAVQ1)
+ddepoke( ddehandle, "Z" + str(j) +"S4" , xxAVQA)
+ddepoke( ddehandle, "Z" + str(j) +"S5" , xxNVQ2)
+ddepoke( ddehandle, "Z" + str(j) +"S6" , xxNVQ1)
+ddepoke( ddehandle, "Z" + str(j) +"S7" , xxNVQA)
+ddepoke( ddehandle, "Z" + str(j) +"S8" , xxGRQ2)
+ddepoke( ddehandle, "Z" + str(j) +"S9" , xxGRQ1)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xxGRQA)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xxRNQ2)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xxRNQ1)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xxRNQA)
+ddepoke( ddehandle, "Z" + str(j) +"S14", xxGesQ2)
+ddepoke( ddehandle, "Z" + str(j) +"S15", xxGesQ1)
+ddepoke( ddehandle, "Z" + str(j) +"S16", xxGesQA)
+
+j=j+1 
+
+if i < 20 then
+i=i+1
+goto nochmal
+endif
+ 
+if xxFNam <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

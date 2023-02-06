@@ -1,0 +1,871 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="SEATRUNK/ST40DS(SFC+KEY01)" library="SEATRUNK" member_name="ST40DS">
+    <size cx="80" cy="24"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <action key="roll_up" caption="ROLL_UP" attention_key="false"/>
+    <field field_type="screen_part" name="SFC">
+      <area>
+        <position/>
+        <size cx="80" cy="22"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="KEY01" overlay="true">
+      <area>
+        <position y="23"/>
+        <size cx="80" cy="1"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="2"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="OBJEKTE TOP 100" display_length="15" data_length="15" high_intensity="true">
+          <area>
+            <position x="31"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="63"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="72"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="ST40" display_length="4" data_length="4">
+          <area>
+            <position x="74" y="1"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="fixed_text" value="EhaStrA-Code:" display_length="13" data_length="13">
+          <area>
+            <position x="2" y="2"/>
+            <size cx="13" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="XXOB" short_name="XXOB" data_type="zoned_decimal" display_length="2" data_length="2" underline="true" high_intensity="true" position_cursor="true">
+          <area>
+            <position x="16" y="2"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="XXUG" short_name="XXUG" data_type="zoned_decimal" display_length="2" data_length="2" underline="true" high_intensity="true" position_cursor="true">
+          <area>
+            <position x="19" y="2"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXTEXT" short_name="XXTEXT" data_type="alphanumeric" display_length="24" data_length="24" high_intensity="true">
+          <area>
+            <position x="23" y="2"/>
+            <size cx="24" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="(99= alle Gr. bzw. Untergr.)" display_length="28" data_length="28">
+          <area>
+            <position x="49" y="2"/>
+            <size cx="28" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="Sortierung  :" display_length="13" data_length="13">
+          <area>
+            <position x="2" y="3"/>
+            <size cx="13" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="XXSO" short_name="XXSO" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" position_cursor="true" exit_record="true">
+          <area>
+            <position x="17" y="3"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="(V=Verk.Ex.; E=EH-Anz.; R=Roherlös; W=Wochenerlös)" display_length="50" data_length="50">
+          <area>
+            <position x="27" y="3"/>
+            <size cx="50" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="              (letzte abgerechnete Nr./Angebotszeit max.6 Wochen)" display_length="65" data_length="65">
+          <area>
+            <position x="12" y="4"/>
+            <size cx="65" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="      Obj.  Bezeichnung             EUR/Nr   EUR/Wo   Verk    EH  Erschw." display_length="73" data_length="73" underline="true">
+          <area>
+            <position x="5" y="6"/>
+            <size cx="73" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="XXANZ" short_name="XXANZ" data_type="alphanumeric" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="5" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXOBJ" short_name="XXOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="11" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXNAME" short_name="XXNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="17" y="7"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDM" short_name="XXDM" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="40" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDURC" short_name="XXDURC" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="49" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXVERK" short_name="XXVERK" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="57" y="7"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXEH" short_name="XXEH" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="65" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXER" short_name="XXER" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="74" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXANZ" short_name="XXANZ" data_type="alphanumeric" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="5" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXOBJ" short_name="XXOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="11" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXNAME" short_name="XXNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="17" y="8"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDM" short_name="XXDM" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="40" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDURC" short_name="XXDURC" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="49" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXVERK" short_name="XXVERK" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="57" y="8"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXEH" short_name="XXEH" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="65" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXER" short_name="XXER" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="74" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXANZ" short_name="XXANZ" data_type="alphanumeric" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="5" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXOBJ" short_name="XXOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="11" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXNAME" short_name="XXNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="17" y="9"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDM" short_name="XXDM" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="40" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDURC" short_name="XXDURC" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="49" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXVERK" short_name="XXVERK" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="57" y="9"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXEH" short_name="XXEH" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="65" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXER" short_name="XXER" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="74" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXANZ" short_name="XXANZ" data_type="alphanumeric" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="5" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXOBJ" short_name="XXOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="11" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXNAME" short_name="XXNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="17" y="10"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDM" short_name="XXDM" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="40" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDURC" short_name="XXDURC" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="49" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXVERK" short_name="XXVERK" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="57" y="10"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXEH" short_name="XXEH" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="65" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXER" short_name="XXER" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="74" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXANZ" short_name="XXANZ" data_type="alphanumeric" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="5" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXOBJ" short_name="XXOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="11" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXNAME" short_name="XXNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="17" y="11"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDM" short_name="XXDM" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="40" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDURC" short_name="XXDURC" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="49" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXVERK" short_name="XXVERK" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="57" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXEH" short_name="XXEH" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="65" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXER" short_name="XXER" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="74" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXANZ" short_name="XXANZ" data_type="alphanumeric" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="5" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXOBJ" short_name="XXOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="11" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXNAME" short_name="XXNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="17" y="12"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDM" short_name="XXDM" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="40" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDURC" short_name="XXDURC" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="49" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXVERK" short_name="XXVERK" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="57" y="12"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXEH" short_name="XXEH" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="65" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXER" short_name="XXER" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="74" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXANZ" short_name="XXANZ" data_type="alphanumeric" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="5" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXOBJ" short_name="XXOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="11" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXNAME" short_name="XXNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="17" y="13"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDM" short_name="XXDM" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="40" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDURC" short_name="XXDURC" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="49" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXVERK" short_name="XXVERK" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="57" y="13"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXEH" short_name="XXEH" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="65" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXER" short_name="XXER" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="74" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="XXANZ" short_name="XXANZ" data_type="alphanumeric" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="5" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXOBJ" short_name="XXOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="11" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXNAME" short_name="XXNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="17" y="14"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDM" short_name="XXDM" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="40" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDURC" short_name="XXDURC" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="49" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXVERK" short_name="XXVERK" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="57" y="14"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXEH" short_name="XXEH" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="65" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXER" short_name="XXER" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="74" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXANZ" short_name="XXANZ" data_type="alphanumeric" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="5" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXOBJ" short_name="XXOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="11" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXNAME" short_name="XXNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="17" y="15"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDM" short_name="XXDM" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="40" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDURC" short_name="XXDURC" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="49" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXVERK" short_name="XXVERK" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="57" y="15"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXEH" short_name="XXEH" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="65" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXER" short_name="XXER" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="74" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXANZ" short_name="XXANZ" data_type="alphanumeric" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="5" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXOBJ" short_name="XXOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="11" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXNAME" short_name="XXNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="17" y="16"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDM" short_name="XXDM" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="40" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDURC" short_name="XXDURC" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="49" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXVERK" short_name="XXVERK" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="57" y="16"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXEH" short_name="XXEH" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="65" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXER" short_name="XXER" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="74" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXANZ" short_name="XXANZ" data_type="alphanumeric" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="5" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXOBJ" short_name="XXOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="11" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXNAME" short_name="XXNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="17" y="17"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDM" short_name="XXDM" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="40" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDURC" short_name="XXDURC" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="49" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXVERK" short_name="XXVERK" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="57" y="17"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXEH" short_name="XXEH" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="65" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXER" short_name="XXER" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="74" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXANZ" short_name="XXANZ" data_type="alphanumeric" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="5" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXOBJ" short_name="XXOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="11" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXNAME" short_name="XXNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="17" y="18"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDM" short_name="XXDM" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="40" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDURC" short_name="XXDURC" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="49" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXVERK" short_name="XXVERK" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="57" y="18"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXEH" short_name="XXEH" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="65" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXER" short_name="XXER" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="74" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXANZ" short_name="XXANZ" data_type="alphanumeric" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="5" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXOBJ" short_name="XXOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="11" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXNAME" short_name="XXNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="17" y="19"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDM" short_name="XXDM" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="40" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDURC" short_name="XXDURC" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="49" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXVERK" short_name="XXVERK" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="57" y="19"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXEH" short_name="XXEH" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="65" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXER" short_name="XXER" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="74" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXANZ" short_name="XXANZ" data_type="alphanumeric" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="5" y="20"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXOBJ" short_name="XXOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="11" y="20"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXNAME" short_name="XXNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="17" y="20"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDM" short_name="XXDM" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="40" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDURC" short_name="XXDURC" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="49" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXVERK" short_name="XXVERK" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="57" y="20"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXEH" short_name="XXEH" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="65" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXER" short_name="XXER" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="74" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="XXANZ" short_name="XXANZ" data_type="alphanumeric" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="5" y="21"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXOBJ" short_name="XXOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="11" y="21"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="XXNAME" short_name="XXNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="17" y="21"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDM" short_name="XXDM" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="40" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDURC" short_name="XXDURC" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="49" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXVERK" short_name="XXVERK" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="57" y="21"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXEH" short_name="XXEH" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="65" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXER" short_name="XXER" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="74" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="F3 = verlassen; F4 = Anzeige der Objekt-Codes (Auswahl mit A )" display_length="62" data_length="62">
+      <area>
+        <position x="1" y="23"/>
+        <size cx="62" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

@@ -1,0 +1,81 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim errmsg, datei, pfad_datei, source as string 
+dim xsagsnr, xsaname, xsagvdz, xsagta, xsagwt, xsafolg, xsavnr, xsaovdz, xsaavon, xsaabis, xsakula, xsavkpr, xsawert, xart as string
+
+i = 0
+j = 2
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Gutscheinstammdaten.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "Gs-Nr")
+ddepoke( ddehandle, "Z1S2", "Name")
+ddepoke( ddehandle, "Z1S3", "G VDZ")
+ddepoke( ddehandle, "Z1S4", "TA")
+ddepoke( ddehandle, "Z1S5", "WT")
+ddepoke( ddehandle, "Z1S6", "Folge")
+ddepoke( ddehandle, "Z1S7", "V-Nr")
+ddepoke( ddehandle, "Z1S8", "O-VDZ")
+ddepoke( ddehandle, "Z1S9", "von")
+ddepoke( ddehandle, "Z1S10", "bis")
+ddepoke( ddehandle, "Z1S11", "Kul")
+ddepoke( ddehandle, "Z1S12", "VK-Preis")
+ddepoke( ddehandle, "Z1S13", "Wert")
+ddepoke( ddehandle, "Z1S14", "Art")
+
+nochmal:
+
+HostFieldGetLineData("sagsnr", i, xsagsnr)
+HostFieldGetLineData("saname", i, xsaname)
+HostFieldGetLineData("sagvdz", i, xsagvdz)
+HostFieldGetLineData("sagta",  i, xsagta)
+HostFieldGetLineData("sagwt",  i, xsagwt)
+HostFieldGetLineData("safolg", i, xsafolg)
+HostFieldGetLineData("savnr",  i, xsavnr)
+HostFieldGetLineData("saovdz", i, xsaovdz)
+HostFieldGetLineData("saavon", i, xsaavon)
+HostFieldGetLineData("saabis", i, xsaabis)
+HostFieldGetLineData("sakula", i, xsakula)
+HostFieldGetLineData("savkpr", i, xsavkpr)
+HostFieldGetLineData("sawert", i, xsawert)
+HostFieldGetLineData("art",    i, xart)
+
+
+if (xsaname <> "") then
+ddepoke( ddehandle, "Z" + str(j) +"S1",  xsagsnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2",  xsaname)
+ddepoke( ddehandle, "Z" + str(j) +"S3",  xsagvdz)
+ddepoke( ddehandle, "Z" + str(j) +"S4",  xsagta)
+ddepoke( ddehandle, "Z" + str(j) +"S5",  xsagwt)
+ddepoke( ddehandle, "Z" + str(j) +"S6",  xsafolg)
+ddepoke( ddehandle, "Z" + str(j) +"S7",  xsavnr)
+ddepoke( ddehandle, "Z" + str(j) +"S8",  xsaovdz)
+ddepoke( ddehandle, "Z" + str(j) +"S9",  xsaavon)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xsaabis)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xsakula)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xsavkpr)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xsawert)
+ddepoke( ddehandle, "Z" + str(j) +"S14", xart)
+
+
+j=j+1
+endif
+
+if i < 21 then
+i=i+1
+goto nochmal
+endif
+ 
+if (xsaname <> "") then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

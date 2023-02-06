@@ -1,0 +1,47 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+DIM datei, pfad_datei, source as string 
+DIM xVLANZ, xVLVLKZ, xVLVBEZ, xVLKPLZ, xVLKORT as string 
+i = 0
+j=2
+
+datei = "Kundenzahlen_Vertriebslinien.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "Anzahl" )
+ddepoke( ddehandle, "Z1S2", "Vertriebslinie" )
+ddepoke( ddehandle, "Z1S3", "Bezeichnung" )
+ddepoke( ddehandle, "Z1S4", "PLZ" )
+ddepoke( ddehandle, "Z1S5", "Ort" )
+
+
+nochmal:
+
+HostFieldGetLineData("VLANZ",  i, xVLANZ)
+HostFieldGetLineData("VLVLKZ", i, xVLVLKZ)
+HostFieldGetLineData("VLVBEZ", i, xVLVBEZ)
+HostFieldGetLineData("VLKPLZ", i, xVLKPLZ)
+HostFieldGetLineData("VLKORT", i, xVLKORT)
+
+ddepoke(ddehandle, "Z" + str(j) +"S1", xVLANZ)
+ddepoke(ddehandle, "Z" + str(j) +"S2", xVLVLKZ)
+ddepoke(ddehandle, "Z" + str(j) +"S3", xVLVBEZ)
+ddepoke(ddehandle, "Z" + str(j) +"S4", xVLKPLZ)
+ddepoke(ddehandle, "Z" + str(j) +"S5", xVLKORT)
+j=j+1
+
+if i < 19 then
+i=i+1
+goto nochmal
+endif
+
+if xVLVBEZ <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

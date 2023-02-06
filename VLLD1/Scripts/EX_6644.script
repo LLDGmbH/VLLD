@@ -1,0 +1,88 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim errmsg, datei, pfad_datei, source as string 
+dim xfpos, xfobj, xfname, xfrnr, xfehcd, xfehug, xferr, xfvkp, xfmwst, xfvkex, xfwums, xfanzk, xfdums, xflbez, xfdvk, xfagbz, xfargkz, xfngbz, xfnrgkz as string
+i = 0
+j=3
+
+datei = "Verteilerüberarbeitung.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1",  "Pos")
+ddepoke( ddehandle, "Z1S2",  "ObjNr")
+ddepoke( ddehandle, "Z1S3",  "Titel")
+ddepoke( ddehandle, "Z1S4",  "Folge")
+ddepoke( ddehandle, "Z1S5",  "EHCD")
+ddepoke( ddehandle, "Z1S6",  "EHUG")
+ddepoke( ddehandle, "Z1S7",  "Err")
+ddepoke( ddehandle, "Z1S8",  "VKP")
+ddepoke( ddehandle, "Z1S9",  "MwSt")
+ddepoke( ddehandle, "Z1S10",  "VkEx")
+ddepoke( ddehandle, "Z1S11", "Ums.Wo.")
+ddepoke( ddehandle, "Z1S12", "Anz.EH")
+ddepoke( ddehandle, "Z1S13", "Durch.Wo.")
+ddepoke( ddehandle, "Z1S14", "L.Bez.")
+ddepoke( ddehandle, "Z1S15", "Durch.Vk")
+ddepoke( ddehandle, "Z1S16", "A Gbz")
+ddepoke( ddehandle, "Z1S17", "A RegKz")
+ddepoke( ddehandle, "Z1S18", "N Gbz")
+ddepoke( ddehandle, "Z1S19", "N RegKz")
+
+nochmal:
+
+HostFieldGetLineData("sfpos",   i, xfpos)
+HostFieldGetLineData("sfobj",   i, xfobj)
+HostFieldGetLineData("sfname",  i, xfname)
+HostFieldGetLineData("sfrnr",   i, xfrnr)
+HostFieldGetLineData("sfehcd",  i, xfehcd)
+HostFieldGetLineData("sfehug",  i, xfehug)
+HostFieldGetLineData("sferr",   i, xferr)
+HostFieldGetLineData("sfvkp",   i, xfvkp)
+HostFieldGetLineData("sfvkex",  i, xfvkex)
+HostFieldGetLineData("sfwums",  i, xfwums)
+HostFieldGetLineData("sfanzk",  i, xfanzk)
+HostFieldGetLineData("sfdums",  i, xfdums)
+HostFieldGetLineData("sflbez",  i, xflbez)
+HostFieldGetLineData("sfdvk",   i, xfdvk)
+HostFieldGetLineData("sfagbz",  i, xfagbz)
+HostFieldGetLineData("sfargkz", i, xfargkz)
+HostFieldGetLineData("sfngbz",  i, xfngbz)
+HostFieldGetLineData("sfnrgkz", i, xfnrgkz)
+
+if xfpos <> "" then
+ddepoke( ddehandle, "Z" + str(j) +"S1",  xfpos)
+ddepoke( ddehandle, "Z" + str(j) +"S2",  xfobj)
+ddepoke( ddehandle, "Z" + str(j) +"S3",  xfname)
+ddepoke( ddehandle, "Z" + str(j) +"S4",  xfrnr)
+ddepoke( ddehandle, "Z" + str(j) +"S5",  xfehcd)
+ddepoke( ddehandle, "Z" + str(j) +"S6",  xfehug)
+ddepoke( ddehandle, "Z" + str(j) +"S7",  xferr)
+ddepoke( ddehandle, "Z" + str(j) +"S8",  xfvkp)
+ddepoke( ddehandle, "Z" + str(j) +"S9",  xfmwst)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xfvkex)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xfwums)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xfanzk)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xfdums)
+ddepoke( ddehandle, "Z" + str(j) +"S14", xflbez)
+ddepoke( ddehandle, "Z" + str(j) +"S15", xfdvk)
+ddepoke( ddehandle, "Z" + str(j) +"S16", xfagbz)
+ddepoke( ddehandle, "Z" + str(j) +"S17", xfargkz)
+ddepoke( ddehandle, "Z" + str(j) +"S18", xfngbz)
+ddepoke( ddehandle, "Z" + str(j) +"S19", xfnrgkz)
+j=j+1
+endif
+
+if i < 21 then
+i=i+1
+goto nochmal
+endif
+ 
+if xfpos <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

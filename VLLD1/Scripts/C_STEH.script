@@ -1,0 +1,29 @@
+﻿
+dim text, xpanr, ErrorMsg as String
+dim rc as Integer
+global gkdnr, gname, filiale as string 
+
+PanelFieldPutData("xxkdnr", -1, "")
+PanelFieldGetData("##eh", xpanr)
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+
+rc = EzSQLQuery("SELECT digits(kdkdnr) concat ' - ' concat kdname concat ' - ' concat digits(kdub) FROM GRKDSGES where kdsn09 = " + xpanr, text, ErrorMsg)
+PanelFieldPutData("xxkdnr", 0, text)
+gkdnr = text
+
+rc = EzSQLQuery("SELECT kdname FROM GRKDSGES where kdsn09 = " + xpanr, text, ErrorMsg)
+gname = text
+
+rc = EzSQLQuery("SELECT kdstat FROM GRKDSGES where kdsn09 = " + xpanr, text, ErrorMsg)
+gkdstat = text
+
+rc = EzSQLQuery("SELECT kdsn09 FROM GRKDSGES where kdsn09 = " + xpanr, text, ErrorMsg)
+gkdsn09 = text
+
+rc = EzSQLQuery("SELECT kdsn10 FROM GRKDSGES where kdsn09 = " + xpanr, text, ErrorMsg)
+gkdsn10 = text
+
+PanelFieldPutData("bitte", 0, "Bitte auswählen:")
+
+PanelUpdateEnable(5)

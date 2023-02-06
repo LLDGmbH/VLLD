@@ -1,0 +1,76 @@
+﻿DIM ddehandle, i, j, zz, msg as integer
+dim  xobj, xfolg, xonam, xbez, xnl1, xsfr, xpsfr, xfr, xfpr, xnr, xnl2, xvk, xvkan, datei, pfad_datei, source as string 
+i = 0
+j = 2
+
+
+datei = "Verkauf aus NL nach Sofortremi" + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "Objekt")
+ddepoke( ddehandle, "Z1S2", "Folge")
+ddepoke( ddehandle, "Z1S3", "Name")
+ddepoke( ddehandle, "Z1S4", "Bezug")
+ddepoke( ddehandle, "Z1S5", "NL")
+ddepoke( ddehandle, "Z1S6", "SR")
+ddepoke( ddehandle, "Z1S7", "%")
+ddepoke( ddehandle, "Z1S8", "FR")
+ddepoke( ddehandle, "Z1S9", "%")
+ddepoke( ddehandle, "Z1S10", "NR")
+ddepoke( ddehandle, "Z1S11", "NL")
+ddepoke( ddehandle, "Z1S12", "VK")
+ddepoke( ddehandle, "Z1S13", "VKAN")
+
+nochmal:
+
+HostFieldGetLineData("s1obj", i, xobj)
+HostFieldGetLineData("s1folg", i, xfolg)
+HostFieldGetLineData("s1onam", i, xonam)
+HostFieldGetLineData("s1bez", i, xbez)
+HostFieldGetLineData("s1nl1", i, xnl1)
+HostFieldGetLineData("s1sfr", i, xsfr)
+HostFieldGetLineData("s1psfr", i, xpsfr)
+HostFieldGetLineData("s1fr", i, xfr)
+HostFieldGetLineData("s1fpr", i, xfpr)
+HostFieldGetLineData("s1nr", i, xnr)
+HostFieldGetLineData("s1nl2", i, xnl2)
+HostFieldGetLineData("s1vk", i, xvk)
+HostFieldGetLineData("s1vkan", i, xvkan)
+
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", xobj)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xfolg)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xonam)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xbez)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xnl1)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xsfr)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xpsfr)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xfr)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xfpr)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xnr)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xnl2)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xvk)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xvkan)
+
+j=j+1
+
+if xonam = "" then
+goto ende
+endif
+
+if i < 15 then
+i=i+1
+goto nochmal
+endif
+
+HostScreenSendKey("Page Down")
+i=0
+goto nochmal
+
+ende:

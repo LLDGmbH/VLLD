@@ -1,0 +1,126 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim sql1, sql2, sql3, sql4, sql5, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12, x13, x14, x15, x16, x99, xende, xkdnr, xname, xstr, xplz, xort, xstat, xfil, datei, Errmsg, pfad_datei as string 
+dim source as string
+i = 0
+j=1
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", Errmsg)
+
+HostFieldGetLineData("c1vbez", i, x99)
+
+datei = "Remissionsauswertung " + x99 + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", "Kdnr")
+ddepoke( ddehandle, "Z" + str(j) +"S2", "Name")
+ddepoke( ddehandle, "Z" + str(j) +"S3", "Strasse")
+ddepoke( ddehandle, "Z" + str(j) +"S4", "PLZ")
+ddepoke( ddehandle, "Z" + str(j) +"S5", "Ort")
+ddepoke( ddehandle, "Z" + str(j) +"S6", "Lief")
+ddepoke( ddehandle, "Z" + str(j) +"S7", "FrSo")
+ddepoke( ddehandle, "Z" + str(j) +"S8", "%")
+ddepoke( ddehandle, "Z" + str(j) +"S9", "Normal")
+ddepoke( ddehandle, "Z" + str(j) +"S10", "%")
+ddepoke( ddehandle, "Z" + str(j) +"S11", "Spät")
+ddepoke( ddehandle, "Z" + str(j) +"S12", "%")
+ddepoke( ddehandle, "Z" + str(j) +"S13", "zu Alt")
+ddepoke( ddehandle, "Z" + str(j) +"S14", "%")
+ddepoke( ddehandle, "Z" + str(j) +"S15", "Gesamt")
+ddepoke( ddehandle, "Z" + str(j) +"S16", "%")
+
+j=j+1
+
+nochmal:
+
+HostFieldGetLineData("s1kdnr", i, x1)
+HostFieldGetLineData("s1fil", i, xfil)
+
+if xfil = "00" then
+sql1 = "SELECT kdstr FROM DIPF01/GRKDSP where kdkdnr = " + x1 + ""
+sql2 = "SELECT kdplz FROM DIPF01/GRKDSP where kdkdnr = " + x1 + ""
+sql3 = "SELECT kdort FROM DIPF01/GRKDSP where kdkdnr = " + x1 + ""
+sql4 = "SELECT kdstat FROM DIPF01/GRKDSP where kdkdnr = " + x1 + ""
+sql5 = "SELECT kdname FROM DIPF01/GRKDSP where kdkdnr = " + x1 + ""
+endif
+
+if xfil = "01" then
+sql1 = "SELECT kdstr FROM DIPF01/GRKDSP where kdkdnr = " + x1 + ""
+sql2 = "SELECT kdplz FROM DIPF01/GRKDSP where kdkdnr = " + x1 + ""
+sql3 = "SELECT kdort FROM DIPF01/GRKDSP where kdkdnr = " + x1 + ""
+sql4 = "SELECT kdstat FROM DIPF01/GRKDSP where kdkdnr = " + x1 + ""
+sql5 = "SELECT kdname FROM DIPF01/GRKDSP where kdkdnr = " + x1 + ""
+endif
+
+if xfil = "02" then
+sql1 = "SELECT kdstr FROM DIPF02/GRKDSP where kdkdnr = " + x1 + ""
+sql2 = "SELECT kdplz FROM DIPF02/GRKDSP where kdkdnr = " + x1 + ""
+sql3 = "SELECT kdort FROM DIPF02/GRKDSP where kdkdnr = " + x1 + ""
+sql4 = "SELECT kdstat FROM DIPF02/GRKDSP where kdkdnr = " + x1 + ""
+sql5 = "SELECT kdname FROM DIPF02/GRKDSP where kdkdnr = " + x1 + ""
+endif
+
+if xfil = "03" then
+sql1 = "SELECT kdstr FROM DIPF03/GRKDSP where kdkdnr = " + x1 + ""
+sql2 = "SELECT kdplz FROM DIPF03/GRKDSP where kdkdnr = " + x1 + ""
+sql3 = "SELECT kdort FROM DIPF03/GRKDSP where kdkdnr = " + x1 + ""
+sql4 = "SELECT kdstat FROM DIPF03/GRKDSP where kdkdnr = " + x1 + ""
+sql5 = "SELECT kdname FROM DIPF03/GRKDSP where kdkdnr = " + x1 + ""
+endif
+
+rc = EzSQLQuery(sql1, xstr, Errmsg)
+rc = EzSQLQuery(sql2, xplz, Errmsg)
+rc = EzSQLQuery(sql3, xort, Errmsg)
+rc = EzSQLQuery(sql4, xstat, Errmsg)
+rc = EzSQLQuery(sql5, xname, Errmsg)
+
+HostFieldGetLineData("s1knam", i, x2)
+HostFieldGetLineData("s1lief", i, x6)
+HostFieldGetLineData("s1frso", i, x7)
+HostFieldGetLineData("s1pro1", i, x8)
+HostFieldGetLineData("s1norm", i, x9)
+HostFieldGetLineData("s1pro2", i, x10)
+HostFieldGetLineData("s1spaet", i, x11)
+HostFieldGetLineData("s1pro3", i, x12)
+HostFieldGetLineData("s1zualt", i, x13)
+HostFieldGetLineData("s1pro4", i, x14)
+HostFieldGetLineData("s1ges", i, x15)
+HostFieldGetLineData("s1pro5", i, x16)
+
+HostFieldGetData("ende", xende)
+
+if x1 <> ""  then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xstat)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xname)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xstr)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xplz)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xort)
+ddepoke( ddehandle, "Z" + str(j) +"S6", x6)
+ddepoke( ddehandle, "Z" + str(j) +"S7", x7)
+ddepoke( ddehandle, "Z" + str(j) +"S8", x8)
+ddepoke( ddehandle, "Z" + str(j) +"S9", x9)
+ddepoke( ddehandle, "Z" + str(j) +"S10", x10)
+ddepoke( ddehandle, "Z" + str(j) +"S11", x11)
+ddepoke( ddehandle, "Z" + str(j) +"S12", x12)
+ddepoke( ddehandle, "Z" + str(j) +"S13", x13)
+ddepoke( ddehandle, "Z" + str(j) +"S14", x14)
+ddepoke( ddehandle, "Z" + str(j) +"S15", x15)
+ddepoke( ddehandle, "Z" + str(j) +"S16", x16)
+
+j=j+1
+endif
+
+if i < 17 then
+i=i+1
+goto nochmal
+endif
+ 
+if x2 <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

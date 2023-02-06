@@ -1,0 +1,954 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="DDS_OSD60/FL73DS(SFC+FUSS)" library="DDS_OSD60" member_name="FL73DS">
+    <size cx="80" cy="24"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="f5" caption="F5" attention_key="false"/>
+    <action key="f6" caption="F6" attention_key="false"/>
+    <action key="f7" caption="F7" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="f12" caption="F12" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <field field_type="screen_part" name="SFC" overlay="true">
+      <area>
+        <position/>
+        <size cx="80" cy="22"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="FUSS">
+      <area>
+        <position y="23"/>
+        <size cx="80" cy="1"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Reklamationen Festleser" display_length="23" data_length="23">
+          <area>
+            <position x="28"/>
+            <size cx="23" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="63"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="72"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*USER" short_name="*USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="1" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="UEBER1" short_name="UEBER1" data_type="alphanumeric" display_length="13" data_length="13" non_display="conditional">
+          <area>
+            <position x="29" y="1"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="UEBER22" short_name="UEBER22" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional" conditional="true">
+          <area>
+            <position x="43" y="1"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+          <indicator id="37"/>
+        </field>
+        <field field_type="field" usage="output" name="UEBER2" short_name="UEBER2" data_type="zoned_decimal" display_length="7" data_length="7" non_display="conditional" conditional="true">
+          <area>
+            <position x="43" y="1"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+          <indicator id="36"/>
+        </field>
+        <field field_type="field" usage="output" name="S1JOB" short_name="S1JOB" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="63" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PGM" short_name="S1PGM" data_type="alphanumeric" display_length="6" data_length="6">
+          <area>
+            <position x="74" y="1"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="fixed_text" value="A    Lesernr. Name                 Rekl.-Art               Belegnr. Erf.-Datum" display_length="78" data_length="78" underline="true">
+          <area>
+            <position x="1" y="2"/>
+            <size cx="78" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="FLFLNR" short_name="FLFLNR" data_type="zoned_decimal" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="3" y="3"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLNAM" short_name="SFLNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="15" y="3"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="FLRTXT" short_name="FLRTXT" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="3"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXTXT" short_name="XXTXT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="39" y="3"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="XXREKNR" short_name="XXREKNR" data_type="zoned_decimal" display_length="8" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="60" y="3"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="XXNDAT" short_name="XXNDAT" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="69" y="3"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="FLFLNR" short_name="FLFLNR" data_type="zoned_decimal" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="3" y="4"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLNAM" short_name="SFLNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="15" y="4"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="FLRTXT" short_name="FLRTXT" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="4"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXTXT" short_name="XXTXT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="39" y="4"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="XXREKNR" short_name="XXREKNR" data_type="zoned_decimal" display_length="8" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="60" y="4"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="XXNDAT" short_name="XXNDAT" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="69" y="4"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="FLFLNR" short_name="FLFLNR" data_type="zoned_decimal" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="3" y="5"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLNAM" short_name="SFLNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="15" y="5"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="FLRTXT" short_name="FLRTXT" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="5"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXTXT" short_name="XXTXT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="39" y="5"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="XXREKNR" short_name="XXREKNR" data_type="zoned_decimal" display_length="8" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="60" y="5"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="XXNDAT" short_name="XXNDAT" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="69" y="5"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="FLFLNR" short_name="FLFLNR" data_type="zoned_decimal" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="3" y="6"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLNAM" short_name="SFLNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="15" y="6"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="FLRTXT" short_name="FLRTXT" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="6"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXTXT" short_name="XXTXT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="39" y="6"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="XXREKNR" short_name="XXREKNR" data_type="zoned_decimal" display_length="8" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="60" y="6"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="XXNDAT" short_name="XXNDAT" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="69" y="6"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="FLFLNR" short_name="FLFLNR" data_type="zoned_decimal" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="3" y="7"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLNAM" short_name="SFLNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="15" y="7"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="FLRTXT" short_name="FLRTXT" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="7"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXTXT" short_name="XXTXT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="39" y="7"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="XXREKNR" short_name="XXREKNR" data_type="zoned_decimal" display_length="8" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="60" y="7"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="XXNDAT" short_name="XXNDAT" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="69" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="FLFLNR" short_name="FLFLNR" data_type="zoned_decimal" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="3" y="8"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLNAM" short_name="SFLNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="15" y="8"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="FLRTXT" short_name="FLRTXT" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="8"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXTXT" short_name="XXTXT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="39" y="8"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="XXREKNR" short_name="XXREKNR" data_type="zoned_decimal" display_length="8" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="60" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="XXNDAT" short_name="XXNDAT" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="69" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="FLFLNR" short_name="FLFLNR" data_type="zoned_decimal" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="3" y="9"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLNAM" short_name="SFLNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="15" y="9"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="FLRTXT" short_name="FLRTXT" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="9"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXTXT" short_name="XXTXT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="39" y="9"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="XXREKNR" short_name="XXREKNR" data_type="zoned_decimal" display_length="8" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="60" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="XXNDAT" short_name="XXNDAT" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="69" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="FLFLNR" short_name="FLFLNR" data_type="zoned_decimal" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="3" y="10"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLNAM" short_name="SFLNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="15" y="10"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="FLRTXT" short_name="FLRTXT" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="10"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXTXT" short_name="XXTXT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="39" y="10"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="XXREKNR" short_name="XXREKNR" data_type="zoned_decimal" display_length="8" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="60" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="XXNDAT" short_name="XXNDAT" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="69" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="FLFLNR" short_name="FLFLNR" data_type="zoned_decimal" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="3" y="11"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLNAM" short_name="SFLNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="15" y="11"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="FLRTXT" short_name="FLRTXT" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="11"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXTXT" short_name="XXTXT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="39" y="11"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="XXREKNR" short_name="XXREKNR" data_type="zoned_decimal" display_length="8" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="60" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="XXNDAT" short_name="XXNDAT" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="69" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="FLFLNR" short_name="FLFLNR" data_type="zoned_decimal" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="3" y="12"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLNAM" short_name="SFLNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="15" y="12"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="FLRTXT" short_name="FLRTXT" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="12"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXTXT" short_name="XXTXT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="39" y="12"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="XXREKNR" short_name="XXREKNR" data_type="zoned_decimal" display_length="8" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="60" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="XXNDAT" short_name="XXNDAT" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="69" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="FLFLNR" short_name="FLFLNR" data_type="zoned_decimal" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="3" y="13"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLNAM" short_name="SFLNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="15" y="13"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="FLRTXT" short_name="FLRTXT" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="13"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXTXT" short_name="XXTXT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="39" y="13"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="XXREKNR" short_name="XXREKNR" data_type="zoned_decimal" display_length="8" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="60" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="XXNDAT" short_name="XXNDAT" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="69" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="FLFLNR" short_name="FLFLNR" data_type="zoned_decimal" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="3" y="14"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLNAM" short_name="SFLNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="15" y="14"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="FLRTXT" short_name="FLRTXT" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="14"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXTXT" short_name="XXTXT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="39" y="14"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="XXREKNR" short_name="XXREKNR" data_type="zoned_decimal" display_length="8" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="60" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="XXNDAT" short_name="XXNDAT" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="69" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="FLFLNR" short_name="FLFLNR" data_type="zoned_decimal" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="3" y="15"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLNAM" short_name="SFLNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="15" y="15"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="FLRTXT" short_name="FLRTXT" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="15"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXTXT" short_name="XXTXT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="39" y="15"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="XXREKNR" short_name="XXREKNR" data_type="zoned_decimal" display_length="8" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="60" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="XXNDAT" short_name="XXNDAT" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="69" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="FLFLNR" short_name="FLFLNR" data_type="zoned_decimal" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="3" y="16"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLNAM" short_name="SFLNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="15" y="16"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="FLRTXT" short_name="FLRTXT" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="16"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXTXT" short_name="XXTXT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="39" y="16"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="XXREKNR" short_name="XXREKNR" data_type="zoned_decimal" display_length="8" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="60" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="XXNDAT" short_name="XXNDAT" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="69" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="FLFLNR" short_name="FLFLNR" data_type="zoned_decimal" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="3" y="17"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLNAM" short_name="SFLNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="15" y="17"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="FLRTXT" short_name="FLRTXT" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="17"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXTXT" short_name="XXTXT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="39" y="17"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="XXREKNR" short_name="XXREKNR" data_type="zoned_decimal" display_length="8" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="60" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="XXNDAT" short_name="XXNDAT" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="69" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="FLFLNR" short_name="FLFLNR" data_type="zoned_decimal" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="3" y="18"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLNAM" short_name="SFLNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="15" y="18"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="FLRTXT" short_name="FLRTXT" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="18"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXTXT" short_name="XXTXT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="39" y="18"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="XXREKNR" short_name="XXREKNR" data_type="zoned_decimal" display_length="8" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="60" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="XXNDAT" short_name="XXNDAT" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="69" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="FLFLNR" short_name="FLFLNR" data_type="zoned_decimal" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="3" y="19"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLNAM" short_name="SFLNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="15" y="19"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="FLRTXT" short_name="FLRTXT" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="19"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXTXT" short_name="XXTXT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="39" y="19"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="XXREKNR" short_name="XXREKNR" data_type="zoned_decimal" display_length="8" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="60" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="XXNDAT" short_name="XXNDAT" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="69" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="input" name="AUSW" short_name="AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="FLFLNR" short_name="FLFLNR" data_type="zoned_decimal" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="3" y="20"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLNAM" short_name="SFLNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="15" y="20"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="FLRTXT" short_name="FLRTXT" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="36" y="20"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXTXT" short_name="XXTXT" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="39" y="20"/>
+            <size cx="20" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="XXREKNR" short_name="XXREKNR" data_type="zoned_decimal" display_length="8" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="60" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="XXNDAT" short_name="XXNDAT" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" conditional="true">
+          <area>
+            <position x="69" y="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_end_more" value=" Weitere ..." display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="67" y="21"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+      <field field_type="subfile_end_bottom" value="        Ende" display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="67" y="21"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="F3 = Ende    F4 = Selektion                                                  " display_length="77" data_length="77">
+      <area>
+        <position x="2" y="23"/>
+        <size cx="77" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

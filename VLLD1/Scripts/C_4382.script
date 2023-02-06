@@ -1,0 +1,19 @@
+﻿dim text, ErrorMsg as String
+dim rc as Integer
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+
+rc = EzSQLQuery("SELECT DIGITS(mpnr),  DIGITS(mpnr) concat ' - 'concat mpname FROM grmpap order by  mpname", text, ErrorMsg)
+PanelFieldSetProp ("man1", 5, text)
+PanelFieldSetProp ("man2", 5, text)
+PanelFieldSetProp ("man3", 5, text)
+PanelFieldSetProp ("man4", 5, text)
+PanelFieldSetProp ("man5", 5, text)
+PanelFieldSetProp ("man6", 5, text)
+PanelFieldSetProp ("man7", 5, text)
+PanelFieldSetProp ("man8", 5, text)
+PanelFieldSetProp ("man9", 5, text)
+PanelFieldSetProp ("man10", 5, text)
+PanelFieldSetProp ("man11", 5, text)
+PanelFieldSetProp ("man12", 5, text)
+PanelUpdateEnable(2)

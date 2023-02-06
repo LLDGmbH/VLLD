@@ -1,0 +1,137 @@
+﻿DIM ddehandle, i, j, msg as integer
+dim xkdnr, xname, xstr, xplz, xort,xgrp, x125, x100,x66, xmax, xges, xzuv, xkenn, xanz, xerrh, xobnr, xtitel, xrgkz, xgbz, xduvk, xums, xobgr, xbz1, xvk1, xbz2, xvk2, xbz3, xvk3, xbz4, xvk4, xbz5, xvk5, xbz6, xvk6, datei, pfad_datei as string 
+dim source as string
+i = 0
+j=9
+
+HostFieldGetData("kdkdnr",xkdnr)
+HostFieldGetData("kdname",xname)
+HostFieldGetData("kdstr",xstr)
+HostFieldGetData("kdplz",xplz)
+HostFieldGetData("kdort",xort)
+HostFieldGetData("cm_txt",xgrp)
+HostFieldGetData("abl1_anz",x125)
+HostFieldGetData("abl2_anz",x100)
+HostFieldGetData("abl3_anz",x66)
+HostFieldGetData("tit_max",xmax)
+HostFieldGetData("tit_anz",xges)
+HostFieldGetData("tit_zuviel",xzuv)
+HostFieldGetData("tit_x",xkenn)
+
+datei = "CM_Regaloptimierung_Kunde_" + xkdnr + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "Kunde")
+ddepoke( ddehandle, "Z1S2", xkdnr)
+ddepoke( ddehandle, "Z1S3", xname)
+ddepoke( ddehandle, "Z2S3", xstr)
+ddepoke( ddehandle, "Z3S3", xplz)
+ddepoke( ddehandle, "Z3S4", xort)
+
+ddepoke( ddehandle, "Z5S1", "Regal")
+ddepoke( ddehandle, "Z6S1", xgrp)
+ddepoke( ddehandle, "Z5S2", "Abl.125cm")
+ddepoke( ddehandle, "Z6S2", x125)
+ddepoke( ddehandle, "Z5S3", "Abl.100cm")
+ddepoke( ddehandle, "Z6S3", x100)
+ddepoke( ddehandle, "Z5S4", "Abl.66,5cm")
+ddepoke( ddehandle, "Z6S4", x66)
+ddepoke( ddehandle, "Z5S5", "Maximal")
+ddepoke( ddehandle, "Z6S5", xmax)
+ddepoke( ddehandle, "Z5S6", "Gesamt")
+ddepoke( ddehandle, "Z6S6", xges)
+ddepoke( ddehandle, "Z5S7", "zuviel")
+ddepoke( ddehandle, "Z6S7", xzuv)
+ddepoke( ddehandle, "Z5S8", "mit X")
+ddepoke( ddehandle, "Z6S8", xkenn)
+
+ddepoke( ddehandle, "Z8S1", "Anz.")
+ddepoke( ddehandle, "Z8S2", "Erschw.")
+ddepoke( ddehandle, "Z8S3", "Obnr")
+ddepoke( ddehandle, "Z8S4", "Titel")
+ddepoke( ddehandle, "Z8S5", "RgKZ")
+ddepoke( ddehandle, "Z8S6", "Gbz")
+ddepoke( ddehandle, "Z8S7", "Du.Verk.")
+ddepoke( ddehandle, "Z8S8", "Umsatz")
+ddepoke( ddehandle, "Z8S9", "Gruppe")
+ddepoke( ddehandle, "Z8S10", "Bezug 1")
+ddepoke( ddehandle, "Z8S11", "Verk. 1")
+ddepoke( ddehandle, "Z8S12", "Bezug 2")
+ddepoke( ddehandle, "Z8S13", "Verk. 2")
+ddepoke( ddehandle, "Z8S14", "Bezug 3")
+ddepoke( ddehandle, "Z8S15", "Verk. 3")
+ddepoke( ddehandle, "Z8S16", "Bezug 4")
+ddepoke( ddehandle, "Z8S17", "Verk. 4")
+ddepoke( ddehandle, "Z8S18", "Bezug 5")
+ddepoke( ddehandle, "Z8S19", "Verk. 5")
+ddepoke( ddehandle, "Z8S20", "Bezug 6")
+ddepoke( ddehandle, "Z8S21", "Verk. 6")
+
+nochmal:
+
+HostFieldGetLineData("sf_anz", i, xanz)
+HostFieldGetLineData("sf_erschw", i, xerrh)
+HostFieldGetLineData("sf_obj", i, xobnr)
+HostFieldGetLineData("sf_titel", i, xtitel)
+HostFieldGetLineData("sf_rgkz", i, xrgkz)
+HostFieldGetLineData("sf_gbz", i, xgbz)
+HostFieldGetLineData("sf_duvk", i, xduvk)
+HostFieldGetLineData("sf_ums", i, xums)
+HostFieldGetLineData("sf_obgr", i, xobgr)
+HostFieldGetLineData("sf_bz1", i, xbz1)
+HostFieldGetLineData("sf_vk1", i, xvk1)
+HostFieldGetLineData("sf_bz2", i, xbz2)
+HostFieldGetLineData("sf_vk2", i, xvk2)
+HostFieldGetLineData("sf_bz3", i, xbz3)
+HostFieldGetLineData("sf_vk3", i, xvk3)
+HostFieldGetLineData("sf_bz4", i, xbz4)
+HostFieldGetLineData("sf_vk4", i, xvk4)
+HostFieldGetLineData("sf_bz5", i, xbz5)
+HostFieldGetLineData("sf_vk5", i, xvk5)
+HostFieldGetLineData("sf_bz6", i, xbz6)
+HostFieldGetLineData("sf_vk6", i, xvk6)
+
+
+if (xtitel <> "") then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xanz)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xerrh)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xobnr)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xtitel)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xrgkz)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xgbz)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xduvk)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xums)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xobgr)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xbz1)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xvk1)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xbz2)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xvk2)
+ddepoke( ddehandle, "Z" + str(j) +"S14", xbz3)
+ddepoke( ddehandle, "Z" + str(j) +"S15", xvk3)
+ddepoke( ddehandle, "Z" + str(j) +"S16", xbz4)
+ddepoke( ddehandle, "Z" + str(j) +"S17", xvk4)
+ddepoke( ddehandle, "Z" + str(j) +"S18", xbz5)
+ddepoke( ddehandle, "Z" + str(j) +"S19", xvk5)
+ddepoke( ddehandle, "Z" + str(j) +"S20", xbz6)
+ddepoke( ddehandle, "Z" + str(j) +"S21", xvk6)
+
+
+j=j+1
+endif
+
+if i < 13 then
+i=i+1
+goto nochmal
+endif
+ 
+if xtitel <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

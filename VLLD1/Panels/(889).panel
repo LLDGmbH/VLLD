@@ -1,0 +1,5083 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo exeName="LegaSuite.exe" productName="lswb" exeVersion="10.3969.0.0" modelVersion="1.1" ?>
+<panel xmlns="http://www.seagullsoftware.com/schemas/legasuite/panel" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/panel http://www.seagullsoftware.com/schemas/legasuite/paneldefinition3_1.xsd">
+  <properties>
+    <codepage>1252</codepage>
+    <dimensions x="0" y="0" cx="887" cy="545"/>
+    <FontColor>
+      <FontStyleName/>
+      <ColorBackground>66</ColorBackground>
+    </FontColor>
+    <general_flags_1>
+      <bitmap/>
+      <stretched/>
+    </general_flags_1>
+    <general_flags_3>
+      <background_image/>
+    </general_flags_3>
+    <id>(889)</id>
+    <image_file>Resources\LLD_STANDARD_MAIN.JPG</image_file>
+    <panel_flags>
+      <force_foreground/>
+      <no_zorder/>
+      <size_independent/>
+      <update_on_host_change/>
+    </panel_flags>
+    <screen_name>(889)</screen_name>
+    <title>Lieferscheinvorschlag (Kunde)</title>
+  </properties>
+  <menu_bar>
+    <menu>
+      <title>~Datei</title>
+      <menu_item>
+        <general_flags_2>
+          <visibility_equal_hide/>
+          <visibility_not_present_disable/>
+          <visibility_output_data_disable/>
+        </general_flags_2>
+        <send_key>12</send_key>
+        <title>Speichern</title>
+      </menu_item>
+      <menu_item>
+        <general_flags_2>
+          <visibility_equal_hide/>
+          <visibility_not_present_disable/>
+          <visibility_output_data_disable/>
+        </general_flags_2>
+        <panel_next>*PRINT</panel_next>
+        <title>Drucken</title>
+      </menu_item>
+      <menu_item>
+        <general_flags_2>
+          <separator/>
+          <visibility_equal_hide/>
+          <visibility_not_present_disable/>
+          <visibility_output_data_disable/>
+        </general_flags_2>
+        <send_key>6</send_key>
+        <title>Ende</title>
+      </menu_item>
+    </menu>
+    <menu>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <title>~Bearbeiten</title>
+      <menu_item>
+        <general_flags_2>
+          <visibility_equal_hide/>
+          <visibility_not_present_disable/>
+          <visibility_output_data_disable/>
+        </general_flags_2>
+        <panel_next>*CUT</panel_next>
+        <title>~Auschneiden</title>
+      </menu_item>
+      <menu_item>
+        <general_flags_2>
+          <visibility_equal_hide/>
+          <visibility_not_present_disable/>
+          <visibility_output_data_disable/>
+        </general_flags_2>
+        <panel_next>*COPY</panel_next>
+        <title>~Kopieren</title>
+      </menu_item>
+      <menu_item>
+        <general_flags_2>
+          <visibility_equal_hide/>
+          <visibility_not_present_disable/>
+          <visibility_output_data_disable/>
+        </general_flags_2>
+        <panel_next>*PASTE</panel_next>
+        <title>~Einfügen</title>
+      </menu_item>
+    </menu>
+    <menu>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <title>~Optionen</title>
+      <menu_item>
+        <general_flags_2>
+          <visibility_equal_hide/>
+          <visibility_not_present_disable/>
+          <visibility_output_data_disable/>
+        </general_flags_2>
+        <script>PcCommand(2, &quot;WINWORD.EXE&quot;)</script>
+        <title>Microsoft Word</title>
+      </menu_item>
+      <menu_item>
+        <general_flags_2>
+          <visibility_equal_hide/>
+          <visibility_not_present_disable/>
+          <visibility_output_data_disable/>
+        </general_flags_2>
+        <script>PcCommand(2, &quot;EXCEL.EXE&quot;)</script>
+        <title>Microsoft Excel</title>
+      </menu_item>
+      <menu_item>
+        <general_flags_2>
+          <visibility_equal_hide/>
+          <visibility_not_present_disable/>
+          <visibility_output_data_disable/>
+        </general_flags_2>
+        <script>PcCommand(2, &quot;CALC.EXE&quot;)</script>
+        <title>Taschenrechner</title>
+      </menu_item>
+    </menu>
+    <menu>
+      <title>~Hilfe</title>
+      <menu_item>
+        <general_flags_2>
+          <state_dependent/>
+        </general_flags_2>
+        <panel_next>ABOUT</panel_next>
+        <title>~Info</title>
+      </menu_item>
+      <menu_item>
+        <general_flags_2>
+          <visibility_equal_hide/>
+          <visibility_not_present_disable/>
+          <visibility_output_data_disable/>
+        </general_flags_2>
+        <send_key>38</send_key>
+        <title>~Nachrichten</title>
+      </menu_item>
+    </menu>
+  </menu_bar>
+  <controls>
+    <frame>
+      <depth>3</depth>
+      <dimensions x="47" y="70" cx="500" cy="88"/>
+      <field_flags>
+        <field_clipping/>
+      </field_flags>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+    </frame>
+    <combo>
+      <combo_style>1</combo_style>
+      <dimensions x="188" y="118" cx="46" cy="445"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="4" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>TAG</host_field>
+      <value_list>
+        <string>1</string>
+        <string>2</string>
+        <string>3</string>
+        <string>4</string>
+        <string>5</string>
+        <string>6</string>
+        <string>7</string>
+        <string>8</string>
+        <string>9</string>
+        <string>10</string>
+        <string>11</string>
+        <string>12</string>
+        <string>13</string>
+        <string>14</string>
+        <string>15</string>
+        <string>16</string>
+        <string>17</string>
+        <string>18</string>
+        <string>19</string>
+        <string>20</string>
+        <string>21</string>
+        <string>22</string>
+        <string>23</string>
+        <string>24</string>
+        <string>25</string>
+        <string>26</string>
+        <string>27</string>
+        <string>28</string>
+        <string>29</string>
+        <string>30</string>
+        <string>31</string>
+      </value_list>
+    </combo>
+    <combo>
+      <combo_style>1</combo_style>
+      <dimensions x="243" y="118" cx="75" cy="369"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="4" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <host_conversion/>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>MONAT</host_field>
+      <value_list>
+        <string>1	Januar</string>
+        <string>2	Februar</string>
+        <string>3	März</string>
+        <string>4	April</string>
+        <string>5	Mai</string>
+        <string>6	Juni</string>
+        <string>7	Juli</string>
+        <string>8	August</string>
+        <string>9	September</string>
+        <string>10	Oktober</string>
+        <string>11	November</string>
+        <string>12	Dezember</string>
+      </value_list>
+    </combo>
+    <combo>
+      <combo_style>1</combo_style>
+      <dimensions x="329" y="118" cx="51" cy="343"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="4" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <host_conversion/>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>JAHR</host_field>
+      <value_list>
+        <string>25	2025</string>
+        <string>24	2024</string>
+        <string>23	2023</string>
+        <string>22	2022</string>
+        <string>21	2021</string>
+        <string>20	2020</string>
+        <string>19	2019</string>
+        <string>18	2018</string>
+        <string>17	2017</string>
+        <string>16	2016</string>
+        <string>15	2015</string>
+        <string>14	2014</string>
+        <string>13	2013</string>
+        <string>12	2012</string>
+        <string>11	2011</string>
+        <string>10	2010</string>
+        <string>9	2009</string>
+        <string>8	2008</string>
+        <string>7	2007</string>
+      </value_list>
+    </combo>
+    <frame>
+      <depth>-3</depth>
+      <dimensions x="47" y="184" cx="804" cy="336"/>
+      <field_flags>
+        <field_clipping/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName/>
+        <ColorForeground>66</ColorForeground>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+    </frame>
+    <tab>
+      <dimensions x="66" y="191" cx="727" cy="320"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <FontColorTabSpace>
+        <FontStyleName/>
+        <ColorBackground>66</ColorBackground>
+      </FontColorTabSpace>
+      <general_flags_3>
+        <rounded/>
+      </general_flags_3>
+      <tab_erase_right>10</tab_erase_right>
+      <tab_height>22</tab_height>
+    </tab>
+    <subwindow>
+      <dimensions x="72" y="221" cx="715" cy="284"/>
+      <field_flags>
+        <page/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+        <ColorBackground>66</ColorBackground>
+      </FontColor>
+      <FontColorTabSelect>
+        <FontStyleName/>
+        <ColorForeground>16</ColorForeground>
+        <ColorBackground>63</ColorBackground>
+      </FontColorTabSelect>
+      <title>Auswahl</title>
+    </subwindow>
+    <text>
+      <dimensions x="96" y="40" cx="58" cy="16"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <title>Mit Bezug</title>
+    </text>
+    <combo>
+      <dimensions x="178" y="38" cx="59" cy="58"/>
+      <field_flags>
+        <in_subwindow/>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="1" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <host_conversion/>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>MIT_BEZUG</host_field>
+      <value_list>
+        <string>J	Ja</string>
+        <string>N	Nein</string>
+      </value_list>
+    </combo>
+    <text>
+      <dimensions x="96" y="79" cx="73" cy="16"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <title>Ohne Bezug</title>
+    </text>
+    <combo>
+      <dimensions x="178" y="77" cx="59" cy="58"/>
+      <field_flags>
+        <in_subwindow/>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="1" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <host_conversion/>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>OHNE_BEZUG</host_field>
+      <value_list>
+        <string>J	Ja</string>
+        <string>N	Nein</string>
+      </value_list>
+    </combo>
+    <text>
+      <dimensions x="94" y="116" cx="59" cy="16"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <title>Zeitungen</title>
+    </text>
+    <combo>
+      <dimensions x="176" y="114" cx="59" cy="58"/>
+      <field_flags>
+        <in_subwindow/>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="1" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <host_conversion/>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>KZZTG</host_field>
+      <value_list>
+        <string>J	Ja</string>
+        <string>N	Nein</string>
+      </value_list>
+    </combo>
+    <text>
+      <dimensions x="95" y="161" cx="55" cy="16"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <title>Buntware</title>
+    </text>
+    <combo>
+      <dimensions x="177" y="159" cx="59" cy="58"/>
+      <field_flags>
+        <in_subwindow/>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="1" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <host_conversion/>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>KZBW</host_field>
+      <value_list>
+        <string>J	Ja</string>
+        <string>N	Nein</string>
+      </value_list>
+    </combo>
+    <group>
+      <dimensions x="324" y="26" cx="209" cy="45"/>
+      <field_flags>
+        <field_clipping/>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <title>Gruppe 1</title>
+    </group>
+    <edit>
+      <dimensions x="342" y="44" cx="30" cy="20"/>
+      <field_flags>
+        <in_subwindow/>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="2" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>OBGR1</host_field>
+    </edit>
+    <text>
+      <dimensions x="381" y="46" cx="28" cy="16"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <title>U-Gr</title>
+    </text>
+    <edit>
+      <dimensions x="418" y="44" cx="30" cy="20"/>
+      <field_flags>
+        <in_subwindow/>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="2" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>UGR1V</host_field>
+    </edit>
+    <text>
+      <dimensions x="457" y="46" cx="18" cy="16"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <title>bis</title>
+    </text>
+    <edit>
+      <dimensions x="484" y="44" cx="30" cy="20"/>
+      <field_flags>
+        <in_subwindow/>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="2" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>UGR1B</host_field>
+    </edit>
+    <group>
+      <dimensions x="324" y="84" cx="209" cy="45"/>
+      <field_flags>
+        <field_clipping/>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <title>Gruppe 2</title>
+    </group>
+    <edit>
+      <dimensions x="342" y="101" cx="30" cy="20"/>
+      <field_flags>
+        <in_subwindow/>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="2" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>OBGR2</host_field>
+    </edit>
+    <text>
+      <dimensions x="381" y="103" cx="28" cy="16"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <title>U-Gr</title>
+    </text>
+    <edit>
+      <dimensions x="418" y="101" cx="30" cy="20"/>
+      <field_flags>
+        <in_subwindow/>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="2" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>UGR2V</host_field>
+    </edit>
+    <text>
+      <dimensions x="457" y="103" cx="18" cy="16"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <title>bis</title>
+    </text>
+    <edit>
+      <dimensions x="484" y="101" cx="30" cy="20"/>
+      <field_flags>
+        <in_subwindow/>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="2" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>UGR2B</host_field>
+    </edit>
+    <group>
+      <dimensions x="324" y="147" cx="209" cy="45"/>
+      <field_flags>
+        <field_clipping/>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <title>Gruppe 3</title>
+    </group>
+    <edit>
+      <dimensions x="342" y="166" cx="30" cy="20"/>
+      <field_flags>
+        <in_subwindow/>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="2" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>OBGR3</host_field>
+    </edit>
+    <text>
+      <dimensions x="381" y="168" cx="28" cy="16"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <title>U-Gr</title>
+    </text>
+    <edit>
+      <dimensions x="418" y="166" cx="30" cy="20"/>
+      <field_flags>
+        <in_subwindow/>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="2" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>UGR3V</host_field>
+    </edit>
+    <text>
+      <dimensions x="457" y="168" cx="18" cy="16"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <title>bis</title>
+    </text>
+    <edit>
+      <dimensions x="484" y="166" cx="30" cy="20"/>
+      <field_flags>
+        <in_subwindow/>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="2" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>UGR3B</host_field>
+    </edit>
+    <subwindow>
+      <dimensions x="72" y="221" cx="715" cy="284"/>
+      <field_flags>
+        <page/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+        <ColorBackground>66</ColorBackground>
+      </FontColor>
+      <FontColorTabSelect>
+        <FontStyleName/>
+        <ColorForeground>16</ColorForeground>
+        <ColorBackground>63</ColorBackground>
+      </FontColorTabSelect>
+      <title>Lieferschein</title>
+    </subwindow>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="12" y="30" cx="21" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LTYP1</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="34" y="30" cx="35" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>OBJ1</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="72" y="30" cx="129" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>NAME1</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="201" y="30" cx="41" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>FOLGE1</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="251" y="30" cx="42" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LBEZ1</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="302" y="30" cx="40" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>DSP1</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="351" y="30" cx="33" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>VERT1</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="393" y="30" cx="37" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>AKVM1</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="439" y="30" cx="28" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>AEHZ1</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="476" y="30" cx="37" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>BEZ1</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="522" y="30" cx="40" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>PREIS1</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="571" y="30" cx="19" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ERYT1</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="599" y="30" cx="84" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ERYTTXT1</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="12" y="45" cx="21" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LTYP2</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="34" y="45" cx="35" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>OBJ2</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="72" y="45" cx="129" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>NAME2</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="201" y="44" cx="41" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>FOLGE2</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="251" y="44" cx="42" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LBEZ2</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="302" y="44" cx="40" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>DSP2</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="351" y="44" cx="33" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>VERT2</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="393" y="44" cx="37" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>AKVM2</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="439" y="44" cx="28" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>AEHZ2</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="476" y="44" cx="37" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>BEZ2</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="522" y="44" cx="40" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>PREIS2</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="571" y="44" cx="19" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ERYT2</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="599" y="44" cx="84" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ERYTTXT2</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="12" y="60" cx="21" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LTYP3</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="34" y="60" cx="35" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>OBJ3</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="72" y="60" cx="129" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>NAME3</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="201" y="59" cx="41" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>FOLGE3</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="251" y="59" cx="42" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LBEZ3</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="302" y="59" cx="40" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>DSP3</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="351" y="59" cx="33" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>VERT3</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="393" y="59" cx="37" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>AKVM3</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="439" y="59" cx="28" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>AEHZ3</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="476" y="59" cx="37" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>BEZ3</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="522" y="59" cx="40" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>PREIS3</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="571" y="59" cx="19" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ERYT3</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="599" y="59" cx="84" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ERYTTXT3</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="12" y="75" cx="21" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LTYP4</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="34" y="75" cx="35" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>OBJ4</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="72" y="75" cx="129" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>NAME4</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="201" y="74" cx="41" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>FOLGE4</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="251" y="74" cx="42" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LBEZ4</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="302" y="74" cx="40" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>DSP4</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="351" y="74" cx="33" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>VERT4</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="393" y="74" cx="37" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>AKVM4</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="439" y="74" cx="28" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>AEHZ4</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="476" y="74" cx="37" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>BEZ4</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="522" y="74" cx="40" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>PREIS4</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="571" y="74" cx="19" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ERYT4</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="599" y="74" cx="84" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ERYTTXT4</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="12" y="90" cx="21" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LTYP5</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="34" y="90" cx="35" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>OBJ5</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="72" y="90" cx="129" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>NAME5</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="201" y="89" cx="41" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>FOLGE5</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="251" y="89" cx="42" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LBEZ5</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="302" y="89" cx="40" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>DSP5</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="351" y="89" cx="33" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>VERT5</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="393" y="89" cx="37" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>AKVM5</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="439" y="89" cx="28" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>AEHZ5</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="476" y="89" cx="37" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>BEZ5</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="522" y="89" cx="40" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>PREIS5</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="571" y="89" cx="19" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ERYT5</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="599" y="89" cx="84" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ERYTTXT5</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="12" y="105" cx="21" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LTYP6</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="34" y="105" cx="35" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>OBJ6</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="72" y="105" cx="129" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>NAME6</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="201" y="104" cx="41" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>FOLGE6</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="251" y="104" cx="42" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LBEZ6</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="302" y="104" cx="40" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>DSP6</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="351" y="104" cx="33" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>VERT6</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="393" y="104" cx="37" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>AKVM6</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="439" y="104" cx="28" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>AEHZ6</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="476" y="104" cx="37" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>BEZ6</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="522" y="104" cx="40" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>PREIS6</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="571" y="104" cx="19" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ERYT6</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="599" y="104" cx="84" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ERYTTXT6</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="12" y="120" cx="21" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LTYP7</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="34" y="120" cx="35" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>OBJ7</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="72" y="120" cx="129" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>NAME7</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="201" y="119" cx="41" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>FOLGE7</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="251" y="119" cx="42" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LBEZ7</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="302" y="119" cx="40" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>DSP7</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="351" y="119" cx="33" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>VERT7</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="393" y="119" cx="37" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>AKVM7</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="439" y="119" cx="28" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>AEHZ7</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="476" y="119" cx="37" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>BEZ7</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="522" y="119" cx="40" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>PREIS7</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="571" y="119" cx="19" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ERYT7</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="599" y="119" cx="84" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ERYTTXT7</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="12" y="135" cx="21" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LTYP8</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="34" y="135" cx="35" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>OBJ8</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="72" y="135" cx="129" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>NAME8</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="201" y="134" cx="41" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>FOLGE8</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="251" y="134" cx="42" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LBEZ8</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="302" y="134" cx="40" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>DSP8</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="351" y="134" cx="33" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>VERT8</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="393" y="134" cx="37" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>AKVM8</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="439" y="134" cx="28" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>AEHZ8</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="476" y="134" cx="37" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>BEZ8</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="522" y="134" cx="40" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>PREIS8</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="571" y="134" cx="19" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ERYT8</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="599" y="134" cx="84" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ERYTTXT8</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="12" y="150" cx="21" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LTYP9</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="34" y="150" cx="35" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>OBJ9</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="72" y="150" cx="129" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>NAME9</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="201" y="149" cx="41" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>FOLGE9</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="251" y="149" cx="42" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LBEZ9</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="302" y="149" cx="40" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>DSP9</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="351" y="149" cx="33" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>VERT9</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="393" y="149" cx="37" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>AKVM9</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="439" y="149" cx="28" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>AEHZ9</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="476" y="149" cx="37" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>BEZ9</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="522" y="149" cx="40" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>PREIS9</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="571" y="149" cx="19" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ERYT9</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="599" y="149" cx="84" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ERYTTXT9</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="12" y="165" cx="21" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LTYP10</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="34" y="165" cx="35" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>OBJ10</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="72" y="165" cx="129" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>NAME10</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="201" y="164" cx="41" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>FOLGE10</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="251" y="164" cx="42" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LBEZ10</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="302" y="164" cx="40" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>DSP10</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="351" y="164" cx="33" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>VERT10</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="393" y="164" cx="37" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>AKVM10</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="439" y="164" cx="28" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>AEHZ10</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="476" y="164" cx="37" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>BEZ10</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="522" y="164" cx="40" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>PREIS10</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="571" y="164" cx="19" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ERYT10</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="599" y="164" cx="84" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ERYTTXT10</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="12" y="180" cx="21" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LTYP11</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="34" y="180" cx="35" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>OBJ11</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="72" y="180" cx="129" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>NAME11</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="201" y="179" cx="41" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>FOLGE11</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="251" y="179" cx="42" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LBEZ11</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="302" y="179" cx="40" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>DSP11</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="351" y="179" cx="33" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>VERT11</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="393" y="179" cx="37" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>AKVM11</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="439" y="179" cx="28" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>AEHZ11</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="476" y="179" cx="37" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>BEZ11</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="522" y="179" cx="40" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>PREIS11</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="571" y="179" cx="19" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ERYT11</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="599" y="179" cx="84" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ERYTTXT11</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="12" y="195" cx="21" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LTYP12</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="34" y="195" cx="35" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>OBJ12</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="72" y="195" cx="129" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>NAME12</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="201" y="194" cx="41" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>FOLGE12</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="251" y="194" cx="42" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LBEZ12</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="302" y="194" cx="40" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>DSP12</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="351" y="194" cx="33" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>VERT12</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="393" y="194" cx="37" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>AKVM12</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="439" y="194" cx="28" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>AEHZ12</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="476" y="194" cx="37" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>BEZ12</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="522" y="194" cx="40" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>PREIS12</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="571" y="194" cx="19" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ERYT12</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="599" y="194" cx="84" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ERYTTXT12</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="12" y="210" cx="21" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LTYP13</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="34" y="210" cx="35" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>OBJ13</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="72" y="210" cx="129" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>NAME13</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="201" y="209" cx="41" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>FOLGE13</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="251" y="209" cx="42" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LBEZ13</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="302" y="209" cx="40" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>DSP13</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="351" y="209" cx="33" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>VERT13</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="393" y="209" cx="37" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>AKVM13</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="439" y="209" cx="28" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>AEHZ13</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="476" y="209" cx="37" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>BEZ13</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="522" y="209" cx="40" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>PREIS13</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="571" y="209" cx="19" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ERYT13</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="599" y="209" cx="84" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ERYTTXT13</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="12" y="225" cx="21" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LTYP14</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="34" y="225" cx="35" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>OBJ14</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="72" y="225" cx="129" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>NAME14</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="201" y="224" cx="41" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>FOLGE14</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="251" y="224" cx="42" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LBEZ14</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="302" y="224" cx="40" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>DSP14</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="351" y="224" cx="33" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>VERT14</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="393" y="224" cx="37" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>AKVM14</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="439" y="224" cx="28" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>AEHZ14</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="476" y="224" cx="37" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>BEZ14</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="522" y="224" cx="40" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>PREIS14</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="571" y="224" cx="19" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ERYT14</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="599" y="224" cx="84" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ERYTTXT14</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="12" y="240" cx="21" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LTYP15</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="34" y="240" cx="35" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>OBJ15</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="72" y="240" cx="129" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>NAME15</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="201" y="239" cx="41" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>FOLGE15</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="251" y="239" cx="42" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LBEZ15</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="302" y="239" cx="40" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>DSP15</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="351" y="239" cx="33" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>VERT15</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="393" y="239" cx="37" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>AKVM15</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="439" y="239" cx="28" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>AEHZ15</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="476" y="239" cx="37" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>BEZ15</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="522" y="239" cx="40" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>PREIS15</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="571" y="239" cx="19" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ERYT15</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="599" y="239" cx="84" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ERYTTXT15</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="12" y="255" cx="21" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LTYP16</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="34" y="255" cx="35" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>OBJ16</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="72" y="255" cx="129" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>NAME16</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="201" y="254" cx="41" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>FOLGE16</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="251" y="254" cx="42" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LBEZ16</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="302" y="254" cx="40" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>DSP16</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="351" y="254" cx="33" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>VERT16</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="393" y="254" cx="37" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>AKVM16</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="439" y="254" cx="28" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>AEHZ16</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="476" y="254" cx="37" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>BEZ16</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="522" y="254" cx="40" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>PREIS16</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="571" y="254" cx="19" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ERYT16</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="599" y="254" cx="84" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ERYTTXT16</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="12" y="270" cx="21" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LTYP17</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="34" y="270" cx="35" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>OBJ17</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="72" y="270" cx="129" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>NAME17</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="201" y="269" cx="41" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>FOLGE17</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="251" y="269" cx="42" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LBEZ17</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="302" y="269" cx="40" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>DSP17</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="351" y="269" cx="33" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>VERT17</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="393" y="269" cx="37" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>AKVM17</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="439" y="269" cx="28" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>AEHZ17</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="476" y="269" cx="37" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>BEZ17</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="522" y="269" cx="40" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>PREIS17</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="571" y="269" cx="19" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ERYT17</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="599" y="269" cx="84" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ERYTTXT17</host_field>
+    </output>
+    <text>
+      <color_conversion>2</color_conversion>
+      <dimensions x="12" y="11" cx="18" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <title>LF.</title>
+    </text>
+    <text>
+      <color_conversion>2</color_conversion>
+      <dimensions x="47" y="11" cx="26" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <title>Obnr</title>
+    </text>
+    <text>
+      <color_conversion>2</color_conversion>
+      <dimensions x="73" y="11" cx="26" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <title>Titel </title>
+    </text>
+    <text>
+      <color_conversion>2</color_conversion>
+      <dimensions x="213" y="11" cx="29" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <title>Folge</title>
+    </text>
+    <text>
+      <color_conversion>2</color_conversion>
+      <dimensions x="258" y="11" cx="33" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <title>L.Bez.</title>
+    </text>
+    <text>
+      <color_conversion>2</color_conversion>
+      <dimensions x="294" y="11" cx="64" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <title>Dispo -LRest</title>
+    </text>
+    <text>
+      <color_conversion>2</color_conversion>
+      <dimensions x="356" y="11" cx="28" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <title> Vert.</title>
+    </text>
+    <text>
+      <color_conversion>2</color_conversion>
+      <dimensions x="441" y="11" cx="21" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <title>EH.</title>
+    </text>
+    <text>
+      <color_conversion>2</color_conversion>
+      <dimensions x="484" y="10" cx="33" cy="14"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <title>Bezug</title>
+    </text>
+    <text>
+      <color_conversion>2</color_conversion>
+      <dimensions x="534" y="11" cx="26" cy="11"/>
+      <field_flags>
+        <in_subwindow/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <title>Preis</title>
+    </text>
+    <button>
+      <dimensions x="683" y="31" cx="28" cy="28"/>
+      <field_flags>
+        <in_subwindow/>
+        <tab_stop/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName/>
+        <ColorBackground>66</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <bitmap/>
+        <centered/>
+        <no_border/>
+      </general_flags_1>
+      <general_flags_2>
+        <cursor_on_text/>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <non_default_align/>
+      </general_flags_3>
+      <help_text>zurück</help_text>
+      <image_file>Resources\LLD_BUTTON_RUND_01_NACHOBEN.GIF</image_file>
+      <send_key>2</send_key>
+    </button>
+    <button>
+      <dimensions x="685" y="245" cx="28" cy="28"/>
+      <field_flags>
+        <in_subwindow/>
+        <tab_stop/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName/>
+        <ColorBackground>66</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <bitmap/>
+        <centered/>
+        <no_border/>
+      </general_flags_1>
+      <general_flags_2>
+        <cursor_on_text/>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <no_focus_line/>
+        <non_default_align/>
+      </general_flags_3>
+      <help_text>vorwärts</help_text>
+      <image_file>Resources\LLD_BUTTON_RUND_01_NACHUNTEN.GIF</image_file>
+      <send_key>3</send_key>
+    </button>
+    <rectangle>
+      <depth>-2</depth>
+      <dimensions x="1" y="0" cx="888" cy="25"/>
+      <field_flags>
+        <field_clipping/>
+        <size_x/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName/>
+        <ColorForeground>43</ColorForeground>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+    </rectangle>
+    <button>
+      <dimensions x="7" y="4" cx="16" cy="16"/>
+      <FontColor>
+        <FontStyleName/>
+        <ColorBackground>72</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <bitmap/>
+        <centered/>
+        <no_border/>
+        <stretched/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <non_default_align/>
+      </general_flags_3>
+      <help_text>Ende (F3)</help_text>
+      <image_file>Resources\EXIT 16X16.GIF</image_file>
+      <send_key>6</send_key>
+      <title>Exit</title>
+    </button>
+    <button>
+      <dimensions x="36" y="4" cx="16" cy="16"/>
+      <FontColor>
+        <FontStyleName/>
+        <ColorBackground>72</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <bitmap/>
+        <centered/>
+        <no_border/>
+      </general_flags_1>
+      <general_flags_2>
+        <default/>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <non_default_align/>
+      </general_flags_3>
+      <help_text>Datenfreigabe</help_text>
+      <image_file>Resources\WEITER.GIF</image_file>
+      <send_key>1</send_key>
+      <title>Enter</title>
+    </button>
+    <button>
+      <dimensions x="72" y="4" cx="16" cy="16"/>
+      <FontColor>
+        <FontStyleName/>
+        <ColorBackground>72</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <bitmap/>
+        <centered/>
+        <no_border/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <non_default_align/>
+      </general_flags_3>
+      <help_text>Speichern (F9)</help_text>
+      <image_file>Resources\DISKETTE.GIF</image_file>
+      <send_key>12</send_key>
+      <title>Speichern</title>
+    </button>
+    <button>
+      <dimensions x="108" y="4" cx="16" cy="16"/>
+      <general_flags_1>
+        <bitmap/>
+        <centered/>
+        <no_border/>
+        <stretched/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <non_default_align/>
+      </general_flags_3>
+      <help_text>Drucken</help_text>
+      <image_file>Resources\DRUCKER 16X16.GIF</image_file>
+      <panel_next>*PRINTFAST</panel_next>
+      <title>Drucken</title>
+    </button>
+    <button>
+      <dimensions x="682" y="4" cx="16" cy="16"/>
+      <enable_check>Yes</enable_check>
+      <enable_expression>@&amp;&amp;WORD@</enable_expression>
+      <field_flags>
+        <move_x/>
+      </field_flags>
+      <general_flags_1>
+        <bitmap/>
+        <centered/>
+        <no_border/>
+        <stretched/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <non_default_align/>
+        <transparent_background/>
+      </general_flags_3>
+      <help_text>Microsoft Word</help_text>
+      <image_file>Resources\WORD 16X16.GIF</image_file>
+      <script>PcCommand(2, &quot;WINWORD.EXE&quot;)
+
+ </script>
+    </button>
+    <button>
+      <dimensions x="720" y="4" cx="16" cy="16"/>
+      <enable_check>Yes</enable_check>
+      <enable_expression>@&amp;&amp;EXCEL@</enable_expression>
+      <field_flags>
+        <move_x/>
+      </field_flags>
+      <general_flags_1>
+        <bitmap/>
+        <centered/>
+        <no_border/>
+        <stretched/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <non_default_align/>
+        <transparent_background/>
+      </general_flags_3>
+      <help_text> Microsoft Excel</help_text>
+      <image_file>Resources\EXCEL 16X16.GIF</image_file>
+      <script>PcCommand(2, &quot;EXCEL.EXE&quot;)</script>
+    </button>
+    <button>
+      <dimensions x="755" y="4" cx="16" cy="16"/>
+      <field_flags>
+        <move_x/>
+      </field_flags>
+      <general_flags_1>
+        <bitmap/>
+        <centered/>
+        <no_border/>
+        <stretched/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <non_default_align/>
+      </general_flags_3>
+      <help_text>Taschenrechner</help_text>
+      <image_file>Resources\RECHNER.GIF</image_file>
+      <script>PcCommand(2, &quot;Calc.EXE&quot;)</script>
+      <title>Rechner</title>
+    </button>
+    <button>
+      <dimensions x="790" y="4" cx="16" cy="16"/>
+      <field_flags>
+        <move_x/>
+      </field_flags>
+      <general_flags_1>
+        <bitmap/>
+        <centered/>
+        <no_border/>
+        <stretched/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+      </general_flags_3>
+      <help_text>Info</help_text>
+      <image_file>Resources\INFO 16X16.GIF</image_file>
+      <panel_next>ABOUT</panel_next>
+      <title>Info</title>
+    </button>
+    <user_window>
+      <dimensions x="810" y="4" cx="71" cy="16"/>
+      <field_flags>
+        <move_x/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+        <ColorBackground>43</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <user_window_type>5</user_window_type>
+    </user_window>
+    <button>
+      <dimensions x="0" y="25" cx="889" cy="37"/>
+      <field_flags>
+        <field_clipping/>
+      </field_flags>
+      <general_flags_1>
+        <bitmap/>
+        <centered/>
+        <stretched/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <no_focus_line/>
+        <non_default_align/>
+        <unclickable/>
+      </general_flags_3>
+      <image_file>Resources\LLD_BANNER_MAIN.JPG</image_file>
+      <title>LLD</title>
+    </button>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="1" y="26" cx="150" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <host_field>FIRM</host_field>
+      <title> </title>
+    </output>
+    <text>
+      <dimensions x="67" y="87" cx="41" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Kunde</title>
+    </text>
+    <edit>
+      <dimensions x="117" y="85" cx="60" cy="20"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="7" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>KDKDNR</host_field>
+    </edit>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="186" y="87" cx="341" cy="20"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 12 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <host_field>KDNAME</host_field>
+    </output>
+    <text>
+      <dimensions x="67" y="119" cx="109" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Lieferscheindatum</title>
+    </text>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="54" y="162" cx="423" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <host_field>STATUS</host_field>
+    </output>
+    <button>
+      <dimensions x="781" y="524" cx="70" cy="19"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+        <ColorBackground>72</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <centered/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <non_default_align/>
+      </general_flags_3>
+      <send_key>1</send_key>
+      <title>OK</title>
+    </button>
+    <button>
+      <dimensions x="47" y="524" cx="70" cy="19"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+        <ColorBackground>72</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <centered/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <non_default_align/>
+      </general_flags_3>
+      <send_key>6</send_key>
+      <title>zurück</title>
+    </button>
+    <group>
+      <dimensions x="785" y="116" cx="54" cy="43"/>
+      <field_flags>
+        <field_clipping/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Seagull Helv 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+    </group>
+    <button>
+      <dimensions x="792" y="122" cx="42" cy="33"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+        <ColorBackground>72</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <bitmap/>
+        <no_border/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <transparent_background/>
+      </general_flags_3>
+      <help_text>Exportiert den angezeigten
+Verteiler nach EXCEL</help_text>
+      <image_file>Resources\excel2.gif</image_file>
+      <ois_object>EX_0889</ois_object>
+    </button>
+  </controls>
+</panel>

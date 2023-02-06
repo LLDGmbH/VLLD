@@ -1,0 +1,79 @@
+﻿dim xxgkz, xlm, xlmc, text, ErrorMsg as String
+dim rc as Integer
+global filiale, xlmlmname as string
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+
+rc = EzSQLQuery("SELECT lmlmnr,digits(lmlmnr) concat '-' concat lmlmname FROM xxlomarkt", text, ErrorMsg)
+PanelFieldSetProp ("XX_LMNR", 5, text) 
+rc = EzSQLQuery("SELECT lmclnr,digits(lmclnr) concat '-' concat lmclname FROM xxlomarkt", text, ErrorMsg)
+PanelFieldSetProp ("XX_LMCNR", 5, text) 
+
+rem **************************************************************
+rem *** FILIALE ÜBERPRÜFEN
+
+if filiale = "" then
+  filiale = "0"
+endif
+
+rem **************************************************************
+rem *** GEMEINDEN AUS GRENWP bereitstellen
+
+
+if (filiale = "0") then
+  rc = EzSQLQuery("SELECT GKZ, digits(GKZ) concat '-' concat ORT from DIPF01/GRENWP order by ORT", text, ErrorMsg)
+endif
+
+if (filiale = "1") then
+  rc = EzSQLQuery("SELECT gkz, digits(gkz) concat '-' concat ort FROM dipf01/GRENWP order by gkz", text, ErrorMsg)
+endif
+
+if (filiale = "2") then
+  rc = EzSQLQuery("SELECT gkz, digits(gkz) concat '-' concat ort FROM dipf02/GRENWP order by gkz", text, ErrorMsg)
+endif
+
+if (filiale = "3") then
+  rc = EzSQLQuery("SELECT gkz, digits(gkz) concat '-' concat ort FROM dipf03/GRENWP order by gkz", text, ErrorMsg)
+endif
+
+if (filiale = "4") then
+  rc = EzSQLQuery("SELECT gkz, digits(gkz) concat '-' concat ort FROM dipf04/GRENWP order by gkz", text, ErrorMsg)
+endif
+
+if (filiale = "5") then
+  rc = EzSQLQuery("SELECT gkz, digits(gkz) concat '-' concat ort FROM dipf05/GRENWP order by gkz", text, ErrorMsg)
+endif
+
+if (filiale = "6") then
+  rc = EzSQLQuery("SELECT gkz, digits(gkz) concat '-' concat ort FROM dipf06/GRENWP order by gkz", text, ErrorMsg)
+endif
+
+if (filiale = "7") then
+  rc = EzSQLQuery("SELECT gkz, digits(gkz) concat '-' concat ort FROM dipf07/GRENWP order by gkz", text, ErrorMsg)
+endif
+
+if (filiale = "8") then
+  rc = EzSQLQuery("SELECT gkz, digits(gkz) concat '-' concat ort FROM dipf08/GRENWP order by gkz", text, ErrorMsg)
+endif
+
+if (filiale = "9") then
+  rc = EzSQLQuery("SELECT gkz, digits(gkz) concat '-' concat ort FROM dipf09/GRENWP order by gkz", text, ErrorMsg)
+endif
+
+PanelFieldSetProp ("F1GKZ", 5, text) 
+
+PanelUpdateEnable(2)
+
+rem **************************************************************
+rem *** ORTSTEIL AUS GRORTP bereitstellen
+
+HostFieldGetData("f1gkz",xxgkz)
+
+if xxgkz = "" then
+  rc = EzSQLQuery("SELECT kdgsch, digits(kdgsch) concat '-' concat KDGSTX FROM GRORTP order by KDGSTX", text, ErrorMsg)
+else
+  rc = EzSQLQuery("SELECT kdgsch, digits(kdgsch) concat '-' concat KDGSTX FROM GRORTP where kdgkz = " + xxgkz + " order by KDGSTX", text, ErrorMsg)
+endif
+
+PanelFieldSetProp ("F1GSCH", 5, text) 
+
+PanelUpdateEnable(2)

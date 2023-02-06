@@ -1,0 +1,942 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="LZSRC/PVLVMPEDDS(SFLCTL+FUSS)" library="LZSRC" member_name="PVLVMPEDDS">
+    <size cx="80" cy="24"/>
+    <action key="f1" caption="F1" attention_key="false"/>
+    <action key="f2" caption="F2" attention_key="false"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="f12" caption="F12" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <field field_type="screen_part" name="SFLCTL" overlay="true">
+      <area>
+        <position/>
+        <size cx="80" cy="22"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="FUSS">
+      <area>
+        <position y="22"/>
+        <size cx="80" cy="2"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="*USER" short_name="*USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="72"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value=" Zusammenstellung Objekte zur Abrechnung " display_length="41" data_length="41" underline="true">
+          <area>
+            <position x="20" y="1"/>
+            <size cx="41" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="QUARTAL" short_name="QUARTAL" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="70" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value=" EDI VMP-Meldung " display_length="17" data_length="17" underline="true">
+          <area>
+            <position x="30" y="2"/>
+            <size cx="17" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="VMPVLGAUS" short_name="VMPVLGAUS" data_type="zoned_decimal" display_length="4" data_length="4" underline="true">
+          <area>
+            <position x="2" y="3"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Verlag" display_length="6" data_length="6">
+          <area>
+            <position x="8" y="3"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="both" name="NEU" short_name="NEU" data_type="alphanumeric" display_length="1" data_length="1" underline="true">
+          <area>
+            <position x="2" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="N = nur Neutitel/Wiedereinschaltungen anzeigen" display_length="46" data_length="46">
+          <area>
+            <position x="8" y="4"/>
+            <size cx="46" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="Objekte :" display_length="9" data_length="9">
+          <area>
+            <position x="63" y="4"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="POSA" short_name="POSA" data_type="zoned_decimal" display_length="4" data_length="4">
+          <area>
+            <position x="75" y="4"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="                                                                                " display_length="80" data_length="80" underline="true">
+          <area>
+            <position y="5"/>
+            <size cx="80" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="VMPAUSW" short_name="VMPAUSW" data_type="alphanumeric" display_length="1" data_length="1" non_display="conditional" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VMPOBJ" short_name="VMPOBJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="6" y="6"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" non_display="conditional" conditional="true">
+          <area>
+            <position x="13" y="6"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATVKZ" short_name="ATVKZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="36" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VMPVLG" short_name="VMPVLG" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="49" y="6"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VANAME" short_name="VANAME" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="55" y="6"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="VMPAUSW" short_name="VMPAUSW" data_type="alphanumeric" display_length="1" data_length="1" non_display="conditional" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VMPOBJ" short_name="VMPOBJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="6" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" non_display="conditional" conditional="true">
+          <area>
+            <position x="13" y="7"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATVKZ" short_name="ATVKZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="36" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VMPVLG" short_name="VMPVLG" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="49" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VANAME" short_name="VANAME" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="55" y="7"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="VMPAUSW" short_name="VMPAUSW" data_type="alphanumeric" display_length="1" data_length="1" non_display="conditional" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VMPOBJ" short_name="VMPOBJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="6" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" non_display="conditional" conditional="true">
+          <area>
+            <position x="13" y="8"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATVKZ" short_name="ATVKZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="36" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VMPVLG" short_name="VMPVLG" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="49" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VANAME" short_name="VANAME" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="55" y="8"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="VMPAUSW" short_name="VMPAUSW" data_type="alphanumeric" display_length="1" data_length="1" non_display="conditional" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VMPOBJ" short_name="VMPOBJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="6" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" non_display="conditional" conditional="true">
+          <area>
+            <position x="13" y="9"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATVKZ" short_name="ATVKZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="36" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VMPVLG" short_name="VMPVLG" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="49" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VANAME" short_name="VANAME" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="55" y="9"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="VMPAUSW" short_name="VMPAUSW" data_type="alphanumeric" display_length="1" data_length="1" non_display="conditional" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VMPOBJ" short_name="VMPOBJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="6" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" non_display="conditional" conditional="true">
+          <area>
+            <position x="13" y="10"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATVKZ" short_name="ATVKZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="36" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VMPVLG" short_name="VMPVLG" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="49" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VANAME" short_name="VANAME" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="55" y="10"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="VMPAUSW" short_name="VMPAUSW" data_type="alphanumeric" display_length="1" data_length="1" non_display="conditional" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VMPOBJ" short_name="VMPOBJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="6" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" non_display="conditional" conditional="true">
+          <area>
+            <position x="13" y="11"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATVKZ" short_name="ATVKZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="36" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VMPVLG" short_name="VMPVLG" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="49" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VANAME" short_name="VANAME" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="55" y="11"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="VMPAUSW" short_name="VMPAUSW" data_type="alphanumeric" display_length="1" data_length="1" non_display="conditional" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VMPOBJ" short_name="VMPOBJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="6" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" non_display="conditional" conditional="true">
+          <area>
+            <position x="13" y="12"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATVKZ" short_name="ATVKZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="36" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VMPVLG" short_name="VMPVLG" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="49" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VANAME" short_name="VANAME" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="55" y="12"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="VMPAUSW" short_name="VMPAUSW" data_type="alphanumeric" display_length="1" data_length="1" non_display="conditional" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VMPOBJ" short_name="VMPOBJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="6" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" non_display="conditional" conditional="true">
+          <area>
+            <position x="13" y="13"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATVKZ" short_name="ATVKZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="36" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VMPVLG" short_name="VMPVLG" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="49" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VANAME" short_name="VANAME" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="55" y="13"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="VMPAUSW" short_name="VMPAUSW" data_type="alphanumeric" display_length="1" data_length="1" non_display="conditional" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VMPOBJ" short_name="VMPOBJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="6" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" non_display="conditional" conditional="true">
+          <area>
+            <position x="13" y="14"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATVKZ" short_name="ATVKZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="36" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VMPVLG" short_name="VMPVLG" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="49" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VANAME" short_name="VANAME" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="55" y="14"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="VMPAUSW" short_name="VMPAUSW" data_type="alphanumeric" display_length="1" data_length="1" non_display="conditional" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VMPOBJ" short_name="VMPOBJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="6" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" non_display="conditional" conditional="true">
+          <area>
+            <position x="13" y="15"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATVKZ" short_name="ATVKZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="36" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VMPVLG" short_name="VMPVLG" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="49" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VANAME" short_name="VANAME" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="55" y="15"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="VMPAUSW" short_name="VMPAUSW" data_type="alphanumeric" display_length="1" data_length="1" non_display="conditional" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VMPOBJ" short_name="VMPOBJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="6" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" non_display="conditional" conditional="true">
+          <area>
+            <position x="13" y="16"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATVKZ" short_name="ATVKZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="36" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VMPVLG" short_name="VMPVLG" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="49" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VANAME" short_name="VANAME" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="55" y="16"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="VMPAUSW" short_name="VMPAUSW" data_type="alphanumeric" display_length="1" data_length="1" non_display="conditional" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VMPOBJ" short_name="VMPOBJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="6" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" non_display="conditional" conditional="true">
+          <area>
+            <position x="13" y="17"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATVKZ" short_name="ATVKZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="36" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VMPVLG" short_name="VMPVLG" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="49" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VANAME" short_name="VANAME" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="55" y="17"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="VMPAUSW" short_name="VMPAUSW" data_type="alphanumeric" display_length="1" data_length="1" non_display="conditional" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VMPOBJ" short_name="VMPOBJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="6" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" non_display="conditional" conditional="true">
+          <area>
+            <position x="13" y="18"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATVKZ" short_name="ATVKZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="36" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VMPVLG" short_name="VMPVLG" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="49" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VANAME" short_name="VANAME" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="55" y="18"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="VMPAUSW" short_name="VMPAUSW" data_type="alphanumeric" display_length="1" data_length="1" non_display="conditional" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VMPOBJ" short_name="VMPOBJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="6" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" non_display="conditional" conditional="true">
+          <area>
+            <position x="13" y="19"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATVKZ" short_name="ATVKZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="36" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VMPVLG" short_name="VMPVLG" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="49" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VANAME" short_name="VANAME" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="55" y="19"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="VMPAUSW" short_name="VMPAUSW" data_type="alphanumeric" display_length="1" data_length="1" non_display="conditional" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="2" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="VMPOBJ" short_name="VMPOBJ" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="6" y="20"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" non_display="conditional" conditional="true">
+          <area>
+            <position x="13" y="20"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATVKZ" short_name="ATVKZ" data_type="zoned_decimal" display_length="5" data_length="5" non_display="conditional" conditional="true">
+          <area>
+            <position x="36" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VMPVLG" short_name="VMPVLG" data_type="zoned_decimal" display_length="4" data_length="4" non_display="conditional" conditional="true">
+          <area>
+            <position x="49" y="20"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="VANAME" short_name="VANAME" data_type="alphanumeric" display_length="25" data_length="25" non_display="conditional" conditional="true">
+          <area>
+            <position x="55" y="20"/>
+            <size cx="25" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+      </field>
+      <field field_type="subfile_end_more" value="Weitere ... " display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="67" y="21"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+      <field field_type="subfile_end_bottom" value="Ende        " display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="67" y="21"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="F1 = Hilfe;" display_length="11" data_length="11">
+      <area>
+        <position x="1" y="22"/>
+        <size cx="11" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="F2 = Objekt hinzufügen;" display_length="23" data_length="23">
+      <area>
+        <position x="13" y="22"/>
+        <size cx="23" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="F3 = beenden; F4 = Neues Quartal; F9 = Start Druck " display_length="51" data_length="51">
+      <area>
+        <position x="1" y="23"/>
+        <size cx="51" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="© Gerd Gerstmann" display_length="16" data_length="16">
+      <area>
+        <position x="63" y="23"/>
+        <size cx="16" cy="1"/>
+      </area>
+      <color foreground="red"/>
+    </field>
+  </screen>
+</header>

@@ -1,0 +1,80 @@
+﻿DIM ddehandle, i, j, msg as integer
+dim xobj, xtitel, xvnr, xvnam, xfolg, xlm, xlmn, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12, x13, x14, x15, xende, datei, pfad_datei, source as string 
+i = 0
+j=1
+
+
+datei = "Gutschriften EH VL.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+HostFieldGetData("c0obj", xobj)
+HostFieldGetData("c0onam", xtitel)
+HostFieldGetData("c0folg", xfolg)
+HostFieldGetData("c0vnr", xvnr)
+HostFieldGetData("c0vnam", xvnam)
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", "Verlag")
+ddepoke( ddehandle, "Z" + str(j) +"S2", xvnr)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xvnam)
+j=j+1
+ddepoke( ddehandle, "Z" + str(j) +"S1", "Objekt")
+ddepoke( ddehandle, "Z" + str(j) +"S2", xobj)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xtitel)
+
+j=j+2
+ddepoke( ddehandle, "Z" + str(j) +"S1", "Jahr")
+ddepoke( ddehandle, "Z" + str(j) +"S2", "Woche")
+ddepoke( ddehandle, "Z" + str(j) +"S3", "Menge EH")
+ddepoke( ddehandle, "Z" + str(j) +"S4", "Wert EH")
+ddepoke( ddehandle, "Z" + str(j) +"S5", "Menge Verlag")
+ddepoke( ddehandle, "Z" + str(j) +"S6", "Wert Verlag")
+ddepoke( ddehandle, "Z" + str(j) +"S7", "Menge Lager")
+ddepoke( ddehandle, "Z" + str(j) +"S8", "Wert Lager")
+
+
+j=j+1
+
+
+nochmal:
+
+HostFieldGetLineData("s0jahr", i, x1)
+HostFieldGetLineData("s0woch", i, x2)
+HostFieldGetLineData("s0mengeh", i, x3)
+HostFieldGetLineData("s0werteh", i, x4)
+HostFieldGetLineData("s0mengvl", i, x5)
+HostFieldGetLineData("s0wertvl", i, x6)
+HostFieldGetLineData("s0menglr", i, x7)
+HostFieldGetLineData("s0wertlr", i, x8)
+
+
+HostFieldGetData("ende", xende)
+
+if x1 <> ""  then
+ddepoke( ddehandle, "Z" + str(j) +"S1", x1)
+ddepoke( ddehandle, "Z" + str(j) +"S2", x2)
+ddepoke( ddehandle, "Z" + str(j) +"S3", x3)
+ddepoke( ddehandle, "Z" + str(j) +"S4", x4)
+ddepoke( ddehandle, "Z" + str(j) +"S5", x5)
+ddepoke( ddehandle, "Z" + str(j) +"S6", x6)
+ddepoke( ddehandle, "Z" + str(j) +"S7", x7)
+ddepoke( ddehandle, "Z" + str(j) +"S8", x8)
+
+
+j=j+1
+endif
+
+if i < 19 then
+i=i+1
+goto nochmal
+endif
+ 
+if x2 <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

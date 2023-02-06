@@ -1,0 +1,69 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xkdnr, xname, xkalf, xsdat, xszt, xddat, xdzt, xndat, xnzt, xvdat, xvzt, errmsg, datei, pfad_datei, source as string 
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "DatenmeldungVMP.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "Kunden-Nr")
+ddepoke( ddehandle, "Z1S2", "Name")
+ddepoke( ddehandle, "Z1S3", "KA")
+ddepoke( ddehandle, "Z1S4", "Datenmeldung")
+ddepoke( ddehandle, "Z1S5", "um")
+ddepoke( ddehandle, "Z1S6", "Inhalt bis")
+ddepoke( ddehandle, "Z1S7", "um")
+ddepoke( ddehandle, "Z1S8", "Nachlieferung")
+ddepoke( ddehandle, "Z1S9", "um")
+ddepoke( ddehandle, "Z1S10", "Versuch NaLi")
+ddepoke( ddehandle, "Z1S11", "um")
+
+nochmal:
+
+HostFieldGetLineData("sfkdnr", i, xkdnr)
+HostFieldGetLineData("sfname", i, xname)
+HostFieldGetLineData("sfkalf", i, xkalf)
+HostFieldGetLineData("sfsdat", i, xsdat)
+HostFieldGetLineData("sfszt", i, xszt)
+HostFieldGetLineData("sfddat", i, xddat)
+HostFieldGetLineData("sfszt", i, xdzt)
+HostFieldGetLineData("sfndat", i, xndat)
+HostFieldGetLineData("sfnzt", i, xnzt)
+HostFieldGetLineData("sfvdat", i, xvdat)
+HostFieldGetLineData("sfvzt", i, xvzt)
+
+
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", xkdnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xname)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xkalf)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xsdat)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xszt)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xddat)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xdzt)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xndat)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xnzt)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xvdat)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xvzt)
+
+j=j+1
+
+
+if i < 22 then
+i=i+1
+goto nochmal
+endif
+ 
+if xkdnr <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

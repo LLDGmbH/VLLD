@@ -1,0 +1,94 @@
+﻿DIM ddehandle, i, j, msg as integer
+dim x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12, x13, x14, x15,x16, x17, x18, xende, datei, pfad_datei, source as string 
+i = 0
+j=1
+
+HostFieldGetData("ws_mdat", x0)
+
+datei = "Frühremission " + x0 + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", "Objnr")
+ddepoke( ddehandle, "Z" + str(j) +"S2", "Folge")
+ddepoke( ddehandle, "Z" + str(j) +"S3", "Titel")
+ddepoke( ddehandle, "Z" + str(j) +"S4", "EVT")
+ddepoke( ddehandle, "Z" + str(j) +"S5", "Aufruf")
+ddepoke( ddehandle, "Z" + str(j) +"S6", "EW")
+ddepoke( ddehandle, "Z" + str(j) +"S7", "OG")
+ddepoke( ddehandle, "Z" + str(j) +"S8", "UG")
+ddepoke( ddehandle, "Z" + str(j) +"S9", "Bezug")
+ddepoke( ddehandle, "Z" + str(j) +"S10", "EH")
+ddepoke( ddehandle, "Z" + str(j) +"S11", "RemiKompl.")
+ddepoke( ddehandle, "Z" + str(j) +"S12", "EH")
+ddepoke( ddehandle, "Z" + str(j) +"S13", "RemiTeil.")
+ddepoke( ddehandle, "Z" + str(j) +"S14", "Remi")
+ddepoke( ddehandle, "Z" + str(j) +"S15", "EH")
+ddepoke( ddehandle, "Z" + str(j) +"S16", "Schädl.FR Bezug")
+ddepoke( ddehandle, "Z" + str(j) +"S17", "EH")
+ddepoke( ddehandle, "Z" + str(j) +"S18", "Verlag")
+
+
+j=j+1
+
+
+nochmal:
+
+HostFieldGetLineData("sf_obj", i, x1)
+HostFieldGetLineData("sf_folg", i, x2)
+HostFieldGetLineData("sf_onam", i, x3)
+HostFieldGetLineData("sf_evt", i, x4)
+HostFieldGetLineData("sf_aufdat", i, x5)
+HostFieldGetLineData("sf_erw", i, x6)
+HostFieldGetLineData("sf_ehcd", i, x7)
+HostFieldGetLineData("sf_ehug", i, x8)
+HostFieldGetLineData("sf_bez", i, x9)
+HostFieldGetLineData("sf_beh", i, x10)
+HostFieldGetLineData("sf_fbek", i, x11)
+HostFieldGetLineData("sf_fehk", i, x12)
+HostFieldGetLineData("sf_ftbz", i, x13)
+HostFieldGetLineData("sf_fbet", i, x14)
+HostFieldGetLineData("sf_feht", i, x15)
+HostFieldGetLineData("sf_sbek", i, x16)
+HostFieldGetLineData("sf_sehk", i, x17)
+HostFieldGetLineData("sf_vnam", i, x18)
+
+HostFieldGetData("ende", xende)
+
+if x1 <> ""  then
+ddepoke( ddehandle, "Z" + str(j) +"S1", x1)
+ddepoke( ddehandle, "Z" + str(j) +"S2", x2)
+ddepoke( ddehandle, "Z" + str(j) +"S3", x3)
+ddepoke( ddehandle, "Z" + str(j) +"S4", x4)
+ddepoke( ddehandle, "Z" + str(j) +"S5", x5)
+ddepoke( ddehandle, "Z" + str(j) +"S6", x6)
+ddepoke( ddehandle, "Z" + str(j) +"S7", x7)
+ddepoke( ddehandle, "Z" + str(j) +"S8", x8)
+ddepoke( ddehandle, "Z" + str(j) +"S9", x9)
+ddepoke( ddehandle, "Z" + str(j) +"S10", x10)
+ddepoke( ddehandle, "Z" + str(j) +"S11", x11)
+ddepoke( ddehandle, "Z" + str(j) +"S12", x12)
+ddepoke( ddehandle, "Z" + str(j) +"S13", x13)
+ddepoke( ddehandle, "Z" + str(j) +"S14", x14)
+ddepoke( ddehandle, "Z" + str(j) +"S15", x15)
+ddepoke( ddehandle, "Z" + str(j) +"S16", x16)
+ddepoke( ddehandle, "Z" + str(j) +"S17", x17)
+ddepoke( ddehandle, "Z" + str(j) +"S18", x18)
+
+j=j+1
+endif
+
+if i < 19 then
+i=i+1
+goto nochmal
+endif
+ 
+if x1 <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

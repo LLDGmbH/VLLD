@@ -1,0 +1,76 @@
+﻿global filiale as string
+DIM ddehandle, i, j, msg, rc as integer
+dim x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12, xvlg, xende, errmsg, errormsg, datei, pfad_datei, source as string 
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+HostFieldGetData("c1vnr",xvlg)
+
+datei = "Überbelieferung_" + xvlg + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z2S1", "Obnr")
+ddepoke( ddehandle, "Z2S2", "Titel")
+ddepoke( ddehandle, "Z2S3", "Folge")
+ddepoke( ddehandle, "Z2S4", "Expl.")
+ddepoke( ddehandle, "Z2S5", "Tage")
+ddepoke( ddehandle, "Z2S6", "EVT")
+ddepoke( ddehandle, "Z2S7", "Bezug")
+ddepoke( ddehandle, "Z2S8", "Remi")
+ddepoke( ddehandle, "Z2S9", "Verkauf")
+ddepoke( ddehandle, "Z2S10", "Kunden")
+ddepoke( ddehandle, "Z2S11", "VD")
+ddepoke( ddehandle, "Z2S12", "SQR++")
+
+
+nochmal:
+
+
+HostFieldGetLineData("s1obj", i, x1)
+HostFieldGetLineData("s1onam", i, x2)
+HostFieldGetLineData("s1folg", i, x3)
+HostFieldGetLineData("s1meng", i, x4)
+HostFieldGetLineData("s1tage", i, x5)
+HostFieldGetLineData("s1evt", i, x6)
+HostFieldGetLineData("s1bez", i, x7)
+HostFieldGetLineData("s1remi", i, x8)
+HostFieldGetLineData("s1vk", i, x9)
+HostFieldGetLineData("s1kdgs", i, x10)
+HostFieldGetLineData("s1vd", i, x11)
+HostFieldGetLineData("s1sqr", i, x12)
+
+if (x1 <> "")  then
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", x1)
+ddepoke( ddehandle, "Z" + str(j) +"S2", x2)
+ddepoke( ddehandle, "Z" + str(j) +"S3", x3)
+ddepoke( ddehandle, "Z" + str(j) +"S4", x4)
+ddepoke( ddehandle, "Z" + str(j) +"S5", x5)
+ddepoke( ddehandle, "Z" + str(j) +"S6", x6)
+ddepoke( ddehandle, "Z" + str(j) +"S7", x7)
+ddepoke( ddehandle, "Z" + str(j) +"S8", x8)
+ddepoke( ddehandle, "Z" + str(j) +"S9", x9)
+ddepoke( ddehandle, "Z" + str(j) +"S10", x10)
+ddepoke( ddehandle, "Z" + str(j) +"S11", x11)
+ddepoke( ddehandle, "Z" + str(j) +"S12", x12)
+
+j=j+1
+endif
+
+if i < 17 then
+i=i+1
+goto nochmal
+endif
+
+ 
+if x1 <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

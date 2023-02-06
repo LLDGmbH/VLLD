@@ -1,0 +1,27 @@
+﻿
+dim text, ErrorMsg,sqlstmd as String
+dim rc as Integer
+
+
+sqlstmd = "SELECT prgr, brutto FROM artprgr where pganzo > 0 order by brutto"
+
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+
+rc = EzSQLQuery(sqlstmd, text, ErrorMsg)
+
+if ( rc < 0 ) then
+
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+
+else
+
+PanelFieldSetProp ("xxprgr", 5, text) 
+
+PanelUpdateEnable(2)
+
+endif

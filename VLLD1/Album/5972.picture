@@ -1,0 +1,1912 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="SRC5/WF22DS(SFC+KEY01)" library="SRC5" member_name="WF22DS">
+    <size cx="80" cy="24"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f6" caption="F6" attention_key="false" conditional="true"/>
+    <action key="f20" caption="F20" attention_key="false"/>
+    <action key="f21" caption="F21" attention_key="false"/>
+    <action key="f22" caption="F22" attention_key="false"/>
+    <action key="f23" caption="F23" attention_key="false"/>
+    <action key="f24" caption="F24" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <action key="roll_up" caption="ROLL_UP" attention_key="false"/>
+    <field field_type="screen_part" name="SFC">
+      <area>
+        <position/>
+        <size cx="80" cy="23"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="KEY01" overlay="true">
+      <area>
+        <position y="23"/>
+        <size cx="80" cy="1"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="WFFIL" short_name="WFFIL" data_type="zoned_decimal" display_length="3" data_length="2" non_display="true" reverse_image="true" underline="true" high_intensity="true">
+          <area>
+            <position x="22"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="WARENFLUSS-LIEFERDATEN" display_length="22" data_length="22">
+          <area>
+            <position x="30"/>
+            <size cx="22" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="61"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="71"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="WF22" display_length="4" data_length="4">
+          <area>
+            <position x="73" y="1"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="fixed_text" value="Aktion" display_length="6" data_length="6">
+          <area>
+            <position x="1" y="2"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" exit_record="true">
+          <area>
+            <position x="9" y="2"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="Objekt" display_length="6" data_length="6">
+          <area>
+            <position x="11" y="2"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="WFOBJ" short_name="WFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" underline="true" high_intensity="true">
+          <area>
+            <position x="18" y="2"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21">
+          <area>
+            <position x="24" y="2"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Verlag" display_length="6" data_length="6">
+          <area>
+            <position x="46" y="2"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WFVNR" short_name="WFVNR" data_type="zoned_decimal" display_length="4" data_length="4">
+          <area>
+            <position x="53" y="2"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VANA15" short_name="VANA15" data_type="alphanumeric" display_length="15" data_length="15">
+          <area>
+            <position x="58" y="2"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="  Folge  V-HLfg V-NL V-DL Diff  EH-HLfg LFB  E-Nl Anf  End  ReLa  LaRe  E-Rem  " display_length="79" data_length="79" underline="true">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="79" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="WFJAHR" short_name="WFJAHR" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="WFFOLG" short_name="WFFOLG" data_type="zoned_decimal" display_length="4" data_length="4">
+          <area>
+            <position x="4" y="5"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="WFVHLF" short_name="WFVHLF" data_type="zoned_decimal" display_length="7" data_length="6">
+          <area>
+            <position x="9" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VNL" short_name="VNL" data_type="zoned_decimal" display_length="4" data_length="4">
+          <area>
+            <position x="17" y="5"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VDL" short_name="VDL" data_type="zoned_decimal" display_length="4" data_length="4">
+          <area>
+            <position x="22" y="5"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDIFF" short_name="XXDIFF" data_type="zoned_decimal" display_length="6" data_length="5" underline="conditional">
+          <area>
+            <position x="27" y="5"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXEHLF" short_name="XXEHLF" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional">
+          <area>
+            <position x="34" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXLFB" short_name="XXLFB" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional">
+          <area>
+            <position x="40" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EHNL" short_name="EHNL" data_type="zoned_decimal" display_length="4" data_length="4" underline="conditional">
+          <area>
+            <position x="46" y="5"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ANFANG" short_name="ANFANG" data_type="zoned_decimal" display_length="4" data_length="3">
+          <area>
+            <position x="51" y="5"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ENDE" short_name="ENDE" data_type="zoned_decimal" display_length="4" data_length="3">
+          <area>
+            <position x="56" y="5"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXRELA" short_name="XXRELA" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional">
+          <area>
+            <position x="61" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXLARE" short_name="XXLARE" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional">
+          <area>
+            <position x="67" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EHREM" short_name="EHREM" data_type="zoned_decimal" display_length="5" data_length="5">
+          <area>
+            <position x="73" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" exit_record="true">
+          <area>
+            <position x="79" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WFJAHR" short_name="WFJAHR" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional" conditional="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="WFFOLG" short_name="WFFOLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="4" y="6"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="WFVHLF" short_name="WFVHLF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="9" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VNL" short_name="VNL" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="17" y="6"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VDL" short_name="VDL" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="22" y="6"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDIFF" short_name="XXDIFF" data_type="zoned_decimal" display_length="6" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="27" y="6"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXEHLF" short_name="XXEHLF" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="34" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXLFB" short_name="XXLFB" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="40" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EHNL" short_name="EHNL" data_type="zoned_decimal" display_length="4" data_length="4" underline="conditional" conditional="true">
+          <area>
+            <position x="46" y="6"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ANFANG" short_name="ANFANG" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true">
+          <area>
+            <position x="51" y="6"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ENDE" short_name="ENDE" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true">
+          <area>
+            <position x="56" y="6"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXRELA" short_name="XXRELA" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="61" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXLARE" short_name="XXLARE" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="67" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EHREM" short_name="EHREM" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="73" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="79" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WFJAHR" short_name="WFJAHR" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional" conditional="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="WFFOLG" short_name="WFFOLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="4" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="WFVHLF" short_name="WFVHLF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="9" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VNL" short_name="VNL" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="17" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VDL" short_name="VDL" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="22" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDIFF" short_name="XXDIFF" data_type="zoned_decimal" display_length="6" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="27" y="7"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXEHLF" short_name="XXEHLF" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="34" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXLFB" short_name="XXLFB" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="40" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EHNL" short_name="EHNL" data_type="zoned_decimal" display_length="4" data_length="4" underline="conditional" conditional="true">
+          <area>
+            <position x="46" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ANFANG" short_name="ANFANG" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true">
+          <area>
+            <position x="51" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ENDE" short_name="ENDE" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true">
+          <area>
+            <position x="56" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXRELA" short_name="XXRELA" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="61" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXLARE" short_name="XXLARE" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="67" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EHREM" short_name="EHREM" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="73" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="79" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WFJAHR" short_name="WFJAHR" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional" conditional="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="WFFOLG" short_name="WFFOLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="4" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="WFVHLF" short_name="WFVHLF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="9" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VNL" short_name="VNL" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="17" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VDL" short_name="VDL" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="22" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDIFF" short_name="XXDIFF" data_type="zoned_decimal" display_length="6" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="27" y="8"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXEHLF" short_name="XXEHLF" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="34" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXLFB" short_name="XXLFB" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="40" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EHNL" short_name="EHNL" data_type="zoned_decimal" display_length="4" data_length="4" underline="conditional" conditional="true">
+          <area>
+            <position x="46" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ANFANG" short_name="ANFANG" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true">
+          <area>
+            <position x="51" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ENDE" short_name="ENDE" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true">
+          <area>
+            <position x="56" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXRELA" short_name="XXRELA" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="61" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXLARE" short_name="XXLARE" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="67" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EHREM" short_name="EHREM" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="73" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="79" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="WFJAHR" short_name="WFJAHR" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional" conditional="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="WFFOLG" short_name="WFFOLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="4" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="WFVHLF" short_name="WFVHLF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="9" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VNL" short_name="VNL" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="17" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VDL" short_name="VDL" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="22" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDIFF" short_name="XXDIFF" data_type="zoned_decimal" display_length="6" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="27" y="9"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXEHLF" short_name="XXEHLF" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="34" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXLFB" short_name="XXLFB" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="40" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EHNL" short_name="EHNL" data_type="zoned_decimal" display_length="4" data_length="4" underline="conditional" conditional="true">
+          <area>
+            <position x="46" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ANFANG" short_name="ANFANG" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true">
+          <area>
+            <position x="51" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ENDE" short_name="ENDE" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true">
+          <area>
+            <position x="56" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXRELA" short_name="XXRELA" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="61" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXLARE" short_name="XXLARE" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="67" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EHREM" short_name="EHREM" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="73" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="79" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WFJAHR" short_name="WFJAHR" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional" conditional="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="WFFOLG" short_name="WFFOLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="4" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="WFVHLF" short_name="WFVHLF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="9" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VNL" short_name="VNL" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="17" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VDL" short_name="VDL" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="22" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDIFF" short_name="XXDIFF" data_type="zoned_decimal" display_length="6" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="27" y="10"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXEHLF" short_name="XXEHLF" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="34" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXLFB" short_name="XXLFB" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="40" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EHNL" short_name="EHNL" data_type="zoned_decimal" display_length="4" data_length="4" underline="conditional" conditional="true">
+          <area>
+            <position x="46" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ANFANG" short_name="ANFANG" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true">
+          <area>
+            <position x="51" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ENDE" short_name="ENDE" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true">
+          <area>
+            <position x="56" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXRELA" short_name="XXRELA" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="61" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXLARE" short_name="XXLARE" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="67" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EHREM" short_name="EHREM" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="73" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="79" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WFJAHR" short_name="WFJAHR" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional" conditional="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="WFFOLG" short_name="WFFOLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="4" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="WFVHLF" short_name="WFVHLF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="9" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VNL" short_name="VNL" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="17" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VDL" short_name="VDL" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="22" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDIFF" short_name="XXDIFF" data_type="zoned_decimal" display_length="6" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="27" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXEHLF" short_name="XXEHLF" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="34" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXLFB" short_name="XXLFB" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="40" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EHNL" short_name="EHNL" data_type="zoned_decimal" display_length="4" data_length="4" underline="conditional" conditional="true">
+          <area>
+            <position x="46" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ANFANG" short_name="ANFANG" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true">
+          <area>
+            <position x="51" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ENDE" short_name="ENDE" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true">
+          <area>
+            <position x="56" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXRELA" short_name="XXRELA" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="61" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXLARE" short_name="XXLARE" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="67" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EHREM" short_name="EHREM" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="73" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="79" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WFJAHR" short_name="WFJAHR" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional" conditional="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="WFFOLG" short_name="WFFOLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="4" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="WFVHLF" short_name="WFVHLF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="9" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VNL" short_name="VNL" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="17" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VDL" short_name="VDL" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="22" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDIFF" short_name="XXDIFF" data_type="zoned_decimal" display_length="6" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="27" y="12"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXEHLF" short_name="XXEHLF" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="34" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXLFB" short_name="XXLFB" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="40" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EHNL" short_name="EHNL" data_type="zoned_decimal" display_length="4" data_length="4" underline="conditional" conditional="true">
+          <area>
+            <position x="46" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ANFANG" short_name="ANFANG" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true">
+          <area>
+            <position x="51" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ENDE" short_name="ENDE" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true">
+          <area>
+            <position x="56" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXRELA" short_name="XXRELA" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="61" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXLARE" short_name="XXLARE" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="67" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EHREM" short_name="EHREM" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="73" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="79" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="WFJAHR" short_name="WFJAHR" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional" conditional="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="WFFOLG" short_name="WFFOLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="4" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="WFVHLF" short_name="WFVHLF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="9" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VNL" short_name="VNL" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="17" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VDL" short_name="VDL" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="22" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDIFF" short_name="XXDIFF" data_type="zoned_decimal" display_length="6" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="27" y="13"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXEHLF" short_name="XXEHLF" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="34" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXLFB" short_name="XXLFB" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="40" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EHNL" short_name="EHNL" data_type="zoned_decimal" display_length="4" data_length="4" underline="conditional" conditional="true">
+          <area>
+            <position x="46" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ANFANG" short_name="ANFANG" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true">
+          <area>
+            <position x="51" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ENDE" short_name="ENDE" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true">
+          <area>
+            <position x="56" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXRELA" short_name="XXRELA" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="61" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXLARE" short_name="XXLARE" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="67" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EHREM" short_name="EHREM" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="73" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="79" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WFJAHR" short_name="WFJAHR" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional" conditional="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="WFFOLG" short_name="WFFOLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="4" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="WFVHLF" short_name="WFVHLF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="9" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VNL" short_name="VNL" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="17" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VDL" short_name="VDL" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="22" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDIFF" short_name="XXDIFF" data_type="zoned_decimal" display_length="6" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="27" y="14"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXEHLF" short_name="XXEHLF" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="34" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXLFB" short_name="XXLFB" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="40" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EHNL" short_name="EHNL" data_type="zoned_decimal" display_length="4" data_length="4" underline="conditional" conditional="true">
+          <area>
+            <position x="46" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ANFANG" short_name="ANFANG" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true">
+          <area>
+            <position x="51" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ENDE" short_name="ENDE" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true">
+          <area>
+            <position x="56" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXRELA" short_name="XXRELA" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="61" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXLARE" short_name="XXLARE" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="67" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EHREM" short_name="EHREM" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="73" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="79" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WFJAHR" short_name="WFJAHR" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional" conditional="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="WFFOLG" short_name="WFFOLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="4" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="WFVHLF" short_name="WFVHLF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="9" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VNL" short_name="VNL" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="17" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VDL" short_name="VDL" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="22" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDIFF" short_name="XXDIFF" data_type="zoned_decimal" display_length="6" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="27" y="15"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXEHLF" short_name="XXEHLF" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="34" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXLFB" short_name="XXLFB" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="40" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EHNL" short_name="EHNL" data_type="zoned_decimal" display_length="4" data_length="4" underline="conditional" conditional="true">
+          <area>
+            <position x="46" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ANFANG" short_name="ANFANG" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true">
+          <area>
+            <position x="51" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ENDE" short_name="ENDE" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true">
+          <area>
+            <position x="56" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXRELA" short_name="XXRELA" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="61" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXLARE" short_name="XXLARE" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="67" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EHREM" short_name="EHREM" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="73" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="79" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WFJAHR" short_name="WFJAHR" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional" conditional="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="WFFOLG" short_name="WFFOLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="4" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="WFVHLF" short_name="WFVHLF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="9" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VNL" short_name="VNL" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="17" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VDL" short_name="VDL" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="22" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDIFF" short_name="XXDIFF" data_type="zoned_decimal" display_length="6" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="27" y="16"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXEHLF" short_name="XXEHLF" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="34" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXLFB" short_name="XXLFB" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="40" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EHNL" short_name="EHNL" data_type="zoned_decimal" display_length="4" data_length="4" underline="conditional" conditional="true">
+          <area>
+            <position x="46" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ANFANG" short_name="ANFANG" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true">
+          <area>
+            <position x="51" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ENDE" short_name="ENDE" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true">
+          <area>
+            <position x="56" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXRELA" short_name="XXRELA" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="61" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXLARE" short_name="XXLARE" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="67" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EHREM" short_name="EHREM" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="73" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="79" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="WFJAHR" short_name="WFJAHR" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional" conditional="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="WFFOLG" short_name="WFFOLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="4" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="WFVHLF" short_name="WFVHLF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="9" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VNL" short_name="VNL" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="17" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VDL" short_name="VDL" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="22" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDIFF" short_name="XXDIFF" data_type="zoned_decimal" display_length="6" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="27" y="17"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXEHLF" short_name="XXEHLF" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="34" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXLFB" short_name="XXLFB" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="40" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EHNL" short_name="EHNL" data_type="zoned_decimal" display_length="4" data_length="4" underline="conditional" conditional="true">
+          <area>
+            <position x="46" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ANFANG" short_name="ANFANG" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true">
+          <area>
+            <position x="51" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ENDE" short_name="ENDE" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true">
+          <area>
+            <position x="56" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXRELA" short_name="XXRELA" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="61" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXLARE" short_name="XXLARE" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="67" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EHREM" short_name="EHREM" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="73" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="79" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WFJAHR" short_name="WFJAHR" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional" conditional="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="WFFOLG" short_name="WFFOLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="4" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="WFVHLF" short_name="WFVHLF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="9" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VNL" short_name="VNL" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="17" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VDL" short_name="VDL" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="22" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDIFF" short_name="XXDIFF" data_type="zoned_decimal" display_length="6" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="27" y="18"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXEHLF" short_name="XXEHLF" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="34" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXLFB" short_name="XXLFB" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="40" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EHNL" short_name="EHNL" data_type="zoned_decimal" display_length="4" data_length="4" underline="conditional" conditional="true">
+          <area>
+            <position x="46" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ANFANG" short_name="ANFANG" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true">
+          <area>
+            <position x="51" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ENDE" short_name="ENDE" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true">
+          <area>
+            <position x="56" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXRELA" short_name="XXRELA" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="61" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXLARE" short_name="XXLARE" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="67" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EHREM" short_name="EHREM" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="73" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="79" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WFJAHR" short_name="WFJAHR" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional" conditional="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="WFFOLG" short_name="WFFOLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="4" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="WFVHLF" short_name="WFVHLF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="9" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VNL" short_name="VNL" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="17" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VDL" short_name="VDL" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="22" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDIFF" short_name="XXDIFF" data_type="zoned_decimal" display_length="6" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="27" y="19"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXEHLF" short_name="XXEHLF" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="34" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXLFB" short_name="XXLFB" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="40" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EHNL" short_name="EHNL" data_type="zoned_decimal" display_length="4" data_length="4" underline="conditional" conditional="true">
+          <area>
+            <position x="46" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ANFANG" short_name="ANFANG" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true">
+          <area>
+            <position x="51" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ENDE" short_name="ENDE" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true">
+          <area>
+            <position x="56" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXRELA" short_name="XXRELA" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="61" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXLARE" short_name="XXLARE" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="67" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EHREM" short_name="EHREM" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="73" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="79" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WFJAHR" short_name="WFJAHR" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional" conditional="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="WFFOLG" short_name="WFFOLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="4" y="20"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="WFVHLF" short_name="WFVHLF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="9" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VNL" short_name="VNL" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="17" y="20"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VDL" short_name="VDL" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="22" y="20"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDIFF" short_name="XXDIFF" data_type="zoned_decimal" display_length="6" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="27" y="20"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXEHLF" short_name="XXEHLF" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="34" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXLFB" short_name="XXLFB" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="40" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EHNL" short_name="EHNL" data_type="zoned_decimal" display_length="4" data_length="4" underline="conditional" conditional="true">
+          <area>
+            <position x="46" y="20"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ANFANG" short_name="ANFANG" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true">
+          <area>
+            <position x="51" y="20"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ENDE" short_name="ENDE" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true">
+          <area>
+            <position x="56" y="20"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXRELA" short_name="XXRELA" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="61" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXLARE" short_name="XXLARE" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="67" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EHREM" short_name="EHREM" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="73" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="79" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="WFJAHR" short_name="WFJAHR" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional" conditional="true">
+          <area>
+            <position x="1" y="21"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="WFFOLG" short_name="WFFOLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="4" y="21"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="WFVHLF" short_name="WFVHLF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="9" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VNL" short_name="VNL" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="17" y="21"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VDL" short_name="VDL" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="22" y="21"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDIFF" short_name="XXDIFF" data_type="zoned_decimal" display_length="6" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="27" y="21"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXEHLF" short_name="XXEHLF" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="34" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXLFB" short_name="XXLFB" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="40" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EHNL" short_name="EHNL" data_type="zoned_decimal" display_length="4" data_length="4" underline="conditional" conditional="true">
+          <area>
+            <position x="46" y="21"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ANFANG" short_name="ANFANG" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true">
+          <area>
+            <position x="51" y="21"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ENDE" short_name="ENDE" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true">
+          <area>
+            <position x="56" y="21"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXRELA" short_name="XXRELA" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="61" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXLARE" short_name="XXLARE" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="67" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EHREM" short_name="EHREM" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="73" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="79" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="WFJAHR" short_name="WFJAHR" data_type="zoned_decimal" display_length="2" data_length="2" non_display="conditional" conditional="true">
+          <area>
+            <position x="1" y="22"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="WFFOLG" short_name="WFFOLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="4" y="22"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="WFVHLF" short_name="WFVHLF" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="9" y="22"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VNL" short_name="VNL" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="17" y="22"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VDL" short_name="VDL" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="22" y="22"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXDIFF" short_name="XXDIFF" data_type="zoned_decimal" display_length="6" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="27" y="22"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXEHLF" short_name="XXEHLF" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="34" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXLFB" short_name="XXLFB" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="40" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EHNL" short_name="EHNL" data_type="zoned_decimal" display_length="4" data_length="4" underline="conditional" conditional="true">
+          <area>
+            <position x="46" y="22"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ANFANG" short_name="ANFANG" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true">
+          <area>
+            <position x="51" y="22"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ENDE" short_name="ENDE" data_type="zoned_decimal" display_length="4" data_length="3" conditional="true">
+          <area>
+            <position x="56" y="22"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXRELA" short_name="XXRELA" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="61" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="XXLARE" short_name="XXLARE" data_type="zoned_decimal" display_length="5" data_length="5" underline="conditional" conditional="true">
+          <area>
+            <position x="67" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="EHREM" short_name="EHREM" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="73" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="79" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="F3=Verlassen; F20=Gesamt;F21=Filiale 1;F22=Filiale2;F23=Filiale 3" display_length="65" data_length="65">
+      <area>
+        <position x="1" y="23"/>
+        <size cx="65" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

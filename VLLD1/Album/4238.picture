@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="OSNA_SRC/LG11D(SATZ+FUNK)" library="OSNA_SRC" member_name="LG11D">
+    <size cx="80" cy="24"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="f12" caption="F12" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <field field_type="screen_part" name="SATZ" overlay="true">
+      <area>
+        <position y="1"/>
+        <size cx="80" cy="20"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="FUNK" overlay="true">
+      <area>
+        <position y="22"/>
+        <size cx="80" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="*USER" short_name="*USER" data_type="alphanumeric" display_length="10" data_length="10">
+      <area>
+        <position x="1" y="1"/>
+        <size cx="10" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Druck Lagerkarten" display_length="17" data_length="17" underline="true" high_intensity="true">
+      <area>
+        <position x="31" y="1"/>
+        <size cx="17" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+      <area>
+        <position x="70" y="1"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="PGM: CL_LG11" display_length="12" data_length="12">
+      <area>
+        <position x="66" y="2"/>
+        <size cx="12" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="                                                                             " display_length="77" data_length="77" underline="true">
+      <area>
+        <position x="2" y="3"/>
+        <size cx="77" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="Bitte Auslieferungstag eingeben. . . . :" display_length="40" data_length="40">
+      <area>
+        <position x="2" y="10"/>
+        <size cx="40" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="#TAG" short_name="#TAG" data_type="zoned_decimal" display_length="10" data_length="8" underline="true" exit_required="true">
+      <area>
+        <position x="45" y="10"/>
+        <size cx="10" cy="1"/>
+      </area>
+      <color foreground="yellow"/>
+    </field>
+    <field field_type="fixed_text" value="Artikelnummer. . . . . . . . . . . . . :" display_length="40" data_length="40">
+      <area>
+        <position x="2" y="13"/>
+        <size cx="40" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="#ART" short_name="#ART" data_type="zoned_decimal" display_length="4" data_length="4" underline="true">
+      <area>
+        <position x="45" y="13"/>
+        <size cx="4" cy="1"/>
+      </area>
+      <color foreground="yellow"/>
+    </field>
+    <field field_type="fixed_text" value="                                                                             " display_length="77" data_length="77" underline="true">
+      <area>
+        <position x="2" y="20"/>
+        <size cx="77" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="F3 = Verlassen ohne Änderung; F9 = drucken Lagerkarten   ; F12 = neue Eingabe" display_length="77" data_length="77">
+      <area>
+        <position x="2" y="22"/>
+        <size cx="77" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

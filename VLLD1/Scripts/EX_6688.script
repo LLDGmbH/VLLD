@@ -1,0 +1,59 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+DIM datei, pfad_datei, source as string 
+DIM xKDKDNR, xKDGART, xKDGAUG, xKDNAME, xKDSTR, xKDPLZ, xKDORT, xKDWUMS, xKDADNEU as string 
+i = 0
+j=2
+
+datei = "Kundenzahlen_Kunden.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "KundenNr")
+ddepoke( ddehandle, "Z1S2", "GA")
+ddepoke( ddehandle, "Z1S3", "UG")
+ddepoke( ddehandle, "Z1S4", "Name")
+ddepoke( ddehandle, "Z1S5", "Straße")
+ddepoke( ddehandle, "Z1S6", "PLZ")
+ddepoke( ddehandle, "Z1S7", "Ort")
+ddepoke( ddehandle, "Z1S8", "Wo.Ums.")
+ddepoke( ddehandle, "Z1S9", "Ausgeschieden")
+
+
+nochmal:
+
+HostFieldGetLineData("KDKDNR",  i, xKDKDNR)
+HostFieldGetLineData("KDGART",  i, xKDGART)
+HostFieldGetLineData("KDGAUG",  i, xKDGAUG)
+HostFieldGetLineData("KDNAME",  i, xKDNAME)
+HostFieldGetLineData("KDSTR",   i, xKDSTR)
+HostFieldGetLineData("KDPLZ",   i, xKDPLZ)
+HostFieldGetLineData("KDORT",   i, xKDORT)
+HostFieldGetLineData("KDWUMS",  i, xKDWUMS)
+HostFieldGetLineData("KDADNEU", i, xKDADNEU)
+
+ddepoke(ddehandle, "Z" + str(j) +"S1", xKDKDNR)
+ddepoke(ddehandle, "Z" + str(j) +"S2", xKDGART)
+ddepoke(ddehandle, "Z" + str(j) +"S3", xKDGAUG)
+ddepoke(ddehandle, "Z" + str(j) +"S4", xKDNAME)
+ddepoke(ddehandle, "Z" + str(j) +"S5", xKDSTR)
+ddepoke(ddehandle, "Z" + str(j) +"S6", xKDPLZ)
+ddepoke(ddehandle, "Z" + str(j) +"S7", xKDORT)
+ddepoke(ddehandle, "Z" + str(j) +"S8", xKDWUMS)
+ddepoke(ddehandle, "Z" + str(j) +"S9", xKDADNEU)
+j=j+1
+
+if i < 19 then
+i=i+1
+goto nochmal
+endif
+
+if xKDNAME <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

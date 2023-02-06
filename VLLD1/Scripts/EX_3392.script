@@ -1,0 +1,79 @@
+﻿DIM ddehandle, i, j,  msg, rc as integer
+dim  xvlkz,xposnr, xxxobj, xxxname, xxxverk, xums, xumsw, xanz, xxxfol, xvd1, xlief, xld, xvname, datei, pfad_datei, source as string 
+dim text, y1, y2, xvlname, ErrorMsg as String
+i = 0
+j=4
+
+y1 = " "
+y2 = "_"
+
+HostFieldGetData("vlkz",xvlkz)
+HostFieldGetData("vltext",text)
+HostFieldGetData("kyname",xvname)
+
+xvlname = Replace(text, y1, y2, 0)
+
+datei = "Toptitel_" + xvlkz + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "Vetriebslinie")
+ddepoke( ddehandle, "Z1S2", text)
+ddepoke( ddehandle, "Z2S1", "Verlag")
+ddepoke( ddehandle, "Z2S2", xvname)
+ddepoke( ddehandle, "Z3S1", "Pos")
+ddepoke( ddehandle, "Z3S2", "Objn")
+ddepoke( ddehandle, "Z3S3", "Titel")
+ddepoke( ddehandle, "Z3S4", "Verkauf")
+ddepoke( ddehandle, "Z3S5", "Ums.Ges.")
+ddepoke( ddehandle, "Z3S6", "Ums.Woch.")
+ddepoke( ddehandle, "Z3S7", "Kunden")
+ddepoke( ddehandle, "Z3S8", "Folge")
+ddepoke( ddehandle, "Z3S9", "VD")
+ddepoke( ddehandle, "Z3S10", "Bezug")
+ddepoke( ddehandle, "Z3S11", "LD")
+nochmal:
+
+HostFieldGetLineData("posnr", i, xposnr)
+HostFieldGetLineData("xxobj", i, xxxobj)
+HostFieldGetLineData("xxname", i, xxxname)
+HostFieldGetLineData("xxverk", i, xxxverk)
+HostFieldGetLineData("ums", i, xums)
+HostFieldGetLineData("umw", i, xumsw)
+HostFieldGetLineData("anz", i, xanz)
+HostFieldGetLineData("xxfol", i, xxxfol)
+HostFieldGetLineData("vd1", i, xvd1)
+HostFieldGetLineData("xxlief", i, xlief)
+HostFieldGetLineData("xxld", i, xld)
+
+if (xxxname <> "") then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xposnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xxxobj)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xxxname)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xxxverk)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xums)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xumsw)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xanz)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xxxfol)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xvd1)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xlief)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xld)
+
+j=j+1
+endif
+
+if i < 15 then
+i=i+1
+goto nochmal
+endif
+ 
+if xxxname <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

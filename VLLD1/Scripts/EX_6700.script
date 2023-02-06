@@ -1,0 +1,69 @@
+﻿global filiale as string
+DIM ddehandle, i, j, msg, rc as integer
+dim xFil, xKdNr, xKNam, xAPID, xAnzG, xEDat, xEZeit, xVDat, xVrNr, xKDat, xKrNr, datei, pfad_datei, ErrMsg, source as string 
+
+
+i = 0
+j=2
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Gutscheine.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1",  "Filiale")
+ddepoke( ddehandle, "Z1S2",  "KundenNr")
+ddepoke( ddehandle, "Z1S3",  "Name")
+ddepoke( ddehandle, "Z1S4",  "Ap-Id")
+ddepoke( ddehandle, "Z1S5",  "Menge")
+ddepoke( ddehandle, "Z1S6",  "Einlösedatum")
+ddepoke( ddehandle, "Z1S7",  "Einlösezeit")
+ddepoke( ddehandle, "Z1S8",  "Abrech.Verlag")
+ddepoke( ddehandle, "Z1S9",  "VR-Nr")
+ddepoke( ddehandle, "Z1S10",  "Abrech. Kunde")
+ddepoke( ddehandle, "Z1S11", "KR-Nr")
+
+nochmal:
+
+HostFieldGetLineData("sbFil",   i, xFil)
+HostFieldGetLineData("sbKdNR",  i, xKdNr)
+HostFieldGetLineData("sbKNam",  i, xKNam)
+HostFieldGetLineData("sbAPID",  i, xAPID)
+HostFieldGetLineData("sbAnzG",  i, xAnzG)
+HostFieldGetLineData("sbEDat",  i, xEDat)
+HostFieldGetLineData("sbEZeit", i, xEZeit)
+HostFieldGetLineData("sbVDat",  i, xVDat)
+HostFieldGetLineData("sbVrNr",  i, xVrNr)
+HostFieldGetLineData("sbKDat",  i, xKDat)
+HostFieldGetLineData("sbKrNr",  i, xKrNr)
+
+
+ddepoke( ddehandle, "Z" + str(j) +"S1",  xFil)
+ddepoke( ddehandle, "Z" + str(j) +"S2",  xKdNR)
+ddepoke( ddehandle, "Z" + str(j) +"S3",  xKNam)
+ddepoke( ddehandle, "Z" + str(j) +"S4",  xAPID)
+ddepoke( ddehandle, "Z" + str(j) +"S5",  xAnzG)
+ddepoke( ddehandle, "Z" + str(j) +"S6",  xEDat)
+ddepoke( ddehandle, "Z" + str(j) +"S7",  xEZeit)
+ddepoke( ddehandle, "Z" + str(j) +"S8",  xVDat)
+ddepoke( ddehandle, "Z" + str(j) +"S9",  xVrNr)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xKDat)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xKrNr)
+
+j=j+1 
+
+if i < 22 then
+i=i+1
+goto nochmal
+endif
+ 
+if xKNam <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

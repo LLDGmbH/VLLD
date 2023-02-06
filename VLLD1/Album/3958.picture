@@ -1,0 +1,886 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="LZSRC/ADBESU5DS(SFC+FUSS)" library="LZSRC" member_name="ADBESU5DS">
+    <size cx="80" cy="24"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="f6" caption="F6" attention_key="false" conditional="true"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <field field_type="screen_part" name="SFC" overlay="true">
+      <area>
+        <position/>
+        <size cx="80" cy="22"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="FUSS">
+      <area>
+        <position y="22"/>
+        <size cx="80" cy="2"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="     Letzte AD-Berichte      " display_length="29" data_length="29">
+          <area>
+            <position x="25"/>
+            <size cx="29" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="61"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="72"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="ADBESUCH5" display_length="9" data_length="9">
+          <area>
+            <position x="71" y="1"/>
+            <size cx="9" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="fixed_text" value="Anzeige" display_length="7" data_length="7">
+          <area>
+            <position x="1" y="2"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="nur" display_length="3" data_length="3">
+          <area>
+            <position x="9" y="2"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="!" display_length="1" data_length="1">
+          <area>
+            <position x="13" y="2"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="FRAGE" short_name="FRAGE" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" position_cursor="true">
+          <area>
+            <position x="16" y="2"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="fixed_text" value="nur AD:" display_length="7" data_length="7">
+          <area>
+            <position x="19" y="2"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="AD" short_name="AD" data_type="zoned_decimal" display_length="2" data_length="2" underline="true" high_intensity="true">
+          <area>
+            <position x="27" y="2"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="nur KD:" display_length="7" data_length="7">
+          <area>
+            <position x="30" y="2"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="KD" short_name="KD" data_type="zoned_decimal" display_length="2" data_length="2" underline="true" high_intensity="true">
+          <area>
+            <position x="38" y="2"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="A Datum      AD Kdnr   Name               Bemerkung                          " display_length="77" data_length="77" underline="true">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="77" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="ADAUSW" short_name="ADAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ADDATN" short_name="ADDATN" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="4"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ADMA" short_name="ADMA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="14" y="4"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="ADKDNR" short_name="ADKDNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="17" y="4"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ADNAME" short_name="ADNAME" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="24" y="4"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ADBEMX" short_name="ADBEMX" data_type="alphanumeric" display_length="35" data_length="35" conditional="true">
+          <area>
+            <position x="43" y="4"/>
+            <size cx="35" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="ADAUSW" short_name="ADAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ADDATN" short_name="ADDATN" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="5"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ADMA" short_name="ADMA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="14" y="5"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="ADKDNR" short_name="ADKDNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="17" y="5"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ADNAME" short_name="ADNAME" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="24" y="5"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ADBEMX" short_name="ADBEMX" data_type="alphanumeric" display_length="35" data_length="35" conditional="true">
+          <area>
+            <position x="43" y="5"/>
+            <size cx="35" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="ADAUSW" short_name="ADAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ADDATN" short_name="ADDATN" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="6"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ADMA" short_name="ADMA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="14" y="6"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="ADKDNR" short_name="ADKDNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="17" y="6"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ADNAME" short_name="ADNAME" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="24" y="6"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ADBEMX" short_name="ADBEMX" data_type="alphanumeric" display_length="35" data_length="35" conditional="true">
+          <area>
+            <position x="43" y="6"/>
+            <size cx="35" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="ADAUSW" short_name="ADAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ADDATN" short_name="ADDATN" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ADMA" short_name="ADMA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="14" y="7"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="ADKDNR" short_name="ADKDNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="17" y="7"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ADNAME" short_name="ADNAME" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="24" y="7"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ADBEMX" short_name="ADBEMX" data_type="alphanumeric" display_length="35" data_length="35" conditional="true">
+          <area>
+            <position x="43" y="7"/>
+            <size cx="35" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="ADAUSW" short_name="ADAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ADDATN" short_name="ADDATN" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ADMA" short_name="ADMA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="14" y="8"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="ADKDNR" short_name="ADKDNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="17" y="8"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ADNAME" short_name="ADNAME" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="24" y="8"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ADBEMX" short_name="ADBEMX" data_type="alphanumeric" display_length="35" data_length="35" conditional="true">
+          <area>
+            <position x="43" y="8"/>
+            <size cx="35" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="ADAUSW" short_name="ADAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ADDATN" short_name="ADDATN" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ADMA" short_name="ADMA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="14" y="9"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="ADKDNR" short_name="ADKDNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="17" y="9"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ADNAME" short_name="ADNAME" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="24" y="9"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ADBEMX" short_name="ADBEMX" data_type="alphanumeric" display_length="35" data_length="35" conditional="true">
+          <area>
+            <position x="43" y="9"/>
+            <size cx="35" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="ADAUSW" short_name="ADAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ADDATN" short_name="ADDATN" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ADMA" short_name="ADMA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="14" y="10"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="ADKDNR" short_name="ADKDNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="17" y="10"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ADNAME" short_name="ADNAME" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="24" y="10"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ADBEMX" short_name="ADBEMX" data_type="alphanumeric" display_length="35" data_length="35" conditional="true">
+          <area>
+            <position x="43" y="10"/>
+            <size cx="35" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="ADAUSW" short_name="ADAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ADDATN" short_name="ADDATN" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ADMA" short_name="ADMA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="14" y="11"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="ADKDNR" short_name="ADKDNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="17" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ADNAME" short_name="ADNAME" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="24" y="11"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ADBEMX" short_name="ADBEMX" data_type="alphanumeric" display_length="35" data_length="35" conditional="true">
+          <area>
+            <position x="43" y="11"/>
+            <size cx="35" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="ADAUSW" short_name="ADAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ADDATN" short_name="ADDATN" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ADMA" short_name="ADMA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="14" y="12"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="ADKDNR" short_name="ADKDNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="17" y="12"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ADNAME" short_name="ADNAME" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="24" y="12"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ADBEMX" short_name="ADBEMX" data_type="alphanumeric" display_length="35" data_length="35" conditional="true">
+          <area>
+            <position x="43" y="12"/>
+            <size cx="35" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="ADAUSW" short_name="ADAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ADDATN" short_name="ADDATN" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ADMA" short_name="ADMA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="14" y="13"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="ADKDNR" short_name="ADKDNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="17" y="13"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ADNAME" short_name="ADNAME" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="24" y="13"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ADBEMX" short_name="ADBEMX" data_type="alphanumeric" display_length="35" data_length="35" conditional="true">
+          <area>
+            <position x="43" y="13"/>
+            <size cx="35" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="ADAUSW" short_name="ADAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ADDATN" short_name="ADDATN" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ADMA" short_name="ADMA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="14" y="14"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="ADKDNR" short_name="ADKDNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="17" y="14"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ADNAME" short_name="ADNAME" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="24" y="14"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ADBEMX" short_name="ADBEMX" data_type="alphanumeric" display_length="35" data_length="35" conditional="true">
+          <area>
+            <position x="43" y="14"/>
+            <size cx="35" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="ADAUSW" short_name="ADAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ADDATN" short_name="ADDATN" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ADMA" short_name="ADMA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="14" y="15"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="ADKDNR" short_name="ADKDNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="17" y="15"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ADNAME" short_name="ADNAME" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="24" y="15"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ADBEMX" short_name="ADBEMX" data_type="alphanumeric" display_length="35" data_length="35" conditional="true">
+          <area>
+            <position x="43" y="15"/>
+            <size cx="35" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="ADAUSW" short_name="ADAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ADDATN" short_name="ADDATN" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ADMA" short_name="ADMA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="14" y="16"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="ADKDNR" short_name="ADKDNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="17" y="16"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ADNAME" short_name="ADNAME" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="24" y="16"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ADBEMX" short_name="ADBEMX" data_type="alphanumeric" display_length="35" data_length="35" conditional="true">
+          <area>
+            <position x="43" y="16"/>
+            <size cx="35" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="ADAUSW" short_name="ADAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ADDATN" short_name="ADDATN" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ADMA" short_name="ADMA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="14" y="17"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="ADKDNR" short_name="ADKDNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="17" y="17"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ADNAME" short_name="ADNAME" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="24" y="17"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ADBEMX" short_name="ADBEMX" data_type="alphanumeric" display_length="35" data_length="35" conditional="true">
+          <area>
+            <position x="43" y="17"/>
+            <size cx="35" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="ADAUSW" short_name="ADAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ADDATN" short_name="ADDATN" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ADMA" short_name="ADMA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="14" y="18"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="ADKDNR" short_name="ADKDNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="17" y="18"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ADNAME" short_name="ADNAME" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="24" y="18"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ADBEMX" short_name="ADBEMX" data_type="alphanumeric" display_length="35" data_length="35" conditional="true">
+          <area>
+            <position x="43" y="18"/>
+            <size cx="35" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="ADAUSW" short_name="ADAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ADDATN" short_name="ADDATN" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ADMA" short_name="ADMA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="14" y="19"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="ADKDNR" short_name="ADKDNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="17" y="19"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ADNAME" short_name="ADNAME" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="24" y="19"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ADBEMX" short_name="ADBEMX" data_type="alphanumeric" display_length="35" data_length="35" conditional="true">
+          <area>
+            <position x="43" y="19"/>
+            <size cx="35" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="ADAUSW" short_name="ADAUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ADDATN" short_name="ADDATN" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="3" y="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ADMA" short_name="ADMA" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="14" y="20"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="ADKDNR" short_name="ADKDNR" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="17" y="20"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ADNAME" short_name="ADNAME" data_type="alphanumeric" display_length="18" data_length="18" conditional="true">
+          <area>
+            <position x="24" y="20"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ADBEMX" short_name="ADBEMX" data_type="alphanumeric" display_length="35" data_length="35" conditional="true">
+          <area>
+            <position x="43" y="20"/>
+            <size cx="35" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_end_more" value=" Weitere ..." display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="67" y="21"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+      <field field_type="subfile_end_bottom" value="        Ende" display_length="12" data_length="12" conditional="true">
+        <area>
+          <position x="67" y="21"/>
+          <size cx="12" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="Systemnachricht:" display_length="16" data_length="16">
+      <area>
+        <position x="1" y="22"/>
+        <size cx="16" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="MSG" short_name="MSG" data_type="alphanumeric" display_length="62" data_length="62">
+      <area>
+        <position x="18" y="22"/>
+        <size cx="62" cy="1"/>
+      </area>
+      <color foreground="red"/>
+    </field>
+    <field field_type="fixed_text" value="F3 = Beenden  Blättern vorw./rückw.   A=Detailanzeige" display_length="53" data_length="53">
+      <area>
+        <position x="1" y="23"/>
+        <size cx="53" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="© Gerd Gerstmann" display_length="16" data_length="16">
+      <area>
+        <position x="63" y="23"/>
+        <size cx="16" cy="1"/>
+      </area>
+      <color foreground="red"/>
+    </field>
+  </screen>
+</header>

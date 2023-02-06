@@ -1,0 +1,84 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim x1fil, x1obj, x1folg, x1sa, x1schl, x1onam, x1meng, x1dat, x1bez, x1rem, x1kdnr, x1knam, x1ff1, x1bem, x1rbmg, x1bkz, errmsg, datei, pfad_datei as string 
+dim source as string
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Fehlerliste Remission.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1",  "Fil")
+ddepoke( ddehandle, "Z1S2",  "ObjNr")
+ddepoke( ddehandle, "Z1S3",  "Folge")
+ddepoke( ddehandle, "Z1S4",  "SA")
+ddepoke( ddehandle, "Z1S5",  "Fehler")
+ddepoke( ddehandle, "Z1S6",  "Titel")
+ddepoke( ddehandle, "Z1S7",  "Menge")
+ddepoke( ddehandle, "Z1S8",  "Datum")
+ddepoke( ddehandle, "Z1S9",  "Bezug")
+ddepoke( ddehandle, "Z1S10", "Remi")
+ddepoke( ddehandle, "Z1S11", "KdNr")
+ddepoke( ddehandle, "Z1S12", "Name")
+ddepoke( ddehandle, "Z1S13", "FF 1")
+ddepoke( ddehandle, "Z1S14", "Bemerkung")
+ddepoke( ddehandle, "Z1S15", "Rückbelastung")
+ddepoke( ddehandle, "Z1S16", "Bearbeitet")
+
+nochmal:
+
+HostFieldGetLineData("s1fil",  i, x1fil)
+HostFieldGetLineData("s1obj",  i, x1obj)
+HostFieldGetLineData("s1folg", i, x1folg)
+HostFieldGetLineData("s1sa",   i, x1sa)
+HostFieldGetLineData("s1schl", i, x1schl)
+HostFieldGetLineData("s1onam", i, x1onam)
+HostFieldGetLineData("s1meng", i, x1meng)
+HostFieldGetLineData("s1dat",  i, x1dat)
+HostFieldGetLineData("s1bez",  i, x1bez)
+HostFieldGetLineData("s1rem",  i, x1rem)
+HostFieldGetLineData("s1kdnr", i, x1kdnr)
+HostFieldGetLineData("s1knam", i, x1knam)
+HostFieldGetLineData("s1ff1",  i, x1ff1)
+HostFieldGetLineData("s1bem",  i, x1bem)
+HostFieldGetLineData("s1rbmg", i, x1rbmg)
+HostFieldGetLineData("s1bkz",  i, x1bkz)
+
+
+if (x1fil <> "") then
+ddepoke( ddehandle, "Z" + str(j) +"S1",  x1fil)
+ddepoke( ddehandle, "Z" + str(j) +"S2",  x1obj)
+ddepoke( ddehandle, "Z" + str(j) +"S3",  x1folg)
+ddepoke( ddehandle, "Z" + str(j) +"S4",  x1sa)
+ddepoke( ddehandle, "Z" + str(j) +"S5",  x1schl)
+ddepoke( ddehandle, "Z" + str(j) +"S6",  x1onam)
+ddepoke( ddehandle, "Z" + str(j) +"S7",  x1meng)
+ddepoke( ddehandle, "Z" + str(j) +"S8",  x1dat)
+ddepoke( ddehandle, "Z" + str(j) +"S9",  x1bez)
+ddepoke( ddehandle, "Z" + str(j) +"S10", x1rem)
+ddepoke( ddehandle, "Z" + str(j) +"S11", x1kdnr)
+ddepoke( ddehandle, "Z" + str(j) +"S12", x1knam)
+ddepoke( ddehandle, "Z" + str(j) +"S13", x1ff1)
+ddepoke( ddehandle, "Z" + str(j) +"S14", x1bem)
+ddepoke( ddehandle, "Z" + str(j) +"S15", x1rbmg)
+ddepoke( ddehandle, "Z" + str(j) +"S16", x1bkz)
+
+j=j+1
+endif
+
+if i < 20 then
+i=i+1
+goto nochmal
+endif
+ 
+if x1fil <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

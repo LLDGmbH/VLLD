@@ -1,0 +1,93 @@
+﻿global filiale as string
+DIM ddehandle, i, j, msg, rc as integer
+dim xfolg, xbez1, xvk1, xeh1, xbez2, xvk2, xeh2, xbez3, xvk3, xeh3, xbez4, xvk4, xeh4, xbez5, xvk5, xeh5, xbez6, xvk6, xeh6, datei, pfad_datei, ErrMsg as string 
+dim source as string
+
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "VK Zahlen Tageszeiteungen.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "Folge")
+ddepoke( ddehandle, "Z1S2", "MO Bez")
+ddepoke( ddehandle, "Z1S3", "MO Vk")
+ddepoke( ddehandle, "Z1S4", "MO Eh")
+ddepoke( ddehandle, "Z1S5", "DI Bez")
+ddepoke( ddehandle, "Z1S6", "DI Vk")
+ddepoke( ddehandle, "Z1S7", "DI Eh")
+ddepoke( ddehandle, "Z1S8", "MI Bez")
+ddepoke( ddehandle, "Z1S9", "MI Vk")
+ddepoke( ddehandle, "Z1S10", "MI Eh")
+ddepoke( ddehandle, "Z1S11", "DO Bez")
+ddepoke( ddehandle, "Z1S12", "DO Vk")
+ddepoke( ddehandle, "Z1S13", "DO Eh")
+ddepoke( ddehandle, "Z1S14", "FR Bez")
+ddepoke( ddehandle, "Z1S15", "FR Vk")
+ddepoke( ddehandle, "Z1S16", "FR Eh")
+ddepoke( ddehandle, "Z1S17", "SA Bez")
+ddepoke( ddehandle, "Z1S18", "SA Vk")
+ddepoke( ddehandle, "Z1S19", "SA Eh")
+
+nochmal:
+
+HostFieldGetLineData("sffolg", i, xfolg)
+HostFieldGetLineData("sfbez1", i, xbez1)
+HostFieldGetLineData("sfvk1",  i, xvk1)
+HostFieldGetLineData("sfeh1",  i, xeh1)
+HostFieldGetLineData("sfbez2", i, xbez2)
+HostFieldGetLineData("sfvk2",  i, xvk2)
+HostFieldGetLineData("sfeh2",  i, xeh2)
+HostFieldGetLineData("sfbez3", i, xbez3)
+HostFieldGetLineData("sfvk3",  i, xvk3)
+HostFieldGetLineData("sfeh3",  i, xeh3)
+HostFieldGetLineData("sfbez4", i, xbez4)
+HostFieldGetLineData("sfvk4",  i, xvk4)
+HostFieldGetLineData("sfeh4",  i, xeh4)
+HostFieldGetLineData("sfbez5", i, xbez4)
+HostFieldGetLineData("sfvk5",  i, xvk5)
+HostFieldGetLineData("sfeh5",  i, xeh5)
+HostFieldGetLineData("sfbez6", i, xbez6)
+HostFieldGetLineData("sfvk6",  i, xvk6)
+HostFieldGetLineData("sfeh6",  i, xeh6)
+
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", xfolg)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xbez1)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xvk1)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xeh1)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xbez2)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xvk2)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xeh2)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xbez3)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xvk3)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xeh3)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xbez4)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xvk4)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xeh4)
+ddepoke( ddehandle, "Z" + str(j) +"S14", xbez5)
+ddepoke( ddehandle, "Z" + str(j) +"S15", xvk5)
+ddepoke( ddehandle, "Z" + str(j) +"S16", xeh5)
+ddepoke( ddehandle, "Z" + str(j) +"S17", xbez6)
+ddepoke( ddehandle, "Z" + str(j) +"S18", xvk6)
+ddepoke( ddehandle, "Z" + str(j) +"S19", xeh6)
+
+j=j+1 
+
+if i < 20 then
+i=i+1
+goto nochmal
+endif
+ 
+if xfolg <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

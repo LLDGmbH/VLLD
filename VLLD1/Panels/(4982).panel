@@ -1,0 +1,2692 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo exeName="LegaSuite.exe" productName="lswb" exeVersion="10.3969.0.0" modelVersion="1.1" ?>
+<panel xmlns="http://www.seagullsoftware.com/schemas/legasuite/panel" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/panel http://www.seagullsoftware.com/schemas/legasuite/paneldefinition3_1.xsd">
+  <properties>
+    <codepage>1252</codepage>
+    <dimensions x="0" y="0" cx="885" cy="539"/>
+    <FontColor>
+      <FontStyleName/>
+      <ColorBackground>66</ColorBackground>
+    </FontColor>
+    <general_flags_1>
+      <bitmap/>
+      <stretched/>
+    </general_flags_1>
+    <general_flags_3>
+      <background_image/>
+    </general_flags_3>
+    <id>(4982)</id>
+    <image_file>Resources\LLD_STANDARD_MAIN.JPG</image_file>
+    <ois_object>C_2780</ois_object>
+    <panel_flags>
+      <force_foreground/>
+      <no_systemmenu/>
+      <no_zorder/>
+      <update_on_host_change/>
+    </panel_flags>
+    <screen_name>(4982)</screen_name>
+    <title>@USER@ - Nachlieferung</title>
+  </properties>
+  <menu_bar>
+    <menu>
+      <title>~Datei</title>
+      <menu_item>
+        <general_flags_2>
+          <visibility_equal_hide/>
+          <visibility_not_present_disable/>
+          <visibility_output_data_disable/>
+        </general_flags_2>
+        <send_key>12</send_key>
+        <title>Speichern</title>
+      </menu_item>
+      <menu_item>
+        <general_flags_2>
+          <visibility_equal_hide/>
+          <visibility_not_present_disable/>
+          <visibility_output_data_disable/>
+        </general_flags_2>
+        <panel_next>*PRINT</panel_next>
+        <title>Drucken</title>
+      </menu_item>
+      <menu_item>
+        <general_flags_2>
+          <separator/>
+          <visibility_equal_hide/>
+          <visibility_not_present_disable/>
+          <visibility_output_data_disable/>
+        </general_flags_2>
+        <send_key>6</send_key>
+        <title>Ende</title>
+      </menu_item>
+    </menu>
+    <menu>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <title>~Bearbeiten</title>
+      <menu_item>
+        <general_flags_2>
+          <visibility_equal_hide/>
+          <visibility_not_present_disable/>
+          <visibility_output_data_disable/>
+        </general_flags_2>
+        <panel_next>*CUT</panel_next>
+        <title>~Auschneiden</title>
+      </menu_item>
+      <menu_item>
+        <general_flags_2>
+          <visibility_equal_hide/>
+          <visibility_not_present_disable/>
+          <visibility_output_data_disable/>
+        </general_flags_2>
+        <panel_next>*COPY</panel_next>
+        <title>~Kopieren</title>
+      </menu_item>
+      <menu_item>
+        <general_flags_2>
+          <visibility_equal_hide/>
+          <visibility_not_present_disable/>
+          <visibility_output_data_disable/>
+        </general_flags_2>
+        <panel_next>*PASTE</panel_next>
+        <title>~Einfügen</title>
+      </menu_item>
+    </menu>
+    <menu>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <title>~Optionen</title>
+      <menu_item>
+        <general_flags_2>
+          <visibility_equal_hide/>
+          <visibility_not_present_disable/>
+          <visibility_output_data_disable/>
+        </general_flags_2>
+        <send_key>8</send_key>
+        <title>~Bezugsänderung aktivieren</title>
+      </menu_item>
+      <menu_item>
+        <enable_check>0965</enable_check>
+        <enable_expression>@&amp;GROSSONR@</enable_expression>
+        <general_flags_2>
+          <separator/>
+          <visibility_not_equal_hide/>
+          <visibility_not_present_disable/>
+          <visibility_output_data_disable/>
+        </general_flags_2>
+        <send_key>18</send_key>
+        <title>~Bestellbuch</title>
+      </menu_item>
+      <menu_item>
+        <enable_check>0965</enable_check>
+        <enable_expression>@&amp;GROSSONR@</enable_expression>
+        <general_flags_2>
+          <visibility_not_equal_hide/>
+          <visibility_not_present_disable/>
+          <visibility_output_data_disable/>
+        </general_flags_2>
+        <send_key>19</send_key>
+        <title>~Verlagsbestellung</title>
+      </menu_item>
+      <menu_item>
+        <general_flags_2>
+          <separator/>
+          <visibility_equal_hide/>
+          <visibility_not_present_disable/>
+          <visibility_output_data_disable/>
+        </general_flags_2>
+        <send_key>21</send_key>
+        <title>~Liste Nachlieferung pro Tour erstellen</title>
+      </menu_item>
+      <menu_item>
+        <enable_expression>@XXKDNR@</enable_expression>
+        <general_flags_2>
+          <visibility_not_equal_disable/>
+          <visibility_not_present_disable/>
+          <visibility_output_data_disable/>
+        </general_flags_2>
+        <send_key>20</send_key>
+        <title>~Geplante Nachlieferungen anzeigen</title>
+      </menu_item>
+      <menu_item>
+        <enable_expression>@XXKDNR@</enable_expression>
+        <general_flags_2>
+          <visibility_not_equal_disable/>
+          <visibility_not_present_disable/>
+          <visibility_output_data_disable/>
+        </general_flags_2>
+        <send_key>22</send_key>
+        <title>~Geplante Nachlieferung drucken</title>
+      </menu_item>
+    </menu>
+    <menu>
+      <title>~Hilfe</title>
+      <menu_item>
+        <general_flags_2>
+          <state_dependent/>
+        </general_flags_2>
+        <panel_next>ABOUT</panel_next>
+        <title>~Info</title>
+      </menu_item>
+      <menu_item>
+        <general_flags_2>
+          <visibility_equal_hide/>
+          <visibility_not_present_disable/>
+          <visibility_output_data_disable/>
+        </general_flags_2>
+        <send_key>38</send_key>
+        <title>~Nachrichten</title>
+      </menu_item>
+    </menu>
+  </menu_bar>
+  <controls>
+    <button>
+      <dimensions x="0" y="25" cx="889" cy="37"/>
+      <field_flags>
+        <field_clipping/>
+      </field_flags>
+      <general_flags_1>
+        <bitmap/>
+        <centered/>
+        <stretched/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <no_focus_line/>
+        <non_default_align/>
+        <unclickable/>
+      </general_flags_3>
+      <image_file>Resources\LLD_BANNER_MAIN.JPG</image_file>
+      <title>LLD</title>
+    </button>
+    <frame>
+      <depth>2</depth>
+      <dimensions x="589" y="33" cx="189" cy="20"/>
+      <field_flags>
+        <field_clipping/>
+      </field_flags>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+    </frame>
+    <frame>
+      <depth>-3</depth>
+      <dimensions x="47" y="182" cx="812" cy="338"/>
+      <field_flags>
+        <field_clipping/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName/>
+        <ColorForeground>66</ColorForeground>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+    </frame>
+    <group>
+      <dimensions x="550" y="340" cx="299" cy="172"/>
+      <field_flags>
+        <field_clipping/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <title>Lieferdaten</title>
+    </group>
+    <group>
+      <dimensions x="553" y="56" cx="298" cy="66"/>
+      <enable_expression>@AUSDAT@</enable_expression>
+      <field_flags>
+        <field_clipping/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 12 Bold</FontStyleName>
+        <ColorForeground>3</ColorForeground>
+      </FontColor>
+      <general_flags_1>
+        <centered/>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Eingestellt</title>
+    </group>
+    <group>
+      <dimensions x="553" y="59" cx="303" cy="63"/>
+      <enable_expression>@AUSDAT@</enable_expression>
+      <field_flags>
+        <field_clipping/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <centered/>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_equal_hide/>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Urlaub</title>
+    </group>
+    <group>
+      <dimensions x="671" y="190" cx="178" cy="107"/>
+      <field_flags>
+        <field_clipping/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <chiseled/>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <title>Lagerinfo</title>
+    </group>
+    <frame>
+      <depth>3</depth>
+      <dimensions x="47" y="70" cx="456" cy="88"/>
+      <field_flags>
+        <field_clipping/>
+      </field_flags>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+    </frame>
+    <group>
+      <dimensions x="550" y="299" cx="299" cy="41"/>
+      <field_flags>
+        <field_clipping/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <title>Preis</title>
+    </group>
+    <output>
+      <dimensions x="555" y="78" cx="281" cy="23"/>
+      <field_format>[DD-MM-YYYY]dddd_d_mmmm_yyyy</field_format>
+      <FontColor>
+        <FontStyleName>Sans Serif 12 Bold</FontStyleName>
+        <ColorForeground>3</ColorForeground>
+      </FontColor>
+      <general_flags_1>
+        <centered/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <host_field>AUSDAT</host_field>
+    </output>
+    <frame>
+      <dimensions x="62" y="197" cx="482" cy="143"/>
+      <field_flags>
+        <field_clipping/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+    </frame>
+    <rectangle>
+      <depth>-2</depth>
+      <dimensions x="1" y="0" cx="888" cy="25"/>
+      <field_flags>
+        <field_clipping/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName/>
+        <ColorForeground>43</ColorForeground>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+    </rectangle>
+    <button>
+      <dimensions x="7" y="4" cx="16" cy="16"/>
+      <FontColor>
+        <FontStyleName/>
+        <ColorBackground>72</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <bitmap/>
+        <centered/>
+        <no_border/>
+        <stretched/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <non_default_align/>
+      </general_flags_3>
+      <help_text>Ende (F3)</help_text>
+      <image_file>Resources\EXIT 16X16.GIF</image_file>
+      <ois_object>C_2780_2</ois_object>
+      <send_key>6</send_key>
+      <title>Exit</title>
+    </button>
+    <button>
+      <dimensions x="36" y="4" cx="16" cy="16"/>
+      <FontColor>
+        <FontStyleName/>
+        <ColorBackground>72</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <bitmap/>
+        <centered/>
+        <no_border/>
+      </general_flags_1>
+      <general_flags_2>
+        <default/>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <non_default_align/>
+      </general_flags_3>
+      <help_text>Datenfreigabe</help_text>
+      <image_file>Resources\WEITER.GIF</image_file>
+      <send_key>1</send_key>
+      <title>Enter</title>
+    </button>
+    <button>
+      <dimensions x="72" y="4" cx="16" cy="16"/>
+      <FontColor>
+        <FontStyleName/>
+        <ColorBackground>72</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <bitmap/>
+        <centered/>
+        <no_border/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <non_default_align/>
+      </general_flags_3>
+      <help_text>Speichern (F9)</help_text>
+      <image_file>Resources\DISKETTE.GIF</image_file>
+      <send_key>12</send_key>
+      <title>Speichern</title>
+    </button>
+    <button>
+      <dimensions x="108" y="4" cx="16" cy="16"/>
+      <general_flags_1>
+        <bitmap/>
+        <centered/>
+        <no_border/>
+        <stretched/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <non_default_align/>
+      </general_flags_3>
+      <help_text>Drucken</help_text>
+      <image_file>Resources\DRUCKER 16X16.GIF</image_file>
+      <panel_next>*PRINTFAST</panel_next>
+      <title>Drucken</title>
+    </button>
+    <button>
+      <dimensions x="682" y="4" cx="16" cy="16"/>
+      <enable_check>Yes</enable_check>
+      <enable_expression>@&amp;&amp;WORD@</enable_expression>
+      <general_flags_1>
+        <bitmap/>
+        <centered/>
+        <no_border/>
+        <stretched/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <non_default_align/>
+        <transparent_background/>
+      </general_flags_3>
+      <help_text>Microsoft Word</help_text>
+      <image_file>Resources\WORD 16X16.GIF</image_file>
+      <script>PcCommand(2, &quot;WINWORD.EXE&quot;)
+
+ </script>
+    </button>
+    <button>
+      <dimensions x="720" y="4" cx="16" cy="16"/>
+      <enable_check>Yes</enable_check>
+      <enable_expression>@&amp;&amp;EXCEL@</enable_expression>
+      <general_flags_1>
+        <bitmap/>
+        <centered/>
+        <no_border/>
+        <stretched/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <non_default_align/>
+        <transparent_background/>
+      </general_flags_3>
+      <help_text> Microsoft Excel</help_text>
+      <image_file>Resources\EXCEL 16X16.GIF</image_file>
+      <script>PcCommand(2, &quot;EXCEL.EXE&quot;)</script>
+    </button>
+    <button>
+      <dimensions x="755" y="4" cx="16" cy="16"/>
+      <general_flags_1>
+        <bitmap/>
+        <centered/>
+        <no_border/>
+        <stretched/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <non_default_align/>
+      </general_flags_3>
+      <help_text>Taschenrechner</help_text>
+      <image_file>Resources\RECHNER.GIF</image_file>
+      <script>PcCommand(2, &quot;C:Calc.EXE&quot;)</script>
+      <title>Rechner</title>
+    </button>
+    <button>
+      <dimensions x="790" y="4" cx="16" cy="16"/>
+      <general_flags_1>
+        <bitmap/>
+        <centered/>
+        <no_border/>
+        <stretched/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+      </general_flags_3>
+      <help_text>Info</help_text>
+      <image_file>Resources\INFO 16X16.GIF</image_file>
+      <panel_next>ABOUT</panel_next>
+      <title>Info</title>
+    </button>
+    <user_window>
+      <dimensions x="810" y="4" cx="71" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+        <ColorBackground>43</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <user_window_type>5</user_window_type>
+    </user_window>
+    <output>
+      <dimensions x="1" y="26" cx="150" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <host_field>FIRM</host_field>
+      <title> </title>
+    </output>
+    <button>
+      <dimensions x="177" y="80" cx="16" cy="16"/>
+      <general_flags_1>
+        <bitmap/>
+        <centered/>
+        <no_border/>
+        <stretched/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <no_focus_line/>
+        <non_default_align/>
+        <transparent_background/>
+      </general_flags_3>
+      <help_text>Kundensuche</help_text>
+      <image_file>Resources\LUPE 16X16.GIF</image_file>
+      <send_key>27</send_key>
+      <title>suchen</title>
+    </button>
+    <edit>
+      <dimensions x="111" y="77" cx="60" cy="20"/>
+      <enable_expression>@XXKDNR@</enable_expression>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="7" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_equal_disable/>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>XXKDNR</host_field>
+    </edit>
+    <button>
+      <dimensions x="57" y="102" cx="114" cy="23"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+        <ColorBackground>72</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <centered/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <non_default_align/>
+      </general_flags_3>
+      <send_key>12</send_key>
+      <title>neuer Kunde (F9)</title>
+    </button>
+    <edit>
+      <dimensions x="146" y="207" cx="129" cy="20"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="18" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>XXSCAN</host_field>
+    </edit>
+    <edit>
+      <dimensions x="146" y="231" cx="44" cy="20"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="5" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <auto_tab/>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <overwrite/>
+      </general_flags_3>
+      <host_field>XXOBJ</host_field>
+      <id>XXOBJ</id>
+      <ois_object>ENTER</ois_object>
+    </edit>
+    <edit>
+      <dimensions x="146" y="255" cx="44" cy="20"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="3" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>XXANZ</host_field>
+    </edit>
+    <combo>
+      <dimensions x="146" y="292" cx="327" cy="239"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="3" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <host_conversion/>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>TEXTKZ</host_field>
+      <id>TEXTKZ</id>
+    </combo>
+    <button>
+      <dimensions x="789" y="524" cx="70" cy="19"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+        <ColorBackground>72</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <centered/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <non_default_align/>
+      </general_flags_3>
+      <ois_object>C_2780_2</ois_object>
+      <send_key>1</send_key>
+      <title>OK</title>
+    </button>
+    <button>
+      <dimensions x="196" y="255" cx="96" cy="20"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+        <ColorBackground>72</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <centered/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <non_default_align/>
+      </general_flags_3>
+      <send_key>11</send_key>
+      <title>neues Objekt (F8)</title>
+    </button>
+    <button>
+      <dimensions x="47" y="524" cx="70" cy="19"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+        <ColorBackground>72</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <centered/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <non_default_align/>
+      </general_flags_3>
+      <send_key>6</send_key>
+      <title>zurück</title>
+    </button>
+    <list_box>
+      <dimensions x="62" y="351" cx="428" cy="160"/>
+      <divider_columns>1</divider_columns>
+      <divider_header>1</divider_header>
+      <divider_header_list>1</divider_header_list>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+        <ColorBackground>69</ColorBackground>
+      </FontColor>
+      <FontColorHeader>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+        <ColorBackground>67</ColorBackground>
+      </FontColorHeader>
+      <FontColorListAlternate>
+        <FontStyleName/>
+        <ColorBackground>71</ColorBackground>
+      </FontColorListAlternate>
+      <header_height>16</header_height>
+      <host_field>AUSWAL</host_field>
+      <id>BOX_2780</id>
+      <key_page_down>3</key_page_down>
+      <key_page_up>2</key_page_up>
+      <list_box_flags>
+        <expandable/>
+        <page_buttons/>
+        <scroll_vertsize/>
+      </list_box_flags>
+      <right_mouse_menu_name>AUS_2780</right_mouse_menu_name>
+      <right_mouse_popup_panel_name>AUS_2780</right_mouse_popup_panel_name>
+      <list_column>
+        <column_data_width_chars>7</column_data_width_chars>
+        <column_width>42</column_width>
+        <column_width_chars>7</column_width_chars>
+        <field_length length="7" field_type="0" check_direct="0"/>
+        <general_flags_1>
+          <right_aligned/>
+        </general_flags_1>
+        <host_field>SFFOLG</host_field>
+        <list_column_flags>
+          <align_right/>
+        </list_column_flags>
+        <title>Folge</title>
+      </list_column>
+      <list_column>
+        <column_data_width_chars>3</column_data_width_chars>
+        <column_width>21</column_width>
+        <column_width_chars>3</column_width_chars>
+        <field_length length="3" field_type="0" check_direct="0"/>
+        <general_flags_1>
+          <right_aligned/>
+        </general_flags_1>
+        <host_field>SFANZ</host_field>
+        <list_column_flags>
+          <align_right/>
+        </list_column_flags>
+        <title>Anz</title>
+      </list_column>
+      <list_column>
+        <column_data_width_chars>21</column_data_width_chars>
+        <column_width>108</column_width>
+        <column_width_chars>21</column_width_chars>
+        <field_length length="21" field_type="0" check_direct="0"/>
+        <host_field>SFNAME</host_field>
+        <title>Bezeichnung </title>
+      </list_column>
+      <list_column>
+        <column_data_width_chars>6</column_data_width_chars>
+        <column_width>37</column_width>
+        <column_width_chars>6</column_width_chars>
+        <field_length length="6" field_type="0" check_direct="0"/>
+        <general_flags_1>
+          <right_aligned/>
+        </general_flags_1>
+        <host_field>SFPRS</host_field>
+        <list_column_flags>
+          <align_right/>
+        </list_column_flags>
+        <title>Preis</title>
+      </list_column>
+      <list_column>
+        <column_data_width_chars>8</column_data_width_chars>
+        <column_width>48</column_width>
+        <column_width_chars>8</column_width_chars>
+        <field_length length="8" field_type="0" check_direct="0"/>
+        <general_flags_1>
+          <right_aligned/>
+        </general_flags_1>
+        <host_field>SVEKP</host_field>
+        <list_column_flags>
+          <align_right/>
+        </list_column_flags>
+        <title>Abgabe</title>
+      </list_column>
+      <list_column>
+        <column_data_width_chars>5</column_data_width_chars>
+        <column_width>40</column_width>
+        <column_width_chars>5</column_width_chars>
+        <field_length length="5" field_type="0" check_direct="0"/>
+        <general_flags_1>
+          <right_aligned/>
+        </general_flags_1>
+        <host_field>SFMWS</host_field>
+        <list_column_flags>
+          <align_right/>
+        </list_column_flags>
+        <title>MwSt% </title>
+      </list_column>
+      <list_column>
+        <column_data_width_chars>8</column_data_width_chars>
+        <column_width>42</column_width>
+        <column_width_chars>8</column_width_chars>
+        <field_length length="8" field_type="0" check_direct="0"/>
+        <general_flags_1>
+          <right_aligned/>
+        </general_flags_1>
+        <host_field>SFGPRS</host_field>
+        <list_column_flags>
+          <align_right/>
+        </list_column_flags>
+        <title>Netto</title>
+      </list_column>
+      <list_column>
+        <column_data_width_chars>6</column_data_width_chars>
+        <column_width>36</column_width>
+        <column_width_chars>6</column_width_chars>
+        <field_length length="6" field_type="0" check_direct="0"/>
+        <general_flags_1>
+          <right_aligned/>
+        </general_flags_1>
+        <host_field>SFMWST</host_field>
+        <list_column_flags>
+          <align_right/>
+        </list_column_flags>
+        <title>MwSt</title>
+      </list_column>
+      <list_column>
+        <column_data_width_chars>3</column_data_width_chars>
+        <column_width>27</column_width>
+        <column_width_chars>3</column_width_chars>
+        <field_length length="3" field_type="0" check_direct="0"/>
+        <general_flags_1>
+          <right_aligned/>
+        </general_flags_1>
+        <host_field>SFTXKZ</host_field>
+        <list_column_flags>
+          <align_right/>
+        </list_column_flags>
+        <title>Text</title>
+      </list_column>
+    </list_box>
+    <output>
+      <dimensions x="199" y="77" cx="298" cy="21"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 12 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <host_field>KDNA25</host_field>
+    </output>
+    <output>
+      <dimensions x="199" y="102" cx="295" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <host_field>KDSTR</host_field>
+    </output>
+    <output>
+      <dimensions x="252" y="122" cx="244" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <host_field>KDORT</host_field>
+    </output>
+    <output>
+      <dimensions x="615" y="81" cx="238" cy="16"/>
+      <enable_expression>@AUSDAT@</enable_expression>
+      <field_format>[DD-MM-YY]dddd,_d._mmmm_yyyy</field_format>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_equal_hide/>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <host_field>URLVON</host_field>
+    </output>
+    <output>
+      <dimensions x="615" y="102" cx="238" cy="12"/>
+      <enable_expression>@AUSDAT@</enable_expression>
+      <field_format>[DD-MM-YY]dddd,_d._mmmm_yyyy</field_format>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_equal_hide/>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <host_field>URLBIS</host_field>
+    </output>
+    <text>
+      <dimensions x="71" y="318" cx="73" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <title>Kunden-Info</title>
+    </text>
+    <text>
+      <dimensions x="72" y="209" cx="52" cy="16"/>
+      <enable_expression>@BARTXT@</enable_expression>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <title>Barcode</title>
+    </text>
+    <output>
+      <dimensions x="767" y="227" cx="30" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ATVP</host_field>
+    </output>
+    <output>
+      <dimensions x="638" y="374" cx="205" cy="15"/>
+      <field_format>[DD-MM-YY]dddd,_d_mmmm_yyyy</field_format>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LDAT</host_field>
+    </output>
+    <output>
+      <dimensions x="53" y="163" cx="300" cy="18"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10 Bold</FontStyleName>
+        <ColorForeground>3</ColorForeground>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <host_field>ERRMSG</host_field>
+    </output>
+    <button>
+      <dimensions x="128" y="233" cx="16" cy="16"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <general_flags_1>
+        <bitmap/>
+        <centered/>
+        <no_border/>
+        <stretched/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <no_focus_line/>
+        <non_default_align/>
+        <transparent_background/>
+      </general_flags_3>
+      <help_text>Artikelsuche</help_text>
+      <image_file>Resources\LUPE 16X16.GIF</image_file>
+      <script>dsp_2780=0</script>
+      <send_key>13</send_key>
+    </button>
+    <text>
+      <dimensions x="71" y="256" cx="62" cy="21"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <title>Menge</title>
+    </text>
+    <text>
+      <dimensions x="71" y="233" cx="42" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <title>Objekt</title>
+    </text>
+    <text>
+      <dimensions x="554" y="374" cx="88" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <title>Ausgeliefert am</title>
+    </text>
+    <text>
+      <dimensions x="681" y="228" cx="78" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <title>Vollballeninhalt</title>
+    </text>
+    <text>
+      <dimensions x="61" y="78" cx="42" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Kunde</title>
+    </text>
+    <button>
+      <dimensions x="504" y="374" cx="28" cy="28"/>
+      <FontColor>
+        <FontStyleName/>
+        <ColorBackground>66</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <bitmap/>
+        <centered/>
+        <no_border/>
+      </general_flags_1>
+      <general_flags_2>
+        <cursor_on_text/>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <non_default_align/>
+      </general_flags_3>
+      <help_text>zurück</help_text>
+      <image_file>Resources\LLD_BUTTON_RUND_01_NACHOBEN.GIF</image_file>
+      <send_key>2</send_key>
+    </button>
+    <button>
+      <dimensions x="504" y="471" cx="28" cy="28"/>
+      <FontColor>
+        <FontStyleName/>
+        <ColorBackground>66</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <bitmap/>
+        <centered/>
+        <no_border/>
+      </general_flags_1>
+      <general_flags_2>
+        <cursor_on_text/>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <no_focus_line/>
+        <non_default_align/>
+      </general_flags_3>
+      <help_text>vorwärts</help_text>
+      <image_file>Resources\LLD_BUTTON_RUND_01_NACHUNTEN.GIF</image_file>
+      <send_key>3</send_key>
+    </button>
+    <text>
+      <dimensions x="681" y="211" cx="53" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <title>Lagerort</title>
+    </text>
+    <output>
+      <dimensions x="767" y="208" cx="20" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LOREG1</host_field>
+      <title>99</title>
+    </output>
+    <output>
+      <dimensions x="789" y="208" cx="15" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LOTUR1</host_field>
+      <title>O</title>
+    </output>
+    <output>
+      <dimensions x="803" y="208" cx="20" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LOREI1</host_field>
+      <title>99</title>
+    </output>
+    <output>
+      <dimensions x="823" y="208" cx="20" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LOPLA1</host_field>
+      <title>99</title>
+    </output>
+    <text>
+      <dimensions x="681" y="244" cx="53" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <title>Bestand</title>
+    </text>
+    <output>
+      <dimensions x="767" y="243" cx="73" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10 Bold</FontStyleName>
+        <ColorForeground>3</ColorForeground>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LBBEST</host_field>
+      <title>99999999</title>
+    </output>
+    <output>
+      <dimensions x="767" y="259" cx="78" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10 Bold</FontStyleName>
+        <ColorForeground>7</ColorForeground>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>LBVMPB</host_field>
+      <title>99999999</title>
+    </output>
+    <text>
+      <dimensions x="681" y="260" cx="85" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <title>Bestand VMP</title>
+    </text>
+    <text>
+      <dimensions x="71" y="295" cx="47" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <title>Text</title>
+    </text>
+    <output>
+      <dimensions x="287" y="205" cx="235" cy="24"/>
+      <enable_expression>@BARTXT@</enable_expression>
+      <field_flags>
+        <field_clipping/>
+        <tab_stop/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 12 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ATNAME</host_field>
+    </output>
+    <output>
+      <dimensions x="641" y="317" cx="64" cy="17"/>
+      <field_format>0,0000</field_format>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ATNNEU</host_field>
+    </output>
+    <output>
+      <dimensions x="552" y="317" cx="65" cy="16"/>
+      <field_format>0,00</field_format>
+      <FontColor>
+        <FontStyleName>Sans Serif 10 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ATBNEU</host_field>
+    </output>
+    <output>
+      <dimensions x="734" y="317" cx="56" cy="17"/>
+      <field_format>0,00</field_format>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ATMWN</host_field>
+    </output>
+    <text>
+      <dimensions x="572" y="80" cx="42" cy="16"/>
+      <enable_expression>@AUSDAT@</enable_expression>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_equal_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>von</title>
+    </text>
+    <text>
+      <dimensions x="572" y="101" cx="42" cy="16"/>
+      <enable_expression>@AUSDAT@</enable_expression>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_equal_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>bis</title>
+    </text>
+    <button>
+      <dimensions x="476" y="294" cx="57" cy="19"/>
+      <enable_check>0965</enable_check>
+      <enable_expression>@&amp;GROSSONR@</enable_expression>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+        <ColorBackground>72</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <centered/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <non_default_align/>
+      </general_flags_3>
+      <panel_next>NLINFO</panel_next>
+      <title>INFO</title>
+    </button>
+    <text>
+      <dimensions x="554" y="391" cx="104" cy="16"/>
+      <enable_check>Z</enable_check>
+      <enable_expression>@##ZW@</enable_expression>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <title>nächste Auslieferung</title>
+    </text>
+    <text>
+      <dimensions x="626" y="317" cx="10" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <title>€</title>
+    </text>
+    <text>
+      <dimensions x="714" y="317" cx="10" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <title>€</title>
+    </text>
+    <text>
+      <dimensions x="799" y="317" cx="15" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <title>%</title>
+    </text>
+    <output>
+      <dimensions x="662" y="391" cx="181" cy="15"/>
+      <field_format>[DD-MM-YY]dddd,_d_mmmm_yyyy</field_format>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>NDAT</host_field>
+    </output>
+    <group>
+      <dimensions x="550" y="408" cx="299" cy="2"/>
+      <field_flags>
+        <field_clipping/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+    </group>
+    <output>
+      <dimensions x="637" y="414" cx="35" cy="13"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <centered/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ATFO01</host_field>
+    </output>
+    <output>
+      <dimensions x="809" y="414" cx="35" cy="13"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ATFO05</host_field>
+    </output>
+    <output>
+      <dimensions x="766" y="414" cx="35" cy="13"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ATFO04</host_field>
+    </output>
+    <output>
+      <dimensions x="723" y="414" cx="35" cy="13"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ATFO03</host_field>
+    </output>
+    <output>
+      <dimensions x="680" y="414" cx="35" cy="13"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ATFO02</host_field>
+    </output>
+    <group>
+      <dimensions x="550" y="429" cx="299" cy="2"/>
+      <field_flags>
+        <field_clipping/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+    </group>
+    <text>
+      <dimensions x="554" y="413" cx="71" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <title>letzte Folgen</title>
+    </text>
+    <output>
+      <dimensions x="698" y="358" cx="145" cy="13"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>ERW</host_field>
+    </output>
+    <text>
+      <dimensions x="554" y="357" cx="107" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <title>Erscheinungsweise</title>
+    </text>
+    <edit>
+      <dimensions x="194" y="231" cx="80" cy="20"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_format>000000</field_format>
+      <field_length length="6" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <cursor_selected/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>XXFOLG</host_field>
+      <id>XXFOLG</id>
+    </edit>
+    <checkbox>
+      <dimensions x="285" y="234" cx="55" cy="15"/>
+      <enable_expression>@ATFO01@</enable_expression>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <always_update/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <help_text>Folgeauswahl durch anklicken !</help_text>
+      <host_field>XXFOLG</host_field>
+      <title>@ATFO01@</title>
+      <value_selected>@ATFO01@</value_selected>
+    </checkbox>
+    <checkbox>
+      <dimensions x="349" y="234" cx="55" cy="15"/>
+      <enable_expression>@ATFO02@</enable_expression>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <always_update/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <help_text>Folgeauswahl durch anklicken !</help_text>
+      <host_field>XXFOLG</host_field>
+      <title>@ATFO02@</title>
+      <value_selected>@ATFO02@</value_selected>
+    </checkbox>
+    <checkbox>
+      <dimensions x="413" y="234" cx="55" cy="15"/>
+      <enable_expression>@ATFO03@</enable_expression>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <always_update/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <help_text>Folgeauswahl durch anklicken !</help_text>
+      <host_field>XXFOLG</host_field>
+      <title>@ATFO03@</title>
+      <value_selected>@ATFO03@</value_selected>
+    </checkbox>
+    <checkbox>
+      <dimensions x="475" y="234" cx="55" cy="15"/>
+      <enable_expression>@ATFO04@</enable_expression>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <always_update/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <help_text>Folgeauswahl durch anklicken !</help_text>
+      <host_field>XXFOLG</host_field>
+      <title>@ATFO04@</title>
+      <value_selected>@ATFO04@</value_selected>
+    </checkbox>
+    <button>
+      <dimensions x="304" y="255" cx="229" cy="19"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+        <ColorBackground>72</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <centered/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <non_default_align/>
+      </general_flags_3>
+      <panel_next>FO_2951</panel_next>
+      <title>Suche Folge nach Untertitel</title>
+    </button>
+    <text>
+      <dimensions x="608" y="159" cx="121" cy="16"/>
+      <enable_expression>@XXINDEX@</enable_expression>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <state_as_next/>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Scanquote VMP</title>
+    </text>
+    <output>
+      <dimensions x="712" y="159" cx="55" cy="17"/>
+      <enable_expression>@XXINDEX@</enable_expression>
+      <field_format>[DD.MM.JJ]dd_mmm_jj</field_format>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+        <ColorBackground>7</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <centered/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <border/>
+      </general_flags_3>
+      <host_field>XXINDEX</host_field>
+    </output>
+    <edit>
+      <dimensions x="146" y="314" cx="326" cy="20"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="50" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>XXINFO</host_field>
+      <id>XXINFO</id>
+    </edit>
+    <output>
+      <dimensions x="145" y="201" cx="334" cy="24"/>
+      <enable_expression>@BARTXT@</enable_expression>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 12 Bold</FontStyleName>
+        <ColorBackground>16</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <centered/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_equal_hide/>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <border/>
+      </general_flags_3>
+      <host_field>ATNAME</host_field>
+    </output>
+    <button>
+      <dimensions x="362" y="524" cx="162" cy="19"/>
+      <enable_expression>@XXKDNR@</enable_expression>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+        <ColorBackground>72</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <centered/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <non_default_align/>
+      </general_flags_3>
+      <send_key>20</send_key>
+      <title>Geplante NL anzeigen</title>
+    </button>
+    <text>
+      <dimensions x="54" y="134" cx="119" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <centered/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>(Lfs drucken)</title>
+    </text>
+    <text>
+      <dimensions x="681" y="277" cx="163" cy="14"/>
+      <enable_check>S</enable_check>
+      <enable_expression>@SAMKZ@</enable_expression>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+        <ColorForeground>3</ColorForeground>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_equal_hide/>
+      </general_flags_2>
+      <title>Objekt wird abgesammelt !</title>
+    </text>
+    <output>
+      <dimensions x="199" y="122" cx="50" cy="16"/>
+      <field_format>00000</field_format>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <host_field>KDPLZ</host_field>
+    </output>
+    <text>
+      <dimensions x="592" y="36" cx="183" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+        <ColorForeground>9</ColorForeground>
+        <ColorBackground>43</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <centered/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <title>Nachlieferung ausgeben</title>
+    </text>
+    <button>
+      <dimensions x="11" y="97" cx="31" cy="34"/>
+      <enable_check>1007</enable_check>
+      <enable_expression>@&amp;GROSSONR@</enable_expression>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+        <ColorBackground>72</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <bitmap/>
+        <no_border/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_equal_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <resize_allowed/>
+        <transparent_background/>
+      </general_flags_3>
+      <help_text>Anruf annehmen</help_text>
+      <image_file>Resources\phone79.ico</image_file>
+      <send_key>10</send_key>
+    </button>
+    <button>
+      <dimensions x="409" y="4" cx="65" cy="16"/>
+      <enable_expression>@&amp;FIL02@</enable_expression>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+        <ColorBackground>43</ColorBackground>
+      </FontColor>
+      <FontColorMouseOver>
+        <FontStyleName/>
+        <ColorBackground>49</ColorBackground>
+      </FontColorMouseOver>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+      </general_flags_3>
+      <ois_object>FILIALE2</ois_object>
+      <title>@&amp;FIL02@</title>
+    </button>
+    <button>
+      <dimensions x="507" y="4" cx="65" cy="16"/>
+      <enable_expression>@&amp;FIL03@</enable_expression>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+        <ColorBackground>43</ColorBackground>
+      </FontColor>
+      <FontColorMouseOver>
+        <FontStyleName/>
+        <ColorBackground>49</ColorBackground>
+      </FontColorMouseOver>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+      </general_flags_3>
+      <ois_object>FILIALE3</ois_object>
+      <title>@&amp;FIL03@</title>
+    </button>
+    <button>
+      <dimensions x="310" y="4" cx="65" cy="16"/>
+      <enable_expression>@&amp;FIL01@</enable_expression>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+        <ColorBackground>43</ColorBackground>
+      </FontColor>
+      <FontColorMouseOver>
+        <FontStyleName/>
+        <ColorBackground>49</ColorBackground>
+      </FontColorMouseOver>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+      </general_flags_3>
+      <ois_object>FILIALE1</ois_object>
+      <title>@&amp;FIL01@</title>
+    </button>
+    <group>
+      <dimensions x="550" y="479" cx="299" cy="33"/>
+      <field_flags>
+        <field_clipping/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+    </group>
+    <text>
+      <dimensions x="554" y="433" cx="33" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <title>Bezug</title>
+    </text>
+    <output>
+      <dimensions x="638" y="433" cx="34" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>BZ1</host_field>
+    </output>
+    <output>
+      <dimensions x="681" y="433" cx="34" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>BZ2</host_field>
+    </output>
+    <output>
+      <dimensions x="724" y="433" cx="34" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>BZ3</host_field>
+    </output>
+    <output>
+      <dimensions x="767" y="433" cx="34" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>BZ4</host_field>
+    </output>
+    <output>
+      <dimensions x="810" y="433" cx="34" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>BZ5</host_field>
+    </output>
+    <text>
+      <dimensions x="554" y="448" cx="76" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <title>Nachlieferung</title>
+    </text>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="638" y="448" cx="34" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>NL1</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="681" y="448" cx="34" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>NL2</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="724" y="448" cx="34" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>NL3</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="767" y="448" cx="34" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>NL4</host_field>
+    </output>
+    <output>
+      <color_conversion>1</color_conversion>
+      <dimensions x="810" y="448" cx="34" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>NL5</host_field>
+    </output>
+    <text>
+      <dimensions x="554" y="463" cx="65" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <title>Remission</title>
+    </text>
+    <output>
+      <dimensions x="638" y="463" cx="34" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>RM1</host_field>
+    </output>
+    <output>
+      <dimensions x="681" y="463" cx="34" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>RM2</host_field>
+    </output>
+    <output>
+      <dimensions x="724" y="463" cx="34" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>RM3</host_field>
+    </output>
+    <output>
+      <dimensions x="767" y="463" cx="34" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>RM4</host_field>
+    </output>
+    <output>
+      <dimensions x="810" y="463" cx="34" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>RM5</host_field>
+    </output>
+    <text>
+      <dimensions x="554" y="482" cx="51" cy="13"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <title>Verkauf</title>
+    </text>
+    <output>
+      <dimensions x="638" y="482" cx="34" cy="13"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>VK1</host_field>
+    </output>
+    <output>
+      <dimensions x="810" y="482" cx="34" cy="13"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>VK5</host_field>
+    </output>
+    <output>
+      <dimensions x="767" y="482" cx="34" cy="13"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>VK4</host_field>
+    </output>
+    <output>
+      <dimensions x="724" y="482" cx="34" cy="13"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>VK3</host_field>
+    </output>
+    <output>
+      <dimensions x="681" y="482" cx="34" cy="13"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <host_field>VK2</host_field>
+    </output>
+    <output>
+      <dimensions x="594" y="433" cx="33" cy="14"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <centered/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <border/>
+      </general_flags_3>
+      <host_field>GBZ</host_field>
+    </output>
+    <text>
+      <dimensions x="646" y="495" cx="26" cy="13"/>
+      <enable_check>V</enable_check>
+      <enable_expression>@KZVMP1@</enable_expression>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+        <ColorForeground>1</ColorForeground>
+        <ColorBackground>7</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <centered/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_equal_hide/>
+      </general_flags_2>
+      <help_text>der angezeigte Verkauf 
+stammt aus VMP</help_text>
+      <title>VMP</title>
+    </text>
+    <text>
+      <dimensions x="775" y="495" cx="26" cy="13"/>
+      <enable_check>V</enable_check>
+      <enable_expression>@KZVMP4@</enable_expression>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+        <ColorForeground>1</ColorForeground>
+        <ColorBackground>7</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <centered/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_equal_hide/>
+      </general_flags_2>
+      <help_text>der angezeigte Verkauf 
+stammt aus VMP</help_text>
+      <title>VMP</title>
+    </text>
+    <text>
+      <dimensions x="732" y="495" cx="26" cy="13"/>
+      <enable_check>V</enable_check>
+      <enable_expression>@KZVMP3@</enable_expression>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+        <ColorForeground>1</ColorForeground>
+        <ColorBackground>7</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <centered/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_equal_hide/>
+      </general_flags_2>
+      <help_text>der angezeigte Verkauf 
+stammt aus VMP</help_text>
+      <title>VMP</title>
+    </text>
+    <text>
+      <dimensions x="689" y="495" cx="26" cy="13"/>
+      <enable_check>V</enable_check>
+      <enable_expression>@KZVMP2@</enable_expression>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+        <ColorForeground>1</ColorForeground>
+        <ColorBackground>7</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <centered/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_equal_hide/>
+      </general_flags_2>
+      <help_text>der angezeigte Verkauf 
+stammt aus VMP</help_text>
+      <title>VMP</title>
+    </text>
+    <text>
+      <dimensions x="554" y="391" cx="104" cy="16"/>
+      <enable_check>Z</enable_check>
+      <enable_expression>@##ZW@</enable_expression>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_equal_hide/>
+      </general_flags_2>
+      <title>näch. Zweitausl.</title>
+    </text>
+    <checkbox>
+      <dimensions x="616" y="141" cx="152" cy="19"/>
+      <enable_check>0965</enable_check>
+      <enable_expression>@&amp;GROSSONR@</enable_expression>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <general_flags_2>
+        <visibility_not_equal_hide/>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <host_field>#KZHINW</host_field>
+      <title>Bitte sofort fahren!</title>
+      <value_selected>J</value_selected>
+    </checkbox>
+    <checkbox>
+      <dimensions x="147" y="276" cx="151" cy="16"/>
+      <enable_check>0965</enable_check>
+      <enable_expression>@&amp;GROSSONR@</enable_expression>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_equal_hide/>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>##KZBEZ</host_field>
+      <title>Menge zu Bezug addieren</title>
+      <value_selected>J</value_selected>
+    </checkbox>
+    <output>
+      <dimensions x="617" y="127" cx="141" cy="15"/>
+      <enable_check>0965</enable_check>
+      <enable_expression>@&amp;GROSSONR@</enable_expression>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+        <ColorBackground>16</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <centered/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_equal_hide/>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <small_border/>
+      </general_flags_3>
+      <host_field>XXLAND25</host_field>
+      <properties>if @&amp;GROSSONR@ = &quot;0590&quot; then
+Visibility=hidden 
+end
+</properties>
+    </output>
+    <button>
+      <dimensions x="568" y="191" cx="91" cy="111"/>
+      <enable_expression>@&amp;&amp;PIC_NAME@</enable_expression>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+        <ColorBackground>65</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <always_update/>
+        <bitmap/>
+        <centered/>
+        <no_border/>
+        <stretched/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_entry_capable_hide/>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <no_focus_line/>
+        <non_default_align/>
+      </general_flags_3>
+      <help_text>vergrößern</help_text>
+      <image_file>@&amp;LWG@@TITELB@</image_file>
+      <panel_next>2559PIC</panel_next>
+    </button>
+    <output>
+      <dimensions x="575" y="101" cx="274" cy="16"/>
+      <enable_expression>@AUSDAT@</enable_expression>
+      <field_format>[DD-MM-YY]dddd,_d._mmmm_yyyy</field_format>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <centered/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <host_field>URLVON</host_field>
+    </output>
+    <text>
+      <dimensions x="561" y="100" cx="65" cy="16"/>
+      <enable_expression>@AUSDAT@</enable_expression>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Urlaub ab</title>
+    </text>
+    <text>
+      <dimensions x="485" y="204" cx="44" cy="17"/>
+      <enable_check>01</enable_check>
+      <enable_expression>@KDEH20@</enable_expression>
+      <FontColor>
+        <FontStyleName>Sans Serif 10 Bold</FontStyleName>
+        <ColorForeground>16</ColorForeground>
+        <ColorBackground>3</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <centered/>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_equal_hide/>
+      </general_flags_2>
+      <title>BY</title>
+    </text>
+    <text>
+      <dimensions x="485" y="204" cx="44" cy="17"/>
+      <enable_check>02</enable_check>
+      <enable_expression>@KDEH20@</enable_expression>
+      <FontColor>
+        <FontStyleName>Sans Serif 10 Bold</FontStyleName>
+        <ColorForeground>16</ColorForeground>
+        <ColorBackground>3</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <centered/>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_equal_hide/>
+      </general_flags_2>
+      <title>BW</title>
+    </text>
+  </controls>
+</panel>

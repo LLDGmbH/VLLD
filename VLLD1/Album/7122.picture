@@ -1,0 +1,1319 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="OSNA_COL/AXN50DS(SFC1+KEY01)" library="OSNA_COL" member_name="AXN50DS">
+    <size cx="132" cy="27"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f13" caption="F13" attention_key="false"/>
+    <action key="f14" caption="F14" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <action key="help" caption="HELP" attention_key="false"/>
+    <field field_type="screen_part" name="SFC1">
+      <area>
+        <position/>
+        <size cx="132" cy="24"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="KEY01" overlay="true">
+      <area>
+        <position y="25"/>
+        <size cx="132" cy="2"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SDS_USER" short_name="SDS_USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="Pakete unbekannte Remission auswerten" display_length="37" data_length="37">
+          <area>
+            <position x="44"/>
+            <size cx="37" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SDS_JOB" short_name="SDS_JOB" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="96"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="AXN50S1" display_length="7" data_length="7">
+          <area>
+            <position x="107"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="115"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="124"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Zeitraum von Woche" display_length="18" data_length="18">
+          <area>
+            <position x="1" y="2"/>
+            <size cx="18" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1WOVON" short_name="S1WOVON" data_type="zoned_decimal" display_length="7" data_length="6" underline="true" high_intensity="true">
+          <area>
+            <position x="20" y="2"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="bis" display_length="3" data_length="3">
+          <area>
+            <position x="28" y="2"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S1WOBIS" short_name="S1WOBIS" data_type="zoned_decimal" display_length="7" data_length="6" underline="true" high_intensity="true">
+          <area>
+            <position x="32" y="2"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="A  Woche  AnzPak  AnzExp    SumAGP    AnzPak  AnzExp    SumAGP     PrzZu                                                          " display_length="130" data_length="130" underline="true">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="130" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1WOCH" short_name="S1WOCH" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="3" y="4"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="11" y="4"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="18" y="4"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGP" short_name="S1SUMAGP" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="26" y="4"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZPZ" short_name="S1ANZPZ" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="4"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZEZ" short_name="S1ANZEZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="46" y="4"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGPZ" short_name="S1SUMAGPZ" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="54" y="4"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PROZ" short_name="S1PROZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="67" y="4"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1WOCH" short_name="S1WOCH" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="3" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="11" y="5"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="18" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGP" short_name="S1SUMAGP" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="26" y="5"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZPZ" short_name="S1ANZPZ" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="5"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZEZ" short_name="S1ANZEZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="46" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGPZ" short_name="S1SUMAGPZ" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="54" y="5"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PROZ" short_name="S1PROZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="67" y="5"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1WOCH" short_name="S1WOCH" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="3" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="11" y="6"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="18" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGP" short_name="S1SUMAGP" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="26" y="6"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZPZ" short_name="S1ANZPZ" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="6"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZEZ" short_name="S1ANZEZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="46" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGPZ" short_name="S1SUMAGPZ" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="54" y="6"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PROZ" short_name="S1PROZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="67" y="6"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1WOCH" short_name="S1WOCH" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="3" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="11" y="7"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="18" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGP" short_name="S1SUMAGP" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="26" y="7"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZPZ" short_name="S1ANZPZ" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="7"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZEZ" short_name="S1ANZEZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="46" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGPZ" short_name="S1SUMAGPZ" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="54" y="7"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PROZ" short_name="S1PROZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="67" y="7"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1WOCH" short_name="S1WOCH" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="3" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="11" y="8"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="18" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGP" short_name="S1SUMAGP" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="26" y="8"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZPZ" short_name="S1ANZPZ" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="8"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZEZ" short_name="S1ANZEZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="46" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGPZ" short_name="S1SUMAGPZ" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="54" y="8"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PROZ" short_name="S1PROZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="67" y="8"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1WOCH" short_name="S1WOCH" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="3" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="11" y="9"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="18" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGP" short_name="S1SUMAGP" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="26" y="9"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZPZ" short_name="S1ANZPZ" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="9"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZEZ" short_name="S1ANZEZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="46" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGPZ" short_name="S1SUMAGPZ" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="54" y="9"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PROZ" short_name="S1PROZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="67" y="9"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1WOCH" short_name="S1WOCH" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="3" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="11" y="10"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="18" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGP" short_name="S1SUMAGP" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="26" y="10"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZPZ" short_name="S1ANZPZ" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="10"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZEZ" short_name="S1ANZEZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="46" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGPZ" short_name="S1SUMAGPZ" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="54" y="10"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PROZ" short_name="S1PROZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="67" y="10"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1WOCH" short_name="S1WOCH" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="3" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="11" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="18" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGP" short_name="S1SUMAGP" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="26" y="11"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZPZ" short_name="S1ANZPZ" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZEZ" short_name="S1ANZEZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="46" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGPZ" short_name="S1SUMAGPZ" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="54" y="11"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PROZ" short_name="S1PROZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="67" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1WOCH" short_name="S1WOCH" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="3" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="11" y="12"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="18" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGP" short_name="S1SUMAGP" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="26" y="12"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZPZ" short_name="S1ANZPZ" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="12"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZEZ" short_name="S1ANZEZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="46" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGPZ" short_name="S1SUMAGPZ" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="54" y="12"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PROZ" short_name="S1PROZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="67" y="12"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1WOCH" short_name="S1WOCH" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="3" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="11" y="13"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="18" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGP" short_name="S1SUMAGP" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="26" y="13"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZPZ" short_name="S1ANZPZ" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="13"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZEZ" short_name="S1ANZEZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="46" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGPZ" short_name="S1SUMAGPZ" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="54" y="13"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PROZ" short_name="S1PROZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="67" y="13"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1WOCH" short_name="S1WOCH" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="3" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="11" y="14"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="18" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGP" short_name="S1SUMAGP" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="26" y="14"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZPZ" short_name="S1ANZPZ" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="14"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZEZ" short_name="S1ANZEZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="46" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGPZ" short_name="S1SUMAGPZ" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="54" y="14"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PROZ" short_name="S1PROZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="67" y="14"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1WOCH" short_name="S1WOCH" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="3" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="11" y="15"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="18" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGP" short_name="S1SUMAGP" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="26" y="15"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZPZ" short_name="S1ANZPZ" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="15"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZEZ" short_name="S1ANZEZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="46" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGPZ" short_name="S1SUMAGPZ" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="54" y="15"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PROZ" short_name="S1PROZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="67" y="15"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1WOCH" short_name="S1WOCH" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="3" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="11" y="16"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="18" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGP" short_name="S1SUMAGP" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="26" y="16"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZPZ" short_name="S1ANZPZ" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="16"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZEZ" short_name="S1ANZEZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="46" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGPZ" short_name="S1SUMAGPZ" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="54" y="16"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PROZ" short_name="S1PROZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="67" y="16"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1WOCH" short_name="S1WOCH" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="3" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="11" y="17"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="18" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGP" short_name="S1SUMAGP" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="26" y="17"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZPZ" short_name="S1ANZPZ" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="17"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZEZ" short_name="S1ANZEZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="46" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGPZ" short_name="S1SUMAGPZ" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="54" y="17"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PROZ" short_name="S1PROZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="67" y="17"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1WOCH" short_name="S1WOCH" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="3" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="11" y="18"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="18" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGP" short_name="S1SUMAGP" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="26" y="18"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZPZ" short_name="S1ANZPZ" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="18"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZEZ" short_name="S1ANZEZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="46" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGPZ" short_name="S1SUMAGPZ" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="54" y="18"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PROZ" short_name="S1PROZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="67" y="18"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1WOCH" short_name="S1WOCH" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="3" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="11" y="19"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="18" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGP" short_name="S1SUMAGP" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="26" y="19"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZPZ" short_name="S1ANZPZ" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="19"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZEZ" short_name="S1ANZEZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="46" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGPZ" short_name="S1SUMAGPZ" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="54" y="19"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PROZ" short_name="S1PROZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="67" y="19"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1WOCH" short_name="S1WOCH" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="3" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="11" y="20"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="18" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGP" short_name="S1SUMAGP" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="26" y="20"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZPZ" short_name="S1ANZPZ" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="20"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZEZ" short_name="S1ANZEZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="46" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGPZ" short_name="S1SUMAGPZ" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="54" y="20"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PROZ" short_name="S1PROZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="67" y="20"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1WOCH" short_name="S1WOCH" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="3" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="11" y="21"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="18" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGP" short_name="S1SUMAGP" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="26" y="21"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZPZ" short_name="S1ANZPZ" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="21"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZEZ" short_name="S1ANZEZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="46" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGPZ" short_name="S1SUMAGPZ" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="54" y="21"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PROZ" short_name="S1PROZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="67" y="21"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1WOCH" short_name="S1WOCH" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="3" y="22"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="11" y="22"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="18" y="22"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGP" short_name="S1SUMAGP" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="26" y="22"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZPZ" short_name="S1ANZPZ" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="22"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZEZ" short_name="S1ANZEZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="46" y="22"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGPZ" short_name="S1SUMAGPZ" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="54" y="22"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PROZ" short_name="S1PROZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="67" y="22"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="S1AUSW" short_name="S1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="1" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1WOCH" short_name="S1WOCH" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="3" y="23"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZP" short_name="S1ANZP" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="11" y="23"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZE" short_name="S1ANZE" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="18" y="23"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGP" short_name="S1SUMAGP" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="26" y="23"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZPZ" short_name="S1ANZPZ" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="23"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="S1ANZEZ" short_name="S1ANZEZ" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="46" y="23"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1SUMAGPZ" short_name="S1SUMAGPZ" data_type="zoned_decimal" display_length="12" data_length="11" conditional="true" decimal_positions="4">
+          <area>
+            <position x="54" y="23"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="S1PROZ" short_name="S1PROZ" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="67" y="23"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="Systemnachricht :" display_length="17" data_length="17">
+      <area>
+        <position x="1" y="25"/>
+        <size cx="17" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="SXMSG" short_name="SXMSG" data_type="alphanumeric" display_length="60" data_length="60">
+      <area>
+        <position x="19" y="25"/>
+        <size cx="60" cy="1"/>
+      </area>
+      <color foreground="red"/>
+    </field>
+    <field field_type="fixed_text" value="F3 = Verlassen; A = Auswählen" display_length="29" data_length="29">
+      <area>
+        <position x="1" y="26"/>
+        <size cx="29" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

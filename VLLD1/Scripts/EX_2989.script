@@ -1,0 +1,48 @@
+﻿DIM ddehandle, i, j, msg as integer
+dim xs1, xs2, xs3, xs4, xs5, datei, pfad_datei, source as string 
+i = 0
+j=2
+
+datei = "Neukunden.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+
+ddepoke( ddehandle, "Z1S1", "Kdnr")
+ddepoke( ddehandle, "Z1S2", "Name")
+ddepoke( ddehandle, "Z1S3", "PLZ")
+ddepoke( ddehandle, "Z1S4", "Ort")
+ddepoke( ddehandle, "Z1S5", "Strasse")
+
+
+nochmal:
+
+HostFieldGetLineData("s1kdnr", i, xs1)
+HostFieldGetLineData("s1name", i, xs2)
+HostFieldGetLineData("s1plz", i, xs3)
+HostFieldGetLineData("s1ort", i, xs4)
+HostFieldGetLineData("s1str", i, xs5)
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", xs1)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xs2)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xs3)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xs4)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xs5)
+
+j=j+1
+
+if i < 18 then
+i=i+1
+goto nochmal
+endif
+ 
+if xs1 <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

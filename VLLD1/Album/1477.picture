@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="LLD_OBJ/RM20DSBS(FORMAT1)" library="LLD_OBJ" member_name="RM20DSBS">
+    <size cx="80" cy="24"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f5" caption="F5" attention_key="false"/>
+    <action key="f6" caption="F6" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <field field_type="screen_part" name="FORMAT1" overlay="true">
+      <area>
+        <position/>
+        <size cx="80" cy="24"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Abruf:" display_length="6" data_length="6">
+      <area>
+        <position x="1"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="both" name="TYP" short_name="TYP" data_type="alphanumeric" display_length="1" data_length="1" blink="conditional" underline="true" high_intensity="true">
+      <area>
+        <position x="8"/>
+        <size cx="1" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="fixed_text" value="Kunden-Nr:" display_length="10" data_length="10">
+      <area>
+        <position x="12"/>
+        <size cx="10" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="both" name="KDNR" short_name="KDNR" data_type="zoned_decimal" display_length="7" data_length="7" blink="conditional" underline="true" high_intensity="true" position_cursor="true">
+      <area>
+        <position x="23"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="fixed_text" value="Woche:" display_length="6" data_length="6">
+      <area>
+        <position x="33"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="both" name="WOCH" short_name="WOCH" data_type="zoned_decimal" display_length="2" data_length="2" blink="conditional" underline="true" high_intensity="true" exit_record="true">
+      <area>
+        <position x="40"/>
+        <size cx="2" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="fixed_text" value="Blatt:" display_length="6" data_length="6">
+      <area>
+        <position x="45"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="BLAT" short_name="BLAT" data_type="zoned_decimal" display_length="2" data_length="2" blink="conditional">
+      <area>
+        <position x="52"/>
+        <size cx="2" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="fixed_text" value="Der Schein wurde bereits erfasst" display_length="32" data_length="32" blink="conditional" conditional="true">
+      <area>
+        <position x="1" y="22"/>
+        <size cx="32" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+      <indicator id="14"/>
+    </field>
+    <field field_type="fixed_text" value="Diesen Beleg gibt es nicht" display_length="26" data_length="26" blink="conditional" conditional="true">
+      <area>
+        <position x="1" y="22"/>
+        <size cx="26" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+      <indicator id="15"/>
+    </field>
+    <field field_type="fixed_text" value="Ungültige Blatt-Nr" display_length="18" data_length="18" blink="conditional" conditional="true">
+      <area>
+        <position x="1" y="22"/>
+        <size cx="18" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+      <indicator id="12"/>
+    </field>
+    <field field_type="fixed_text" value="Ungültige Kundennummer" display_length="22" data_length="22" blink="conditional" conditional="true">
+      <area>
+        <position x="1" y="22"/>
+        <size cx="22" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+      <indicator id="10"/>
+    </field>
+    <field field_type="fixed_text" value="Ungültige Woche" display_length="15" data_length="15" blink="conditional" conditional="true">
+      <area>
+        <position x="1" y="22"/>
+        <size cx="15" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+      <indicator id="11"/>
+    </field>
+    <field field_type="fixed_text" value="F3=Ende; F6=Schein wiederholen                                        " display_length="70" data_length="70">
+      <area>
+        <position x="1" y="23"/>
+        <size cx="70" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

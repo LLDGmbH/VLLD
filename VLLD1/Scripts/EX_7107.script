@@ -1,0 +1,56 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xKdNr, xArg, xObjNr, xFolge, xTitel, xMenge, xText, sql1, errmsg, datei, pfad_datei as string 
+dim source as string
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+HostFieldGetData("c1KdNr",xKdNr)
+
+
+datei = "Offene_Bewegungen_Kunde_" + xKdNr + ".xls"
+pfad_datei = @"@&LWV@"  + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z2S1", "Obj-Nr")
+ddepoke( ddehandle, "Z2S2", "Folge")
+ddepoke( ddehandle, "Z2S3", "Titel")
+ddepoke( ddehandle, "Z2S4", "Menge")
+ddepoke( ddehandle, "Z2S5", "Beschreibung")
+
+nochmal:
+
+HostFieldGetLineData("s1Obj" , i, xObjNr)
+HostFieldGetLineData("s1Folg", i, xFolge)
+HostFieldGetLineData("s1ONam", i, xTitel)
+HostFieldGetLineData("s1Meng", i, xMenge)
+HostFieldGetLineData("s1Text", i, xText)
+
+if xtitel = "" then
+xtitel = xxx
+endif
+
+
+REM if (xTitel <> "") then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xObjNr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xFOlge)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xTitel)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xMenge)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xText)
+j=j+1
+REM endif
+
+if i < 18 then
+i=i+1
+goto nochmal
+endif
+ 
+if xTitel <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

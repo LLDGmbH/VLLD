@@ -1,0 +1,53 @@
+﻿dim text, ErrorMsg as String
+dim rc as Integer
+global filiale as string
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+if (filiale = "0") then
+rc = EzSQLQuery("SELECT GKZ, digits(GKZ) concat '-' concat ORT from DIPF01/GRENWP order by ORT", text, ErrorMsg)
+endif
+
+if (filiale = "1") then
+rc = EzSQLQuery("SELECT gkz, digits(gkz) concat '-' concat ort FROM dipfsd/GRENWGP order by gkz", text, ErrorMsg)
+endif
+
+if (filiale = "2") then
+rc = EzSQLQuery("SELECT gkz, digits(gkz) concat '-' concat ort FROM dipfsd/GRENWGP order by gkz", text, ErrorMsg)
+endif
+
+if (filiale = "3") then
+rc = EzSQLQuery("SELECT gkz, digits(gkz) concat '-' concat ort FROM dipfsd/GRENWGP order by gkz", text, ErrorMsg)
+endif
+
+if (filiale = "4") then
+rc = EzSQLQuery("SELECT gkz, digits(gkz) concat '-' concat ort FROM dipfsd/GRENWGP order by gkz", text, ErrorMsg)
+endif
+
+if (filiale = "5") then
+rc = EzSQLQuery("SELECT gkz, digits(gkz) concat '-' concat ort FROM dipfsd/GRENWGP order by gkz", text, ErrorMsg)
+endif
+
+if (filiale = "6") then
+rc = EzSQLQuery("SELECT gkz, digits(gkz) concat '-' concat ort FROM dipfsd/GRENWGP order by gkz", text, ErrorMsg)
+endif
+
+if (filiale = "7") then
+rc = EzSQLQuery("SELECT gkz, digits(gkz) concat '-' concat ort FROM dipfsd/GRENWGP order by gkz", text, ErrorMsg)
+endif
+
+if (filiale = "8") then
+rc = EzSQLQuery("SELECT gkz, digits(gkz) concat '-' concat ort FROM dipfsd/GRENWGP order by gkz", text, ErrorMsg)
+endif
+
+if (filiale = "9") then
+rc = EzSQLQuery("SELECT gkz, digits(gkz) concat '-' concat ort FROM dipfsd/GRENWGP order by gkz", text, ErrorMsg)
+endif
+
+PanelFieldSetProp ("KDGKZ", 5, text) 
+
+
+PanelUpdateEnable(2)

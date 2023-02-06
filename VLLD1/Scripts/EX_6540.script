@@ -1,0 +1,98 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xkdnr, xname, xga, xug, xsort1, xsort2, xsort3, xsoll, xaus, xwums, xbm, xgrad, xbms, xbmi, xsolst, xehnr, xpanr, sql1, sql2, errmsg, datei, pfad_datei, source as string 
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Regalauslastung.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z2S1", "Kdnr")
+ddepoke( ddehandle, "Z2S2", "Name")
+ddepoke( ddehandle, "Z2S3", "Gart")
+ddepoke( ddehandle, "Z2S4", "Gaug")
+ddepoke( ddehandle, "Z2S5", "Sort 1")
+ddepoke( ddehandle, "Z2S6", "Sort 2")
+ddepoke( ddehandle, "Z2S7", "Sort 3")
+ddepoke( ddehandle, "Z2S8", "SollT")
+ddepoke( ddehandle, "Z2S9", "Auslast.")
+ddepoke( ddehandle, "Z2S10", "Umsatz")
+ddepoke( ddehandle, "Z2S11", "Bordmeter")
+ddepoke( ddehandle, "Z2S12", "Grad")
+ddepoke( ddehandle, "Z2S13", "Bordmeter soll")
+ddepoke( ddehandle, "Z2S14", "Bordmeter ist")
+ddepoke( ddehandle, "Z2S15", "Soll ST")
+ddepoke( ddehandle, "Z2S16", "ST-Nr.")
+ddepoke( ddehandle, "Z2S17", "PA-Nr.")
+
+nochmal:
+
+HostFieldGetLineData("s1kdnr", i, xkdnr)
+HostFieldGetLineData("s1knam", i, xname)
+HostFieldGetLineData("s1gart", i, xga)
+HostFieldGetLineData("s1gaug", i, xug)
+HostFieldGetLineData("s1sort1", i, xsort1)
+HostFieldGetLineData("s1sort2", i, xsort2)
+HostFieldGetLineData("s1sort3", i, xsort3)
+HostFieldGetLineData("s1solt", i, xsoll)
+HostFieldGetLineData("s1ausl", i, xaus)
+HostFieldGetLineData("s1wums", i, xwums)
+HostFieldGetLineData("s1gsbm", i, xbm)
+HostFieldGetLineData("s1schgr", i, xgrad)
+HostFieldGetLineData("s1tpbs", i, xbms)
+HostFieldGetLineData("s1tpbi", i, xbmi)
+HostFieldGetLineData("solst", i, xsolst)
+
+
+if ((@"@&GROSSONR@")= "1007") or ((@"@&GROSSONR@")= "0965")then
+sql1 = "SELECT kdstat FROM grkdspall where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdsn10 FROM grkdspall where kdkdnr = " + xkdnr + ""
+else
+sql1 = "SELECT kdstat FROM grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdsn10 FROM grkdsp where kdkdnr = " + xkdnr + ""
+endif
+
+
+rc = EzSQLQuery(sql1, xehnr, ErrMsg)
+rc = EzSQLQuery(sql2, xpanr, ErrMsg)
+
+if (xname <> "")  then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xkdnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xname)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xga)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xug)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xsort1)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xsort2)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xsort3)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xsoll)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xaus)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xwums)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xbm)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xgrad)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xbms)
+ddepoke( ddehandle, "Z" + str(j) +"S14", xbmi)
+ddepoke( ddehandle, "Z" + str(j) +"S15", xsolst)
+ddepoke( ddehandle, "Z" + str(j) +"S16", xehnr)
+ddepoke( ddehandle, "Z" + str(j) +"S17", xpanr)
+
+
+j=j+1
+endif
+
+if i < 19 then
+i=i+1
+goto nochmal
+endif
+ 
+if xname <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

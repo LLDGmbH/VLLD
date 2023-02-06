@@ -1,0 +1,70 @@
+﻿global filiale as string
+DIM ddehandle, i, j, msg, rc as integer
+dim xsc_obj, xsc_onam, xsf_folg, xsf_datum, xsf_zeit, xsf_evt, xsf_wein, xsf_lsmg, xsf_nali, xsf_disp, xsf_dzb, pfad_datei, datei, ErrMsg, sql1, sql2, sql3, sql4, sql5, sql6, sql7, sql8, f01 as string 
+dim source as string
+
+i = 0
+j=4
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+HostFieldGetData("sc_obj" ,xsc_obj)
+HostFieldGetData("sc_onam",xsc_onam)
+
+datei = "Hist_Wareneingang.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", xsc_obj)
+ddepoke( ddehandle, "Z1S2", xsc_onam)
+
+ddepoke( ddehandle, "Z3S1", "Folge")
+ddepoke( ddehandle, "Z3S2", "Erfasst am")
+ddepoke( ddehandle, "Z3S3", "Uhrzeit")
+ddepoke( ddehandle, "Z3S4", "EVT Datum")
+ddepoke( ddehandle, "Z3S5", "WE Menge")
+ddepoke( ddehandle, "Z3S6", "LS Menge")
+ddepoke( ddehandle, "Z3S7", "NL Menge")
+ddepoke( ddehandle, "Z3S8", "Dispo Menge")
+ddepoke( ddehandle, "Z3S9", "ZWA Menge")
+
+nochmal:
+
+HostFieldGetLineData("sf_folg",  i, xsf_folg)
+HostFieldGetLineData("sf_datum", i, xsf_datum)
+HostFieldGetLineData("sf_zeit" , i, xsf_zeit)
+HostFieldGetLineData("sf_wein",  i, xsf_wein)
+HostFieldGetLineData("sf_lsmg",  i, xsf_lsmg)
+HostFieldGetLineData("sf_nali",  i, xsf_nali)
+HostFieldGetLineData("sf_disp",  i, xsf_disp)
+HostFieldGetLineData("sf_dzb",   i, xsf_dzb)
+
+if xsf_folg <> "" then
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", xsf_folg)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xsf_datum)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xsf_zeit)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xsf_evt)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xsf_wein)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xsf_lsmg)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xsf_nali)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xsf_disp)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xsf_dzb)
+
+j=j+1 
+endif
+
+if i < 21 then
+i=i+1
+goto nochmal
+endif
+ 
+if xsf_folg <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

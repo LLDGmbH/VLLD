@@ -1,0 +1,38 @@
+﻿rem **Füllen Combo-Box  mit Folgenummer ** 
+
+dim text, ErrorMsg,sqlstmd as String
+dim rc,obnr as Integer
+dim yyobj, xxfil as string
+dim con_table as integer
+global dsp_2553 as integer
+global filiale as string
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+
+PanelFieldGetData("objnr",yyOBJ)
+ 
+if (yyobj <> "")  then
+
+sqlstmd = "SELECT xxfolg, digits(xxfolg) concat ' - ' concat xxftxt FROM grftip where xxobj = " + yyobj + " and xxftxt <> ' ' and xxfolg > 114000  order by xxfolg desc"
+
+rc = EzSQLQuery(sqlstmd, text, ErrorMsg)
+
+if ( rc < 0 ) then
+
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+
+else
+
+PanelFieldSetProp ("xxfolg", 5, text) 
+
+
+PanelUpdateEnable(2)
+
+endif
+endif
+
+dsp_2553 = 1

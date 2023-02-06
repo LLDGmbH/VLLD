@@ -1,0 +1,65 @@
+﻿rem **Füllen Combo-Box  mit Folgenummer ** 
+
+dim text, ErrorMsg,sqlstmd as String
+dim rc as Integer
+dim xxobj as string
+global filiale as string
+
+
+HostFieldGetData("objnr",XXOBJ)
+
+if (xxobj <> "" ) then
+if filiale = "0" then
+sqlstmd = "SELECT wffol6, digits(wffol8) concat ' - ' concat wftxt FROM grwfl0 where wffil = 0 and wfobj = " + xxobj + " order by digits(wffol8) concat ' - ' concat wftxt desc"
+endif
+if filiale = "1" then
+sqlstmd = "SELECT wffol6, digits(wffol8) concat ' - ' concat wftxt FROM grwfl0 where wffil = 1 and wfobj = " + xxobj + " order by digits(wffol8) concat ' - ' concat wftxt desc"
+endif
+if filiale = "2" then
+sqlstmd = "SELECT wffol6, digits(wffol8) concat ' - ' concat wftxt FROM grwfl0 where wffil = 2 and wfobj = " + xxobj + " order by digits(wffol8) concat ' - ' concat wftxt desc"
+endif
+if filiale = "3" then
+sqlstmd = "SELECT wffol6, digits(wffol8) concat ' - ' concat wftxt FROM grwfl0 where wffil = 3 and wfobj = " + xxobj + " order by digits(wffol8) concat ' - ' concat wftxt desc"
+endif
+if filiale = "4" then
+sqlstmd = "SELECT wffol6, digits(wffol8) concat ' - ' concat wftxt FROM grwfl0 where wffil = 4 and wfobj = " + xxobj + " order by digits(wffol8) concat ' - ' concat wftxt desc"
+endif
+if filiale = "5" then
+sqlstmd = "SELECT wffol6, digits(wffol8) concat ' - ' concat wftxt FROM grwfl0 where wffil = 5 and wfobj = " + xxobj + " order by digits(wffol8) concat ' - ' concat wftxt desc"
+endif
+if filiale = "6" then
+sqlstmd = "SELECT wffol6, digits(wffol8) concat ' - ' concat wftxt FROM grwfl0 where wffil = 6 and wfobj = " + xxobj + " order by digits(wffol8) concat ' - ' concat wftxt desc"
+endif
+if filiale = "7" then
+sqlstmd = "SELECT wffol6, digits(wffol8) concat ' - ' concat wftxt FROM grwfl0 where wffil = 7 and wfobj = " + xxobj + " order by digits(wffol8) concat ' - ' concat wftxt desc"
+endif
+if filiale = "8" then
+sqlstmd = "SELECT wffol6, digits(wffol8) concat ' - ' concat wftxt FROM grwfl0 where wffil = 8 and wfobj = " + xxobj + " order by digits(wffol8) concat ' - ' concat wftxt desc"
+endif
+if filiale = "9" then
+sqlstmd = "SELECT wffol6, digits(wffol8) concat ' - ' concat wftxt FROM grwfl0 where wffil = 9 and wfobj = " + xxobj + " order by digits(wffol8) concat ' - ' concat wftxt desc"
+endif
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+
+rc = EzSQLQuery(sqlstmd, text, ErrorMsg)
+
+if ( rc < 0 ) then
+
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+
+else
+
+PanelFieldSetProp ("rffol1", 5, text) 
+
+PanelUpdateEnable(2)
+
+endif
+
+endif
+
+rem HostScreenSendKey("Enter")

@@ -1,0 +1,50 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim errmsg, datei, pfad_datei, source as string 
+dim xvavnr, xvaname, xvaort, xvaispc as string
+
+i = 0
+j = 2
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Verlagsstamm.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "V-Nr")
+ddepoke( ddehandle, "Z1S2", "Name")
+ddepoke( ddehandle, "Z1S3", "Ort")
+ddepoke( ddehandle, "Z1S4", "ISPC Nr")
+
+nochmal:
+
+HostFieldGetLineData("vavnr", i, xvavnr)
+HostFieldGetLineData("vaname", i, xvaname)
+HostFieldGetLineData("vaort", i, xvaort)
+HostFieldGetLineData("vaispc", i, xvaispc)
+
+
+if (xvavnr <> "") then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xvavnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xvaname)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xvaort)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xvaispc)
+
+j=j+1
+endif
+
+if i < 17 then
+i=i+1
+goto nochmal
+endif
+ 
+if xvavnr <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

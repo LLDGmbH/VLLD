@@ -1,0 +1,26 @@
+﻿rem **Füllen Combo-Box  aus GRVERP **
+
+dim text, ErrorMsg as String
+dim rc as Integer
+
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rc = EzSQLQuery("SELECT bubnr, bubname FROM GRBULP order by BUBNAME", text, ErrorMsg)
+
+PanelFieldSetProp ("F1LFGB01", 5, text) 
+PanelFieldSetProp ("F1LFGB02", 5, text) 
+PanelFieldSetProp ("F1LFGB03", 5, text) 
+PanelFieldSetProp ("F1LFGB04", 5, text) 
+PanelFieldSetProp ("F1LFGB05", 5, text) 
+PanelFieldSetProp ("F1LFGB06", 5, text) 
+PanelFieldSetProp ("F1LFGB07", 5, text) 
+PanelFieldSetProp ("F1LFGB08", 5, text) 
+PanelFieldSetProp ("F1LFGB09", 5, text) 
+PanelFieldSetProp ("F1LFGB10", 5, text) 
+
+
+PanelUpdateEnable(2)

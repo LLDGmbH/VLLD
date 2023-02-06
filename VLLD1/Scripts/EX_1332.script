@@ -1,0 +1,59 @@
+﻿DIM ddehandle, i, j, msg as integer
+dim xobnr, xtitel, x1, x2, x3, x4, x5, y1,y2, y0, xkdnr, datei, pfad_datei, source as string 
+i = 0
+j=2
+y1 = " "
+y2 = "_"
+
+HostFieldGetData("atname",y0)
+xtitel = Replace(y0, y1, y2, 0)
+HostFieldGetData("kd",xkdnr)
+HostFieldGetData("ob",xobnr)
+datei = "Verkauf_" + xobnr + "_Kunde_" + xkdnr + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "Objektnummer")
+ddepoke( ddehandle, "Z1S2", "Titel")
+ddepoke( ddehandle, "Z1S3", "Folge")
+ddepoke( ddehandle, "Z1S4", "Bezug")
+ddepoke( ddehandle, "Z1S5", "Nachl.")
+ddepoke( ddehandle, "Z1S6", "Remi.")
+ddepoke( ddehandle, "Z1S7", "Verkauf")
+ddepoke( ddehandle, "Z" + str(j) +"S1", xobnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xtitel)
+
+
+nochmal:
+
+HostFieldGetLineData("ryfolg", i, x1)
+HostFieldGetLineData("rybez", i, x2)
+HostFieldGetLineData("rynl", i, x3)
+HostFieldGetLineData("ryrem", i, x4)
+HostFieldGetLineData("vlj", i, x5)
+
+if (x1 <> "") then
+
+ddepoke( ddehandle, "Z" + str(j) +"S3", x1)
+ddepoke( ddehandle, "Z" + str(j) +"S4", x2)
+ddepoke( ddehandle, "Z" + str(j) +"S5", x3)
+ddepoke( ddehandle, "Z" + str(j) +"S6", x4)
+ddepoke( ddehandle, "Z" + str(j) +"S7", x5)
+j=j+1
+endif
+
+if i < 18 then
+i=i+1
+goto nochmal
+endif
+ 
+if x1 <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

@@ -1,0 +1,889 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="LLD_OBJ/EW23DS(SFC+KEY01)" library="LLD_OBJ" member_name="EW23DS">
+    <size cx="80" cy="24"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <action key="roll_up" caption="ROLL_UP" attention_key="false"/>
+    <field field_type="screen_part" name="SFC">
+      <area>
+        <position/>
+        <size cx="80" cy="23"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="KEY01" overlay="true">
+      <area>
+        <position y="23"/>
+        <size cx="80" cy="1"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="2"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Kunden in der Gemeinde" display_length="22" data_length="22">
+          <area>
+            <position x="30"/>
+            <size cx="22" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="63"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="72"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="EW23" display_length="4" data_length="4">
+          <area>
+            <position x="74" y="1"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="field" usage="output" name="XXGKZ" short_name="XXGKZ" data_type="zoned_decimal" display_length="8" data_length="8" position_cursor="true">
+          <area>
+            <position x="2" y="2"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="XXORT" short_name="XXORT" data_type="alphanumeric" display_length="15" data_length="15" position_cursor="true">
+          <area>
+            <position x="13" y="2"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Kd:" display_length="3" data_length="3">
+          <area>
+            <position x="36" y="2"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EWEH01" short_name="EWEH01" data_type="zoned_decimal" display_length="5" data_length="5">
+          <area>
+            <position x="40" y="2"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="Voll-Kd:" display_length="8" data_length="8">
+          <area>
+            <position x="47" y="2"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EWEH02" short_name="EWEH02" data_type="zoned_decimal" display_length="5" data_length="5">
+          <area>
+            <position x="56" y="2"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="ZH:" display_length="3" data_length="3">
+          <area>
+            <position x="63" y="2"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EWEH03" short_name="EWEH03" data_type="zoned_decimal" display_length="5" data_length="5">
+          <area>
+            <position x="67" y="2"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="Kd.-Nr. Name                      Strasse                    VA  G-Art   Ums." display_length="77" data_length="77" underline="true">
+          <area>
+            <position x="2" y="4"/>
+            <size cx="77" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="2" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDNA25" short_name="KDNA25" data_type="alphanumeric" display_length="25" data_length="25" underline="conditional" high_intensity="conditional" conditional="true">
+          <area>
+            <position x="10" y="5"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="36" y="5"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDVKST" short_name="KDVKST" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="64" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGART" short_name="KDGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="67" y="5"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGAUG" short_name="KDGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="70" y="5"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDWUMS" short_name="KDWUMS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="74" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="2" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDNA25" short_name="KDNA25" data_type="alphanumeric" display_length="25" data_length="25" underline="conditional" high_intensity="conditional" conditional="true">
+          <area>
+            <position x="10" y="6"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="36" y="6"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDVKST" short_name="KDVKST" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="64" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGART" short_name="KDGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="67" y="6"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGAUG" short_name="KDGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="70" y="6"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDWUMS" short_name="KDWUMS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="74" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="2" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDNA25" short_name="KDNA25" data_type="alphanumeric" display_length="25" data_length="25" underline="conditional" high_intensity="conditional" conditional="true">
+          <area>
+            <position x="10" y="7"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="36" y="7"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDVKST" short_name="KDVKST" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="64" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGART" short_name="KDGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="67" y="7"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGAUG" short_name="KDGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="70" y="7"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDWUMS" short_name="KDWUMS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="74" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="2" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDNA25" short_name="KDNA25" data_type="alphanumeric" display_length="25" data_length="25" underline="conditional" high_intensity="conditional" conditional="true">
+          <area>
+            <position x="10" y="8"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="36" y="8"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDVKST" short_name="KDVKST" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="64" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGART" short_name="KDGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="67" y="8"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGAUG" short_name="KDGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="70" y="8"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDWUMS" short_name="KDWUMS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="74" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="2" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDNA25" short_name="KDNA25" data_type="alphanumeric" display_length="25" data_length="25" underline="conditional" high_intensity="conditional" conditional="true">
+          <area>
+            <position x="10" y="9"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="36" y="9"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDVKST" short_name="KDVKST" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="64" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGART" short_name="KDGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="67" y="9"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGAUG" short_name="KDGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="70" y="9"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDWUMS" short_name="KDWUMS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="74" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="2" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDNA25" short_name="KDNA25" data_type="alphanumeric" display_length="25" data_length="25" underline="conditional" high_intensity="conditional" conditional="true">
+          <area>
+            <position x="10" y="10"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="36" y="10"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDVKST" short_name="KDVKST" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="64" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGART" short_name="KDGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="67" y="10"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGAUG" short_name="KDGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="70" y="10"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDWUMS" short_name="KDWUMS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="74" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="2" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDNA25" short_name="KDNA25" data_type="alphanumeric" display_length="25" data_length="25" underline="conditional" high_intensity="conditional" conditional="true">
+          <area>
+            <position x="10" y="11"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="36" y="11"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDVKST" short_name="KDVKST" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="64" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGART" short_name="KDGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="67" y="11"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGAUG" short_name="KDGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="70" y="11"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDWUMS" short_name="KDWUMS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="74" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="2" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDNA25" short_name="KDNA25" data_type="alphanumeric" display_length="25" data_length="25" underline="conditional" high_intensity="conditional" conditional="true">
+          <area>
+            <position x="10" y="12"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="36" y="12"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDVKST" short_name="KDVKST" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="64" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGART" short_name="KDGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="67" y="12"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGAUG" short_name="KDGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="70" y="12"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDWUMS" short_name="KDWUMS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="74" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="2" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDNA25" short_name="KDNA25" data_type="alphanumeric" display_length="25" data_length="25" underline="conditional" high_intensity="conditional" conditional="true">
+          <area>
+            <position x="10" y="13"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="36" y="13"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDVKST" short_name="KDVKST" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="64" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGART" short_name="KDGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="67" y="13"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGAUG" short_name="KDGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="70" y="13"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDWUMS" short_name="KDWUMS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="74" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="2" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDNA25" short_name="KDNA25" data_type="alphanumeric" display_length="25" data_length="25" underline="conditional" high_intensity="conditional" conditional="true">
+          <area>
+            <position x="10" y="14"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="36" y="14"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDVKST" short_name="KDVKST" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="64" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGART" short_name="KDGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="67" y="14"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGAUG" short_name="KDGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="70" y="14"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDWUMS" short_name="KDWUMS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="74" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="2" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDNA25" short_name="KDNA25" data_type="alphanumeric" display_length="25" data_length="25" underline="conditional" high_intensity="conditional" conditional="true">
+          <area>
+            <position x="10" y="15"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="36" y="15"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDVKST" short_name="KDVKST" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="64" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGART" short_name="KDGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="67" y="15"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGAUG" short_name="KDGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="70" y="15"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDWUMS" short_name="KDWUMS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="74" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="2" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDNA25" short_name="KDNA25" data_type="alphanumeric" display_length="25" data_length="25" underline="conditional" high_intensity="conditional" conditional="true">
+          <area>
+            <position x="10" y="16"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="36" y="16"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDVKST" short_name="KDVKST" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="64" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGART" short_name="KDGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="67" y="16"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGAUG" short_name="KDGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="70" y="16"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDWUMS" short_name="KDWUMS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="74" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="2" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDNA25" short_name="KDNA25" data_type="alphanumeric" display_length="25" data_length="25" underline="conditional" high_intensity="conditional" conditional="true">
+          <area>
+            <position x="10" y="17"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="36" y="17"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDVKST" short_name="KDVKST" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="64" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGART" short_name="KDGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="67" y="17"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGAUG" short_name="KDGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="70" y="17"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDWUMS" short_name="KDWUMS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="74" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="2" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDNA25" short_name="KDNA25" data_type="alphanumeric" display_length="25" data_length="25" underline="conditional" high_intensity="conditional" conditional="true">
+          <area>
+            <position x="10" y="18"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="36" y="18"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDVKST" short_name="KDVKST" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="64" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGART" short_name="KDGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="67" y="18"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGAUG" short_name="KDGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="70" y="18"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDWUMS" short_name="KDWUMS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="74" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="2" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDNA25" short_name="KDNA25" data_type="alphanumeric" display_length="25" data_length="25" underline="conditional" high_intensity="conditional" conditional="true">
+          <area>
+            <position x="10" y="19"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="36" y="19"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDVKST" short_name="KDVKST" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="64" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGART" short_name="KDGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="67" y="19"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGAUG" short_name="KDGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="70" y="19"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDWUMS" short_name="KDWUMS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="74" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="2" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDNA25" short_name="KDNA25" data_type="alphanumeric" display_length="25" data_length="25" underline="conditional" high_intensity="conditional" conditional="true">
+          <area>
+            <position x="10" y="20"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="36" y="20"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDVKST" short_name="KDVKST" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="64" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGART" short_name="KDGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="67" y="20"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGAUG" short_name="KDGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="70" y="20"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDWUMS" short_name="KDWUMS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="74" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="2" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDNA25" short_name="KDNA25" data_type="alphanumeric" display_length="25" data_length="25" underline="conditional" high_intensity="conditional" conditional="true">
+          <area>
+            <position x="10" y="21"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="36" y="21"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDVKST" short_name="KDVKST" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="64" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGART" short_name="KDGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="67" y="21"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGAUG" short_name="KDGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="70" y="21"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDWUMS" short_name="KDWUMS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="74" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="2" y="22"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDNA25" short_name="KDNA25" data_type="alphanumeric" display_length="25" data_length="25" underline="conditional" high_intensity="conditional" conditional="true">
+          <area>
+            <position x="10" y="22"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="36" y="22"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDVKST" short_name="KDVKST" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="64" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGART" short_name="KDGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="67" y="22"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDGAUG" short_name="KDGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="70" y="22"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDWUMS" short_name="KDWUMS" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="74" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="F3 = verlassen;" display_length="15" data_length="15">
+      <area>
+        <position x="1" y="23"/>
+        <size cx="15" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

@@ -1,0 +1,99 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xende, xgagu, xname, xuind, xums, xma, xvums, xvma, xank, xvank, xkind, errmsg, errormsg, datei, pfad_datei, source as string 
+dim xkddat, xgkd, xkdztg, xkdfeh, xkdvmp, xjahr, xvjahr, xkjahr, xvkjahr as string
+
+i = 0
+j=9
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+
+
+datei = "Strukturanalyse.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "Daten vom")
+ddepoke( ddehandle, "Z2S1", "Kunden gesamt")
+ddepoke( ddehandle, "Z3S1", "Kunden Zeitung")
+ddepoke( ddehandle, "Z4S1", "Kunden FEH")
+ddepoke( ddehandle, "Z5S1", "Kunden VMP")
+
+HostFieldGetData("kddat", xkddat)
+HostFieldGetData("gkd", xgkd)
+HostFieldGetData("kdztg", xkdztg)
+HostFieldGetData("kdfeh", xkdfeh)
+HostFieldGetData("kdvmp", xkdvmp)
+
+HostFieldGetData("jahr", xjahr)
+HostFieldGetData("vjahr", xvjahr)
+HostFieldGetData("kjahr", xkjahr)
+HostFieldGetData("vkjahr", xvkjahr)
+
+
+ddepoke( ddehandle, "Z1S2", xkddat)
+ddepoke( ddehandle, "Z2S2", xgkd)
+ddepoke( ddehandle, "Z3S2", xkdztg)
+ddepoke( ddehandle, "Z4S2", xkdfeh)
+ddepoke( ddehandle, "Z5S2", xkdvmp)
+
+ddepoke( ddehandle, "Z8S1", "Gart")
+ddepoke( ddehandle, "Z8S2", "Geschäftsart")
+ddepoke( ddehandle, "Z8S3", "Index")
+ddepoke( ddehandle, "Z8S4", xjahr)
+ddepoke( ddehandle, "Z8S5", "Anteil")
+ddepoke( ddehandle, "Z8S6", xvjahr)
+ddepoke( ddehandle, "Z8S7", "Anteil")
+ddepoke( ddehandle, "Z7S10", "Kunden")
+ddepoke( ddehandle, "Z8S9", "xkjahr")
+ddepoke( ddehandle, "Z8S10", "xkvjahr")
+ddepoke( ddehandle, "Z8S11", "Index")
+
+
+nochmal:
+
+HostFieldGetLineData("xxgagu", i, xgagu)
+HostFieldGetLineData("xxname", i, xname)
+HostFieldGetLineData("uind", i, xuind)
+HostFieldGetLineData("ums", i, xums)
+HostFieldGetLineData("ma", i, xma)
+HostFieldGetLineData("vums", i, xvums)
+HostFieldGetLineData("vma", i, xvma)
+HostFieldGetLineData("ank", i, xank)
+HostFieldGetLineData("vank", i, xvank)
+HostFieldGetLineData("kind", i, xkind)
+
+
+if (xname <> "")  then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xgagu)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xname)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xuind)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xums)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xma)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xvums)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xvma)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xank)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xvank)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xkind)
+
+
+j=j+1
+endif
+
+if i < 20 then
+i=i+1
+goto nochmal
+endif
+
+HostFieldGetData("ende", xende)
+ 
+
+if xname <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

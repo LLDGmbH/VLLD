@@ -1,0 +1,997 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="LLD_OBJ/RM16DS(FORMAT3)" library="LLD_OBJ" member_name="RM16DS">
+    <size cx="80" cy="24"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f8" caption="F8" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="f12" caption="F12" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <field field_type="screen_part" name="FORMAT3">
+      <area>
+        <position/>
+        <size cx="80" cy="24"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="PREISGRUPPEN PRÜFEN 01-20" display_length="25" data_length="25">
+      <area>
+        <position x="2"/>
+        <size cx="25" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="Abruf:" display_length="6" data_length="6">
+      <area>
+        <position x="31"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="cyan"/>
+    </field>
+    <field field_type="field" usage="output" name="TYP" short_name="TYP" data_type="alphanumeric" display_length="1" data_length="1">
+      <area>
+        <position x="38"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Kunden-Nr:" display_length="10" data_length="10">
+      <area>
+        <position x="40"/>
+        <size cx="10" cy="1"/>
+      </area>
+      <color foreground="cyan"/>
+    </field>
+    <field field_type="field" usage="output" name="KDNR" short_name="KDNR" data_type="zoned_decimal" display_length="7" data_length="7">
+      <area>
+        <position x="51"/>
+        <size cx="7" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Woche:" display_length="6" data_length="6">
+      <area>
+        <position x="59"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="cyan"/>
+    </field>
+    <field field_type="field" usage="output" name="WOCH" short_name="WOCH" data_type="zoned_decimal" display_length="2" data_length="2">
+      <area>
+        <position x="66"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Spalte:" display_length="7" data_length="7">
+      <area>
+        <position x="69"/>
+        <size cx="7" cy="1"/>
+      </area>
+      <color foreground="cyan"/>
+    </field>
+    <field field_type="field" usage="output" name="BLAT" short_name="BLAT" data_type="zoned_decimal" display_length="2" data_length="2">
+      <area>
+        <position x="77"/>
+        <size cx="2" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Name:" display_length="5" data_length="5">
+      <area>
+        <position x="2" y="1"/>
+        <size cx="5" cy="1"/>
+      </area>
+      <color foreground="cyan"/>
+    </field>
+    <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33">
+      <area>
+        <position x="8" y="1"/>
+        <size cx="33" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Ort" display_length="3" data_length="3">
+      <area>
+        <position x="44" y="1"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="cyan"/>
+    </field>
+    <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5">
+      <area>
+        <position x="49" y="1"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25">
+      <area>
+        <position x="55" y="1"/>
+        <size cx="25" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BRUT01" short_name="BRUT01" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="1" y="3"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="NETT01" short_name="NETT01" data_type="zoned_decimal" display_length="8" data_length="7" decimal_positions="4">
+      <area>
+        <position x="8" y="3"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="GR01" short_name="GR01" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" position_cursor="conditional">
+      <area>
+        <position x="17" y="3"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="both" name="M201" short_name="M201" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true">
+      <area>
+        <position x="21" y="3"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="AX01" short_name="AX01" data_type="alphanumeric" display_length="18" data_length="18">
+      <area>
+        <position x="25" y="3"/>
+        <size cx="18" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GX01" short_name="GX01" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="44" y="3"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="FX01" short_name="FX01" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="48" y="3"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BRUT02" short_name="BRUT02" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="1" y="4"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="NETT02" short_name="NETT02" data_type="zoned_decimal" display_length="8" data_length="7" decimal_positions="4">
+      <area>
+        <position x="8" y="4"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="GR02" short_name="GR02" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" position_cursor="conditional">
+      <area>
+        <position x="17" y="4"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="both" name="M202" short_name="M202" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true">
+      <area>
+        <position x="21" y="4"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="AX02" short_name="AX02" data_type="alphanumeric" display_length="18" data_length="18">
+      <area>
+        <position x="25" y="4"/>
+        <size cx="18" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GX02" short_name="GX02" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="44" y="4"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="FX02" short_name="FX02" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="48" y="4"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BRUT03" short_name="BRUT03" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="1" y="5"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="NETT03" short_name="NETT03" data_type="zoned_decimal" display_length="8" data_length="7" decimal_positions="4">
+      <area>
+        <position x="8" y="5"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="GR03" short_name="GR03" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" position_cursor="conditional">
+      <area>
+        <position x="17" y="5"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="both" name="M203" short_name="M203" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true">
+      <area>
+        <position x="21" y="5"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="AX03" short_name="AX03" data_type="alphanumeric" display_length="18" data_length="18">
+      <area>
+        <position x="25" y="5"/>
+        <size cx="18" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GX03" short_name="GX03" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="44" y="5"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="FX03" short_name="FX03" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="48" y="5"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BRUT04" short_name="BRUT04" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="1" y="6"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="NETT04" short_name="NETT04" data_type="zoned_decimal" display_length="8" data_length="7" decimal_positions="4">
+      <area>
+        <position x="8" y="6"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="GR04" short_name="GR04" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" position_cursor="conditional">
+      <area>
+        <position x="17" y="6"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="both" name="M204" short_name="M204" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true">
+      <area>
+        <position x="21" y="6"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="AX04" short_name="AX04" data_type="alphanumeric" display_length="18" data_length="18">
+      <area>
+        <position x="25" y="6"/>
+        <size cx="18" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GX04" short_name="GX04" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="44" y="6"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="FX04" short_name="FX04" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="48" y="6"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BRUT05" short_name="BRUT05" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="1" y="7"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="NETT05" short_name="NETT05" data_type="zoned_decimal" display_length="8" data_length="7" decimal_positions="4">
+      <area>
+        <position x="8" y="7"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="GR05" short_name="GR05" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" position_cursor="conditional">
+      <area>
+        <position x="17" y="7"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="both" name="M205" short_name="M205" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true">
+      <area>
+        <position x="21" y="7"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="AX05" short_name="AX05" data_type="alphanumeric" display_length="18" data_length="18">
+      <area>
+        <position x="25" y="7"/>
+        <size cx="18" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GX05" short_name="GX05" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="44" y="7"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="FX05" short_name="FX05" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="48" y="7"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BRUT06" short_name="BRUT06" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="1" y="8"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="NETT06" short_name="NETT06" data_type="zoned_decimal" display_length="8" data_length="7" decimal_positions="4">
+      <area>
+        <position x="8" y="8"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="GR06" short_name="GR06" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" position_cursor="conditional">
+      <area>
+        <position x="17" y="8"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="both" name="M206" short_name="M206" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true">
+      <area>
+        <position x="21" y="8"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="AX06" short_name="AX06" data_type="alphanumeric" display_length="18" data_length="18">
+      <area>
+        <position x="25" y="8"/>
+        <size cx="18" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GX06" short_name="GX06" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="44" y="8"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="FX06" short_name="FX06" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="48" y="8"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BRUT07" short_name="BRUT07" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="1" y="9"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="NETT07" short_name="NETT07" data_type="zoned_decimal" display_length="8" data_length="7" decimal_positions="4">
+      <area>
+        <position x="8" y="9"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="GR07" short_name="GR07" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" position_cursor="conditional">
+      <area>
+        <position x="17" y="9"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="both" name="M207" short_name="M207" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true">
+      <area>
+        <position x="21" y="9"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="AX07" short_name="AX07" data_type="alphanumeric" display_length="18" data_length="18">
+      <area>
+        <position x="25" y="9"/>
+        <size cx="18" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GX07" short_name="GX07" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="44" y="9"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="FX07" short_name="FX07" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="48" y="9"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BRUT08" short_name="BRUT08" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="1" y="10"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="NETT08" short_name="NETT08" data_type="zoned_decimal" display_length="8" data_length="7" decimal_positions="4">
+      <area>
+        <position x="8" y="10"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="GR08" short_name="GR08" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" position_cursor="conditional">
+      <area>
+        <position x="17" y="10"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="both" name="M208" short_name="M208" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true">
+      <area>
+        <position x="21" y="10"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="AX08" short_name="AX08" data_type="alphanumeric" display_length="18" data_length="18">
+      <area>
+        <position x="25" y="10"/>
+        <size cx="18" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GX08" short_name="GX08" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="44" y="10"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="FX08" short_name="FX08" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="48" y="10"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BRUT09" short_name="BRUT09" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="1" y="11"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="NETT09" short_name="NETT09" data_type="zoned_decimal" display_length="8" data_length="7" decimal_positions="4">
+      <area>
+        <position x="8" y="11"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="GR09" short_name="GR09" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" position_cursor="conditional">
+      <area>
+        <position x="17" y="11"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="both" name="M209" short_name="M209" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true">
+      <area>
+        <position x="21" y="11"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="AX09" short_name="AX09" data_type="alphanumeric" display_length="18" data_length="18">
+      <area>
+        <position x="25" y="11"/>
+        <size cx="18" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GX09" short_name="GX09" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="44" y="11"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="FX09" short_name="FX09" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="48" y="11"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BRUT10" short_name="BRUT10" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="1" y="12"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="NETT10" short_name="NETT10" data_type="zoned_decimal" display_length="8" data_length="7" decimal_positions="4">
+      <area>
+        <position x="8" y="12"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="GR10" short_name="GR10" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" position_cursor="conditional">
+      <area>
+        <position x="17" y="12"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="both" name="M210" short_name="M210" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true">
+      <area>
+        <position x="21" y="12"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="AX10" short_name="AX10" data_type="alphanumeric" display_length="18" data_length="18">
+      <area>
+        <position x="25" y="12"/>
+        <size cx="18" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GX10" short_name="GX10" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="44" y="12"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="FX10" short_name="FX10" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="48" y="12"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BRUT11" short_name="BRUT11" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="1" y="13"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="NETT11" short_name="NETT11" data_type="zoned_decimal" display_length="8" data_length="7" decimal_positions="4">
+      <area>
+        <position x="8" y="13"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="GR11" short_name="GR11" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" position_cursor="conditional">
+      <area>
+        <position x="17" y="13"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="both" name="M211" short_name="M211" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true">
+      <area>
+        <position x="21" y="13"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="AX11" short_name="AX11" data_type="alphanumeric" display_length="18" data_length="18">
+      <area>
+        <position x="25" y="13"/>
+        <size cx="18" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GX11" short_name="GX11" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="44" y="13"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="FX11" short_name="FX11" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="48" y="13"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BRUT12" short_name="BRUT12" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="1" y="14"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="NETT12" short_name="NETT12" data_type="zoned_decimal" display_length="8" data_length="7" decimal_positions="4">
+      <area>
+        <position x="8" y="14"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="GR12" short_name="GR12" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" position_cursor="conditional">
+      <area>
+        <position x="17" y="14"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="both" name="M212" short_name="M212" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true">
+      <area>
+        <position x="21" y="14"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="AX12" short_name="AX12" data_type="alphanumeric" display_length="18" data_length="18">
+      <area>
+        <position x="25" y="14"/>
+        <size cx="18" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GX12" short_name="GX12" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="44" y="14"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="FX12" short_name="FX12" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="48" y="14"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BRUT13" short_name="BRUT13" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="1" y="15"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="NETT13" short_name="NETT13" data_type="zoned_decimal" display_length="8" data_length="7" decimal_positions="4">
+      <area>
+        <position x="8" y="15"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="GR13" short_name="GR13" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" position_cursor="conditional">
+      <area>
+        <position x="17" y="15"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="both" name="M213" short_name="M213" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true">
+      <area>
+        <position x="21" y="15"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="AX13" short_name="AX13" data_type="alphanumeric" display_length="18" data_length="18">
+      <area>
+        <position x="25" y="15"/>
+        <size cx="18" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GX13" short_name="GX13" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="44" y="15"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="FX13" short_name="FX13" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="48" y="15"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BRUT14" short_name="BRUT14" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="1" y="16"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="NETT14" short_name="NETT14" data_type="zoned_decimal" display_length="8" data_length="7" decimal_positions="4">
+      <area>
+        <position x="8" y="16"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="GR14" short_name="GR14" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" position_cursor="conditional">
+      <area>
+        <position x="17" y="16"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="both" name="M214" short_name="M214" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true">
+      <area>
+        <position x="21" y="16"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="AX14" short_name="AX14" data_type="alphanumeric" display_length="18" data_length="18">
+      <area>
+        <position x="25" y="16"/>
+        <size cx="18" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GX14" short_name="GX14" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="44" y="16"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="FX14" short_name="FX14" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="48" y="16"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BRUT15" short_name="BRUT15" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="1" y="17"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="NETT15" short_name="NETT15" data_type="zoned_decimal" display_length="8" data_length="7" decimal_positions="4">
+      <area>
+        <position x="8" y="17"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="GR15" short_name="GR15" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" position_cursor="conditional">
+      <area>
+        <position x="17" y="17"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="both" name="M215" short_name="M215" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true">
+      <area>
+        <position x="21" y="17"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="AX15" short_name="AX15" data_type="alphanumeric" display_length="18" data_length="18">
+      <area>
+        <position x="25" y="17"/>
+        <size cx="18" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GX15" short_name="GX15" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="44" y="17"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="FX15" short_name="FX15" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="48" y="17"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BRUT16" short_name="BRUT16" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="1" y="18"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="NETT16" short_name="NETT16" data_type="zoned_decimal" display_length="8" data_length="7" decimal_positions="4">
+      <area>
+        <position x="8" y="18"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="GR16" short_name="GR16" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" position_cursor="conditional">
+      <area>
+        <position x="17" y="18"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="both" name="M216" short_name="M216" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true">
+      <area>
+        <position x="21" y="18"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="AX16" short_name="AX16" data_type="alphanumeric" display_length="18" data_length="18">
+      <area>
+        <position x="25" y="18"/>
+        <size cx="18" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GX16" short_name="GX16" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="44" y="18"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="FX16" short_name="FX16" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="48" y="18"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BRUT17" short_name="BRUT17" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="1" y="19"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="NETT17" short_name="NETT17" data_type="zoned_decimal" display_length="8" data_length="7" decimal_positions="4">
+      <area>
+        <position x="8" y="19"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="GR17" short_name="GR17" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" position_cursor="conditional">
+      <area>
+        <position x="17" y="19"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="both" name="M217" short_name="M217" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true">
+      <area>
+        <position x="21" y="19"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="AX17" short_name="AX17" data_type="alphanumeric" display_length="18" data_length="18">
+      <area>
+        <position x="25" y="19"/>
+        <size cx="18" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GX17" short_name="GX17" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="44" y="19"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="FX17" short_name="FX17" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="48" y="19"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BRUT18" short_name="BRUT18" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="1" y="20"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="NETT18" short_name="NETT18" data_type="zoned_decimal" display_length="8" data_length="7" decimal_positions="4">
+      <area>
+        <position x="8" y="20"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="GR18" short_name="GR18" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" position_cursor="conditional">
+      <area>
+        <position x="17" y="20"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="both" name="M218" short_name="M218" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true">
+      <area>
+        <position x="21" y="20"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="AX18" short_name="AX18" data_type="alphanumeric" display_length="18" data_length="18">
+      <area>
+        <position x="25" y="20"/>
+        <size cx="18" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GX18" short_name="GX18" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="44" y="20"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="FX18" short_name="FX18" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="48" y="20"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BRUT19" short_name="BRUT19" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="1" y="21"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="NETT19" short_name="NETT19" data_type="zoned_decimal" display_length="8" data_length="7" decimal_positions="4">
+      <area>
+        <position x="8" y="21"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="GR19" short_name="GR19" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" position_cursor="conditional">
+      <area>
+        <position x="17" y="21"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="both" name="M219" short_name="M219" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true">
+      <area>
+        <position x="21" y="21"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="AX19" short_name="AX19" data_type="alphanumeric" display_length="18" data_length="18">
+      <area>
+        <position x="25" y="21"/>
+        <size cx="18" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GX19" short_name="GX19" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="44" y="21"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="FX19" short_name="FX19" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="48" y="21"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="BRUT20" short_name="BRUT20" data_type="zoned_decimal" display_length="6" data_length="5" decimal_positions="2">
+      <area>
+        <position x="1" y="22"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="NETT20" short_name="NETT20" data_type="zoned_decimal" display_length="8" data_length="7" decimal_positions="4">
+      <area>
+        <position x="8" y="22"/>
+        <size cx="8" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="GR20" short_name="GR20" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" position_cursor="conditional">
+      <area>
+        <position x="17" y="22"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="both" name="M220" short_name="M220" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" exit_record="true">
+      <area>
+        <position x="21" y="22"/>
+        <size cx="3" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="field" usage="output" name="AX20" short_name="AX20" data_type="alphanumeric" display_length="18" data_length="18">
+      <area>
+        <position x="25" y="22"/>
+        <size cx="18" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="GX20" short_name="GX20" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="44" y="22"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="FX20" short_name="FX20" data_type="zoned_decimal" display_length="3" data_length="3">
+      <area>
+        <position x="48" y="22"/>
+        <size cx="3" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="F3=Ende; F8=Nacherfassung,Diff OK; F9=Diff OK; EINGABE" display_length="54" data_length="54">
+      <area>
+        <position x="1" y="23"/>
+        <size cx="54" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

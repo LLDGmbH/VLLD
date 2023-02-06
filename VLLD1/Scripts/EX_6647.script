@@ -1,0 +1,57 @@
+﻿DIM ddehandle, i, j, msg, rc  as integer
+dim x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12, x13, x14, x15, xende, xkdnr, xstr, xplz, xort, datei, Errmsg, pfad_datei, source as string 
+i = 0
+j=1
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", Errmsg)
+
+datei = "Remissionsauswertung " + x15 + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", "Kunden/Nr")
+ddepoke( ddehandle, "Z" + str(j) +"S2", "Name")
+ddepoke( ddehandle, "Z" + str(j) +"S3", "Lieferung")
+ddepoke( ddehandle, "Z" + str(j) +"S4", "NaLi")
+ddepoke( ddehandle, "Z" + str(j) +"S5", "Sofortremi")
+ddepoke( ddehandle, "Z" + str(j) +"S6", "Fruehremi")
+ddepoke( ddehandle, "Z" + str(j) +"S7", "Normalremi")
+
+j=j+1
+
+nochmal:
+
+HostFieldGetLineData("s2kdnr", i, x1)
+HostFieldGetLineData("s2knam", i, x2)
+HostFieldGetLineData("s2lief", i, x3)
+HostFieldGetLineData("s2nl", i, x4)
+HostFieldGetLineData("s2sr", i, x5)
+HostFieldGetLineData("s2fr", i, x6)
+HostFieldGetLineData("s2nr", i, x7)
+
+if x1 <> ""  then
+ddepoke( ddehandle, "Z" + str(j) +"S1", x1)
+ddepoke( ddehandle, "Z" + str(j) +"S2", x2)
+ddepoke( ddehandle, "Z" + str(j) +"S3", x3)
+ddepoke( ddehandle, "Z" + str(j) +"S4", x4)
+ddepoke( ddehandle, "Z" + str(j) +"S5", x5)
+ddepoke( ddehandle, "Z" + str(j) +"S6", x6)
+ddepoke( ddehandle, "Z" + str(j) +"S7", x7)
+
+j=j+1
+endif
+
+if i < 17 then
+i=i+1
+goto nochmal
+endif
+ 
+if x2 <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

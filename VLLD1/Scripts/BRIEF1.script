@@ -1,0 +1,87 @@
+﻿Dim DDEHandle, zaehler, ok as integer
+Dim Q, xzae, xkdnr, xbearb, xtour, xnach, xff5, xkznach, xkzff5, xname, xstr, xplz, xort, xbetr, xdatum, xtel, xz1, xz2, xz3, xz4, xz5, xz6, xz7, xz8, xz9, xz10, xansp, xanred, xabteil  as string
+Dim FileName, datei, pfad_datei, source as string
+Q = chr(34)
+
+zaehler = 1
+HostFieldGetData("kdkdnr",xkdnr)
+HostFieldGetData("kdtag",xtour)
+HostFieldGetData("kdnach",xnach)
+HostFieldGetData("kzsoma",xkznach)
+HostFieldGetData("kdff5",xff5)
+HostFieldGetData("kzff5",xkzff5)
+hostFieldGetData("datvom",xdatum)
+
+nochm:
+
+xzae=Format(zaehler, "000")
+datei = "Brief_Kunde_" + xkdnr + "_" + xzae + ".doc"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "Briefvorlage.doc"
+
+ok=FileExists(pfad_datei)
+
+if ok = 1 then
+zaehler = zaehler + 1
+goto nochm
+endif
+
+FileCopy(source, pfad_datei)
+
+HostFieldGetData("kdname",xname)
+HostFieldGetData("kdstr",xstr)
+HostFieldGetData("kdplz",xplz)
+HostFieldGetData("kdort",xort)
+HostFieldGetData("txt1",xz1)
+HostFieldGetData("txt2",xz2)
+HostFieldGetData("txt3",xz3)
+HostFieldGetData("txt4",xz4)
+HostFieldGetData("txt5",xz5)
+HostFieldGetData("txt6",xz6)
+HostFieldGetData("txt7",xz7)
+HostFieldGetData("txt8",xz8)
+HostFieldGetData("txt9",xz9)
+HostFieldGetData("txt10",xz10)
+HostFieldGetData("name",xansp)
+HostFieldGetData("idtel",xtel)
+HostFieldGetData("anrede",xanred)
+HostFieldGetData("abteil",xabteil)
+HostFieldGetData("idname",xbearb)
+DDEHandle=DDEInitiate ("WINWORD","SYSTEM") 
+
+If DDEHandle=0 then 
+PcCommand(4, "WINWORD")
+DDEHandle=DDEInitiate ("WINWORD","SYSTEM")  
+End If
+
+DDEExecute (DDEHandle,"[FileOpen.Name="+Q+Pfad_datei+Q+",.ReadOnly=0]")
+DDEHandle = DDEInitiate("winword",Pfad_datei)
+
+DdePoke(DDEHandle,"kdnr",xkdnr)
+DdePoke(DDEHandle,"ff",xtour)
+if xkznach = "X" then
+DdePoke(DDEHandle,"ff",xnach)
+endif
+if xkzff5 = "X" then
+DdePoke(DDEHandle,"ff",xff5)
+endif
+DdePoke(DDEHandle,"kdname",xname)
+DdePoke(DDEHandle,"str",xstr)
+DdePoke(DDEHandle,"plz",xplz)
+DdePoke(DDEHandle,"ort",xort)
+DdePoke(DDEHandle,"betreff",xz1)
+DdePoke(DDEHandle,"anrede",xanred)
+DdePoke(DDEHandle,"txt2",xz2)
+DdePoke(DDEHandle,"txt3",xz3)
+DdePoke(DDEHandle,"txt4",xz4)
+DdePoke(DDEHandle,"txt5",xz5)
+DdePoke(DDEHandle,"txt6",xz6)
+DdePoke(DDEHandle,"txt7",xz7)
+DdePoke(DDEHandle,"txt8",xz8)
+DdePoke(DDEHandle,"txt9",xz9)
+DdePoke(DDEHandle,"txt10",xz10)
+DdePoke(DDEHandle,"abteilung",xabteil)
+DdePoke(DDEHandle,"name",xansp)
+DdePoke(DDEHandle,"datum",xdatum)
+DdePoke(DDEHandle,"idtel",xtel)
+DdePoke(DDEHandle,"bearbeiter",xbearb)

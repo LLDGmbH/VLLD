@@ -1,0 +1,2387 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="OSNA_SRC/SA30DS(SFC+KEY03)" library="OSNA_SRC" member_name="SA30DS">
+    <size cx="132" cy="27"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="f5" caption="F5" attention_key="false"/>
+    <action key="f6" caption="F6" attention_key="false"/>
+    <action key="f8" caption="F8" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <field field_type="screen_part" name="SFC">
+      <area>
+        <position/>
+        <size cx="132" cy="25"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="KEY03" overlay="true">
+      <area>
+        <position y="25"/>
+        <size cx="132" cy="2"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Satzartenanforderung bearbeiten (VL-&gt;GR)" display_length="40" data_length="40">
+          <area>
+            <position x="47"/>
+            <size cx="40" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="115"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="124"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SDS_JOB" short_name="SDS_JOB" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="1" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SDS_USER" short_name="SDS_USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="115" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="SA30" display_length="4" data_length="4">
+          <area>
+            <position x="127" y="1"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="fixed_text" value="Fi ISPC  Name                 AEmp  Sart1 Sart2 Sart3 VDZ   Name                 TA  W Folge 1  Folge 2  Folge 3   K  Meldedatum A" display_length="130" data_length="130" underline="true">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="130" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="F1FIL" short_name="F1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISPC" short_name="F1ISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VNAM" short_name="F1VNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="10" y="4"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1AEMP" short_name="F1AEMP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR1" short_name="F1SAR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="37" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR2" short_name="F1SAR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR3" short_name="F1SAR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VDZ" short_name="F1VDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ONAM" short_name="F1ONAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="4"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1ISTA" short_name="F1ISTA" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="82" y="4"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISWT" short_name="F1ISWT" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="86" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL1" short_name="F1FOL1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="88" y="4"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL2" short_name="F1FOL2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="97" y="4"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL3" short_name="F1FOL3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="106" y="4"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1KDS" short_name="F1KDS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1MDAT" short_name="F1MDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="119" y="4"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1FIL" short_name="F1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISPC" short_name="F1ISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VNAM" short_name="F1VNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="10" y="5"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1AEMP" short_name="F1AEMP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR1" short_name="F1SAR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="37" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR2" short_name="F1SAR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR3" short_name="F1SAR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VDZ" short_name="F1VDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ONAM" short_name="F1ONAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="5"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1ISTA" short_name="F1ISTA" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="82" y="5"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISWT" short_name="F1ISWT" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="86" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL1" short_name="F1FOL1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="88" y="5"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL2" short_name="F1FOL2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="97" y="5"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL3" short_name="F1FOL3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="106" y="5"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1KDS" short_name="F1KDS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1MDAT" short_name="F1MDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="119" y="5"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1FIL" short_name="F1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISPC" short_name="F1ISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VNAM" short_name="F1VNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="10" y="6"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1AEMP" short_name="F1AEMP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR1" short_name="F1SAR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="37" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR2" short_name="F1SAR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR3" short_name="F1SAR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VDZ" short_name="F1VDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ONAM" short_name="F1ONAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="6"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1ISTA" short_name="F1ISTA" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="82" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISWT" short_name="F1ISWT" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="86" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL1" short_name="F1FOL1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="88" y="6"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL2" short_name="F1FOL2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="97" y="6"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL3" short_name="F1FOL3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="106" y="6"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1KDS" short_name="F1KDS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1MDAT" short_name="F1MDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="119" y="6"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1FIL" short_name="F1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISPC" short_name="F1ISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VNAM" short_name="F1VNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="10" y="7"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1AEMP" short_name="F1AEMP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR1" short_name="F1SAR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="37" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR2" short_name="F1SAR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR3" short_name="F1SAR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VDZ" short_name="F1VDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ONAM" short_name="F1ONAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="7"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1ISTA" short_name="F1ISTA" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="82" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISWT" short_name="F1ISWT" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="86" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL1" short_name="F1FOL1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="88" y="7"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL2" short_name="F1FOL2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="97" y="7"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL3" short_name="F1FOL3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="106" y="7"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1KDS" short_name="F1KDS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1MDAT" short_name="F1MDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="119" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="F1FIL" short_name="F1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISPC" short_name="F1ISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VNAM" short_name="F1VNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="10" y="8"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1AEMP" short_name="F1AEMP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR1" short_name="F1SAR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="37" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR2" short_name="F1SAR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR3" short_name="F1SAR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VDZ" short_name="F1VDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ONAM" short_name="F1ONAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="8"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1ISTA" short_name="F1ISTA" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="82" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISWT" short_name="F1ISWT" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="86" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL1" short_name="F1FOL1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="88" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL2" short_name="F1FOL2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="97" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL3" short_name="F1FOL3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="106" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1KDS" short_name="F1KDS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1MDAT" short_name="F1MDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="119" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1FIL" short_name="F1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISPC" short_name="F1ISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VNAM" short_name="F1VNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="10" y="9"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1AEMP" short_name="F1AEMP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR1" short_name="F1SAR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="37" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR2" short_name="F1SAR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR3" short_name="F1SAR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VDZ" short_name="F1VDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ONAM" short_name="F1ONAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="9"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1ISTA" short_name="F1ISTA" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="82" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISWT" short_name="F1ISWT" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="86" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL1" short_name="F1FOL1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="88" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL2" short_name="F1FOL2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="97" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL3" short_name="F1FOL3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="106" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1KDS" short_name="F1KDS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1MDAT" short_name="F1MDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="119" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1FIL" short_name="F1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISPC" short_name="F1ISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VNAM" short_name="F1VNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="10" y="10"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1AEMP" short_name="F1AEMP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR1" short_name="F1SAR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="37" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR2" short_name="F1SAR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR3" short_name="F1SAR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VDZ" short_name="F1VDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ONAM" short_name="F1ONAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="10"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1ISTA" short_name="F1ISTA" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="82" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISWT" short_name="F1ISWT" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="86" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL1" short_name="F1FOL1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="88" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL2" short_name="F1FOL2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="97" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL3" short_name="F1FOL3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="106" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1KDS" short_name="F1KDS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1MDAT" short_name="F1MDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="119" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1FIL" short_name="F1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISPC" short_name="F1ISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VNAM" short_name="F1VNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="10" y="11"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1AEMP" short_name="F1AEMP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR1" short_name="F1SAR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="37" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR2" short_name="F1SAR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR3" short_name="F1SAR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VDZ" short_name="F1VDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ONAM" short_name="F1ONAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="11"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1ISTA" short_name="F1ISTA" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="82" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISWT" short_name="F1ISWT" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="86" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL1" short_name="F1FOL1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="88" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL2" short_name="F1FOL2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="97" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL3" short_name="F1FOL3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="106" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1KDS" short_name="F1KDS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1MDAT" short_name="F1MDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="119" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="F1FIL" short_name="F1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISPC" short_name="F1ISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VNAM" short_name="F1VNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="10" y="12"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1AEMP" short_name="F1AEMP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR1" short_name="F1SAR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="37" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR2" short_name="F1SAR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR3" short_name="F1SAR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VDZ" short_name="F1VDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ONAM" short_name="F1ONAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="12"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1ISTA" short_name="F1ISTA" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="82" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISWT" short_name="F1ISWT" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="86" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL1" short_name="F1FOL1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="88" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL2" short_name="F1FOL2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="97" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL3" short_name="F1FOL3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="106" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1KDS" short_name="F1KDS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1MDAT" short_name="F1MDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="119" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1FIL" short_name="F1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISPC" short_name="F1ISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VNAM" short_name="F1VNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="10" y="13"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1AEMP" short_name="F1AEMP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR1" short_name="F1SAR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="37" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR2" short_name="F1SAR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR3" short_name="F1SAR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VDZ" short_name="F1VDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ONAM" short_name="F1ONAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="13"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1ISTA" short_name="F1ISTA" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="82" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISWT" short_name="F1ISWT" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="86" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL1" short_name="F1FOL1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="88" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL2" short_name="F1FOL2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="97" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL3" short_name="F1FOL3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="106" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1KDS" short_name="F1KDS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1MDAT" short_name="F1MDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="119" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1FIL" short_name="F1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISPC" short_name="F1ISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VNAM" short_name="F1VNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="10" y="14"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1AEMP" short_name="F1AEMP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR1" short_name="F1SAR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="37" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR2" short_name="F1SAR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR3" short_name="F1SAR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VDZ" short_name="F1VDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ONAM" short_name="F1ONAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="14"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1ISTA" short_name="F1ISTA" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="82" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISWT" short_name="F1ISWT" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="86" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL1" short_name="F1FOL1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="88" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL2" short_name="F1FOL2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="97" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL3" short_name="F1FOL3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="106" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1KDS" short_name="F1KDS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1MDAT" short_name="F1MDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="119" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1FIL" short_name="F1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISPC" short_name="F1ISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VNAM" short_name="F1VNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="10" y="15"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1AEMP" short_name="F1AEMP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR1" short_name="F1SAR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="37" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR2" short_name="F1SAR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR3" short_name="F1SAR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VDZ" short_name="F1VDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ONAM" short_name="F1ONAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="15"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1ISTA" short_name="F1ISTA" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="82" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISWT" short_name="F1ISWT" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="86" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL1" short_name="F1FOL1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="88" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL2" short_name="F1FOL2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="97" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL3" short_name="F1FOL3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="106" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1KDS" short_name="F1KDS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1MDAT" short_name="F1MDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="119" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="F1FIL" short_name="F1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISPC" short_name="F1ISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VNAM" short_name="F1VNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="10" y="16"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1AEMP" short_name="F1AEMP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR1" short_name="F1SAR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="37" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR2" short_name="F1SAR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR3" short_name="F1SAR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VDZ" short_name="F1VDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ONAM" short_name="F1ONAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="16"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1ISTA" short_name="F1ISTA" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="82" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISWT" short_name="F1ISWT" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="86" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL1" short_name="F1FOL1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="88" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL2" short_name="F1FOL2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="97" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL3" short_name="F1FOL3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="106" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1KDS" short_name="F1KDS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1MDAT" short_name="F1MDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="119" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1FIL" short_name="F1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISPC" short_name="F1ISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VNAM" short_name="F1VNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="10" y="17"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1AEMP" short_name="F1AEMP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR1" short_name="F1SAR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="37" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR2" short_name="F1SAR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR3" short_name="F1SAR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VDZ" short_name="F1VDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ONAM" short_name="F1ONAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="17"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1ISTA" short_name="F1ISTA" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="82" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISWT" short_name="F1ISWT" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="86" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL1" short_name="F1FOL1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="88" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL2" short_name="F1FOL2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="97" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL3" short_name="F1FOL3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="106" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1KDS" short_name="F1KDS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1MDAT" short_name="F1MDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="119" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1FIL" short_name="F1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISPC" short_name="F1ISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VNAM" short_name="F1VNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="10" y="18"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1AEMP" short_name="F1AEMP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR1" short_name="F1SAR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="37" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR2" short_name="F1SAR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR3" short_name="F1SAR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VDZ" short_name="F1VDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ONAM" short_name="F1ONAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="18"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1ISTA" short_name="F1ISTA" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="82" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISWT" short_name="F1ISWT" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="86" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL1" short_name="F1FOL1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="88" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL2" short_name="F1FOL2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="97" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL3" short_name="F1FOL3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="106" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1KDS" short_name="F1KDS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1MDAT" short_name="F1MDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="119" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1FIL" short_name="F1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISPC" short_name="F1ISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VNAM" short_name="F1VNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="10" y="19"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1AEMP" short_name="F1AEMP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR1" short_name="F1SAR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="37" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR2" short_name="F1SAR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR3" short_name="F1SAR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VDZ" short_name="F1VDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ONAM" short_name="F1ONAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="19"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1ISTA" short_name="F1ISTA" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="82" y="19"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISWT" short_name="F1ISWT" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="86" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL1" short_name="F1FOL1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="88" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL2" short_name="F1FOL2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="97" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL3" short_name="F1FOL3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="106" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1KDS" short_name="F1KDS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1MDAT" short_name="F1MDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="119" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="F1FIL" short_name="F1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISPC" short_name="F1ISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VNAM" short_name="F1VNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="10" y="20"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1AEMP" short_name="F1AEMP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR1" short_name="F1SAR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="37" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR2" short_name="F1SAR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR3" short_name="F1SAR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VDZ" short_name="F1VDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ONAM" short_name="F1ONAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="20"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1ISTA" short_name="F1ISTA" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="82" y="20"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISWT" short_name="F1ISWT" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="86" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL1" short_name="F1FOL1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="88" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL2" short_name="F1FOL2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="97" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL3" short_name="F1FOL3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="106" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1KDS" short_name="F1KDS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1MDAT" short_name="F1MDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="119" y="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1FIL" short_name="F1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="21"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISPC" short_name="F1ISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VNAM" short_name="F1VNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="10" y="21"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1AEMP" short_name="F1AEMP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR1" short_name="F1SAR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="37" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR2" short_name="F1SAR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR3" short_name="F1SAR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VDZ" short_name="F1VDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ONAM" short_name="F1ONAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="21"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1ISTA" short_name="F1ISTA" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="82" y="21"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISWT" short_name="F1ISWT" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="86" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL1" short_name="F1FOL1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="88" y="21"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL2" short_name="F1FOL2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="97" y="21"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL3" short_name="F1FOL3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="106" y="21"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1KDS" short_name="F1KDS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1MDAT" short_name="F1MDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="119" y="21"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1FIL" short_name="F1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="22"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISPC" short_name="F1ISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VNAM" short_name="F1VNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="10" y="22"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1AEMP" short_name="F1AEMP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR1" short_name="F1SAR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="37" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR2" short_name="F1SAR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR3" short_name="F1SAR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VDZ" short_name="F1VDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ONAM" short_name="F1ONAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="22"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1ISTA" short_name="F1ISTA" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="82" y="22"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISWT" short_name="F1ISWT" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="86" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL1" short_name="F1FOL1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="88" y="22"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL2" short_name="F1FOL2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="97" y="22"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL3" short_name="F1FOL3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="106" y="22"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1KDS" short_name="F1KDS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1MDAT" short_name="F1MDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="119" y="22"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1FIL" short_name="F1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="23"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISPC" short_name="F1ISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VNAM" short_name="F1VNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="10" y="23"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1AEMP" short_name="F1AEMP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR1" short_name="F1SAR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="37" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR2" short_name="F1SAR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR3" short_name="F1SAR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VDZ" short_name="F1VDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ONAM" short_name="F1ONAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="23"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1ISTA" short_name="F1ISTA" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="82" y="23"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISWT" short_name="F1ISWT" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="86" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL1" short_name="F1FOL1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="88" y="23"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL2" short_name="F1FOL2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="97" y="23"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL3" short_name="F1FOL3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="106" y="23"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1KDS" short_name="F1KDS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1MDAT" short_name="F1MDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="119" y="23"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="F1FIL" short_name="F1FIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="24"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISPC" short_name="F1ISPC" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="24"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VNAM" short_name="F1VNAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="10" y="24"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1AEMP" short_name="F1AEMP" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="31" y="24"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR1" short_name="F1SAR1" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="37" y="24"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR2" short_name="F1SAR2" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="43" y="24"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1SAR3" short_name="F1SAR3" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="49" y="24"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1VDZ" short_name="F1VDZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="24"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ONAM" short_name="F1ONAM" data_type="alphanumeric" display_length="20" data_length="20" conditional="true">
+          <area>
+            <position x="61" y="24"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="F1ISTA" short_name="F1ISTA" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="82" y="24"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1ISWT" short_name="F1ISWT" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="86" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL1" short_name="F1FOL1" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="88" y="24"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL2" short_name="F1FOL2" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="97" y="24"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1FOL3" short_name="F1FOL3" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="106" y="24"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="F1KDS" short_name="F1KDS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="116" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="F1MDAT" short_name="F1MDAT" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="119" y="24"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" conditional="true" exit_record="true">
+          <area>
+            <position x="130" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="F3 = Ende, F9 = Ändern/Löschen/Senden" display_length="37" data_length="37">
+      <area>
+        <position x="1" y="25"/>
+        <size cx="37" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="Systemnachricht:" display_length="16" data_length="16">
+      <area>
+        <position x="1" y="26"/>
+        <size cx="16" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="MSG" short_name="MSG" data_type="alphanumeric" display_length="60" data_length="60" blink="conditional">
+      <area>
+        <position x="18" y="26"/>
+        <size cx="60" cy="1"/>
+      </area>
+      <color foreground="red"/>
+    </field>
+  </screen>
+</header>

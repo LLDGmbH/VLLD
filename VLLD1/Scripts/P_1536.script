@@ -1,0 +1,51 @@
+﻿global pic_vkz, pic_jahr, pic_folge, pic_name, pic_vdz as string
+dim focus as string
+
+
+pic_name = ""
+
+HostFieldGetData("atvkz", pic_vkz)
+HostFieldGetData("jj", pic_jahr)
+HostFieldGetData("nn", pic_folge)
+
+
+
+PanelNameGet(7, focus)
+
+if focus = "M1" then
+HostFieldGetData("n1jj", pic_jahr)
+HostFieldGetData("n1nn", pic_folge)
+endif
+if focus = "M2" then
+HostFieldGetData("n2jj", pic_jahr)
+HostFieldGetData("n2nn", pic_folge)
+endif
+if focus = "M3" then
+HostFieldGetData("n3jj", pic_jahr)
+HostFieldGetData("n3nn", pic_folge)
+endif
+if focus = "M4" then
+HostFieldGetData("n4jj", pic_jahr)
+HostFieldGetData("n4nn", pic_folge)
+endif
+if focus = "M5" then
+HostFieldGetData("n5jj", pic_jahr)
+HostFieldGetData("n5nn", pic_folge)
+endif
+if focus = "M6" then
+HostFieldGetData("n6jj", pic_jahr)
+HostFieldGetData("n6nn", pic_folge)
+endif
+if focus = "M7" then
+HostFieldGetData("n7jj", pic_jahr)
+HostFieldGetData("n7nn", pic_folge)
+endif
+if focus = "M8" then
+HostFieldGetData("n8jj", pic_jahr)
+HostFieldGetData("n8nn", pic_folge)
+endif
+
+if (pic_vkz <> "")  then
+pic_name = pic_vkz + "_200" + pic_jahr + pic_folge + ".jpg"
+PanelUpdateEnable(2)
+endif

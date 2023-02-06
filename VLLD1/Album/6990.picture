@@ -1,0 +1,1373 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="OSNA_COL/FL25DS(SFC2)" library="OSNA_COL" member_name="FL25DS">
+    <size cx="132" cy="27"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <field field_type="screen_part" name="SFC2">
+      <area>
+        <position/>
+        <size cx="132" cy="24"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Anzeige der Bezugsänderungen" display_length="28" data_length="28">
+          <area>
+            <position x="48"/>
+            <size cx="28" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="114"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="123"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SDS_JOB" short_name="SDS_JOB" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="1" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="*SYSNAME" short_name="*SYSNAME" data_type="alphanumeric" display_length="8" data_length="8">
+          <area>
+            <position x="12" y="1"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SDS_USER" short_name="SDS_USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="114" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="FL25S2" display_length="6" data_length="6">
+          <area>
+            <position x="125" y="1"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="fixed_text" value="Datum:" display_length="6" data_length="6">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="C2DATU" short_name="C2DATU" data_type="zoned_decimal" display_length="10" data_length="8">
+          <area>
+            <position x="8" y="3"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="Filiale:" display_length="8" data_length="8">
+          <area>
+            <position x="22" y="3"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="C2FIL" short_name="C2FIL" data_type="zoned_decimal" display_length="2" data_length="2" underline="true" high_intensity="true" exit_record="true">
+          <area>
+            <position x="31" y="3"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="  KdNr/LeNr Kunde/Leser                               ObjNr Obj  Anz  Lieferbeg. Lieferende  Unterb.von Unterb.bis Änderung       " display_length="130" data_length="130" underline="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="130" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S2LEKD" short_name="S2LEKD" data_type="zoned_decimal" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LKNAM" short_name="S2LKNAM" data_type="alphanumeric" display_length="40" data_length="40" conditional="true">
+          <area>
+            <position x="13" y="6"/>
+            <size cx="40" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2OBJ" short_name="S2OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ONAM" short_name="S2ONAM" data_type="alphanumeric" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="61" y="6"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ANZE" short_name="S2ANZE" data_type="zoned_decimal" display_length="4" data_length="3" non_display="conditional" conditional="true">
+          <area>
+            <position x="66" y="6"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LFB" short_name="S2LFB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="71" y="6"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ENDE" short_name="S2ENDE" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="82" y="6"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2UV" short_name="S2UV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="94" y="6"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2UB" short_name="S2UB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="105" y="6"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2TXT" short_name="S2TXT" data_type="alphanumeric" display_length="13" data_length="13" conditional="true">
+          <area>
+            <position x="116" y="6"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LEKD" short_name="S2LEKD" data_type="zoned_decimal" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LKNAM" short_name="S2LKNAM" data_type="alphanumeric" display_length="40" data_length="40" conditional="true">
+          <area>
+            <position x="13" y="7"/>
+            <size cx="40" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2OBJ" short_name="S2OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ONAM" short_name="S2ONAM" data_type="alphanumeric" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="61" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ANZE" short_name="S2ANZE" data_type="zoned_decimal" display_length="4" data_length="3" non_display="conditional" conditional="true">
+          <area>
+            <position x="66" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LFB" short_name="S2LFB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="71" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ENDE" short_name="S2ENDE" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="82" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2UV" short_name="S2UV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="94" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2UB" short_name="S2UB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="105" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2TXT" short_name="S2TXT" data_type="alphanumeric" display_length="13" data_length="13" conditional="true">
+          <area>
+            <position x="116" y="7"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LEKD" short_name="S2LEKD" data_type="zoned_decimal" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LKNAM" short_name="S2LKNAM" data_type="alphanumeric" display_length="40" data_length="40" conditional="true">
+          <area>
+            <position x="13" y="8"/>
+            <size cx="40" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2OBJ" short_name="S2OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ONAM" short_name="S2ONAM" data_type="alphanumeric" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="61" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ANZE" short_name="S2ANZE" data_type="zoned_decimal" display_length="4" data_length="3" non_display="conditional" conditional="true">
+          <area>
+            <position x="66" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LFB" short_name="S2LFB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="71" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ENDE" short_name="S2ENDE" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="82" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2UV" short_name="S2UV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="94" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2UB" short_name="S2UB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="105" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2TXT" short_name="S2TXT" data_type="alphanumeric" display_length="13" data_length="13" conditional="true">
+          <area>
+            <position x="116" y="8"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LEKD" short_name="S2LEKD" data_type="zoned_decimal" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LKNAM" short_name="S2LKNAM" data_type="alphanumeric" display_length="40" data_length="40" conditional="true">
+          <area>
+            <position x="13" y="9"/>
+            <size cx="40" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2OBJ" short_name="S2OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ONAM" short_name="S2ONAM" data_type="alphanumeric" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="61" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ANZE" short_name="S2ANZE" data_type="zoned_decimal" display_length="4" data_length="3" non_display="conditional" conditional="true">
+          <area>
+            <position x="66" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LFB" short_name="S2LFB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="71" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ENDE" short_name="S2ENDE" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="82" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2UV" short_name="S2UV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="94" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2UB" short_name="S2UB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="105" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2TXT" short_name="S2TXT" data_type="alphanumeric" display_length="13" data_length="13" conditional="true">
+          <area>
+            <position x="116" y="9"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LEKD" short_name="S2LEKD" data_type="zoned_decimal" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LKNAM" short_name="S2LKNAM" data_type="alphanumeric" display_length="40" data_length="40" conditional="true">
+          <area>
+            <position x="13" y="10"/>
+            <size cx="40" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2OBJ" short_name="S2OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ONAM" short_name="S2ONAM" data_type="alphanumeric" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="61" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ANZE" short_name="S2ANZE" data_type="zoned_decimal" display_length="4" data_length="3" non_display="conditional" conditional="true">
+          <area>
+            <position x="66" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LFB" short_name="S2LFB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="71" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ENDE" short_name="S2ENDE" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="82" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2UV" short_name="S2UV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="94" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2UB" short_name="S2UB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="105" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2TXT" short_name="S2TXT" data_type="alphanumeric" display_length="13" data_length="13" conditional="true">
+          <area>
+            <position x="116" y="10"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LEKD" short_name="S2LEKD" data_type="zoned_decimal" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LKNAM" short_name="S2LKNAM" data_type="alphanumeric" display_length="40" data_length="40" conditional="true">
+          <area>
+            <position x="13" y="11"/>
+            <size cx="40" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2OBJ" short_name="S2OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ONAM" short_name="S2ONAM" data_type="alphanumeric" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="61" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ANZE" short_name="S2ANZE" data_type="zoned_decimal" display_length="4" data_length="3" non_display="conditional" conditional="true">
+          <area>
+            <position x="66" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LFB" short_name="S2LFB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="71" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ENDE" short_name="S2ENDE" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="82" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2UV" short_name="S2UV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="94" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2UB" short_name="S2UB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="105" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2TXT" short_name="S2TXT" data_type="alphanumeric" display_length="13" data_length="13" conditional="true">
+          <area>
+            <position x="116" y="11"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S2LEKD" short_name="S2LEKD" data_type="zoned_decimal" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LKNAM" short_name="S2LKNAM" data_type="alphanumeric" display_length="40" data_length="40" conditional="true">
+          <area>
+            <position x="13" y="12"/>
+            <size cx="40" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2OBJ" short_name="S2OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ONAM" short_name="S2ONAM" data_type="alphanumeric" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="61" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ANZE" short_name="S2ANZE" data_type="zoned_decimal" display_length="4" data_length="3" non_display="conditional" conditional="true">
+          <area>
+            <position x="66" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LFB" short_name="S2LFB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="71" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ENDE" short_name="S2ENDE" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="82" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2UV" short_name="S2UV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="94" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2UB" short_name="S2UB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="105" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2TXT" short_name="S2TXT" data_type="alphanumeric" display_length="13" data_length="13" conditional="true">
+          <area>
+            <position x="116" y="12"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LEKD" short_name="S2LEKD" data_type="zoned_decimal" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LKNAM" short_name="S2LKNAM" data_type="alphanumeric" display_length="40" data_length="40" conditional="true">
+          <area>
+            <position x="13" y="13"/>
+            <size cx="40" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2OBJ" short_name="S2OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ONAM" short_name="S2ONAM" data_type="alphanumeric" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="61" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ANZE" short_name="S2ANZE" data_type="zoned_decimal" display_length="4" data_length="3" non_display="conditional" conditional="true">
+          <area>
+            <position x="66" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LFB" short_name="S2LFB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="71" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ENDE" short_name="S2ENDE" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="82" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2UV" short_name="S2UV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="94" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2UB" short_name="S2UB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="105" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2TXT" short_name="S2TXT" data_type="alphanumeric" display_length="13" data_length="13" conditional="true">
+          <area>
+            <position x="116" y="13"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LEKD" short_name="S2LEKD" data_type="zoned_decimal" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LKNAM" short_name="S2LKNAM" data_type="alphanumeric" display_length="40" data_length="40" conditional="true">
+          <area>
+            <position x="13" y="14"/>
+            <size cx="40" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2OBJ" short_name="S2OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ONAM" short_name="S2ONAM" data_type="alphanumeric" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="61" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ANZE" short_name="S2ANZE" data_type="zoned_decimal" display_length="4" data_length="3" non_display="conditional" conditional="true">
+          <area>
+            <position x="66" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LFB" short_name="S2LFB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="71" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ENDE" short_name="S2ENDE" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="82" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2UV" short_name="S2UV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="94" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2UB" short_name="S2UB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="105" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2TXT" short_name="S2TXT" data_type="alphanumeric" display_length="13" data_length="13" conditional="true">
+          <area>
+            <position x="116" y="14"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LEKD" short_name="S2LEKD" data_type="zoned_decimal" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LKNAM" short_name="S2LKNAM" data_type="alphanumeric" display_length="40" data_length="40" conditional="true">
+          <area>
+            <position x="13" y="15"/>
+            <size cx="40" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2OBJ" short_name="S2OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ONAM" short_name="S2ONAM" data_type="alphanumeric" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="61" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ANZE" short_name="S2ANZE" data_type="zoned_decimal" display_length="4" data_length="3" non_display="conditional" conditional="true">
+          <area>
+            <position x="66" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LFB" short_name="S2LFB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="71" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ENDE" short_name="S2ENDE" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="82" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2UV" short_name="S2UV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="94" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2UB" short_name="S2UB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="105" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2TXT" short_name="S2TXT" data_type="alphanumeric" display_length="13" data_length="13" conditional="true">
+          <area>
+            <position x="116" y="15"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LEKD" short_name="S2LEKD" data_type="zoned_decimal" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LKNAM" short_name="S2LKNAM" data_type="alphanumeric" display_length="40" data_length="40" conditional="true">
+          <area>
+            <position x="13" y="16"/>
+            <size cx="40" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2OBJ" short_name="S2OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ONAM" short_name="S2ONAM" data_type="alphanumeric" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="61" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ANZE" short_name="S2ANZE" data_type="zoned_decimal" display_length="4" data_length="3" non_display="conditional" conditional="true">
+          <area>
+            <position x="66" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LFB" short_name="S2LFB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="71" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ENDE" short_name="S2ENDE" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="82" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2UV" short_name="S2UV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="94" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2UB" short_name="S2UB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="105" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2TXT" short_name="S2TXT" data_type="alphanumeric" display_length="13" data_length="13" conditional="true">
+          <area>
+            <position x="116" y="16"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LEKD" short_name="S2LEKD" data_type="zoned_decimal" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LKNAM" short_name="S2LKNAM" data_type="alphanumeric" display_length="40" data_length="40" conditional="true">
+          <area>
+            <position x="13" y="17"/>
+            <size cx="40" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2OBJ" short_name="S2OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ONAM" short_name="S2ONAM" data_type="alphanumeric" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="61" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ANZE" short_name="S2ANZE" data_type="zoned_decimal" display_length="4" data_length="3" non_display="conditional" conditional="true">
+          <area>
+            <position x="66" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LFB" short_name="S2LFB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="71" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ENDE" short_name="S2ENDE" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="82" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2UV" short_name="S2UV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="94" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2UB" short_name="S2UB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="105" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2TXT" short_name="S2TXT" data_type="alphanumeric" display_length="13" data_length="13" conditional="true">
+          <area>
+            <position x="116" y="17"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S2LEKD" short_name="S2LEKD" data_type="zoned_decimal" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LKNAM" short_name="S2LKNAM" data_type="alphanumeric" display_length="40" data_length="40" conditional="true">
+          <area>
+            <position x="13" y="18"/>
+            <size cx="40" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2OBJ" short_name="S2OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ONAM" short_name="S2ONAM" data_type="alphanumeric" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="61" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ANZE" short_name="S2ANZE" data_type="zoned_decimal" display_length="4" data_length="3" non_display="conditional" conditional="true">
+          <area>
+            <position x="66" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LFB" short_name="S2LFB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="71" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ENDE" short_name="S2ENDE" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="82" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2UV" short_name="S2UV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="94" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2UB" short_name="S2UB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="105" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2TXT" short_name="S2TXT" data_type="alphanumeric" display_length="13" data_length="13" conditional="true">
+          <area>
+            <position x="116" y="18"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LEKD" short_name="S2LEKD" data_type="zoned_decimal" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LKNAM" short_name="S2LKNAM" data_type="alphanumeric" display_length="40" data_length="40" conditional="true">
+          <area>
+            <position x="13" y="19"/>
+            <size cx="40" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2OBJ" short_name="S2OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ONAM" short_name="S2ONAM" data_type="alphanumeric" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="61" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ANZE" short_name="S2ANZE" data_type="zoned_decimal" display_length="4" data_length="3" non_display="conditional" conditional="true">
+          <area>
+            <position x="66" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LFB" short_name="S2LFB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="71" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ENDE" short_name="S2ENDE" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="82" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2UV" short_name="S2UV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="94" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2UB" short_name="S2UB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="105" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2TXT" short_name="S2TXT" data_type="alphanumeric" display_length="13" data_length="13" conditional="true">
+          <area>
+            <position x="116" y="19"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LEKD" short_name="S2LEKD" data_type="zoned_decimal" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LKNAM" short_name="S2LKNAM" data_type="alphanumeric" display_length="40" data_length="40" conditional="true">
+          <area>
+            <position x="13" y="20"/>
+            <size cx="40" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2OBJ" short_name="S2OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ONAM" short_name="S2ONAM" data_type="alphanumeric" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="61" y="20"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ANZE" short_name="S2ANZE" data_type="zoned_decimal" display_length="4" data_length="3" non_display="conditional" conditional="true">
+          <area>
+            <position x="66" y="20"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LFB" short_name="S2LFB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="71" y="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ENDE" short_name="S2ENDE" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="82" y="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2UV" short_name="S2UV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="94" y="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2UB" short_name="S2UB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="105" y="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2TXT" short_name="S2TXT" data_type="alphanumeric" display_length="13" data_length="13" conditional="true">
+          <area>
+            <position x="116" y="20"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LEKD" short_name="S2LEKD" data_type="zoned_decimal" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="1" y="21"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LKNAM" short_name="S2LKNAM" data_type="alphanumeric" display_length="40" data_length="40" conditional="true">
+          <area>
+            <position x="13" y="21"/>
+            <size cx="40" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2OBJ" short_name="S2OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ONAM" short_name="S2ONAM" data_type="alphanumeric" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="61" y="21"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ANZE" short_name="S2ANZE" data_type="zoned_decimal" display_length="4" data_length="3" non_display="conditional" conditional="true">
+          <area>
+            <position x="66" y="21"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LFB" short_name="S2LFB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="71" y="21"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ENDE" short_name="S2ENDE" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="82" y="21"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2UV" short_name="S2UV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="94" y="21"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2UB" short_name="S2UB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="105" y="21"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2TXT" short_name="S2TXT" data_type="alphanumeric" display_length="13" data_length="13" conditional="true">
+          <area>
+            <position x="116" y="21"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LEKD" short_name="S2LEKD" data_type="zoned_decimal" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="1" y="22"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LKNAM" short_name="S2LKNAM" data_type="alphanumeric" display_length="40" data_length="40" conditional="true">
+          <area>
+            <position x="13" y="22"/>
+            <size cx="40" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2OBJ" short_name="S2OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ONAM" short_name="S2ONAM" data_type="alphanumeric" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="61" y="22"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ANZE" short_name="S2ANZE" data_type="zoned_decimal" display_length="4" data_length="3" non_display="conditional" conditional="true">
+          <area>
+            <position x="66" y="22"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LFB" short_name="S2LFB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="71" y="22"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ENDE" short_name="S2ENDE" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="82" y="22"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2UV" short_name="S2UV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="94" y="22"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2UB" short_name="S2UB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="105" y="22"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2TXT" short_name="S2TXT" data_type="alphanumeric" display_length="13" data_length="13" conditional="true">
+          <area>
+            <position x="116" y="22"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LEKD" short_name="S2LEKD" data_type="zoned_decimal" display_length="11" data_length="11" conditional="true">
+          <area>
+            <position x="1" y="23"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LKNAM" short_name="S2LKNAM" data_type="alphanumeric" display_length="40" data_length="40" conditional="true">
+          <area>
+            <position x="13" y="23"/>
+            <size cx="40" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2OBJ" short_name="S2OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="55" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ONAM" short_name="S2ONAM" data_type="alphanumeric" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="61" y="23"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ANZE" short_name="S2ANZE" data_type="zoned_decimal" display_length="4" data_length="3" non_display="conditional" conditional="true">
+          <area>
+            <position x="66" y="23"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2LFB" short_name="S2LFB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="71" y="23"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2ENDE" short_name="S2ENDE" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="82" y="23"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2UV" short_name="S2UV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="94" y="23"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2UB" short_name="S2UB" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true">
+          <area>
+            <position x="105" y="23"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S2TXT" short_name="S2TXT" data_type="alphanumeric" display_length="13" data_length="13" conditional="true">
+          <area>
+            <position x="116" y="23"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+        </field>
+      </field>
+    </field>
+  </screen>
+</header>

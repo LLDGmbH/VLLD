@@ -1,0 +1,1791 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="OSNA_COL/LE20DS(SCC+KEY03)" library="OSNA_COL" member_name="LE20DS">
+    <size cx="132" cy="27"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="f5" caption="F5" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="f20" caption="F20" attention_key="false"/>
+    <action key="f24" caption="F24" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <field field_type="screen_part" name="SCC">
+      <area>
+        <position/>
+        <size cx="132" cy="25"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="KEY03" overlay="true">
+      <area>
+        <position y="25"/>
+        <size cx="132" cy="2"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SDS_JOB" short_name="SDS_JOB" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="Prozentuale Erhöhung für Lieferscheinschreibung" display_length="47" data_length="47">
+          <area>
+            <position x="43"/>
+            <size cx="47" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SDS_USER" short_name="SDS_USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="98"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="LE20C" display_length="5" data_length="5">
+          <area>
+            <position x="109"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="115"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="124"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Objekt" display_length="6" data_length="6">
+          <area>
+            <position x="1" y="1"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SBOBJ" short_name="SBOBJ" data_type="zoned_decimal" display_length="5" data_length="5">
+          <area>
+            <position x="8" y="1"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SBONAM" short_name="SBONAM" data_type="alphanumeric" display_length="21" data_length="21">
+          <area>
+            <position x="14" y="1"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SBFOLG" short_name="SBFOLG" data_type="zoned_decimal" display_length="8" data_length="8">
+          <area>
+            <position x="36" y="1"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Filiale" display_length="7" data_length="7">
+          <area>
+            <position x="45" y="1"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SBFIL" short_name="SBFIL" data_type="zoned_decimal" display_length="2" data_length="2">
+          <area>
+            <position x="53" y="1"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="   KdNr Name                               GArt   Vlkz         DVerk  Abw     Gbz R AProz                                   A" display_length="125" data_length="125" underline="true">
+          <area>
+            <position x="1" y="2"/>
+            <size cx="125" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SCKDNR" short_name="SCKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCKNAM" short_name="SCKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="3"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCGART" short_name="SCGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="43" y="3"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGAUG" short_name="SCGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="46" y="3"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCVLKZ" short_name="SCVLKZ" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true">
+          <area>
+            <position x="49" y="3"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCDVK" short_name="SCDVK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="1">
+          <area>
+            <position x="62" y="3"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCAVER" short_name="SCAVER" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="70" y="3"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGBZ" short_name="SCGBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="77" y="3"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCRGKZ" short_name="SCRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="83" y="3"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCAPRZ" short_name="SCAPRZ" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="85" y="3"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="SCAKT" short_name="SCAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="125" y="3"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCKDNR" short_name="SCKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCKNAM" short_name="SCKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="4"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCGART" short_name="SCGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="43" y="4"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGAUG" short_name="SCGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="46" y="4"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCVLKZ" short_name="SCVLKZ" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true">
+          <area>
+            <position x="49" y="4"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCDVK" short_name="SCDVK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="1">
+          <area>
+            <position x="62" y="4"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCAVER" short_name="SCAVER" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="70" y="4"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGBZ" short_name="SCGBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="77" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCRGKZ" short_name="SCRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="83" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCAPRZ" short_name="SCAPRZ" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="85" y="4"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="SCAKT" short_name="SCAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="125" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCKDNR" short_name="SCKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCKNAM" short_name="SCKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="5"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCGART" short_name="SCGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="43" y="5"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGAUG" short_name="SCGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="46" y="5"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCVLKZ" short_name="SCVLKZ" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true">
+          <area>
+            <position x="49" y="5"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCDVK" short_name="SCDVK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="1">
+          <area>
+            <position x="62" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCAVER" short_name="SCAVER" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="70" y="5"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGBZ" short_name="SCGBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="77" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCRGKZ" short_name="SCRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="83" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCAPRZ" short_name="SCAPRZ" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="85" y="5"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="SCAKT" short_name="SCAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="125" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SCKDNR" short_name="SCKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCKNAM" short_name="SCKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="6"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCGART" short_name="SCGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="43" y="6"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGAUG" short_name="SCGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="46" y="6"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCVLKZ" short_name="SCVLKZ" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true">
+          <area>
+            <position x="49" y="6"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCDVK" short_name="SCDVK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="1">
+          <area>
+            <position x="62" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCAVER" short_name="SCAVER" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="70" y="6"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGBZ" short_name="SCGBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="77" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCRGKZ" short_name="SCRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="83" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCAPRZ" short_name="SCAPRZ" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="85" y="6"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="SCAKT" short_name="SCAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="125" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCKDNR" short_name="SCKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCKNAM" short_name="SCKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="7"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCGART" short_name="SCGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="43" y="7"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGAUG" short_name="SCGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="46" y="7"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCVLKZ" short_name="SCVLKZ" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true">
+          <area>
+            <position x="49" y="7"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCDVK" short_name="SCDVK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="1">
+          <area>
+            <position x="62" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCAVER" short_name="SCAVER" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="70" y="7"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGBZ" short_name="SCGBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="77" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCRGKZ" short_name="SCRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="83" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCAPRZ" short_name="SCAPRZ" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="85" y="7"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="SCAKT" short_name="SCAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="125" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCKDNR" short_name="SCKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCKNAM" short_name="SCKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="8"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCGART" short_name="SCGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="43" y="8"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGAUG" short_name="SCGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="46" y="8"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCVLKZ" short_name="SCVLKZ" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true">
+          <area>
+            <position x="49" y="8"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCDVK" short_name="SCDVK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="1">
+          <area>
+            <position x="62" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCAVER" short_name="SCAVER" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="70" y="8"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGBZ" short_name="SCGBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="77" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCRGKZ" short_name="SCRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="83" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCAPRZ" short_name="SCAPRZ" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="85" y="8"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="SCAKT" short_name="SCAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="125" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SCKDNR" short_name="SCKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCKNAM" short_name="SCKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="9"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCGART" short_name="SCGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="43" y="9"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGAUG" short_name="SCGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="46" y="9"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCVLKZ" short_name="SCVLKZ" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true">
+          <area>
+            <position x="49" y="9"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCDVK" short_name="SCDVK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="1">
+          <area>
+            <position x="62" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCAVER" short_name="SCAVER" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="70" y="9"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGBZ" short_name="SCGBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="77" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCRGKZ" short_name="SCRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="83" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCAPRZ" short_name="SCAPRZ" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="85" y="9"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="SCAKT" short_name="SCAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="125" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCKDNR" short_name="SCKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCKNAM" short_name="SCKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="10"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCGART" short_name="SCGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="43" y="10"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGAUG" short_name="SCGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="46" y="10"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCVLKZ" short_name="SCVLKZ" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true">
+          <area>
+            <position x="49" y="10"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCDVK" short_name="SCDVK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="1">
+          <area>
+            <position x="62" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCAVER" short_name="SCAVER" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="70" y="10"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGBZ" short_name="SCGBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="77" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCRGKZ" short_name="SCRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="83" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCAPRZ" short_name="SCAPRZ" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="85" y="10"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="SCAKT" short_name="SCAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="125" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCKDNR" short_name="SCKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCKNAM" short_name="SCKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="11"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCGART" short_name="SCGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="43" y="11"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGAUG" short_name="SCGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="46" y="11"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCVLKZ" short_name="SCVLKZ" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true">
+          <area>
+            <position x="49" y="11"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCDVK" short_name="SCDVK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="1">
+          <area>
+            <position x="62" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCAVER" short_name="SCAVER" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="70" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGBZ" short_name="SCGBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="77" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCRGKZ" short_name="SCRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="83" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCAPRZ" short_name="SCAPRZ" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="85" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="SCAKT" short_name="SCAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="125" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SCKDNR" short_name="SCKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCKNAM" short_name="SCKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="12"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCGART" short_name="SCGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="43" y="12"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGAUG" short_name="SCGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="46" y="12"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCVLKZ" short_name="SCVLKZ" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true">
+          <area>
+            <position x="49" y="12"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCDVK" short_name="SCDVK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="1">
+          <area>
+            <position x="62" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCAVER" short_name="SCAVER" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="70" y="12"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGBZ" short_name="SCGBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="77" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCRGKZ" short_name="SCRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="83" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCAPRZ" short_name="SCAPRZ" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="85" y="12"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="SCAKT" short_name="SCAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="125" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCKDNR" short_name="SCKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCKNAM" short_name="SCKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="13"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCGART" short_name="SCGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="43" y="13"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGAUG" short_name="SCGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="46" y="13"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCVLKZ" short_name="SCVLKZ" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true">
+          <area>
+            <position x="49" y="13"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCDVK" short_name="SCDVK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="1">
+          <area>
+            <position x="62" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCAVER" short_name="SCAVER" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="70" y="13"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGBZ" short_name="SCGBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="77" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCRGKZ" short_name="SCRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="83" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCAPRZ" short_name="SCAPRZ" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="85" y="13"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="SCAKT" short_name="SCAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="125" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCKDNR" short_name="SCKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCKNAM" short_name="SCKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="14"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCGART" short_name="SCGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="43" y="14"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGAUG" short_name="SCGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="46" y="14"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCVLKZ" short_name="SCVLKZ" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true">
+          <area>
+            <position x="49" y="14"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCDVK" short_name="SCDVK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="1">
+          <area>
+            <position x="62" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCAVER" short_name="SCAVER" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="70" y="14"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGBZ" short_name="SCGBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="77" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCRGKZ" short_name="SCRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="83" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCAPRZ" short_name="SCAPRZ" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="85" y="14"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="SCAKT" short_name="SCAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="125" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SCKDNR" short_name="SCKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCKNAM" short_name="SCKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="15"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCGART" short_name="SCGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="43" y="15"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGAUG" short_name="SCGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="46" y="15"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCVLKZ" short_name="SCVLKZ" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true">
+          <area>
+            <position x="49" y="15"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCDVK" short_name="SCDVK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="1">
+          <area>
+            <position x="62" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCAVER" short_name="SCAVER" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="70" y="15"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGBZ" short_name="SCGBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="77" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCRGKZ" short_name="SCRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="83" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCAPRZ" short_name="SCAPRZ" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="85" y="15"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="SCAKT" short_name="SCAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="125" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCKDNR" short_name="SCKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCKNAM" short_name="SCKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="16"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCGART" short_name="SCGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="43" y="16"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGAUG" short_name="SCGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="46" y="16"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCVLKZ" short_name="SCVLKZ" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true">
+          <area>
+            <position x="49" y="16"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCDVK" short_name="SCDVK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="1">
+          <area>
+            <position x="62" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCAVER" short_name="SCAVER" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="70" y="16"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGBZ" short_name="SCGBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="77" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCRGKZ" short_name="SCRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="83" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCAPRZ" short_name="SCAPRZ" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="85" y="16"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="SCAKT" short_name="SCAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="125" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCKDNR" short_name="SCKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCKNAM" short_name="SCKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="17"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCGART" short_name="SCGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="43" y="17"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGAUG" short_name="SCGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="46" y="17"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCVLKZ" short_name="SCVLKZ" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true">
+          <area>
+            <position x="49" y="17"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCDVK" short_name="SCDVK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="1">
+          <area>
+            <position x="62" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCAVER" short_name="SCAVER" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="70" y="17"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGBZ" short_name="SCGBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="77" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCRGKZ" short_name="SCRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="83" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCAPRZ" short_name="SCAPRZ" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="85" y="17"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="SCAKT" short_name="SCAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="125" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SCKDNR" short_name="SCKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCKNAM" short_name="SCKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="18"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCGART" short_name="SCGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="43" y="18"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGAUG" short_name="SCGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="46" y="18"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCVLKZ" short_name="SCVLKZ" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true">
+          <area>
+            <position x="49" y="18"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCDVK" short_name="SCDVK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="1">
+          <area>
+            <position x="62" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCAVER" short_name="SCAVER" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="70" y="18"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGBZ" short_name="SCGBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="77" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCRGKZ" short_name="SCRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="83" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCAPRZ" short_name="SCAPRZ" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="85" y="18"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="SCAKT" short_name="SCAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="125" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCKDNR" short_name="SCKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCKNAM" short_name="SCKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="19"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCGART" short_name="SCGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="43" y="19"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGAUG" short_name="SCGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="46" y="19"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCVLKZ" short_name="SCVLKZ" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true">
+          <area>
+            <position x="49" y="19"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCDVK" short_name="SCDVK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="1">
+          <area>
+            <position x="62" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCAVER" short_name="SCAVER" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="70" y="19"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGBZ" short_name="SCGBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="77" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCRGKZ" short_name="SCRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="83" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCAPRZ" short_name="SCAPRZ" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="85" y="19"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="SCAKT" short_name="SCAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="125" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCKDNR" short_name="SCKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCKNAM" short_name="SCKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="20"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCGART" short_name="SCGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="43" y="20"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGAUG" short_name="SCGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="46" y="20"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCVLKZ" short_name="SCVLKZ" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true">
+          <area>
+            <position x="49" y="20"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCDVK" short_name="SCDVK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="1">
+          <area>
+            <position x="62" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCAVER" short_name="SCAVER" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="70" y="20"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGBZ" short_name="SCGBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="77" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCRGKZ" short_name="SCRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="83" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCAPRZ" short_name="SCAPRZ" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="85" y="20"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="SCAKT" short_name="SCAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="125" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SCKDNR" short_name="SCKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCKNAM" short_name="SCKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="21"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCGART" short_name="SCGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="43" y="21"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGAUG" short_name="SCGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="46" y="21"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCVLKZ" short_name="SCVLKZ" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true">
+          <area>
+            <position x="49" y="21"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCDVK" short_name="SCDVK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="1">
+          <area>
+            <position x="62" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCAVER" short_name="SCAVER" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="70" y="21"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGBZ" short_name="SCGBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="77" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCRGKZ" short_name="SCRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="83" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCAPRZ" short_name="SCAPRZ" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="85" y="21"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="SCAKT" short_name="SCAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="125" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCKDNR" short_name="SCKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="22"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCKNAM" short_name="SCKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="22"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCGART" short_name="SCGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="43" y="22"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGAUG" short_name="SCGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="46" y="22"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCVLKZ" short_name="SCVLKZ" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true">
+          <area>
+            <position x="49" y="22"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCDVK" short_name="SCDVK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="1">
+          <area>
+            <position x="62" y="22"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCAVER" short_name="SCAVER" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="70" y="22"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGBZ" short_name="SCGBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="77" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCRGKZ" short_name="SCRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="83" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCAPRZ" short_name="SCAPRZ" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="85" y="22"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="SCAKT" short_name="SCAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="125" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCKDNR" short_name="SCKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="23"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCKNAM" short_name="SCKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="23"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCGART" short_name="SCGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="43" y="23"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGAUG" short_name="SCGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="46" y="23"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCVLKZ" short_name="SCVLKZ" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true">
+          <area>
+            <position x="49" y="23"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCDVK" short_name="SCDVK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="1">
+          <area>
+            <position x="62" y="23"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCAVER" short_name="SCAVER" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="70" y="23"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGBZ" short_name="SCGBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="77" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCRGKZ" short_name="SCRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="83" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCAPRZ" short_name="SCAPRZ" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="85" y="23"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="SCAKT" short_name="SCAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="125" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SCKDNR" short_name="SCKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="24"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCKNAM" short_name="SCKNAM" data_type="alphanumeric" display_length="33" data_length="33" conditional="true">
+          <area>
+            <position x="9" y="24"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCGART" short_name="SCGART" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="43" y="24"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGAUG" short_name="SCGAUG" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="46" y="24"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCVLKZ" short_name="SCVLKZ" data_type="zoned_decimal" display_length="12" data_length="9" conditional="true">
+          <area>
+            <position x="49" y="24"/>
+            <size cx="12" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCDVK" short_name="SCDVK" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true" decimal_positions="1">
+          <area>
+            <position x="62" y="24"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SCAVER" short_name="SCAVER" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="70" y="24"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SCGBZ" short_name="SCGBZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="77" y="24"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SCRGKZ" short_name="SCRGKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="83" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SCAPRZ" short_name="SCAPRZ" data_type="zoned_decimal" display_length="6" data_length="4" conditional="true" decimal_positions="1">
+          <area>
+            <position x="85" y="24"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="SCAKT" short_name="SCAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="125" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="Systemnachricht:" display_length="16" data_length="16">
+      <area>
+        <position x="1" y="25"/>
+        <size cx="16" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="SFMSG" short_name="SFMSG" data_type="alphanumeric" display_length="80" data_length="80" blink="true">
+      <area>
+        <position x="18" y="25"/>
+        <size cx="80" cy="1"/>
+      </area>
+      <color foreground="red"/>
+    </field>
+    <field field_type="fixed_text" value="F3 = Ende; Auswahl" display_length="18" data_length="18">
+      <area>
+        <position x="1" y="26"/>
+        <size cx="18" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

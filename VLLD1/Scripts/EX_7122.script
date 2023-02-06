@@ -1,0 +1,70 @@
+﻿global filiale as string
+DIM ddehandle, i, j, msg, rc as integer
+dim xTitel, xWoVOn, xWoBis, xWoch, xAnzP, xAnzE, xSumAGP, xAnzPz, xAnzEz, xSumAGPz, xProz, xSaldo as string 
+dim source, ErrMsg, Datei, pfad_datei as string
+
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+HostFieldGetData("s1WoVon", xWoVon)
+HostFieldGetData("s1WoBis", xWoBis)
+xTitel = "Von Woche " + xWoVon + " bis Woche " + xWoBis
+
+datei = "Pakete_unbekannte_Remi.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke(ddehandle, "Z1S1", xtitel)
+
+ddepoke(ddehandle, "Z2S1", "Woche")
+ddepoke(ddehandle, "Z2S2", "AnzPak")
+ddepoke(ddehandle, "Z2S3", "AnzExp")
+ddepoke(ddehandle, "Z2S4", "SumEKP")
+ddepoke(ddehandle, "Z2S5", "AnzPak")
+ddepoke(ddehandle, "Z2S6", "AnzExp")
+ddepoke(ddehandle, "Z2S7", "SumEKP")
+ddepoke(ddehandle, "Z2S8", "PrzZu")
+ddepoke(ddehandle, "Z2S9", "Saldo")
+
+nochmal:
+
+HostFieldGetLineData("s1Woch",    i, xWoch)
+HostFieldGetLineData("s1AnzP",    i, xAnzP)
+HostFieldGetLineData("s1AnzE",    i, xAnzE)
+HostFieldGetLineData("s1SumAGP",  i, xSumAGP)
+HostFieldGetLineData("s1AnzPz",   i, xAnzPz)
+HostFieldGetLineData("s1AnzEz",   i, xAnzEz)
+HostFieldGetLineData("s1SumAGPz", i, xSumAGPz)
+HostFieldGetLineData("s1Proz",    i, xProz)
+HostFieldGetLineData("s1Saldo",   i, xSaldo)
+
+
+if (xWoch <> "") then
+   ddepoke(ddehandle, "Z" + str(j) +"S1", xWoch)
+   ddepoke(ddehandle, "Z" + str(j) +"S2", xAnzP)
+   ddepoke(ddehandle, "Z" + str(j) +"S3", xAnzE)
+   ddepoke(ddehandle, "Z" + str(j) +"S4", xSumAGP)
+   ddepoke(ddehandle, "Z" + str(j) +"S5", xAnzPz)
+   ddepoke(ddehandle, "Z" + str(j) +"S6", xAnzEz)
+   ddepoke(ddehandle, "Z" + str(j) +"S7", xSumAGPz)
+   ddepoke(ddehandle, "Z" + str(j) +"S8", xProz)
+   ddepoke(ddehandle, "Z" + str(j) +"S9", xSaldo)
+   j=j+1 
+endif
+
+if (i < 19) then
+   i=i+1
+   goto nochmal
+endif
+ 
+if (xWoch <> "") then
+   i=0
+   HostScreenSendKey("Page Down")
+   goto nochmal
+endif

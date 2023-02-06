@@ -1,0 +1,17 @@
+﻿global c1qua as Integer
+dim zahl, xxqua as String
+dim ErrorMsg as String
+dim rc as Integer
+
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+
+rc = EzSQLQuery("SELECT DIGITS(adQua) FROM (SELECT DISTINCT adQua FROM grafdp order by adQua DESC) t", zahl, ErrorMsg)
+
+PanelFieldSetProp ("c1qua", 5, zahl)
+
+PanelUpdateEnable(2)
+
+HostFieldGetData("c1qua", xxqua)
+
+c1qua = VAL(xxqua)

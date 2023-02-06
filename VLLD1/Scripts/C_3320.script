@@ -1,0 +1,83 @@
+﻿rem **Füllen Combo-Box  aus GRVKAP **
+
+dim text, xxfil, ErrorMsg as String
+dim rc as Integer
+Global Filiale as string
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+
+
+rem **VERTRETER AUS GRVERP
+
+
+rc = EzSQLQuery("SELECT VTNR, digits(vtnr) concat ' ' concat VTNAME FROM GRVERP order by VTNR", text, ErrorMsg)
+
+
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelFieldSetProp ("ma", 5, text) 
+endif
+
+rc = EzSQLQuery("SELECT ((kdgart*100) + kdgaug), DIGITS(kdgart) concat DIGITS(kdgaug) concat ' - 'concat kdgtxt FROM GRGARP order by DIGITS(kdgart) concat DIGITS(kdgaug)", text, ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelFieldSetProp ("gagu", 5, text) 
+endif
+
+rc = EzSQLQuery("SELECT vlvlkz, digits(vlvlkz) concat ' - ' concat vlvbez FROM grvtlp order by vlvbez", text, ErrorMsg)
+PanelFieldSetProp ("Vtlkz", 5, text) 
+
+rc = EzSQLQuery("SELECT vavnr, digits(vavnr) concat ' - ' concat vaname FROM gradrp order by vaname", text, ErrorMsg)
+PanelFieldSetProp ("Vlg", 5, text) 
+
+PanelUpdateEnable(2)
+
+
+rem  ** Filiale bereitstellten 
+
+
+rc = EzSQLQuery("SELECT digits(filfil), digits(filfil) concat ' ' concat filnam FROM GRFILP order by filfil", text, ErrorMsg)
+
+PanelFieldSetProp ("f1fil", 5, text)  
+
+PanelUpdateEnable(2)
+
+HostFieldGetData("f1fil", xxfil)
+
+
+if xxfil = "00" then
+filiale = "0"
+endif
+if xxfil = "01" then
+filiale = "1"
+endif
+if xxfil = "02" then
+filiale = "2"
+endif
+if xxfil = "03" then
+filiale = "3"
+endif
+if xxfil = "04" then
+filiale = "4"
+endif
+if xxfil = "05" then
+filiale = "5"
+endif
+if xxfil = "06" then
+filiale = "6"
+endif
+if xxfil = "07" then
+filiale = "7"
+endif
+if xxfil = "08" then
+filiale = "8"
+endif
+if xxfil = "09" then
+filiale = "9"
+endif

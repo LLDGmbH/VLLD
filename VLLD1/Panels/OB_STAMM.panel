@@ -1,0 +1,2790 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo exeName="LegaSuite.exe" productName="lswb" exeVersion="10.3969.0.0" modelVersion="1.1" ?>
+<panel xmlns="http://www.seagullsoftware.com/schemas/legasuite/panel" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/panel http://www.seagullsoftware.com/schemas/legasuite/paneldefinition3_1.xsd">
+  <properties>
+    <codepage>1252</codepage>
+    <dimensions x="0" y="0" cx="887" cy="545"/>
+    <FontColor>
+      <FontStyleName/>
+      <ColorBackground>66</ColorBackground>
+    </FontColor>
+    <general_flags_1>
+      <bitmap/>
+      <stretched/>
+    </general_flags_1>
+    <general_flags_3>
+      <background_image/>
+    </general_flags_3>
+    <id>OB_STAMM</id>
+    <image_file>Resources\LLD_STANDARD_MAIN.JPG</image_file>
+    <ois_object>C_ARTNEU</ois_object>
+    <panel_flags>
+      <force_foreground/>
+      <no_zorder/>
+      <size_independent/>
+      <update_on_host_change/>
+    </panel_flags>
+    <panel_type>1</panel_type>
+    <title>@JOB@ - Neuanlage Artikelstamm </title>
+  </properties>
+  <menu_bar>
+    <menu>
+      <title>~Datei</title>
+      <menu_item>
+        <general_flags_2>
+          <visibility_equal_hide/>
+          <visibility_not_present_disable/>
+          <visibility_output_data_disable/>
+        </general_flags_2>
+        <send_key>12</send_key>
+        <title>Speichern</title>
+      </menu_item>
+      <menu_item>
+        <general_flags_2>
+          <visibility_equal_hide/>
+          <visibility_not_present_disable/>
+          <visibility_output_data_disable/>
+        </general_flags_2>
+        <panel_next>*PRINT</panel_next>
+        <title>Drucken</title>
+      </menu_item>
+      <menu_item>
+        <general_flags_2>
+          <separator/>
+          <visibility_equal_hide/>
+          <visibility_not_present_disable/>
+          <visibility_output_data_disable/>
+        </general_flags_2>
+        <panel_next>*</panel_next>
+        <title>Ende</title>
+      </menu_item>
+    </menu>
+    <menu>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <title>~Bearbeiten</title>
+      <menu_item>
+        <general_flags_2>
+          <visibility_equal_hide/>
+          <visibility_not_present_disable/>
+          <visibility_output_data_disable/>
+        </general_flags_2>
+        <panel_next>*CUT</panel_next>
+        <title>~Auschneiden</title>
+      </menu_item>
+      <menu_item>
+        <general_flags_2>
+          <visibility_equal_hide/>
+          <visibility_not_present_disable/>
+          <visibility_output_data_disable/>
+        </general_flags_2>
+        <panel_next>*COPY</panel_next>
+        <title>~Kopieren</title>
+      </menu_item>
+      <menu_item>
+        <general_flags_2>
+          <visibility_equal_hide/>
+          <visibility_not_present_disable/>
+          <visibility_output_data_disable/>
+        </general_flags_2>
+        <panel_next>*PASTE</panel_next>
+        <title>~Einfügen</title>
+      </menu_item>
+    </menu>
+    <menu>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <title>~Optionen</title>
+      <menu_item>
+        <general_flags_2>
+          <visibility_equal_hide/>
+          <visibility_not_present_disable/>
+          <visibility_output_data_disable/>
+        </general_flags_2>
+        <script>PcCommand(2, &quot;WINWORD.EXE&quot;)</script>
+        <title>Microsoft Word</title>
+      </menu_item>
+      <menu_item>
+        <general_flags_2>
+          <visibility_equal_hide/>
+          <visibility_not_present_disable/>
+          <visibility_output_data_disable/>
+        </general_flags_2>
+        <script>PcCommand(2, &quot;EXCEL.EXE&quot;)</script>
+        <title>Microsoft Excel</title>
+      </menu_item>
+      <menu_item>
+        <general_flags_2>
+          <visibility_equal_hide/>
+          <visibility_not_present_disable/>
+          <visibility_output_data_disable/>
+        </general_flags_2>
+        <script>PcCommand(2, &quot;CALC.EXE&quot;)</script>
+        <title>Taschenrechner</title>
+      </menu_item>
+    </menu>
+    <menu>
+      <enable_expression>@&amp;FIL02@</enable_expression>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <title>Filiale</title>
+      <menu_item>
+        <general_flags_2>
+          <visibility_equal_hide/>
+          <visibility_not_present_disable/>
+          <visibility_output_data_disable/>
+        </general_flags_2>
+        <send_key>24</send_key>
+        <title>@&amp;FIL01@</title>
+      </menu_item>
+      <menu_item>
+        <general_flags_2>
+          <visibility_equal_hide/>
+          <visibility_not_present_disable/>
+          <visibility_output_data_disable/>
+        </general_flags_2>
+        <send_key>25</send_key>
+        <title>@&amp;FIL02@</title>
+      </menu_item>
+      <menu_item>
+        <general_flags_2>
+          <visibility_equal_hide/>
+          <visibility_not_present_disable/>
+          <visibility_output_data_disable/>
+        </general_flags_2>
+        <send_key>26</send_key>
+        <title>@&amp;FIL03@</title>
+      </menu_item>
+    </menu>
+    <menu>
+      <title>~Hilfe</title>
+      <menu_item>
+        <general_flags_2>
+          <state_dependent/>
+        </general_flags_2>
+        <panel_next>ABOUT</panel_next>
+        <title>~Info</title>
+      </menu_item>
+      <menu_item>
+        <general_flags_2>
+          <visibility_equal_hide/>
+          <visibility_not_present_disable/>
+          <visibility_output_data_disable/>
+        </general_flags_2>
+        <send_key>38</send_key>
+        <title>~Nachrichten</title>
+      </menu_item>
+    </menu>
+  </menu_bar>
+  <controls>
+    <combo>
+      <dimensions x="584" y="52" cx="298" cy="439"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="4" field_type="4" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Seagull System Monospaced 10</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <host_conversion/>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATVNR</host_field>
+      <id>ATVNR</id>
+    </combo>
+    <group>
+      <dimensions x="8" y="148" cx="268" cy="67"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Objektcode</title>
+    </group>
+    <group>
+      <dimensions x="5" y="428" cx="271" cy="110"/>
+      <field_flags>
+        <field_clipping/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 10 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>EAN-Code</title>
+    </group>
+    <group>
+      <dimensions x="569" y="236" cx="315" cy="251"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Disposition / Regulierung</title>
+    </group>
+    <group>
+      <dimensions x="7" y="81" cx="877" cy="63"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Bezeichnung</title>
+    </group>
+    <group>
+      <dimensions x="280" y="241" cx="284" cy="185"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Remission</title>
+    </group>
+    <button>
+      <dimensions x="0" y="1" cx="889" cy="37"/>
+      <field_flags>
+        <field_clipping/>
+        <tab_stop/>
+      </field_flags>
+      <general_flags_1>
+        <bitmap/>
+        <centered/>
+        <stretched/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <no_focus_line/>
+        <non_default_align/>
+        <unclickable/>
+      </general_flags_3>
+      <image_file>Resources\LLD_BANNER_MAIN.JPG</image_file>
+      <title>~LLD</title>
+    </button>
+    <group>
+      <dimensions x="8" y="241" cx="268" cy="185"/>
+      <field_flags>
+        <field_clipping/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 10 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Lieferschein</title>
+    </group>
+    <group>
+      <dimensions x="752" y="148" cx="131" cy="89"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Mwst.</title>
+    </group>
+    <group>
+      <dimensions x="591" y="148" cx="141" cy="89"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Einkaufspreis</title>
+    </group>
+    <group>
+      <dimensions x="430" y="148" cx="143" cy="89"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Abgabepreis</title>
+    </group>
+    <group>
+      <dimensions x="300" y="148" cx="113" cy="89"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Verkaufpreis</title>
+    </group>
+    <button>
+      <dimensions x="790" y="4" cx="16" cy="16"/>
+      <field_flags>
+        <move_x/>
+        <tab_stop/>
+      </field_flags>
+      <general_flags_1>
+        <bitmap/>
+        <centered/>
+        <no_border/>
+        <stretched/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <transparent_background/>
+      </general_flags_3>
+      <help_text>Info</help_text>
+      <image_file>Resources\INFO 16X16.GIF</image_file>
+      <panel_next>ABOUT</panel_next>
+      <title>Info</title>
+    </button>
+    <user_window>
+      <dimensions x="810" y="4" cx="71" cy="16"/>
+      <field_flags>
+        <move_x/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+        <ColorBackground>43</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <user_window_type>5</user_window_type>
+    </user_window>
+    <edit>
+      <dimensions x="112" y="53" cx="52" cy="18"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="5" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>OBJNR</host_field>
+    </edit>
+    <edit>
+      <dimensions x="287" y="53" cx="52" cy="18"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="5" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATVKZ</host_field>
+    </edit>
+    <edit>
+      <dimensions x="34" y="116" cx="235" cy="20"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="21" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATNAME</host_field>
+    </edit>
+    <edit>
+      <dimensions x="300" y="116" cx="104" cy="20"/>
+      <enable_check>0590</enable_check>
+      <enable_expression>@&amp;GROSSONR@</enable_expression>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="17" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_equal_hide/>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATL1</host_field>
+    </edit>
+    <edit>
+      <dimensions x="404" y="116" cx="176" cy="20"/>
+      <enable_check>0590</enable_check>
+      <enable_expression>@&amp;GROSSONR@</enable_expression>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="28" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_equal_hide/>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATL2</host_field>
+    </edit>
+    <edit>
+      <dimensions x="708" y="116" cx="130" cy="20"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="12" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATSNAM</host_field>
+    </edit>
+    <edit>
+      <dimensions x="300" y="116" cx="382" cy="20"/>
+      <enable_check>0590</enable_check>
+      <enable_expression>@&amp;GROSSONR@</enable_expression>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="45" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATLNAM</host_field>
+    </edit>
+    <combo>
+      <dimensions x="18" y="183" cx="250" cy="306"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="4" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <host_conversion/>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>EHCD4</host_field>
+      <id>EHCD4</id>
+    </combo>
+    <edit>
+      <dimensions x="329" y="183" cx="54" cy="20"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="6" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATBNEU</host_field>
+    </edit>
+    <edit>
+      <dimensions x="437" y="183" cx="66" cy="20"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="8" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATNNEU</host_field>
+    </edit>
+    <edit>
+      <dimensions x="506" y="183" cx="60" cy="20"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="7" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATBDAT</host_field>
+    </edit>
+    <edit>
+      <dimensions x="596" y="183" cx="66" cy="20"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="8" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATENEU</host_field>
+    </edit>
+    <edit>
+      <dimensions x="665" y="183" cx="60" cy="20"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="7" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATEDAT</host_field>
+    </edit>
+    <edit>
+      <dimensions x="760" y="183" cx="48" cy="20"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="5" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATMWN</host_field>
+    </edit>
+    <edit>
+      <dimensions x="811" y="183" cx="60" cy="20"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="7" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATMWAB</host_field>
+    </edit>
+    <combo>
+      <dimensions x="91" y="260" cx="180" cy="217"/>
+      <field_flags>
+        <field_clipping/>
+        <size_x/>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="2" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <host_conversion/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATLTYP</host_field>
+      <id>ATLTYP</id>
+    </combo>
+    <edit>
+      <dimensions x="91" y="279" cx="48" cy="20"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="5" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATPOS</host_field>
+    </edit>
+    <combo>
+      <dimensions x="91" y="298" cx="180" cy="191"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="1" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <host_conversion/>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATERRH</host_field>
+      <value_list>
+        <string>1	Wöchentlich</string>
+        <string>2	Vierzehntägig</string>
+        <string>3	Max. 15 Folgen Jahr</string>
+        <string>4	Monatlich</string>
+        <string>5	Zweimonatlich</string>
+        <string>6	Vierteljährlich</string>
+        <string>7	Halbjährlich</string>
+        <string>8	Jährlich</string>
+        <string>9	Unregelmässig</string>
+      </value_list>
+    </combo>
+    <combo>
+      <dimensions x="91" y="318" cx="180" cy="175"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="1" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <host_conversion/>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATAG</host_field>
+      <value_list>
+        <string> 	Kein</string>
+        <string>1	Montag</string>
+        <string>2	Dienstag</string>
+        <string>3	Mittwoch</string>
+        <string>4	Donnerstag</string>
+        <string>5	Freitag</string>
+        <string>6	Samstag</string>
+        <string>7	Sonntag</string>
+        <string>9	unregelmässig</string>
+      </value_list>
+    </combo>
+    <edit>
+      <dimensions x="91" y="338" cx="42" cy="20"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="3" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATVP</host_field>
+    </edit>
+    <edit>
+      <dimensions x="91" y="358" cx="42" cy="20"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="3" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATSPIT</host_field>
+    </edit>
+    <edit>
+      <dimensions x="91" y="378" cx="42" cy="20"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="5" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATGNEU</host_field>
+    </edit>
+    <edit>
+      <dimensions x="184" y="378" cx="60" cy="20"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="8" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATGNFO</host_field>
+    </edit>
+    <edit>
+      <dimensions x="91" y="398" cx="42" cy="20"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="4" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATTHPN</host_field>
+    </edit>
+    <combo>
+      <dimensions x="424" y="260" cx="95" cy="104"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="1" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <host_conversion/>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATKRKZ</host_field>
+      <value_list>
+        <string> 	Nein</string>
+        <string>R	KR</string>
+        <string>B	B-KR</string>
+      </value_list>
+    </combo>
+    <edit>
+      <dimensions x="424" y="280" cx="27" cy="20"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="1" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATABKR</host_field>
+    </edit>
+    <edit>
+      <dimensions x="491" y="280" cx="27" cy="20"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="1" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATKZSA</host_field>
+    </edit>
+    <edit>
+      <dimensions x="424" y="300" cx="45" cy="20"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="1" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATKZRM</host_field>
+    </edit>
+    <combo>
+      <dimensions x="424" y="320" cx="50" cy="69"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <host_conversion/>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATXA01</host_field>
+      <value_list>
+        <string>J	Ja</string>
+        <string>N	Nein</string>
+      </value_list>
+    </combo>
+    <combo>
+      <dimensions x="424" y="340" cx="50" cy="69"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <host_conversion/>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATORVF</host_field>
+      <value_list>
+        <string> 	Ja</string>
+        <string>N	Nein</string>
+      </value_list>
+    </combo>
+    <edit>
+      <dimensions x="424" y="360" cx="27" cy="20"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="1" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATKBRL</host_field>
+    </edit>
+    <edit>
+      <dimensions x="424" y="379" cx="27" cy="20"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="1" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATLAGA</host_field>
+    </edit>
+    <combo>
+      <dimensions x="676" y="255" cx="199" cy="243"/>
+      <field_flags>
+        <field_clipping/>
+        <size_x/>
+        <tab_stop/>
+      </field_flags>
+      <field_format>##</field_format>
+      <field_length length="2" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <host_conversion/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATSKN0</host_field>
+      <id>ATSKN0</id>
+    </combo>
+    <edit>
+      <dimensions x="676" y="278" cx="50" cy="18"/>
+      <enable_expression>@ATVKZ@</enable_expression>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_format>#####</field_format>
+      <field_length length="5" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATVKZ</host_field>
+    </edit>
+    <edit>
+      <dimensions x="676" y="320" cx="50" cy="18"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="6" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATVOBJ</host_field>
+    </edit>
+    <edit>
+      <dimensions x="676" y="340" cx="50" cy="18"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="4" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATA1</host_field>
+    </edit>
+    <edit>
+      <dimensions x="676" y="360" cx="50" cy="18"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="4" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATA2</host_field>
+    </edit>
+    <edit>
+      <dimensions x="676" y="380" cx="50" cy="18"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="5" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>YY_ATA3</host_field>
+    </edit>
+    <edit>
+      <dimensions x="676" y="400" cx="50" cy="18"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="3" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATMIBE</host_field>
+    </edit>
+    <edit>
+      <dimensions x="676" y="420" cx="50" cy="18"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="1" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATONAV</host_field>
+    </edit>
+    <edit>
+      <dimensions x="676" y="440" cx="50" cy="18"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="1" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATTREN</host_field>
+    </edit>
+    <combo>
+      <dimensions x="816" y="278" cx="60" cy="59"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <host_conversion/>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATKZNP</host_field>
+      <value_list>
+        <string>J	Ja</string>
+        <string> 	Nein</string>
+      </value_list>
+    </combo>
+    <combo>
+      <dimensions x="816" y="298" cx="60" cy="69"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <host_conversion/>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>XA06</host_field>
+      <value_list>
+        <string>J	Ja</string>
+        <string>N	Nein</string>
+      </value_list>
+    </combo>
+    <combo>
+      <dimensions x="816" y="318" cx="60" cy="69"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <host_conversion/>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATZKA01</host_field>
+      <value_list>
+        <string>J	Ja</string>
+        <string> 	Nein</string>
+      </value_list>
+    </combo>
+    <combo>
+      <dimensions x="816" y="338" cx="60" cy="69"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <host_conversion/>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATXA12</host_field>
+      <value_list>
+        <string>J	Ja</string>
+        <string>N	Nein</string>
+      </value_list>
+    </combo>
+    <combo>
+      <dimensions x="816" y="358" cx="60" cy="69"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <host_conversion/>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATXA07</host_field>
+      <value_list>
+        <string> 	Ja</string>
+        <string>N	Nein</string>
+      </value_list>
+    </combo>
+    <combo>
+      <dimensions x="816" y="378" cx="60" cy="110"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="1" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <host_conversion/>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATRGKZ</host_field>
+      <value_list>
+        <string>	Kein</string>
+        <string>A	Auto</string>
+        <string>N	Nicht</string>
+        <string>F	Fest</string>
+        <string>D	Direkt</string>
+      </value_list>
+    </combo>
+    <combo>
+      <dimensions x="816" y="398" cx="60" cy="69"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <host_conversion/>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>AT100F</host_field>
+      <value_list>
+        <string>Y	Ja</string>
+        <string> 	Nein</string>
+      </value_list>
+    </combo>
+    <combo>
+      <dimensions x="816" y="418" cx="60" cy="69"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <host_conversion/>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATHITL</host_field>
+      <value_list>
+        <string> 	Ja</string>
+        <string>N	Nein</string>
+      </value_list>
+    </combo>
+    <combo>
+      <dimensions x="69" y="442" cx="207" cy="106"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <host_conversion/>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATEANJ</host_field>
+      <value_list>
+        <string>J	Deutscher Presse Code</string>
+        <string>N	Kein EAN Code</string>
+        <string>?	neues Objekt - EAN Code folgt</string>
+        <string>F	Code nach fremder Norm</string>
+      </value_list>
+    </combo>
+    <combo>
+      <dimensions x="69" y="462" cx="207" cy="129"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="2" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <host_conversion/>
+        <output_when_read_only/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATLAAO</host_field>
+      <value_list>
+        <string>00	Kein ADDOn</string>
+        <string>5F	1=Jahr 2-5=Folge</string>
+        <string>5J	1-2=Jahr 3-5=Folge</string>
+        <string>T0	1=Tag; 2-3=00; 4-5=Folge</string>
+        <string>TR	1=Tag 2-3=Reg.ausg. 4-5=Jahr</string>
+        <string>0R	1=0 2-3=Reg.ausg. 4-5=Folge</string>
+        <string>2F	2 stellige Folge-Nr</string>
+        <string>FF	5 stellige Folge-Nr</string>
+        <string>4J	1=0 2-3=Jahr 4-5=Folge</string>
+        <string>5R	1=Jahr; 2-3=Jahr; 4-5=Folge</string>
+      </value_list>
+    </combo>
+    <edit>
+      <dimensions x="69" y="482" cx="60" cy="20"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="7" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATEANV</host_field>
+    </edit>
+    <edit>
+      <dimensions x="69" y="501" cx="49" cy="20"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="7" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATXN18</host_field>
+    </edit>
+    <edit>
+      <dimensions x="123" y="501" cx="49" cy="20"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_length length="6" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATXN08</host_field>
+    </edit>
+    <button>
+      <dimensions x="648" y="526" cx="70" cy="19"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+        <ColorBackground>72</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <centered/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <non_default_align/>
+      </general_flags_3>
+      <send_key>12</send_key>
+      <title>Speichern</title>
+    </button>
+    <button>
+      <dimensions x="806" y="526" cx="70" cy="19"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+        <ColorBackground>72</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <centered/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <non_default_align/>
+      </general_flags_3>
+      <send_key>1</send_key>
+      <title>OK</title>
+    </button>
+    <button>
+      <dimensions x="727" y="526" cx="70" cy="19"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+        <ColorBackground>72</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <centered/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <non_default_align/>
+      </general_flags_3>
+      <script>HostFieldPutData(&quot;AKTION&quot;, 0, &quot;D&quot;)</script>
+      <title>Dispo</title>
+    </button>
+    <text>
+      <dimensions x="12" y="53" cx="95" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Objektnummer</title>
+    </text>
+    <text>
+      <dimensions x="288" y="260" cx="102" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Abrechnung</title>
+    </text>
+    <text>
+      <dimensions x="13" y="299" cx="77" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Rhyth</title>
+    </text>
+    <text>
+      <dimensions x="13" y="319" cx="77" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Tag</title>
+    </text>
+    <output>
+      <dimensions x="5" y="2" cx="123" cy="17"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <host_field>FIL</host_field>
+    </output>
+    <text>
+      <dimensions x="574" y="341" cx="98" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Glättungsfakt</title>
+    </text>
+    <text>
+      <dimensions x="574" y="361" cx="98" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Sicherheitsfakt</title>
+    </text>
+    <text>
+      <dimensions x="574" y="381" cx="98" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>AV-Zuschlag</title>
+    </text>
+    <text>
+      <dimensions x="574" y="401" cx="98" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Mindestbezug</title>
+    </text>
+    <text>
+      <dimensions x="735" y="381" cx="79" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Regulierung</title>
+    </text>
+    <text>
+      <dimensions x="735" y="301" cx="70" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>VMP Fähig</title>
+    </text>
+    <text>
+      <dimensions x="288" y="320" cx="102" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Rundschreiben</title>
+    </text>
+    <text>
+      <dimensions x="735" y="321" cx="70" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Saison Obj</title>
+    </text>
+    <text>
+      <dimensions x="735" y="341" cx="70" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>VMP EDI</title>
+    </text>
+    <text>
+      <dimensions x="735" y="361" cx="70" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>BWK EDI</title>
+    </text>
+    <text>
+      <dimensions x="735" y="279" cx="70" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Non Press</title>
+    </text>
+    <text>
+      <dimensions x="288" y="340" cx="102" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>ORV Fähig</title>
+    </text>
+    <text>
+      <dimensions x="735" y="401" cx="72" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>100 Folgen</title>
+    </text>
+    <text>
+      <dimensions x="735" y="421" cx="58" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Hitliste</title>
+    </text>
+    <text>
+      <dimensions x="13" y="339" cx="77" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>VB Inhalt</title>
+    </text>
+    <text>
+      <dimensions x="13" y="359" cx="77" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Spitze</title>
+    </text>
+    <text>
+      <dimensions x="13" y="261" cx="77" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Typ</title>
+    </text>
+    <text>
+      <dimensions x="288" y="280" cx="102" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Remi- / Aufrufart</title>
+    </text>
+    <text>
+      <dimensions x="13" y="399" cx="77" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Th.Paketinh</title>
+    </text>
+    <text>
+      <dimensions x="13" y="379" cx="77" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Gewicht</title>
+    </text>
+    <text>
+      <dimensions x="9" y="502" cx="58" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Fremdcd.</title>
+    </text>
+    <text>
+      <dimensions x="9" y="484" cx="58" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>EAN VDZ</title>
+    </text>
+    <text>
+      <dimensions x="10" y="462" cx="58" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>ADDON</title>
+    </text>
+    <text>
+      <dimensions x="574" y="260" cx="98" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Disponent</title>
+    </text>
+    <text>
+      <dimensions x="510" y="165" cx="55" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>ab Folge</title>
+    </text>
+    <text>
+      <dimensions x="667" y="165" cx="55" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>ab Folge</title>
+    </text>
+    <text>
+      <dimensions x="812" y="165" cx="55" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>ab Folge</title>
+    </text>
+    <text>
+      <dimensions x="537" y="53" cx="43" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Verlag</title>
+    </text>
+    <text>
+      <dimensions x="574" y="279" cx="97" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Vertriebskz.</title>
+    </text>
+    <text>
+      <dimensions x="300" y="98" cx="31" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>lang</title>
+    </text>
+    <text>
+      <dimensions x="708" y="98" cx="36" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>kurz</title>
+    </text>
+    <text>
+      <dimensions x="34" y="98" cx="77" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Bildschirm</title>
+    </text>
+    <text>
+      <dimensions x="288" y="300" cx="102" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Schein</title>
+    </text>
+    <text>
+      <dimensions x="574" y="321" cx="66" cy="17"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Vlg.-intern</title>
+    </text>
+    <text>
+      <dimensions x="574" y="421" cx="83" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Zuschl.grenze</title>
+    </text>
+    <text>
+      <dimensions x="574" y="441" cx="102" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Trendkennzeich</title>
+    </text>
+    <text>
+      <dimensions x="191" y="53" cx="87" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>VDZ Nummer</title>
+    </text>
+    <text>
+      <dimensions x="154" y="380" cx="28" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>ab</title>
+    </text>
+    <text>
+      <dimensions x="288" y="360" cx="106" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>KR- B- RoList</title>
+    </text>
+    <text>
+      <dimensions x="288" y="380" cx="77" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Lagerart</title>
+    </text>
+    <text>
+      <dimensions x="13" y="280" cx="68" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>LS Position</title>
+    </text>
+    <button>
+      <dimensions x="569" y="526" cx="70" cy="19"/>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+        <ColorBackground>72</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <centered/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_disable/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <general_flags_3>
+        <mouse_over_hand/>
+        <non_default_align/>
+      </general_flags_3>
+      <panel_next>*</panel_next>
+      <title>Zurück</title>
+    </button>
+    <output>
+      <dimensions x="569" y="499" cx="316" cy="20"/>
+      <enable_expression>@ERRMSG@</enable_expression>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+        <ColorForeground>1</ColorForeground>
+        <ColorBackground>3</ColorBackground>
+      </FontColor>
+      <general_flags_1>
+        <centered/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <border/>
+      </general_flags_3>
+      <host_field>ERRMSG</host_field>
+    </output>
+    <text>
+      <dimensions x="434" y="210" cx="64" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Spanne EH</title>
+    </text>
+    <output>
+      <dimensions x="514" y="210" cx="51" cy="16"/>
+      <field_format>##0,00%</field_format>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <host_field>EHSP</host_field>
+    </output>
+    <output>
+      <dimensions x="673" y="210" cx="53" cy="16"/>
+      <field_format>##0,00%</field_format>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <general_flags_2>
+        <visibility_not_present_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <host_field>GRSP</host_field>
+    </output>
+    <text>
+      <dimensions x="596" y="210" cx="63" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <right_aligned/>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Spanne GR</title>
+    </text>
+    <edit>
+      <dimensions x="676" y="300" cx="34" cy="18"/>
+      <enable_expression>@ATVKZ@</enable_expression>
+      <field_flags>
+        <tab_stop/>
+      </field_flags>
+      <field_format>#####</field_format>
+      <field_length length="5" field_type="0" check_direct="0"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 8 Bold</FontStyleName>
+      </FontColor>
+      <FontColorFocus>
+        <FontStyleName/>
+        <ColorBackground>30</ColorBackground>
+      </FontColorFocus>
+      <general_flags_1>
+        <cursor_selected/>
+        <no_border_when_read_only/>
+        <output_when_read_only/>
+        <right_aligned/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+        <visibility_not_present_hide/>
+        <visibility_output_data_disable/>
+        <visibility_output_empty_disable/>
+      </general_flags_2>
+      <host_field>ATISTA</host_field>
+    </edit>
+    <text>
+      <dimensions x="574" y="301" cx="64" cy="16"/>
+      <FontColor>
+        <FontStyleName>Sans Serif 10</FontStyleName>
+      </FontColor>
+      <general_flags_1>
+        <translate/>
+      </general_flags_1>
+      <general_flags_2>
+        <visibility_equal_hide/>
+      </general_flags_2>
+      <general_flags_3>
+        <transparent_background/>
+      </general_flags_3>
+      <title>Teilausg.</title>
+    </text>
+  </controls>
+</panel>

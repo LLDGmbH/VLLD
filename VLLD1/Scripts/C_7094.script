@@ -1,0 +1,17 @@
+﻿dim text, sql, ErrorMsg as String
+dim rc as Integer
+global filiale as string 
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rem rc = EzSQLQuery("SELECT digits(ssstkz) concat ' - ' concat ssname FROM GRSTSP order by digits(ssstkz)", text, ErrorMsg)
+rem PanelFieldSetProp ("ws_depot", 5, text) 
+
+rc = EzSQLQuery("SELECT digits(bistpkz) concat ' - ' concat biname FROM GRBSIP order by digits(bistpkz)", text, ErrorMsg)
+PanelFieldSetProp ("c1stpkt", 5, text) 
+
+
+PanelUpdateEnable(2)

@@ -1,0 +1,72 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim x2Art, x2VDZ, x2Obj, x2ANam, x2Folg, x2VKP, x2Best, x2SRe, x2FRe, x2NL, x2WmR, x2NB, x2Antw, errmsg, datei, pfad_datei, source as string 
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Regalpflege.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1",  "Art")
+ddepoke( ddehandle, "Z1S2",  "VDZ-Nr")
+ddepoke( ddehandle, "Z1S3",  "Obj-Nr")
+ddepoke( ddehandle, "Z1S4",  "Objektbezeichnung")
+ddepoke( ddehandle, "Z1S5",  "Folge")
+ddepoke( ddehandle, "Z1S6",  "VKP")
+ddepoke( ddehandle, "Z1S7",  "Bezug")
+ddepoke( ddehandle, "Z1S8",  "Sofort-Remi")
+ddepoke( ddehandle, "Z1S9",  "Früh-Remi")
+ddepoke( ddehandle, "Z1S10", "Nachlieferung")
+ddepoke( ddehandle, "Z1S11", "Werbemittel-Rückmeldung")
+ddepoke( ddehandle, "Z1S12", "Neuer Bezug")
+ddepoke( ddehandle, "Z1S13", "Antwort")
+
+nochmal:
+
+HostFieldGetLineData("s2Art",   i, x2Art)
+HostFieldGetLineData("s2VDZ",   i, x2VDZ)
+HostFieldGetLineData("s2Obj",   i, x2Obj)
+HostFieldGetLineData("s2ANam",  i, x2ANam)
+HostFieldGetLineData("s2Folg",  i, x2Folg)
+HostFieldGetLineData("s2VKP",   i, x2VKP)
+HostFieldGetLineData("s2Best",  i, x2Best)
+HostFieldGetLineData("s2SRe",   i, x2SRe)
+HostFieldGetLineData("s2FRe",   i, x2FRe)
+HostFieldGetLineData("s2NL",    i, x2NL)
+HostFieldGetLineData("s2WmR",   i, x2WmR)
+HostFieldGetLineData("s2NB",    i, x2NB)
+HostFieldGetLineData("s2Antw",  i, x2Antw)
+
+if (x2VDZ <> "") then
+ddepoke( ddehandle, "Z" + str(j) +"S1",  x2Art)
+ddepoke( ddehandle, "Z" + str(j) +"S2",  x2VDZ)
+ddepoke( ddehandle, "Z" + str(j) +"S3",  x2Obj)
+ddepoke( ddehandle, "Z" + str(j) +"S4",  x2ANam)
+ddepoke( ddehandle, "Z" + str(j) +"S5",  x2Folg)
+ddepoke( ddehandle, "Z" + str(j) +"S6",  x2VKP)
+ddepoke( ddehandle, "Z" + str(j) +"S7",  x2Best)
+ddepoke( ddehandle, "Z" + str(j) +"S8",  x2SRe)
+ddepoke( ddehandle, "Z" + str(j) +"S9",  x2FRe)
+ddepoke( ddehandle, "Z" + str(j) +"S10", x2NL)
+ddepoke( ddehandle, "Z" + str(j) +"S11", x2WmR)
+ddepoke( ddehandle, "Z" + str(j) +"S12", x2NB)
+ddepoke( ddehandle, "Z" + str(j) +"S13", x2Antw)
+j=j+1
+endif
+
+if i < 17 then
+i=i+1
+goto nochmal
+endif
+ 
+if x2VDZ <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

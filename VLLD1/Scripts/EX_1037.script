@@ -1,0 +1,83 @@
+﻿DIM ddehandle, i, j, msg as integer
+dim xobjnr, xvavnr, xerschw, xobnr, xtitel, xerschwtext, xrnr, xnl1, xnl2, xnl3, xnl4, xnl5, xschnitt, xspit, xvmpspit, xdiff, datei, pfad_datei, source as string 
+i = 0
+j=5
+
+HostFieldGetData("objnr",xobjnr)
+HostFieldGetData("vavnr",xvavnr)
+HostFieldGetData("erschw",xerschw)
+
+datei = "Vergleich_NaLi_Spitze.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "Objektnummer")
+ddepoke( ddehandle, "Z1S2", xobjnr)
+ddepoke( ddehandle, "Z2S1", "Verlag")
+ddepoke( ddehandle, "Z2S2", xvavnr)
+ddepoke( ddehandle, "Z3S1", "Erscheinungsweise")
+ddepoke( ddehandle, "Z3S2", xerschw)
+
+ddepoke( ddehandle, "Z4S1", "Ryth.")
+ddepoke( ddehandle, "Z4S2", "Obnr")
+ddepoke( ddehandle, "Z4S3", "Titel")
+ddepoke( ddehandle, "Z4S4", "Folge")
+ddepoke( ddehandle, "Z4S5", "Nl 1")
+ddepoke( ddehandle, "Z4S6", "Nl 2")
+ddepoke( ddehandle, "Z4S7", "Nl 3")
+ddepoke( ddehandle, "Z4S8", "Nl 4")
+ddepoke( ddehandle, "Z4S9", "Nl 5")
+ddepoke( ddehandle, "Z4S10", "Nl Schnitt")
+ddepoke( ddehandle, "Z4S11", "Spitze")
+ddepoke( ddehandle, "Z4S12", "VMP-Spitze")
+ddepoke( ddehandle, "Z4S13", "Differenz")
+
+
+nochmal:
+
+HostFieldGetLineData("erschwtext", i, xerschwtext)
+HostFieldGetLineData("obnr", i, xobnr)
+HostFieldGetLineData("obbz", i, xtitel)
+HostFieldGetLineData("rnr", i, xrnr)
+HostFieldGetLineData("nl1", i, xnl1)
+HostFieldGetLineData("nl2", i, xnl2)
+HostFieldGetLineData("nl3", i, xnl3)
+HostFieldGetLineData("nl4", i, xnl4)
+HostFieldGetLineData("nl5", i, xnl5)
+HostFieldGetLineData("schnitt", i, xschnitt)
+HostFieldGetLineData("spit", i, xspit)
+HostFieldGetLineData("vmpspit", i, xvmpspit)
+HostFieldGetLineData("diff", i, xdiff)
+
+if xtitel <> ""  then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xerschwtext)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xobnr)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xtitel)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xrnr)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xnl1)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xnl2)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xnl3)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xnl4)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xnl5)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xschnitt)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xspit)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xvmpspit)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xdiff)
+j=j+1
+endif
+
+if i < 15 then
+i=i+1
+goto nochmal
+endif
+ 
+if xtitel <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

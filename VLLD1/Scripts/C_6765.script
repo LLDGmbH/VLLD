@@ -1,0 +1,25 @@
+﻿dim text, ErrorMsg,sqlstmd as String
+dim rc as Integer
+dim con_table as integer
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rem *** Verlagsstamm
+sqlstmd = "SELECT vavnr, digits(vavnr) concat ' - ' concat vaname FROM gradrp order by digits(vavnr)"
+rc = EzSQLQuery(sqlstmd, text, ErrorMsg)
+
+PanelFieldSetProp ("C1VNR", 5, text) 
+
+
+rem *** Objektgruppen
+sqlstmd = "SELECT digits(ehnr) concat digits(ehunr), digits(ehnr) concat digits(ehunr) concat ' - ' concat ehtext FROM gretxp order by digits(ehnr) concat digits(ehunr)"
+rc = EzSQLQuery(sqlstmd, text, ErrorMsg)
+
+PanelFieldSetProp ("ehcd", 5, text) 
+
+PanelUpdateEnable(2)
+
+ScriptCall("c_fil")

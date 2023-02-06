@@ -1,0 +1,41 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+DIM datei, pfad_datei, source as string 
+DIM xS4ANZ, xS4GKZ, xS4BEZ as string 
+i = 0
+j=2
+
+datei = "Kundenzahlen_Gemeinden.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "Anzahl" )
+ddepoke( ddehandle, "Z1S2", "Gemeinde" )
+ddepoke( ddehandle, "Z1S3", "Bezeichnung" )
+
+
+nochmal:
+
+HostFieldGetLineData("S4ANZ", i, xS4ANZ)
+HostFieldGetLineData("S4GKZ", i, xS4GKZ)
+HostFieldGetLineData("S4BEZ", i, xS4BEZ)
+
+ddepoke(ddehandle, "Z" + str(j) +"S1", xS4ANZ)
+ddepoke(ddehandle, "Z" + str(j) +"S2", xS4GKZ)
+ddepoke(ddehandle, "Z" + str(j) +"S3", xS4BEZ)
+j=j+1
+
+if i < 19 then
+i=i+1
+goto nochmal
+endif
+
+if xS4BEZ <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

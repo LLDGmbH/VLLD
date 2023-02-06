@@ -1,0 +1,1728 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="OSNA_SRC/KD65DSN(SFC1+KEY01)" library="OSNA_SRC" member_name="KD65DSN">
+    <size cx="132" cy="27"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="f21" caption="F21" attention_key="false"/>
+    <action key="f22" caption="F22" attention_key="false"/>
+    <action key="f23" caption="F23" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <field field_type="screen_part" name="SFC1">
+      <area>
+        <position/>
+        <size cx="132" cy="23"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="KEY01" overlay="true">
+      <area>
+        <position y="26"/>
+        <size cx="132" cy="1"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Ändern Anzahl MAX Titel" display_length="23" data_length="23">
+          <area>
+            <position x="50"/>
+            <size cx="23" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="114"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="123"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SDS_USER" short_name="SDS_USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="1" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="S I C H E R H E I T S A B F R A G E" display_length="35" data_length="35">
+          <area>
+            <position x="44" y="1"/>
+            <size cx="35" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SDS_JOB" short_name="SDS_JOB" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="114" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="KD65" display_length="4" data_length="4">
+          <area>
+            <position x="125" y="1"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="fixed_text" value="Wollen Sie wirklich diese Kunden auf den folgenden Stand bringen?" display_length="65" data_length="65">
+          <area>
+            <position x="25" y="2"/>
+            <size cx="65" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="both" name="C1AUSW" short_name="C1AUSW" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true">
+          <area>
+            <position x="91" y="2"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="(J/N)" display_length="5" data_length="5">
+          <area>
+            <position x="93" y="2"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="  Kunde Name                           01/11 02/12 03/13 04/14 05/15 06/16 07/17 08/18 09/19 10/20   Ges   Min    Max  BL NE KA UV" display_length="130" data_length="130" underline="true">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="130" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S1KDNR" short_name="S1KDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="30" data_length="30" conditional="true">
+          <area>
+            <position x="9" y="5"/>
+            <size cx="30" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD01" short_name="S1EHCD01" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD02" short_name="S1EHCD02" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD03" short_name="S1EHCD03" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD04" short_name="S1EHCD04" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="58" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD05" short_name="S1EHCD05" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="64" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD06" short_name="S1EHCD06" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="70" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD07" short_name="S1EHCD07" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="76" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD08" short_name="S1EHCD08" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="82" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD09" short_name="S1EHCD09" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="88" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD10" short_name="S1EHCD10" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="94" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1MIN" short_name="S1MIN" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="106" y="5"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1MAX" short_name="S1MAX" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="113" y="5"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1BL" short_name="S1BL" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="121" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1NE" short_name="S1NE" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="124" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KA" short_name="S1KA" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="127" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1UVD" short_name="S1UVD" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="130" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD11" short_name="S1EHCD11" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD12" short_name="S1EHCD12" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD13" short_name="S1EHCD13" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD14" short_name="S1EHCD14" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="58" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD15" short_name="S1EHCD15" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="64" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD16" short_name="S1EHCD16" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="70" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD17" short_name="S1EHCD17" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="76" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD18" short_name="S1EHCD18" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="82" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD19" short_name="S1EHCD19" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="88" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD20" short_name="S1EHCD20" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="94" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1GES" short_name="S1GES" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="100" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KDNR" short_name="S1KDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="30" data_length="30" conditional="true">
+          <area>
+            <position x="9" y="7"/>
+            <size cx="30" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD01" short_name="S1EHCD01" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD02" short_name="S1EHCD02" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD03" short_name="S1EHCD03" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD04" short_name="S1EHCD04" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="58" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD05" short_name="S1EHCD05" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="64" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD06" short_name="S1EHCD06" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="70" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD07" short_name="S1EHCD07" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="76" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD08" short_name="S1EHCD08" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="82" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD09" short_name="S1EHCD09" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="88" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD10" short_name="S1EHCD10" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="94" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1MIN" short_name="S1MIN" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="106" y="7"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1MAX" short_name="S1MAX" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="113" y="7"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1BL" short_name="S1BL" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="121" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1NE" short_name="S1NE" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="124" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KA" short_name="S1KA" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="127" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1UVD" short_name="S1UVD" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="130" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD11" short_name="S1EHCD11" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD12" short_name="S1EHCD12" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD13" short_name="S1EHCD13" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD14" short_name="S1EHCD14" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="58" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD15" short_name="S1EHCD15" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="64" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD16" short_name="S1EHCD16" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="70" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD17" short_name="S1EHCD17" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="76" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD18" short_name="S1EHCD18" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="82" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD19" short_name="S1EHCD19" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="88" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD20" short_name="S1EHCD20" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="94" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1GES" short_name="S1GES" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="100" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KDNR" short_name="S1KDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="30" data_length="30" conditional="true">
+          <area>
+            <position x="9" y="9"/>
+            <size cx="30" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD01" short_name="S1EHCD01" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD02" short_name="S1EHCD02" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD03" short_name="S1EHCD03" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD04" short_name="S1EHCD04" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="58" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD05" short_name="S1EHCD05" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="64" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD06" short_name="S1EHCD06" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="70" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD07" short_name="S1EHCD07" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="76" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD08" short_name="S1EHCD08" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="82" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD09" short_name="S1EHCD09" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="88" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD10" short_name="S1EHCD10" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="94" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1MIN" short_name="S1MIN" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="106" y="9"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1MAX" short_name="S1MAX" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="113" y="9"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1BL" short_name="S1BL" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="121" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1NE" short_name="S1NE" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="124" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KA" short_name="S1KA" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="127" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1UVD" short_name="S1UVD" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="130" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S1EHCD11" short_name="S1EHCD11" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD12" short_name="S1EHCD12" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD13" short_name="S1EHCD13" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD14" short_name="S1EHCD14" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="58" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD15" short_name="S1EHCD15" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="64" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD16" short_name="S1EHCD16" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="70" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD17" short_name="S1EHCD17" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="76" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD18" short_name="S1EHCD18" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="82" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD19" short_name="S1EHCD19" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="88" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD20" short_name="S1EHCD20" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="94" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1GES" short_name="S1GES" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="100" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KDNR" short_name="S1KDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="30" data_length="30" conditional="true">
+          <area>
+            <position x="9" y="11"/>
+            <size cx="30" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD01" short_name="S1EHCD01" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD02" short_name="S1EHCD02" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD03" short_name="S1EHCD03" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD04" short_name="S1EHCD04" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="58" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD05" short_name="S1EHCD05" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="64" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD06" short_name="S1EHCD06" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="70" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD07" short_name="S1EHCD07" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="76" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD08" short_name="S1EHCD08" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="82" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD09" short_name="S1EHCD09" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="88" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD10" short_name="S1EHCD10" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="94" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1MIN" short_name="S1MIN" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="106" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1MAX" short_name="S1MAX" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="113" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1BL" short_name="S1BL" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="121" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1NE" short_name="S1NE" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="124" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KA" short_name="S1KA" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="127" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1UVD" short_name="S1UVD" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="130" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD11" short_name="S1EHCD11" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD12" short_name="S1EHCD12" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD13" short_name="S1EHCD13" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD14" short_name="S1EHCD14" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="58" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD15" short_name="S1EHCD15" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="64" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD16" short_name="S1EHCD16" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="70" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD17" short_name="S1EHCD17" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="76" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD18" short_name="S1EHCD18" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="82" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD19" short_name="S1EHCD19" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="88" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD20" short_name="S1EHCD20" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="94" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1GES" short_name="S1GES" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="100" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KDNR" short_name="S1KDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="30" data_length="30" conditional="true">
+          <area>
+            <position x="9" y="13"/>
+            <size cx="30" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD01" short_name="S1EHCD01" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD02" short_name="S1EHCD02" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD03" short_name="S1EHCD03" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD04" short_name="S1EHCD04" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="58" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD05" short_name="S1EHCD05" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="64" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD06" short_name="S1EHCD06" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="70" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD07" short_name="S1EHCD07" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="76" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD08" short_name="S1EHCD08" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="82" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD09" short_name="S1EHCD09" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="88" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD10" short_name="S1EHCD10" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="94" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1MIN" short_name="S1MIN" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="106" y="13"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1MAX" short_name="S1MAX" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="113" y="13"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1BL" short_name="S1BL" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="121" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1NE" short_name="S1NE" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="124" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KA" short_name="S1KA" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="127" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1UVD" short_name="S1UVD" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="130" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD11" short_name="S1EHCD11" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD12" short_name="S1EHCD12" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD13" short_name="S1EHCD13" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD14" short_name="S1EHCD14" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="58" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD15" short_name="S1EHCD15" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="64" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD16" short_name="S1EHCD16" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="70" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD17" short_name="S1EHCD17" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="76" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD18" short_name="S1EHCD18" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="82" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD19" short_name="S1EHCD19" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="88" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD20" short_name="S1EHCD20" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="94" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1GES" short_name="S1GES" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="100" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S1KDNR" short_name="S1KDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="30" data_length="30" conditional="true">
+          <area>
+            <position x="9" y="15"/>
+            <size cx="30" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD01" short_name="S1EHCD01" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD02" short_name="S1EHCD02" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD03" short_name="S1EHCD03" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD04" short_name="S1EHCD04" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="58" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD05" short_name="S1EHCD05" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="64" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD06" short_name="S1EHCD06" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="70" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD07" short_name="S1EHCD07" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="76" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD08" short_name="S1EHCD08" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="82" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD09" short_name="S1EHCD09" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="88" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD10" short_name="S1EHCD10" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="94" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1MIN" short_name="S1MIN" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="106" y="15"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1MAX" short_name="S1MAX" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="113" y="15"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1BL" short_name="S1BL" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="121" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1NE" short_name="S1NE" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="124" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KA" short_name="S1KA" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="127" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1UVD" short_name="S1UVD" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="130" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD11" short_name="S1EHCD11" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD12" short_name="S1EHCD12" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD13" short_name="S1EHCD13" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD14" short_name="S1EHCD14" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="58" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD15" short_name="S1EHCD15" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="64" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD16" short_name="S1EHCD16" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="70" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD17" short_name="S1EHCD17" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="76" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD18" short_name="S1EHCD18" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="82" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD19" short_name="S1EHCD19" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="88" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD20" short_name="S1EHCD20" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="94" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1GES" short_name="S1GES" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="100" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KDNR" short_name="S1KDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="30" data_length="30" conditional="true">
+          <area>
+            <position x="9" y="17"/>
+            <size cx="30" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD01" short_name="S1EHCD01" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD02" short_name="S1EHCD02" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD03" short_name="S1EHCD03" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD04" short_name="S1EHCD04" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="58" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD05" short_name="S1EHCD05" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="64" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD06" short_name="S1EHCD06" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="70" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD07" short_name="S1EHCD07" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="76" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD08" short_name="S1EHCD08" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="82" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD09" short_name="S1EHCD09" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="88" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD10" short_name="S1EHCD10" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="94" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1MIN" short_name="S1MIN" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="106" y="17"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1MAX" short_name="S1MAX" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="113" y="17"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1BL" short_name="S1BL" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="121" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1NE" short_name="S1NE" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="124" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KA" short_name="S1KA" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="127" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1UVD" short_name="S1UVD" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="130" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD11" short_name="S1EHCD11" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD12" short_name="S1EHCD12" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD13" short_name="S1EHCD13" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD14" short_name="S1EHCD14" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="58" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD15" short_name="S1EHCD15" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="64" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD16" short_name="S1EHCD16" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="70" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD17" short_name="S1EHCD17" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="76" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD18" short_name="S1EHCD18" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="82" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD19" short_name="S1EHCD19" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="88" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD20" short_name="S1EHCD20" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="94" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1GES" short_name="S1GES" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="100" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KDNR" short_name="S1KDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="30" data_length="30" conditional="true">
+          <area>
+            <position x="9" y="19"/>
+            <size cx="30" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD01" short_name="S1EHCD01" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD02" short_name="S1EHCD02" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD03" short_name="S1EHCD03" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD04" short_name="S1EHCD04" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="58" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD05" short_name="S1EHCD05" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="64" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD06" short_name="S1EHCD06" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="70" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD07" short_name="S1EHCD07" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="76" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD08" short_name="S1EHCD08" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="82" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD09" short_name="S1EHCD09" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="88" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD10" short_name="S1EHCD10" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="94" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1MIN" short_name="S1MIN" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="106" y="19"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1MAX" short_name="S1MAX" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="113" y="19"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1BL" short_name="S1BL" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="121" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1NE" short_name="S1NE" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="124" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KA" short_name="S1KA" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="127" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1UVD" short_name="S1UVD" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="130" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S1EHCD11" short_name="S1EHCD11" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD12" short_name="S1EHCD12" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD13" short_name="S1EHCD13" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD14" short_name="S1EHCD14" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="58" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD15" short_name="S1EHCD15" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="64" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD16" short_name="S1EHCD16" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="70" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD17" short_name="S1EHCD17" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="76" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD18" short_name="S1EHCD18" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="82" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD19" short_name="S1EHCD19" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="88" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD20" short_name="S1EHCD20" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="94" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1GES" short_name="S1GES" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="100" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KDNR" short_name="S1KDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="1" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S1KNAM" short_name="S1KNAM" data_type="alphanumeric" display_length="30" data_length="30" conditional="true">
+          <area>
+            <position x="9" y="21"/>
+            <size cx="30" cy="1"/>
+          </area>
+          <color foreground="cyan" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD01" short_name="S1EHCD01" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD02" short_name="S1EHCD02" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD03" short_name="S1EHCD03" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD04" short_name="S1EHCD04" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="58" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD05" short_name="S1EHCD05" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="64" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD06" short_name="S1EHCD06" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="70" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD07" short_name="S1EHCD07" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="76" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD08" short_name="S1EHCD08" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="82" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD09" short_name="S1EHCD09" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="88" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD10" short_name="S1EHCD10" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="94" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1MIN" short_name="S1MIN" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="106" y="21"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1MAX" short_name="S1MAX" data_type="zoned_decimal" display_length="6" data_length="5" conditional="true" decimal_positions="2">
+          <area>
+            <position x="113" y="21"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1BL" short_name="S1BL" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="121" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1NE" short_name="S1NE" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="124" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1KA" short_name="S1KA" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="127" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1UVD" short_name="S1UVD" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="130" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD11" short_name="S1EHCD11" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="40" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD12" short_name="S1EHCD12" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="46" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD13" short_name="S1EHCD13" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="52" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD14" short_name="S1EHCD14" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="58" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD15" short_name="S1EHCD15" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="64" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD16" short_name="S1EHCD16" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="70" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD17" short_name="S1EHCD17" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="76" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD18" short_name="S1EHCD18" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="82" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD19" short_name="S1EHCD19" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="88" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1EHCD20" short_name="S1EHCD20" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="94" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S1GES" short_name="S1GES" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="100" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="Systemmeldung:" display_length="14" data_length="14">
+      <area>
+        <position x="1" y="26"/>
+        <size cx="14" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="K1MSG" short_name="K1MSG" data_type="alphanumeric" display_length="60" data_length="60" blink="true">
+      <area>
+        <position x="16" y="26"/>
+        <size cx="60" cy="1"/>
+      </area>
+      <color foreground="red"/>
+    </field>
+  </screen>
+</header>

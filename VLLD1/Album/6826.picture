@@ -1,0 +1,1802 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="OSNA_COL/RN60DS(SFC+KEY02)" library="OSNA_COL" member_name="RN60DS">
+    <size cx="132" cy="27"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f24" caption="F24" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <field field_type="screen_part" name="SFC" overlay="true">
+      <area>
+        <position/>
+        <size cx="132" cy="26"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="KEY02" overlay="true">
+      <area>
+        <position y="26"/>
+        <size cx="132" cy="1"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SDS_USER" short_name="SDS_USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="Umsatz/Absatz ein Kunden nach Rechnungswoche" display_length="44" data_length="44">
+          <area>
+            <position x="42"/>
+            <size cx="44" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SDS_JOB" short_name="SDS_JOB" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="98"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="RN60S" display_length="5" data_length="5">
+          <area>
+            <position x="109"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="115"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="124"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Kunde" display_length="5" data_length="5">
+          <area>
+            <position x="1" y="1"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" underline="true" high_intensity="true">
+          <area>
+            <position x="7" y="1"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFNAME" short_name="SFNAME" data_type="alphanumeric" display_length="33" data_length="33">
+          <area>
+            <position x="15" y="1"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="Woche    UmsVKP     UmsAGP    LiefEx   RemEx   FrühAGP   FrühEx   SpätAGP   SpätEx  A                                             " display_length="130" data_length="130" underline="true">
+          <area>
+            <position x="1" y="2"/>
+            <size cx="130" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFJAHR" short_name="SFJAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFWOCH" short_name="SFWOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="3"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="9" y="3"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="20" y="3"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="31" y="3"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="3"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="3"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="58" y="3"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="66" y="3"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="77" y="3"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="85" y="3"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="SFJAHR" short_name="SFJAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFWOCH" short_name="SFWOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="4"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="9" y="4"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="20" y="4"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="31" y="4"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="4"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="4"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="58" y="4"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="66" y="4"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="77" y="4"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="85" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="SFJAHR" short_name="SFJAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFWOCH" short_name="SFWOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="5"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="9" y="5"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="20" y="5"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="31" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="5"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="58" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="66" y="5"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="77" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="85" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFJAHR" short_name="SFJAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFWOCH" short_name="SFWOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="6"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="9" y="6"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="20" y="6"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="31" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="6"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="58" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="66" y="6"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="77" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="85" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="SFJAHR" short_name="SFJAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFWOCH" short_name="SFWOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="7"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="9" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="20" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="31" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="58" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="66" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="77" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="85" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="SFJAHR" short_name="SFJAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFWOCH" short_name="SFWOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="8"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="9" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="20" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="31" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="58" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="66" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="77" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="85" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFJAHR" short_name="SFJAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFWOCH" short_name="SFWOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="9"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="9" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="20" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="31" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="58" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="66" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="77" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="85" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="SFJAHR" short_name="SFJAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFWOCH" short_name="SFWOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="10"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="9" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="20" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="31" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="58" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="66" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="77" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="85" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="SFJAHR" short_name="SFJAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFWOCH" short_name="SFWOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="11"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="9" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="20" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="31" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="58" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="66" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="77" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="85" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFJAHR" short_name="SFJAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFWOCH" short_name="SFWOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="12"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="9" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="20" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="31" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="58" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="66" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="77" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="85" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="SFJAHR" short_name="SFJAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFWOCH" short_name="SFWOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="13"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="9" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="20" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="31" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="58" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="66" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="77" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="85" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="SFJAHR" short_name="SFJAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFWOCH" short_name="SFWOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="14"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="9" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="20" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="31" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="58" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="66" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="77" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="85" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFJAHR" short_name="SFJAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFWOCH" short_name="SFWOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="15"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="9" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="20" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="31" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="58" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="66" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="77" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="85" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="SFJAHR" short_name="SFJAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFWOCH" short_name="SFWOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="16"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="9" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="20" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="31" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="58" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="66" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="77" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="85" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="SFJAHR" short_name="SFJAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFWOCH" short_name="SFWOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="17"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="9" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="20" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="31" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="58" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="66" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="77" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="85" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFJAHR" short_name="SFJAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFWOCH" short_name="SFWOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="18"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="9" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="20" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="31" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="58" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="66" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="77" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="85" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="SFJAHR" short_name="SFJAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFWOCH" short_name="SFWOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="19"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="9" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="20" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="31" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="58" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="66" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="77" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="85" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="SFJAHR" short_name="SFJAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFWOCH" short_name="SFWOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="20"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="9" y="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="20" y="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="31" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="58" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="66" y="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="77" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="85" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFJAHR" short_name="SFJAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="21"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFWOCH" short_name="SFWOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="21"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="9" y="21"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="20" y="21"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="31" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="21"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="58" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="66" y="21"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="77" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="85" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="SFJAHR" short_name="SFJAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="22"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFWOCH" short_name="SFWOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="22"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="9" y="22"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="20" y="22"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="31" y="22"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="22"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="22"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="58" y="22"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="66" y="22"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="77" y="22"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="85" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="SFJAHR" short_name="SFJAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="23"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFWOCH" short_name="SFWOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="23"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="9" y="23"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="20" y="23"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="31" y="23"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="23"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="23"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="58" y="23"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="66" y="23"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="77" y="23"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="85" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFJAHR" short_name="SFJAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="24"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFWOCH" short_name="SFWOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="24"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="9" y="24"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="20" y="24"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="31" y="24"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="24"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="24"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="58" y="24"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="66" y="24"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="77" y="24"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="85" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+        <field field_type="field" usage="output" name="SFJAHR" short_name="SFJAHR" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="1" y="25"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFWOCH" short_name="SFWOCH" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="6" y="25"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSV" short_name="SFUMSV" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="9" y="25"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFUMSA" short_name="SFUMSA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="20" y="25"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPL" short_name="SFEXPL" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="31" y="25"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFEXPR" short_name="SFEXPR" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="39" y="25"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREMA" short_name="SFFREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="47" y="25"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFREME" short_name="SFFREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="58" y="25"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSREMA" short_name="SFSREMA" data_type="zoned_decimal" display_length="10" data_length="8" conditional="true" decimal_positions="2">
+          <area>
+            <position x="66" y="25"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSREME" short_name="SFSREME" data_type="zoned_decimal" display_length="7" data_length="6" conditional="true">
+          <area>
+            <position x="77" y="25"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="85" y="25"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="green"/>
+        </field>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="F3 = Verlassen" display_length="14" data_length="14">
+      <area>
+        <position x="1" y="26"/>
+        <size cx="14" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

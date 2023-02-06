@@ -1,0 +1,1438 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="LLD_OBJ/LI01DS(2SFC+2KEY01)" library="LLD_OBJ" member_name="LI01DS">
+    <size cx="132" cy="27"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="f7" caption="F7" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <action key="roll_up" caption="ROLL_UP" attention_key="false"/>
+    <action key="roll_down" caption="ROLL_DOWN" attention_key="false"/>
+    <action key="help" caption="HELP" attention_key="false"/>
+    <field field_type="screen_part" name="2SFC">
+      <area>
+        <position/>
+        <size cx="132" cy="21"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="2KEY01" overlay="true">
+      <area>
+        <position y="23"/>
+        <size cx="132" cy="1"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="LIEFERSCHEIN-EINGABE" display_length="20" data_length="20">
+          <area>
+            <position x="30"/>
+            <size cx="20" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="63"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="72"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SDS_USER" short_name="SDS_USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="1" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SDS_JOB" short_name="SDS_JOB" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="63" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="LI01" display_length="4" data_length="4">
+          <area>
+            <position x="74" y="1"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="fixed_text" value="? A=Auswahl" display_length="11" data_length="11">
+          <area>
+            <position x="1" y="2"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="Objn Titel  VDZ   V.Int  EH Teil   Verl" display_length="39" data_length="39" underline="true">
+          <area>
+            <position x="20" y="2"/>
+            <size cx="39" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="  X=Löschen" display_length="11" data_length="11">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="input" name="OBJNR" short_name="OBJNR" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" exit_required="true">
+          <area>
+            <position x="20" y="3"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="input" name="STITEL" short_name="STITEL" data_type="alphanumeric" display_length="6" data_length="6" underline="true">
+          <area>
+            <position x="25" y="3"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="input" name="VDZ" short_name="VDZ" data_type="zoned_decimal" display_length="5" data_length="5" underline="true">
+          <area>
+            <position x="32" y="3"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="input" name="VINR" short_name="VINR" data_type="alphanumeric" display_length="6" data_length="6" underline="true">
+          <area>
+            <position x="38" y="3"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="input" name="EHCD" short_name="EHCD" data_type="zoned_decimal" display_length="2" data_length="2" underline="true">
+          <area>
+            <position x="45" y="3"/>
+            <size cx="2" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="input" name="TTITEL" short_name="TTITEL" data_type="alphanumeric" display_length="6" data_length="6" underline="true">
+          <area>
+            <position x="48" y="3"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="input" name="SVNR" short_name="SVNR" data_type="zoned_decimal" display_length="4" data_length="4" underline="true">
+          <area>
+            <position x="55" y="3"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="R V 2 T Pack    " display_length="16" data_length="16">
+          <area>
+            <position x="63" y="3"/>
+            <size cx="16" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="NeuPos Obj Titel                   Folge   Eingang  Auslfg.   G B A A Platz   " display_length="78" data_length="78" underline="true">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="78" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="both" name="POSNEU" short_name="POSNEU" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" position_cursor="true">
+          <area>
+            <position x="3" y="5"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="OBJNEU" short_name="OBJNEU" data_type="zoned_decimal" display_length="4" data_length="4" underline="true">
+          <area>
+            <position x="7" y="5"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="AXNAME" short_name="AXNAME" data_type="alphanumeric" display_length="21" data_length="21">
+          <area>
+            <position x="12" y="5"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="JAHNEU" short_name="JAHNEU" data_type="zoned_decimal" display_length="2" data_length="2" underline="true">
+          <area>
+            <position x="34" y="5"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="FOLNEU" short_name="FOLNEU" data_type="zoned_decimal" display_length="4" data_length="4" underline="true">
+          <area>
+            <position x="37" y="5"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="EINNEU" short_name="EINNEU" data_type="zoned_decimal" display_length="9" data_length="7" underline="true">
+          <area>
+            <position x="42" y="5"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VERNEU" short_name="VERNEU" data_type="zoned_decimal" display_length="9" data_length="7" underline="true">
+          <area>
+            <position x="52" y="5"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="REGNEU" short_name="REGNEU" data_type="alphanumeric" display_length="1" data_length="1" underline="true">
+          <area>
+            <position x="63" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VOLNEU" short_name="VOLNEU" data_type="zoned_decimal" display_length="1" data_length="1" underline="true">
+          <area>
+            <position x="65" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="ZWANEU" short_name="ZWANEU" data_type="alphanumeric" display_length="1" data_length="1" underline="true">
+          <area>
+            <position x="67" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="KZTNEU" short_name="KZTNEU" data_type="alphanumeric" display_length="1" data_length="1" underline="true">
+          <area>
+            <position x="69" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="ZWPACK" short_name="ZWPACK" data_type="zoned_decimal" display_length="4" data_length="4" underline="true">
+          <area>
+            <position x="72" y="5"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="    ?                                                                     Neu" display_length="77" data_length="77" underline="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="77" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="POS" short_name="POS" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="5" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKOBJ" short_name="VKOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="7" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="12" y="7"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKJAHR" short_name="VKJAHR" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="34" y="7"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKFOLG" short_name="VKFOLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="37" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKEING" short_name="VKEING" data_type="zoned_decimal" display_length="9" data_length="7" conditional="true">
+          <area>
+            <position x="42" y="7"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKVERT" short_name="VKVERT" data_type="zoned_decimal" display_length="9" data_length="7" conditional="true">
+          <area>
+            <position x="52" y="7"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKKZ" short_name="VKKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="63" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKVOLL" short_name="VKVOLL" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="65" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKZAUS" short_name="VKZAUS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="67" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KZTEIL" short_name="KZTEIL" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="69" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VKPACK" short_name="VKPACK" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="71" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="PAEND" short_name="PAEND" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" conditional="true" exit_required="true">
+          <area>
+            <position x="76" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="POS" short_name="POS" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="5" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKOBJ" short_name="VKOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="7" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="12" y="8"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKJAHR" short_name="VKJAHR" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="34" y="8"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKFOLG" short_name="VKFOLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="37" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKEING" short_name="VKEING" data_type="zoned_decimal" display_length="9" data_length="7" conditional="true">
+          <area>
+            <position x="42" y="8"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKVERT" short_name="VKVERT" data_type="zoned_decimal" display_length="9" data_length="7" conditional="true">
+          <area>
+            <position x="52" y="8"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKKZ" short_name="VKKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="63" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKVOLL" short_name="VKVOLL" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="65" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKZAUS" short_name="VKZAUS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="67" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KZTEIL" short_name="KZTEIL" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="69" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VKPACK" short_name="VKPACK" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="71" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="PAEND" short_name="PAEND" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" conditional="true" exit_required="true">
+          <area>
+            <position x="76" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="POS" short_name="POS" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="5" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKOBJ" short_name="VKOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="7" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="12" y="9"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKJAHR" short_name="VKJAHR" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="34" y="9"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKFOLG" short_name="VKFOLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="37" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKEING" short_name="VKEING" data_type="zoned_decimal" display_length="9" data_length="7" conditional="true">
+          <area>
+            <position x="42" y="9"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKVERT" short_name="VKVERT" data_type="zoned_decimal" display_length="9" data_length="7" conditional="true">
+          <area>
+            <position x="52" y="9"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKKZ" short_name="VKKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="63" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKVOLL" short_name="VKVOLL" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="65" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKZAUS" short_name="VKZAUS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="67" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KZTEIL" short_name="KZTEIL" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="69" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VKPACK" short_name="VKPACK" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="71" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="PAEND" short_name="PAEND" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" conditional="true" exit_required="true">
+          <area>
+            <position x="76" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="POS" short_name="POS" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="5" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKOBJ" short_name="VKOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="7" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="12" y="10"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKJAHR" short_name="VKJAHR" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="34" y="10"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKFOLG" short_name="VKFOLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="37" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKEING" short_name="VKEING" data_type="zoned_decimal" display_length="9" data_length="7" conditional="true">
+          <area>
+            <position x="42" y="10"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKVERT" short_name="VKVERT" data_type="zoned_decimal" display_length="9" data_length="7" conditional="true">
+          <area>
+            <position x="52" y="10"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKKZ" short_name="VKKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="63" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKVOLL" short_name="VKVOLL" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="65" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKZAUS" short_name="VKZAUS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="67" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KZTEIL" short_name="KZTEIL" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="69" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VKPACK" short_name="VKPACK" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="71" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="PAEND" short_name="PAEND" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" conditional="true" exit_required="true">
+          <area>
+            <position x="76" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="POS" short_name="POS" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="5" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKOBJ" short_name="VKOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="7" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="12" y="11"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKJAHR" short_name="VKJAHR" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="34" y="11"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKFOLG" short_name="VKFOLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="37" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKEING" short_name="VKEING" data_type="zoned_decimal" display_length="9" data_length="7" conditional="true">
+          <area>
+            <position x="42" y="11"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKVERT" short_name="VKVERT" data_type="zoned_decimal" display_length="9" data_length="7" conditional="true">
+          <area>
+            <position x="52" y="11"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKKZ" short_name="VKKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="63" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKVOLL" short_name="VKVOLL" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="65" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKZAUS" short_name="VKZAUS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="67" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KZTEIL" short_name="KZTEIL" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="69" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VKPACK" short_name="VKPACK" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="71" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="PAEND" short_name="PAEND" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" conditional="true" exit_required="true">
+          <area>
+            <position x="76" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="POS" short_name="POS" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="5" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKOBJ" short_name="VKOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="7" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="12" y="12"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKJAHR" short_name="VKJAHR" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="34" y="12"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKFOLG" short_name="VKFOLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="37" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKEING" short_name="VKEING" data_type="zoned_decimal" display_length="9" data_length="7" conditional="true">
+          <area>
+            <position x="42" y="12"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKVERT" short_name="VKVERT" data_type="zoned_decimal" display_length="9" data_length="7" conditional="true">
+          <area>
+            <position x="52" y="12"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKKZ" short_name="VKKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="63" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKVOLL" short_name="VKVOLL" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="65" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKZAUS" short_name="VKZAUS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="67" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KZTEIL" short_name="KZTEIL" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="69" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VKPACK" short_name="VKPACK" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="71" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="PAEND" short_name="PAEND" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" conditional="true" exit_required="true">
+          <area>
+            <position x="76" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="POS" short_name="POS" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="5" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKOBJ" short_name="VKOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="7" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="12" y="13"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKJAHR" short_name="VKJAHR" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="34" y="13"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKFOLG" short_name="VKFOLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="37" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKEING" short_name="VKEING" data_type="zoned_decimal" display_length="9" data_length="7" conditional="true">
+          <area>
+            <position x="42" y="13"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKVERT" short_name="VKVERT" data_type="zoned_decimal" display_length="9" data_length="7" conditional="true">
+          <area>
+            <position x="52" y="13"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKKZ" short_name="VKKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="63" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKVOLL" short_name="VKVOLL" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="65" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKZAUS" short_name="VKZAUS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="67" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KZTEIL" short_name="KZTEIL" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="69" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VKPACK" short_name="VKPACK" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="71" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="PAEND" short_name="PAEND" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" conditional="true" exit_required="true">
+          <area>
+            <position x="76" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="POS" short_name="POS" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="5" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKOBJ" short_name="VKOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="7" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="12" y="14"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKJAHR" short_name="VKJAHR" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="34" y="14"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKFOLG" short_name="VKFOLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="37" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKEING" short_name="VKEING" data_type="zoned_decimal" display_length="9" data_length="7" conditional="true">
+          <area>
+            <position x="42" y="14"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKVERT" short_name="VKVERT" data_type="zoned_decimal" display_length="9" data_length="7" conditional="true">
+          <area>
+            <position x="52" y="14"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKKZ" short_name="VKKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="63" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKVOLL" short_name="VKVOLL" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="65" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKZAUS" short_name="VKZAUS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="67" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KZTEIL" short_name="KZTEIL" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="69" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VKPACK" short_name="VKPACK" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="71" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="PAEND" short_name="PAEND" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" conditional="true" exit_required="true">
+          <area>
+            <position x="76" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="POS" short_name="POS" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="5" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKOBJ" short_name="VKOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="7" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="12" y="15"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKJAHR" short_name="VKJAHR" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="34" y="15"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKFOLG" short_name="VKFOLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="37" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKEING" short_name="VKEING" data_type="zoned_decimal" display_length="9" data_length="7" conditional="true">
+          <area>
+            <position x="42" y="15"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKVERT" short_name="VKVERT" data_type="zoned_decimal" display_length="9" data_length="7" conditional="true">
+          <area>
+            <position x="52" y="15"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKKZ" short_name="VKKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="63" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKVOLL" short_name="VKVOLL" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="65" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKZAUS" short_name="VKZAUS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="67" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KZTEIL" short_name="KZTEIL" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="69" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VKPACK" short_name="VKPACK" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="71" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="PAEND" short_name="PAEND" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" conditional="true" exit_required="true">
+          <area>
+            <position x="76" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="POS" short_name="POS" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="5" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKOBJ" short_name="VKOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="7" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="12" y="16"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKJAHR" short_name="VKJAHR" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="34" y="16"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKFOLG" short_name="VKFOLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="37" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKEING" short_name="VKEING" data_type="zoned_decimal" display_length="9" data_length="7" conditional="true">
+          <area>
+            <position x="42" y="16"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKVERT" short_name="VKVERT" data_type="zoned_decimal" display_length="9" data_length="7" conditional="true">
+          <area>
+            <position x="52" y="16"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKKZ" short_name="VKKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="63" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKVOLL" short_name="VKVOLL" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="65" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKZAUS" short_name="VKZAUS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="67" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KZTEIL" short_name="KZTEIL" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="69" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VKPACK" short_name="VKPACK" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="71" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="PAEND" short_name="PAEND" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" conditional="true" exit_required="true">
+          <area>
+            <position x="76" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="POS" short_name="POS" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="5" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKOBJ" short_name="VKOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="7" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="12" y="17"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKJAHR" short_name="VKJAHR" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="34" y="17"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKFOLG" short_name="VKFOLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="37" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKEING" short_name="VKEING" data_type="zoned_decimal" display_length="9" data_length="7" conditional="true">
+          <area>
+            <position x="42" y="17"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKVERT" short_name="VKVERT" data_type="zoned_decimal" display_length="9" data_length="7" conditional="true">
+          <area>
+            <position x="52" y="17"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKKZ" short_name="VKKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="63" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKVOLL" short_name="VKVOLL" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="65" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKZAUS" short_name="VKZAUS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="67" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KZTEIL" short_name="KZTEIL" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="69" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VKPACK" short_name="VKPACK" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="71" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="PAEND" short_name="PAEND" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" conditional="true" exit_required="true">
+          <area>
+            <position x="76" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="POS" short_name="POS" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="5" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKOBJ" short_name="VKOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="7" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="12" y="18"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKJAHR" short_name="VKJAHR" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="34" y="18"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKFOLG" short_name="VKFOLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="37" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKEING" short_name="VKEING" data_type="zoned_decimal" display_length="9" data_length="7" conditional="true">
+          <area>
+            <position x="42" y="18"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKVERT" short_name="VKVERT" data_type="zoned_decimal" display_length="9" data_length="7" conditional="true">
+          <area>
+            <position x="52" y="18"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKKZ" short_name="VKKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="63" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKVOLL" short_name="VKVOLL" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="65" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKZAUS" short_name="VKZAUS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="67" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KZTEIL" short_name="KZTEIL" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="69" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VKPACK" short_name="VKPACK" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="71" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="PAEND" short_name="PAEND" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" conditional="true" exit_required="true">
+          <area>
+            <position x="76" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="POS" short_name="POS" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="5" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKOBJ" short_name="VKOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="7" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="12" y="19"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKJAHR" short_name="VKJAHR" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="34" y="19"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKFOLG" short_name="VKFOLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="37" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKEING" short_name="VKEING" data_type="zoned_decimal" display_length="9" data_length="7" conditional="true">
+          <area>
+            <position x="42" y="19"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKVERT" short_name="VKVERT" data_type="zoned_decimal" display_length="9" data_length="7" conditional="true">
+          <area>
+            <position x="52" y="19"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKKZ" short_name="VKKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="63" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKVOLL" short_name="VKVOLL" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="65" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKZAUS" short_name="VKZAUS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="67" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KZTEIL" short_name="KZTEIL" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="69" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VKPACK" short_name="VKPACK" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="71" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="PAEND" short_name="PAEND" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" conditional="true" exit_required="true">
+          <area>
+            <position x="76" y="19"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="POS" short_name="POS" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="5" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKOBJ" short_name="VKOBJ" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="7" y="20"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="12" y="20"/>
+            <size cx="21" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKJAHR" short_name="VKJAHR" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="34" y="20"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKFOLG" short_name="VKFOLG" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="37" y="20"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKEING" short_name="VKEING" data_type="zoned_decimal" display_length="9" data_length="7" conditional="true">
+          <area>
+            <position x="42" y="20"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKVERT" short_name="VKVERT" data_type="zoned_decimal" display_length="9" data_length="7" conditional="true">
+          <area>
+            <position x="52" y="20"/>
+            <size cx="9" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKKZ" short_name="VKKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="63" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKVOLL" short_name="VKVOLL" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="65" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="VKZAUS" short_name="VKZAUS" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="67" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KZTEIL" short_name="KZTEIL" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="69" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="VKPACK" short_name="VKPACK" data_type="zoned_decimal" display_length="4" data_length="4" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="71" y="20"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="PAEND" short_name="PAEND" data_type="zoned_decimal" display_length="3" data_length="3" underline="true" high_intensity="true" conditional="true" exit_required="true">
+          <area>
+            <position x="76" y="20"/>
+            <size cx="3" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_end_plus" value="+" display_length="1" data_length="1" conditional="true">
+        <area>
+          <position x="130" y="20"/>
+          <size cx="1" cy="1"/>
+        </area>
+        <color foreground="white"/>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="F3=Verlassen; F7=Neu Nummerieren; F9=Neues Objekt hinzufügen." display_length="61" data_length="61">
+      <area>
+        <position x="1" y="23"/>
+        <size cx="61" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

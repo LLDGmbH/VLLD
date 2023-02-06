@@ -1,0 +1,13 @@
+﻿dim text, xkdnr, sql1, ErrorMsg as String
+dim rc as Integer
+rem SBM = Soll Bord Meter
+global sbm as string
+
+HostFieldGetData("kdkdnr", xkdnr)
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+
+sql1 = "SELECT ehnaspb FROM grehnp where ehnkdnr = " +xkdnr
+rc = EzSQLQuery(sql1, text, ErrorMsg)
+
+sbm = text

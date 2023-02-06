@@ -1,0 +1,875 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="OSNA_COL/ER50DS(SFC3+KEY02)" library="OSNA_COL" member_name="ER50DS">
+    <size cx="132" cy="27"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="f21" caption="F21" attention_key="false"/>
+    <action key="f22" caption="F22" attention_key="false"/>
+    <action key="f23" caption="F23" attention_key="false"/>
+    <action key="f24" caption="F24" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <field field_type="screen_part" name="SFC3">
+      <area>
+        <position/>
+        <size cx="132" cy="25"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="KEY02" overlay="true">
+      <area>
+        <position y="25"/>
+        <size cx="132" cy="2"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Nachlieferung" display_length="13" data_length="13">
+          <area>
+            <position x="55"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="114"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="123"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SDS_USER" short_name="SDS_USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="1" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SDS_JOB" short_name="SDS_JOB" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="114" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="ER50S3" display_length="6" data_length="6">
+          <area>
+            <position x="125" y="1"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="fixed_text" value="ObjNr   Folge  Artikel                        SollMe LaBest KannMe                                                                " display_length="130" data_length="130" underline="true">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="130" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S3OBJ" short_name="S3OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3FOLG" short_name="S3FOLG" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="7" y="5"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3ONAM" short_name="S3ONAM" data_type="alphanumeric" display_length="30" data_length="30" conditional="true">
+          <area>
+            <position x="16" y="5"/>
+            <size cx="30" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3SOLL" short_name="S3SOLL" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="5"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3LBES" short_name="S3LBES" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="54" y="5"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S3KANN" short_name="S3KANN" data_type="zoned_decimal" display_length="6" data_length="6" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="61" y="5"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S3OBJ" short_name="S3OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3FOLG" short_name="S3FOLG" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="7" y="6"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3ONAM" short_name="S3ONAM" data_type="alphanumeric" display_length="30" data_length="30" conditional="true">
+          <area>
+            <position x="16" y="6"/>
+            <size cx="30" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3SOLL" short_name="S3SOLL" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="6"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3LBES" short_name="S3LBES" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="54" y="6"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S3KANN" short_name="S3KANN" data_type="zoned_decimal" display_length="6" data_length="6" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="61" y="6"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S3OBJ" short_name="S3OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3FOLG" short_name="S3FOLG" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="7" y="7"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3ONAM" short_name="S3ONAM" data_type="alphanumeric" display_length="30" data_length="30" conditional="true">
+          <area>
+            <position x="16" y="7"/>
+            <size cx="30" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3SOLL" short_name="S3SOLL" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="7"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3LBES" short_name="S3LBES" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="54" y="7"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S3KANN" short_name="S3KANN" data_type="zoned_decimal" display_length="6" data_length="6" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="61" y="7"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S3OBJ" short_name="S3OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3FOLG" short_name="S3FOLG" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="7" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3ONAM" short_name="S3ONAM" data_type="alphanumeric" display_length="30" data_length="30" conditional="true">
+          <area>
+            <position x="16" y="8"/>
+            <size cx="30" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3SOLL" short_name="S3SOLL" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="8"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3LBES" short_name="S3LBES" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="54" y="8"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S3KANN" short_name="S3KANN" data_type="zoned_decimal" display_length="6" data_length="6" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="61" y="8"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S3OBJ" short_name="S3OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3FOLG" short_name="S3FOLG" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="7" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3ONAM" short_name="S3ONAM" data_type="alphanumeric" display_length="30" data_length="30" conditional="true">
+          <area>
+            <position x="16" y="9"/>
+            <size cx="30" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3SOLL" short_name="S3SOLL" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="9"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3LBES" short_name="S3LBES" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="54" y="9"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S3KANN" short_name="S3KANN" data_type="zoned_decimal" display_length="6" data_length="6" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="61" y="9"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S3OBJ" short_name="S3OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3FOLG" short_name="S3FOLG" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="7" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3ONAM" short_name="S3ONAM" data_type="alphanumeric" display_length="30" data_length="30" conditional="true">
+          <area>
+            <position x="16" y="10"/>
+            <size cx="30" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3SOLL" short_name="S3SOLL" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="10"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3LBES" short_name="S3LBES" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="54" y="10"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S3KANN" short_name="S3KANN" data_type="zoned_decimal" display_length="6" data_length="6" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="61" y="10"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S3OBJ" short_name="S3OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3FOLG" short_name="S3FOLG" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="7" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3ONAM" short_name="S3ONAM" data_type="alphanumeric" display_length="30" data_length="30" conditional="true">
+          <area>
+            <position x="16" y="11"/>
+            <size cx="30" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3SOLL" short_name="S3SOLL" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3LBES" short_name="S3LBES" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="54" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S3KANN" short_name="S3KANN" data_type="zoned_decimal" display_length="6" data_length="6" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="61" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S3OBJ" short_name="S3OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3FOLG" short_name="S3FOLG" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="7" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3ONAM" short_name="S3ONAM" data_type="alphanumeric" display_length="30" data_length="30" conditional="true">
+          <area>
+            <position x="16" y="12"/>
+            <size cx="30" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3SOLL" short_name="S3SOLL" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="12"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3LBES" short_name="S3LBES" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="54" y="12"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S3KANN" short_name="S3KANN" data_type="zoned_decimal" display_length="6" data_length="6" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="61" y="12"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S3OBJ" short_name="S3OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3FOLG" short_name="S3FOLG" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="7" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3ONAM" short_name="S3ONAM" data_type="alphanumeric" display_length="30" data_length="30" conditional="true">
+          <area>
+            <position x="16" y="13"/>
+            <size cx="30" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3SOLL" short_name="S3SOLL" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="13"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3LBES" short_name="S3LBES" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="54" y="13"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S3KANN" short_name="S3KANN" data_type="zoned_decimal" display_length="6" data_length="6" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="61" y="13"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S3OBJ" short_name="S3OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3FOLG" short_name="S3FOLG" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="7" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3ONAM" short_name="S3ONAM" data_type="alphanumeric" display_length="30" data_length="30" conditional="true">
+          <area>
+            <position x="16" y="14"/>
+            <size cx="30" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3SOLL" short_name="S3SOLL" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="14"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3LBES" short_name="S3LBES" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="54" y="14"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S3KANN" short_name="S3KANN" data_type="zoned_decimal" display_length="6" data_length="6" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="61" y="14"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S3OBJ" short_name="S3OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3FOLG" short_name="S3FOLG" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="7" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3ONAM" short_name="S3ONAM" data_type="alphanumeric" display_length="30" data_length="30" conditional="true">
+          <area>
+            <position x="16" y="15"/>
+            <size cx="30" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3SOLL" short_name="S3SOLL" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="15"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3LBES" short_name="S3LBES" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="54" y="15"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S3KANN" short_name="S3KANN" data_type="zoned_decimal" display_length="6" data_length="6" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="61" y="15"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S3OBJ" short_name="S3OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3FOLG" short_name="S3FOLG" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="7" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3ONAM" short_name="S3ONAM" data_type="alphanumeric" display_length="30" data_length="30" conditional="true">
+          <area>
+            <position x="16" y="16"/>
+            <size cx="30" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3SOLL" short_name="S3SOLL" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="16"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3LBES" short_name="S3LBES" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="54" y="16"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S3KANN" short_name="S3KANN" data_type="zoned_decimal" display_length="6" data_length="6" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="61" y="16"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S3OBJ" short_name="S3OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3FOLG" short_name="S3FOLG" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="7" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3ONAM" short_name="S3ONAM" data_type="alphanumeric" display_length="30" data_length="30" conditional="true">
+          <area>
+            <position x="16" y="17"/>
+            <size cx="30" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3SOLL" short_name="S3SOLL" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="17"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3LBES" short_name="S3LBES" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="54" y="17"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S3KANN" short_name="S3KANN" data_type="zoned_decimal" display_length="6" data_length="6" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="61" y="17"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S3OBJ" short_name="S3OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3FOLG" short_name="S3FOLG" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="7" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3ONAM" short_name="S3ONAM" data_type="alphanumeric" display_length="30" data_length="30" conditional="true">
+          <area>
+            <position x="16" y="18"/>
+            <size cx="30" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3SOLL" short_name="S3SOLL" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="18"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3LBES" short_name="S3LBES" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="54" y="18"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S3KANN" short_name="S3KANN" data_type="zoned_decimal" display_length="6" data_length="6" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="61" y="18"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S3OBJ" short_name="S3OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3FOLG" short_name="S3FOLG" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="7" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3ONAM" short_name="S3ONAM" data_type="alphanumeric" display_length="30" data_length="30" conditional="true">
+          <area>
+            <position x="16" y="19"/>
+            <size cx="30" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3SOLL" short_name="S3SOLL" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="19"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3LBES" short_name="S3LBES" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="54" y="19"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S3KANN" short_name="S3KANN" data_type="zoned_decimal" display_length="6" data_length="6" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="61" y="19"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="S3OBJ" short_name="S3OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3FOLG" short_name="S3FOLG" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="7" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3ONAM" short_name="S3ONAM" data_type="alphanumeric" display_length="30" data_length="30" conditional="true">
+          <area>
+            <position x="16" y="20"/>
+            <size cx="30" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3SOLL" short_name="S3SOLL" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="20"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3LBES" short_name="S3LBES" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="54" y="20"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S3KANN" short_name="S3KANN" data_type="zoned_decimal" display_length="6" data_length="6" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="61" y="20"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S3OBJ" short_name="S3OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3FOLG" short_name="S3FOLG" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="7" y="21"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3ONAM" short_name="S3ONAM" data_type="alphanumeric" display_length="30" data_length="30" conditional="true">
+          <area>
+            <position x="16" y="21"/>
+            <size cx="30" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3SOLL" short_name="S3SOLL" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="21"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3LBES" short_name="S3LBES" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="54" y="21"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S3KANN" short_name="S3KANN" data_type="zoned_decimal" display_length="6" data_length="6" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="61" y="21"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S3OBJ" short_name="S3OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3FOLG" short_name="S3FOLG" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="7" y="22"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3ONAM" short_name="S3ONAM" data_type="alphanumeric" display_length="30" data_length="30" conditional="true">
+          <area>
+            <position x="16" y="22"/>
+            <size cx="30" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3SOLL" short_name="S3SOLL" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="22"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3LBES" short_name="S3LBES" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="54" y="22"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S3KANN" short_name="S3KANN" data_type="zoned_decimal" display_length="6" data_length="6" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="61" y="22"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S3OBJ" short_name="S3OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3FOLG" short_name="S3FOLG" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="7" y="23"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3ONAM" short_name="S3ONAM" data_type="alphanumeric" display_length="30" data_length="30" conditional="true">
+          <area>
+            <position x="16" y="23"/>
+            <size cx="30" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3SOLL" short_name="S3SOLL" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="23"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3LBES" short_name="S3LBES" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="54" y="23"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S3KANN" short_name="S3KANN" data_type="zoned_decimal" display_length="6" data_length="6" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="61" y="23"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="S3OBJ" short_name="S3OBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="24"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3FOLG" short_name="S3FOLG" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="7" y="24"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3ONAM" short_name="S3ONAM" data_type="alphanumeric" display_length="30" data_length="30" conditional="true">
+          <area>
+            <position x="16" y="24"/>
+            <size cx="30" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3SOLL" short_name="S3SOLL" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="47" y="24"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="S3LBES" short_name="S3LBES" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="54" y="24"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="both" name="S3KANN" short_name="S3KANN" data_type="zoned_decimal" display_length="6" data_length="6" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="61" y="24"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="yellow" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="Systemnachricht:" display_length="16" data_length="16">
+      <area>
+        <position x="1" y="25"/>
+        <size cx="16" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="K2MSG" short_name="K2MSG" data_type="alphanumeric" display_length="60" data_length="60" blink="true">
+      <area>
+        <position x="18" y="25"/>
+        <size cx="60" cy="1"/>
+      </area>
+      <color foreground="red"/>
+    </field>
+    <field field_type="fixed_text" value="F3 = Verlassen; F9 = Kopie drucken" display_length="34" data_length="34">
+      <area>
+        <position x="1" y="26"/>
+        <size cx="34" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

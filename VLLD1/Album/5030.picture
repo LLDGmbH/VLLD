@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="SRC5/OL20DS(OLF3)" library="SRC5" member_name="OL20DS">
+    <size cx="80" cy="24"/>
+    <action key="f1" caption="F1" attention_key="false"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <action key="roll_up" caption="ROLL_UP" attention_key="false"/>
+    <action key="roll_down" caption="ROLL_DOWN" attention_key="false"/>
+    <action key="help" caption="HELP" attention_key="false"/>
+    <field field_type="screen_part" name="OLF3">
+      <area>
+        <position/>
+        <size cx="80" cy="24"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZFIRM" short_name="ZZFIRM" data_type="alphanumeric" display_length="18" data_length="18">
+      <area>
+        <position x="1"/>
+        <size cx="18" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="ZZPGMTIT" short_name="ZZPGMTIT" data_type="alphanumeric" display_length="30" data_length="30">
+      <area>
+        <position x="25"/>
+        <size cx="30" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+      <area>
+        <position x="63"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+      <area>
+        <position x="72"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="field" usage="output" name="ZZJOB" short_name="ZZJOB" data_type="alphanumeric" display_length="10" data_length="10">
+      <area>
+        <position x="1" y="1"/>
+        <size cx="10" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="*SYSNAME" short_name="*SYSNAME" data_type="alphanumeric" display_length="8" data_length="8">
+      <area>
+        <position x="12" y="1"/>
+        <size cx="8" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="ZZUSER" short_name="ZZUSER" data_type="alphanumeric" display_length="10" data_length="10">
+      <area>
+        <position x="63" y="1"/>
+        <size cx="10" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="field" usage="output" name="ZZPGMNAM" short_name="ZZPGMNAM" data_type="alphanumeric" display_length="6" data_length="6">
+      <area>
+        <position x="74" y="1"/>
+        <size cx="6" cy="1"/>
+      </area>
+      <color foreground="yellow"/>
+    </field>
+    <field field_type="fixed_text" value="Listen-Name:" display_length="12" data_length="12">
+      <area>
+        <position x="1" y="3"/>
+        <size cx="12" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZLINAME" short_name="ZZLINAME" data_type="alphanumeric" display_length="10" data_length="10">
+      <area>
+        <position x="14" y="3"/>
+        <size cx="10" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Kommentar  :" display_length="12" data_length="12">
+      <area>
+        <position x="1" y="4"/>
+        <size cx="12" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZLIKOMM" short_name="ZZLIKOMM" data_type="alphanumeric" display_length="60" data_length="60">
+      <area>
+        <position x="14" y="4"/>
+        <size cx="60" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Objekt-Nr :" display_length="11" data_length="11">
+      <area>
+        <position x="1" y="6"/>
+        <size cx="11" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="ZZOBNR" short_name="ZZOBNR" data_type="zoned_decimal" display_length="5" data_length="5" underline="true" high_intensity="true" exit_required="true">
+      <area>
+        <position x="13" y="6"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Zeilenname:" display_length="11" data_length="11">
+      <area>
+        <position x="1" y="7"/>
+        <size cx="11" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="ZZZNAME" short_name="ZZZNAME" data_type="alphanumeric" display_length="21" data_length="21" underline="true" high_intensity="true">
+      <area>
+        <position x="13" y="7"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="Bezeichnung:" display_length="12" data_length="12">
+      <area>
+        <position x="36" y="7"/>
+        <size cx="12" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZOBEZ" short_name="ZZOBEZ" data_type="alphanumeric" display_length="21" data_length="21">
+      <area>
+        <position x="49" y="7"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="fixed_text" value="L ObNr Zeilenname            Objekt-Bezeichnung    Letz.VK" display_length="58" data_length="58" underline="true">
+      <area>
+        <position x="9" y="9"/>
+        <size cx="58" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="Inhalt:" display_length="7" data_length="7">
+      <area>
+        <position x="1" y="10"/>
+        <size cx="7" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="ZZLOE01" short_name="ZZLOE01" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true">
+      <area>
+        <position x="9" y="10"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZOBNR01" short_name="ZZOBNR01" data_type="zoned_decimal" display_length="5" data_length="5">
+      <area>
+        <position x="11" y="10"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZZNAME01" short_name="ZZZNAME01" data_type="alphanumeric" display_length="21" data_length="21">
+      <area>
+        <position x="17" y="10"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZOBEZ01" short_name="ZZOBEZ01" data_type="alphanumeric" display_length="21" data_length="21">
+      <area>
+        <position x="39" y="10"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZLVK01" short_name="ZZLVK01" data_type="zoned_decimal" display_length="6" data_length="6">
+      <area>
+        <position x="61" y="10"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="ZZLOE02" short_name="ZZLOE02" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true">
+      <area>
+        <position x="9" y="11"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZOBNR02" short_name="ZZOBNR02" data_type="zoned_decimal" display_length="5" data_length="5">
+      <area>
+        <position x="11" y="11"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZZNAME02" short_name="ZZZNAME02" data_type="alphanumeric" display_length="21" data_length="21">
+      <area>
+        <position x="17" y="11"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZOBEZ02" short_name="ZZOBEZ02" data_type="alphanumeric" display_length="21" data_length="21">
+      <area>
+        <position x="39" y="11"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZLVK02" short_name="ZZLVK02" data_type="zoned_decimal" display_length="6" data_length="6">
+      <area>
+        <position x="61" y="11"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="ZZLOE03" short_name="ZZLOE03" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true">
+      <area>
+        <position x="9" y="12"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZOBNR03" short_name="ZZOBNR03" data_type="zoned_decimal" display_length="5" data_length="5">
+      <area>
+        <position x="11" y="12"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZZNAME03" short_name="ZZZNAME03" data_type="alphanumeric" display_length="21" data_length="21">
+      <area>
+        <position x="17" y="12"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZOBEZ03" short_name="ZZOBEZ03" data_type="alphanumeric" display_length="21" data_length="21">
+      <area>
+        <position x="39" y="12"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZLVK03" short_name="ZZLVK03" data_type="zoned_decimal" display_length="6" data_length="6">
+      <area>
+        <position x="61" y="12"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="ZZLOE04" short_name="ZZLOE04" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true">
+      <area>
+        <position x="9" y="13"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZOBNR04" short_name="ZZOBNR04" data_type="zoned_decimal" display_length="5" data_length="5">
+      <area>
+        <position x="11" y="13"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZZNAME04" short_name="ZZZNAME04" data_type="alphanumeric" display_length="21" data_length="21">
+      <area>
+        <position x="17" y="13"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZOBEZ04" short_name="ZZOBEZ04" data_type="alphanumeric" display_length="21" data_length="21">
+      <area>
+        <position x="39" y="13"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZLVK04" short_name="ZZLVK04" data_type="zoned_decimal" display_length="6" data_length="6">
+      <area>
+        <position x="61" y="13"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="ZZLOE05" short_name="ZZLOE05" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true">
+      <area>
+        <position x="9" y="14"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZOBNR05" short_name="ZZOBNR05" data_type="zoned_decimal" display_length="5" data_length="5">
+      <area>
+        <position x="11" y="14"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZZNAME05" short_name="ZZZNAME05" data_type="alphanumeric" display_length="21" data_length="21">
+      <area>
+        <position x="17" y="14"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZOBEZ05" short_name="ZZOBEZ05" data_type="alphanumeric" display_length="21" data_length="21">
+      <area>
+        <position x="39" y="14"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZLVK05" short_name="ZZLVK05" data_type="zoned_decimal" display_length="6" data_length="6">
+      <area>
+        <position x="61" y="14"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="ZZLOE06" short_name="ZZLOE06" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true">
+      <area>
+        <position x="9" y="15"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZOBNR06" short_name="ZZOBNR06" data_type="zoned_decimal" display_length="5" data_length="5">
+      <area>
+        <position x="11" y="15"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZZNAME06" short_name="ZZZNAME06" data_type="alphanumeric" display_length="21" data_length="21">
+      <area>
+        <position x="17" y="15"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZOBEZ06" short_name="ZZOBEZ06" data_type="alphanumeric" display_length="21" data_length="21">
+      <area>
+        <position x="39" y="15"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZLVK06" short_name="ZZLVK06" data_type="zoned_decimal" display_length="6" data_length="6">
+      <area>
+        <position x="61" y="15"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="ZZLOE07" short_name="ZZLOE07" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true">
+      <area>
+        <position x="9" y="16"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZOBNR07" short_name="ZZOBNR07" data_type="zoned_decimal" display_length="5" data_length="5">
+      <area>
+        <position x="11" y="16"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZZNAME07" short_name="ZZZNAME07" data_type="alphanumeric" display_length="21" data_length="21">
+      <area>
+        <position x="17" y="16"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZOBEZ07" short_name="ZZOBEZ07" data_type="alphanumeric" display_length="21" data_length="21">
+      <area>
+        <position x="39" y="16"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZLVK07" short_name="ZZLVK07" data_type="zoned_decimal" display_length="6" data_length="6">
+      <area>
+        <position x="61" y="16"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="ZZLOE08" short_name="ZZLOE08" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true">
+      <area>
+        <position x="9" y="17"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZOBNR08" short_name="ZZOBNR08" data_type="zoned_decimal" display_length="5" data_length="5">
+      <area>
+        <position x="11" y="17"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZZNAME08" short_name="ZZZNAME08" data_type="alphanumeric" display_length="21" data_length="21">
+      <area>
+        <position x="17" y="17"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZOBEZ08" short_name="ZZOBEZ08" data_type="alphanumeric" display_length="21" data_length="21">
+      <area>
+        <position x="39" y="17"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZLVK08" short_name="ZZLVK08" data_type="zoned_decimal" display_length="6" data_length="6">
+      <area>
+        <position x="61" y="17"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="ZZLOE09" short_name="ZZLOE09" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true">
+      <area>
+        <position x="9" y="18"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZOBNR09" short_name="ZZOBNR09" data_type="zoned_decimal" display_length="5" data_length="5">
+      <area>
+        <position x="11" y="18"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZZNAME09" short_name="ZZZNAME09" data_type="alphanumeric" display_length="21" data_length="21">
+      <area>
+        <position x="17" y="18"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZOBEZ09" short_name="ZZOBEZ09" data_type="alphanumeric" display_length="21" data_length="21">
+      <area>
+        <position x="39" y="18"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZLVK09" short_name="ZZLVK09" data_type="zoned_decimal" display_length="6" data_length="6">
+      <area>
+        <position x="61" y="18"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="both" name="ZZLOE10" short_name="ZZLOE10" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true">
+      <area>
+        <position x="9" y="19"/>
+        <size cx="1" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZOBNR10" short_name="ZZOBNR10" data_type="zoned_decimal" display_length="5" data_length="5">
+      <area>
+        <position x="11" y="19"/>
+        <size cx="5" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZZNAME10" short_name="ZZZNAME10" data_type="alphanumeric" display_length="21" data_length="21">
+      <area>
+        <position x="17" y="19"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZOBEZ10" short_name="ZZOBEZ10" data_type="alphanumeric" display_length="21" data_length="21">
+      <area>
+        <position x="39" y="19"/>
+        <size cx="21" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZLVK10" short_name="ZZLVK10" data_type="zoned_decimal" display_length="6" data_length="6">
+      <area>
+        <position x="61" y="19"/>
+        <size cx="6" cy="1"/>
+      </area>
+    </field>
+    <field field_type="field" usage="output" name="ZZWEITERE" short_name="ZZWEITERE" data_type="alphanumeric" display_length="10" data_length="10">
+      <area>
+        <position x="11" y="20"/>
+        <size cx="10" cy="1"/>
+      </area>
+      <color foreground="white"/>
+    </field>
+    <field field_type="fixed_text" value="Systemnachricht:" display_length="16" data_length="16">
+      <area>
+        <position x="1" y="22"/>
+        <size cx="16" cy="1"/>
+      </area>
+      <color foreground="red"/>
+    </field>
+    <field field_type="field" usage="output" name="ZZMSG" short_name="ZZMSG" data_type="alphanumeric" display_length="60" data_length="60" blink="conditional">
+      <area>
+        <position x="18" y="22"/>
+        <size cx="60" cy="1"/>
+      </area>
+      <color foreground="red" conditional="true"/>
+    </field>
+    <field field_type="fixed_text" value="F3=Abbruch ; F9=Hinzufügen ; DF=Anzeigen ; Aktion: L" display_length="52" data_length="52">
+      <area>
+        <position x="1" y="23"/>
+        <size cx="52" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

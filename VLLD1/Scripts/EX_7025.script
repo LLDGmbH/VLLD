@@ -1,0 +1,53 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim x2ehnr, x2knam, x2kdnr, x2rema, x2ausa, x2ew, x2eeh, errmsg, datei, pfad_datei, source as string 
+i = 0
+j=3
+
+datei = "EH Schwachstellen.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "Ehastra-Nr")
+ddepoke( ddehandle, "Z1S2", "Kunden-Nr")
+ddepoke( ddehandle, "Z1S3", "Name")
+ddepoke( ddehandle, "Z1S4", "Rem A")
+ddepoke( ddehandle, "Z1S5", "Aus W")
+ddepoke( ddehandle, "Z1S6", "Erf.Wied.")
+ddepoke( ddehandle, "Z1S7", "Erodoiert")
+
+nochmal:
+
+HostFieldGetLineData("s2ehnr", i, x2ehnr)
+HostFieldGetLineData("s2kdnr", i, x2kdnr)
+HostFieldGetLineData("s2knam", i, x2knam)
+HostFieldGetLineData("s2rema", i, x2rema)
+HostFieldGetLineData("s2ausa", i, x2ausa)
+HostFieldGetLineData("s2ew",   i, x2ew)
+HostFieldGetLineData("s2eeh",  i, x2eeh)
+
+if (x2ehnr <> "") then
+ddepoke( ddehandle, "Z" + str(j) +"S1", x2ehnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", x2kdnr)
+ddepoke( ddehandle, "Z" + str(j) +"S3", x2knam)
+ddepoke( ddehandle, "Z" + str(j) +"S4", x2rema)
+ddepoke( ddehandle, "Z" + str(j) +"S5", x2ausa)
+ddepoke( ddehandle, "Z" + str(j) +"S6", x2ew)
+ddepoke( ddehandle, "Z" + str(j) +"S7", x2eeh)
+j=j+1
+endif
+
+if i < 17 then
+i=i+1
+goto nochmal
+endif
+
+if x2ehnr <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

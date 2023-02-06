@@ -1,0 +1,95 @@
+﻿DIM ddehandle, i, j, msg as integer
+dim y0, y1, y2, y3, y4, x1, x2, x3,x4, x5, x6, x7, x8, x9, x10, x11, x12, x13, x14, x15, xjahr, xart, xart1, datei, pfad_datei, source as string 
+dim k01, k02, k03, k04, k05, k06, k07, k08, k09, k10, k11, k12, k13, k14, k15 as string
+i = 0
+j=2
+
+HostFieldGetData("jahr",xjahr)
+
+datei = "Umsatzstückbilanz_" + xjahr + "_" + xart + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+HostFieldGetData("h01", k01)
+HostFieldGetData("h02", k02)
+HostFieldGetData("h03", k03)
+HostFieldGetData("h04", k04)
+HostFieldGetData("h05", k05)
+HostFieldGetData("h06", k06)
+HostFieldGetData("h07", k07)
+HostFieldGetData("h08", k08)
+HostFieldGetData("h09", k09)
+HostFieldGetData("h10", k10)
+HostFieldGetData("h11", k11)
+HostFieldGetData("h12", k12)
+HostFieldGetData("h13", k13)
+HostFieldGetData("h14", k14)
+HostFieldGetData("h15", k15)
+
+ddepoke( ddehandle, "Z1S1", k01)
+ddepoke( ddehandle, "Z1S2", k02)
+ddepoke( ddehandle, "Z1S3", k03)
+ddepoke( ddehandle, "Z1S4", k04)
+ddepoke( ddehandle, "Z1S5", k05)
+ddepoke( ddehandle, "Z1S6", k06)
+ddepoke( ddehandle, "Z1S7", k07)
+ddepoke( ddehandle, "Z1S8", k08)
+ddepoke( ddehandle, "Z1S9", k09)
+ddepoke( ddehandle, "Z1S10", k10)
+ddepoke( ddehandle, "Z1S11", k11)
+ddepoke( ddehandle, "Z1S12", k12)
+ddepoke( ddehandle, "Z1S13", k13)
+ddepoke( ddehandle, "Z1S14", k14)
+ddepoke( ddehandle, "Z1S15", k15)
+
+nochmal:
+
+HostFieldGetLineData("sp01", i, x1)
+HostFieldGetLineData("sp02", i, x2)
+HostFieldGetLineData("sp03", i, x3)
+HostFieldGetLineData("sp04", i, x4)
+HostFieldGetLineData("sp05", i, x5)
+HostFieldGetLineData("sp06", i, x6)
+HostFieldGetLineData("sp07", i, x7)
+HostFieldGetLineData("sp08", i, x8)
+HostFieldGetLineData("sp09", i, x9)
+HostFieldGetLineData("sp10", i, x10)
+HostFieldGetLineData("sp11", i, x11)
+HostFieldGetLineData("sp12", i, x12)
+HostFieldGetLineData("sp13", i, x13)
+HostFieldGetLineData("sp14", i, x14)
+HostFieldGetLineData("sp15", i, x15)
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", x1)
+ddepoke( ddehandle, "Z" + str(j) +"S2", x2)
+ddepoke( ddehandle, "Z" + str(j) +"S3", x3)
+ddepoke( ddehandle, "Z" + str(j) +"S4", x4)
+ddepoke( ddehandle, "Z" + str(j) +"S5", x5)
+ddepoke( ddehandle, "Z" + str(j) +"S6", x6)
+ddepoke( ddehandle, "Z" + str(j) +"S7", x7)
+ddepoke( ddehandle, "Z" + str(j) +"S8", x8)
+ddepoke( ddehandle, "Z" + str(j) +"S9", x9)
+ddepoke( ddehandle, "Z" + str(j) +"S10", x10)
+ddepoke( ddehandle, "Z" + str(j) +"S11", x11)
+ddepoke( ddehandle, "Z" + str(j) +"S12", x12)
+ddepoke( ddehandle, "Z" + str(j) +"S13", x13)
+ddepoke( ddehandle, "Z" + str(j) +"S14", x14)
+ddepoke( ddehandle, "Z" + str(j) +"S15", x15)
+
+j=j+1
+
+
+if i < 22 then
+i=i+1
+goto nochmal
+endif
+ 
+if x1 <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

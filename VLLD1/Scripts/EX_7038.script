@@ -1,0 +1,64 @@
+﻿global filiale as string
+DIM ddehandle, i, j, msg, rc as integer
+dim xHgUg, xKdNr, xKNam, xDatu, xZeit, xxStr, xxPLZ, xxOrt, datei, pfad_datei, ErrMsg, sql1, sql2, sql3, sql4, sql5, sql6, sql7, sql8, f01 as string 
+dim xxende, xxabgg, xxtext, xxablage, source as string
+
+i = 0
+j=2
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+HostFieldGetData("c3HgUg",xHgUg)
+
+datei = "Kunden_mit_Textschlüssel_" + xHgUg + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "Kunden-Nr")
+ddepoke( ddehandle, "Z1S2", "Name")
+ddepoke( ddehandle, "Z1S3", "Straße")
+ddepoke( ddehandle, "Z1S4", "PLZ")
+ddepoke( ddehandle, "Z1S5", "Ort")
+ddepoke( ddehandle, "Z1S6", "Datum")
+ddepoke( ddehandle, "Z1S7", "Zeit")
+
+nochmal:
+
+HostFieldGetLineData("s3KdNr", i, xKdNr)
+HostFieldGetLineData("s3KNam", i, xKNam)
+HostFieldGetLineData("s3Datu", i, xDatu)
+HostFieldGetLineData("s3Zeit", i, xZeit)
+
+sql1 = "SELECT kdStr FROM grkdsasql where kdKdNr = " + xKdNr + ""
+rc = EzSQLQuery(sql1, xxStr, ErrMsg)
+
+sql2 = "SELECT kdPLZ FROM grkdsasql where kdKdNr = " + xKdNr + ""
+rc = EzSQLQuery(sql2, xxPLZ, ErrMsg)
+
+sql3 = "SELECT kdOrt FROM grkdsasql where kdKdNr = " + xKdNr + ""
+rc = EzSQLQuery(sql3, xxOrt, ErrMsg)
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", xKdNr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xKNam)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xxStr)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xxPLZ)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xxOrt)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xDatu)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xZeit)
+
+j=j+1 
+
+if i < 17 then
+i=i+1
+goto nochmal
+endif
+ 
+if xKdNr <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

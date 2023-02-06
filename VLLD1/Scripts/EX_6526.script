@@ -1,0 +1,101 @@
+﻿DIM ddehandle, i, j, zz, msg as integer
+dim zzz as double
+dim  xfil, xname, xobj, xcl, xfolg, x1, x2, x3, x4, x5, x6, x7, x8, x9,x10, x11, yyanz, datei, pfad_datei, source as string 
+i = 0
+j=4
+zz=0
+
+HostFieldGetData("sfc_fil",xfil)
+HostFieldGetData("sfc_obj",xobj)
+
+PanelFieldGetData("xxanz", yyanz)
+zzz=val(yyanz)
+
+datei = "Lokalmarktanalyse2_" + xobj + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "Obj")
+ddepoke( ddehandle, "Z1S2", xobj)
+ddepoke( ddehandle, "Z1S3", xfil)
+
+
+
+ddepoke( ddehandle, "Z3S1", "Folge")
+ddepoke( ddehandle, "Z3S2", "CL")
+ddepoke( ddehandle, "Z3S3", "Name")
+ddepoke( ddehandle, "Z3S4", "VK Grosso")
+ddepoke( ddehandle, "Z3S5", "VK Index VJ")
+ddepoke( ddehandle, "Z3S6", "VK Cluster")
+ddepoke( ddehandle, "Z3S7", "VK Index VJ")
+ddepoke( ddehandle, "Z3S8", "VK Index")
+ddepoke( ddehandle, "Z3S9", "EH Grosso")
+ddepoke( ddehandle, "Z3S10", "EH Index VJ")
+ddepoke( ddehandle, "Z3S11", "EH Cluster")
+ddepoke( ddehandle, "Z3S12", "EH Index VJ")
+ddepoke( ddehandle, "Z3S13", "EH Index")
+
+
+nochmal:
+
+zz=zz+1
+
+if zzz <> 0 then
+if zz > zzz then
+goto ende
+endif
+endif        
+
+HostFieldGetLineData("sf2_folg", i, xfolg)
+HostFieldGetLineData("sf2_clust", i, xcl)
+HostFieldGetLineData("sf2_clnam", i, x1)
+HostFieldGetLineData("sf2_vte", i, x2)
+HostFieldGetLineData("sf2_invkvj", i, x3)
+HostFieldGetLineData("sf2_vtecl", i, x4)
+HostFieldGetLineData("SF_CEWVJ", i, x5)
+HostFieldGetLineData("sf2_indvk", i, x6)
+HostFieldGetLineData("sf2_ete", i, x7)
+HostFieldGetLineData("sf2_inhhvj", i, x8)
+HostFieldGetLineData("sf2_etecl", i, x9)
+HostFieldGetLineData("SF_CEGVJ", i, x10)
+HostFieldGetLineData("sf2_indhh", i, x11)
+
+
+
+
+
+if (xcl <> "")  then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xfolg)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xcl)
+ddepoke( ddehandle, "Z" + str(j) +"S3", x1)
+ddepoke( ddehandle, "Z" + str(j) +"S4", x2)
+ddepoke( ddehandle, "Z" + str(j) +"S5", x3)
+ddepoke( ddehandle, "Z" + str(j) +"S6", x4)
+ddepoke( ddehandle, "Z" + str(j) +"S7", x5)
+ddepoke( ddehandle, "Z" + str(j) +"S8", x6)
+ddepoke( ddehandle, "Z" + str(j) +"S9", x7)
+ddepoke( ddehandle, "Z" + str(j) +"S10", x8)
+ddepoke( ddehandle, "Z" + str(j) +"S11", x9)
+ddepoke( ddehandle, "Z" + str(j) +"S12", x10)
+ddepoke( ddehandle, "Z" + str(j) +"S13", x11)
+
+j=j+1
+endif
+
+if i < 19 then
+i=i+1
+goto nochmal
+endif
+ 
+if xcl <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif
+
+Ende:

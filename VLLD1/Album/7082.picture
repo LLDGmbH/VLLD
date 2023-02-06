@@ -1,0 +1,1266 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="782C351">
+  <screen originator="SeagullAlbumFile" name="OSNA_AUT/RN50DSN(SFC+KEY02)" library="OSNA_AUT" member_name="RN50DSN">
+    <size cx="132" cy="27"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <action key="help" caption="HELP" attention_key="false"/>
+    <field field_type="screen_part" name="SFC" overlay="true">
+      <area>
+        <position/>
+        <size cx="132" cy="25"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="KEY02" overlay="true">
+      <area>
+        <position y="25"/>
+        <size cx="132" cy="2"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="RECHNUNGSKOPIE" display_length="14" data_length="14">
+          <area>
+            <position x="33"/>
+            <size cx="14" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="63"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="72"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SDS_USER" short_name="SDS_USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="1" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SDS_JOB" short_name="SDS_JOB" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="63" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="RN50NSF" display_length="7" data_length="7">
+          <area>
+            <position x="75" y="1"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="fixed_text" value="Kunde" display_length="5" data_length="5">
+          <area>
+            <position x="15" y="2"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7">
+          <area>
+            <position x="21" y="2"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33">
+          <area>
+            <position x="29" y="2"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="Datum    Nummer     Woche  Lief      Remi      Guts/Bela Steuerf   Gesamt    A" display_length="78" data_length="78" underline="true">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="78" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFRDAT" short_name="SFRDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="RNRENR" short_name="RNRENR" data_type="zoned_decimal" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="10" y="5"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFJAWO" short_name="SFJAWO" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="21" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLIEF" short_name="SFLIEF" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="28" y="5"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFREMI" short_name="SFREMI" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="40" y="5"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUBL" short_name="SFGUBL" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="52" y="5"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSTFR" short_name="SFSTFR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="64" y="5"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBETR" short_name="SFBETR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="76" y="5"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="88" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRDAT" short_name="SFRDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="RNRENR" short_name="RNRENR" data_type="zoned_decimal" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="10" y="6"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFJAWO" short_name="SFJAWO" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="21" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLIEF" short_name="SFLIEF" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="28" y="6"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFREMI" short_name="SFREMI" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="40" y="6"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUBL" short_name="SFGUBL" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="52" y="6"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSTFR" short_name="SFSTFR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="64" y="6"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBETR" short_name="SFBETR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="76" y="6"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="88" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRDAT" short_name="SFRDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="RNRENR" short_name="RNRENR" data_type="zoned_decimal" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="10" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFJAWO" short_name="SFJAWO" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="21" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLIEF" short_name="SFLIEF" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="28" y="7"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFREMI" short_name="SFREMI" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="40" y="7"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUBL" short_name="SFGUBL" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="52" y="7"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSTFR" short_name="SFSTFR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="64" y="7"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBETR" short_name="SFBETR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="76" y="7"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="88" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRDAT" short_name="SFRDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="RNRENR" short_name="RNRENR" data_type="zoned_decimal" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="10" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFJAWO" short_name="SFJAWO" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="21" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLIEF" short_name="SFLIEF" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="28" y="8"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFREMI" short_name="SFREMI" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="40" y="8"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUBL" short_name="SFGUBL" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="52" y="8"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSTFR" short_name="SFSTFR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="64" y="8"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBETR" short_name="SFBETR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="76" y="8"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="88" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRDAT" short_name="SFRDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="RNRENR" short_name="RNRENR" data_type="zoned_decimal" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="10" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFJAWO" short_name="SFJAWO" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="21" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLIEF" short_name="SFLIEF" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="28" y="9"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFREMI" short_name="SFREMI" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="40" y="9"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUBL" short_name="SFGUBL" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="52" y="9"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSTFR" short_name="SFSTFR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="64" y="9"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBETR" short_name="SFBETR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="76" y="9"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="88" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFRDAT" short_name="SFRDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="RNRENR" short_name="RNRENR" data_type="zoned_decimal" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="10" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFJAWO" short_name="SFJAWO" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="21" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLIEF" short_name="SFLIEF" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="28" y="10"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFREMI" short_name="SFREMI" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="40" y="10"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUBL" short_name="SFGUBL" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="52" y="10"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSTFR" short_name="SFSTFR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="64" y="10"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBETR" short_name="SFBETR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="76" y="10"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="88" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRDAT" short_name="SFRDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="RNRENR" short_name="RNRENR" data_type="zoned_decimal" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="10" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFJAWO" short_name="SFJAWO" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="21" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLIEF" short_name="SFLIEF" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="28" y="11"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFREMI" short_name="SFREMI" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="40" y="11"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUBL" short_name="SFGUBL" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="52" y="11"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSTFR" short_name="SFSTFR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="64" y="11"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBETR" short_name="SFBETR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="76" y="11"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="88" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRDAT" short_name="SFRDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="RNRENR" short_name="RNRENR" data_type="zoned_decimal" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="10" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFJAWO" short_name="SFJAWO" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="21" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLIEF" short_name="SFLIEF" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="28" y="12"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFREMI" short_name="SFREMI" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="40" y="12"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUBL" short_name="SFGUBL" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="52" y="12"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSTFR" short_name="SFSTFR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="64" y="12"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBETR" short_name="SFBETR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="76" y="12"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="88" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRDAT" short_name="SFRDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="RNRENR" short_name="RNRENR" data_type="zoned_decimal" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="10" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFJAWO" short_name="SFJAWO" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="21" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLIEF" short_name="SFLIEF" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="28" y="13"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFREMI" short_name="SFREMI" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="40" y="13"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUBL" short_name="SFGUBL" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="52" y="13"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSTFR" short_name="SFSTFR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="64" y="13"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBETR" short_name="SFBETR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="76" y="13"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="88" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRDAT" short_name="SFRDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="RNRENR" short_name="RNRENR" data_type="zoned_decimal" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="10" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFJAWO" short_name="SFJAWO" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="21" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLIEF" short_name="SFLIEF" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="28" y="14"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFREMI" short_name="SFREMI" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="40" y="14"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUBL" short_name="SFGUBL" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="52" y="14"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSTFR" short_name="SFSTFR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="64" y="14"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBETR" short_name="SFBETR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="76" y="14"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="88" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFRDAT" short_name="SFRDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="RNRENR" short_name="RNRENR" data_type="zoned_decimal" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="10" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFJAWO" short_name="SFJAWO" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="21" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLIEF" short_name="SFLIEF" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="28" y="15"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFREMI" short_name="SFREMI" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="40" y="15"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUBL" short_name="SFGUBL" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="52" y="15"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSTFR" short_name="SFSTFR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="64" y="15"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBETR" short_name="SFBETR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="76" y="15"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="88" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRDAT" short_name="SFRDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="RNRENR" short_name="RNRENR" data_type="zoned_decimal" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="10" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFJAWO" short_name="SFJAWO" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="21" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLIEF" short_name="SFLIEF" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="28" y="16"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFREMI" short_name="SFREMI" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="40" y="16"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUBL" short_name="SFGUBL" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="52" y="16"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSTFR" short_name="SFSTFR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="64" y="16"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBETR" short_name="SFBETR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="76" y="16"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="88" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRDAT" short_name="SFRDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="RNRENR" short_name="RNRENR" data_type="zoned_decimal" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="10" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFJAWO" short_name="SFJAWO" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="21" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLIEF" short_name="SFLIEF" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="28" y="17"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFREMI" short_name="SFREMI" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="40" y="17"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUBL" short_name="SFGUBL" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="52" y="17"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSTFR" short_name="SFSTFR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="64" y="17"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBETR" short_name="SFBETR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="76" y="17"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="88" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRDAT" short_name="SFRDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="RNRENR" short_name="RNRENR" data_type="zoned_decimal" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="10" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFJAWO" short_name="SFJAWO" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="21" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLIEF" short_name="SFLIEF" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="28" y="18"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFREMI" short_name="SFREMI" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="40" y="18"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUBL" short_name="SFGUBL" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="52" y="18"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSTFR" short_name="SFSTFR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="64" y="18"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBETR" short_name="SFBETR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="76" y="18"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="88" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRDAT" short_name="SFRDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="RNRENR" short_name="RNRENR" data_type="zoned_decimal" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="10" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFJAWO" short_name="SFJAWO" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="21" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLIEF" short_name="SFLIEF" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="28" y="19"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFREMI" short_name="SFREMI" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="40" y="19"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUBL" short_name="SFGUBL" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="52" y="19"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSTFR" short_name="SFSTFR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="64" y="19"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBETR" short_name="SFBETR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="76" y="19"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="88" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFRDAT" short_name="SFRDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="RNRENR" short_name="RNRENR" data_type="zoned_decimal" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="10" y="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFJAWO" short_name="SFJAWO" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="21" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLIEF" short_name="SFLIEF" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="28" y="20"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFREMI" short_name="SFREMI" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="40" y="20"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUBL" short_name="SFGUBL" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="52" y="20"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSTFR" short_name="SFSTFR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="64" y="20"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBETR" short_name="SFBETR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="76" y="20"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="88" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRDAT" short_name="SFRDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="21"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="RNRENR" short_name="RNRENR" data_type="zoned_decimal" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="10" y="21"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFJAWO" short_name="SFJAWO" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="21" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLIEF" short_name="SFLIEF" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="28" y="21"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFREMI" short_name="SFREMI" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="40" y="21"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUBL" short_name="SFGUBL" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="52" y="21"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSTFR" short_name="SFSTFR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="64" y="21"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBETR" short_name="SFBETR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="76" y="21"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="88" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRDAT" short_name="SFRDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="22"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="RNRENR" short_name="RNRENR" data_type="zoned_decimal" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="10" y="22"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFJAWO" short_name="SFJAWO" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="21" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLIEF" short_name="SFLIEF" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="28" y="22"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFREMI" short_name="SFREMI" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="40" y="22"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUBL" short_name="SFGUBL" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="52" y="22"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSTFR" short_name="SFSTFR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="64" y="22"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBETR" short_name="SFBETR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="76" y="22"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="88" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRDAT" short_name="SFRDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="23"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="RNRENR" short_name="RNRENR" data_type="zoned_decimal" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="10" y="23"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFJAWO" short_name="SFJAWO" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="21" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLIEF" short_name="SFLIEF" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="28" y="23"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFREMI" short_name="SFREMI" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="40" y="23"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUBL" short_name="SFGUBL" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="52" y="23"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSTFR" short_name="SFSTFR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="64" y="23"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBETR" short_name="SFBETR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="76" y="23"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="88" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFRDAT" short_name="SFRDAT" data_type="zoned_decimal" display_length="8" data_length="6" conditional="true">
+          <area>
+            <position x="1" y="24"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="RNRENR" short_name="RNRENR" data_type="zoned_decimal" display_length="10" data_length="10" conditional="true">
+          <area>
+            <position x="10" y="24"/>
+            <size cx="10" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFJAWO" short_name="SFJAWO" data_type="zoned_decimal" display_length="5" data_length="4" conditional="true">
+          <area>
+            <position x="21" y="24"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLIEF" short_name="SFLIEF" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="28" y="24"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFREMI" short_name="SFREMI" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="40" y="24"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFGUBL" short_name="SFGUBL" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="52" y="24"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFSTFR" short_name="SFSTFR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="64" y="24"/>
+            <size cx="11" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFBETR" short_name="SFBETR" data_type="zoned_decimal" display_length="11" data_length="9" conditional="true" decimal_positions="2">
+          <area>
+            <position x="76" y="24"/>
+            <size cx="11" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="AKTION" short_name="AKTION" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="88" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="                                                                                                                                  " display_length="130" data_length="130" underline="true">
+      <area>
+        <position x="1" y="25"/>
+        <size cx="130" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+    <field field_type="fixed_text" value="F3 = Verlassen" display_length="14" data_length="14">
+      <area>
+        <position x="1" y="26"/>
+        <size cx="14" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

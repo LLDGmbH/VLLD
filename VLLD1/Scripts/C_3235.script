@@ -1,0 +1,20 @@
+﻿dim ErrorMsg as String
+dim rc as Integer
+global text, filiale, xobj, xgart, xgaug  as string
+
+rem PanelLoadPanel("(3235H)")
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rc = EzSQLQuery("SELECT pos, atrnr, expl FROM grhistp where (atobj = 0106 and gart = 3 and gaug = 0) order by atrnr", text, ErrorMsg)
+
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelLoadPanel("(3235H)")
+PanelFieldPutData ("histo", 0, text) 
+PanelUpdateEnable(2)
+endif

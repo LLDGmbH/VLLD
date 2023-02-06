@@ -1,0 +1,51 @@
+﻿rem **Füllen Combo-Box  aus GRVKAP **
+
+dim text, ErrorMsg as String
+dim rc as Integer
+Global Filiale as string
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rem **INNENDIENST AUS GRINDP
+
+if  filiale = "0"   then 
+rc = EzSQLQuery("SELECT IDNR, IDNAME FROM DIPF01/GRINDP order by IDNR", text, ErrorMsg)
+endif
+if  filiale = "1"   then 
+rc = EzSQLQuery("SELECT IDNR, IDNAME FROM DIPF01/GRINDP order by IDNR", text, ErrorMsg)
+endif
+if ( filiale = "2" ) then 
+rc = EzSQLQuery("SELECT IDNR, IDNAME FROM DIPF02/GRINDP order by IDNR", text, ErrorMsg)
+endif
+if ( filiale = "3" ) then 
+rc = EzSQLQuery("SELECT IDNR, IDNAME FROM DIPF03/GRINDP order by IDNR", text, ErrorMsg)
+endif
+if ( filiale = "4" ) then 
+rc = EzSQLQuery("SELECT IDNR, IDNAME FROM DIPF04/GRINDP order by IDNR", text, ErrorMsg)
+endif
+if ( filiale = "5" ) then 
+rc = EzSQLQuery("SELECT IDNR, IDNAME FROM DIPF05/GRINDP order by IDNR", text, ErrorMsg)
+endif
+if ( filiale = "6" ) then 
+rc = EzSQLQuery("SELECT IDNR, IDNAME FROM DIPF06/GRINDP order by IDNR", text, ErrorMsg)
+endif
+if ( filiale = "7" ) then 
+rc = EzSQLQuery("SELECT IDNR, IDNAME FROM DIPF07/GRINDP order by IDNR", text, ErrorMsg)
+endif
+if ( filiale = "8" ) then 
+rc = EzSQLQuery("SELECT IDNR, IDNAME FROM DIPF08/GRINDP order by IDNR", text, ErrorMsg)
+endif
+if ( filiale = "9" ) then 
+rc = EzSQLQuery("SELECT IDNR, IDNAME FROM DIPF09/GRINDP order by IDNR", text, ErrorMsg)
+endif
+
+
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelFieldSetProp ("kdsnf2", 5, text) 
+PanelUpdateEnable(2)
+endif

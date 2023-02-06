@@ -1,0 +1,87 @@
+﻿global filiale as string
+DIM ddehandle, i, j, msg, rc as integer
+dim x1gefo, x1lenr, x1nnam, x1vnam, x1str, x1plz, x1ort, x1onam, x1anze, x1z, xBezirk, datei, pfad_datei, ErrMsg, sql1, sql2, sql3, sql4, sql5, sql6, sql7, sql8, f01 as string 
+dim xxende, xxabgg, xxtext, xxablage as string
+dim source as string
+
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Leser_eines_Zusteller.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "GeFo")
+ddepoke( ddehandle, "Z1S2", "Leser")
+ddepoke( ddehandle, "Z1S3", "Name")
+ddepoke( ddehandle, "Z1S4", "Vorname")
+ddepoke( ddehandle, "Z1S5", "Strasse")
+ddepoke( ddehandle, "Z1S6", "Ort")
+ddepoke( ddehandle, "Z1S7", "PLZ")
+ddepoke( ddehandle, "Z1S8", "Objekt")
+ddepoke( ddehandle, "Z1S9", "Anz.Ex")
+ddepoke( ddehandle, "Z1S10", "Z")
+ddepoke( ddehandle, "Z1S11", "B")
+ddepoke( ddehandle, "Z1S12", "Lief.Ende")
+ddepoke( ddehandle, "Z1S13", "Abgangsgrund")
+ddepoke( ddehandle, "Z1S14", "Ablage")
+
+nochmal:
+
+HostFieldGetLineData("s1gefo", i, x1gefo)
+HostFieldGetLineData("s1lenr", i, x1lenr)
+HostFieldGetLineData("s1nnam", i, x1nnam)
+HostFieldGetLineData("s1vnam", i, x1vnam)
+HostFieldGetLineData("s1str", i, x1str)
+HostFieldGetLineData("s1ort", i, x1ort)
+HostFieldGetLineData("s1plz", i, x1plz)
+HostFieldGetLineData("s1onam", i, x1onam)
+HostFieldGetLineData("s1anze", i, x1anze)
+HostFieldGetLineData("s1z", i, x1z)
+HostFieldGetLineData("s1Bezi", i, xBezirk)
+
+sql1 = "SELECT flende FROM grflep where fllenr = " + x1lenr + ""
+sql2 = "SELECT flabgg FROM grflep where fllenr = " + x1lenr + ""
+
+rc = EzSQLQuery(sql1, xxende, ErrMsg)
+rc = EzSQLQuery(sql2, xxabgg, ErrMsg)
+
+sql3 = "SELECT abtext FROM grabgp where abnr = " + xxabgg + ""
+rc = EzSQLQuery(sql3, xxtext, ErrMsg)
+
+sql4 = "SELECT flablg FROM grflep where fllenr = " + x1lenr + ""
+rc = EzSQLQuery(sql4, xxablage, ErrMsg)
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", x1gefo)
+ddepoke( ddehandle, "Z" + str(j) +"S2", x1lenr)
+ddepoke( ddehandle, "Z" + str(j) +"S3", x1nnam)
+ddepoke( ddehandle, "Z" + str(j) +"S4", x1vnam)
+ddepoke( ddehandle, "Z" + str(j) +"S5", x1str)
+ddepoke( ddehandle, "Z" + str(j) +"S6", x1ort)
+ddepoke( ddehandle, "Z" + str(j) +"S7", x1plz)
+ddepoke( ddehandle, "Z" + str(j) +"S8", x1onam)
+ddepoke( ddehandle, "Z" + str(j) +"S9", x1anze)
+ddepoke( ddehandle, "Z" + str(j) +"S10", x1z)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xBezirk)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xxende)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xxtext)
+ddepoke( ddehandle, "Z" + str(j) +"S14", xxablage)
+
+j=j+1 
+
+if i < 21 then
+i=i+1
+goto nochmal
+endif
+ 
+if x1lenr <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

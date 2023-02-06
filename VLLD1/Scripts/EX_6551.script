@@ -1,0 +1,70 @@
+﻿DIM ddehandle, i, j, msg as integer
+dim xobj,xtitel, xfolg, xlm, xlmn, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12, x13, x14, x15, xende, datei, pfad_datei, source as string 
+i = 0
+j=1
+
+
+datei = "Lokalmarktanalyse.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+HostFieldGetData("sfc_obj", xobj)
+HostFieldGetData("sfc_onam", xtitel)
+HostFieldGetData("sfc_folg", xfolg)
+HostFieldGetData("sfc2_lm", xlm)
+HostFieldGetData("sfc2_lmnam", xlmn)
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", "Objekt")
+ddepoke( ddehandle, "Z" + str(j) +"S2", xobj)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xtitel)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xfolg)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xlm)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xlmn)
+
+j=j+2
+ddepoke( ddehandle, "Z" + str(j) +"S1", "Kdnr")
+ddepoke( ddehandle, "Z" + str(j) +"S2", "Name")
+ddepoke( ddehandle, "Z" + str(j) +"S3", "Bezug")
+ddepoke( ddehandle, "Z" + str(j) +"S4", "Remi")
+ddepoke( ddehandle, "Z" + str(j) +"S5", "Verkauf")
+
+
+j=j+1
+
+
+nochmal:
+
+HostFieldGetLineData("sf2_kdnr", i, x1)
+HostFieldGetLineData("sf2_kdnam", i, x2)
+HostFieldGetLineData("sf2_bezug", i, x3)
+HostFieldGetLineData("sf2_remi", i, x4)
+HostFieldGetLineData("sf2_verk", i, x5)
+
+
+HostFieldGetData("ende", xende)
+
+if x1 <> ""  then
+ddepoke( ddehandle, "Z" + str(j) +"S1", x1)
+ddepoke( ddehandle, "Z" + str(j) +"S2", x2)
+ddepoke( ddehandle, "Z" + str(j) +"S3", x3)
+ddepoke( ddehandle, "Z" + str(j) +"S4", x4)
+ddepoke( ddehandle, "Z" + str(j) +"S5", x5)
+
+
+j=j+1
+endif
+
+if i < 17 then
+i=i+1
+goto nochmal
+endif
+ 
+if x2 <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif
