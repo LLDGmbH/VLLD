@@ -1,0 +1,17 @@
+﻿dim text, ErrorMsg as String
+dim rc as Integer
+
+
+rc = EzSQLConnect("DIPF01", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rc = EzSQLQuery("SELECT digits(rbog), digits(rbog) concat ' - ' concat rbotext FROM GRRBOP", text, ErrorMsg)
+PanelFieldSetProp ("atrast", 5, text) 
+
+
+
+
+
+PanelUpdateEnable(2)

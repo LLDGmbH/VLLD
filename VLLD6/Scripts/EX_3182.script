@@ -1,0 +1,64 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xsfrdat, xrnrenr, xsfjawo, xsflief, xsfremi, xsfgubl, xsfstfr, xsfbetr, xkdkdnr, xkdname, errmsg, datei, pfad_datei, source as string 
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+HostFieldGetData("kdkdnr",xkdkdnr)
+HostFieldGetData("kdname",xkdname)
+
+datei = "Rechnungen_Kunde_" + xkdkdnr + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", xkdkdnr)
+ddepoke( ddehandle, "Z1S2", xkdname)
+ddepoke( ddehandle, "Z2S1", "Datum")
+ddepoke( ddehandle, "Z2S2", "Nummer")
+ddepoke( ddehandle, "Z2S3", "Woche")
+ddepoke( ddehandle, "Z2S4", "Lieferung")
+ddepoke( ddehandle, "Z2S5", "Remission")
+ddepoke( ddehandle, "Z2S6", "Gutschrift/Belastung")
+ddepoke( ddehandle, "Z2S7", "Steuerfrei")
+ddepoke( ddehandle, "Z2S8", "Gesamt")
+
+
+nochmal:
+
+HostFieldGetLineData("sfrdat", i, xsfrdat)
+HostFieldGetLineData("rnrenr", i, xrnrenr)
+HostFieldGetLineData("sfjawo", i, xsfjawo)
+HostFieldGetLineData("sflief", i, xsflief)
+HostFieldGetLineData("sfremi", i, xsfremi)
+HostFieldGetLineData("sfgubl", i, xsfgubl)
+HostFieldGetLineData("sfstfr", i, xsfstfr)
+HostFieldGetLineData("sfbetr", i, xsfbetr)
+
+
+if (xsfrdat <> "")  then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xsfrdat)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xrnrenr)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xsfjawo)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xsflief)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xsfremi)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xsfgubl)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xsfstfr)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xsfbetr)
+
+j=j+1
+endif
+
+if i < 17 then
+i=i+1
+goto nochmal
+endif
+ 
+if xsfrdat <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

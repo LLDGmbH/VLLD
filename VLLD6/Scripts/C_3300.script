@@ -1,0 +1,27 @@
+﻿
+dim text, ErrorMsg as String
+dim rc as Integer
+
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rc = EzSQLQuery("SELECT  kajah4 FROM grkalp where tag = 1 and monat = 1 order by kajah4 desc", text, ErrorMsg)
+
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelFieldSetProp ("jahr", 5, text) 
+endif
+
+rc = EzSQLQuery("SELECT vavnr, vaname from gradrp  order by vaname", text, ErrorMsg)
+
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelFieldSetProp ("verlag", 5, text) 
+endif
+
+PanelUpdateEnable(2)

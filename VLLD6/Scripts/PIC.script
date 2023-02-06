@@ -1,0 +1,15 @@
+﻿global pic_nummer, pic_jahr, pic_folge, pic_name, pic_vdz as string
+
+HostScreenSendKey("Enter")
+
+pic_name = ""
+
+HostFieldGetData("wfvdz", pic_nummer)
+HostFieldGetData("wfjahr", pic_jahr)
+HostFieldGetData("wffolg", pic_folge)
+
+if (pic_nummer <> "")  then
+
+pic_name = pic_nummer + "_20" + pic_jahr + pic_folge + ".jpg"
+
+endif

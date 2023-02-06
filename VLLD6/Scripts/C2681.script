@@ -1,0 +1,20 @@
+﻿dim text, ErrorMsg as String
+dim rc as Integer
+
+PanelFieldPutFocus("objnr",0,0)
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+
+rc = EzSQLQuery("SELECT digits(VAVNR), DIGITS(VAVNR) concat ' ' concat vaname from gradrp  order by DIGITS(VAVNR)", text, ErrorMsg)
+PanelFieldSetProp ("remivlg", 5, text) 
+
+rc = EzSQLQuery("SELECT mvlnr, DIGITS(mvlnr) concat ' ' concat mvlnam1 from grmvlp  order by DIGITS(mvlnr)", text, ErrorMsg)
+PanelFieldSetProp ("mvnr", 5, text) 
+
+PanelUpdateEnable(2)
+
+PanelFieldPutFocus("objnr",0,0)

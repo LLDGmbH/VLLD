@@ -1,0 +1,58 @@
+﻿global filiale as string
+DIM ddehandle, i, j, msg, rc as integer
+dim xvnr, xobjnr, xjahr, xrdat, xldat, xrmeng, xekp, xsrfol, xsrfk, xsrkun, xsrkk, xende, errmsg, errormsg, datei, pfad_datei, source as string 
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+
+datei = "Abgrenzung.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z2S1", "Datum Lief.")
+ddepoke( ddehandle, "Z2S2", "Datum Remi.")
+ddepoke( ddehandle, "Z2S3", "Menge")
+ddepoke( ddehandle, "Z2S4", "Preis")
+ddepoke( ddehandle, "Z2S5", "Summe Remi Folge")
+ddepoke( ddehandle, "Z2S6", "Summe Remi Kunde")
+
+nochmal:
+
+HostFieldGetLineData("s2ldat", i, xldat)
+HostFieldGetLineData("s2rdat", i, xrdat)
+HostFieldGetLineData("s2rmeng", i, xrmeng)
+HostFieldGetLineData("s2ekp", i, xekp)
+HostFieldGetLineData("s2wek", i, xsrfol)
+HostFieldGetLineData("s2wnet", i, xsrfk)
+
+
+
+if (xldat <> "")  then
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", xldat)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xrdat)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xrmeng)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xekp)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xsrfol)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xsrfk)
+
+
+j=j+1
+endif
+
+if i < 15 then
+i=i+1
+goto nochmal
+endif
+
+
+if xldat <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

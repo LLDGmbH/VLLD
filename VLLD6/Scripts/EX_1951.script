@@ -1,0 +1,81 @@
+﻿DIM ddehandle, i, j, msg as integer
+dim xobnr, xtitel, xf1, xf2, xvdznr, xanzkd, xende, xende2, xgesvkf, xkoppvkf, xgesmitvkf, xkpobnr, xkptitel, xkpmenge, xprzges, xprzkopp, datei, pfad_datei, source as string 
+i = 0
+j=10
+
+HostFieldGetData("obnr",xobnr)
+HostFieldGetData("titel",xtitel)
+HostFieldGetData("folgevon",xf1)
+HostFieldGetData("folgebis",xf2)
+HostFieldGetData("anzkd",xanzkd)
+HostFieldGetData("gesvkf",xgesvkf)
+HostFieldGetData("koppvkf",xkoppvkf)
+HostFieldGetData("gesmitvkf",xgesmitvkf)
+
+datei = "Koppelverkauf_" + xobnr + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "Objekt")
+ddepoke( ddehandle, "Z1S2", xobnr)
+ddepoke( ddehandle, "Z1S3", xtitel)
+ddepoke( ddehandle, "Z2S1", "Folgen (von/bis)")
+ddepoke( ddehandle, "Z2S2", xf1)
+ddepoke( ddehandle, "Z2S3", xf2)
+
+ddepoke( ddehandle, "Z4S1", "Kunden gesamt")
+ddepoke( ddehandle, "Z4S2", xanzkd)
+ddepoke( ddehandle, "Z5S1", "Verkauf gesamt")
+ddepoke( ddehandle, "Z5S2", xgesvkf)
+ddepoke( ddehandle, "Z6S1", "davon gekoppelt verkauft")
+ddepoke( ddehandle, "Z6S2", xkoppvkf)
+ddepoke( ddehandle, "Z7S1", "insgesamt mitverkauft")
+ddepoke( ddehandle, "Z7S2", xgesmitvkf)
+
+ddepoke( ddehandle, "Z9S1", "Obnr")
+ddepoke( ddehandle, "Z9S2", "Titel")
+ddepoke( ddehandle, "Z9S3", "Exemplare")
+ddepoke( ddehandle, "Z9S4", "gesamt %")
+ddepoke( ddehandle, "Z9S5", "gekoppelt %")
+ddepoke( ddehandle, "Z9S6", "VDZ-Nr")
+
+
+nochmal:
+
+HostFieldGetLineData("kpobnr", i, xkpobnr)
+HostFieldGetLineData("kptitel", i, xkptitel)
+HostFieldGetLineData("kpmenge", i, xkpmenge)
+HostFieldGetLineData("przgesvkf", i, xprzges)
+HostFieldGetLineData("przkoppvkf", i, xprzkopp)
+HostFieldGetLineData("vdznr", i, xvdznr)
+
+
+if (xkptitel <> "") then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xkpobnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xkptitel)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xkpmenge)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xprzges)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xprzkopp)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xvdznr)
+
+j=j+1
+endif
+
+if i < 15 then
+i=i+1
+goto nochmal
+endif
+
+HostFieldGetData("ende", xende)
+HostFieldGetData("ende2", xende2)
+
+if (xende <> "Ende") and (xende2 <> "Ende") then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

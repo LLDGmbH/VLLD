@@ -1,0 +1,68 @@
+﻿global filiale as string
+DIM ddehandle, i, j, msg, rc as integer
+dim xkdnr, xname, xobj, xtitel, xfolg, xbrut, xmeng, xdati, xdats, xdatk, xfas, xende, errmsg, errormsg, datei, pfad_datei, source as string 
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+HostFieldGetData("xxkdnr",xkdnr)
+HostFieldGetData("kdname",xname)
+
+datei = "Spätremission_" + xkdnr + ".xls"
+pfad_datei = @"@&LWV@"  + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z2S1", "Obnr")
+ddepoke( ddehandle, "Z2S2", "Titel")
+ddepoke( ddehandle, "Z2S3", "Folge")
+ddepoke( ddehandle, "Z2S4", "Preis")
+ddepoke( ddehandle, "Z2S5", "Expl.")
+ddepoke( ddehandle, "Z2S6", "Datum Remission")
+ddepoke( ddehandle, "Z2S7", "Datum Aufruf")
+ddepoke( ddehandle, "Z2S8", "Datum Kulanz")
+ddepoke( ddehandle, "Z2S9", "FAS")
+
+nochmal:
+
+HostFieldGetLineData("xxobj", i, xobj)
+HostFieldGetLineData("xxname", i, xtitel)
+HostFieldGetLineData("xxfolg", i, xfolg)
+HostFieldGetLineData("xxbrut", i, xbrut)
+HostFieldGetLineData("xxmeng", i, xmeng)
+HostFieldGetLineData("xxdati", i, xdati)
+HostFieldGetLineData("xxdats", i, xdats)
+HostFieldGetLineData("xxdatk", i, xdatk)
+HostFieldGetLineData("xxfas", i, xfas)
+
+
+if (xobj <> "")  then
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", xobj)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xtitel)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xfolg)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xbrut)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xmeng)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xdati)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xdats)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xdatk)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xfas)
+
+j=j+1
+endif
+
+if i < 15 then
+i=i+1
+goto nochmal
+endif
+
+HostFieldGetData("ende", xende)
+ 
+if xobj <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

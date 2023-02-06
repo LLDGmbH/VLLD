@@ -1,0 +1,136 @@
+﻿global filiale as string
+DIM ddehandle, i, j, msg, rc as integer
+dim x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12, x13, x14, x15, x16, x17, sql1, xende, errmsg, errorMsg, datei, pfad_datei, source as string 
+i = 0
+j=1
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+
+
+datei = "Kundenkennzahlen.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", "Kdnr")
+ddepoke( ddehandle, "Z" + str(j) +"S2", "Name")
+ddepoke( ddehandle, "Z" + str(j) +"S3", "Umsatz")
+ddepoke( ddehandle, "Z" + str(j) +"S4", "Anzahl Titel")
+ddepoke( ddehandle, "Z" + str(j) +"S5", "RCR")
+ddepoke( ddehandle, "Z" + str(j) +"S6", "RCR %")
+ddepoke( ddehandle, "Z" + str(j) +"S7", "AV %")
+ddepoke( ddehandle, "Z" + str(j) +"S8", "NV %")
+ddepoke( ddehandle, "Z" + str(j) +"S9", "Umsatz VorQuartal")
+ddepoke( ddehandle, "Z" + str(j) +"S10", "Umsatz VorJahr")
+ddepoke( ddehandle, "Z" + str(j) +"S11", "RemiQuote %")
+ddepoke( ddehandle, "Z" + str(j) +"S12", "Frühremi %")
+ddepoke( ddehandle, "Z" + str(j) +"S13", "Spätremi %")
+ddepoke( ddehandle, "Z" + str(j) +"S14", "Rekl. Lieferung %")
+ddepoke( ddehandle, "Z" + str(j) +"S15", "Rekl. Remission %")
+ddepoke( ddehandle, "Z" + str(j) +"S16", "Regalauslastung %")
+ddepoke( ddehandle, "Z" + str(j) +"S17", "Verlust Frühremi €")
+
+
+j=j+1
+
+
+nochmal:
+
+HostFieldGetLineData("sfkdnr", i, x1)
+
+if  (filiale = "0" ) then
+sql1 = "SELECT kdname FROM dipf01/grkdsp where kdkdnr = " + x1 + ""
+endif
+
+if  (filiale = "1" ) then
+sql1 = "SELECT kdname FROM dipf01/grkdsp where kdkdnr = " + x1 + ""
+endif
+
+if  (filiale = "2" ) then
+sql1 = "SELECT kdname FROM dipf02/grkdsp where kdkdnr = " + x1 + ""
+endif
+
+if  (filiale = "3" ) then
+sql1 = "SELECT kdname FROM dipf03/grkdsp where kdkdnr = " + x1 + ""
+endif
+
+if  (filiale = "4" ) then
+sql1 = "SELECT kdname FROM dipf04/grkdsp where kdkdnr = " + x1 + ""
+endif
+
+if  (filiale = "5" ) then
+sql1 = "SELECT kdname FROM dipf05/grkdsp where kdkdnr = " + x1 + ""
+endif
+
+if  (filiale = "6" ) then
+sql1 = "SELECT kdname FROM dipf06/grkdsp where kdkdnr = " + x1 + ""
+endif
+
+if  (filiale = "7" ) then
+sql1 = "SELECT kdname FROM dipf07/grkdsp where kdkdnr = " + x1 + ""
+endif
+
+if  (filiale = "8" ) then
+sql1 = "SELECT kdname FROM dipf08/grkdsp where kdkdnr = " + x1 + ""
+endif
+
+if  (filiale = "9" ) then
+sql1 = "SELECT kdname FROM dipf09/grkdsp where kdkdnr = " + x1 + ""
+endif
+
+rc = EzSQLQuery(sql1, x2, ErrMsg)
+
+rem HostFieldGetLineData("sfname", i, x2)
+HostFieldGetLineData("sfwums", i, x3)
+HostFieldGetLineData("sfexpl", i, x4)
+HostFieldGetLineData("rcr", i, x5)
+HostFieldGetLineData("rcrp", i, x6)
+HostFieldGetLineData("sfav", i, x7)
+HostFieldGetLineData("sfnv", i, x8)
+HostFieldGetLineData("sfkinuq", i, x9)
+HostFieldGetLineData("sfkinuj", i, x10)
+HostFieldGetLineData("sfkinrg", i, x11)
+HostFieldGetLineData("sfkinrf", i, x12)
+HostFieldGetLineData("sfkinrs", i, x13)
+HostFieldGetLineData("sfkinrl", i, x14)
+HostFieldGetLineData("sfkinrr", i, x15)
+HostFieldGetLineData("sfkinre", i, x16)
+HostFieldGetLineData("sfkinrfw", i, x17)
+
+HostFieldGetData("ende", xende)
+
+if x1 <> ""  then
+ddepoke( ddehandle, "Z" + str(j) +"S1", x1)
+ddepoke( ddehandle, "Z" + str(j) +"S2", x2)
+ddepoke( ddehandle, "Z" + str(j) +"S3", x3)
+ddepoke( ddehandle, "Z" + str(j) +"S4", x4)
+ddepoke( ddehandle, "Z" + str(j) +"S5", x5)
+ddepoke( ddehandle, "Z" + str(j) +"S6", x6)
+ddepoke( ddehandle, "Z" + str(j) +"S7", x7)
+ddepoke( ddehandle, "Z" + str(j) +"S8", x8)
+ddepoke( ddehandle, "Z" + str(j) +"S9", x9)
+ddepoke( ddehandle, "Z" + str(j) +"S10", x10)
+ddepoke( ddehandle, "Z" + str(j) +"S11", x11)
+ddepoke( ddehandle, "Z" + str(j) +"S12", x12)
+ddepoke( ddehandle, "Z" + str(j) +"S13", x13)
+ddepoke( ddehandle, "Z" + str(j) +"S14", x14)
+ddepoke( ddehandle, "Z" + str(j) +"S15", x15)
+ddepoke( ddehandle, "Z" + str(j) +"S16", x16)
+ddepoke( ddehandle, "Z" + str(j) +"S17", x17)
+
+j=j+1
+endif
+
+if i < 16 then
+i=i+1
+goto nochmal
+endif
+ 
+if xende <> "Ende" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

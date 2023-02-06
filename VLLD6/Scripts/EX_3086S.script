@@ -1,0 +1,151 @@
+﻿DIM ddehandle, i, j, msg as integer
+dim xobnr, xtitel, xfolg,xplz1,xplz2,xplz3,xplz4,xplz5,xgm01,xgm02,xgm03,xgm04,xgm05,xvtour,xbtour,xende,xende2, xanzk, datei, pfad_datei as string 
+dim x01,x02,x03,x04,x05,x06,x07,x08,x09,x10,x11,x12,x13,x14,x15,x16,x17,x18,x19,x20 as string
+i = 0
+j=0
+
+HostFieldGetData("objnr",xobnr)
+
+datei = "Statistik_nach_GSART_" + xobnr + ".xls"
+pfad_datei = "c:\v-lld runtime\" + datei
+FileCopy("c:\v-lld runtime\vorlage.xls", pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+HostFieldGetData("atname",xtitel)
+HostFieldGetData("nra",xfolg)
+HostFieldGetData("plz1",xplz1)
+HostFieldGetData("plz2",xplz2)
+HostFieldGetData("plz3",xplz3)
+HostFieldGetData("plz4",xplz4)
+HostFieldGetData("plz5",xplz5)
+HostFieldGetData("gm01",xgm01)
+HostFieldGetData("gm02",xgm02)
+HostFieldGetData("gm03",xgm03)
+HostFieldGetData("gm04",xgm04)
+HostFieldGetData("gm05",xgm05)
+HostFieldGetData("vtour",xvtour)
+HostFieldGetData("btour",xbtour)
+HostFieldGetData("anzk",xanzk)
+
+nochm1:
+HostFieldGetData("nra",xfolg)
+j=j+1
+
+if xfolg = "" then
+goto endpgm
+endif
+
+ddepoke( ddehandle, "Z"+ str(j)+"S1","Objekt" )
+ddepoke( ddehandle, "Z"+ str(j)+"S2", xtitel)
+ddepoke( ddehandle, "Z"+ str(j)+"S3","Folge" )
+ddepoke( ddehandle, "Z"+ str(j)+"S4", xfolg)
+j=j+1
+ddepoke( ddehandle, "Z"+ str(j)+"S1", "Selektion")
+ddepoke( ddehandle, "Z"+ str(j)+"S2", "PLZ")
+ddepoke( ddehandle, "Z"+ str(j)+"S3", xplz1)
+ddepoke( ddehandle, "Z"+ str(j)+"S4", xplz2)
+ddepoke( ddehandle, "Z"+ str(j)+"S5", xplz3)
+ddepoke( ddehandle, "Z"+ str(j)+"S6", xplz4)
+ddepoke( ddehandle, "Z"+ str(j)+"S7", xplz5)
+j=j+1
+ddepoke( ddehandle, "Z"+ str(j)+"S2", "GMK")
+ddepoke( ddehandle, "Z"+ str(j)+"S3", xgm01)
+ddepoke( ddehandle, "Z"+ str(j)+"S4", xgm02)
+ddepoke( ddehandle, "Z"+ str(j)+"S5", xgm03)
+ddepoke( ddehandle, "Z"+ str(j)+"S6", xgm04)
+ddepoke( ddehandle, "Z"+ str(j)+"S7", xgm05)
+j=j+1
+ddepoke( ddehandle, "Z"+ str(j)+"S2", "Tour")
+ddepoke( ddehandle, "Z"+ str(j)+"S3", xvtour)
+ddepoke( ddehandle, "Z"+ str(j)+"S4", "bis")
+ddepoke( ddehandle, "Z"+ str(j)+"S5", xbtour)
+j=j+2
+ddepoke( ddehandle, "Z"+ str(j)+"S2", "Geschäftsart")
+ddepoke( ddehandle, "Z"+ str(j)+"S3", "Bezug")
+ddepoke( ddehandle, "Z"+ str(j)+"S4", "fest")
+ddepoke( ddehandle, "Z"+ str(j)+"S5", "Remission")
+ddepoke( ddehandle, "Z"+ str(j)+"S6", "fest")
+ddepoke( ddehandle, "Z"+ str(j)+"S7", "Verkauf")
+ddepoke( ddehandle, "Z"+ str(j)+"S8", "fest")
+ddepoke( ddehandle, "Z"+ str(j)+"S9", "Gesamt")
+ddepoke( ddehandle, "Z"+ str(j)+"S10", "fest")
+ddepoke( ddehandle, "Z"+ str(j)+"S11", "Ausverkauft")
+ddepoke( ddehandle, "Z"+ str(j)+"S12", "fest")
+ddepoke( ddehandle, "Z"+ str(j)+"S13", "Nullverkauf")
+ddepoke( ddehandle, "Z"+ str(j)+"S14", "fest")
+ddepoke( ddehandle, "Z"+ str(j)+"S15", "Nullbezug")
+ddepoke( ddehandle, "Z"+ str(j)+"S16", "fest")
+ddepoke( ddehandle, "Z"+ str(j)+"S17", "%Bezug")
+ddepoke( ddehandle, "Z"+ str(j)+"S18", "%Remission")
+ddepoke( ddehandle, "Z"+ str(j)+"S19", "%Verkauf")
+ddepoke( ddehandle, "Z"+ str(j)+"S20", "%EH")
+ddepoke( ddehandle, "Z"+ str(j)+"S21", "Anz EH")
+j=j+1
+
+nochm2:
+
+HostFieldGetLineData("dfa", i, x01)
+HostFieldGetLineData("dtext", i, x02)
+HostFieldGetLineData("dgbz", i, x03)
+HostFieldGetLineData("dgbf", i, x04)
+HostFieldGetLineData("dgrm", i, x05)
+HostFieldGetLineData("dgrf", i, x06)
+HostFieldGetLineData("dgvr", i, x07)
+HostFieldGetLineData("dgvf", i, x08)
+HostFieldGetLineData("dgeh", i, x09)
+HostFieldGetLineData("dgef", i, x10)
+HostFieldGetLineData("dgas", i, x11)
+HostFieldGetLineData("dgaf", i, x12)
+HostFieldGetLineData("dgen", i, x13)
+HostFieldGetLineData("dgex", i, x14)
+HostFieldGetLineData("dgbn", i, x15)
+HostFieldGetLineData("dgbx", i, x16)
+HostFieldGetLineData("dprb", i, x17)
+HostFieldGetLineData("dprr", i, x18)
+HostFieldGetLineData("dprv", i, x19)
+HostFieldGetLineData("dpre", i, x20)
+HostFieldGetLineData("anzk", i, x21)
+
+
+if x01 <> "" then
+ddepoke( ddehandle, "Z" + str(j) +"S1", x01)
+ddepoke( ddehandle, "Z" + str(j) +"S2", x02)
+ddepoke( ddehandle, "Z" + str(j) +"S3", x03)
+ddepoke( ddehandle, "Z" + str(j) +"S4", x04)
+ddepoke( ddehandle, "Z" + str(j) +"S5", x05)
+ddepoke( ddehandle, "Z" + str(j) +"S6", x06)
+ddepoke( ddehandle, "Z" + str(j) +"S7", x07)
+ddepoke( ddehandle, "Z" + str(j) +"S8", x08)
+ddepoke( ddehandle, "Z" + str(j) +"S9", x09)
+ddepoke( ddehandle, "Z" + str(j) +"S10",x10)
+ddepoke( ddehandle, "Z" + str(j) +"S11",x11)
+ddepoke( ddehandle, "Z" + str(j) +"S12",x12)
+ddepoke( ddehandle, "Z" + str(j) +"S13",x13)
+ddepoke( ddehandle, "Z" + str(j) +"S14",x14)
+ddepoke( ddehandle, "Z" + str(j) +"S15",x15)
+ddepoke( ddehandle, "Z" + str(j) +"S16",x16)
+ddepoke( ddehandle, "Z" + str(j) +"S17",x17)
+ddepoke( ddehandle, "Z" + str(j) +"S18",x18)
+ddepoke( ddehandle, "Z" + str(j) +"S19",x19)
+ddepoke( ddehandle, "Z" + str(j) +"S20",x20)
+
+j=j+1
+endif
+
+if i < 19 then
+i=i+1
+goto nochm2
+endif
+
+HostFieldGetData("ende",xende)
+
+ 
+if xende <> "Ende" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochm2
+endif
+
+endpgm:

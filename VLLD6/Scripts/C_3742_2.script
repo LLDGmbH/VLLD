@@ -1,0 +1,31 @@
+﻿dim text, ErrorMsg,sqlstmd as String
+dim rc,obnr as Integer
+dim xxobj as string
+
+HostFieldGetData("wsobjn",XXOBJ)
+
+
+sqlstmd = "SELECT wffol6 FROM grwflp where wfobj = " + xxobj + " and wffil = " + filiale + " order by wffol6 desc"
+
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+if xxobj <> ""  then 
+rc = EzSQLQuery(sqlstmd, text, ErrorMsg)
+
+if ( rc < 0 ) then
+
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+
+else
+
+PanelFieldSetProp ("wsfolgv", 5, text) 
+PanelFieldSetProp ("wsfolgb", 5, text) 
+PanelUpdateEnable(2)
+
+endif
+
+endif

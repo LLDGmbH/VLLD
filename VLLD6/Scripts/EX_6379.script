@@ -1,0 +1,123 @@
+﻿DIM ddehandle, i, j, msg as integer
+dim xob1, xob2, xob3, xob4, xob5, xob6, xtit1, xtit2, xtit3, xtit4, xtit5, xtit6, xjahr, xfolg, xgesbz, xgesvk, xbez1, xbez2, xbez3, xbez4, xbez5, xbez6, xvk1, xvk2, xvk3, xvk4, xvk5, xvk6, xvgl, xges, xind, datei, y0, y1, y2, pfad_datei as string 
+dim source as string
+i = 0
+j=4
+
+
+HostFieldGetData("jahr",xjahr)
+HostFieldGetData("obj01",xob1)
+HostFieldGetData("obj02",xob2)
+HostFieldGetData("obj03",xob3)
+HostFieldGetData("obj04",xob4)
+HostFieldGetData("obj05",xob5)
+HostFieldGetData("obj06",xob6)
+HostFieldGetData("nam01",xtit1)
+HostFieldGetData("nam02",xtit2)
+HostFieldGetData("nam03",xtit3)
+HostFieldGetData("nam04",xtit4)
+HostFieldGetData("nam05",xtit5)
+HostFieldGetData("nam06",xtit6)
+
+datei = "Bezug_Verkauf.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "Jahr")
+ddepoke( ddehandle, "Z1S2", xjahr)
+ddepoke( ddehandle, "Z2S1", "Objekte")
+ddepoke( ddehandle, "Z2S2", xob1)
+ddepoke( ddehandle, "Z2S3", xtit1)
+ddepoke( ddehandle, "Z2S4", xob2)
+ddepoke( ddehandle, "Z2S5", xtit2)
+ddepoke( ddehandle, "Z2S6", xob3)
+ddepoke( ddehandle, "Z2S7", xtit3)
+ddepoke( ddehandle, "Z2S8", xob4)
+ddepoke( ddehandle, "Z2S9", xtit4)
+ddepoke( ddehandle, "Z2S10", xob5)
+ddepoke( ddehandle, "Z2S11", xtit5)
+ddepoke( ddehandle, "Z2S12", xob6)
+ddepoke( ddehandle, "Z2S13", xtit6)
+ddepoke( ddehandle, "Z2S14", "Gesamt")
+ddepoke( ddehandle, "Z2S15", "Gesamt")
+
+ddepoke( ddehandle, "Z3S1", "Folge")
+ddepoke( ddehandle, "Z3S2", "Bezug")
+ddepoke( ddehandle, "Z3S3", "Verkauf")
+ddepoke( ddehandle, "Z3S4", "Bezug")
+ddepoke( ddehandle, "Z3S5", "Verkauf")
+ddepoke( ddehandle, "Z3S6", "Bezug")
+ddepoke( ddehandle, "Z3S7", "Verkauf")
+ddepoke( ddehandle, "Z3S8", "Bezug")
+ddepoke( ddehandle, "Z3S9", "Verkauf")
+ddepoke( ddehandle, "Z3S10", "Bezug")
+ddepoke( ddehandle, "Z3S11", "Verkauf")
+ddepoke( ddehandle, "Z3S12", "Bezug")
+ddepoke( ddehandle, "Z3S13", "Verkauf")
+ddepoke( ddehandle, "Z3S14", "Bezug")
+ddepoke( ddehandle, "Z3S15", "Verkauf")
+ddepoke( ddehandle, "Z3S16", "Vergleich")
+ddepoke( ddehandle, "Z3S17", "Gesamt")
+ddepoke( ddehandle, "Z3S18", "Index")
+
+
+nochmal:
+
+HostFieldGetLineData("sf_folg", i, xfolg)
+HostFieldGetLineData("bez01", i, xbez1)
+HostFieldGetLineData("verk01", i, xvk1)
+HostFieldGetLineData("bez02", i, xbez2)
+HostFieldGetLineData("verk02", i, xvk2)
+HostFieldGetLineData("bez03", i, xbez3)
+HostFieldGetLineData("verk03", i, xvk3)
+HostFieldGetLineData("bez04", i, xbez4)
+HostFieldGetLineData("verk04", i, xvk4)
+HostFieldGetLineData("bez05", i, xbez5)
+HostFieldGetLineData("verk05", i, xvk5)
+HostFieldGetLineData("bez06", i, xbez6)
+HostFieldGetLineData("verk06", i, xvk6)
+HostFieldGetLineData("bezgs", i, xgesbz)
+HostFieldGetLineData("verkgs", i, xgesvk)
+HostFieldGetLineData("sfvglfol", i, xvgl)
+HostFieldGetLineData("sfgesamt", i, xges)
+HostFieldGetLineData("sfind", i, xind)
+
+
+if (xfolg <> "")  then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xfolg)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xbez1)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xvk1)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xbez2)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xvk2)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xbez3)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xvk3)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xbez4)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xvk4)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xbez5)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xvk5)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xbez6)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xvk6)
+ddepoke( ddehandle, "Z" + str(j) +"S14", xgesbz)
+ddepoke( ddehandle, "Z" + str(j) +"S15", xgesvk)
+ddepoke( ddehandle, "Z" + str(j) +"S16", xvgl)
+ddepoke( ddehandle, "Z" + str(j) +"S17", xges)
+ddepoke( ddehandle, "Z" + str(j) +"S18", xind)
+
+j=j+1
+endif
+
+if i < 19 then
+i=i+1
+goto nochmal
+endif
+ 
+if xfolg <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

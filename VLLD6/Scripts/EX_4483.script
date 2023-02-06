@@ -1,0 +1,52 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xende, xobj, xkdnr, xname, xbez, xvon, xbis, xstr, xplz, xort, errmsg, errormsg, datei, pfad_datei, source as string 
+i = 0
+j=2
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+
+datei = "Zusaetzliche_titel.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "Obnr")
+ddepoke( ddehandle, "Z1S2", "Bezeichnung")
+ddepoke( ddehandle, "Z1S3", "von")
+ddepoke( ddehandle, "Z1S4", "bis")
+
+nochmal:
+
+HostFieldGetLineData("ntobj", i, xobj)
+HostFieldGetLineData("atname", i, xbez)
+HostFieldGetLineData("xxdatvon", i, xvon)
+HostFieldGetLineData("xxdatbis", i, xbis)
+
+
+if (xbez <> "")  then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xobj)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xbez)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xvon)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xbis)
+
+
+j=j+1
+endif
+
+if i < 14 then
+i=i+1
+goto nochmal
+endif
+
+HostFieldGetData("ende", xende)
+ 
+
+if xende <> "Ende" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

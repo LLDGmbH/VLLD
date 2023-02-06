@@ -1,0 +1,126 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim errmsg, datei, pfad_datei, source as string 
+dim xkdname, xkdkdnr, xkdstr, xkdplz, xkdort, xeingabe_vd, xanzx, xanz, xxxprae, xxxsoll, xueb as string
+dim xobnr, xtitel, xbz1, xbz2, xbz3, xbz4, xbz5, xbz6, xrm1, xrm2, xrm3, xrm4, xrm5, xrm6, xvd, xrkz, xauswahl, xbezneu, xgbz as string 
+
+i = 0
+j=9
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+HostFieldGetData("kdkdnr",xkdkdnr)
+HostFieldGetData("ueb",xueb)
+HostFieldGetData("kdname",xkdname)
+HostFieldGetData("kdstr",xkdstr)
+HostFieldGetData("kdplz",xkdplz)
+HostFieldGetData("kdort",xkdort)
+HostFieldGetData("eingabe_vd",xeingabe_vd)
+HostFieldGetData("anzx",xanzx)
+HostFieldGetData("anz",xanz)
+HostFieldGetData("xxprae",xxxprae)
+HostFieldGetData("xxsoll",xxxsoll)
+
+datei = "Sortimentsueberarbeitung_Kunde_" + xkdkdnr + ".xls"
+pfad_datei = @"@&LWV@"  + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", xueb)
+ddepoke( ddehandle, "Z2S1", xkdkdnr)
+ddepoke( ddehandle, "Z2S2", xkdname)
+ddepoke( ddehandle, "Z3S2", xkdstr)
+ddepoke( ddehandle, "Z4S2", xkdplz)
+ddepoke( ddehandle, "Z4S3", xkdort)
+ddepoke( ddehandle, "Z2S2", xkdname)
+ddepoke( ddehandle, "Z2S5", xeingabe_vd)
+ddepoke( ddehandle, "Z3S5", xanzx)
+ddepoke( ddehandle, "Z4S5", xanz)
+ddepoke( ddehandle, "Z5S5", xxxprae)
+ddepoke( ddehandle, "Z6S5", xxxsoll)
+ddepoke( ddehandle, "Z2S4", "loschen ab VD")
+ddepoke( ddehandle, "Z3S4", "Anzahl zu loschen")
+ddepoke( ddehandle, "Z4S4", "Anzahl Gesamt")
+ddepoke( ddehandle, "Z5S4", "Anzahl Prasenz")
+ddepoke( ddehandle, "Z6S4", "Anzahl Soll")
+
+
+
+
+ddepoke( ddehandle, "Z8S1", "Objektnummer")
+ddepoke( ddehandle, "Z8S2", "Titel")
+ddepoke( ddehandle, "Z8S3", "Bez 1")
+ddepoke( ddehandle, "Z8S4", "Rem 1")
+ddepoke( ddehandle, "Z8S5", "Bez 2")
+ddepoke( ddehandle, "Z8S6", "Rem 2")
+ddepoke( ddehandle, "Z8S7", "Bez 3")
+ddepoke( ddehandle, "Z8S8", "Rem 3")
+ddepoke( ddehandle, "Z8S9", "Bez 4")
+ddepoke( ddehandle, "Z8S10", "Rem 4")
+ddepoke( ddehandle, "Z8S11", "Bez 5")
+ddepoke( ddehandle, "Z8S12", "Rem 5")
+ddepoke( ddehandle, "Z8S13", "Bez 6")
+ddepoke( ddehandle, "Z8S14", "Rem 6")
+ddepoke( ddehandle, "Z8S15", "VD")
+ddepoke( ddehandle, "Z8S16", "Rkz")
+ddepoke( ddehandle, "Z8S17", " ")
+ddepoke( ddehandle, "Z8S18", "Bez Neu")
+ddepoke( ddehandle, "Z8S19", "Bez Akt")
+
+nochmal:
+
+HostFieldGetLineData("obnr", i, xobnr)
+HostFieldGetLineData("##titel", i,xtitel)
+HostFieldGetLineData("bz1", i, xbz1)
+HostFieldGetLineData("rm1", i, xrm1)
+HostFieldGetLineData("bz2", i, xbz2)
+HostFieldGetLineData("rm2", i, xrm2)
+HostFieldGetLineData("bz3", i, xbz3)
+HostFieldGetLineData("rm3", i, xrm3)
+HostFieldGetLineData("bz4", i, xbz4)
+HostFieldGetLineData("rm4", i, xrm4)
+HostFieldGetLineData("bz5", i, xbz5)
+HostFieldGetLineData("rm5", i, xrm5)
+HostFieldGetLineData("bz6", i, xbz6)
+HostFieldGetLineData("rm6", i, xrm6)
+HostFieldGetLineData("vd", i, xvd)
+HostFieldGetLineData("rkz", i, xrkz)
+HostFieldGetLineData("auswahl", i, xauswahl)
+HostFieldGetLineData("bezneu", i, xbezneu)
+HostFieldGetLineData("gbz", i, xgbz)
+
+if (xtitel <> "") then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xobnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xtitel)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xbz1)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xrm1)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xbz2)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xrm2)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xbz3)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xrm3)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xbz4)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xrm4)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xbz5)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xrm5)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xbz6)
+ddepoke( ddehandle, "Z" + str(j) +"S14", xrm6)
+ddepoke( ddehandle, "Z" + str(j) +"S15", xvd)
+ddepoke( ddehandle, "Z" + str(j) +"S16", xrkz)
+ddepoke( ddehandle, "Z" + str(j) +"S17", xauswahl)
+ddepoke( ddehandle, "Z" + str(j) +"S18", xbezneu)
+ddepoke( ddehandle, "Z" + str(j) +"S19", xgbz)
+j=j+1
+endif
+
+if i < 14 then
+i=i+1
+goto nochmal
+endif
+ 
+if xtitel <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

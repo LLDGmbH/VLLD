@@ -1,0 +1,77 @@
+﻿global filiale as string
+DIM ddehandle, i, j, msg, rc as integer
+dim x01, x02, x03, x04, x05, x06, x07, x08, x09, x10, x11, x12, x13, xende, errmsg, errormsg, datei, pfad_datei as string 
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+
+datei = "Rechnungspruefung.xls"
+pfad_datei = "c:\v-lld runtime\" + datei
+FileCopy("c:\v-lld runtime\vorlage.xls", pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z2S1", "Filiale")
+ddepoke( ddehandle, "Z2S2", "Objnr")
+ddepoke( ddehandle, "Z2S3", "Titel")
+ddepoke( ddehandle, "Z2S4", "Folge")
+ddepoke( ddehandle, "Z2S5", "EK")
+ddepoke( ddehandle, "Z2S6", "HLF")
+ddepoke( ddehandle, "Z2S7", "NLF")
+ddepoke( ddehandle, "Z2S8", "DLF")
+ddepoke( ddehandle, "Z2S9", "DIFF")
+ddepoke( ddehandle, "Z2S10", "Betrag")
+ddepoke( ddehandle, "Z2S11", "Mw")
+ddepoke( ddehandle, "Z2S12", "Eingang")
+ddepoke( ddehandle, "Z2S13", "P")
+
+nochmal:
+
+HostFieldGetLineData("xfil", i, x01)
+HostFieldGetLineData("atobj", i, x02)
+HostFieldGetLineData("aname", i, x03)
+HostFieldGetLineData("folge", i, x04)
+HostFieldGetLineData("wfek", i, x13)
+HostFieldGetLineData("wfvhlf", i, x05)
+HostFieldGetLineData("wfnlf", i, x06)
+HostFieldGetLineData("wfvdl", i, x07)
+HostFieldGetLineData("wfdiff", i, x08)
+HostFieldGetLineData("preis", i, x09)
+HostFieldGetLineData("Mwstkz", i, x10)
+HostFieldGetLineData("menge", i, x11)
+HostFieldGetLineData("xlkz", i, x12)
+
+
+if (x02 <> "")  then
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", x01)
+ddepoke( ddehandle, "Z" + str(j) +"S2", x02)
+ddepoke( ddehandle, "Z" + str(j) +"S3", x03)
+ddepoke( ddehandle, "Z" + str(j) +"S4", x04)
+ddepoke( ddehandle, "Z" + str(j) +"S5", x13)
+ddepoke( ddehandle, "Z" + str(j) +"S6", x05)
+ddepoke( ddehandle, "Z" + str(j) +"S7", x06)
+ddepoke( ddehandle, "Z" + str(j) +"S8", x07)
+ddepoke( ddehandle, "Z" + str(j) +"S9", x08)
+ddepoke( ddehandle, "Z" + str(j) +"S10", x09)
+ddepoke( ddehandle, "Z" + str(j) +"S11", x10)
+ddepoke( ddehandle, "Z" + str(j) +"S12", x11)
+ddepoke( ddehandle, "Z" + str(j) +"S13", x12)
+
+j=j+1
+endif
+
+if i < 15 then
+i=i+1
+goto nochmal
+endif
+
+HostFieldGetData("ende", xende)
+ 
+if x02 <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

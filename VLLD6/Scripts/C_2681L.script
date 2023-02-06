@@ -1,0 +1,24 @@
+﻿dim text, ErrorMsg as String
+dim rc as Integer
+
+rem ************************************************************
+rem **Füllen Combo-Box  aus GRLTYP **
+
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rem ** Query database
+rc = EzSQLQuery("SELECT LYTYP, lytyp concat ' - ' concat LYTEXT FROM GRLTYP where LYTEXT <> ' '", text, ErrorMsg)
+if ( rc < 0 ) then
+
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+
+else
+
+PanelFieldSetProp ("ATLTYP", 5, text) 
+PanelUpdateEnable(2)
+
+endif

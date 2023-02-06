@@ -1,0 +1,39 @@
+﻿rem **Füllen Combo-Box  aus GRVKAP **
+
+dim text, ErrorMsg as String
+dim rc as Integer
+Global Filiale as string
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+
+
+rem **VERTRETER AUS GRVERP
+
+
+rc = EzSQLQuery("SELECT VTNR, digits(vtnr) concat ' ' concat VTNAME FROM GRVERP order by VTNR", text, ErrorMsg)
+
+
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelFieldSetProp ("ma", 5, text) 
+endif
+
+rc = EzSQLQuery("SELECT ((kdgart*100) + kdgaug), DIGITS(kdgart) concat DIGITS(kdgaug) concat ' - 'concat kdgtxt FROM GRGARP order by DIGITS(kdgart) concat DIGITS(kdgaug)", text, ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelFieldSetProp ("gagu", 5, text) 
+endif
+
+rc = EzSQLQuery("SELECT vlvlkz, digits(vlvlkz) concat ' - ' concat vlvbez FROM grvtlp order by vlvbez", text, ErrorMsg)
+PanelFieldSetProp ("Vtlkz", 5, text) 
+
+rc = EzSQLQuery("SELECT vavnr, digits(vavnr) concat ' - ' concat vaname FROM gradrp order by vaname", text, ErrorMsg)
+PanelFieldSetProp ("Vlg", 5, text) 
+
+PanelUpdateEnable(2)

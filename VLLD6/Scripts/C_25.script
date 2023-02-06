@@ -1,0 +1,22 @@
+﻿dim xy, text, xxbg1, xxbg2, xxbg3, ErrorMsg as String
+dim rc as Integer
+
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+
+endif
+HostFieldGetData("adbg1", xxbg1)
+HostFieldGetData("adbg2", xxbg2)
+HostFieldGetData("adbg3", xxbg3)
+
+xy = "SELECT adkey, digits(adkey) concat '  ' concat ADTEXT FROM GRadtp# where adkey = " + xxbg1 + " order by adkey"
+rc = EzSQLQuery(xy , text, ErrorMsg)
+PanelFieldPutData ("adbg1", 0, text)
+xy = "SELECT adkey, digits(adkey) concat '  ' concat ADTEXT FROM GRadtp# where adkey = " + xxbg2 + " order by adkey"
+rc = EzSQLQuery(xy , text, ErrorMsg)
+PanelFieldPutData ("adbg2", 0, text)
+xy = "SELECT adkey, digits(adkey) concat '  ' concat ADTEXT FROM GRadtp# where adkey = " + xxbg3 + " order by adkey"
+rc = EzSQLQuery(xy , text, ErrorMsg)
+PanelFieldPutData ("adbg3", 0, text)

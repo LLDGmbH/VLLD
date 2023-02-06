@@ -1,0 +1,17 @@
+﻿
+dim text, name, xkdnr, xxnnam, ErrorMsg as String
+dim rc as Integer
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+
+HostFieldGetData("xxzunr", xkdnr)
+rc = EzSQLQuery("SELECT kdnach FROM GRkdsp where kdkdnr = " + xkdnr, text, ErrorMsg)
+PanelFieldPutData("##tour", 0, text)
+
+HostFieldGetData("xxlenr", xkdnr)
+rc = EzSQLQuery("SELECT flvnam FROM GRflep where fllenr = " + xkdnr, text, ErrorMsg)
+
+HostFieldGetData("xxlnam", xxnnam)
+name = RTrim (xxnnam) + ", " + text
+
+PanelFieldPutData("##nnam", 0, name)

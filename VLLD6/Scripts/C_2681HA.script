@@ -1,0 +1,10 @@
+﻿dim text, ErrorMsg as String
+dim rc as Integer
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+
+
+rc = EzSQLQuery("SELECT digits(objnat), obnatnam FROM GRNATP where obnatnam <> ' ' order by obnatnam", text, ErrorMsg)
+
+PanelFieldSetProp ("ATXA13", 5, text) 
+PanelUpdateEnable(2)

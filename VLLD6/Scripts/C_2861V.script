@@ -1,0 +1,19 @@
+﻿rem **Füllen Combo-Box  aus GRVKAP **
+
+dim text, ErrorMsg as String
+dim rc as Integer
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+
+rc = EzSQLQuery("SELECT VKVKST, digits(vkvkst) concat ' - ' concat VKVTXT FROM GRVKAP", text, ErrorMsg)
+
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelFieldSetProp ("kdvkst", 5, text) 
+PanelUpdateEnable(2)
+endif

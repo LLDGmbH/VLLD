@@ -1,0 +1,242 @@
+﻿dim pccom1, xkdnr, xstr0, xstr1, xstr2, xstr3, xstr4, xplz0, xplz1, xplz2, xplz3, xplz4, xort0, xort1, xort2, xort3, xort4, sql1, sql2, sql3, errmsg as string
+global filiale as string
+DIM ddehandle, msg, rc as integer
+
+
+pccom1 = "http://maps.google.de/maps?f=d&source=s_d&saddr="
+
+HostFieldGetData("kdstr", xstr0)
+HostFieldGetData("kdplz", xplz0)
+HostFieldGetData("kdort", xort0)
+if xplz0 <> "" then
+pccom1 = pccom1 + xstr0 + ",+" + xplz0
+endif
+
+
+HostFieldGetData("F1NEH1", xkdnr)
+
+if xkdnr <> "" then
+
+if  (filiale = "0" ) then
+sql1 = "SELECT kdstr FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdplz FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdort FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "1" ) then
+sql1 = "SELECT kdstr FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdplz FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdort FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "2" ) then
+sql1 = "SELECT kdstr FROM dipf02/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdplz FROM dipf02/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdort FROM dipf02/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "3" ) then
+sql1 = "SELECT kdstr FROM dipf03/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdplz FROM dipf03/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdort FROM dipf03/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+rc = EzSQLQuery(sql1, xstr1, ErrMsg)
+rc = EzSQLQuery(sql2, xplz1, ErrMsg)
+rc = EzSQLQuery(sql3, xort1, ErrMsg)
+
+pccom1 = pccom1 + "+to:"
+pccom1 = pccom1 + xstr1 + ",+" + xplz1
+
+endif
+
+HostFieldGetData("F1NEH2", xkdnr)
+
+if xkdnr <> "" then
+
+if  (filiale = "0" ) then
+sql1 = "SELECT kdstr FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdplz FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdort FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "1" ) then
+sql1 = "SELECT kdstr FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdplz FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdort FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "2" ) then
+sql1 = "SELECT kdstr FROM dipf02/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdplz FROM dipf02/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdort FROM dipf02/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "3" ) then
+sql1 = "SELECT kdstr FROM dipf03/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdplz FROM dipf03/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdort FROM dipf03/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "4" ) then
+sql1 = "SELECT kdstr FROM dipf04/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdplz FROM dipf04/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdort FROM dipf04/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "5" ) then
+sql1 = "SELECT kdstr FROM dipf05/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdplz FROM dipf05/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdort FROM dipf05/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "6" ) then
+sql1 = "SELECT kdstr FROM dipf06/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdplz FROM dipf06/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdort FROM dipf06/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "7" ) then
+sql1 = "SELECT kdstr FROM dipf07/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdplz FROM dipf07/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdort FROM dipf07/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "8" ) then
+sql1 = "SELECT kdstr FROM dipf08/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdplz FROM dipf08/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdort FROM dipf08/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "9" ) then
+sql1 = "SELECT kdstr FROM dipf09/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdplz FROM dipf09/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdort FROM dipf09/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+rc = EzSQLQuery(sql1, xstr2, ErrMsg)
+rc = EzSQLQuery(sql2, xplz2, ErrMsg)
+rc = EzSQLQuery(sql3, xort2, ErrMsg)
+
+pccom1 = pccom1 + "+to:"
+pccom1 = pccom1 + xstr2 + ",+" + xplz2
+
+endif
+
+HostFieldGetData("F1NEH3", xkdnr)
+
+if xkdnr <> "" then
+
+if  (filiale = "0" ) then
+sql1 = "SELECT kdstr FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdplz FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdort FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "1" ) then
+sql1 = "SELECT kdstr FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdplz FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdort FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "2" ) then
+sql1 = "SELECT kdstr FROM dipf02/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdplz FROM dipf02/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdort FROM dipf02/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "3" ) then
+sql1 = "SELECT kdstr FROM dipf03/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdplz FROM dipf03/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdort FROM dipf03/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "4" ) then
+sql1 = "SELECT kdstr FROM dipf04/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdplz FROM dipf04/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdort FROM dipf04/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "5" ) then
+sql1 = "SELECT kdstr FROM dipf05/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdplz FROM dipf05/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdort FROM dipf05/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "6" ) then
+sql1 = "SELECT kdstr FROM dipf06/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdplz FROM dipf06/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdort FROM dipf06/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "7" ) then
+sql1 = "SELECT kdstr FROM dipf07/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdplz FROM dipf07/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdort FROM dipf07/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "8" ) then
+sql1 = "SELECT kdstr FROM dipf08/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdplz FROM dipf08/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdort FROM dipf08/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "9" ) then
+sql1 = "SELECT kdstr FROM dipf09/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdplz FROM dipf09/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdort FROM dipf09/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+rc = EzSQLQuery(sql1, xstr3, ErrMsg)
+rc = EzSQLQuery(sql2, xplz3, ErrMsg)
+rc = EzSQLQuery(sql3, xort3, ErrMsg)
+
+pccom1 = pccom1 + "+to:"
+pccom1 = pccom1 + xstr3 + ",+" + xplz3
+
+endif
+
+HostFieldGetData("F1NEH4", xkdnr)
+
+if xkdnr <> "" then
+
+if  (filiale = "0" ) then
+sql1 = "SELECT kdstr FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdplz FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdort FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "1" ) then
+sql1 = "SELECT kdstr FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdplz FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdort FROM dipf01/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "2" ) then
+sql1 = "SELECT kdstr FROM dipf02/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdplz FROM dipf02/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdort FROM dipf02/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "3" ) then
+sql1 = "SELECT kdstr FROM dipf03/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdplz FROM dipf03/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdort FROM dipf03/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "4" ) then
+sql1 = "SELECT kdstr FROM dipf04/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdplz FROM dipf04/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdort FROM dipf04/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "5" ) then
+sql1 = "SELECT kdstr FROM dipf05/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdplz FROM dipf05/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdort FROM dipf05/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "6" ) then
+sql1 = "SELECT kdstr FROM dipf06/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdplz FROM dipf06/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdort FROM dipf06/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "7" ) then
+sql1 = "SELECT kdstr FROM dipf07/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdplz FROM dipf07/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdort FROM dipf07/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "8" ) then
+sql1 = "SELECT kdstr FROM dipf08/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdplz FROM dipf08/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdort FROM dipf08/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+if  (filiale = "9" ) then
+sql1 = "SELECT kdstr FROM dipf09/grkdsp where kdkdnr = " + xkdnr + ""
+sql2 = "SELECT kdplz FROM dipf09/grkdsp where kdkdnr = " + xkdnr + ""
+sql3 = "SELECT kdort FROM dipf09/grkdsp where kdkdnr = " + xkdnr + ""
+endif
+
+rc = EzSQLQuery(sql1, xstr4, ErrMsg)
+rc = EzSQLQuery(sql2, xplz4, ErrMsg)
+rc = EzSQLQuery(sql3, xort4, ErrMsg)
+
+pccom1 = pccom1 + "+to:"
+pccom1 = pccom1 + xstr4 + ",+" + xplz4
+
+endif
+
+pccom1 = pccom1 + "+to:***"
+
+
+UrlOpen(pccom1)

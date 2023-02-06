@@ -1,0 +1,193 @@
+﻿DIM ddehandle, i, j, msg as integer
+dim xkdkdnr, xkdknam, xgahgug, xkonzern, xbereich, xvlkz000, xorggrad, xgtxt, xvbez, xdatvon, xdatbis, xdatvon2, xdatbis2, xpsk, xfeh, xvmp, xumskum, datei, pfad_datei as string 
+dim xsf_kdnr, xsf_name, xsf_fm, xsf_av2, xsf_av3, xsf_av4, xsf_nv2, xsf_nv3, xsf_frm, xsf_srm, xsf_rekl, xsf_reklw, xsf_prae, xsf_ums, xsf_ums2, xsf_umsx as string 
+dim xanzkd, xsu_fm, xsu_av2, xsu_av3, xsu_av4, xsu_nv2, xsu_nv3, xsu_frm, xsu_srm, xsu_rekl, xsu_reklw, xsu_ums, xsu_ums2 as string 
+dim xdu_fm, xdu_av2, xdu_av3, xdu_av4, xdu_nv2, xdu_nv3, xdu_frm, xdu_srm, xdu_rekl, xdu_reklw, xdu_prae, xdu_ums, xdu_ums2, xdu_umsx as string 
+dim source as string
+
+i = 0
+j=2
+
+HostFieldGetData("kdkdnr",xkdkdnr)
+HostFieldGetData("kdknam",xkdknam)
+HostFieldGetData("gahgug",xgahgug)
+HostFieldGetData("konzern",xkonzern)
+HostFieldGetData("bereich",xbereich)
+HostFieldGetData("orggrad",xorggrad)
+HostFieldGetData("vlkz000",xvlkz000)
+HostFieldGetData("gtxt",xgtxt)
+HostFieldGetData("vbez",xvbez)
+HostFieldGetData("datvon",xdatvon)
+HostFieldGetData("datbis",xdatbis)
+HostFieldGetData("datvon2",xdatvon2)
+HostFieldGetData("datbis2",xdatbis2)
+HostFieldGetData("psk",xpsk)
+HostFieldGetData("feh",xfeh)
+HostFieldGetData("vmp",xvmp)
+HostFieldGetData("umskum",xumskum)
+
+datei = "Vertriebliche_Kennzahlen" + ".xls"
+pfad_datei = @"@&LWV@"  + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "Kdnr")
+ddepoke( ddehandle, "Z1S2", "Name")
+ddepoke( ddehandle, "Z1S3", "Fah.-Mit.")
+ddepoke( ddehandle, "Z1S4", "2xAV")
+ddepoke( ddehandle, "Z1S5", "3xAV")
+ddepoke( ddehandle, "Z1S6", "4xAV")
+ddepoke( ddehandle, "Z1S7", "2xNV")
+ddepoke( ddehandle, "Z1S8", "3xNV")
+ddepoke( ddehandle, "Z1S9", "Frühremi")
+ddepoke( ddehandle, "Z1S10", "Spätremi")
+ddepoke( ddehandle, "Z1S11", "Rekl.Expl.")
+ddepoke( ddehandle, "Z1S12", "Rekl.Wert")
+ddepoke( ddehandle, "Z1S13", "Präsenztitel")
+ddepoke( ddehandle, "Z1S14", "Umsatz NEU")
+ddepoke( ddehandle, "Z1S15", "Umsatz ALT")
+ddepoke( ddehandle, "Z1S16", "Umsatz Entw. %")
+ddepoke( ddehandle, "Z1S18", "Vertriebliche Kennzahlen")
+ddepoke( ddehandle, "Z3S18", "Zeitraum Umsatz NEU")
+ddepoke( ddehandle, "Z3S19", xdatvon)
+ddepoke( ddehandle, "Z3S20", "bis")
+ddepoke( ddehandle, "Z3S21", xdatbis)
+ddepoke( ddehandle, "Z4S18", "Zeitraum Umsatz ALT")
+ddepoke( ddehandle, "Z4S19", xdatvon2)
+ddepoke( ddehandle, "Z4S20", "bis")
+ddepoke( ddehandle, "Z4S21", xdatbis2)
+ddepoke( ddehandle, "Z5S18", "Vertriebslinie")
+ddepoke( ddehandle, "Z5S19", xkonzern + xbereich + xorggrad + xvlkz000)
+ddepoke( ddehandle, "Z5S20", xvbez)
+ddepoke( ddehandle, "Z6S18", "Geschäftart")
+ddepoke( ddehandle, "Z6S19", xgahgug)
+ddepoke( ddehandle, "Z6S20", xgtxt)
+ddepoke( ddehandle, "Z7S18", "Kunde")
+ddepoke( ddehandle, "Z7S19", xkdkdnr)
+ddepoke( ddehandle, "Z7S20", xkdknam)
+ddepoke( ddehandle, "Z8S18", "PSK")
+ddepoke( ddehandle, "Z8S19", xpsk)
+ddepoke( ddehandle, "Z9S18", "FEH")
+ddepoke( ddehandle, "Z9S19", xfeh)
+ddepoke( ddehandle, "Z10S18", "VMP")
+ddepoke( ddehandle, "Z10S19", xvmp)
+
+nochmal:
+
+HostFieldGetLineData("sf_kdnr", i, xsf_kdnr)
+HostFieldGetLineData("sf_name", i, xsf_name)
+HostFieldGetLineData("sf_fm", i, xsf_fm)
+HostFieldGetLineData("sf_av2", i, xsf_av2)
+HostFieldGetLineData("sf_av3", i, xsf_av3)
+HostFieldGetLineData("sf_av4", i, xsf_av4)
+HostFieldGetLineData("sf_nv2", i, xsf_nv2)
+HostFieldGetLineData("sf_nv3", i, xsf_nv3)
+HostFieldGetLineData("sf_frm", i, xsf_frm)
+HostFieldGetLineData("sf_srm", i, xsf_srm)
+HostFieldGetLineData("sf_rekl", i, xsf_rekl)
+HostFieldGetLineData("sf_reklw", i, xsf_reklw)
+HostFieldGetLineData("sf_prae", i, xsf_prae)
+HostFieldGetLineData("sf_ums", i, xsf_ums)
+HostFieldGetLineData("sf_ums2", i, xsf_ums2)
+HostFieldGetLineData("sf_umsx", i, xsf_umsx)
+
+
+if (xsf_name <> "") then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xsf_kdnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xsf_name)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xsf_fm)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xsf_av2)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xsf_av3)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xsf_av4)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xsf_nv2)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xsf_nv3)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xsf_frm)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xsf_srm)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xsf_rekl)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xsf_reklw)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xsf_prae)
+ddepoke( ddehandle, "Z" + str(j) +"S14", xsf_ums)
+ddepoke( ddehandle, "Z" + str(j) +"S15", xsf_ums2)
+ddepoke( ddehandle, "Z" + str(j) +"S16", xsf_umsx)
+
+
+j=j+1
+endif
+
+if i < 13 then
+i=i+1
+goto nochmal
+endif
+ 
+if xsf_name <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif
+
+
+HostFieldGetData("anzkd", xanzkd)
+HostFieldGetData("su_fm", xsu_fm)
+HostFieldGetData("su_av2", xsu_av2)
+HostFieldGetData("su_av3", xsu_av3)
+HostFieldGetData("su_av4", xsu_av4)
+HostFieldGetData("su_nv2", xsu_nv2)
+HostFieldGetData("su_nv3", xsu_nv3)
+HostFieldGetData("su_frm", xsu_frm)
+HostFieldGetData("su_srm", xsu_srm)
+HostFieldGetData("su_rekl", xsu_rekl)
+HostFieldGetData("su_reklw", xsu_reklw)
+HostFieldGetData("su_ums", xsu_ums)
+HostFieldGetData("su_ums2", xsu_ums2)
+
+
+j=j+2
+ddepoke( ddehandle, "Z" + str(j) +"S1", "Summe für " + xanzkd + " EH")
+ddepoke( ddehandle, "Z" + str(j) +"S3", xsu_fm)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xsu_av2)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xsu_av3)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xsu_av4)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xsu_nv2)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xsu_nv3)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xsu_frm)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xsu_srm)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xsu_rekl)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xsu_reklw)
+ddepoke( ddehandle, "Z" + str(j) +"S14", xsu_ums)
+ddepoke( ddehandle, "Z" + str(j) +"S15", xsu_ums2)
+
+HostFieldGetData("du_fm", xdu_fm)
+HostFieldGetData("du_av2", xdu_av2)
+HostFieldGetData("du_av3", xdu_av3)
+HostFieldGetData("du_av4", xdu_av4)
+HostFieldGetData("du_nv2", xdu_nv2)
+HostFieldGetData("du_nv3", xdu_nv3)
+HostFieldGetData("du_frm", xdu_frm)
+HostFieldGetData("du_srm", xdu_srm)
+HostFieldGetData("du_rekl", xdu_rekl)
+HostFieldGetData("du_reklw", xdu_reklw)
+HostFieldGetData("du_prae", xdu_prae)
+HostFieldGetData("du_ums", xdu_ums)
+HostFieldGetData("du_ums2", xdu_ums2)
+HostFieldGetData("du_umsx", xdu_umsx)
+
+j=j+1
+ddepoke( ddehandle, "Z" + str(j) +"S1", "Durchschnitt")
+ddepoke( ddehandle, "Z" + str(j) +"S3", xdu_fm)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xdu_av2)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xdu_av3)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xdu_av4)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xdu_nv2)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xdu_nv3)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xdu_frm)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xdu_srm)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xdu_rekl)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xdu_reklw)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xdu_prae)
+ddepoke( ddehandle, "Z" + str(j) +"S14", xdu_ums)
+ddepoke( ddehandle, "Z" + str(j) +"S15", xdu_ums2)
+ddepoke( ddehandle, "Z" + str(j) +"S16", xdu_umsx)

@@ -1,0 +1,61 @@
+﻿DIM ddehandle, i, j, k, msg as integer
+dim xkdnr, xname, xplz, xort, xstr, xgart, xums, xende, pfad_datei, datei, source as string 
+i = 0
+k = 1
+j=2
+
+
+datei = "Adressen_Verteilerpflege" + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "Kdnr")
+ddepoke( ddehandle, "Z1S2", "Name")
+ddepoke( ddehandle, "Z1S3", "Plz")
+ddepoke( ddehandle, "Z1S4", "Ort")
+ddepoke( ddehandle, "Z1S5", "Strasse")
+ddepoke( ddehandle, "Z1S6", "Geschäftsart")
+ddepoke( ddehandle, "Z1S7", "Wochenumsatz")
+
+
+nochmal:
+
+HostFieldGetLineData("rxkdnr", i, xkdnr)
+HostFieldGetLineData("name25", i, xname)
+HostFieldGetLineData("kdplz", i, xplz)
+HostFieldGetLineData("ort20", i, xort)
+HostFieldGetLineData("str18", i, xstr)
+HostFieldGetLineData("name25", k, xgart)
+HostFieldGetLineData("kdplz", k, xums)
+
+if (xort <> "")  then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xkdnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xname)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xplz)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xort)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xstr)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xgart)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xums)
+
+j=j+1
+endif
+
+if i < 17 then
+i=i+3
+k=k+3
+goto nochmal
+endif
+
+HostFieldGetData("ende", xende)
+
+if xende <> "Ende" then
+i=0
+k=1
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

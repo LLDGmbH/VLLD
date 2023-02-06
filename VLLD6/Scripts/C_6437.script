@@ -1,0 +1,16 @@
+﻿dim text, ErrorMsg as String
+dim rc as Integer
+
+
+rem **Vertriebslinien
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+
+rc = EzSQLQuery("SELECT vlvlkz, vlvbez concat ' ' concat digits(vlvlkz) FROM grvtlp order by vlvbez concat ' ' concat digits(vlvlkz)", text, ErrorMsg)
+PanelFieldSetProp ("f1vlkz", 5, text) 
+
+ 
+rc = EzSQLQuery("SELECT digits(kdgart) concat digits(kdgaug), DIGITS(kdgart) concat ' ' concat DIGITS(kdgaug) concat ' - 'concat kdgtxt FROM GRGARP order by (kdgart * 100) + kdgaug", text, ErrorMsg)
+PanelFieldSetProp ("f1gart", 5, text) 
+
+
+PanelUpdateEnable(2)

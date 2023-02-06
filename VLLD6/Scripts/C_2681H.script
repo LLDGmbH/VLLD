@@ -1,0 +1,29 @@
+﻿dim text, ErrorMsg as String
+dim rc as Integer
+
+rem ************************************************************
+rem **Füllen Combo-Box  aus GRAHLP **
+
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rem ** Query database
+rc = EzSQLQuery("SELECT digits(AHSCHL), digits(ahschl) concat ' ' concat AHTEXT FROM GRAHLP where ahtext <> ' ' order by ahtext", text, ErrorMsg)
+
+if ( rc < 0 ) then
+
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+
+else
+
+rem ** Clear combo box control
+rem PanelFieldPutData ("ATXA13", -1, "") 
+
+rem ** Populate combo box control with the string returned by the query
+PanelFieldSetProp ("ATXA13", 5, text) 
+PanelUpdateEnable(2)
+
+endif

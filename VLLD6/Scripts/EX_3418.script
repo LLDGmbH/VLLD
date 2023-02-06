@@ -1,0 +1,81 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xobnr, xtitel, xehcd, xehug, xbneu, xmwn, xvnr, xerrh, xarg, xbnr, xdla, xleh1, sql1, xleh2, sql2, xleh3, sql3, errmsg, datei, pfad_datei, source as string 
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+HostFieldGetData("arg",xarg)
+
+datei = "Titel_" + xarg + ".xls"
+pfad_datei = @"@&LWV@"  + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z2S1", "EHCD")
+ddepoke( ddehandle, "Z2S2", "EHUG")
+ddepoke( ddehandle, "Z2S3", "Objektnummer")
+ddepoke( ddehandle, "Z2S4", "Titel")
+ddepoke( ddehandle, "Z2S5", "Preis")
+ddepoke( ddehandle, "Z2S6", "Mwst")
+ddepoke( ddehandle, "Z2S7", "Verlag")
+ddepoke( ddehandle, "Z2S8", "Eryth.")
+ddepoke( ddehandle, "Z2S9", "akt. Folge")
+ddepoke( ddehandle, "Z2S10", "akt. Datum")
+ddepoke( ddehandle, "Z2S11", "akt. Verteilerbreite Fil.1")
+ddepoke( ddehandle, "Z2S12", "akt. Verteilerbreite Fil.2")
+ddepoke( ddehandle, "Z2S13", "akt. Verteilerbreite Fil.3")
+
+nochmal:
+
+HostFieldGetLineData("atehcd", i, xehcd)
+HostFieldGetLineData("atehug", i, xehug)
+HostFieldGetLineData("atobj", i, xobnr)
+HostFieldGetLineData("atname", i, xtitel)
+HostFieldGetLineData("atbneu", i, xbneu)
+HostFieldGetLineData("atmwn", i, xmwn)
+HostFieldGetLineData("atvnr", i, xvnr)
+HostFieldGetLineData("aterrh", i, xerrh)
+HostFieldGetLineData("atbnr", i, xbnr)
+HostFieldGetLineData("atdla", i, xdla)
+
+sql1 = "SELECT atleh FROM dipf01/grartp where atobj = " + xobnr + ""
+sql2 = "SELECT atleh FROM dipf02/grartp where atobj = " + xobnr + ""
+sql3 = "SELECT atleh FROM dipf03/grartp where atobj = " + xobnr + ""
+
+rc = EzSQLQuery(sql1, xleh1, ErrMsg)
+rc = EzSQLQuery(sql2, xleh2, ErrMsg)
+rc = EzSQLQuery(sql3, xleh3, ErrMsg)
+
+if (xobnr <> "")  then
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", xehcd)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xehug)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xobnr)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xtitel)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xbneu)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xmwn)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xvnr)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xerrh)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xbnr)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xdla)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xleh1)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xleh2)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xleh3)
+
+j=j+1
+endif
+
+if i < 18 then
+i=i+1
+goto nochmal
+endif
+ 
+if xtitel <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

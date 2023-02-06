@@ -1,0 +1,120 @@
+﻿dim text, ErrorMsg as String
+dim rc as Integer
+dim filiale as string
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+HostFieldGetData("f1fil", filiale)
+
+if filiale = "" then
+  filiale = "00"
+endif
+
+rc = EzSQLQuery("SELECT digits(kdgart) concat digits(kdgaug), DIGITS(kdgart) concat ' ' concat DIGITS(kdgaug) concat ' - 'concat kdgtxt FROM GRGARP order by digits(kdgart) concat digits(kdgaug)", text, ErrorMsg)
+
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelFieldSetProp ("GAGU", 5, text) 
+endif
+
+rc = EzSQLQuery("SELECT VKVKST, digits(vkvkst) concat ' - ' concat VKVTXT FROM GRVKAP", text, ErrorMsg)
+
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelFieldSetProp ("kdvkst", 5, text) 
+endif
+
+if  filiale = "00"   then 
+rc = EzSQLQuery("SELECT IDNR, IDNAME FROM DIPF01/GRINDP order by IDNR", text, ErrorMsg)
+endif
+if  filiale = "01"   then 
+rc = EzSQLQuery("SELECT IDNR, IDNAME FROM DIPF01/GRINDP order by IDNR", text, ErrorMsg)
+endif
+if ( filiale = "02" ) then 
+rc = EzSQLQuery("SELECT IDNR, IDNAME FROM DIPF02/GRINDP order by IDNR", text, ErrorMsg)
+endif
+if ( filiale = "03" ) then 
+rc = EzSQLQuery("SELECT IDNR, IDNAME FROM DIPF03/GRINDP order by IDNR", text, ErrorMsg)
+endif
+if ( filiale = "04" ) then 
+rc = EzSQLQuery("SELECT IDNR, IDNAME FROM DIPF04/GRINDP order by IDNR", text, ErrorMsg)
+endif
+if ( filiale = "05" ) then 
+rc = EzSQLQuery("SELECT IDNR, IDNAME FROM DIPF05/GRINDP order by IDNR", text, ErrorMsg)
+endif
+if ( filiale = "06" ) then 
+rc = EzSQLQuery("SELECT IDNR, IDNAME FROM DIPF06/GRINDP order by IDNR", text, ErrorMsg)
+endif
+if ( filiale = "07" ) then 
+rc = EzSQLQuery("SELECT IDNR, IDNAME FROM DIPF07/GRINDP order by IDNR", text, ErrorMsg)
+endif
+if ( filiale = "08" ) then 
+rc = EzSQLQuery("SELECT IDNR, IDNAME FROM DIPF08/GRINDP order by IDNR", text, ErrorMsg)
+endif
+if ( filiale = "09" ) then 
+rc = EzSQLQuery("SELECT IDNR, IDNAME FROM DIPF09/GRINDP order by IDNR", text, ErrorMsg)
+endif
+
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelFieldSetProp ("kdsnf2", 5, text) 
+endif
+
+rc = EzSQLQuery("SELECT VTNR, VTNAME FROM GRVERP order by VTNR", text, ErrorMsg)
+
+
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelFieldSetProp ("kdvtnr", 5, text) 
+endif
+
+if  (filiale = "00" ) then
+rc = EzSQLQuery("SELECT gkz, ort concat ' - ' concat digits(gkz)FROM DIPF01/GRENWP order by ort concat ' - ' concat digits(gkz)", text, ErrorMsg)
+endif
+if  (filiale = "01" ) then
+rc = EzSQLQuery("SELECT gkz, ort concat ' - ' concat digits(gkz)FROM DIPF01/GRENWP order by ort concat ' - ' concat digits(gkz)", text, ErrorMsg)
+endif
+if  (filiale = "02" ) then
+rc = EzSQLQuery("SELECT gkz, ort concat ' - ' concat digits(gkz)FROM DIPF02/GRENWP order by ort concat ' - ' concat digits(gkz)", text, ErrorMsg)
+endif
+if  (filiale = "03" ) then
+rc = EzSQLQuery("SELECT gkz, ort concat ' - ' concat digits(gkz)FROM DIPF03/GRENWP order by ort concat ' - ' concat digits(gkz)", text, ErrorMsg)
+endif
+if  (filiale = "04" ) then
+rc = EzSQLQuery("SELECT gkz, ort concat ' - ' concat digits(gkz)FROM DIPF04/GRENWP order by ort concat ' - ' concat digits(gkz)", text, ErrorMsg)
+endif
+if  (filiale = "05" ) then
+rc = EzSQLQuery("SELECT gkz, ort concat ' - ' concat digits(gkz)FROM DIPF05/GRENWP order by ort concat ' - ' concat digits(gkz)", text, ErrorMsg)
+endif
+if  (filiale = "06" ) then
+rc = EzSQLQuery("SELECT gkz, ort concat ' - ' concat digits(gkz)FROM DIPF06/GRENWP order by ort concat ' - ' concat digits(gkz)", text, ErrorMsg)
+endif
+if  (filiale = "07" ) then
+rc = EzSQLQuery("SELECT gkz, ort concat ' - ' concat digits(gkz)FROM DIPF07/GRENWP order by ort concat ' - ' concat digits(gkz)", text, ErrorMsg)
+endif
+if  (filiale = "08" ) then
+rc = EzSQLQuery("SELECT gkz, ort concat ' - ' concat digits(gkz)FROM DIPF08/GRENWP order by ort concat ' - ' concat digits(gkz)", text, ErrorMsg)
+endif
+if  (filiale = "09" ) then
+rc = EzSQLQuery("SELECT gkz, ort concat ' - ' concat digits(gkz)FROM DIPF09/GRENWP order by ort concat ' - ' concat digits(gkz)", text, ErrorMsg)
+endif
+
+
+
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelFieldSetProp ("f1gkz", 5, text) 
+endif
+
+
+
+
+PanelUpdateEnable(2)

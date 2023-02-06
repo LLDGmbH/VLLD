@@ -1,0 +1,38 @@
+﻿rem **Füllen Combo-Box  aus GRGARP **
+
+dim text, ErrorMsg as String
+dim rc as Integer
+
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rc = EzSQLQuery("SELECT (kdgart * 100) + kdgaug, DIGITS(kdgart) concat ' ' concat DIGITS(kdgaug) concat ' - 'concat kdgtxt FROM GRGARP order by (kdgart * 100) + kdgaug", text, ErrorMsg)
+
+if ( rc < 0 ) then
+
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+
+else
+
+PanelFieldSetProp ("gasart", 5, text) 
+PanelUpdateEnable(2)
+
+endif
+
+
+
+rc = EzSQLQuery("SELECT VTNR, digits(vtnr) concat ' ' concat VTNAME FROM GRVERP order by digits(vtnr) concat ' ' concat VTNAME", text, ErrorMsg)
+
+if ( rc < 0 ) then
+
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+
+else
+
+PanelFieldSetProp ("ma", 5, text) 
+PanelUpdateEnable(2)
+
+endif

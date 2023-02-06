@@ -1,0 +1,36 @@
+﻿rem **Füllen Combo-Box  mit Folgenummer ** 
+
+dim text, ErrorMsg,sqlstmd as String
+dim rc as Integer
+dim yyobj as string
+global dsp_2533 as integer
+
+
+PanelFieldGetData("xxobj",yyOBJ, 0)
+
+
+sqlstmd = "SELECT wffol8, digits(wffol8) FROM grwfl0 where (wffil = 0 or wffil = 1) and wfobj = " + yyobj + " order by wffol8 desc"
+
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+
+rc = EzSQLQuery(sqlstmd, text, ErrorMsg)
+
+if ( rc < 0 ) then
+
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+
+else
+
+PanelFieldSetProp ("xxfolg", 5, text) 
+
+PanelUpdateEnable(2)
+
+endif
+
+
+dsp_2533 = 1

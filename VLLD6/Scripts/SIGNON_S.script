@@ -1,0 +1,29 @@
+﻿Dim WrdApp, ExlApp as Variant
+dim text, ErrorMsg as String
+dim rc as Integer
+Global Word, Excel, BLANK as String
+Global dsp_2675, Filiale as integer
+BLANK = " "
+Filiale = 1
+
+' Testen ob Word installiert ist
+If Word <> "Yes" then
+  WrdApp = Createobject("Word.Application")
+  If GetObjectError( WrdApp ) <> 0 then
+    Word  = "No"
+  Else
+    Word  = "Yes"
+  EndIF
+  ReleaseObject( WrdApp )
+EndIf
+
+' Testen ob Excel installiert ist
+If Excel <> "Yes" then
+  ExlApp = Createobject("Excel.Application")
+  If GetObjectError( ExlApp ) <> 0 then
+    Excel  = "No"
+  Else
+    Excel  = "Yes"
+  EndIF
+  ReleaseObject( ExlApp )
+EndIf

@@ -1,0 +1,135 @@
+﻿global filiale as string
+dim text, xxfil, ErrorMsg, txt as String
+dim rc as Integer
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+
+rc = EzSQLQuery("SELECT digits(filfil), digits(filfil) concat ' ' concat filnam FROM GRFILP order by filfil", text, ErrorMsg)
+
+PanelFieldSetProp ("f1fil", 5, text)  
+rem PanelFieldSetProp ("f1fil2", 5, text)  
+
+HostFieldGetData("f1fil", xxfil)
+
+
+if xxfil = "00" then
+filiale = "0"
+endif
+if xxfil = "01" then
+filiale = "1"
+endif
+if xxfil = "02" then
+filiale = "2"
+endif
+if xxfil = "03" then
+filiale = "3"
+endif
+if xxfil = "04" then
+filiale = "4"
+endif
+if xxfil = "05" then
+filiale = "5"
+endif
+if xxfil = "06" then
+filiale = "6"
+endif
+if xxfil = "07" then
+filiale = "7"
+endif
+if xxfil = "08" then
+filiale = "8"
+endif
+if xxfil = "09" then
+filiale = "9"
+endif
+
+rc = EzSQLQuery("SELECT dxdepot, digits(dxdepot) concat ' - ' concat dxtext FROM GRDPXP  where digits(dxfil) = " + xxfil + " order by dxdepot", text, ErrorMsg)
+
+PanelFieldSetProp ("kdfinr", 5, text)  
+
+PanelUpdateEnable(2)
+
+rem **GESCHÄFTSARTEN AUS GRGARP
+
+rc = EzSQLQuery("SELECT digits(kdgart) concat digits(kdgaug), DIGITS(kdgart) concat ' ' concat DIGITS(kdgaug) concat ' - 'concat kdgtxt FROM GRGARP order by digits(kdgart) concat digits(kdgaug)", text, ErrorMsg)
+
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelFieldSetProp ("GAGU", 5, text) 
+PanelUpdateEnable(2)
+endif
+
+rem **VERKAUFSSTELLEN AUS GRVKAP
+
+rc = EzSQLQuery("SELECT VKVKST, digits(vkvkst) concat ' - ' concat VKVTXT FROM GRVKAP", text, ErrorMsg)
+
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelFieldSetProp ("kdvkst", 5, text) 
+PanelUpdateEnable(2)
+endif
+
+rem **ZENTRALEN AUS GRTSSP
+
+rc = EzSQLQuery("SELECT TSGES, TSNAME FROM GRTSSP order by TSNAME", text, ErrorMsg)
+
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelFieldSetProp ("KDTANK", 5, text) 
+PanelUpdateEnable(2)
+endif
+
+rem **VERTRETER AUS GRVERP
+
+
+rc = EzSQLQuery("SELECT VTNR, VTNAME FROM GRVERP order by VTNR", text, ErrorMsg)
+
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelFieldSetProp ("kdvtnr", 5, text) 
+PanelUpdateEnable(2)
+endif
+
+
+rem **INNENDIENST AUS GRINDP
+if  filiale = "0"   then 
+rc = EzSQLQuery("SELECT IDNR, IDNAME FROM DIPF01/GRINDP order by IDNR", text, ErrorMsg)
+endif
+if  filiale = "1"   then 
+rc = EzSQLQuery("SELECT IDNR, IDNAME FROM DIPF01/GRINDP order by IDNR", text, ErrorMsg)
+endif
+if ( filiale = "2" ) then 
+rc = EzSQLQuery("SELECT IDNR, IDNAME FROM DIPF02/GRINDP order by IDNR", text, ErrorMsg)
+endif
+if ( filiale = "3" ) then 
+rc = EzSQLQuery("SELECT IDNR, IDNAME FROM DIPF03/GRINDP order by IDNR", text, ErrorMsg)
+endif
+if ( filiale = "4" ) then 
+rc = EzSQLQuery("SELECT IDNR, IDNAME FROM DIPF04/GRINDP order by IDNR", text, ErrorMsg)
+endif
+if ( filiale = "5" ) then 
+rc = EzSQLQuery("SELECT IDNR, IDNAME FROM DIPF05/GRINDP order by IDNR", text, ErrorMsg)
+endif
+if ( filiale = "6" ) then 
+rc = EzSQLQuery("SELECT IDNR, IDNAME FROM DIPF06/GRINDP order by IDNR", text, ErrorMsg)
+endif
+if ( filiale = "7" ) then 
+rc = EzSQLQuery("SELECT IDNR, IDNAME FROM DIPF07/GRINDP order by IDNR", text, ErrorMsg)
+endif
+if ( filiale = "8" ) then 
+rc = EzSQLQuery("SELECT IDNR, IDNAME FROM DIPF08/GRINDP order by IDNR", text, ErrorMsg)
+endif
+if ( filiale = "9" ) then 
+rc = EzSQLQuery("SELECT IDNR, IDNAME FROM DIPF09/GRINDP order by IDNR", text, ErrorMsg)
+endif
+
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelFieldSetProp ("kdsnf2", 5, text) 
+PanelUpdateEnable(2)
+endif

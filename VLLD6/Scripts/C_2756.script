@@ -1,0 +1,38 @@
+﻿dim text, sql, ErrorMsg as String
+dim rc as Integer
+
+rem **GESCHÄFTSARTEN AUS GRGARP
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rc = EzSQLQuery("SELECT digits(kdgart) concat digits(kdgaug), DIGITS(kdgart) concat ' ' concat DIGITS(kdgaug) concat ' - 'concat kdgtxt FROM GRGARP order by digits(kdgart) concat digits(kdgaug)", text, ErrorMsg)
+
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelFieldSetProp ("##GAGU", 5, text) 
+PanelFieldSetProp ("##GAGU2", 5, text) 
+rem PanelUpdateEnable(2)
+endif
+
+rem **BUNDESLÄNDER AUS GRBULP
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rc = EzSQLQuery("SELECT digits(bubnr), digits(bubnr) concat ' - ' concat bubname FROM grbulp order by digits(bubnr)", text, ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelFieldSetProp ("BULA", 5, text) 
+rem PanelUpdateEnable(2)
+endif
+
+PanelUpdateEnable(2)
+
+ScriptCall("c_fil")

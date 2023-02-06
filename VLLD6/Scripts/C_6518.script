@@ -1,0 +1,16 @@
+﻿dim text, ErrorMsg as String
+dim rc as Integer
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rc = EzSQLQuery("SELECT fstnr, DIGITS(fstnr) concat ' - 'concat fsttext FROM GRfstP order by  fstnr", text, ErrorMsg)
+PanelFieldSetProp ("fstnr", 5, text) 
+
+rc = EzSQLQuery("SELECT rbkg, DIGITS(rbkg) concat ' - 'concat rbktext FROM GRRBKP order by  rbkg", text, ErrorMsg)
+PanelFieldSetProp ("f2rabatt", 5, text) 
+
+
+PanelUpdateEnable(2)

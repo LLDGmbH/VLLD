@@ -1,0 +1,102 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xfil, xobnr, xtitel, xg1, xg2, xg3, xfolge, xdwva, xdwvacl, xdwvarg, xdwvv, xdwvvcl, xdwvvrg, xdwvva, xdwvvacl, xdwvvarg, xdwverk, xdwvrem, xdwmap, xdwentv, errmsg, datei, pfad_datei as string 
+dim source as string
+i = 0
+j=7
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+HostFieldGetData("fil", xfil)
+HostFieldGetData("objnr",xobnr)
+HostFieldGetData("atname",xtitel)
+HostFieldGetData("dwagcl",xg1)
+HostFieldGetData("dwagrg",xg2)
+HostFieldGetData("dwaggs",xg3)
+
+datei = "DWH_Objekt_" + xobnr + "_VD.xls"
+pfad_datei = @"@&LWV@"  + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", xtitel)
+ddepoke( ddehandle, "Z2S1", "Grosso in Cluster")
+ddepoke( ddehandle, "Z2S2", xg1)
+ddepoke( ddehandle, "Z3S1", "Grosso in Regionalgruppe")
+ddepoke( ddehandle, "Z3S2", xg2)
+ddepoke( ddehandle, "Z4S1", "meldende Grosso")
+ddepoke( ddehandle, "Z4S2", xg3)
+
+ddepoke( ddehandle, "Z6S1", "Folge")
+
+ddepoke( ddehandle, "Z5S3", "VD Ausverkäufer")
+ddepoke( ddehandle, "Z6S2", "Grosso")
+ddepoke( ddehandle, "Z6S3", "Cluster")
+ddepoke( ddehandle, "Z6S4", "Region")
+
+ddepoke( ddehandle, "Z5S6", "VD Verkäufer")
+ddepoke( ddehandle, "Z6S5", "Grosso")
+ddepoke( ddehandle, "Z6S6", "Cluster")
+ddepoke( ddehandle, "Z6S7", "Region")
+
+ddepoke( ddehandle, "Z5S9", "VD Verkäufer o. AV")
+ddepoke( ddehandle, "Z6S8", "Grosso")
+ddepoke( ddehandle, "Z6S9", "Cluster")
+ddepoke( ddehandle, "Z6S10", "Region")
+
+ddepoke( ddehandle, "Z5S12", "Verkauf / Remission")
+ddepoke( ddehandle, "Z6S11", "Verkauf Grosso")
+ddepoke( ddehandle, "Z6S12", "Remi. Grosso")
+ddepoke( ddehandle, "Z6S13", "Mapro Wert")
+ddepoke( ddehandle, "Z6S14", "entg. VK Grosso")
+
+
+nochmal:
+
+HostFieldGetLineData("dwfolg", i, xfolge)
+HostFieldGetLineData("dwva", i, xdwva)
+HostFieldGetLineData("dwvacl", i, xdwvacl)
+HostFieldGetLineData("dwvarg", i, xdwvarg)
+HostFieldGetLineData("dwvv", i, xdwvv)
+HostFieldGetLineData("dwvvcl", i, xdwvvcl)
+HostFieldGetLineData("dwvvrg", i, xdwvvrg)
+HostFieldGetLineData("dwvva", i, xdwvva)
+HostFieldGetLineData("dwvvacl", i, xdwvvacl)
+HostFieldGetLineData("dwvvarg", i, xdwvvarg)
+HostFieldGetLineData("dwverk", i, xdwverk)
+HostFieldGetLineData("dwvrem", i, xdwvrem)
+HostFieldGetLineData("dwmap", i, xdwmap)
+HostFieldGetLineData("dwentv", i, xdwentv)
+
+if (xfolge <> "") then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xfolge)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xdwva)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xdwvacl)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xdwvarg)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xdwvv)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xdwvvcl)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xdwvvrg)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xdwvva)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xdwvvacl)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xdwvvarg)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xdwverk)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xdwvrem)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xdwmap)
+ddepoke( ddehandle, "Z" + str(j) +"S14", xdwentv)
+
+
+j=j+1
+endif
+
+if i < 19 then
+i=i+1
+goto nochmal
+endif
+ 
+if xfolge <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

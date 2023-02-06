@@ -1,0 +1,58 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xdatum, xtitel1, xanz, xaus, xtour, xexpl, xgew, errmsg, datei, pfad_datei, source as string 
+i = 0
+j=6
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+HostFieldGetData("datum",xdatum)
+HostFieldGetData("anzobj",xanz)
+HostFieldGetData("anzaus",xaus)
+HostFieldGetData("##gew",xgew)
+HostFieldGetData("titel1",xtitel1)
+
+if (xgew = "X") then
+datei = "Auslieferung_Gewicht_" + xdatum + ".xls"
+endif
+if (xgew = "") then
+datei = "Auslieferung_Exemplare_" + xdatum + ".xls"
+endif
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "Auslieferung am")
+ddepoke( ddehandle, "Z1S2", xdatum)
+ddepoke( ddehandle, "Z3S1", "Anzahl Objekte gesamt")
+ddepoke( ddehandle, "Z3S2", xanz)
+ddepoke( ddehandle, "Z4S1", "Davon ausgewählt")
+ddepoke( ddehandle, "Z4S2", xaus)
+ddepoke( ddehandle, "Z4S3", xtitel1)
+ddepoke( ddehandle, "Z5S1", "Tour")
+if (xgew = "X") then
+ddepoke( ddehandle, "Z5S2", "Gewicht in Kg")
+endif
+if (xgew = "") then
+ddepoke( ddehandle, "Z5S2", "Exemplare")
+endif
+
+nochmal:
+
+HostFieldGetLineData("sftour", i, xtour)
+HostFieldGetLineData("sfexpl", i, xexpl)
+
+
+
+if (xexpl <> "0000000000") then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xtour)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xexpl)
+
+j=j+1
+endif
+
+if i < 101 then
+i=i+1
+goto nochmal
+endif

@@ -1,0 +1,80 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xobnr, xtitel, xkdnr, xname,  xfolg, xdate, xanz, xbbest, sql2, sql3, xvnr, xvkz, xvbest, xpreis, xpreis1, xweg, xuser, errmsg, datei, pfad_datei, source as string 
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Rückstandsliste.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z2S1", "Kdnr")
+ddepoke( ddehandle, "Z2S2", "Name")
+ddepoke( ddehandle, "Z2S3", "Obnr")
+ddepoke( ddehandle, "Z2S4", "Titel")
+ddepoke( ddehandle, "Z2S5", "Folge")
+ddepoke( ddehandle, "Z2S6", "Datum")
+ddepoke( ddehandle, "Z2S7", "Anzahl")
+ddepoke( ddehandle, "Z2S8", "Bestand")
+ddepoke( ddehandle, "Z2S9", "VMP")
+ddepoke( ddehandle, "Z2S10", "Preis")
+ddepoke( ddehandle, "Z2S11", "Weg")
+ddepoke( ddehandle, "Z2S12", "User")
+ddepoke( ddehandle, "Z2S13", "Verlag")
+ddepoke( ddehandle, "Z2S14", "Vtkz")
+
+nochmal:
+HostFieldGetLineData("bbkdnr", i, xkdnr)
+HostFieldGetLineData("kdname", i, xname)
+HostFieldGetLineData("bbobj", i, xobnr)
+HostFieldGetLineData("bbname", i, xtitel)
+HostFieldGetLineData("bbfolg", i, xfolg)
+HostFieldGetLineData("bbdate", i, xdate)
+HostFieldGetLineData("bbanz", i, xanz)
+HostFieldGetLineData("lbbest", i, xbbest)
+HostFieldGetLineData("lbvmpb", i, xvbest)
+HostFieldGetLineData("bbbpr", i, xpreis)
+HostFieldGetLineData("bbweg", i, xweg)
+HostFieldGetLineData("bbuser", i, xuser)
+
+sql2 = "SELECT atvnr FROM grartp where atobj = " + xobnr + ""
+sql3 = "SELECT atvkz FROM grartp where atobj = " + xobnr + ""
+rc = EzSQLQuery(sql2, xvnr, ErrMsg)
+rc = EzSQLQuery(sql3, xvkz, ErrMsg)
+
+
+if (xkdnr <> "") then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xkdnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xname)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xobnr)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xtitel)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xfolg)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xdate)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xanz)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xbbest)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xvbest)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xpreis)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xweg)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xuser)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xvnr)
+ddepoke( ddehandle, "Z" + str(j) +"S14", xvkz)
+
+j=j+1
+endif
+
+if i < 20 then
+i=i+1
+goto nochmal
+endif
+ 
+if xtitel <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

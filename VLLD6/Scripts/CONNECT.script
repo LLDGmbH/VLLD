@@ -1,0 +1,8 @@
+﻿dim ErrorMsg as String
+dim rc as Integer
+
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif

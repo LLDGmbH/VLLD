@@ -1,0 +1,215 @@
+﻿Global filiale as string
+DIM ddehandle, i, j, msg, rc as integer
+dim xobnr, xname, xtag, xende, xxx, xgbz, xv7, xv8, xv9, xv10, xv11, xv12, xv13, xv1, xv2, xv3, xv4, xv5, xv6, xvh1, xstr, xplz, xort, sql1, sql2, sql3, xarg, errmsg, datei, pfad_datei as string 
+dim source as string
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+HostFieldGetData("arg",xarg)
+
+datei = "Verteiler_VDZ.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", xarg)
+
+HostFieldGetData("F1",xv1)
+HostFieldGetData("F2",xv2)
+HostFieldGetData("F3",xv3)
+HostFieldGetData("F4",xv4)
+HostFieldGetData("F5",xv5)
+HostFieldGetData("F6",xv6)
+HostFieldGetData("F7",xv7)
+HostFieldGetData("F8",xv8)
+HostFieldGetData("F9",xv9)
+HostFieldGetData("F10",xv10)
+HostFieldGetData("F11",xv11)
+HostFieldGetData("F12",xv12)
+HostFieldGetData("F13",xv13)
+
+ddepoke( ddehandle, "Z2S1", "Nr.")
+ddepoke( ddehandle, "Z2S2", "Name/Titel")
+ddepoke( ddehandle, "Z2S3", "Tour")
+ddepoke( ddehandle, "Z2S4", xv1)
+ddepoke( ddehandle, "Z2S5", xv2)
+ddepoke( ddehandle, "Z2S6", xv3)
+ddepoke( ddehandle, "Z2S7", xv4)
+ddepoke( ddehandle, "Z2S8", xv5)
+ddepoke( ddehandle, "Z2S9", xv6)
+ddepoke( ddehandle, "Z2S10", xv7)
+ddepoke( ddehandle, "Z2S11", xv8)
+ddepoke( ddehandle, "Z2S12", xv9)
+ddepoke( ddehandle, "Z2S13", xv10)
+ddepoke( ddehandle, "Z2S14", xv11)
+ddepoke( ddehandle, "Z2S15", xv12)
+ddepoke( ddehandle, "Z2S16", xv13)
+ddepoke( ddehandle, "Z2S17", "VH")
+ddepoke( ddehandle, "Z2S18", "Gbz")
+ddepoke( ddehandle, "Z2S19", "Info")
+ddepoke( ddehandle, "Z2S20", "Strasse")
+ddepoke( ddehandle, "Z2S21", "Plz")
+ddepoke( ddehandle, "Z2S22", "Ort")
+
+nochmal:
+
+HostFieldGetLineData("sfnr", i, xobnr)
+HostFieldGetLineData("sfname", i, xname)
+HostFieldGetLineData("sftag", i, xtag)
+HostFieldGetLineData("v1", i, xv1)
+HostFieldGetLineData("v2", i, xv2)
+HostFieldGetLineData("v3", i, xv3)
+HostFieldGetLineData("v4", i, xv4)
+HostFieldGetLineData("v5", i, xv5)
+HostFieldGetLineData("v6", i, xv6)
+HostFieldGetLineData("v7", i, xv7)
+HostFieldGetLineData("v8", i, xv8)
+HostFieldGetLineData("v9", i, xv9)
+HostFieldGetLineData("v10", i, xv10)
+HostFieldGetLineData("v11", i, xv11)
+HostFieldGetLineData("v12", i, xv12)
+HostFieldGetLineData("v13", i, xv13)
+
+HostFieldGetLineData("rxvh1", i, xvh1)
+HostFieldGetLineData("gbez", i, xgbz)
+HostFieldGetLineData("sfhinw", i, xxx)
+
+if (xtag <> "00000") then
+
+if (filiale = "0") then
+sql1 = "SELECT kdstr FROM dipf01/grkdsp where kdkdnr = " + xobnr + ""
+rc = EzSQLQuery(sql1, xstr, ErrMsg)
+sql2 = "SELECT kdplz FROM dipf01/grkdsp where kdkdnr = " + xobnr + ""
+rc = EzSQLQuery(sql2, xplz, ErrMsg)
+sql3 = "SELECT kdort FROM dipf01/grkdsp where kdkdnr = " + xobnr + ""
+rc = EzSQLQuery(sql3, xort, ErrMsg)
+endif
+
+if (filiale = "1") then
+sql1 = "SELECT kdstr FROM dipf01/grkdsp where kdkdnr = " + xobnr + ""
+rc = EzSQLQuery(sql1, xstr, ErrMsg)
+sql2 = "SELECT kdplz FROM dipf01/grkdsp where kdkdnr = " + xobnr + ""
+rc = EzSQLQuery(sql2, xplz, ErrMsg)
+sql3 = "SELECT kdort FROM dipf01/grkdsp where kdkdnr = " + xobnr + ""
+rc = EzSQLQuery(sql3, xort, ErrMsg)
+endif
+
+if (filiale = "2") then
+sql1 = "SELECT kdstr FROM dipf02/grkdsp where kdkdnr = " + xobnr + ""
+rc = EzSQLQuery(sql1, xstr, ErrMsg)
+sql2 = "SELECT kdplz FROM dipf02/grkdsp where kdkdnr = " + xobnr + ""
+rc = EzSQLQuery(sql2, xplz, ErrMsg)
+sql3 = "SELECT kdort FROM dipf02/grkdsp where kdkdnr = " + xobnr + ""
+rc = EzSQLQuery(sql3, xort, ErrMsg)
+endif
+
+if (filiale = "3") then
+sql1 = "SELECT kdstr FROM dipf03/grkdsp where kdkdnr = " + xobnr + ""
+rc = EzSQLQuery(sql1, xstr, ErrMsg)
+sql2 = "SELECT kdplz FROM dipf03/grkdsp where kdkdnr = " + xobnr + ""
+rc = EzSQLQuery(sql2, xplz, ErrMsg)
+sql3 = "SELECT kdort FROM dipf03/grkdsp where kdkdnr = " + xobnr + ""
+rc = EzSQLQuery(sql3, xort, ErrMsg)
+endif
+
+if (filiale = "4") then
+sql1 = "SELECT kdstr FROM dipf04/grkdsp where kdkdnr = " + xobnr + ""
+rc = EzSQLQuery(sql1, xstr, ErrMsg)
+sql2 = "SELECT kdplz FROM dipf04/grkdsp where kdkdnr = " + xobnr + ""
+rc = EzSQLQuery(sql2, xplz, ErrMsg)
+sql3 = "SELECT kdort FROM dipf04/grkdsp where kdkdnr = " + xobnr + ""
+rc = EzSQLQuery(sql3, xort, ErrMsg)
+endif
+
+if (filiale = "5") then
+sql1 = "SELECT kdstr FROM dipf05/grkdsp where kdkdnr = " + xobnr + ""
+rc = EzSQLQuery(sql1, xstr, ErrMsg)
+sql2 = "SELECT kdplz FROM dipf05/grkdsp where kdkdnr = " + xobnr + ""
+rc = EzSQLQuery(sql2, xplz, ErrMsg)
+sql3 = "SELECT kdort FROM dipf05/grkdsp where kdkdnr = " + xobnr + ""
+rc = EzSQLQuery(sql3, xort, ErrMsg)
+endif
+
+if (filiale = "6") then
+sql1 = "SELECT kdstr FROM dipf06/grkdsp where kdkdnr = " + xobnr + ""
+rc = EzSQLQuery(sql1, xstr, ErrMsg)
+sql2 = "SELECT kdplz FROM dipf06/grkdsp where kdkdnr = " + xobnr + ""
+rc = EzSQLQuery(sql2, xplz, ErrMsg)
+sql3 = "SELECT kdort FROM dipf06/grkdsp where kdkdnr = " + xobnr + ""
+rc = EzSQLQuery(sql3, xort, ErrMsg)
+endif
+
+if (filiale = "7") then
+sql1 = "SELECT kdstr FROM dipf07/grkdsp where kdkdnr = " + xobnr + ""
+rc = EzSQLQuery(sql1, xstr, ErrMsg)
+sql2 = "SELECT kdplz FROM dipf07/grkdsp where kdkdnr = " + xobnr + ""
+rc = EzSQLQuery(sql2, xplz, ErrMsg)
+sql3 = "SELECT kdort FROM dipf07/grkdsp where kdkdnr = " + xobnr + ""
+rc = EzSQLQuery(sql3, xort, ErrMsg)
+endif
+
+if (filiale = "8") then
+sql1 = "SELECT kdstr FROM dipf08/grkdsp where kdkdnr = " + xobnr + ""
+rc = EzSQLQuery(sql1, xstr, ErrMsg)
+sql2 = "SELECT kdplz FROM dipf08/grkdsp where kdkdnr = " + xobnr + ""
+rc = EzSQLQuery(sql2, xplz, ErrMsg)
+sql3 = "SELECT kdort FROM dipf08/grkdsp where kdkdnr = " + xobnr + ""
+rc = EzSQLQuery(sql3, xort, ErrMsg)
+endif
+
+if (filiale = "9") then
+sql1 = "SELECT kdstr FROM dipf09/grkdsp where kdkdnr = " + xobnr + ""
+rc = EzSQLQuery(sql1, xstr, ErrMsg)
+sql2 = "SELECT kdplz FROM dipf09/grkdsp where kdkdnr = " + xobnr + ""
+rc = EzSQLQuery(sql2, xplz, ErrMsg)
+sql3 = "SELECT kdort FROM dipf09/grkdsp where kdkdnr = " + xobnr + ""
+rc = EzSQLQuery(sql3, xort, ErrMsg)
+endif
+
+endif
+
+if (xobnr <> "") then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xobnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xname)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xtag)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xv1)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xv2)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xv3)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xv4)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xv5)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xv6)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xv7)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xv8)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xv9)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xv10)
+ddepoke( ddehandle, "Z" + str(j) +"S14", xv11)
+ddepoke( ddehandle, "Z" + str(j) +"S15", xv12)
+ddepoke( ddehandle, "Z" + str(j) +"S16", xv13)
+ddepoke( ddehandle, "Z" + str(j) +"S17", xvh1)
+ddepoke( ddehandle, "Z" + str(j) +"S18", xgbz)
+ddepoke( ddehandle, "Z" + str(j) +"S19", xxx)
+if (xtag <> "00000") then
+ddepoke( ddehandle, "Z" + str(j) +"S20", xstr)
+ddepoke( ddehandle, "Z" + str(j) +"S21", xplz)
+ddepoke( ddehandle, "Z" + str(j) +"S22", xort)
+endif
+j=j+1
+endif
+
+if i < 17 then
+i=i+1
+goto nochmal
+endif
+
+HostFieldGetData("ende", xende) 
+
+if xende <> "Ende" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

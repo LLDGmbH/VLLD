@@ -1,0 +1,76 @@
+﻿DIM ddehandle, i, j, msg as integer
+dim xobnr, xtitel, xfolge, xmenge, xpreis, xende, xplatz, xdatum, xzeit, x1, x2, x3, xkdnr, xname, datei, y0, y1, y2, pfad_datei, source as string 
+i = 0
+j=3
+y1 = " "
+y2 = "_"
+
+HostFieldGetData("kdname",y0)
+xname = Replace(y0, y1, y2, 0)
+HostFieldGetData("kdkdnr",xkdnr)
+HostFieldGetData("datvon",xdatum)
+datei = "Remierfassung_" + xkdnr + "_" + xdatum +".xls"
+pfad_datei = @"@&LWV@"  + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "Kunde")
+ddepoke( ddehandle, "Z1S2", xkdnr)
+ddepoke( ddehandle, "Z1S3", y0)
+ddepoke( ddehandle, "Z2S3", "Obnr")
+ddepoke( ddehandle, "Z2S4", "Titel")
+ddepoke( ddehandle, "Z2S5", "Folge")
+ddepoke( ddehandle, "Z2S6", "Menge")
+ddepoke( ddehandle, "Z2S7", "Preis")
+ddepoke( ddehandle, "Z2S8", "Platz")
+ddepoke( ddehandle, "Z2S9", "Datum")
+ddepoke( ddehandle, "Z2S10", "Zeit")
+ddepoke( ddehandle, "Z2S11", "erfasst")
+ddepoke( ddehandle, "Z2S12", "Sammeln")
+ddepoke( ddehandle, "Z2S13", "Kontrolle")
+
+nochmal:
+
+HostFieldGetLineData("rrobj", i, xobnr)
+HostFieldGetLineData("rrfolg", i, xfolge)
+HostFieldGetLineData("atname", i, xtitel)
+HostFieldGetLineData("rrmeng", i, xmenge)
+HostFieldGetLineData("atbneu", i, xpreis)
+HostFieldGetLineData("rrjob", i, xplatz)
+HostFieldGetLineData("rrzeit", i, xzeit)
+HostFieldGetLineData("rrkz1", i, x1)
+HostFieldGetLineData("rrkz2", i, x2)
+HostFieldGetLineData("rrkz3", i, x3)
+HostFieldGetData("ende", xende)
+
+if (xfolge <> "")  then
+ddepoke( ddehandle, "Z" + str(j) +"S3", xobnr)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xtitel)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xfolge)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xmenge)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xpreis)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xplatz)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xdatum)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xzeit)
+ddepoke( ddehandle, "Z" + str(j) +"S11", x1)
+ddepoke( ddehandle, "Z" + str(j) +"S12", x2)
+ddepoke( ddehandle, "Z" + str(j) +"S13", x3)
+j=j+1
+endif
+
+if i < 10 then
+i=i+1
+goto nochmal
+endif
+
+HostFieldGetData("ende", xende)
+
+if xende <> "Ende" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

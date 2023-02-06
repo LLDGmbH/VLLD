@@ -1,0 +1,17 @@
+﻿dim text, sql, ErrorMsg as String
+dim rc as Integer
+
+rem **BUNDESLÄNDER AUS GRBULP
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rc = EzSQLQuery("SELECT bubnr, digits(bubnr) concat ' - ' concat   bubname FROM grbulp order by digits(bubnr)", text, ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelFieldSetProp ("BULA", 5, text) 
+rem PanelUpdateEnable(2)
+endif

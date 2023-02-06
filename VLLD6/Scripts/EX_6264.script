@@ -1,0 +1,94 @@
+﻿DIM ddehandle, i, j, msg as integer
+dim xobnr, xtitel, xjahr, xfolge, xfbis, xfol6, xgeslfg, xgesrem, xehgsv, xgesrp, xgesver, xehgs, xgesvvj, xindex, xgeslvj, xgesrvj, xgespvj, datei, y0, y1, y2, pfad_datei as string 
+dim source as string
+i = 0
+j=3
+y1 = " "
+y2 = "_"
+
+HostFieldGetData("sfname",y0)
+xtitel = Replace(y0, y1, y2, 0)
+HostFieldGetData("sfobj",xobnr)
+
+PanelFieldGetData("fbis", xfbis)
+
+datei = "Verkaufindex_" + xobnr + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "Objekt")
+ddepoke( ddehandle, "Z1S2", xobnr)
+ddepoke( ddehandle, "Z1S3", y0)
+
+ddepoke( ddehandle, "Z2S4", "Folge")
+ddepoke( ddehandle, "Z2S5", "Lieferung")
+ddepoke( ddehandle, "Z2S6", "Remission")
+ddepoke( ddehandle, "Z2S7", "Remi %")
+ddepoke( ddehandle, "Z2S8", "Verkauf")
+ddepoke( ddehandle, "Z2S9", "Kunden")
+ddepoke( ddehandle, "Z2S10", "Index")
+ddepoke( ddehandle, "Z2S11", "Lieferung VJ")
+ddepoke( ddehandle, "Z2S12", "Remission VJ")
+ddepoke( ddehandle, "Z2S13", "Remi %")
+ddepoke( ddehandle, "Z2S14", "Verkauf VJ")
+ddepoke( ddehandle, "Z2S15", "Kunden VJ")
+
+nochmal:
+
+HostFieldGetLineData("sffolg", i, xfolge)
+HostFieldGetLineData("sfgesl", i, xgeslfg)
+HostFieldGetLineData("sfgesr", i, xgesrem)
+HostFieldGetLineData("sfgesrp", i, xgesrp)
+HostFieldGetLineData("sfgesv", i, xgesver)
+HostFieldGetLineData("sfehgs", i, xehgs)
+HostFieldGetLineData("sfind", i, xgesvvj)
+HostFieldGetLineData("sfgeslv", i, xgeslvj)
+HostFieldGetLineData("sfgesrv", i, xgesrvj)
+HostFieldGetLineData("sfgesrpv", i, xindex)
+HostFieldGetLineData("sfgesvv", i, xgespvj)
+HostFieldGetLineData("sfehgsv", i, xehgsv)
+HostFieldGetLineData("sffolg", i, xfol6)
+
+if xfol6 = "00 0000" then
+goto Ende
+endif
+
+if xfolge < xfbis then
+goto Ende
+endif
+
+if (xfolge <> " ")  then
+
+ddepoke( ddehandle, "Z" + str(j) +"S4", xfolge)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xgeslfg)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xgesrem)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xgesrp)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xgesver)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xehgs)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xgesvvj)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xgeslvj)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xgesrvj)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xindex)
+ddepoke( ddehandle, "Z" + str(j) +"S14", xgespvj)
+ddepoke( ddehandle, "Z" + str(j) +"S15", xehgsv)
+
+j=j+1
+endif
+
+if i < 20 then
+i=i+1
+goto nochmal
+endif
+ 
+if xfolge <> " " then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif
+
+Ende:

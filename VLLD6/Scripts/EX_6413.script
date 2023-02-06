@@ -1,0 +1,67 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xname, xkdnr, xobnr, xtitel, xfolg, xbez, xrem, xsrem, xverk, xek, xvk, errmsg, datei, pfad_datei, source as string 
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+HostFieldGetData("kdkdnr",xkdnr)
+HostFieldGetData("kdname",xname)
+
+datei = "Frühremission_Kunde_" + xkdnr + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", xkdnr)
+ddepoke( ddehandle, "Z1S2", xname)
+
+ddepoke( ddehandle, "Z2S1", "Objektnummer")
+ddepoke( ddehandle, "Z2S2", "Folge")
+ddepoke( ddehandle, "Z2S3", "Titel")
+ddepoke( ddehandle, "Z2S4", "Bezug")
+ddepoke( ddehandle, "Z2S5", "Remi")
+ddepoke( ddehandle, "Z2S6", "schädl.Remi")
+ddepoke( ddehandle, "Z2S7", "Verkauf")
+ddepoke( ddehandle, "Z2S8", "EK")
+ddepoke( ddehandle, "Z2S9", "VK")
+
+nochmal:
+
+HostFieldGetLineData("srobj", i, xobnr)
+HostFieldGetLineData("srfolg", i, xfolg)
+HostFieldGetLineData("srname", i, xtitel)
+HostFieldGetLineData("srbez", i, xbez)
+HostFieldGetLineData("srrem", i, xrem)
+HostFieldGetLineData("srsrem", i, xsrem)
+HostFieldGetLineData("srverk", i, xverk)
+HostFieldGetLineData("srehprs", i, xek)
+HostFieldGetLineData("srvkprs", i, xvk)
+
+
+if (xtitel <> "")  then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xobnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xfolg)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xtitel)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xbez)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xrem)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xsrem)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xverk)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xek)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xvk)
+
+j=j+1
+endif
+
+if i < 17 then
+i=i+1
+goto nochmal
+endif
+ 
+if xtitel <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

@@ -1,0 +1,17 @@
+﻿dim text, ErrorMsg as String
+dim rc as Integer
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rc = EzSQLQuery("SELECT kdgsch, kdgstx FROM GRORTp order by kdgsch", text, ErrorMsg)
+
+
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelFieldSetProp ("kdgschx", 5, text) 
+PanelUpdateEnable(2)
+endif

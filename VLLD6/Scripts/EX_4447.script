@@ -1,0 +1,85 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xdat, xdatb,xplatz, xstdges, xpausen, xstdp, xstd, xkunden, xexges, xexsam, xexstd, xsaetze, xscanner, xmanuell, xexman, xvq, xeq, xende, errmsg, datei, pfad_datei, source as string 
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+HostFieldGetData("datum",xdat)
+HostFieldGetData("datumbis",xdatb)
+
+datei = "Statistik_Remission_von_ " + xdat + "_bis_" + xdatb +".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z2S1", "Platz")
+ddepoke( ddehandle, "Z2S2", "G-Std.")
+ddepoke( ddehandle, "Z2S3", "Pausen")
+ddepoke( ddehandle, "Z2S4", "P-Std.")
+ddepoke( ddehandle, "Z2S5", "Std.")
+ddepoke( ddehandle, "Z2S6", "Pakete")
+ddepoke( ddehandle, "Z2S7", "Ex.Ges.")
+ddepoke( ddehandle, "Z2S8", "Ex.Sam.")
+ddepoke( ddehandle, "Z2S9", "Ex./Std.")
+ddepoke( ddehandle, "Z2S10", "Sätze")
+ddepoke( ddehandle, "Z2S11", "Scanner")
+ddepoke( ddehandle, "Z2S12", "Manuell")
+ddepoke( ddehandle, "Z2S13", "Ex.Man.")
+ddepoke( ddehandle, "Z2S14", "Vo.Qu.")
+ddepoke( ddehandle, "Z2S15", "Ex.Qu.")
+
+nochmal:
+
+HostFieldGetLineData("platz", i, xplatz)
+HostFieldGetLineData("stdges", i, xstdges)
+HostFieldGetLineData("pausen", i, xpausen)
+HostFieldGetLineData("stdp", i, xstdp)
+HostFieldGetLineData("std", i, xstd)
+HostFieldGetLineData("kunden", i, xkunden)
+HostFieldGetLineData("exges", i, xexges)
+HostFieldGetLineData("exsam", i, xexsam)
+HostFieldGetLineData("exstd", i, xexstd)
+HostFieldGetLineData("saetze", i, xsaetze)
+HostFieldGetLineData("scanner", i, xscanner)
+HostFieldGetLineData("manuell", i, xmanuell)
+HostFieldGetLineData("exman", i, xexman)
+HostFieldGetLineData("quotev", i, xvq)
+HostFieldGetLineData("quotee", i, xeq)
+
+
+
+
+if (xplatz <> "") then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xplatz)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xstdges)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xpausen)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xstdp)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xstd)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xkunden)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xexges)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xexsam)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xexstd)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xsaetze)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xscanner)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xmanuell)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xexman)
+ddepoke( ddehandle, "Z" + str(j) +"S14", xvq)
+ddepoke( ddehandle, "Z" + str(j) +"S15", xeq)
+j=j+1
+endif
+
+if i < 17 then
+i=i+1
+goto nochmal
+endif
+
+HostFieldGetData("ende", xende)
+ 
+if xende <> "Ende" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

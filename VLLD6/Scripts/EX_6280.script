@@ -1,0 +1,70 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xkey, xnam1, xnam2, xalter, xstr, xort, xot, xtel, xmeldat, ymeldat, sql1, sql2, errmsg, datei, pfad_datei, source as string 
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+
+datei = "Zusteller_Neu.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z2S1", "Nr.")
+ddepoke( ddehandle, "Z2S2", "Name")
+ddepoke( ddehandle, "Z2S3", "")
+ddepoke( ddehandle, "Z2S4", "Alter")
+ddepoke( ddehandle, "Z2S5", "Strasse")
+ddepoke( ddehandle, "Z2S6", "Ort")
+ddepoke( ddehandle, "Z2S7", "Teil")
+ddepoke( ddehandle, "Z2S8", "Telefon")
+ddepoke( ddehandle, "Z2S9", "gemeldet")
+
+nochmal:
+
+HostFieldGetLineData("adkey", i, xkey)
+HostFieldGetLineData("adnam1", i, xnam1)
+HostFieldGetLineData("adnam2", i, xnam2)
+HostFieldGetLineData("adalter", i, xalter)
+HostFieldGetLineData("adstr", i, xstr)
+HostFieldGetLineData("adort", i, xort)
+HostFieldGetLineData("adph01", i, xtel)
+
+
+
+sql1 = "SELECT adot FROM grzuip where adkey = " + xkey + ""
+sql2 = "SELECT admdat FROM grzuip where adkey = " + xkey + ""
+
+rc = EzSQLQuery(sql1, xot, ErrMsg)
+rc = EzSQLQuery(sql2, xmeldat, ErrMsg)
+
+ymeldat=format(xmeldat, "[DDMMYYYY]dd.mm.yyyy")
+
+if (xkey <> "") then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xkey)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xnam1)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xnam2)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xalter)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xstr)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xort)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xot)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xtel)
+ddepoke( ddehandle, "Z" + str(j) +"S9", ymeldat)
+
+j=j+1
+endif
+
+if i < 17 then
+i=i+1
+goto nochmal
+endif
+ 
+if xkey <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

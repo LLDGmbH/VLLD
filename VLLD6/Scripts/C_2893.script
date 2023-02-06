@@ -1,0 +1,29 @@
+﻿dim text, ErrorMsg as String
+dim rc as Integer
+global dsp_2893 as integer
+
+dsp_2893 = 0
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+
+rc = EzSQLQuery("SELECT DISNR, DISNAME FROM GRDSNP where disname <> ' ' ", text, ErrorMsg)
+
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelFieldSetProp ("dspnr", 5, text) 
+PanelUpdateEnable(2)
+endif
+
+rc = EzSQLQuery("SELECT jahr, kajah4 FROM GRKALP where tag = 1 and monat = 1 ", text, ErrorMsg)
+
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelFieldSetProp ("jahr", 5, text) 
+PanelUpdateEnable(2)
+endif

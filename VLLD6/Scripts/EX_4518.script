@@ -1,0 +1,80 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xobnr, xtitel, xdatum, xvlg, xvaname,  xdatv, xdatb, xexhl, xexnl, xexdl, xexrm, xexges, xgwhl, xgwnl, xgwdl, xgwrm, xgwges, errmsg, datei, pfad_datei, source as string 
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrMsg)
+HostFieldGetData("datv",xdatv)
+HostFieldGetData("datb",xdatb)
+HostFieldGetData("nobj",xobnr)
+HostFieldGetData("atname",xtitel)
+HostFieldGetData("nvlg",xvlg)
+HostFieldGetData("vaname",xvaname)
+
+datei = "Ausliefergewichte_" + xdatv + "_" + xdatb +".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S2", "Tourengewichte")
+
+ddepoke( ddehandle, "Z2S1", "Datum")
+ddepoke( ddehandle, "Z2S2", "Expl.HL")
+ddepoke( ddehandle, "Z2S3", "Expl.NL")
+ddepoke( ddehandle, "Z2S4", "Expl.DL")
+ddepoke( ddehandle, "Z2S5", "Expl.RM")
+ddepoke( ddehandle, "Z2S6", "Expl.Ges.")
+ddepoke( ddehandle, "Z2S7", "Gew.HL")
+ddepoke( ddehandle, "Z2S8", "Gew.NL")
+ddepoke( ddehandle, "Z2S9", "Gew.DL")
+ddepoke( ddehandle, "Z2S10", "Gew.RM")
+ddepoke( ddehandle, "Z2S11", "Gew.Ges.")
+
+nochmal:
+HostFieldGetLineData("sfdatum", i, xdatum)
+HostFieldGetLineData("sfexhl", i, xexhl)
+HostFieldGetLineData("sfexnl", i, xexnl)
+HostFieldGetLineData("sfexdl", i, xexdl)
+HostFieldGetLineData("sfexrm", i, xexrm)
+HostFieldGetLineData("sfexges", i, xexges)
+HostFieldGetLineData("sfgwhl", i, xgwhl)
+HostFieldGetLineData("sfgwnl", i, xgwnl)
+HostFieldGetLineData("sfgwdl", i, xgwdl)
+HostFieldGetLineData("sfgwrm", i, xgwrm)
+HostFieldGetLineData("sfgwges", i, xgwges)
+
+
+
+if (xdatum = "") then
+goto ende
+endif
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", xdatum)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xexhl)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xexnl)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xexdl)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xexrm)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xexges)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xgwhl)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xgwnl)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xgwdl)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xgwrm)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xgwges)
+j=j+1
+
+
+if i < 17 then
+i=i+1
+goto nochmal
+endif
+ 
+if xdatum <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif
+
+Ende:

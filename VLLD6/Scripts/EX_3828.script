@@ -1,0 +1,72 @@
+﻿DIM ddehandle, i, j, msg as integer
+dim xobj, xtitel, xvnr, xbezug, xremi, xverk, xehanz, xvd, xremis, xremiso, xremab, xbezex, xdispna,  datei, y0, y1, y2, pfad_datei, source as string 
+i = 0
+j=3
+
+datei = "Vertriebsmarketing.xls"
+pfad_datei = @"@&LWV@"  + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "Verlag")
+ddepoke( ddehandle, "Z1S2",  "Obnr")
+ddepoke( ddehandle, "Z1S3", "Titel")
+ddepoke( ddehandle, "Z1S4", "Bezug")
+ddepoke( ddehandle, "Z1S5", "Remission")
+ddepoke( ddehandle, "Z1S6", "Verkauf")
+ddepoke( ddehandle, "Z1S7", "EH")
+ddepoke( ddehandle, "Z1S8", "VD")
+ddepoke( ddehandle, "Z1S9", "Remi %")
+ddepoke( ddehandle, "Z1S10", "SQR ++")
+ddepoke( ddehandle, "Z1S11", "Abw. %")
+ddepoke( ddehandle, "Z1S12", "Expl.")
+ddepoke( ddehandle, "Z1S13", "Disponent")
+
+nochmal:
+
+HostFieldGetLineData("wf_vnr", i, xvnr)
+HostFieldGetLineData("wf_obj", i, xobj)
+HostFieldGetLineData("wf_titel", i, xtitel)
+HostFieldGetLineData("wf_bezug", i, xbezug)
+HostFieldGetLineData("wf_remi", i, xremi)
+HostFieldGetLineData("wf_verk", i, xverk)
+HostFieldGetLineData("wf_vd", i, xvd)
+HostFieldGetLineData("wf_ehanz", i, xehanz)
+HostFieldGetLineData("wf_remis", i, xremis)
+HostFieldGetLineData("wf_remso", i, xremiso)
+HostFieldGetLineData("wf_remab", i, xremab)
+HostFieldGetLineData("wf_bezex", i, xbezex)
+HostFieldGetLineData("wf_dispna", i, xdispna)
+
+if (xvnr <> "")  then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xvnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xobj)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xtitel)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xbezug)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xremi)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xverk)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xehanz)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xvd)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xremis)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xremiso)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xremab)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xbezex)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xdispna)
+
+j=j+1
+endif
+
+if i < 21 then
+i=i+1
+goto nochmal
+endif
+ 
+if xvnr <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

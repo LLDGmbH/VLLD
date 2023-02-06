@@ -1,0 +1,89 @@
+﻿DIM ddehandle, i, j, msg as integer
+dim  xkdnr, xname, xort, xstr, xplz, xzvon, xzbis, xexpl, xwert, xdatum, xzeit, xobj, xtitel, xfolge, xmenge, xjob, xkz1, xkz2, xkz3, datei, y0, y1, y2, pfad_datei, source as string 
+i = 0
+j=6
+y1 = " "
+y2 = "_"
+
+HostFieldGetData("kdname",y0)
+xname = Replace(y0, y1, y2, 0)
+
+HostFieldGetData("kdkdnr",xkdnr)
+
+datei = "Remissionserfassung_" + xkdnr + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+HostFieldGetData("kdkdnr",xkdnr)
+HostFieldGetData("ztrvon",xzvon)
+HostFieldGetData("ztrbis",xzbis)
+HostFieldGetData("wertges",xwert)
+HostFieldGetData("kdstr",xstr)
+HostFieldGetData("kdplz",xplz)
+HostFieldGetData("kdort",xort)
+
+ddepoke( ddehandle, "Z1S1", "Kunde")
+ddepoke( ddehandle, "Z1S2", xkdnr)
+ddepoke( ddehandle, "Z1S3", y0)
+ddepoke( ddehandle, "Z1S9", "Zeitraum")
+ddepoke( ddehandle, "Z1S10", "von")
+ddepoke( ddehandle, "Z1S11", xzvon)
+ddepoke( ddehandle, "Z2S3", xstr)
+ddepoke( ddehandle, "Z2S10", "bis")
+ddepoke( ddehandle, "Z2S11", xzbis)
+ddepoke( ddehandle, "Z3S3", xplz)
+ddepoke( ddehandle, "Z3S4", xort)
+ddepoke( ddehandle, "Z3S9", "Wert")
+ddepoke( ddehandle, "Z3S10", "€")
+ddepoke( ddehandle, "Z3S11", xwert)
+
+ddepoke( ddehandle, "Z5S1", "Datum")
+ddepoke( ddehandle, "Z5S2", "Zeit")
+ddepoke( ddehandle, "Z5S3", "Obnr")
+ddepoke( ddehandle, "Z5S4", "Titel")
+ddepoke( ddehandle, "Z5S5", "Folge")
+ddepoke( ddehandle, "Z5S6", "Expl.")
+ddepoke( ddehandle, "Z5S7", "Platz")
+
+nochmal:
+
+HostFieldGetLineData("rscvdat_6", i, xdatum)
+HostFieldGetLineData("rrzeit", i, xzeit)
+HostFieldGetLineData("rrobj", i, xobj)
+HostFieldGetLineData("atname", i, xtitel)
+HostFieldGetLineData("rrfolg", i, xfolge)
+HostFieldGetLineData("rrmeng", i, xmenge)
+HostFieldGetLineData("rrjob", i, xjob)
+HostFieldGetLineData("rrkz1", i, xkz1)
+HostFieldGetLineData("rrkz2", i, xkz2)
+HostFieldGetLineData("rrkz3", i, xkz3)
+
+if (xobj <> "")  then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xdatum)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xzeit)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xobj)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xtitel)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xfolge)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xmenge)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xjob)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xkz1)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xkz2)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xkz3)
+
+j=j+1
+endif
+
+if i < 14 then
+i=i+1
+goto nochmal
+endif
+ 
+if xobj <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

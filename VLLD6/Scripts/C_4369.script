@@ -1,0 +1,51 @@
+﻿global g01, g02, g03, g04, g05, g06, g07, g08, g09, g10, g11, g12, g13, g14, g15, g16, g17, g18, g19, g20, g21, g22, g23, g24, g25, g26, g27, g28, g29, g30, g31, g32, g33, g34, g35, g36, g37, g38, g39, g40 as string
+dim adbg, text, txt, ErrorMsg as String
+dim rc as Integer
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+HostFieldGetData("adbg1", adbg)
+if (adbg <> "0000" ) then
+rc = EzSQLQuery("SELECT ADTEXT FROM GRadtp where adkey = " + adbg, g01, ErrorMsg)
+endif
+HostFieldGetData("adbg2", adbg)
+if (adbg <> "0000" ) then
+rc = EzSQLQuery("SELECT ADTEXT FROM GRadtp where adkey = " + adbg, g02, ErrorMsg)
+endif
+HostFieldGetData("adbg3", adbg)
+if (adbg <> "0000" ) then
+rc = EzSQLQuery("SELECT ADTEXT FROM GRadtp where adkey = " + adbg, g03, ErrorMsg)
+endif
+HostFieldGetData("adbg4", adbg)
+if (adbg <> "0000" ) then
+rc = EzSQLQuery("SELECT ADTEXT FROM GRadtp where adkey = " + adbg, g04, ErrorMsg)
+endif
+HostFieldGetData("adbg5", adbg)
+if (adbg <> "0000" ) then
+rc = EzSQLQuery("SELECT ADTEXT FROM GRadtp where adkey = " + adbg, g05, ErrorMsg)
+endif
+HostFieldGetData("adbg6", adbg)
+if (adbg <> "0000" ) then
+rc = EzSQLQuery("SELECT ADTEXT FROM GRadtp where adkey = " + adbg, g06, ErrorMsg)
+endif
+HostFieldGetData("adbg7", adbg)
+if (adbg <> "0000" ) then
+rc = EzSQLQuery("SELECT ADTEXT FROM GRadtp where adkey = " + adbg, g07, ErrorMsg)
+endif
+HostFieldGetData("adbg8", adbg)
+if (adbg <> "0000" ) then
+rc = EzSQLQuery("SELECT ADTEXT FROM GRadtp where adkey = " + adbg, g08, ErrorMsg)
+endif
+HostFieldGetData("adbg9", adbg)
+if (adbg <> "0000" ) then
+rc = EzSQLQuery("SELECT ADTEXT FROM GRadtp where adkey = " + adbg, g09, ErrorMsg)
+endif
+HostFieldGetData("adbg10", adbg)
+if (adbg <> "0000" ) then
+rc = EzSQLQuery("SELECT ADTEXT FROM GRadtp where adkey = " + adbg, g10, ErrorMsg)
+endif
+
+PanelUpdateEnable(2)

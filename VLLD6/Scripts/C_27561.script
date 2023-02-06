@@ -1,0 +1,33 @@
+﻿dim i as integer
+dim yname, yrgkz, xarg, quote as string 
+quote = chr(34)
+i = 0
+
+HostFieldGetData("aktion",xarg)
+
+nochmal:
+
+rem if (xarg = "0") or (xarg = quote) or (xarg = "§") or (xarg = "$") or (xarg = "%")  then
+
+
+HostFieldGetLineData("sname", i, yname)
+HostFieldGetLineData("xxrgkz", i, yrgkz)
+
+if (yname <> "") and (yrgkz <> "F") and (yrgkz <> "1") and (yrgkz <> "2") and (yrgkz <> "3") and (yrgkz <> "4") and (yrgkz <> "5") and (yrgkz <> "6") and (yrgkz <> "7") and (yrgkz <> "8") and (yrgkz <> "9") then
+HostFieldPutData("nbez", i, "0")
+endif
+
+if i < 17 then
+i=i+1
+goto nochmal
+endif
+ 
+if yname <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+else
+HostScreenSendKey("Enter")
+endif
+
+rem endif

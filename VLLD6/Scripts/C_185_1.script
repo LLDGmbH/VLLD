@@ -1,0 +1,23 @@
+﻿dim text, xhgnr,  ErrorMsg as String
+dim rc as Integer
+global xhgtxt as string
+
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+
+HostFieldGetData("athrg", xhgnr)
+
+
+rc = EzSQLQuery("SELECT digits(rbog), digits(rbog) concat ' - ' concat rbotext FROM GRRBOP", text, ErrorMsg)
+PanelFieldSetProp ("atrast", 5, text) 
+PanelFieldSetProp ("atrast2", 5, text) 
+
+rc = EzSQLQuery("SELECT hgname FROM GRHGSP where hgnr = " + xhgnr, text, ErrorMsg)
+xhgtxt = text
+
+
+PanelUpdateEnable(2)

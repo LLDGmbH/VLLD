@@ -1,0 +1,25 @@
+﻿rem **Füllen Combo-Box  aus GRVERP **
+
+dim text, ErrorMsg as String
+dim rc as Integer
+
+
+
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rc = EzSQLQuery("SELECT usprf FROM GRUSRP order by usprf", text, ErrorMsg)
+
+if ( rc < 0 ) then
+
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+
+else
+
+PanelFieldSetProp ("aduser", 5, text) 
+PanelUpdateEnable(2)
+
+endif

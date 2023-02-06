@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="656E044">
+  <screen originator="SeagullAlbumFile" name="HFF6/VP21DS(SFB)" library="HFF6" member_name="VP21DS">
+    <size cx="80" cy="24"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <action key="roll_up" caption="ROLL_UP" attention_key="false"/>
+    <field field_type="screen_part" name="SFB">
+      <area>
+        <position/>
+        <size cx="80" cy="21"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="POSTLEITZAHLEN und ORTE" display_length="23" data_length="23">
+          <area>
+            <position x="28"/>
+            <size cx="23" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="63"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="72"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="VP21" display_length="4" data_length="4">
+          <area>
+            <position x="72" y="1"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="fixed_text" value="  PLZ A Ort                       Ort/Gemeindedatei  Einw  Haush.             " display_length="78" data_length="78" underline="true">
+          <area>
+            <position x="1" y="2"/>
+            <size cx="78" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="7" y="3"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="9" y="3"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ORT" short_name="ORT" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="35" y="3"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EINW" short_name="EINW" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="51" y="3"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EINWEH" short_name="EINWEH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="59" y="3"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="7" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="9" y="4"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ORT" short_name="ORT" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="35" y="4"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EINW" short_name="EINW" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="51" y="4"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EINWEH" short_name="EINWEH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="59" y="4"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="7" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="9" y="5"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ORT" short_name="ORT" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="35" y="5"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EINW" short_name="EINW" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="51" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EINWEH" short_name="EINWEH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="59" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="7" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="9" y="6"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ORT" short_name="ORT" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="35" y="6"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EINW" short_name="EINW" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="51" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EINWEH" short_name="EINWEH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="59" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="7" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="9" y="7"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ORT" short_name="ORT" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="35" y="7"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EINW" short_name="EINW" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="51" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EINWEH" short_name="EINWEH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="59" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="7" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="9" y="8"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ORT" short_name="ORT" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="35" y="8"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EINW" short_name="EINW" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="51" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EINWEH" short_name="EINWEH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="59" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="7" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="9" y="9"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ORT" short_name="ORT" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="35" y="9"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EINW" short_name="EINW" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="51" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EINWEH" short_name="EINWEH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="59" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="7" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="9" y="10"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ORT" short_name="ORT" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="35" y="10"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EINW" short_name="EINW" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="51" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EINWEH" short_name="EINWEH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="59" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="7" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="9" y="11"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ORT" short_name="ORT" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="35" y="11"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EINW" short_name="EINW" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="51" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EINWEH" short_name="EINWEH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="59" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="7" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="9" y="12"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ORT" short_name="ORT" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="35" y="12"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EINW" short_name="EINW" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="51" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EINWEH" short_name="EINWEH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="59" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="7" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="9" y="13"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ORT" short_name="ORT" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="35" y="13"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EINW" short_name="EINW" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="51" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EINWEH" short_name="EINWEH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="59" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="7" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="9" y="14"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ORT" short_name="ORT" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="35" y="14"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EINW" short_name="EINW" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="51" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EINWEH" short_name="EINWEH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="59" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="7" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="9" y="15"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ORT" short_name="ORT" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="35" y="15"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EINW" short_name="EINW" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="51" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EINWEH" short_name="EINWEH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="59" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="7" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="9" y="16"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ORT" short_name="ORT" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="35" y="16"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EINW" short_name="EINW" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="51" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EINWEH" short_name="EINWEH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="59" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="7" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="9" y="17"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ORT" short_name="ORT" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="35" y="17"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EINW" short_name="EINW" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="51" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EINWEH" short_name="EINWEH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="59" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="7" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="9" y="18"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ORT" short_name="ORT" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="35" y="18"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EINW" short_name="EINW" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="51" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EINWEH" short_name="EINWEH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="59" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="7" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="9" y="19"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ORT" short_name="ORT" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="35" y="19"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EINW" short_name="EINW" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="51" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EINWEH" short_name="EINWEH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="59" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="input" name="AUSWAL" short_name="AUSWAL" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true">
+          <area>
+            <position x="7" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25" conditional="true">
+          <area>
+            <position x="9" y="20"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="ORT" short_name="ORT" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="35" y="20"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EINW" short_name="EINW" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="51" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="EINWEH" short_name="EINWEH" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="59" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+      </field>
+    </field>
+  </screen>
+</header>

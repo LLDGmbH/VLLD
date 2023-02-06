@@ -1,0 +1,261 @@
+﻿dim text, ErrorMsg as String
+dim rc as Integer
+global filiale as string
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+
+if (filiale = "0") then
+rc = EzSQLQuery("SELECT GKZ, ort concat '-' concat digits(gkz) FROM dipf01/GRENWP order by ort concat '-' concat digits(gkz)", text, ErrorMsg)
+endif 
+if (filiale = "1") then
+rc = EzSQLQuery("SELECT GKZ, ort concat '-' concat digits(gkz) FROM dipf01/GRENWP order by ort concat '-' concat digits(gkz)", text, ErrorMsg)
+endif 
+if (filiale = "2") then
+rc = EzSQLQuery("SELECT GKZ, ort concat '-' concat digits(gkz) FROM dipf02/GRENWP order by ort concat '-' concat digits(gkz)", text, ErrorMsg)
+endif 
+if (filiale = "3") then
+rc = EzSQLQuery("SELECT GKZ, ort concat '-' concat digits(gkz) FROM dipf03/GRENWP order by ort concat '-' concat digits(gkz)", text, ErrorMsg)
+endif 
+if (filiale = "4") then
+rc = EzSQLQuery("SELECT GKZ, ort concat '-' concat digits(gkz) FROM dipf04/GRENWP order by ort concat '-' concat digits(gkz)", text, ErrorMsg)
+endif 
+if (filiale = "5") then
+rc = EzSQLQuery("SELECT GKZ, ort concat '-' concat digits(gkz) FROM dipf05/GRENWP order by ort concat '-' concat digits(gkz)", text, ErrorMsg)
+endif 
+if (filiale = "6") then
+rc = EzSQLQuery("SELECT GKZ, ort concat '-' concat digits(gkz) FROM dipf06/GRENWP order by ort concat '-' concat digits(gkz)", text, ErrorMsg)
+endif 
+if (filiale = "7") then
+rc = EzSQLQuery("SELECT GKZ, ort concat '-' concat digits(gkz) FROM dipf07/GRENWP order by ort concat '-' concat digits(gkz)", text, ErrorMsg)
+endif 
+if (filiale = "8") then
+rc = EzSQLQuery("SELECT GKZ, ort concat '-' concat digits(gkz) FROM dipf08/GRENWP order by ort concat '-' concat digits(gkz)", text, ErrorMsg)
+endif 
+if (filiale = "9") then
+rc = EzSQLQuery("SELECT GKZ, ort concat '-' concat digits(gkz) FROM dipf09/GRENWP order by ort concat '-' concat digits(gkz)", text, ErrorMsg)
+endif 
+
+PanelFieldSetProp ("GM01", 5, text) 
+PanelFieldSetProp ("GM02", 5, text) 
+PanelFieldSetProp ("GM03", 5, text) 
+PanelFieldSetProp ("GM04", 5, text) 
+PanelFieldSetProp ("GM05", 5, text) 
+
+if (filiale = "0") then
+rc = EzSQLQuery("SELECT ZOEM, ort concat '-' concat digits(ZOEM) FROM dipf01/GRENWP where zoem > 0 order by ort concat '-' concat digits(ZOEM)", text, ErrorMsg)
+endif
+if (filiale = "1") then
+rc = EzSQLQuery("SELECT ZOEM, ort concat '-' concat digits(ZOEM) FROM dipfsd/GRENWP where zoem > 0 order by ort concat '-' concat digits(ZOEM)", text, ErrorMsg)
+endif
+if (filiale = "2") then
+rc = EzSQLQuery("SELECT ZOEM, ort concat '-' concat digits(ZOEM) FROM dipfsd/GRENWP where zoem > 0 order by ort concat '-' concat digits(ZOEM)", text, ErrorMsg)
+endif
+if (filiale = "3") then
+rc = EzSQLQuery("SELECT ZOEM, ort concat '-' concat digits(ZOEM) FROM dipfsd/GRENWP where zoem > 0 order by ort concat '-' concat digits(ZOEM)", text, ErrorMsg)
+endif
+if (filiale = "4") then
+rc = EzSQLQuery("SELECT ZOEM, ort concat '-' concat digits(ZOEM) FROM dipfsd/GRENWP where zoem > 0 order by ort concat '-' concat digits(ZOEM)", text, ErrorMsg)
+endif
+if (filiale = "5") then
+rc = EzSQLQuery("SELECT ZOEM, ort concat '-' concat digits(ZOEM) FROM dipfsd/GRENWP where zoem > 0 order by ort concat '-' concat digits(ZOEM)", text, ErrorMsg)
+endif
+if (filiale = "6") then
+rc = EzSQLQuery("SELECT ZOEM, ort concat '-' concat digits(ZOEM) FROM dipfsd/GRENWP where zoem > 0 order by ort concat '-' concat digits(ZOEM)", text, ErrorMsg)
+endif
+if (filiale = "7") then
+rc = EzSQLQuery("SELECT ZOEM, ort concat '-' concat digits(ZOEM) FROM dipfsd/GRENWP where zoem > 0 order by ort concat '-' concat digits(ZOEM)", text, ErrorMsg)
+endif
+if (filiale = "8") then
+rc = EzSQLQuery("SELECT ZOEM, ort concat '-' concat digits(ZOEM) FROM dipfsd/GRENWP where zoem > 0 order by ort concat '-' concat digits(ZOEM)", text, ErrorMsg)
+endif
+if (filiale = "9") then
+rc = EzSQLQuery("SELECT ZOEM, ort concat '-' concat digits(ZOEM) FROM dipfsd/GRENWP where zoem > 0 order by ort concat '-' concat digits(ZOEM)", text, ErrorMsg)
+endif
+
+
+PanelFieldSetProp ("ZM01", 5, text) 
+PanelFieldSetProp ("ZM02", 5, text) 
+PanelFieldSetProp ("ZM03", 5, text) 
+PanelFieldSetProp ("ZM04", 5, text) 
+PanelFieldSetProp ("ZM05", 5, text) 
+PanelFieldSetProp ("ZM06", 5, text) 
+PanelFieldSetProp ("ZM07", 5, text) 
+PanelFieldSetProp ("ZM08", 5, text) 
+
+
+if (filiale = "0") then
+rc = EzSQLQuery("SELECT kdplz, kdort concat '-' concat digits(kdplz) FROM dipf01/XXPLZ order by kdort concat '-' concat digits(kdplz)", text, ErrorMsg)
+endif
+if (filiale = "1") then
+rc = EzSQLQuery("SELECT kdplz, kdort concat '-' concat digits(kdplz) FROM dipf01/XXPLZ order by kdort concat '-' concat digits(kdplz)", text, ErrorMsg)
+endif
+if (filiale = "2") then
+rc = EzSQLQuery("SELECT kdplz, kdort concat '-' concat digits(kdplz) FROM dipf02/XXPLZ order by kdort concat '-' concat digits(kdplz)", text, ErrorMsg)
+endif
+if (filiale = "3") then
+rc = EzSQLQuery("SELECT kdplz, kdort concat '-' concat digits(kdplz) FROM dipf03/XXPLZ order by kdort concat '-' concat digits(kdplz)", text, ErrorMsg)
+endif
+if (filiale = "4") then
+rc = EzSQLQuery("SELECT kdplz, kdort concat '-' concat digits(kdplz) FROM dipf04/XXPLZ order by kdort concat '-' concat digits(kdplz)", text, ErrorMsg)
+endif
+if (filiale = "5") then
+rc = EzSQLQuery("SELECT kdplz, kdort concat '-' concat digits(kdplz) FROM dipf05/XXPLZ order by kdort concat '-' concat digits(kdplz)", text, ErrorMsg)
+endif
+if (filiale = "6") then
+rc = EzSQLQuery("SELECT kdplz, kdort concat '-' concat digits(kdplz) FROM dipf06/XXPLZ order by kdort concat '-' concat digits(kdplz)", text, ErrorMsg)
+endif
+if (filiale = "7") then
+rc = EzSQLQuery("SELECT kdplz, kdort concat '-' concat digits(kdplz) FROM dipf07/XXPLZ order by kdort concat '-' concat digits(kdplz)", text, ErrorMsg)
+endif
+if (filiale = "8") then
+rc = EzSQLQuery("SELECT kdplz, kdort concat '-' concat digits(kdplz) FROM dipf08/XXPLZ order by kdort concat '-' concat digits(kdplz)", text, ErrorMsg)
+endif
+if (filiale = "9") then
+rc = EzSQLQuery("SELECT kdplz, kdort concat '-' concat digits(kdplz) FROM dipf09/XXPLZ order by kdort concat '-' concat digits(kdplz)", text, ErrorMsg)
+endif
+
+
+PanelFieldSetProp ("PZ01", 5, text) 
+PanelFieldSetProp ("PZ02", 5, text) 
+PanelFieldSetProp ("PZ03", 5, text) 
+PanelFieldSetProp ("PZ04", 5, text) 
+PanelFieldSetProp ("PZ05", 5, text) 
+PanelFieldSetProp ("PZ06", 5, text) 
+PanelFieldSetProp ("PZ07", 5, text) 
+PanelFieldSetProp ("PZ08", 5, text) 
+
+rc = EzSQLQuery("SELECT vkvkst, digits(vkvkst) concat '-' concat vkvtxt FROM grvkap order by vkvkst", text, ErrorMsg)
+
+PanelFieldSetProp ("VA01", 5, text) 
+PanelFieldSetProp ("VA02", 5, text) 
+PanelFieldSetProp ("VA03", 5, text) 
+PanelFieldSetProp ("VA04", 5, text) 
+
+rc = EzSQLQuery("SELECT vlvlkz, vlvbez concat '-' concat digits(vlvlkz) FROM grvtlp order by vlvbez concat '-' concat digits(vlvlkz)", text, ErrorMsg)
+
+PanelFieldSetProp ("VL01", 5, text) 
+PanelFieldSetProp ("VL02", 5, text) 
+PanelFieldSetProp ("VL03", 5, text) 
+PanelFieldSetProp ("VL04", 5, text) 
+
+
+rc = EzSQLQuery("SELECT ((kdgart * 100) + kdgaug), digits(kdgart) concat digits(kdgaug) concat '-' concat kdgtxt FROM grgarp order by ((kdgart * 100) + kdgaug)", text, ErrorMsg)
+
+PanelFieldSetProp ("GA01", 5, text) 
+PanelFieldSetProp ("GA02", 5, text) 
+PanelFieldSetProp ("GA03", 5, text) 
+PanelFieldSetProp ("GA04", 5, text) 
+PanelFieldSetProp ("GA05", 5, text) 
+PanelFieldSetProp ("GA06", 5, text) 
+PanelFieldSetProp ("GA07", 5, text) 
+PanelFieldSetProp ("GA08", 5, text) 
+PanelFieldSetProp ("GA09", 5, text) 
+PanelFieldSetProp ("GA10", 5, text) 
+
+
+rc = EzSQLQuery("SELECT nfbkz, digits(nfbkz) concat '-' concat nfbtxt FROM grnfbp order by nfbkz", text, ErrorMsg)
+
+PanelFieldSetProp ("NB01", 5, text) 
+PanelFieldSetProp ("NB02", 5, text) 
+PanelFieldSetProp ("NB03", 5, text) 
+PanelFieldSetProp ("NB04", 5, text) 
+PanelFieldSetProp ("NB05", 5, text) 
+PanelFieldSetProp ("NB06", 5, text) 
+PanelFieldSetProp ("NB07", 5, text) 
+PanelFieldSetProp ("NB08", 5, text) 
+PanelFieldSetProp ("NB09", 5, text) 
+PanelFieldSetProp ("NB10", 5, text) 
+
+if (filiale = "0") then
+rc = EzSQLQuery("SELECT lmlmnr, digits(lmlmnr) concat '-' concat lmlmname FROM dipf01/xxlomarkt order by lmlmnr", text, ErrorMsg)
+endif
+if (filiale = "1") then
+rc = EzSQLQuery("SELECT lmlmnr, digits(lmlmnr) concat '-' concat lmlmname FROM dipf01/xxlomarkt order by lmlmnr", text, ErrorMsg)
+endif
+if (filiale = "2") then
+rc = EzSQLQuery("SELECT lmlmnr, digits(lmlmnr) concat '-' concat lmlmname FROM dipf02/xxlomarkt order by lmlmnr", text, ErrorMsg)
+endif
+if (filiale = "3") then
+rc = EzSQLQuery("SELECT lmlmnr, digits(lmlmnr) concat '-' concat lmlmname FROM dipf03/xxlomarkt order by lmlmnr", text, ErrorMsg)
+endif
+if (filiale = "4") then
+rc = EzSQLQuery("SELECT lmlmnr, digits(lmlmnr) concat '-' concat lmlmname FROM dipf04/xxlomarkt order by lmlmnr", text, ErrorMsg)
+endif
+if (filiale = "5") then
+rc = EzSQLQuery("SELECT lmlmnr, digits(lmlmnr) concat '-' concat lmlmname FROM dipf05/xxlomarkt order by lmlmnr", text, ErrorMsg)
+endif
+if (filiale = "6") then
+rc = EzSQLQuery("SELECT lmlmnr, digits(lmlmnr) concat '-' concat lmlmname FROM dipf06/xxlomarkt order by lmlmnr", text, ErrorMsg)
+endif
+if (filiale = "7") then
+rc = EzSQLQuery("SELECT lmlmnr, digits(lmlmnr) concat '-' concat lmlmname FROM dipf07/xxlomarkt order by lmlmnr", text, ErrorMsg)
+endif
+if (filiale = "8") then
+rc = EzSQLQuery("SELECT lmlmnr, digits(lmlmnr) concat '-' concat lmlmname FROM dipf08/xxlomarkt order by lmlmnr", text, ErrorMsg)
+endif
+if (filiale = "9") then
+rc = EzSQLQuery("SELECT lmlmnr, digits(lmlmnr) concat '-' concat lmlmname FROM dipf09/xxlomarkt order by lmlmnr", text, ErrorMsg)
+endif
+
+PanelFieldSetProp ("lmn1", 5, text) 
+PanelFieldSetProp ("lmn2", 5, text) 
+PanelFieldSetProp ("lmn3", 5, text) 
+PanelFieldSetProp ("lmn4", 5, text) 
+PanelFieldSetProp ("lmn5", 5, text) 
+PanelFieldSetProp ("lmn6", 5, text) 
+PanelFieldSetProp ("lmn7", 5, text) 
+PanelFieldSetProp ("lmn8", 5, text) 
+PanelFieldSetProp ("lmn9", 5, text) 
+PanelFieldSetProp ("lmn10", 5, text) 
+
+
+if (filiale = "0") then
+rc = EzSQLQuery("SELECT lmclnr, digits(lmclnr) concat '-' concat lmclname FROM dipf01/xxcluster order by lmclnr", text, ErrorMsg)
+endif
+if (filiale = "1") then
+rc = EzSQLQuery("SELECT lmclnr, digits(lmclnr) concat '-' concat lmclname FROM dipf01/xxcluster order by lmclnr", text, ErrorMsg)
+endif
+if (filiale = "2") then
+rc = EzSQLQuery("SELECT lmclnr, digits(lmclnr) concat '-' concat lmclname FROM dipf02/xxcluster order by lmclnr", text, ErrorMsg)
+endif
+if (filiale = "3") then
+rc = EzSQLQuery("SELECT lmclnr, digits(lmclnr) concat '-' concat lmclname FROM dipf03/xxcluster order by lmclnr", text, ErrorMsg)
+endif
+if (filiale = "4") then
+rc = EzSQLQuery("SELECT lmclnr, digits(lmclnr) concat '-' concat lmclname FROM dipf04/xxcluster order by lmclnr", text, ErrorMsg)
+endif
+if (filiale = "5") then
+rc = EzSQLQuery("SELECT lmclnr, digits(lmclnr) concat '-' concat lmclname FROM dipf05/xxcluster order by lmclnr", text, ErrorMsg)
+endif
+if (filiale = "6") then
+rc = EzSQLQuery("SELECT lmclnr, digits(lmclnr) concat '-' concat lmclname FROM dipf06/xxcluster order by lmclnr", text, ErrorMsg)
+endif
+if (filiale = "7") then
+rc = EzSQLQuery("SELECT lmclnr, digits(lmclnr) concat '-' concat lmclname FROM dipf07/xxcluster order by lmclnr", text, ErrorMsg)
+endif
+if (filiale = "8") then
+rc = EzSQLQuery("SELECT lmclnr, digits(lmclnr) concat '-' concat lmclname FROM dipf08/xxcluster order by lmclnr", text, ErrorMsg)
+endif
+if (filiale = "9") then
+rc = EzSQLQuery("SELECT lmclnr, digits(lmclnr) concat '-' concat lmclname FROM dipf09/xxcluster order by lmclnr", text, ErrorMsg)
+endif
+
+
+PanelFieldSetProp ("lmnc1", 5, text) 
+PanelFieldSetProp ("lmnc2", 5, text) 
+PanelFieldSetProp ("lmnc3", 5, text) 
+PanelFieldSetProp ("lmnc4", 5, text) 
+PanelFieldSetProp ("lmnc5", 5, text) 
+PanelFieldSetProp ("lmnc6", 5, text) 
+PanelFieldSetProp ("lmnc7", 5, text) 
+PanelFieldSetProp ("lmnc8", 5, text) 
+PanelFieldSetProp ("lmnc9", 5, text) 
+PanelFieldSetProp ("lmnc10", 5, text) 
+
+
+
+PanelUpdateEnable(2)

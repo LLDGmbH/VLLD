@@ -1,0 +1,74 @@
+﻿global filiale as string
+DIM ddehandle, i, j, msg, rc as integer
+dim x01, x02, x03, x04, x05, x06, x07, x08, x09, x10, x11, x12, xende, errmsg, errormsg, datei, pfad_datei as string 
+i = 0
+j=3
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+
+datei = "Rechnungspruefung.xls"
+pfad_datei = "c:\v-lld runtime\" + datei
+FileCopy("c:\v-lld runtime\vorlage.xls", pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z2S1", "Filiale")
+ddepoke( ddehandle, "Z2S2", "Objnr")
+ddepoke( ddehandle, "Z2S3", "Titel")
+ddepoke( ddehandle, "Z2S4", "Folge")
+ddepoke( ddehandle, "Z2S5", "Expl.")
+ddepoke( ddehandle, "Z2S6", "Rech.-Datum")
+ddepoke( ddehandle, "Z2S7", "Rech-Nr.")
+ddepoke( ddehandle, "Z2S8", "Buch-Datum")
+ddepoke( ddehandle, "Z2S9", "Buch-Zeit")
+ddepoke( ddehandle, "Z2S10", "Benutzer")
+ddepoke( ddehandle, "Z2S11", "FiBu")
+ddepoke( ddehandle, "Z2S12", "P")
+
+nochmal:
+
+HostFieldGetLineData("fil", i, x01)
+HostFieldGetLineData("atobj", i, x02)
+HostFieldGetLineData("atname", i, x03)
+HostFieldGetLineData("folge", i, x04)
+HostFieldGetLineData("menge", i, x05)
+HostFieldGetLineData("edatum", i, x06)
+HostFieldGetLineData("ebnr1", i, x07)
+HostFieldGetLineData("sfdat", i, x08)
+HostFieldGetLineData("prtim", i, x09)
+HostFieldGetLineData("prusr", i, x10)
+HostFieldGetLineData("fibujn", i, x11)
+HostFieldGetLineData("lkz", i, x12)
+
+
+if (x02 <> "")  then
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", x01)
+ddepoke( ddehandle, "Z" + str(j) +"S2", x02)
+ddepoke( ddehandle, "Z" + str(j) +"S3", x03)
+ddepoke( ddehandle, "Z" + str(j) +"S4", x04)
+ddepoke( ddehandle, "Z" + str(j) +"S5", x05)
+ddepoke( ddehandle, "Z" + str(j) +"S6", x06)
+ddepoke( ddehandle, "Z" + str(j) +"S7", x07)
+ddepoke( ddehandle, "Z" + str(j) +"S8", x08)
+ddepoke( ddehandle, "Z" + str(j) +"S9", x09)
+ddepoke( ddehandle, "Z" + str(j) +"S10", x10)
+ddepoke( ddehandle, "Z" + str(j) +"S11", x11)
+ddepoke( ddehandle, "Z" + str(j) +"S12", x12)
+
+j=j+1
+endif
+
+if i < 15 then
+i=i+1
+goto nochmal
+endif
+
+HostFieldGetData("ende", xende)
+ 
+if x02 <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

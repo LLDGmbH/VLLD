@@ -1,0 +1,17 @@
+﻿dim text, ErrorMsg as String
+dim rc as Integer
+global filiale as string
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rc = EzSQLQuery("SELECT vlvlkz, digits(vlvlkz) concat ' - ' concat vlvbez FROM grvtlp order by vlvbez", text, ErrorMsg)
+
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelFieldSetProp ("VL01", 5, text) 
+PanelUpdateEnable(2)
+endif

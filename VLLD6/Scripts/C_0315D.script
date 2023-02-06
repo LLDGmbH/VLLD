@@ -1,0 +1,49 @@
+﻿global pic_vkz, pic_jahr, pic_folge, pic_name, pic_vdz, pic_num, y0, y1, y2 as string
+dim xobnr, xsql, pfad, errormsg as string
+dim rc as integer
+y1 = " "
+y2 = "0"
+
+
+pfad = @"@&LWG@"
+
+pic_name = ""
+
+HostScreenSendKey("Page Down")
+
+HostFieldGetData("bwobj",xobnr)
+xsql = "SELECT ateanv FROM GRartp where atobj = " + xobnr
+rc = EzSQLQuery(xsql, y0, ErrorMsg)
+y0 = rtrim(y0)
+rc = len(y0)
+if rc = 3 then
+y0 = "00" + y0
+endif
+if rc = 4 then
+y0 = "0" + y0
+endif
+if y0 = "0" then
+xsql = "SELECT atvkz FROM GRartp where atobj = " + xobnr
+rc = EzSQLQuery(xsql, y0, ErrorMsg)
+endif
+y0 = rtrim(y0)
+rc = len(y0)
+if rc = 3 then
+y0 = "00" + y0
+endif
+if rc = 4 then
+y0 = "0" + y0
+endif
+
+
+
+
+HostFieldGetData("folg", pic_folge)
+HostFieldGetData("jahr", pic_jahr)
+pic_jahr = Replace(pic_jahr, y1, y2, 0)
+pic_num = "20" + pic_jahr + pic_folge
+if (y0 <> "")  then
+pic_name = y0 + "_20" + pic_jahr + pic_folge + ".jpg"
+endif
+
+PanelUpdateEnable(1)

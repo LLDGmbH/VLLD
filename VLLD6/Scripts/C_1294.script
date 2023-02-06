@@ -1,0 +1,34 @@
+﻿rem **Füllen Combo-Box  aus GRVERP **
+
+dim text, ErrorMsg, xlneto, xsatz, xlmwbet, ylmwbet, xlbrut, ylbrut, komma, punkt as String
+dim rc as Integer
+dim nlneto, nsatz, nlmwbet, nlbrut as double
+komma = ","
+punkt = "."
+
+HostFieldGetData("lneto", xlneto)
+HostFieldGetData("satz", xsatz)
+xlneto=Replace(xlneto, komma, punkt)
+nlneto = val(xlneto)
+nsatz= val(xsatz) 
+
+
+if ( nlneto > 0 ) then
+
+nlmwbet = ((nlneto / 100) * nsatz)
+nlbrut = nlneto + nlmwbet
+nlbrut = round(nlbrut, 2)
+nlmwbet=round(nlmwbet, 2)
+
+xlmwbet = str(nlmwbet)
+xlbrut = str(nlbrut)
+
+ylmwbet=Replace(xlmwbet, punkt, komma)
+ylbrut=Replace(xlbrut, punkt, komma)
+
+PanelFieldPutData("lmwbet", 0, ylmwbet)
+PanelFieldPutData("lbrut", 0, ylbrut)
+
+PanelUpdateEnable(2)
+
+endif

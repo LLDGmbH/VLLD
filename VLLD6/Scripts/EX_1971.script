@@ -1,0 +1,81 @@
+﻿DIM ddehandle, i, j, msg as integer
+dim xobnr, xtitel, xfol1, xvmp1, xmbr1, xabw1, xfol2, xvmp2, xmbr2, xabw2, xfol3, xvmp3, xmbr3, xabw3, xkdnr, xname, xarg, datei, pfad_datei, source as string 
+i = 0
+j=4
+
+HostFieldGetData("DVkdnr",xkdnr)
+HostFieldGetData("DVNAME",xname)
+
+datei = "VMP_Kunde_" + xkdnr + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", xkdnr)
+ddepoke( ddehandle, "Z1S2", xname)
+
+ddepoke( ddehandle, "Z3S1", "Objektnummer")
+ddepoke( ddehandle, "Z3S2", "Titel")
+ddepoke( ddehandle, "Z3S3", "Folge")
+ddepoke( ddehandle, "Z3S4", "VMP")
+ddepoke( ddehandle, "Z3S5", "MBR")
+ddepoke( ddehandle, "Z3S6", "Abweichung")
+ddepoke( ddehandle, "Z3S7", "Folge")
+ddepoke( ddehandle, "Z3S8", "VMP")
+ddepoke( ddehandle, "Z3S9", "MBR")
+ddepoke( ddehandle, "Z3S10", "Abweichung")
+ddepoke( ddehandle, "Z3S11", "Folge")
+ddepoke( ddehandle, "Z3S12", "VMP")
+ddepoke( ddehandle, "Z3S13", "MBR")
+ddepoke( ddehandle, "Z3S14", "Abweichung")
+
+
+nochmal:
+
+HostFieldGetLineData("yyobj", i, xobnr)
+HostFieldGetLineData("yynam", i, xtitel)
+HostFieldGetLineData("yyfol1", i, xfol1)
+HostFieldGetLineData("yyvmp1", i, xvmp1)
+HostFieldGetLineData("yymbr1", i, xmbr1)
+HostFieldGetLineData("yyabw1", i, xabw1)
+HostFieldGetLineData("yyfol2", i, xfol2)
+HostFieldGetLineData("yyvmp2", i, xvmp2)
+HostFieldGetLineData("yymbr2", i, xmbr2)
+HostFieldGetLineData("yyabw2", i, xabw2)
+HostFieldGetLineData("yyfol3", i, xfol3)
+HostFieldGetLineData("yyvmp3", i, xvmp3)
+HostFieldGetLineData("yymbr3", i, xmbr3)
+HostFieldGetLineData("yyabw3", i, xabw3)
+
+if (xobnr <> "") then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xobnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xtitel)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xfol1)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xvmp1)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xmbr1)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xabw1)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xfol2)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xvmp2)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xmbr2)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xabw2)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xfol3)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xvmp3)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xmbr3)
+ddepoke( ddehandle, "Z" + str(j) +"S14", xabw3)
+
+j=j+1
+endif
+
+if i < 15 then
+i=i+1
+goto nochmal
+endif
+ 
+if xtitel <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

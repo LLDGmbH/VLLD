@@ -1,0 +1,72 @@
+﻿DIM ddehandle, i, j, msg as integer
+dim xfil, xsart,xnam, xispc, xvnam, xvdz, xonam, xfol1, xfol2, xfol3, xmdat, xsdat, xanzs, xende, datei, pfad_datei, source as string 
+i = 0
+j=2
+
+datei = "gesendete_Daten.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "Filiale")
+ddepoke( ddehandle, "Z1S2", "SA")
+ddepoke( ddehandle, "Z1S3", "Name")
+ddepoke( ddehandle, "Z1S4", "ISPC")
+ddepoke( ddehandle, "Z1S5", "Name")
+ddepoke( ddehandle, "Z1S6", "VDZ")
+ddepoke( ddehandle, "Z1S7", "Name")
+ddepoke( ddehandle, "Z1S8", "Folge1")
+ddepoke( ddehandle, "Z1S9", "Folge2")
+ddepoke( ddehandle, "Z1S10", "Folge3")
+ddepoke( ddehandle, "Z1S11", "gemeldet")
+ddepoke( ddehandle, "Z1S12", "gesendet")
+ddepoke( ddehandle, "Z1S13", "Anzahl")
+
+nochmal:
+
+HostFieldGetLineData("s1fil", i, xfil)
+HostFieldGetLineData("s1sart", i, xsart)
+HostFieldGetLineData("s1nam", i, xnam)
+HostFieldGetLineData("s1ispc", i, xispc)
+HostFieldGetLineData("s1vnam", i, xvnam)
+HostFieldGetLineData("s1vdz", i, xvdz)
+HostFieldGetLineData("s1onam", i, xonam)
+HostFieldGetLineData("s1fol1", i, xfol1)
+HostFieldGetLineData("s1fol2", i, xfol2)
+HostFieldGetLineData("s1fol3", i, xfol3)
+HostFieldGetLineData("s1mdat", i, xmdat)
+HostFieldGetLineData("s1sdat", i, xsdat)
+HostFieldGetLineData("s1anzs", i, xanzs)
+
+
+if xsart <> "" then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xfil)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xsart)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xnam)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xispc)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xvnam)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xvdz)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xonam)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xfol1)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xfol2)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xfol3)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xmdat)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xsdat)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xanzs)
+j=j+1
+endif
+
+if i < 18 then
+i=i+1
+goto nochmal
+endif
+
+if (xsart <> "")  then 
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

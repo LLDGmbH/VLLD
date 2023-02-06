@@ -1,0 +1,88 @@
+﻿DIM ddehandle, i, j, msg as integer
+dim xobnr, xtitel, xjahr, xfolge, xwfehgs, xgesaus, xauspr, xxxprb, xwfbza1, xaus1, xaus2, xaus3, xaus4, xanul, xxxnul, xbnul, xafes, xbfes, datei, y0, y1, y2, pfad_datei, source as string 
+i = 0
+j=3
+y1 = " "
+y2 = "_"
+
+HostFieldGetData("atname",y0)
+xtitel = Replace(y0, y1, y2, 0)
+HostFieldGetData("wfobj",xobnr)
+
+datei = "AV_NV_" + xobnr + ".xls"
+pfad_datei = @"@&LWV@"  + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "Objekt")
+ddepoke( ddehandle, "Z1S2", xobnr)
+ddepoke( ddehandle, "Z1S3", y0)
+ddepoke( ddehandle, "Z2S3", "Jahr")
+ddepoke( ddehandle, "Z2S4", "Folge")
+ddepoke( ddehandle, "Z2S5", "EH")
+ddepoke( ddehandle, "Z2S6", "AV EH")
+ddepoke( ddehandle, "Z2S7", "%")
+ddepoke( ddehandle, "Z2S8", "Expl.")
+ddepoke( ddehandle, "Z2S9", "%")
+ddepoke( ddehandle, "Z2S10", "1x")
+ddepoke( ddehandle, "Z2S11", "2x")
+ddepoke( ddehandle, "Z2S12", "3x")
+ddepoke( ddehandle, "Z2S13", "4x")
+ddepoke( ddehandle, "Z2S14", "NV EH")
+ddepoke( ddehandle, "Z2S15", "%")
+ddepoke( ddehandle, "Z2S16", "Expl.")
+ddepoke( ddehandle, "Z2S17", "Fest EH")
+ddepoke( ddehandle, "Z2S18", "Expl.")
+nochmal:
+
+HostFieldGetLineData("wfjahr", i, xjahr)
+HostFieldGetLineData("wffolg", i, xfolge)
+HostFieldGetLineData("wfehgs", i, xwfehgs)
+HostFieldGetLineData("xxprb", i, xxxprb)
+HostFieldGetLineData("gesaus", i, xgesaus)
+HostFieldGetLineData("auspr", i, xauspr)
+HostFieldGetLineData("wfbza1", i, xwfbza1)
+HostFieldGetLineData("wfaus1", i, xaus1)
+HostFieldGetLineData("wfaus2", i, xaus2)
+HostFieldGetLineData("wfaus3", i, xaus3)
+HostFieldGetLineData("wfaus4", i, xaus4)
+HostFieldGetLineData("wfanul", i, xanul)
+HostFieldGetLineData("xxnul", i, xxxnul)
+HostFieldGetLineData("wfbnul", i, xbnul)
+HostFieldGetLineData("wfafes", i, xafes)
+HostFieldGetLineData("xxbfes", i, xbfes)
+
+if (xfolge <> "")  then
+ddepoke( ddehandle, "Z" + str(j) +"S3", xjahr)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xfolge)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xwfehgs)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xgesaus)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xauspr)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xwfbza1)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xxxprb)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xaus1)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xaus2)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xaus3)
+ddepoke( ddehandle, "Z" + str(j) +"S13", xaus4)
+ddepoke( ddehandle, "Z" + str(j) +"S14", xanul)
+ddepoke( ddehandle, "Z" + str(j) +"S15", xxxnul)
+ddepoke( ddehandle, "Z" + str(j) +"S16", xbnul)
+ddepoke( ddehandle, "Z" + str(j) +"S17", xafes)
+ddepoke( ddehandle, "Z" + str(j) +"S18", xbfes)
+j=j+1
+endif
+
+if i < 19 then
+i=i+1
+goto nochmal
+endif
+ 
+if xfolge <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

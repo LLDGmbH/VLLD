@@ -1,0 +1,17 @@
+﻿dim text, ErrorMsg as String
+dim rc as Integer
+
+
+rc = EzSQLConnect("DIPF01", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rc = EzSQLQuery("SELECT digits(fbznr), digits(fbznr) concat ' - ' concat fbztext FROM GRFBZP order by fbztext", text, ErrorMsg)
+PanelFieldSetProp ("kdfibez", 5, text) 
+
+
+
+
+
+PanelUpdateEnable(2)

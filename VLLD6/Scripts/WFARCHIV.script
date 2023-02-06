@@ -1,0 +1,31 @@
+﻿dim xkdnr, ip, lw, lw_pfad, verz, lw_pfad_kd, comm, xmdir, datei as string
+dim file_ok as integer
+
+ip = "@&IP@" 
+lw = "@&LW@"
+lw_pfad = @"@&LWA@ + "verlage\"
+
+file_ok = FileExists(lw_pfad)
+
+if file_ok = 0 then
+
+comm = "cmd.exe /c net use " + lw + ": \\" + ip + "\seagull pcuser /user:pcuser"
+PcCommand(4, comm)
+Wait(1)
+endif
+
+HostFieldGetData("wfvnr", xkdnr)
+
+if (xkdnr <> "")  then
+
+lw_pfad_kd = lw_pfad + "Verlag_" + xkdnr
+file_ok = FileExists(lw_pfad_kd)
+if file_ok = 0 then
+comm = "cmd.exe /c md " + lw_pfad_kd
+PcCommand(4, comm)
+Wait(1)
+endif
+
+Datei = "file:///" + lw_pfad_kd
+PcCommand(4, datei)
+endif

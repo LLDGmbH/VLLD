@@ -1,0 +1,1349 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="656E044">
+  <screen originator="SeagullAlbumFile" name="OSNA_SRC/RSC03DS(FC0001+KEY01)" library="OSNA_SRC" member_name="RSC03DS">
+    <size cx="80" cy="24"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f10" caption="F10" attention_key="false" conditional="true"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <field field_type="screen_part" name="FC0001" overlay="true">
+      <area>
+        <position/>
+        <size cx="80" cy="22"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="KEY01" overlay="true">
+      <area>
+        <position y="23"/>
+        <size cx="80" cy="1"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value="Anzeigen Verarbeitungsdaten -Remiscan-" display_length="38" data_length="38" underline="true" high_intensity="true">
+          <area>
+            <position x="22"/>
+            <size cx="38" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="63"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="72"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="USER" short_name="USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="1" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="Kunde" display_length="5" data_length="5">
+          <area>
+            <position x="13" y="1"/>
+            <size cx="5" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDKDNR" short_name="KDKDNR" data_type="zoned_decimal" display_length="7" data_length="7" high_intensity="true">
+          <area>
+            <position x="19" y="1"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDNAME" short_name="KDNAME" data_type="alphanumeric" display_length="33" data_length="33">
+          <area>
+            <position x="28" y="1"/>
+            <size cx="33" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="JOB" short_name="JOB" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="63" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="RSC03" display_length="5" data_length="5">
+          <area>
+            <position x="74" y="1"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="field" usage="output" name="KDSTR" short_name="KDSTR" data_type="alphanumeric" display_length="25" data_length="25">
+          <area>
+            <position x="28" y="2"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="KDPLZ" short_name="KDPLZ" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true">
+          <area>
+            <position x="21" y="3"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="KDORT" short_name="KDORT" data_type="alphanumeric" display_length="25" data_length="25">
+          <area>
+            <position x="28" y="3"/>
+            <size cx="25" cy="1"/>
+          </area>
+        </field>
+        <field field_type="fixed_text" value="Expl.:" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="61" y="3"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white"/>
+          <indicator id="4"/>
+        </field>
+        <field field_type="field" usage="output" name="EXGES" short_name="EXGES" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true" conditional="true">
+          <area>
+            <position x="68" y="3"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+          <indicator id="4"/>
+        </field>
+        <field field_type="fixed_text" value="Zeitraum vom:" display_length="13" data_length="13" high_intensity="true">
+          <area>
+            <position x="17" y="4"/>
+            <size cx="13" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="ZTRVON" short_name="ZTRVON" data_type="zoned_decimal" display_length="10" data_length="8" input="true" underline="true" high_intensity="true">
+          <area>
+            <position x="31" y="4"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="bis:" display_length="4" data_length="4" high_intensity="true">
+          <area>
+            <position x="42" y="4"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="both" name="ZTRBIS" short_name="ZTRBIS" data_type="zoned_decimal" display_length="10" data_length="8" input="true" underline="true" high_intensity="true">
+          <area>
+            <position x="47" y="4"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="Wert.:" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="61" y="4"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white"/>
+          <indicator id="4"/>
+        </field>
+        <field field_type="field" usage="output" name="WERTGES" short_name="WERTGES" data_type="zoned_decimal" display_length="8" data_length="7" high_intensity="true" conditional="true" decimal_positions="2">
+          <area>
+            <position x="68" y="4"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+          <indicator id="4"/>
+        </field>
+        <field field_type="fixed_text" value="Datum    Uhrzeit  Obj. Titel                 Folge   Ex.Mg. Benutzer   ErfKz" display_length="76" data_length="76" underline="true" high_intensity="true">
+          <area>
+            <position x="2" y="6"/>
+            <size cx="76" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="RSCVDAT_6" short_name="RSCVDAT_6" data_type="zoned_decimal" display_length="8" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRZEIT" short_name="RRZEIT" data_type="zoned_decimal" display_length="8" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="10" y="7"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RROBJ" short_name="RROBJ" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true" conditional="true">
+          <area>
+            <position x="19" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="25" y="7"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRFOLG" short_name="RRFOLG" data_type="zoned_decimal" display_length="7" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="47" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRMENG" short_name="RRMENG" data_type="zoned_decimal" display_length="6" data_length="4" high_intensity="true" conditional="true">
+          <area>
+            <position x="55" y="7"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRJOB" short_name="RRJOB" data_type="alphanumeric" display_length="10" data_length="10" high_intensity="true" conditional="true">
+          <area>
+            <position x="62" y="7"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ1" short_name="RRKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="73" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ2" short_name="RRKZ2" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="75" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ3" short_name="RRKZ3" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="77" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RSCVDAT_6" short_name="RSCVDAT_6" data_type="zoned_decimal" display_length="8" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRZEIT" short_name="RRZEIT" data_type="zoned_decimal" display_length="8" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="10" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RROBJ" short_name="RROBJ" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true" conditional="true">
+          <area>
+            <position x="19" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="25" y="8"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRFOLG" short_name="RRFOLG" data_type="zoned_decimal" display_length="7" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="47" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRMENG" short_name="RRMENG" data_type="zoned_decimal" display_length="6" data_length="4" high_intensity="true" conditional="true">
+          <area>
+            <position x="55" y="8"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRJOB" short_name="RRJOB" data_type="alphanumeric" display_length="10" data_length="10" high_intensity="true" conditional="true">
+          <area>
+            <position x="62" y="8"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ1" short_name="RRKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="73" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ2" short_name="RRKZ2" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="75" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ3" short_name="RRKZ3" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="77" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RSCVDAT_6" short_name="RSCVDAT_6" data_type="zoned_decimal" display_length="8" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRZEIT" short_name="RRZEIT" data_type="zoned_decimal" display_length="8" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="10" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RROBJ" short_name="RROBJ" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true" conditional="true">
+          <area>
+            <position x="19" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="25" y="9"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRFOLG" short_name="RRFOLG" data_type="zoned_decimal" display_length="7" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="47" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRMENG" short_name="RRMENG" data_type="zoned_decimal" display_length="6" data_length="4" high_intensity="true" conditional="true">
+          <area>
+            <position x="55" y="9"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRJOB" short_name="RRJOB" data_type="alphanumeric" display_length="10" data_length="10" high_intensity="true" conditional="true">
+          <area>
+            <position x="62" y="9"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ1" short_name="RRKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="73" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ2" short_name="RRKZ2" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="75" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ3" short_name="RRKZ3" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="77" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RSCVDAT_6" short_name="RSCVDAT_6" data_type="zoned_decimal" display_length="8" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRZEIT" short_name="RRZEIT" data_type="zoned_decimal" display_length="8" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="10" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RROBJ" short_name="RROBJ" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true" conditional="true">
+          <area>
+            <position x="19" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="25" y="10"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRFOLG" short_name="RRFOLG" data_type="zoned_decimal" display_length="7" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="47" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRMENG" short_name="RRMENG" data_type="zoned_decimal" display_length="6" data_length="4" high_intensity="true" conditional="true">
+          <area>
+            <position x="55" y="10"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRJOB" short_name="RRJOB" data_type="alphanumeric" display_length="10" data_length="10" high_intensity="true" conditional="true">
+          <area>
+            <position x="62" y="10"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ1" short_name="RRKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="73" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ2" short_name="RRKZ2" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="75" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ3" short_name="RRKZ3" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="77" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RSCVDAT_6" short_name="RSCVDAT_6" data_type="zoned_decimal" display_length="8" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRZEIT" short_name="RRZEIT" data_type="zoned_decimal" display_length="8" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="10" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RROBJ" short_name="RROBJ" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true" conditional="true">
+          <area>
+            <position x="19" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="25" y="11"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRFOLG" short_name="RRFOLG" data_type="zoned_decimal" display_length="7" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="47" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRMENG" short_name="RRMENG" data_type="zoned_decimal" display_length="6" data_length="4" high_intensity="true" conditional="true">
+          <area>
+            <position x="55" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRJOB" short_name="RRJOB" data_type="alphanumeric" display_length="10" data_length="10" high_intensity="true" conditional="true">
+          <area>
+            <position x="62" y="11"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ1" short_name="RRKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="73" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ2" short_name="RRKZ2" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="75" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ3" short_name="RRKZ3" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="77" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RSCVDAT_6" short_name="RSCVDAT_6" data_type="zoned_decimal" display_length="8" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRZEIT" short_name="RRZEIT" data_type="zoned_decimal" display_length="8" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="10" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RROBJ" short_name="RROBJ" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true" conditional="true">
+          <area>
+            <position x="19" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="25" y="12"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRFOLG" short_name="RRFOLG" data_type="zoned_decimal" display_length="7" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="47" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRMENG" short_name="RRMENG" data_type="zoned_decimal" display_length="6" data_length="4" high_intensity="true" conditional="true">
+          <area>
+            <position x="55" y="12"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRJOB" short_name="RRJOB" data_type="alphanumeric" display_length="10" data_length="10" high_intensity="true" conditional="true">
+          <area>
+            <position x="62" y="12"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ1" short_name="RRKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="73" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ2" short_name="RRKZ2" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="75" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ3" short_name="RRKZ3" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="77" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RSCVDAT_6" short_name="RSCVDAT_6" data_type="zoned_decimal" display_length="8" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRZEIT" short_name="RRZEIT" data_type="zoned_decimal" display_length="8" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="10" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RROBJ" short_name="RROBJ" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true" conditional="true">
+          <area>
+            <position x="19" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="25" y="13"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRFOLG" short_name="RRFOLG" data_type="zoned_decimal" display_length="7" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="47" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRMENG" short_name="RRMENG" data_type="zoned_decimal" display_length="6" data_length="4" high_intensity="true" conditional="true">
+          <area>
+            <position x="55" y="13"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRJOB" short_name="RRJOB" data_type="alphanumeric" display_length="10" data_length="10" high_intensity="true" conditional="true">
+          <area>
+            <position x="62" y="13"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ1" short_name="RRKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="73" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ2" short_name="RRKZ2" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="75" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ3" short_name="RRKZ3" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="77" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="RSCVDAT_6" short_name="RSCVDAT_6" data_type="zoned_decimal" display_length="8" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRZEIT" short_name="RRZEIT" data_type="zoned_decimal" display_length="8" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="10" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RROBJ" short_name="RROBJ" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true" conditional="true">
+          <area>
+            <position x="19" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="25" y="14"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRFOLG" short_name="RRFOLG" data_type="zoned_decimal" display_length="7" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="47" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRMENG" short_name="RRMENG" data_type="zoned_decimal" display_length="6" data_length="4" high_intensity="true" conditional="true">
+          <area>
+            <position x="55" y="14"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRJOB" short_name="RRJOB" data_type="alphanumeric" display_length="10" data_length="10" high_intensity="true" conditional="true">
+          <area>
+            <position x="62" y="14"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ1" short_name="RRKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="73" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ2" short_name="RRKZ2" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="75" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ3" short_name="RRKZ3" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="77" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RSCVDAT_6" short_name="RSCVDAT_6" data_type="zoned_decimal" display_length="8" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRZEIT" short_name="RRZEIT" data_type="zoned_decimal" display_length="8" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="10" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RROBJ" short_name="RROBJ" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true" conditional="true">
+          <area>
+            <position x="19" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="25" y="15"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRFOLG" short_name="RRFOLG" data_type="zoned_decimal" display_length="7" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="47" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRMENG" short_name="RRMENG" data_type="zoned_decimal" display_length="6" data_length="4" high_intensity="true" conditional="true">
+          <area>
+            <position x="55" y="15"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRJOB" short_name="RRJOB" data_type="alphanumeric" display_length="10" data_length="10" high_intensity="true" conditional="true">
+          <area>
+            <position x="62" y="15"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ1" short_name="RRKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="73" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ2" short_name="RRKZ2" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="75" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ3" short_name="RRKZ3" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="77" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RSCVDAT_6" short_name="RSCVDAT_6" data_type="zoned_decimal" display_length="8" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRZEIT" short_name="RRZEIT" data_type="zoned_decimal" display_length="8" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="10" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RROBJ" short_name="RROBJ" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true" conditional="true">
+          <area>
+            <position x="19" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="25" y="16"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRFOLG" short_name="RRFOLG" data_type="zoned_decimal" display_length="7" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="47" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRMENG" short_name="RRMENG" data_type="zoned_decimal" display_length="6" data_length="4" high_intensity="true" conditional="true">
+          <area>
+            <position x="55" y="16"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRJOB" short_name="RRJOB" data_type="alphanumeric" display_length="10" data_length="10" high_intensity="true" conditional="true">
+          <area>
+            <position x="62" y="16"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ1" short_name="RRKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="73" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ2" short_name="RRKZ2" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="75" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ3" short_name="RRKZ3" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="77" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RSCVDAT_6" short_name="RSCVDAT_6" data_type="zoned_decimal" display_length="8" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRZEIT" short_name="RRZEIT" data_type="zoned_decimal" display_length="8" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="10" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RROBJ" short_name="RROBJ" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true" conditional="true">
+          <area>
+            <position x="19" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="25" y="17"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRFOLG" short_name="RRFOLG" data_type="zoned_decimal" display_length="7" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="47" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRMENG" short_name="RRMENG" data_type="zoned_decimal" display_length="6" data_length="4" high_intensity="true" conditional="true">
+          <area>
+            <position x="55" y="17"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRJOB" short_name="RRJOB" data_type="alphanumeric" display_length="10" data_length="10" high_intensity="true" conditional="true">
+          <area>
+            <position x="62" y="17"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ1" short_name="RRKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="73" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ2" short_name="RRKZ2" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="75" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ3" short_name="RRKZ3" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="77" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RSCVDAT_6" short_name="RSCVDAT_6" data_type="zoned_decimal" display_length="8" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRZEIT" short_name="RRZEIT" data_type="zoned_decimal" display_length="8" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="10" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RROBJ" short_name="RROBJ" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true" conditional="true">
+          <area>
+            <position x="19" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="25" y="18"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRFOLG" short_name="RRFOLG" data_type="zoned_decimal" display_length="7" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="47" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRMENG" short_name="RRMENG" data_type="zoned_decimal" display_length="6" data_length="4" high_intensity="true" conditional="true">
+          <area>
+            <position x="55" y="18"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRJOB" short_name="RRJOB" data_type="alphanumeric" display_length="10" data_length="10" high_intensity="true" conditional="true">
+          <area>
+            <position x="62" y="18"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ1" short_name="RRKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="73" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ2" short_name="RRKZ2" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="75" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ3" short_name="RRKZ3" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="77" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RSCVDAT_6" short_name="RSCVDAT_6" data_type="zoned_decimal" display_length="8" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRZEIT" short_name="RRZEIT" data_type="zoned_decimal" display_length="8" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="10" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RROBJ" short_name="RROBJ" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true" conditional="true">
+          <area>
+            <position x="19" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="25" y="19"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRFOLG" short_name="RRFOLG" data_type="zoned_decimal" display_length="7" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="47" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRMENG" short_name="RRMENG" data_type="zoned_decimal" display_length="6" data_length="4" high_intensity="true" conditional="true">
+          <area>
+            <position x="55" y="19"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRJOB" short_name="RRJOB" data_type="alphanumeric" display_length="10" data_length="10" high_intensity="true" conditional="true">
+          <area>
+            <position x="62" y="19"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ1" short_name="RRKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="73" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ2" short_name="RRKZ2" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="75" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ3" short_name="RRKZ3" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="77" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RSCVDAT_6" short_name="RSCVDAT_6" data_type="zoned_decimal" display_length="8" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRZEIT" short_name="RRZEIT" data_type="zoned_decimal" display_length="8" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="10" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RROBJ" short_name="RROBJ" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true" conditional="true">
+          <area>
+            <position x="19" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="25" y="20"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRFOLG" short_name="RRFOLG" data_type="zoned_decimal" display_length="7" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="47" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRMENG" short_name="RRMENG" data_type="zoned_decimal" display_length="6" data_length="4" high_intensity="true" conditional="true">
+          <area>
+            <position x="55" y="20"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRJOB" short_name="RRJOB" data_type="alphanumeric" display_length="10" data_length="10" high_intensity="true" conditional="true">
+          <area>
+            <position x="62" y="20"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ1" short_name="RRKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="73" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ2" short_name="RRKZ2" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="75" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ3" short_name="RRKZ3" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="77" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="RSCVDAT_6" short_name="RSCVDAT_6" data_type="zoned_decimal" display_length="8" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="1" y="21"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRZEIT" short_name="RRZEIT" data_type="zoned_decimal" display_length="8" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="10" y="21"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RROBJ" short_name="RROBJ" data_type="zoned_decimal" display_length="5" data_length="5" high_intensity="true" conditional="true">
+          <area>
+            <position x="19" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="ATNAME" short_name="ATNAME" data_type="alphanumeric" display_length="21" data_length="21" high_intensity="true" conditional="true">
+          <area>
+            <position x="25" y="21"/>
+            <size cx="21" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRFOLG" short_name="RRFOLG" data_type="zoned_decimal" display_length="7" data_length="6" high_intensity="true" conditional="true">
+          <area>
+            <position x="47" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="blue" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRMENG" short_name="RRMENG" data_type="zoned_decimal" display_length="6" data_length="4" high_intensity="true" conditional="true">
+          <area>
+            <position x="55" y="21"/>
+            <size cx="6" cy="1"/>
+          </area>
+          <color foreground="white" conditional="true"/>
+          <color foreground="red" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRJOB" short_name="RRJOB" data_type="alphanumeric" display_length="10" data_length="10" high_intensity="true" conditional="true">
+          <area>
+            <position x="62" y="21"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="red" conditional="true"/>
+          <color foreground="green" conditional="true"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ1" short_name="RRKZ1" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="73" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ2" short_name="RRKZ2" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="75" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="RRKZ3" short_name="RRKZ3" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="77" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="Cmd3 = Verlassen; Cmd10 = Erläuterung Erfassungskennzeichen" display_length="59" data_length="59">
+      <area>
+        <position x="1" y="23"/>
+        <size cx="59" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

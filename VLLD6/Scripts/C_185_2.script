@@ -1,0 +1,20 @@
+﻿dim text, xhgnr,  ErrorMsg as String
+dim rc as Integer
+global xhgtxt as string
+
+
+rc = EzSQLConnect("DIPF01", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+
+HostFieldGetData("athrg", xhgnr)
+
+
+
+rc = EzSQLQuery("SELECT hgname FROM GRHGSP where hgnr = " + xhgnr, text, ErrorMsg)
+
+PanelFieldSetProp("athrg", 5, text)
+
+PanelUpdateEnable(2)

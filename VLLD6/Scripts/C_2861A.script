@@ -1,0 +1,24 @@
+﻿rem **Füllen Combo-Box  aus GRVKAP **
+
+dim text, ErrorMsg as String
+dim rc as Integer
+Global Filiale as string
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+
+
+rem **VERTRETER AUS GRVERP
+
+
+rc = EzSQLQuery("SELECT VTNR, VTNAME FROM GRVERP order by VTNR", text, ErrorMsg)
+
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelFieldSetProp ("kdvtnr", 5, text) 
+PanelUpdateEnable(2)
+endif

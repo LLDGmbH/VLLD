@@ -1,0 +1,52 @@
+﻿DIM ddehandle, i, j, msg as integer
+dim xs1, xs2, xkdnr, xname, xvon, xbis, xende, datei, pfad_datei, source as string 
+i = 0
+j=4
+
+HostFieldGetData("kdkdnr", xkdnr)
+HostFieldGetData("kdname", xname)
+HostFieldGetData("datvon", xvon)
+HostFieldGetData("datbis", xbis)
+
+datei = "Remipakete_Kunde_" + xkdnr + ".xls"
+pfad_datei = @"@&LWV@"  + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "Kunde")
+ddepoke( ddehandle, "Z1S2", xkdnr)
+ddepoke( ddehandle, "Z1S3", xname)
+ddepoke( ddehandle, "Z1S4", "Zeitraum")
+ddepoke( ddehandle, "Z1S5", xvon)
+ddepoke( ddehandle, "Z1S6", "bis")
+ddepoke( ddehandle, "Z1S7", xbis)
+ddepoke( ddehandle, "Z3S1", "Datum")
+ddepoke( ddehandle, "Z3S2", "Anzahl")
+
+
+
+nochmal:
+
+HostFieldGetLineData("datum", i, xs1)
+HostFieldGetLineData("pak", i, xs2)
+HostFieldGetData("ende", xende)
+
+if xs2 <> "" then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xs1)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xs2)
+j=j+1
+endif
+
+if i < 11 then
+i=i+1
+goto nochmal
+endif
+ 
+if xende <> "Ende" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

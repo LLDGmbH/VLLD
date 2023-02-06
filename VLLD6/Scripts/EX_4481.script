@@ -1,0 +1,92 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xende, xrang, xwt, xobnr, xtitel, xfolg, xbez, xvh, xfrem, xwums, xwumsant, xkdnr, xname, xstr, xplz, xort, sql1, sql2, xryth, xehcd, errmsg, errormsg, datei, pfad_datei as string 
+dim source as string
+i = 0
+j=7
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+HostFieldGetData("##kdnr",xkdnr)
+HostFieldGetData("kdname",xname)
+HostFieldGetData("kdstr",xstr)
+HostFieldGetData("kdplz",xplz)
+HostFieldGetData("kdort",xort)
+
+datei = "Sortimentstest_" + xkdnr + ".xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+ddepoke( ddehandle, "Z1S1", "Kdnr")
+ddepoke( ddehandle, "Z2S1", "Name")
+ddepoke( ddehandle, "Z3S1", "Strasse")
+ddepoke( ddehandle, "Z4S1", "Ort")
+ddepoke( ddehandle, "Z1S2", xkdnr )
+ddepoke( ddehandle, "Z2S2", xname )
+ddepoke( ddehandle, "Z3S2", xstr )
+ddepoke( ddehandle, "Z4S2", xplz )
+ddepoke( ddehandle, "Z4S3", xort )
+
+ddepoke( ddehandle, "Z6S1", "Rang")
+ddepoke( ddehandle, "Z6S2", "WT")
+ddepoke( ddehandle, "Z6S3", "Obnr")
+ddepoke( ddehandle, "Z6S4", "Titel")
+ddepoke( ddehandle, "Z6S5", "Folge")
+ddepoke( ddehandle, "Z6S6", "Bezug")
+ddepoke( ddehandle, "Z6S7", "VH")
+ddepoke( ddehandle, "Z6S8", "Fr.Remi")
+ddepoke( ddehandle, "Z6S9", "Umsatz")
+ddepoke( ddehandle, "Z6S10", "Umsatz %")
+ddepoke( ddehandle, "Z6S11", "Eryth")
+ddepoke( ddehandle, "Z6S12", "Ehcd")
+
+nochmal:
+
+HostFieldGetLineData("kbrang", i, xrang)
+HostFieldGetLineData("kbwt", i, xwt)
+HostFieldGetLineData("kbobnr", i, xobnr)
+HostFieldGetLineData("kbtitel", i, xtitel)
+HostFieldGetLineData("kbfolg", i, xfolg)
+HostFieldGetLineData("kbbez", i, xbez)
+HostFieldGetLineData("kbvh", i, xvh)
+HostFieldGetLineData("kbfrem", i, xfrem)
+HostFieldGetLineData("kbwumsant", i, xwumsant)
+HostFieldGetLineData("kbwums", i, xwums)
+
+sql1 = "SELECT aterrh FROM grartp where atobj = " + xobnr + ""
+sql2 = "SELECT atehcd FROM grartp where atobj = " + xobnr + ""
+
+rc = EzSQLQuery(sql1, xryth, ErrMsg)
+rc = EzSQLQuery(sql2, xehcd, ErrMsg)
+
+if (xobnr <> "")  then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xrang)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xwt)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xobnr)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xtitel)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xfolg)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xbez)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xvh)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xfrem)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xwums)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xwumsant)
+ddepoke( ddehandle, "Z" + str(j) +"S11", xryth)
+ddepoke( ddehandle, "Z" + str(j) +"S12", xehcd)
+j=j+1
+endif
+
+if i < 18 then
+i=i+1
+goto nochmal
+endif
+
+HostFieldGetData("ende", xende)
+ 
+
+if xende <> "Ende" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

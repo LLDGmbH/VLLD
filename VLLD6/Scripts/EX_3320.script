@@ -1,0 +1,71 @@
+﻿DIM ddehandle, i, j, msg as integer
+dim  xkdnr, xname, xdatum, xzeit, xgrund, xvdat, xbdat, xad, xoff, xneg, xerl, xpkt, xende, datei, pfad_datei, source as string 
+i = 0
+j=6
+
+HostFieldGetData("vdat",xvdat)
+HostFieldGetData("bdat",xbdat)
+HostFieldGetData("ma",xad)
+
+datei = "Besuchsstatistik_" + xvdat + ".xls"
+pfad_datei = @"@&LWV@"  + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z2S1", "Zeitraum")
+ddepoke( ddehandle, "Z3S1", "Mitarbeiter")
+
+ddepoke( ddehandle, "Z2S2", xvdat)
+ddepoke( ddehandle, "Z2S3", xbdat)
+ddepoke( ddehandle, "Z3S2", xad)
+
+
+ddepoke( ddehandle, "Z5S1", "Key")
+ddepoke( ddehandle, "Z5S2", "Tätigkeit")
+ddepoke( ddehandle, "Z5S3", "Anzahl")
+ddepoke( ddehandle, "Z5S4", "offen")
+ddepoke( ddehandle, "Z5S5", "erledigt")
+ddepoke( ddehandle, "Z5S6", "negativ")
+ddepoke( ddehandle, "Z5S7", "Punkte")
+
+
+nochmal:
+
+HostFieldGetLineData("adkey", i, xkdnr)
+HostFieldGetLineData("xxtext", i, xname)
+HostFieldGetLineData("anzahl1", i, xdatum)
+HostFieldGetLineData("anzoff", i, xoff)
+HostFieldGetLineData("anzerl", i, xerl)
+HostFieldGetLineData("anzneg", i, xneg)
+HostFieldGetLineData("anzpkt", i, xpkt)
+
+
+
+
+if (xkdnr <> "")  then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xkdnr)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xname)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xdatum)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xoff)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xerl)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xneg)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xpkt)
+
+j=j+1
+endif
+
+if i < 22 then
+i=i+1
+goto nochmal
+endif
+
+
+if xkdnr <> "" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif

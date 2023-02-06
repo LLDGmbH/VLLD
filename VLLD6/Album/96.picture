@@ -1,0 +1,2501 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?VersionInfo version="1.1" buildnumber="Version 10.2.0" exename="legaconv" exeversion="10,3969,0,0"?>
+<header xmlns="http://www.seagullsoftware.com/schemas/legasuite/screendefinition" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.seagullsoftware.com/schemas/legasuite/screendefinition http://www.seagullsoftware.com/schemas/legasuite/screendefinition1_1.xsd" host_serial="656E044">
+  <screen originator="SeagullAlbumFile" name="HFF6/BV20DS(SFC+KEY01)" library="HFF6" member_name="BV20DS">
+    <size cx="132" cy="27"/>
+    <action key="f3" caption="F3" attention_key="false"/>
+    <action key="f4" caption="F4" attention_key="false"/>
+    <action key="f9" caption="F9" attention_key="false"/>
+    <action key="f23" caption="F23" attention_key="false"/>
+    <action key="f24" caption="F24" attention_key="false"/>
+    <action key="enter" caption="ENTER" attention_key="false" conditional="true"/>
+    <action key="print" caption="PRINT" attention_key="false"/>
+    <field field_type="screen_part" name="SFC">
+      <area>
+        <position/>
+        <size cx="132" cy="26"/>
+      </area>
+    </field>
+    <field field_type="screen_part" name="KEY01" overlay="true">
+      <area>
+        <position y="26"/>
+        <size cx="132" cy="1"/>
+      </area>
+    </field>
+    <field field_type="subfile_container">
+      <field field_type="subfile_header">
+        <field field_type="field" usage="output" name="FIRM" short_name="FIRM" data_type="alphanumeric" display_length="18" data_length="18">
+          <area>
+            <position x="1"/>
+            <size cx="18" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="fixed_text" value=" Lieferkundenverwaltung für Dispo " display_length="34" data_length="34">
+          <area>
+            <position x="48"/>
+            <size cx="34" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*DATE" short_name="*DATE" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="115"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="*TIME" short_name="*TIME" data_type="zoned_decimal" display_length="8" data_length="6">
+          <area>
+            <position x="124"/>
+            <size cx="8" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SDS_JOB" short_name="SDS_JOB" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="1" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SDS_USER" short_name="SDS_USER" data_type="alphanumeric" display_length="10" data_length="10">
+          <area>
+            <position x="115" y="1"/>
+            <size cx="10" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="fixed_text" value="BV20" display_length="4" data_length="4">
+          <area>
+            <position x="127" y="1"/>
+            <size cx="4" cy="1"/>
+          </area>
+          <color foreground="yellow"/>
+        </field>
+        <field field_type="fixed_text" value="Fi  Obj  Name             VObj Name              KdNr  Name             Tourv  Tourb LieferKd LPos A S Mng B A" display_length="110" data_length="110" underline="true">
+          <area>
+            <position x="1" y="2"/>
+            <size cx="110" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFFIL" short_name="SFFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="3"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="3"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFNAME" short_name="SFNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="10" y="3"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVOBJ" short_name="SFVOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="26" y="3"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVNAME" short_name="SFVNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="32" y="3"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="48" y="3"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAME" short_name="SFKNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="56" y="3"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTVON" short_name="SFTVON" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="72" y="3"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTBIS" short_name="SFTBIS" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="79" y="3"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLKD" short_name="SFLKD" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="86" y="3"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLPOS" short_name="SFLPOS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="95" y="3"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFART" short_name="SFART" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="100" y="3"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSKZ" short_name="SFSKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="102" y="3"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSPIT" short_name="SFSPIT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="104" y="3"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFBKZ" short_name="SFBKZ" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="108" y="3"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="110" y="3"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFIL" short_name="SFFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="4"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFNAME" short_name="SFNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="10" y="4"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVOBJ" short_name="SFVOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="26" y="4"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVNAME" short_name="SFVNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="32" y="4"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="48" y="4"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAME" short_name="SFKNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="56" y="4"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTVON" short_name="SFTVON" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="72" y="4"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTBIS" short_name="SFTBIS" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="79" y="4"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLKD" short_name="SFLKD" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="86" y="4"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLPOS" short_name="SFLPOS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="95" y="4"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFART" short_name="SFART" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="100" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSKZ" short_name="SFSKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="102" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSPIT" short_name="SFSPIT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="104" y="4"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFBKZ" short_name="SFBKZ" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="108" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="110" y="4"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFIL" short_name="SFFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="5"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFNAME" short_name="SFNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="10" y="5"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVOBJ" short_name="SFVOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="26" y="5"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVNAME" short_name="SFVNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="32" y="5"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="48" y="5"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAME" short_name="SFKNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="56" y="5"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTVON" short_name="SFTVON" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="72" y="5"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTBIS" short_name="SFTBIS" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="79" y="5"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLKD" short_name="SFLKD" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="86" y="5"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLPOS" short_name="SFLPOS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="95" y="5"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFART" short_name="SFART" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="100" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSKZ" short_name="SFSKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="102" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSPIT" short_name="SFSPIT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="104" y="5"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFBKZ" short_name="SFBKZ" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="108" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="110" y="5"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFFIL" short_name="SFFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="6"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFNAME" short_name="SFNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="10" y="6"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVOBJ" short_name="SFVOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="26" y="6"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVNAME" short_name="SFVNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="32" y="6"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="48" y="6"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAME" short_name="SFKNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="56" y="6"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTVON" short_name="SFTVON" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="72" y="6"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTBIS" short_name="SFTBIS" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="79" y="6"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLKD" short_name="SFLKD" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="86" y="6"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLPOS" short_name="SFLPOS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="95" y="6"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFART" short_name="SFART" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="100" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSKZ" short_name="SFSKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="102" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSPIT" short_name="SFSPIT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="104" y="6"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFBKZ" short_name="SFBKZ" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="108" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="110" y="6"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFIL" short_name="SFFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="7"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFNAME" short_name="SFNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="10" y="7"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVOBJ" short_name="SFVOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="26" y="7"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVNAME" short_name="SFVNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="32" y="7"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="48" y="7"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAME" short_name="SFKNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="56" y="7"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTVON" short_name="SFTVON" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="72" y="7"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTBIS" short_name="SFTBIS" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="79" y="7"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLKD" short_name="SFLKD" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="86" y="7"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLPOS" short_name="SFLPOS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="95" y="7"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFART" short_name="SFART" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="100" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSKZ" short_name="SFSKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="102" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSPIT" short_name="SFSPIT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="104" y="7"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFBKZ" short_name="SFBKZ" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="108" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="110" y="7"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFIL" short_name="SFFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="8"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFNAME" short_name="SFNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="10" y="8"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVOBJ" short_name="SFVOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="26" y="8"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVNAME" short_name="SFVNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="32" y="8"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="48" y="8"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAME" short_name="SFKNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="56" y="8"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTVON" short_name="SFTVON" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="72" y="8"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTBIS" short_name="SFTBIS" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="79" y="8"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLKD" short_name="SFLKD" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="86" y="8"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLPOS" short_name="SFLPOS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="95" y="8"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFART" short_name="SFART" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="100" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSKZ" short_name="SFSKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="102" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSPIT" short_name="SFSPIT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="104" y="8"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFBKZ" short_name="SFBKZ" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="108" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="110" y="8"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFFIL" short_name="SFFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="9"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFNAME" short_name="SFNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="10" y="9"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVOBJ" short_name="SFVOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="26" y="9"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVNAME" short_name="SFVNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="32" y="9"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="48" y="9"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAME" short_name="SFKNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="56" y="9"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTVON" short_name="SFTVON" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="72" y="9"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTBIS" short_name="SFTBIS" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="79" y="9"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLKD" short_name="SFLKD" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="86" y="9"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLPOS" short_name="SFLPOS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="95" y="9"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFART" short_name="SFART" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="100" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSKZ" short_name="SFSKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="102" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSPIT" short_name="SFSPIT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="104" y="9"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFBKZ" short_name="SFBKZ" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="108" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="110" y="9"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFIL" short_name="SFFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="10"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFNAME" short_name="SFNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="10" y="10"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVOBJ" short_name="SFVOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="26" y="10"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVNAME" short_name="SFVNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="32" y="10"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="48" y="10"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAME" short_name="SFKNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="56" y="10"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTVON" short_name="SFTVON" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="72" y="10"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTBIS" short_name="SFTBIS" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="79" y="10"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLKD" short_name="SFLKD" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="86" y="10"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLPOS" short_name="SFLPOS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="95" y="10"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFART" short_name="SFART" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="100" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSKZ" short_name="SFSKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="102" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSPIT" short_name="SFSPIT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="104" y="10"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFBKZ" short_name="SFBKZ" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="108" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="110" y="10"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFIL" short_name="SFFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="11"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFNAME" short_name="SFNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="10" y="11"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVOBJ" short_name="SFVOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="26" y="11"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVNAME" short_name="SFVNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="32" y="11"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="48" y="11"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAME" short_name="SFKNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="56" y="11"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTVON" short_name="SFTVON" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="72" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTBIS" short_name="SFTBIS" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="79" y="11"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLKD" short_name="SFLKD" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="86" y="11"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLPOS" short_name="SFLPOS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="95" y="11"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFART" short_name="SFART" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="100" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSKZ" short_name="SFSKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="102" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSPIT" short_name="SFSPIT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="104" y="11"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFBKZ" short_name="SFBKZ" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="108" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="110" y="11"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFFIL" short_name="SFFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="12"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFNAME" short_name="SFNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="10" y="12"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVOBJ" short_name="SFVOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="26" y="12"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVNAME" short_name="SFVNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="32" y="12"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="48" y="12"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAME" short_name="SFKNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="56" y="12"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTVON" short_name="SFTVON" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="72" y="12"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTBIS" short_name="SFTBIS" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="79" y="12"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLKD" short_name="SFLKD" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="86" y="12"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLPOS" short_name="SFLPOS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="95" y="12"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFART" short_name="SFART" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="100" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSKZ" short_name="SFSKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="102" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSPIT" short_name="SFSPIT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="104" y="12"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFBKZ" short_name="SFBKZ" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="108" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="110" y="12"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFIL" short_name="SFFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="13"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFNAME" short_name="SFNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="10" y="13"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVOBJ" short_name="SFVOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="26" y="13"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVNAME" short_name="SFVNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="32" y="13"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="48" y="13"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAME" short_name="SFKNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="56" y="13"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTVON" short_name="SFTVON" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="72" y="13"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTBIS" short_name="SFTBIS" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="79" y="13"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLKD" short_name="SFLKD" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="86" y="13"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLPOS" short_name="SFLPOS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="95" y="13"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFART" short_name="SFART" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="100" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSKZ" short_name="SFSKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="102" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSPIT" short_name="SFSPIT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="104" y="13"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFBKZ" short_name="SFBKZ" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="108" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="110" y="13"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFIL" short_name="SFFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="14"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFNAME" short_name="SFNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="10" y="14"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVOBJ" short_name="SFVOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="26" y="14"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVNAME" short_name="SFVNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="32" y="14"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="48" y="14"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAME" short_name="SFKNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="56" y="14"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTVON" short_name="SFTVON" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="72" y="14"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTBIS" short_name="SFTBIS" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="79" y="14"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLKD" short_name="SFLKD" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="86" y="14"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLPOS" short_name="SFLPOS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="95" y="14"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFART" short_name="SFART" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="100" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSKZ" short_name="SFSKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="102" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSPIT" short_name="SFSPIT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="104" y="14"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFBKZ" short_name="SFBKZ" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="108" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="110" y="14"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFFIL" short_name="SFFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="15"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFNAME" short_name="SFNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="10" y="15"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVOBJ" short_name="SFVOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="26" y="15"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVNAME" short_name="SFVNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="32" y="15"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="48" y="15"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAME" short_name="SFKNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="56" y="15"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTVON" short_name="SFTVON" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="72" y="15"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTBIS" short_name="SFTBIS" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="79" y="15"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLKD" short_name="SFLKD" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="86" y="15"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLPOS" short_name="SFLPOS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="95" y="15"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFART" short_name="SFART" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="100" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSKZ" short_name="SFSKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="102" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSPIT" short_name="SFSPIT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="104" y="15"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFBKZ" short_name="SFBKZ" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="108" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="110" y="15"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFIL" short_name="SFFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="16"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFNAME" short_name="SFNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="10" y="16"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVOBJ" short_name="SFVOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="26" y="16"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVNAME" short_name="SFVNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="32" y="16"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="48" y="16"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAME" short_name="SFKNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="56" y="16"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTVON" short_name="SFTVON" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="72" y="16"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTBIS" short_name="SFTBIS" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="79" y="16"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLKD" short_name="SFLKD" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="86" y="16"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLPOS" short_name="SFLPOS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="95" y="16"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFART" short_name="SFART" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="100" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSKZ" short_name="SFSKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="102" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSPIT" short_name="SFSPIT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="104" y="16"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFBKZ" short_name="SFBKZ" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="108" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="110" y="16"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFIL" short_name="SFFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="17"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFNAME" short_name="SFNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="10" y="17"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVOBJ" short_name="SFVOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="26" y="17"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVNAME" short_name="SFVNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="32" y="17"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="48" y="17"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAME" short_name="SFKNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="56" y="17"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTVON" short_name="SFTVON" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="72" y="17"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTBIS" short_name="SFTBIS" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="79" y="17"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLKD" short_name="SFLKD" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="86" y="17"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLPOS" short_name="SFLPOS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="95" y="17"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFART" short_name="SFART" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="100" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSKZ" short_name="SFSKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="102" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSPIT" short_name="SFSPIT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="104" y="17"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFBKZ" short_name="SFBKZ" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="108" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="110" y="17"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFFIL" short_name="SFFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="18"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFNAME" short_name="SFNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="10" y="18"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVOBJ" short_name="SFVOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="26" y="18"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVNAME" short_name="SFVNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="32" y="18"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="48" y="18"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAME" short_name="SFKNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="56" y="18"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTVON" short_name="SFTVON" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="72" y="18"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTBIS" short_name="SFTBIS" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="79" y="18"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLKD" short_name="SFLKD" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="86" y="18"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLPOS" short_name="SFLPOS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="95" y="18"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFART" short_name="SFART" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="100" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSKZ" short_name="SFSKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="102" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSPIT" short_name="SFSPIT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="104" y="18"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFBKZ" short_name="SFBKZ" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="108" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="110" y="18"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFIL" short_name="SFFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="19"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFNAME" short_name="SFNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="10" y="19"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVOBJ" short_name="SFVOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="26" y="19"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVNAME" short_name="SFVNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="32" y="19"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="48" y="19"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAME" short_name="SFKNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="56" y="19"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTVON" short_name="SFTVON" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="72" y="19"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTBIS" short_name="SFTBIS" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="79" y="19"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLKD" short_name="SFLKD" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="86" y="19"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLPOS" short_name="SFLPOS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="95" y="19"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFART" short_name="SFART" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="100" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSKZ" short_name="SFSKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="102" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSPIT" short_name="SFSPIT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="104" y="19"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFBKZ" short_name="SFBKZ" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="108" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="110" y="19"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFIL" short_name="SFFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="20"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFNAME" short_name="SFNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="10" y="20"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVOBJ" short_name="SFVOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="26" y="20"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVNAME" short_name="SFVNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="32" y="20"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="48" y="20"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAME" short_name="SFKNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="56" y="20"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTVON" short_name="SFTVON" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="72" y="20"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTBIS" short_name="SFTBIS" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="79" y="20"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLKD" short_name="SFLKD" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="86" y="20"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLPOS" short_name="SFLPOS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="95" y="20"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFART" short_name="SFART" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="100" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSKZ" short_name="SFSKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="102" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSPIT" short_name="SFSPIT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="104" y="20"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFBKZ" short_name="SFBKZ" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="108" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="110" y="20"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFFIL" short_name="SFFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="21"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFNAME" short_name="SFNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="10" y="21"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVOBJ" short_name="SFVOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="26" y="21"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVNAME" short_name="SFVNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="32" y="21"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="48" y="21"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAME" short_name="SFKNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="56" y="21"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTVON" short_name="SFTVON" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="72" y="21"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTBIS" short_name="SFTBIS" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="79" y="21"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLKD" short_name="SFLKD" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="86" y="21"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLPOS" short_name="SFLPOS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="95" y="21"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFART" short_name="SFART" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="100" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSKZ" short_name="SFSKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="102" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSPIT" short_name="SFSPIT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="104" y="21"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFBKZ" short_name="SFBKZ" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="108" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="110" y="21"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFIL" short_name="SFFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="22"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFNAME" short_name="SFNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="10" y="22"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVOBJ" short_name="SFVOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="26" y="22"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVNAME" short_name="SFVNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="32" y="22"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="48" y="22"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAME" short_name="SFKNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="56" y="22"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTVON" short_name="SFTVON" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="72" y="22"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTBIS" short_name="SFTBIS" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="79" y="22"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLKD" short_name="SFLKD" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="86" y="22"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLPOS" short_name="SFLPOS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="95" y="22"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFART" short_name="SFART" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="100" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSKZ" short_name="SFSKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="102" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSPIT" short_name="SFSPIT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="104" y="22"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFBKZ" short_name="SFBKZ" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="108" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="110" y="22"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFIL" short_name="SFFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="23"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFNAME" short_name="SFNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="10" y="23"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVOBJ" short_name="SFVOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="26" y="23"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVNAME" short_name="SFVNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="32" y="23"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="48" y="23"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAME" short_name="SFKNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="56" y="23"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTVON" short_name="SFTVON" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="72" y="23"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTBIS" short_name="SFTBIS" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="79" y="23"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLKD" short_name="SFLKD" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="86" y="23"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLPOS" short_name="SFLPOS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="95" y="23"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFART" short_name="SFART" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="100" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSKZ" short_name="SFSKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="102" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSPIT" short_name="SFSPIT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="104" y="23"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFBKZ" short_name="SFBKZ" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="108" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="110" y="23"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+      <field field_type="subfile_record">
+        <field field_type="field" usage="output" name="SFFIL" short_name="SFFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="24"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="24"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFNAME" short_name="SFNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="10" y="24"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVOBJ" short_name="SFVOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="26" y="24"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVNAME" short_name="SFVNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="32" y="24"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="48" y="24"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAME" short_name="SFKNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="56" y="24"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTVON" short_name="SFTVON" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="72" y="24"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTBIS" short_name="SFTBIS" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="79" y="24"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLKD" short_name="SFLKD" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="86" y="24"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLPOS" short_name="SFLPOS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="95" y="24"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFART" short_name="SFART" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="100" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSKZ" short_name="SFSKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="102" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSPIT" short_name="SFSPIT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="104" y="24"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFBKZ" short_name="SFBKZ" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="108" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="110" y="24"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFFIL" short_name="SFFIL" data_type="zoned_decimal" display_length="2" data_length="2" conditional="true">
+          <area>
+            <position x="1" y="25"/>
+            <size cx="2" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFOBJ" short_name="SFOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="4" y="25"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+        <field field_type="field" usage="output" name="SFNAME" short_name="SFNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="10" y="25"/>
+            <size cx="15" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVOBJ" short_name="SFVOBJ" data_type="zoned_decimal" display_length="5" data_length="5" conditional="true">
+          <area>
+            <position x="26" y="25"/>
+            <size cx="5" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="output" name="SFVNAME" short_name="SFVNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="32" y="25"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKDNR" short_name="SFKDNR" data_type="zoned_decimal" display_length="7" data_length="7" conditional="true">
+          <area>
+            <position x="48" y="25"/>
+            <size cx="7" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFKNAME" short_name="SFKNAME" data_type="alphanumeric" display_length="15" data_length="15" conditional="true">
+          <area>
+            <position x="56" y="25"/>
+            <size cx="15" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTVON" short_name="SFTVON" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="72" y="25"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFTBIS" short_name="SFTBIS" data_type="zoned_decimal" display_length="6" data_length="6" conditional="true">
+          <area>
+            <position x="79" y="25"/>
+            <size cx="6" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLKD" short_name="SFLKD" data_type="zoned_decimal" display_length="8" data_length="8" conditional="true">
+          <area>
+            <position x="86" y="25"/>
+            <size cx="8" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFLPOS" short_name="SFLPOS" data_type="zoned_decimal" display_length="4" data_length="4" conditional="true">
+          <area>
+            <position x="95" y="25"/>
+            <size cx="4" cy="1"/>
+          </area>
+        </field>
+        <field field_type="field" usage="output" name="SFART" short_name="SFART" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="100" y="25"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="red"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSKZ" short_name="SFSKZ" data_type="alphanumeric" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="102" y="25"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFSPIT" short_name="SFSPIT" data_type="zoned_decimal" display_length="3" data_length="3" conditional="true">
+          <area>
+            <position x="104" y="25"/>
+            <size cx="3" cy="1"/>
+          </area>
+          <color foreground="blue"/>
+        </field>
+        <field field_type="field" usage="output" name="SFBKZ" short_name="SFBKZ" data_type="zoned_decimal" display_length="1" data_length="1" conditional="true">
+          <area>
+            <position x="108" y="25"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="magenta"/>
+        </field>
+        <field field_type="field" usage="both" name="SFAKT" short_name="SFAKT" data_type="alphanumeric" display_length="1" data_length="1" underline="true" high_intensity="true" conditional="true" exit_record="true">
+          <area>
+            <position x="110" y="25"/>
+            <size cx="1" cy="1"/>
+          </area>
+          <color foreground="white"/>
+        </field>
+      </field>
+    </field>
+    <field field_type="fixed_text" value="F3=Verlassen" display_length="12" data_length="12">
+      <area>
+        <position x="1" y="26"/>
+        <size cx="12" cy="1"/>
+      </area>
+      <color foreground="blue"/>
+    </field>
+  </screen>
+</header>

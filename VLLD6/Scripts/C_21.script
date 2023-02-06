@@ -1,0 +1,30 @@
+﻿rem **Füllen Combo-Box  aus GRVERP **
+
+dim text, ErrorMsg as String
+dim rc as Integer
+
+
+
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rc = EzSQLQuery("SELECT adid, digits(adid) concat ' ' concat ADNAME FROM GRADSP where adid > 0 and adid < 99 order by digits(adid) concat ' ' concat ADNAME", text, ErrorMsg)
+
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelFieldSetProp ("nad", 5, text) 
+PanelUpdateEnable(2)
+endif
+
+rc = EzSQLQuery("SELECT IDNR, IDNAME FROM GRINDP order by IDNAME", text, ErrorMsg)
+
+if ( rc < 0 ) then
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+else
+PanelFieldSetProp ("nid", 5, text) 
+PanelUpdateEnable(2)
+endif

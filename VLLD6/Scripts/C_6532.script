@@ -1,0 +1,13 @@
+﻿dim text, ErrorMsg as String
+dim rc as Integer
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+
+rc = EzSQLQuery("SELECT rbog, digits(rbog) concat ' ' concat rbotext FROM GRRBOP order by rbog", text, ErrorMsg)
+PanelFieldSetProp ("##onr", 5, text) 
+
+rc = EzSQLQuery("SELECT rbkg, digits(rbkg) concat ' ' concat rbktext FROM GRRBKP order by rbKg", text, ErrorMsg)
+PanelFieldSetProp ("##knr", 5, text) 
+
+
+PanelUpdateEnable(2)

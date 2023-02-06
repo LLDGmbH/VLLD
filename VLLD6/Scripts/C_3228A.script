@@ -1,0 +1,58 @@
+﻿
+dim text, ErrorMsg as String
+dim rc as Integer
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rc = EzSQLQuery("SELECT VTNR, VTNAME FROM GRVERP order by VTNAME", text, ErrorMsg)
+
+if ( rc < 0 ) then
+
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+
+else
+
+PanelFieldSetProp ("ma", 5, text) 
+PanelUpdateEnable(2)
+
+endif
+
+
+rem ** Query database
+rc = EzSQLQuery("SELECT digits(adkey), digits(adkey) concat '  ' concat ADTEXT FROM GRadtp order by adkey", text, ErrorMsg)
+
+if ( rc < 0 ) then
+
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+
+else
+
+PanelFieldSetProp ("adbg1", 5, text) 
+PanelFieldSetProp ("adbg2", 5, text) 
+PanelFieldSetProp ("adbg3", 5, text) 
+PanelFieldSetProp ("adbg4", 5, text) 
+PanelFieldSetProp ("adbg5", 5, text) 
+PanelFieldSetProp ("adbg6", 5, text) 
+PanelFieldSetProp ("adbg7", 5, text) 
+PanelFieldSetProp ("adbg8", 5, text) 
+PanelFieldSetProp ("adbg9", 5, text) 
+PanelFieldSetProp ("adbg10", 5, text) 
+
+PanelFieldSetProp ("adauf1", 5, text) 
+PanelFieldSetProp ("adauf2", 5, text) 
+PanelFieldSetProp ("adauf3", 5, text) 
+PanelFieldSetProp ("adauf4", 5, text) 
+PanelFieldSetProp ("adauf5", 5, text) 
+PanelFieldSetProp ("adauf6", 5, text) 
+PanelFieldSetProp ("adauf7", 5, text) 
+PanelFieldSetProp ("adauf8", 5, text) 
+PanelFieldSetProp ("adauf9", 5, text) 
+PanelFieldSetProp ("adauf10", 5, text) 
+
+
+PanelUpdateEnable(2)
+
+endif

@@ -1,0 +1,53 @@
+﻿DIM ddehandle, i, j, msg as integer
+dim xkdnr, xname, xstr, xplz, xort, xs1, xs2, xs3, xs4, xs5, xs6, xs7, xs8, xs9, xs10, xende, datei, pfad_datei, source as string 
+i = 0
+j=5
+
+HostFieldGetData("kdname", xname)
+PanelFieldGetData("xxplz", xplz)
+
+datei = "Quartalsumsatz.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+
+ddepoke( ddehandle, "Z1S1", "GSART")
+ddepoke( ddehandle, "Z1S2", xname)
+ddepoke( ddehandle, "Z2S2", xplz)
+
+nochmal:
+
+HostFieldGetLineData("col1", i, xs1)
+HostFieldGetLineData("col2", i, xs2)
+HostFieldGetLineData("col3", i, xs3)
+HostFieldGetLineData("col4", i, xs4)
+HostFieldGetLineData("col5", i, xs5)
+HostFieldGetLineData("col6", i, xs6)
+HostFieldGetLineData("col7", i, xs7)
+HostFieldGetLineData("col8", i, xs8)
+HostFieldGetLineData("col9", i, xs9)
+
+
+
+ddepoke( ddehandle, "Z" + str(j) +"S1", xs1)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xs2)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xs3)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xs4)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xs5)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xs6)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xs7)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xs8)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xs9)
+
+
+j=j+1
+
+if i < 17 then
+i=i+1
+goto nochmal
+endif

@@ -1,0 +1,30 @@
+﻿rem **Füllen Combo-Box  aus GRVKAP **
+
+dim text, ErrorMsg as String
+dim rc as Integer
+
+
+
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+if ( rc < 0 ) then
+MessageBox( "Connect Error", ErrorMsg, 4, 1)
+endif
+
+rem ** Query database
+rc = EzSQLQuery("SELECT VKVKST, VKVTXT FROM GRVKAP", text, ErrorMsg)
+
+if ( rc < 0 ) then
+
+MessageBox( "Query Error", ErrorMsg, 4, 1)
+
+else
+
+rem ** Clear combo box control
+rem PanelFieldPutData ("C_VKST", -1, "") 
+
+rem ** Populate combo box control with the string returned by the query
+PanelFieldSetProp ("C_VKST", 5, text) 
+PanelUpdateEnable(2)
+
+endif

@@ -1,0 +1,18 @@
+﻿global pic_nummer, pic_jahr, pic_folge, pic_name, y0, y1, y2 as string
+y1 = " "
+y2 = "0"
+
+
+HostFieldGetData("atfo01",y0)
+pic_folge = Replace(y0, y1, y2, 0)
+
+HostFieldGetData("atvkz", y0)
+pic_nummer = Replace(y0, y1, y2, 0)
+
+
+pic_name = ""
+if pic_nummer <> "" then
+pic_name = pic_nummer + "_20" + pic_folge + ".jpg"
+endif
+
+PanelButtonClick("OK")

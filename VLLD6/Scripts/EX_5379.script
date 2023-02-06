@@ -1,0 +1,90 @@
+﻿DIM ddehandle, i, j, msg, rc as integer
+dim xende, xbsvnr, xbsdsnr, xbsobgr, xbserrh, xbsvk, errmsg, errormsg, datei, pfad_datei, source as string 
+dim xsfrang, xsfobj, xsftitel, xsfvk3f, xsfvk3f2, xsfproz, xsflbez, xsfdsbez, xsferschw, xatbneu as string
+
+i = 0
+j=8
+
+rc = EzSQLConnect(@"@&ODBC@", "", "", ErrorMsg)
+
+datei = "Positive_Verkauftrends.xls"
+pfad_datei = @"@&LWV@" + datei
+source = @"@&LWV@" + "vorlage.xls"
+FileCopy(source, pfad_datei)
+
+PcCommand(4, chr(34) + pfad_datei + chr(34))
+DDEHandle = DDEInitiate ("EXCEL", "[" + datei + "]Tabelle1")
+
+
+ddepoke( ddehandle, "Z1S1", "Verlag")
+ddepoke( ddehandle, "Z2S1", "Disponent")
+ddepoke( ddehandle, "Z3S1", "Objektgruppe")
+ddepoke( ddehandle, "Z4S1", "Errh. von")
+ddepoke( ddehandle, "Z5S1", "Verkauf ab")
+
+
+HostFieldGetData("bs_vnr", xbsvnr)
+HostFieldGetData("bs_dsnr", xbsdsnr)
+HostFieldGetData("bs_obgr", xbsobgr)
+HostFieldGetData("bs_errh", xbserrh)
+HostFieldGetData("bs_vk", xbsvk)
+
+ddepoke( ddehandle, "Z1S2", xbsvnr)
+ddepoke( ddehandle, "Z2S2", xbsdsnr)
+ddepoke( ddehandle, "Z3S2", xbsobgr)
+ddepoke( ddehandle, "Z4S2", xbserrh)
+ddepoke( ddehandle, "Z5S2", xbsvk)
+
+ddepoke( ddehandle, "Z7S1", "Rang")
+ddepoke( ddehandle, "Z7S2", "Obnr")
+ddepoke( ddehandle, "Z7S3", "Titel")
+ddepoke( ddehandle, "Z7S4", "DVK 3 Folgen")
+ddepoke( ddehandle, "Z7S5", "DVK vorher")
+ddepoke( ddehandle, "Z7S6", "Steigerung %")
+ddepoke( ddehandle, "Z7S7", "lt. Bezug")
+ddepoke( ddehandle, "Z7S8", "Dispo")
+ddepoke( ddehandle, "Z7S9", "Eryth.")
+ddepoke( ddehandle, "Z7S10", "Preis")
+
+nochmal:
+
+HostFieldGetLineData("sf_rang", i, xsfrang)
+HostFieldGetLineData("sf_obj", i, xsfobj)
+HostFieldGetLineData("sf_titel", i, xsftitel)
+HostFieldGetLineData("sf_vk3f", i, xsfvk3f)
+HostFieldGetLineData("sf_vk3f2", i, xsfvk3f2)
+HostFieldGetLineData("sf_proz", i, xsfproz)
+HostFieldGetLineData("sf_lbez", i, xsflbez)
+HostFieldGetLineData("sf_dsbez", i, xsfdsbez)
+HostFieldGetLineData("sf_erschw", i, xsferschw)
+HostFieldGetLineData("atbneu", i, xatbneu)
+
+
+if (xsftitel <> "")  then
+ddepoke( ddehandle, "Z" + str(j) +"S1", xsfrang)
+ddepoke( ddehandle, "Z" + str(j) +"S2", xsfobj)
+ddepoke( ddehandle, "Z" + str(j) +"S3", xsftitel)
+ddepoke( ddehandle, "Z" + str(j) +"S4", xsfvk3f)
+ddepoke( ddehandle, "Z" + str(j) +"S5", xsfvk3f2)
+ddepoke( ddehandle, "Z" + str(j) +"S6", xsfproz)
+ddepoke( ddehandle, "Z" + str(j) +"S7", xsflbez)
+ddepoke( ddehandle, "Z" + str(j) +"S8", xsfdsbez)
+ddepoke( ddehandle, "Z" + str(j) +"S9", xsferschw)
+ddepoke( ddehandle, "Z" + str(j) +"S10", xatbneu)
+
+j=j+1
+endif
+
+if i < 20 then
+i=i+1
+goto nochmal
+endif
+
+HostFieldGetData("ende", xende)
+ 
+
+if xende <> "Ende" then
+i=0
+HostScreenSendKey("Page Down")
+goto nochmal
+endif
